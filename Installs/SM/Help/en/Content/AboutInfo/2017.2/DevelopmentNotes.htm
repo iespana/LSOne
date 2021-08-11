@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.2">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Development changes and improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.2/DevelopmentNotes.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Development changes and improvements</h1>
+        <h2>Development guide</h2>
+        <p>More topics have been updated and added to the new development <a href="http://devhelp.ls-one.com/" target="_blank">online help website.</a></p>
+        <p>Topics that we would like to specifically mention:</p>
+        <ul>
+            <li value="1">Comprehensive documentation on the <a href="http://devhelp.ls-one.com/#IntegrationFramework/IntegrationFrameworkOverview.htm" target="_blank">Integration framework</a> with samples.</li>
+            <li value="2">Descriptions and detailed information of the <a href="http://devhelp.ls-one.com/#POS/Services/ServicesOverview.htm" target="_blank">services</a> used by the POS.</li>
+            <li value="3">Description of all <a href="http://devhelp.ls-one.com/#SM/UIComponents/Components.htm" target="_blank">components</a> that the LS&#160;One team has created for the <span class="MyVariablesSite Manager">Site Manager</span> and <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span></li>
+            <li value="4">A chapter on how to do a <a href="http://devhelp.ls-one.com/#SiteService/SiteServiceCustomizations.htm" target="_blank"><span class="MyVariablesSite Service">Site Service</span>customization</a> has also been added.</li>
+        </ul>
+        <p>Information about updated and new topics is always displayed on the home page of the development help when new material is published.</p>
+        <p>&#160;</p>
+        <h2>.NET&#160;Framework </h2>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! LS&#160;One suite has been updated to run on .NET&#160;framework 4.7. </p>
+        </div>
+        <p>&#160;</p>
+        <h2>Upgrade issues</h2>
+        <div class="Warning">
+            <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note">Warning!!! The gift card receipt has to be updated when upgrading a customer to version 2017.2. The receipt was using incorrect variables and changing the receipt to use the correct variables also meant that the printing code for this receipt had to be changed. To get the updated receipt go to the <a href="../../FieldHelp/Profiles/FormProfilesView.htm">Form profiles view</a> and reset the <a href="../../HelpTopics/POSSetup/DefaultProfileAndReceiptData.htm">default form profile</a>. </p>
+            <p class="note">&#160;</p>
+            <p class="note"><b>If this is NOT&#160;done then when a gift card receipt is being printed on the POS&#160;an error will be thrown.</b>
+            </p>
+            <p class="note">&#160;</p>
+        </div>
+        <p>&#160;</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! Due to changes done in the last release, LS&#160;One 2017.1, on how <a href="../../FieldHelp/Touch buttons/ImageBankView.htm">images are stored</a> the exporting of POS&#160;layouts was also changed in that release to reflect the image bank changes. This means that exporting layouts from versions 2017 and earlier and then importing them into versions 2017.1 and later will result in the images not being imported or added to the buttons. </p>
+        </div>
+        <p>&#160;</p>
+        <h2>Customers</h2>
+        <p>A new table CUSTOMER has been created and has replaced the table CUSTTABLE which has been depricated. When the system updates itself all the existing data in CUSTTABLE is moved to table CUSTOMER which only has the fields that the LS&#160;One system uses. </p>
+        <p><i>CUSTTABLE&#160;is a legacy table from when the </i><span style="font-style: italic;" class="MyVariablesLS&#160;One POS">LS&#160;One POS</span><i> was the front end to the AX&#160;for Retail system so it had a lot of fields that the LS&#160;One system wasn't using.</i>
+        </p>
+        <p>Table CUSTOMERADDRESS has a changed primary key to allow for unlimited number of addresses for each customer. Previously this was limited to 3 addresses. The Primary key is now the ACCOUNTNUM and an identity field. Field AddressType was removed from the primary key.</p>
+        <p>&#160;</p>
+        <h2>User profile</h2>
+        <p>New table POSUSERPROFILE has been created to hold the user profiles that can now be attached to users. When the system updates itself from an earlier release. The upgrade will create user profiles from the existing information on the users. If all the users have the same configurations then only one profile will be created and added to all the users. But for each variation of these configuration a new profile will be created.</p>
+        <p>&#160;</p>
+        <h2>Data Director Scheduler</h2>
+        <p>Changed the scheduler to only look at the latest action for a given set of subjob and parameters. Previously it was over-processing the parameter values which could cause jobs to queue up on the scheduler while waiting for a large action-job to finish processing on the scheduler side.</p>
+        <p>&#160;</p>
+        <h2>LS&#160;One License information</h2>
+        <p>The website where information about the LS&#160;One licenses for each customer has been updated. Now it displays information about both <span class="MyVariablesSite Manager">Site Manager</span> and <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> licenses, when they were last validated, the description that was entered when it was activated, device name, Store ID&#160;and Terminal ID.</p>
+        <p>The website also displays if the license is of type Perpetual, Subscription or Partner license as well as information about how many licenses are active and how many are available. </p>
+        <p>To log onto the license website use the same credentials as are used when the LS&#160;One licenses are being activated on the <span class="MyVariablesSite Manager">Site Manager</span> and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>.</p>
+        <p>To view the license information please go to the <a href="http://licenseservice.lsretail.com/licenses" target="_blank">LS&#160;One License website</a></p>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">Tips!!! Licenses can be deactivated through this website by clicking the "Deactivate" button on each license line (only visible when the license has been activated)<br /></p>
+        </div>
+        <p>&#160;</p>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">Tips!!! To send requests for information or changes to the licenses to the LS&#160;Retail license department click the pencil icon displayed after the "License no" information and an email with the license information in the subject will be created.<br /></p>
+        </div>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Green thunder.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1151" data-mc-height="351" src="Resources/Green thunder_thumb_0_300.png" style="width: 705px;height: 214px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! Only <span class="MyVariablesSite Manager">Site Manager</span> licenses for versions LS&#160;One 2017 and later are visible on this website. </p>
+            <p class="note">&#160;</p>
+            <p class="note">For information or changes to <span class="MyVariablesSite Manager">Site Manager</span> licenses for older versions, you need to contact the <a href="mailto:Licenses@lsretail.com">license department</a> at LS&#160;Retail directly.</p>
+        </div>
+        <p>&#160;</p>
+        <h2>POS&#160;operations table</h2>
+        <p>A new table was created for the POS operations, OPERATIONS. This table will contain all the operations for both the POS and the mobile inventory app and therefore all the POS operations have been migrated to the new table.</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! This table should never be used or changed in a customization and the POS takes care of populating and updating this table when a new database is created and/or updated. But if the previous table (POSISOPERATIONS) was included in a scheduler subjobs or demo data package those need to be updated.</p>
+        </div>
+        <p>&#160;</p>
+        <h2>Obsolete</h2>
+        <p>Most properties that were marked as obsolete during the development of 2017.1 release have now been removed entirely. Any properties or functions that are currently marked as obsolete were marked as such during the development of the 2017.2 release.</p>
+        <p>&#160;</p>
+        <h2>Miscellaneous</h2>
+        <p>The operation "Start of day" has been changed to be an internal operation and cannot be selected to be on a button on the POS&#160;layout. The operation is now run by the POS&#160;as an internal operation if the Start of day functionality has been activated in the functionality profile.</p>
+        <p>When performing the "Declare start amount" operation the POS now inserts a line into RBOTRANSACTIONPAYMENTTRANS that withdraws the entered amount from the default Float tender. This means that the operation now behaves like the "Float entry" operation.</p>
+        <p>A bug has been fixed where the background of the add/edit/delete context buttons in the <span class="MyVariablesSite Manager">Site Manager</span> was white instead of transparent.</p>
+        <p>Verifone Point EFT integration for the USA is now included in the LS&#160;One release. Please see the Verifone US.Readme.pdf document on the partner portal on how to activate and configure the integration.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

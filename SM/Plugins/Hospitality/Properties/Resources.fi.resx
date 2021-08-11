@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="General" xml:space="preserve">
+    <value>Yleinen</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kuvaus:</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Tulostus</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Yleiset asetukset</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attribuutit</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Määritys</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Ei käytettävissä</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Sarja</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Kaikki tiedostot</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Olet kasvattanut tämän POS painikeruudukon kokonaistilaa. Tilaa on #1 uudelle POS painikeruuturiville. Haluatko luoda uusia rivejä tilan täyttääksesi?</value>
+  </data>
+  <data name="AddRestaurantDiningTables" xml:space="preserve">
+    <value>Lisää ruokapöydät</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Käytettävissä</value>
+  </data>
+  <data name="ChangeFromDefaultFont" xml:space="preserve">
+    <value>Vaihda oletusfontista</value>
+  </data>
+  <data name="ChangingFromDefaultFontQuestion" xml:space="preserve">
+    <value>Oletusfontti on #1 oletuskoolla #2. Tulsotus voi toimia odottamattomasti jos muutat näitä aetuksia. Oletko varma, että haluat muuttaa arvoja?</value>
+  </data>
+  <data name="Clicked" xml:space="preserve">
+    <value>Napsautetaan:</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Koodi:</value>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Haluatko kopioida nykyisen tyylin painikkeen ominaisuuksiin?</value>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Kopioi nykyinen tyyli?</value>
+  </data>
+  <data name="DeleteDiningTableLayout" xml:space="preserve">
+    <value>Poista ruokapöydän asettelu</value>
+  </data>
+  <data name="DeleteDiningTableLayoutQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun ruokapöydän asettelun?</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreen" xml:space="preserve">
+    <value>Poista ruokapöydän asettelunäyttö</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreenQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun ruokapöydän asettelunäytön?</value>
+  </data>
+  <data name="DeleteHospitalityType" xml:space="preserve">
+    <value>Poista Hospitality -tyyppi</value>
+  </data>
+  <data name="DeleteHospitalityTypeQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun Hospitality -tyypin?</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Poista POS-ruudukko -valikkorivi</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut POS-valikkorivit?</value>
+  </data>
+  <data name="DeletePosLookup" xml:space="preserve">
+    <value>Poista Hospitality -valikkoryhmä</value>
+  </data>
+  <data name="DeletePosLookupQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun Hospitality -valikkoryhmän?</value>
+  </data>
+  <data name="DeletePosMenu" xml:space="preserve">
+    <value>Poista POS-valikko</value>
+  </data>
+  <data name="DeletePosMenuLine" xml:space="preserve">
+    <value>Poista POS-valikkorivi</value>
+  </data>
+  <data name="DeletePosMenuLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun POS-valikkorivin?</value>
+  </data>
+  <data name="DeletePosMenuQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun POS-valikon?</value>
+  </data>
+  <data name="DeletePrintingRoute" xml:space="preserve">
+    <value>Poista tulostusreitti</value>
+  </data>
+  <data name="DeletePrintingRouteQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun tulostusreitin?</value>
+  </data>
+  <data name="DeleteRestaurantDiningTable" xml:space="preserve">
+    <value>Poista ravintolan ruokapöytä</value>
+  </data>
+  <data name="DeleteRestaurantDiningTableQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun ravintolan ruokapöydän?</value>
+  </data>
+  <data name="DeleteRestaurantMenuType" xml:space="preserve">
+    <value>Poista ravintolan menutyyppi</value>
+  </data>
+  <data name="DeleteRestaurantMenuTypeQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun ravintolan menutyypin?</value>
+  </data>
+  <data name="DeleteRestaurantStation" xml:space="preserve">
+    <value>Poista tulostusasema</value>
+  </data>
+  <data name="DeleteRestaurantStationQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun tulostusaseman?</value>
+  </data>
+  <data name="DeleteSalesType" xml:space="preserve">
+    <value>Poista myyntityyppi</value>
+  </data>
+  <data name="DeleteSalesTypeQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun myyntityypin?</value>
+  </data>
+  <data name="DeleteStationSelection" xml:space="preserve">
+    <value>Poista aseman valinta</value>
+  </data>
+  <data name="DeleteStationSelectionQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun aseman valinnan?</value>
+  </data>
+  <data name="DeliveryAndTakeout" xml:space="preserve">
+    <value>Toimitus ja nouto</value>
+  </data>
+  <data name="DineIn" xml:space="preserve">
+    <value>Ruokailla</value>
+  </data>
+  <data name="DiningTableLayout" xml:space="preserve">
+    <value>Ruokapöydän asettelu</value>
+  </data>
+  <data name="DiningTableLayoutScreenExists" xml:space="preserve">
+    <value>Ruokapöydän asettelunäyttö, kyseisellä näytön numerolla on jo olemassa</value>
+  </data>
+  <data name="DiningTableLayoutSreenInUse" xml:space="preserve">
+    <value>Valittua näyttöä ei voi poistaa, koska siihen on liitetty ravintolan ruokapöytä</value>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Älä kopioi</value>
+  </data>
+  <data name="DoNotCopyMenuHeader" xml:space="preserve">
+    <value>Älä kopioi olemassa olevan valikon otsikkoa</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Tyhjä</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Yhtään laiteluetteloa ei löydy isäntäkoneelta {0}, tarkista onko tulostusasemapalvelu käynnissä isäntäkoneelta ja että tulostimet on asennettu</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Fontti</value>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Kuviot</value>
+  </data>
+  <data name="HardwareProfilePrinter" xml:space="preserve">
+    <value>Laitteistoprofiilin tulostin</value>
+  </data>
+  <data name="Hospitality" xml:space="preserve">
+    <value>Hospitality</value>
+  </data>
+  <data name="HospitalityMenuGroups" xml:space="preserve">
+    <value>Hospitality -valikkoryhmät</value>
+  </data>
+  <data name="HospitalityMenuGroupsTooltip" xml:space="preserve">
+    <value>Valitse Hospitality POS-valikot jaetulle laskulle ja siirrä pöytävalikot</value>
+  </data>
+  <data name="HospitalityPosMenus" xml:space="preserve">
+    <value>Hospitality POS -menut</value>
+  </data>
+  <data name="HospitalityPosMenusTooltip" xml:space="preserve">
+    <value>Järjestä POS-toiminnot painikkeille ja muokkaa painikeruudukot Hospitality -valikkoryhmien käyttöön</value>
+  </data>
+  <data name="HospitalitySetup" xml:space="preserve">
+    <value>Hospitality -asetukset</value>
+  </data>
+  <data name="HospitalitySetupDescription" xml:space="preserve">
+    <value>Käytä tätä asetusta Hospitality -asetuksien asettamiseen</value>
+  </data>
+  <data name="HospitalitySetupTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi yleisiä Hospitality -asetuksia</value>
+  </data>
+  <data name="HospitalityType" xml:space="preserve">
+    <value>Hospitality -tyyppi:</value>
+  </data>
+  <data name="HospitalityTypes" xml:space="preserve">
+    <value>Hospitality -tyypit</value>
+  </data>
+  <data name="HospitalityTypesDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa Hospitality -tyypin hallintaan</value>
+  </data>
+  <data name="HospitalityTypesTooltipDescription" xml:space="preserve">
+    <value>Hallitse Hospitality -tyyppejä ja niiden pöytäasetteluita sekä toiminnallisuutta</value>
+  </data>
+  <data name="HospitalityTypeText" xml:space="preserve">
+    <value>Hospitality -tyyppi:</value>
+  </data>
+  <data name="Hosts" xml:space="preserve">
+    <value>Isäntäkoneet</value>
+  </data>
+  <data name="KitchenPrinting" xml:space="preserve">
+    <value>Keittiötulostus</value>
+  </data>
+  <data name="LayoutID" xml:space="preserve">
+    <value>Asettelu ID:</value>
+  </data>
+  <data name="LayoutIDExists" xml:space="preserve">
+    <value>Tietokannassa on jo tällä mallitunnuksella oleva ruokapöytäasettelu</value>
+  </data>
+  <data name="Listing" xml:space="preserve">
+    <value>Listaus</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Ulkonäkö ja tunne</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Päävalikko</value>
+  </data>
+  <data name="ManageSetupDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit hallita Hospitality -asetuksia</value>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Valikko painikkeet</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Monitori</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>Ei toimintoa</value>
+  </data>
+  <data name="NumberOfRestaurantDiningTablesExceeds" xml:space="preserve">
+    <value>Pöytien kokonaismäärä ylittää pöytien enimmäismäärään tässä ruokapöytien asettelussa</value>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Toimintotunnus</value>
+  </data>
+  <data name="OPOSPrinter" xml:space="preserve">
+    <value>OPOS-tulostin</value>
+  </data>
+  <data name="PaymentStatus" xml:space="preserve">
+    <value>Maksun tila</value>
+  </data>
+  <data name="PosColorExists" xml:space="preserve">
+    <value>Tällä tunnuksella on jo olemassa POS-väri</value>
+  </data>
+  <data name="POSColorSetup" xml:space="preserve">
+    <value>POS-värin asetukset</value>
+  </data>
+  <data name="POSColorSetupDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa hallitsemaan Hospitality -värejä</value>
+  </data>
+  <data name="PosId" xml:space="preserve">
+    <value>POS tunnus</value>
+  </data>
+  <data name="PosLookupsDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata POS-valikkoryhmiä</value>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Painike</value>
+  </data>
+  <data name="PosMenuButtons" xml:space="preserve">
+    <value>Painikevalikot</value>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>Painikevalikko</value>
+  </data>
+  <data name="PosMenus" xml:space="preserve">
+    <value>POS-valikot</value>
+  </data>
+  <data name="PosMenusDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa POS-valikkojen hallintaan</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Esikatsele</value>
+  </data>
+  <data name="PrintingRoutes" xml:space="preserve">
+    <value>Tulostusreitit</value>
+  </data>
+  <data name="PrintingRoutesDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa tulostusreittien hallintaan</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Tulostusasema</value>
+  </data>
+  <data name="PrintingStations" xml:space="preserve">
+    <value>Tulostusasema</value>
+  </data>
+  <data name="PrintingStationsDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa tulostusaseman hallintaan</value>
+  </data>
+  <data name="ReceiptNumber" xml:space="preserve">
+    <value>Kuitin numero</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Pyynnöt</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Varaukset</value>
+  </data>
+  <data name="RestaurantDiningTableRangeExists" xml:space="preserve">
+    <value>Ravintola-ruokapöytä on jo olemassa annetulla alueella</value>
+  </data>
+  <data name="RestaurantId" xml:space="preserve">
+    <value>Ravintola-tunnus:</value>
+  </data>
+  <data name="RestaurantMenuTypeCodeOnPosExists" xml:space="preserve">
+    <value>Ravintolan menutyyppi, jossa on annettu järjestys ja koodi POS:ssa, on jo olemassa</value>
+  </data>
+  <data name="RestaurantMenuTypeExists" xml:space="preserve">
+    <value>Ravintolan menutyyppi, jossa on annettu ravintola-tunniste ja järjestys, on jo olemassa</value>
+  </data>
+  <data name="RestaurantMenuTypes" xml:space="preserve">
+    <value>Menutyypit</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Ravintolat</value>
+  </data>
+  <data name="RestaurantSalesTypeExists" xml:space="preserve">
+    <value>Hospitality -tyyppi, jolla on ravintola-tunniste ja myynti tyyppi, on jo olemassa</value>
+  </data>
+  <data name="RestaurantsDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa ravintoloiden hallintaan</value>
+  </data>
+  <data name="RestaurantStationExists" xml:space="preserve">
+    <value>Tällä tunnuksella on jo tulostusasema olemassa</value>
+  </data>
+  <data name="RestaurantStations" xml:space="preserve">
+    <value>Tulostusasemat</value>
+  </data>
+  <data name="RestaurantStationText" xml:space="preserve">
+    <value>Ravintola-asema</value>
+  </data>
+  <data name="RestaurantsTooltipDescription" xml:space="preserve">
+    <value>Avaa luettelo ravintoloista / myymälöistä nähdäksesi ja hallinnoidaksesi niitä</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Myyntityyppi:</value>
+  </data>
+  <data name="SalesTypes" xml:space="preserve">
+    <value>Myyntityypit</value>
+  </data>
+  <data name="SalesTypesDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata myyntityyppejä</value>
+  </data>
+  <data name="SalesTypesTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi myyntityyppejä, joiden avulla määritetään myynnin veroryhmä ja hintaryhmä Hospitality -tyyppeihin</value>
+  </data>
+  <data name="SalesTypeText" xml:space="preserve">
+    <value>Myyntityyppi:</value>
+  </data>
+  <data name="Screens" xml:space="preserve">
+    <value>Näytöt</value>
+  </data>
+  <data name="SendConfig" xml:space="preserve">
+    <value>Määritys lähetetty isäntäkoneelle</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Sivustot</value>
+  </data>
+  <data name="SplitBillTransferLines" xml:space="preserve">
+    <value>Jaa lasku / Siirrä rivit</value>
+  </data>
+  <data name="StaffName" xml:space="preserve">
+    <value>Henkilöstön nimi</value>
+  </data>
+  <data name="StationIsInUseCannotBeDeleted" xml:space="preserve">
+    <value>Asema #1 on käytössä reitityssäännöissä, eikä sitä voi poistaa</value>
+  </data>
+  <data name="StationPrinting" xml:space="preserve">
+    <value>Tulostusasemat</value>
+  </data>
+  <data name="StationPrintingDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit hallita aseman tulostusta</value>
+  </data>
+  <data name="StationPrintingTooltipDescription" xml:space="preserve">
+    <value>Hallitse keittiötulostusasemia ja kohteen reititystä asemiin</value>
+  </data>
+  <data name="StationRouting" xml:space="preserve">
+    <value>Asemien reititys</value>
+  </data>
+  <data name="StationRoutingDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit hallita kohteen reititystä asemiin</value>
+  </data>
+  <data name="StationSelectionExists" xml:space="preserve">
+    <value>Samoja tietoja sisältävä asemavalinta on jo olemassa</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Myymälän asetukset</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Tyyli</value>
+  </data>
+  <data name="TableButtonGraphicalLayout" xml:space="preserve">
+    <value>Taulukko-painike</value>
+  </data>
+  <data name="TableNumber" xml:space="preserve">
+    <value>Pöydän nro:</value>
+  </data>
+  <data name="Text1" xml:space="preserve">
+    <value>Teksti 1</value>
+  </data>
+  <data name="Text2" xml:space="preserve">
+    <value>Teksti 2</value>
+  </data>
+  <data name="Text3" xml:space="preserve">
+    <value>Teksti 3</value>
+  </data>
+  <data name="Text4" xml:space="preserve">
+    <value>Teksti 4</value>
+  </data>
+  <data name="Text5" xml:space="preserve">
+    <value>Teksti 5</value>
+  </data>
+  <data name="Text6" xml:space="preserve">
+    <value>Teksti 6</value>
+  </data>
+  <data name="TextFiles" xml:space="preserve">
+    <value>Tekstitiedostot</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Vinkkejä</value>
+  </data>
+  <data name="TransactionNumber" xml:space="preserve">
+    <value>Tapahtuman numero</value>
+  </data>
+  <data name="ViewAllHospitalityTypes" xml:space="preserve">
+    <value>Näytä kaikki Hospitality -tyypit</value>
+  </data>
+  <data name="ViewAllRestaurantStations" xml:space="preserve">
+    <value>Näytä kaikki tulostusasemat</value>
+  </data>
+  <data name="ViewAllSalesTypes" xml:space="preserve">
+    <value>Näytä kaikki myyntityypit</value>
+  </data>
+  <data name="ViewPosMenus" xml:space="preserve">
+    <value>Näytä POS-valikot</value>
+  </data>
+  <data name="WindowsPrinter" xml:space="preserve">
+    <value>Windows-tulostin</value>
+  </data>
+</root>

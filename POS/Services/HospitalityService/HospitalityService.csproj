@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBE2A4F9-82C7-479D-A03C-BE3C6D0D981F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services</RootNamespace>
+    <AssemblyName>LSOne.Services.Hospitality</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Sparkline.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraRichEdit.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.MenuButton">
+      <HintPath>..\..\Build\LSOne.Controls.MenuButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.POS">
+      <HintPath>..\..\Build\LSOne.Controls.POS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.DataLayer.KDSBusinessObjects">
+      <HintPath>..\..\Build\bin\LSOne.DataLayer.KDSBusinessObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.KitchenDisplaySystem.KdsClient">
+      <HintPath>..\..\Build\bin\LSOne.KitchenDisplaySystem.KdsClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.KitchenDisplaySystem.KdsCommon">
+      <HintPath>..\..\Build\bin\LSOne.KitchenDisplaySystem.KdsCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Client">
+      <HintPath>..\..\Build\bin\LSRetail.Forecourt.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Interface">
+      <HintPath>..\..\Build\bin\LSRetail.Forecourt.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Build\bin\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PrintingStationClient">
+      <HintPath>..\..\Build\bin\PrintingStationClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PrintingStationUtils">
+      <HintPath>..\..\Build\bin\PrintingStationUtils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="SystemFramework">
+      <HintPath>..\..\Build\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Processes">
+      <HintPath>..\..\Build\LSOne.POS.Processes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\MenuTypeSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MenuTypeSelectionDialog.Designer.cs">
+      <DependentUpon>MenuTypeSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalityService.Partner.cs" />
+    <Compile Include="DiningTable.cs" />
+    <Compile Include="DiningTableList.cs" />
+    <Compile Include="Enums\ActionType.cs" />
+    <Compile Include="Enums\DiningTableAvailability.cs" />
+    <Compile Include="Enums\FilterAppliesTo.cs" />
+    <Compile Include="Enums\SplitAction.cs" />
+    <Compile Include="Enums\TmpPOSTransLineType.cs" />
+    <Compile Include="HospitalityService.cs" />
+    <Compile Include="Layout\HospitalityLayoutContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\HospitalityLayoutContainer.Designer.cs">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enums\SplitBillMode.cs" />
+    <Compile Include="SplitBill\SplitBillDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplitBill\SplitBillDialog.Designer.cs">
+      <DependentUpon>SplitBillDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplitBill\LinkedItemInfo.cs" />
+    <Compile Include="SplitBill\Operations.cs" />
+    <Compile Include="SplitBill\OriginalItemInfo.cs" />
+    <Compile Include="SplitBill\SplitBill.cs" />
+    <Compile Include="SplitBill\SplitLinesInfo.cs" />
+    <Compile Include="StationPrinting\StationPrinter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\MenuTypeSelectionDialog.resx">
+      <DependentUpon>MenuTypeSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="SplitBill\SplitBillDialog.resx">
+      <DependentUpon>SplitBillDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="HospitalityService.vslp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Other\Peripherals\Peripherals.csproj">
+      <Project>{d8757eeb-7ac8-4d26-bcdc-34536eac5659}</Project>
+      <Name>Peripherals</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Other\POSSharedDialogs\POSSharedDialogs.csproj">
+      <Project>{159c5050-398a-487d-88e0-e4050d3e9336}</Project>
+      <Name>POSSharedDialogs</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Trigger_interfaces\TriggerInterfaces\TriggerInterfaces.csproj">
+      <Project>{0D4A43AF-8293-4560-B85D-25FC541E82AC}</Project>
+      <Name>TriggerInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\SiteService\SiteServiceInterface\SiteServiceInterface.csproj">
+      <Project>{FBD4317B-3D61-49C1-B2BE-559507458CCB}</Project>
+      <Name>SiteServiceInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogMessage_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.da.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.de.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.es.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.fr.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.is.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.nl-BE.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.ru.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.sv.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.nl.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.fi.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.bg.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layout\HospitalityLayoutContainer.vi-VN.resx">
+      <DependentUpon>HospitalityLayoutContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\FillGrey.png" />
+    <Content Include="Resources\FillWhite.png" />
+    <Content Include="Resources\HalfGrey.png" />
+    <Content Include="Resources\HalfWhite.png" />
+    <Content Include="Resources\OutlineGrey.png" />
+    <Content Include="Resources\OutlineWhite.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\Services\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

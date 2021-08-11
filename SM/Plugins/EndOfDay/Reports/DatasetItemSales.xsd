@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatasetItemSales" targetNamespace="http://tempuri.org/DatasetItemSales.xsd" xmlns:mstns="http://tempuri.org/DatasetItemSales.xsd" xmlns="http://tempuri.org/DatasetItemSales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatasetItemSales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatasetItemSales" msprop:Generator_UserDSName="DatasetItemSales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableItemSales" msprop:Generator_TableClassName="DataTableItemSalesDataTable" msprop:Generator_TableVarName="tableDataTableItemSales" msprop:Generator_TablePropName="DataTableItemSales" msprop:Generator_RowDeletingName="DataTableItemSalesRowDeleting" msprop:Generator_UserTableName="DataTableItemSales" msprop:Generator_RowChangingName="DataTableItemSalesRowChanging" msprop:Generator_RowEvHandlerName="DataTableItemSalesRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableItemSalesRowDeleted" msprop:Generator_RowEvArgName="DataTableItemSalesRowChangeEvent" msprop:Generator_RowChangedName="DataTableItemSalesRowChanged" msprop:Generator_RowClassName="DataTableItemSalesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEMID" msprop:Generator_ColumnVarNameInTable="columnITEMID" msprop:Generator_ColumnPropNameInRow="ITEMID" msprop:Generator_ColumnPropNameInTable="ITEMIDColumn" msprop:Generator_UserColumnName="ITEMID" type="xs:string" />
+              <xs:element name="DESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_UserColumnName="DESCRIPTION" type="xs:string" minOccurs="0" />
+              <xs:element name="VARIANTID" msprop:Generator_ColumnVarNameInTable="columnVARIANTID" msprop:Generator_ColumnPropNameInRow="VARIANTID" msprop:Generator_ColumnPropNameInTable="VARIANTIDColumn" msprop:Generator_UserColumnName="VARIANTID" type="xs:string" />
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NETAMOUNTINCLTAX" msprop:Generator_ColumnVarNameInTable="columnNETAMOUNTINCLTAX" msprop:Generator_ColumnPropNameInRow="NETAMOUNTINCLTAX" msprop:Generator_ColumnPropNameInTable="NETAMOUNTINCLTAXColumn" msprop:Generator_UserColumnName="NETAMOUNTINCLTAX" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTableItemSales" />
+      <xs:field xpath="mstns:ITEMID" />
+      <xs:field xpath="mstns:VARIANTID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

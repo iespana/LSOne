@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element msdata:IsDataSet="true" name="root">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+                <xsd:element minOccurs="0" msdata:Ordinal="2" name="comment" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute msdata:Ordinal="1" name="name" type="xsd:string" use="required" />
+              <xsd:attribute msdata:Ordinal="3" name="type" type="xsd:string" />
+              <xsd:attribute msdata:Ordinal="4" name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ItemMaster" xml:space="preserve">
+    <value>Maestro de artículos</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Minorista</value>
+  </data>
+  <data name="RetailItem" xml:space="preserve">
+    <value>Artículo minorista</value>
+  </data>
+  <data name="RetailItems" xml:space="preserve">
+    <value>Artículos minoristas</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Precio/Descuento</value>
+  </data>
+  <data name="NewRetailItem" xml:space="preserve">
+    <value>Nuevo artículo minorista</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Convertible</value>
+  </data>
+  <data name="RetailItemNew" xml:space="preserve">
+    <value>Nuevo artículo</value>
+  </data>
+  <data name="ViewItems" xml:space="preserve">
+    <value>Ver artículos</value>
+  </data>
+  <data name="ViewItemsDescription" xml:space="preserve">
+    <value>Utilice esta opción para buscar y ver artículos minoristas.</value>
+  </data>
+  <data name="NewRetailItemDescription" xml:space="preserve">
+    <value>Utilice esta opción para crear un nuevo artículo minorista.</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventario</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Comprar</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Ventas</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>No se ha seleccionado una tienda predeterminada.</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>La tienda predeterminada no tiene un grupo impositivo asociado.</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>El artículo no tiene un grupo impositivo asociado.</value>
+  </data>
+  <data name="AllGroups" xml:space="preserve">
+    <value>Todos los grupos</value>
+  </data>
+  <data name="ViewItem" xml:space="preserve">
+    <value>Ver artículo</value>
+  </data>
+  <data name="DeleteRetailItem" xml:space="preserve">
+    <value>Borrar artículo minorista</value>
+  </data>
+  <data name="DeleteRetailItemQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el artículo minorista seleccionado?</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Grupo minorista</value>
+  </data>
+  <data name="RetailGroups" xml:space="preserve">
+    <value>Grupos minoristas</value>
+  </data>
+  <data name="ViewRetailGroups" xml:space="preserve">
+    <value>Ver grupos minoristas</value>
+  </data>
+  <data name="ViewRetailGroupsDescription" xml:space="preserve">
+    <value>Utilice esta opción para ver y editar grupos minoristas.</value>
+  </data>
+  <data name="DeleteRetailGroup" xml:space="preserve">
+    <value>Borrar grupo minorista</value>
+  </data>
+  <data name="DeleteRetailGroupQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el grupo minorista seleccionado?</value>
+  </data>
+  <data name="OverwriteValues" xml:space="preserve">
+    <value>Sobrescribir valores</value>
+  </data>
+  <data name="OverwriteValuesQuestion" xml:space="preserve">
+    <value>¿Desea sobrescribir valores de artículos con valores del grupo minorista seleccionado?</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Departamento minorista</value>
+  </data>
+  <data name="RetailDepartments" xml:space="preserve">
+    <value>Departamentos minoristas</value>
+  </data>
+  <data name="DeleteRetailDepartment" xml:space="preserve">
+    <value>Borrar departamento minorista</value>
+  </data>
+  <data name="DeleteRetailDepartmentQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el departamento minorista seleccionado?</value>
+  </data>
+  <data name="ViewRetailDepartments" xml:space="preserve">
+    <value>Ver departamentos minoristas</value>
+  </data>
+  <data name="ViewRetailDepartmentsDescription" xml:space="preserve">
+    <value>Utilice esta opción para ver y editar departamentos minoristas.</value>
+  </data>
+  <data name="DeleteSpecialGroup" xml:space="preserve">
+    <value>Borrar grupo especial</value>
+  </data>
+  <data name="DeleteSpecialGroupQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el grupo especial seleccionado?</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Grupo especial</value>
+  </data>
+  <data name="SpecialGroups" xml:space="preserve">
+    <value>Grupos especiales</value>
+  </data>
+  <data name="ViewSpecialGroups" xml:space="preserve">
+    <value>Ver grupos especiales</value>
+  </data>
+  <data name="ViewSpecialGroupsDescription" xml:space="preserve">
+    <value>Utilice esta opción para ver y editar grupos especiales.</value>
+  </data>
+  <data name="EditDescriptionForTheSelectedSpecialGroup" xml:space="preserve">
+    <value>Editar descripción para el grupo especial seleccionado</value>
+  </data>
+  <data name="EditSpecialGroup" xml:space="preserve">
+    <value>Editar grupo especial</value>
+  </data>
+  <data name="AddToGroup" xml:space="preserve">
+    <value>Añadir a grupo</value>
+  </data>
+  <data name="RemoveFromGroup" xml:space="preserve">
+    <value>Quitar del grupo</value>
+  </data>
+  <data name="BOM" xml:space="preserve">
+    <value>Lista de materiales</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Artículo</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/D</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Servicio</value>
+  </data>
+  <data name="EditRetailItem" xml:space="preserve">
+    <value>Editar artículo minorista</value>
+  </data>
+  <data name="DigitsTruncated" xml:space="preserve">
+    <value>Los dígitos que no se han mostrado se han truncado.</value>
+  </data>
+  <data name="MoreDigitsThanShown" xml:space="preserve">
+    <value>Hay más dígitos en el precio de venta de los que se muestran.</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidad de la unidad de inventario a la unidad de venta. ¿Desea crear la regla?</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Falta la regla de conversión de unidad</value>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidad de la unidad de inventario a la unidad de venta.</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Grupos</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="BMPfiles" xml:space="preserve">
+    <value>Archivos BMP</value>
+  </data>
+  <data name="JPEGfiles" xml:space="preserve">
+    <value>Archivos JPEG</value>
+  </data>
+  <data name="PNGfiles" xml:space="preserve">
+    <value>Archivos PNG</value>
+  </data>
+  <data name="DiscardImage" xml:space="preserve">
+    <value>¿Está seguro de que desea descartar la imagen seleccionada?</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Archivos de imagen</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Artículos</value>
+  </data>
+  <data name="DeleteRetailItems" xml:space="preserve">
+    <value>Borrar artículos minoristas</value>
+  </data>
+  <data name="DeleteRetailItemsQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar los artículos minoristas seleccionados?</value>
+  </data>
+  <data name="OverwriteDimensionCombinations" xml:space="preserve">
+    <value>Grupo de dimensiones modificado</value>
+  </data>
+  <data name="OverwriteDimensionCombinationsQuestion" xml:space="preserve">
+    <value>¿Desea borrar las combinaciones de dimensiones existentes?</value>
+  </data>
+  <data name="DeleteLinkedItems" xml:space="preserve">
+    <value>Borrar artículos relacionados</value>
+  </data>
+  <data name="DeleteLinkedItemsQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar los artículos relacionados seleccionados?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="LinkedItems" xml:space="preserve">
+    <value>Artículos enlazados</value>
+  </data>
+  <data name="LinkedItemAlreadyExists" xml:space="preserve">
+    <value>Este artículo con esta unidad ya está relacionado con el artículo.</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartment" xml:space="preserve">
+    <value>Quitar grupo minorista del departamento minorista.</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartmentQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea quitar el grupo minorista seleccionado del departamento minorista seleccionado?</value>
+  </data>
+  <data name="ViewRetailGroup" xml:space="preserve">
+    <value>Ver grupo minorista</value>
+  </data>
+  <data name="EditRetailDepartment" xml:space="preserve">
+    <value>Editar departamento minorista</value>
+  </data>
+  <data name="ManageRetailGroups" xml:space="preserve">
+    <value>Utilice esta opción para administrar diferentes grupos minoristas.</value>
+  </data>
+  <data name="ItemsUpdated" xml:space="preserve">
+    <value>Artículos actualizados</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Procesando</value>
+  </data>
+  <data name="PromotionLinesUpdated" xml:space="preserve">
+    <value>Líneas de promoción actualizadas</value>
+  </data>
+  <data name="TradeAgreementsUpdated" xml:space="preserve">
+    <value>Acuerdos comerciales actualizados</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>Falta el ID</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>Falta el ID. ¿Desea generar automáticamente el ID?</value>
+  </data>
+  <data name="ItemIDExists" xml:space="preserve">
+    <value>El ID del artículo existe en la base de datos.</value>
+  </data>
+  <data name="BarcodeFieldsNotfilledIn" xml:space="preserve">
+    <value>Es necesario que ambos campos de códigos de barras estén rellenos o que ninguno de ellos lo esté.</value>
+  </data>
+  <data name="BarCodeMaxLengthError" xml:space="preserve">
+    <value>Un código de barras que utiliza esta configuración de código de barras debe tener como máximo #1 letras.</value>
+  </data>
+  <data name="BarCodeMinLengthError" xml:space="preserve">
+    <value>Un código de barras que utiliza esta configuración de código de barras debe tener como mínimo #1 letras.</value>
+  </data>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>Inform. adicional </value>
+  </data>
+  <data name="AllItems" xml:space="preserve">
+    <value>Todos los artículos</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Desactivado</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Descuentos</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Precios</value>
+  </data>
+  <data name="TradeAgreements" xml:space="preserve">
+    <value>Acuerdos comerciales</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Borrar línea de oferta de descuento</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar la línea de oferta de descuento seleccionada?</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Borrar línea de compra múltiple</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar la línea de compra múltiple seleccionada?</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Borrar línea de promoción</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar la línea de promoción seleccionada?</value>
+  </data>
+  <data name="DeleteTradeAgreement" xml:space="preserve">
+    <value>Borrar acuerdo comercial</value>
+  </data>
+  <data name="DeleteTradeAgreementQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el acuerdo comercial seleccionado?</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Grupos de líneas de mezclar y combinar</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Líneas de mezclar y combinar</value>
+  </data>
+  <data name="MultiBuy" xml:space="preserve">
+    <value>Compra múltiple</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Configuraciones de compras múltiples</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Líneas de múltiples compras</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Descuentos periódicos</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Líneas de promoción</value>
+  </data>
+  <data name="ViewGroup" xml:space="preserve">
+    <value>Ver grupo</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="ImportImagesAbort" xml:space="preserve">
+    <value>Abortar</value>
+  </data>
+  <data name="InventoryTypePurchase" xml:space="preserve">
+    <value>Comprar</value>
+  </data>
+  <data name="InventoryTypeSale" xml:space="preserve">
+    <value>Venta</value>
+  </data>
+  <data name="SalesTransaction" xml:space="preserve">
+    <value>Ventas</value>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Código de barras</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Venta</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Tienda</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="VariantGroup" xml:space="preserve">
+    <value>Grupo de variantes</value>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Proveedor</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Imágenes</value>
+  </data>
+  <data name="BaseSalesPrice" xml:space="preserve">
+    <value>Precio de venta base</value>
+  </data>
+  <data name="Multiline" xml:space="preserve">
+    <value>Multilínea</value>
+  </data>
+  <data name="ViewCustomer" xml:space="preserve">
+    <value>Ver cliente</value>
+  </data>
+  <data name="ColorGroup" xml:space="preserve">
+    <value>Grupo de colores</value>
+  </data>
+  <data name="SizeGroup" xml:space="preserve">
+    <value>Grupo de tamaños</value>
+  </data>
+  <data name="StyleGroup" xml:space="preserve">
+    <value>Grupo de estilos</value>
+  </data>
+  <data name="ValidationPeriod" xml:space="preserve">
+    <value>Periodo de validación</value>
+  </data>
+  <data name="RetailDivision" xml:space="preserve">
+    <value>Cargos varios de precio</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>Grupo de impuesto</value>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>Contraer</value>
+  </data>
+  <data name="Expand" xml:space="preserve">
+    <value>Expandir</value>
+  </data>
+  <data name="NewSpecialGroup" xml:space="preserve">
+    <value>Nuevo grupo especial</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Variante</value>
+  </data>
+  <data name="ActionsImportImages" xml:space="preserve">
+    <value>Importar imágenes</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>Ajuste</value>
+  </data>
+  <data name="CopyID" xml:space="preserve">
+    <value>Copiar ID</value>
+  </data>
+  <data name="CostPriceDisabled" xml:space="preserve">
+    <value>El precio de costo está deshabilitado ya que se ha fijado el margen en el 100 %</value>
+  </data>
+  <data name="CreateVariationCombinations" xml:space="preserve">
+    <value>Crear combinaciones de variación</value>
+  </data>
+  <data name="DeleteItemTranslation" xml:space="preserve">
+    <value>Eliminar traducción de artículo</value>
+  </data>
+  <data name="DeleteItemTranslationQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar la traducción del artículo que ha seleccionado?</value>
+  </data>
+  <data name="DeleteRetailDivision" xml:space="preserve">
+    <value>Eliminar división minorista</value>
+  </data>
+  <data name="DeleteRetailDivisionQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar la división minorista seleccionada?</value>
+  </data>
+  <data name="EditRetailDivision" xml:space="preserve">
+    <value>Editar división minorista</value>
+  </data>
+  <data name="FuelSettings" xml:space="preserve">
+    <value>Configuración para hidrocarburos</value>
+  </data>
+  <data name="ImageImportDeleteExisting" xml:space="preserve">
+    <value>Ha solicitado eliminar las imágenes existentes.
+
+
+
+Esto significa que se eliminarán todas las imágenes existentes del artículo minorista para el que se importe una nueva imagen.
+
+
+
+¿Desea continuar?</value>
+  </data>
+  <data name="ImportImagesDataFileFormatError" xml:space="preserve">
+    <value>El formulario del archivo de datos es incorrecto.</value>
+  </data>
+  <data name="ImportImagesItemNotFound" xml:space="preserve">
+    <value>No se encontró el artículo minorista '{0}'</value>
+  </data>
+  <data name="InventoryTypeAdjustment" xml:space="preserve">
+    <value>Ajuste</value>
+  </data>
+  <data name="ItemLedger" xml:space="preserve">
+    <value>Libro mayor del artículo</value>
+  </data>
+  <data name="ItemLedgerViewScrollDisplay" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="ItemTranslation" xml:space="preserve">
+    <value>Traducción del artículo</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Línea</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Administrar</value>
+  </data>
+  <data name="ManyItems" xml:space="preserve">
+    <value>Existen #1 artículos</value>
+  </data>
+  <data name="Miscellaneous" xml:space="preserve">
+    <value>Varios</value>
+  </data>
+  <data name="New_RetailItem" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="NoItemsHaveBeenCreated" xml:space="preserve">
+    <value>No existe ningún artículo</value>
+  </data>
+  <data name="OneItem" xml:space="preserve">
+    <value>Existe 1 artículo</value>
+  </data>
+  <data name="OnlyCharAndNumbers" xml:space="preserve">
+    <value>El ID del artículo solo puede contener caracteres alfanuméricos</value>
+  </data>
+  <data name="ProfitMarginTooHigh" xml:space="preserve">
+    <value>El margen de beneficio no puede superar el 100 %</value>
+  </data>
+  <data name="RetailDivisions" xml:space="preserve">
+    <value>Divisiones minoristas</value>
+  </data>
+  <data name="SalesPrice" xml:space="preserve">
+    <value>Precio de venta</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Traducciones de artículos</value>
+  </data>
+  <data name="Types" xml:space="preserve">
+    <value>Tipos</value>
+  </data>
+  <data name="ViewCustomerGroup" xml:space="preserve">
+    <value>Ver grupo de clientes</value>
+  </data>
+  <data name="ViewItemGroup" xml:space="preserve">
+    <value>Ver grupo de artículos</value>
+  </data>
+  <data name="ViewRetailDivisionDescription" xml:space="preserve">
+    <value>Utilice esta opción para ver y editar las divisiones minoristas</value>
+  </data>
+  <data name="ViewRetailDivisions" xml:space="preserve">
+    <value>Ver divisiones minoristas</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>Anulado</value>
+  </data>
+  <data name="VoidedLine" xml:space="preserve">
+    <value>Línea anulada</value>
+  </data>
+  <data name="VoidedSale" xml:space="preserve">
+    <value>Venta anulada</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>No se ha podido establecer la conexión con el servidor de la tienda</value>
+  </data>
+  <data name="StockCount" xml:space="preserve">
+    <value>Recuento de existencias</value>
+  </data>
+  <data name="Groups_Retail" xml:space="preserve">
+    <value>Grupos</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Atributo</value>
+  </data>
+  <data name="ChangeTaxGroup" xml:space="preserve">
+    <value>Cambiar grupo impositivo</value>
+  </data>
+  <data name="ChangeTaxGroupDetail" xml:space="preserve">
+    <value>Al modificar el grupo impositivo se recalcularán los precios y las promociones asociados al artículo</value>
+  </data>
+  <data name="ChangeTaxGroupQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea modificar el grupo impositivo?</value>
+  </data>
+  <data name="CreatingItemsMessage" xml:space="preserve">
+    <value>Creación de artículos en curso</value>
+  </data>
+  <data name="EditMultipleItems" xml:space="preserve">
+    <value>Editar varios artículos</value>
+  </data>
+  <data name="FewMinutesMessage" xml:space="preserve">
+    <value>Esta operación podría tardar unos minutos</value>
+  </data>
+  <data name="FieldRequiresInput" xml:space="preserve">
+    <value>En la pestaña '{0}', debe introducir un valor en el campo '{1}'.</value>
+  </data>
+  <data name="MultiSaveQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea guardar los cambios en todos los registros seleccionados?</value>
+  </data>
+  <data name="NoChange" xml:space="preserve">
+    <value>--- Sin cambios ---</value>
+  </data>
+  <data name="SavingItems" xml:space="preserve">
+    <value>Guardando artículos</value>
+  </data>
+  <data name="SavingItemsCount" xml:space="preserve">
+    <value>Guardando {0} de {1}</value>
+  </data>
+  <data name="TabRequiresInput" xml:space="preserve">
+    <value>La página de la pestaña {0} tiene campos en los que hay que introducir datos</value>
+  </data>
+  <data name="Undelete" xml:space="preserve">
+    <value>Anular eliminación</value>
+  </data>
+  <data name="UndeleteRetailItem" xml:space="preserve">
+    <value>Anular eliminación del artículo minorista</value>
+  </data>
+  <data name="UndeleteRetailItemQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea anular la eliminación de este artículo?</value>
+  </data>
+  <data name="VariantHeader" xml:space="preserve">
+    <value>Encabezado de variante</value>
+  </data>
+  <data name="VariantItem" xml:space="preserve">
+    <value>Variante de artículo</value>
+  </data>
+  <data name="ViewHeaderItem" xml:space="preserve">
+    <value>Ver artículo de encabezado</value>
+  </data>
+  <data name="ViewVariantHeader" xml:space="preserve">
+    <value>Ver encabezado de variante</value>
+  </data>
+  <data name="StockReservation" xml:space="preserve">
+    <value>Reserva de existencias</value>
+  </data>
+  <data name="NewItemTypeRetailTitle" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="NewItemTypeServiceQuestion" xml:space="preserve">
+    <value>¿Desea continuar?</value>
+  </data>
+  <data name="NewItemTypeServiceTitle" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="RetailDepartmentsTooltipDescription" xml:space="preserve">
+    <value>Administrar departamentos minoristas</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Departamentos</value>
+  </data>
+  <data name="Divisions" xml:space="preserve">
+    <value>Divisiones</value>
+  </data>
+  <data name="Hierarchy" xml:space="preserve">
+    <value>Jerarquía</value>
+  </data>
+  <data name="ItemsTooltipDescription" xml:space="preserve">
+    <value>Abrir la lista de artículos para ver y administrar artículos</value>
+  </data>
+  <data name="NewItemTooltipDescription" xml:space="preserve">
+    <value>Crear un nuevo artículo</value>
+  </data>
+  <data name="NewItemTypeRetailText2" xml:space="preserve">
+    <value>Las ventas que formen parte de una declaración no generarán nuevas líneas en el libro mayor de artículos (movimientos de inventario).</value>
+  </data>
+  <data name="NoConnectionToSiteServiceHeader" xml:space="preserve">
+    <value>No existe conexión con el servidor de la tienda.</value>
+  </data>
+  <data name="NoConnectionToSiteServiceText" xml:space="preserve">
+    <value>El inventario disponible actual no se puede confirmar, por lo que no es posible modificar el tipo de artículo.</value>
+  </data>
+  <data name="NoPermissionForItemType" xml:space="preserve">
+    <value>El usuario seleccionado no dispone de los permisos necesarios para modificar el tipo de artículo</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="POSSettings" xml:space="preserve">
+    <value>Configuración del punto de venta</value>
+  </data>
+  <data name="PostedStatement" xml:space="preserve">
+    <value>Declaración publicada</value>
+  </data>
+  <data name="RetailDivisionsTooltipDescription" xml:space="preserve">
+    <value>Administrar las divisiones minoristas situadas en la parte superior de la jerarquía de artículos</value>
+  </data>
+  <data name="RetailGroupAlreadyAssignedToADepartment" xml:space="preserve">
+    <value>Este grupo minorista ya se ha asignado a un departamento minorista.</value>
+  </data>
+  <data name="RetailGroupsTooltipDescription" xml:space="preserve">
+    <value>Administrar los grupos minoristas, su configuración y la inclusión de artículos</value>
+  </data>
+  <data name="ShowPostedStatements" xml:space="preserve">
+    <value>Mostrar declaraciones publicadas</value>
+  </data>
+  <data name="ShowVoided" xml:space="preserve">
+    <value>Mostrar anuladas</value>
+  </data>
+  <data name="SpecialGroupsTooltipDescription" xml:space="preserve">
+    <value>Administrar grupos especiales asociados a artículos no vinculados a grupos y añadir descuentos y promociones</value>
+  </data>
+  <data name="TransferIn" xml:space="preserve">
+    <value>Transferencia de entrada</value>
+  </data>
+  <data name="TransferOut" xml:space="preserve">
+    <value>Transferencia de salida</value>
+  </data>
+  <data name="UndeleteRetailItemsQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea cancelar la eliminación de estos artículos?</value>
+  </data>
+  <data name="AllTypes" xml:space="preserve">
+    <value>Todos los tipos</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Tipo de artículo</value>
+  </data>
+  <data name="ServiceItem" xml:space="preserve">
+    <value>Artículo de servicio</value>
+  </data>
+  <data name="NewItemTypeRetailText3" xml:space="preserve">
+    <value>Para garantizar que el inventario disponible sea correcto, se recomienda efectuar un recuento de existencias del artículo.</value>
+  </data>
+  <data name="DoYouWantToContinue" xml:space="preserve">
+    <value>¿Desea continuar?</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventory" xml:space="preserve">
+    <value>Se crearán ajustes de inventario para poner a cero el inventario disponible.</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventoryWithReplenishment" xml:space="preserve">
+    <value>Se crearán ajustes de inventario para poner a cero el inventario disponible y se bloqueará la reposición de artículos.</value>
+  </data>
+  <data name="LinkedItemSameAsOriginalItem" xml:space="preserve">
+    <value>El artículo vinculado no puede ser el mismo que el artículo original</value>
+  </data>
+  <data name="MultiEditServiceItemsText" xml:space="preserve">
+    <value>Ha seleccionado al menos un artículo de servicio. La edición múltiple no está disponible.</value>
+  </data>
+  <data name="NewItemTypeRetailText1" xml:space="preserve">
+    <value>La reposición de artículos está bloqueada actualmente.</value>
+  </data>
+  <data name="ParkedInventory" xml:space="preserve">
+    <value>Inventario inmovilizado</value>
+  </data>
+  <data name="RetailDepartmentAssignedToDivision" xml:space="preserve">
+    <value>Ya hay uno o varios departamentos minoristas asignados a una división.</value>
+  </data>
+  <data name="ServiceItemError" xml:space="preserve">
+    <value>No se pudo establecer conexión con el servidor de la tienda. No se pueden guardar los artículos de servicio.</value>
+  </data>
+</root>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Printing" xml:space="preserve">
+    <value>Udskrivning</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Kortlæser</value>
+  </data>
+  <data name="AutoDetectionResults" xml:space="preserve">
+    <value>Resultater af autosøgning</value>
+  </data>
+  <data name="AutoDetectOPOS_Failed" xml:space="preserve">
+    <value>Mislykket test af {0}: {1}</value>
+  </data>
+  <data name="AutoDetectOPOS_Successfully" xml:space="preserve">
+    <value>Vellykket tilføjelse af {0}: {1}</value>
+  </data>
+  <data name="BarcodePrintingRequiresCustomization" xml:space="preserve">
+    <value>&lt;#1 stregkode understøttes ikke&gt;</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Stregkodelæser</value>
+  </data>
+  <data name="BarcodeReaderEmpty" xml:space="preserve">
+    <value>Stregkodelæser: Navn er tomt.</value>
+  </data>
+  <data name="CardReaderEmpty" xml:space="preserve">
+    <value>Kortlæser: Navn er tomt.</value>
+  </data>
+  <data name="CashDrawerIsClosed" xml:space="preserve">
+    <value>Skuffen er lukket.</value>
+  </data>
+  <data name="CashDrawerIsIllegallyClosed" xml:space="preserve">
+    <value>Skuffen er blevet lukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="CashDrawerTimedOut" xml:space="preserve">
+    <value>Der opstod timeout for skuffen.</value>
+  </data>
+  <data name="CheckForPaperJam" xml:space="preserve">
+    <value>Printerfejl. Kontroller, om der er papir i klemme, eller om strømmen er gået.</value>
+  </data>
+  <data name="CouldNotLoadCashDrawer" xml:space="preserve">
+    <value>Kunne ikke indlæse skuffe: #1</value>
+  </data>
+  <data name="CouldNotLoadDallasKey" xml:space="preserve">
+    <value>Kunne ikke indlæse Dallas-nøgle: #1</value>
+  </data>
+  <data name="CouldNotLoadDualDisplay" xml:space="preserve">
+    <value>Kunne ikke indlæse dobbeltskærm: #1</value>
+  </data>
+  <data name="CouldNotLoadForecourtManager" xml:space="preserve">
+    <value>Kunne ikke indlæse forecourt manager: #1</value>
+  </data>
+  <data name="CouldNotLoadHardware" xml:space="preserve">
+    <value>Kunne ikke indlæse hardware</value>
+  </data>
+  <data name="CouldNotLoadHardwareProfile" xml:space="preserve">
+    <value>Hardwareprofil kunne ikke indlæses på grund af følgende fejl: #1 Vil du åbne hardwareprofilen for at teste hardwarekonfigurationen og foretage ændringer?</value>
+  </data>
+  <data name="CouldNotLoadHardwareSetupWithError" xml:space="preserve">
+    <value>Kunne ikke indlæse hardwarekonfiguration med fejl</value>
+  </data>
+  <data name="CouldNotLoadKeylock" xml:space="preserve">
+    <value>Kunne ikke indlæse tastaturlås: #1</value>
+  </data>
+  <data name="CouldNotLoadLineDisplay" xml:space="preserve">
+    <value>Kunne ikke indlæse kundedisplay: #1</value>
+  </data>
+  <data name="CouldNotLoadMSR" xml:space="preserve">
+    <value>Kunne ikke indlæse msr: #1</value>
+  </data>
+  <data name="CouldNotLoadPrinter" xml:space="preserve">
+    <value>Kunne ikke indlæse printer: #1</value>
+  </data>
+  <data name="CouldNotLoadRFIDScanner" xml:space="preserve">
+    <value>Kunne ikke indlæse RFID-scanner: #1</value>
+  </data>
+  <data name="CouldNotLoadScale" xml:space="preserve">
+    <value>Kunne ikke indlæse vægt: #1</value>
+  </data>
+  <data name="CouldNotLoadScanner" xml:space="preserve">
+    <value>Kunne ikke indlæse scanner: #1</value>
+  </data>
+  <data name="CouldNotTestPrintingOfReceipt" xml:space="preserve">
+    <value>Kunne ikke teste udskrivning af kvittering</value>
+  </data>
+  <data name="CurrentProfileWillBeApplied" xml:space="preserve">
+    <value>Den aktuelle profil vil blive anvendt</value>
+  </data>
+  <data name="DisplayIsClosed" xml:space="preserve">
+    <value>Skærmen er slukket.</value>
+  </data>
+  <data name="DisplayIsIllegallyClosed" xml:space="preserve">
+    <value>Skærmen er blevet slukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="DisplayTimedOut" xml:space="preserve">
+    <value>Der opstod timeout for skærmen.</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Skuffe</value>
+  </data>
+  <data name="DrawerEmpty" xml:space="preserve">
+    <value>Skuffe: Navn er tomt</value>
+  </data>
+  <data name="EFTNotSavedOnHO" xml:space="preserve">
+    <value>Kunne ikke få adgang til service for at gemme EFT-indstillinger centralt – ændringer vil kun blive udført lokalt.</value>
+  </data>
+  <data name="EnterWeight" xml:space="preserve">
+    <value>Indtast vægt</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Gem og luk</value>
+  </data>
+  <data name="FixProblemAndRetry" xml:space="preserve">
+    <value>Vil du forsøge at løse problemet og gøre et nyt forsøg?</value>
+  </data>
+  <data name="HardwareNotSavedOnHO" xml:space="preserve">
+    <value>Kunne ikke få adgang til service for at gemme hardwareindstillinger centralt – ændringer vil kun blive udført lokalt.</value>
+  </data>
+  <data name="HardwareProfileErrorString" xml:space="preserve">
+    <value>Følgende enhed(er) har ugyldige indstillinger: {0}Kør Site Manager, og løs alle problemer, inden kassen genstartes</value>
+  </data>
+  <data name="HardwareProfileSufficientPermissions" xml:space="preserve">
+    <value>Hardwareprofilen kan kun ændres ved, at en bruger med tilstrækkelige tilladelser logger ind.</value>
+  </data>
+  <data name="InsertSlipIntoPrinter" xml:space="preserve">
+    <value>Sæt kvitteringen i printeren</value>
+  </data>
+  <data name="KeylockEmpty" xml:space="preserve">
+    <value>Tastaturlås: Navn er tomt</value>
+  </data>
+  <data name="KeylockIsClosed" xml:space="preserve">
+    <value>Tastaturlåsen er slukket.</value>
+  </data>
+  <data name="KeylockIsIllegallyClosed" xml:space="preserve">
+    <value>Tastaturlåsen er blevet lukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="KeylockTimedOut" xml:space="preserve">
+    <value>Der opstod timeout for tastaturlåsen.</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Kundedisplay</value>
+  </data>
+  <data name="LineDisplayEmpty" xml:space="preserve">
+    <value>Kundedisplay: Navn er tomt</value>
+  </data>
+  <data name="MoreThanOneOPOSDevice" xml:space="preserve">
+    <value>Fandt {0} {1} enheder. Ønsker du, at kassen skal forsøge at finde og vælge en aktiv enhed?</value>
+  </data>
+  <data name="MSRIllegallyClosed" xml:space="preserve">
+    <value>MSR er blevet lukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="MSRIsClosed" xml:space="preserve">
+    <value>MSR er lukket.</value>
+  </data>
+  <data name="MSRTimedOut" xml:space="preserve">
+    <value>Der opstod timeout for MSR.</value>
+  </data>
+  <data name="NoHardwareProfilePermission" xml:space="preserve">
+    <value>Du har ikke tilladelse til at ændre hardwareprofilen.</value>
+  </data>
+  <data name="NoInputdetected" xml:space="preserve">
+    <value>Der blev ikke registreret nogen input. Kontroller vægten, og genstart kassen</value>
+  </data>
+  <data name="NoOPOSDevice" xml:space="preserve">
+    <value>Ingen {0} fundet</value>
+  </data>
+  <data name="NoPrinterFound" xml:space="preserve">
+    <value>Ingen printer fundet</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Der er ikke valgt nogen printer. Det kan være umuligt at starte LS One POS med disse indstillinger.</value>
+  </data>
+  <data name="NoScaleDetected" xml:space="preserve">
+    <value>Ingen vægt registreret</value>
+  </data>
+  <data name="PleaseCheckThePrinter" xml:space="preserve">
+    <value>Kontroller printeren</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="PrinterCompletedOutput" xml:space="preserve">
+    <value>Printeren er færdig med at udskrive</value>
+  </data>
+  <data name="PrinterCoverIsOK" xml:space="preserve">
+    <value>Printerens kabinet er OK</value>
+  </data>
+  <data name="PrinterCoverIsOpen" xml:space="preserve">
+    <value>Printerens kabinet står åbent</value>
+  </data>
+  <data name="PrinterEmpty" xml:space="preserve">
+    <value>Printer: Navn er tomt</value>
+  </data>
+  <data name="PrinterFiredOffAnEvent" xml:space="preserve">
+    <value>Der opstod en fejl i printeren!</value>
+  </data>
+  <data name="PrinterIsClosed" xml:space="preserve">
+    <value>Printeren er slukket.</value>
+  </data>
+  <data name="PrinterIsIllegallyClosed" xml:space="preserve">
+    <value>Printeren er blevet slukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="PrinterIsOpen" xml:space="preserve">
+    <value>Printeren står åben</value>
+  </data>
+  <data name="PrinterIsOutOfPaper" xml:space="preserve">
+    <value>Printeren er løbet tør for papir eller er blevet koblet fra</value>
+  </data>
+  <data name="PrinterNotAccessible" xml:space="preserve">
+    <value>Printer #1 er ikke tilgængelig. Udskrivningen er blevet annulleret.</value>
+  </data>
+  <data name="PrinterTimeout" xml:space="preserve">
+    <value>Der opstod en timeout. Den kan være forårsaget af andre programmer eller processer, som tidligere har benyttet printeren</value>
+  </data>
+  <data name="PrintingDeviceIsDisabled" xml:space="preserve">
+    <value>Printerenhed frakoblet</value>
+  </data>
+  <data name="PrintingInProgress" xml:space="preserve">
+    <value>Udskrivning i gang ...</value>
+  </data>
+  <data name="RemoveSlipFromPrinter" xml:space="preserve">
+    <value>Fjern kvittering fra printeren</value>
+  </data>
+  <data name="ScaleEmpty" xml:space="preserve">
+    <value>Vægt: Navn er tomt</value>
+  </data>
+  <data name="ScaleIsClosed" xml:space="preserve">
+    <value>Vægten er slukket.</value>
+  </data>
+  <data name="ScaleIsDiabledReconnect" xml:space="preserve">
+    <value>Tilslut vægten igen, og genstart kassen</value>
+  </data>
+  <data name="ScaleIsDisabled" xml:space="preserve">
+    <value>Vægten er frakoblet. Tilslut vægten igen, og genstart kassen</value>
+  </data>
+  <data name="ScaleIsDisabledEnterWeight" xml:space="preserve">
+    <value>Vægten er slukket. Vil du indtaste vægten manuelt?</value>
+  </data>
+  <data name="ScaleIsIllegallyClosed" xml:space="preserve">
+    <value>Vægten er blevet slukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="ScaleTimedOut" xml:space="preserve">
+    <value>Der opstod timeout for vægten.</value>
+  </data>
+  <data name="ScannedTimedOut" xml:space="preserve">
+    <value>Der opstod timeout ved scanning</value>
+  </data>
+  <data name="ScannerIsClosesd" xml:space="preserve">
+    <value>Scanneren er slukket.</value>
+  </data>
+  <data name="ScannerIsIllegallyClosed" xml:space="preserve">
+    <value>Scanneren er blevet slukket på en måde, som ikke er tilladt.</value>
+  </data>
+  <data name="TestFailed" xml:space="preserve">
+    <value>Test af enhed mislykkedes: #1</value>
+  </data>
+  <data name="TestSuccessful" xml:space="preserve">
+    <value>Test af enhed gennemført</value>
+  </data>
+  <data name="WelcomeTo" xml:space="preserve">
+    <value>Velkommen til</value>
+  </data>
+  <data name="CouldNotStartPrintJob" xml:space="preserve">
+    <value>Kunne ikke starte udskrivningsopgaver.</value>
+  </data>
+  <data name="PleaseCheckPrinterOrPrintingStation" xml:space="preserve">
+    <value>Kontroller printeren eller printstationen</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Printstation</value>
+  </data>
+  <data name="PrintingStationError" xml:space="preserve">
+    <value>Fejl på printstation</value>
+  </data>
+</root>

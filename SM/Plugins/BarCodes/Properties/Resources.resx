@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BarcodeEditImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BarcodeEditImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BarCodeExists" xml:space="preserve">
+    <value>That bar code already exists in the database</value>
+    <comment>[Term:3200]</comment>
+  </data>
+  <data name="BarcodeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BarcodeImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BarCodeMaxLengthError" xml:space="preserve">
+    <value>A bar code using this bar code setup has to be at most #1 letters in length</value>
+    <comment>[Term:3203]</comment>
+  </data>
+  <data name="BarCodeMinLengthError" xml:space="preserve">
+    <value>A bar code using this bar code setup has to be at least #1 letters in length</value>
+    <comment>[Term:3202]</comment>
+  </data>
+  <data name="BarCodes" xml:space="preserve">
+    <value>Bar codes</value>
+    <comment>[Term:3197]</comment>
+  </data>
+  <data name="CheckSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckSymbol.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+    <comment>[Term:2175]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>[Term:454]</comment>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+    <comment>[Term:2317]</comment>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
+    <comment>[Term:2336]</comment>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Variant number</value>
+    <comment>[Term:3198]</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514] - Mask type: Item</comment>
+  </data>
+  <data name="NoBarCode" xml:space="preserve">
+    <value>No bar code</value>
+    <comment>[Term:3216]</comment>
+  </data>
+  <data name="BarCodeSetup" xml:space="preserve">
+    <value>Bar code setup</value>
+    <comment>[Term:3196]</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+    <comment>[Term:3217] - Mask type: None</comment>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+    <comment>[Term:3211]</comment>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+    <comment>[Term:2877] - Mask type: Customer</comment>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
+    <comment>[Term:2936] - Mask type: Employee</comment>
+  </data>
+  <data name="Coupon" xml:space="preserve">
+    <value>Coupon</value>
+    <comment>[Term:3208] - Mask type: Coupon</comment>
+  </data>
+  <data name="DataEntry" xml:space="preserve">
+    <value>Data entry</value>
+    <comment>[Term:3206] - Mask type: Data entry</comment>
+  </data>
+  <data name="SalesPerson" xml:space="preserve">
+    <value>Sales person</value>
+    <comment>[Term:3220] - Mask type: Sales person</comment>
+  </data>
+  <data name="Pharmacy" xml:space="preserve">
+    <value>Pharmacy</value>
+    <comment>[Term:3218] - Mask type: Pharmacy</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>[Term:3225] - Mask type: Unknown</comment>
+  </data>
+  <data name="Mask" xml:space="preserve">
+    <value>Mask</value>
+    <comment>[Term:621]</comment>
+  </data>
+  <data name="Symbology" xml:space="preserve">
+    <value>Symbology</value>
+    <comment>[Term:3221]</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:2403]</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>[Term:3224] - Mask: Type</comment>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+    <comment>[Term:2535]</comment>
+  </data>
+  <data name="Ratio" xml:space="preserve">
+    <value>Ratio</value>
+    <comment>[Term:3219]</comment>
+  </data>
+  <data name="DeleteBarCodeSetupQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected bar code setup?</value>
+    <comment>[Term:3204]</comment>
+  </data>
+  <data name="DeleteBarCodeSetup" xml:space="preserve">
+    <value>Delete bar code setup</value>
+    <comment>[Term:3207]</comment>
+  </data>
+  <data name="BarCodeMaskSetup" xml:space="preserve">
+    <value>Bar code mask setup</value>
+    <comment>[Term:3231]</comment>
+  </data>
+  <data name="ManageBarCodeMasks" xml:space="preserve">
+    <value>Manage bar code masks</value>
+    <comment>[Term:3237]</comment>
+  </data>
+  <data name="AnyNumber" xml:space="preserve">
+    <value>Any number</value>
+    <comment>[Term:3255]</comment>
+  </data>
+  <data name="CheckDigit" xml:space="preserve">
+    <value>Check digit</value>
+    <comment>[Term:3254]</comment>
+  </data>
+  <data name="ColorDigit" xml:space="preserve">
+    <value>Color digit</value>
+    <comment>[Term:3252]</comment>
+  </data>
+  <data name="EANLicenseCode" xml:space="preserve">
+    <value>EAN license code</value>
+    <comment>[Term:3256]</comment>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+    <comment>[Term:2946]</comment>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+    <comment>[Term:2947]</comment>
+  </data>
+  <data name="SizeDigit" xml:space="preserve">
+    <value>Size digit</value>
+    <comment>[Term:3251]</comment>
+  </data>
+  <data name="StyleDigit" xml:space="preserve">
+    <value>Style digit</value>
+    <comment>[Term:3250]</comment>
+  </data>
+  <data name="ArrowDownImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowDownImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowUpImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowUpImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BarCodeSetupID" xml:space="preserve">
+    <value>Bar code setup ID</value>
+    <comment>[Term:3230]</comment>
+  </data>
+  <data name="MaskInvalidLetterError" xml:space="preserve">
+    <value>Mask contains letters that do not map to known types</value>
+    <comment>[Term:3239]</comment>
+  </data>
+  <data name="DeleteSegmentQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected segment?</value>
+    <comment>[Term:3234]</comment>
+  </data>
+  <data name="DeleteSegment" xml:space="preserve">
+    <value>Delete segment</value>
+    <comment>[Term:3226]</comment>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Move down</value>
+    <comment>[Term:3241]</comment>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Move up</value>
+    <comment>[Term:3242]</comment>
+  </data>
+  <data name="BarCodeMaskExists" xml:space="preserve">
+    <value>That bar code mask already exists in the database</value>
+    <comment>[Term:3246]</comment>
+  </data>
+  <data name="DeleteBarCodeMask" xml:space="preserve">
+    <value>Delete bar code mask</value>
+    <comment>[Term:3227]</comment>
+  </data>
+  <data name="DeleteBarCodeMaskQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected bar code mask?</value>
+    <comment>[Term:3235]</comment>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>General setup</value>
+    <comment>[Term:14659]</comment>
+  </data>
+  <data name="BarcodeImage24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BarcodeImage24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BarCodeSetupDescription" xml:space="preserve">
+    <value>Use this option to set up bar code rules</value>
+    <comment>[Term:3249]</comment>
+  </data>
+  <data name="BarCodeMaskSetupDescription" xml:space="preserve">
+    <value>Use this option to define bar code masks</value>
+    <comment>[Term:3248]</comment>
+  </data>
+  <data name="BarCodeMasks" xml:space="preserve">
+    <value>Bar code masks</value>
+    <comment>[Term:3259]</comment>
+  </data>
+  <data name="BarCodeMaskSegments" xml:space="preserve">
+    <value>Bar code mask segments</value>
+    <comment>[Term:3260]</comment>
+  </data>
+  <data name="PrefixExists" xml:space="preserve">
+    <value>That bar code prefix already exists in the database</value>
+    <comment>[Term:3308]</comment>
+  </data>
+  <data name="SetupBarCode" xml:space="preserve">
+    <value>Setup</value>
+    <comment>[Term:2705] - Bar codes: Setup</comment>
+  </data>
+  <data name="MaskSetupBarCode" xml:space="preserve">
+    <value>Setup masks</value>
+    <comment>[Term:3319] - Bar codes: Setup mask</comment>
+  </data>
+  <data name="NewBarCode" xml:space="preserve">
+    <value>New bar code</value>
+    <comment>[Term:15721]</comment>
+  </data>
+  <data name="DeleteBarCode" xml:space="preserve">
+    <value>Delete bar code</value>
+    <comment>[Term:18355]</comment>
+  </data>
+  <data name="DeleteBarCodeQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected barcode?</value>
+    <comment>[Term:15720]</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+    <comment>[Term:3634]</comment>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Convertible</value>
+    <comment>[Term:3656]</comment>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the inventory unit for the selected item. Would you like to create the rule?</value>
+    <comment>[Term:14885]</comment>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Unit conversion rule is missing</value>
+    <comment>[Term:14890]</comment>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the inventory unit for the selected item.</value>
+    <comment>[Term:14884]</comment>
+  </data>
+  <data name="ReceiptBarcode" xml:space="preserve">
+    <value>Receipt barcode</value>
+    <comment>[Term:12943]</comment>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Receipt</value>
+    <comment>[Term:2919] - Mask type: Receipt</comment>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Store</value>
+    <comment>[Term:2594] - Mask type: Store</comment>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+    <comment>[Term:3315] - Mask type: Terminal</comment>
+  </data>
+  <data name="BarcodeFieldsNotfilledIn" xml:space="preserve">
+    <value>Either both bar code fields need to be filled in or neither of them.</value>
+    <comment>[Term:16490]</comment>
+  </data>
+  <data name="PleaseSelectBarCodeSetup" xml:space="preserve">
+    <value>Please select bar code setup before entering bar code</value>
+    <comment>[Term:22635]</comment>
+  </data>
+  <data name="BarcodeNotCorrectlySetup" xml:space="preserve">
+    <value>The bar code setup or the barcode is not correctly set up</value>
+    <comment>[Term:22636]</comment>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Setup</value>
+    <comment>[Term:2705]</comment>
+  </data>
+  <data name="barcode32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcode32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcodes_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcodes_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcodes_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcodes_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SalesUnitConversionQuestion" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the sales unit for the selected item. Would you like to create the rule?</value>
+    <comment>[Term:23212]</comment>
+  </data>
+  <data name="SalesUnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the sales unit for the selected item.</value>
+    <comment>[Term:23211]</comment>
+  </data>
+  <data name="info_provider_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info codes_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MatchBarcodeMask" xml:space="preserve">
+    <value>For credit memos you need to configure the number sequence to match the prefix of the barcode mask</value>
+    <comment>[Term:23322]</comment>
+  </data>
+  <data name="BarcodesOneWord" xml:space="preserve">
+    <value>Barcodes</value>
+    <comment>[Term:5734]</comment>
+  </data>
+  <data name="BarcodesTooltip" xml:space="preserve">
+    <value>Setup barcode rules</value>
+    <comment>[Term:23412]</comment>
+  </data>
+  <data name="BarcodeSetupInUse" xml:space="preserve">
+    <value>This barcode setup is in use and can't be deleted</value>
+    <comment>[Term:23791]</comment>
+  </data>
+  <data name="BarcodeMaskInUse" xml:space="preserve">
+    <value>This barcode mask is in use and can't be deleted</value>
+    <comment>[Term:23793]</comment>
+  </data>
+  <data name="CreditMemo" xml:space="preserve">
+    <value>Credit memo</value>
+  </data>
+  <data name="Customized" xml:space="preserve">
+    <value>Customized</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="GiftCard" xml:space="preserve">
+    <value>Gift card</value>
+  </data>
+  <data name="QR" xml:space="preserve">
+    <value>QR</value>
+  </data>
+  <data name="Loyalty" xml:space="preserve">
+    <value>Loyalty</value>
+  </data>
+</root>

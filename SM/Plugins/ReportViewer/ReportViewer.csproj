@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <Import Project="$(EnvironmentConfig)" Condition="Exists('$(CoreXTConfigFile)')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B40EBD79-6C6A-4444-8B5B-33B4AA3A7781}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.ReportViewer</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.ReportViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\ReportParameterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportParameterControl.Designer.cs">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddReportDialog.Designer.cs">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ReportManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ReportManagementDialog.Designer.cs">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterPair.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerLocalizer.cs" />
+    <Compile Include="Views\ReportManagementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReportManagementView.designer.cs">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportViewerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReportViewerView.Designer.cs">
+      <DependentUpon>ReportViewerView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewPages\" />
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ReportParameterControl.bg.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.cs.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.da.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.de.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.el.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.es.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.fi.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.fr.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.hi.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.is.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.it.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.ja.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.ko.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.nb-NO.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.nl.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.pl.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.pt-BR.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.ru.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.sv.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.zh-CHS.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.zh-CHT.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.bg.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.cs.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.da.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.de.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.el.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.es.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.fi.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.fr.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.hi.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.is.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.it.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.ja.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.ko.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.nb-NO.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.nl.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.pl.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.pt-BR.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.ru.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.sv.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.zh-CHS.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.zh-CHT.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.bg.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.cs.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.da.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.de.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.el.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.es.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.fi.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.fr.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.hi.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.is.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.it.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.ja.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.ko.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.nb-NO.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.nl.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.pl.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.pt-BR.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.ru.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.sv.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.zh-CHS.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.zh-CHT.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="TEMPLATES\Financial_Report - Statement.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Financial_Report - User.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Financial_Report.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\GiftCardSales.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\IssuedCreditMemos.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Item sales - all items and prices.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Reorderpoint_by_vendor.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Sales by employee.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Sales by terminal.rdlc" />
+    <EmbeddedResource Include="TEMPLATES\Stock_level_by_vendor.rdlc" />
+    <EmbeddedResource Include="Views\ReportManagementView.bg.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.cs.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.da.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.de.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.el.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.es.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.fi.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.fr.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.hi.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.is.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.it.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.ja.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.ko.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.nb-NO.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.nl.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.pl.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.pt-BR.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.ru.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.sv.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.zh-CHS.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.zh-CHT.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportViewerView.resx">
+      <DependentUpon>ReportViewerView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports latest\Financial_Report - Statement da.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement da.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement de.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement de.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement en.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement en.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement es.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement es.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement fr.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement fr.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement is.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement is.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement nl-BE.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement nl-BE.rpdsc" />
+    <None Include="Reports latest\Financial_Report - Statement sv.rdlc" />
+    <None Include="Reports latest\Financial_Report - Statement sv.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User da.rdlc" />
+    <None Include="Reports latest\Financial_Report - User da.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User de.rdlc" />
+    <None Include="Reports latest\Financial_Report - User de.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User en.rdlc" />
+    <None Include="Reports latest\Financial_Report - User en.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User es.rdlc" />
+    <None Include="Reports latest\Financial_Report - User es.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User fr.rdlc" />
+    <None Include="Reports latest\Financial_Report - User fr.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User is.rdlc" />
+    <None Include="Reports latest\Financial_Report - User is.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User nl-BE.rdlc" />
+    <None Include="Reports latest\Financial_Report - User nl-BE.rpdsc" />
+    <None Include="Reports latest\Financial_Report - User sv.rdlc" />
+    <None Include="Reports latest\Financial_Report - User sv.rpdsc" />
+    <None Include="Reports latest\Financial_Report da.rdlc" />
+    <None Include="Reports latest\Financial_Report da.rpdsc" />
+    <None Include="Reports latest\Financial_Report de.rdlc" />
+    <None Include="Reports latest\Financial_Report de.rpdsc" />
+    <None Include="Reports latest\Financial_Report en.rdlc" />
+    <None Include="Reports latest\Financial_Report en.rpdsc" />
+    <None Include="Reports latest\Financial_Report es.rdlc" />
+    <None Include="Reports latest\Financial_Report es.rpdsc" />
+    <None Include="Reports latest\Financial_Report fr.rdlc" />
+    <None Include="Reports latest\Financial_Report fr.rpdsc" />
+    <None Include="Reports latest\Financial_Report is.rdlc" />
+    <None Include="Reports latest\Financial_Report is.rpdsc" />
+    <None Include="Reports latest\Financial_Report nl-BE.rdlc" />
+    <None Include="Reports latest\Financial_Report nl-BE.rpdsc" />
+    <None Include="Reports latest\Financial_Report sv.rdlc" />
+    <None Include="Reports latest\Financial_Report sv.rpdsc" />
+    <None Include="Reports latest\GiftCardSales da.rdlc" />
+    <None Include="Reports latest\GiftCardSales da.rpdsc" />
+    <None Include="Reports latest\GiftCardSales de.rdlc" />
+    <None Include="Reports latest\GiftCardSales de.rpdsc" />
+    <None Include="Reports latest\GiftCardSales en.rdlc" />
+    <None Include="Reports latest\GiftCardSales en.rpdsc" />
+    <None Include="Reports latest\GiftCardSales es.rdlc" />
+    <None Include="Reports latest\GiftCardSales es.rpdsc" />
+    <None Include="Reports latest\GiftCardSales fr.rdlc" />
+    <None Include="Reports latest\GiftCardSales fr.rpdsc" />
+    <None Include="Reports latest\GiftCardSales is.rdlc" />
+    <None Include="Reports latest\GiftCardSales is.rpdsc" />
+    <None Include="Reports latest\GiftCardSales nl-BE.rdlc" />
+    <None Include="Reports latest\GiftCardSales nl-BE.rpdsc" />
+    <None Include="Reports latest\GiftCardSales sv.rdlc" />
+    <None Include="Reports latest\GiftCardSales sv.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos da.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos da.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos de.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos de.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos en.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos en.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos es.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos es.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos fr.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos fr.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos is.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos is.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos nl-BE.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos nl-BE.rpdsc" />
+    <None Include="Reports latest\IssuedCreditMemos sv.rdlc" />
+    <None Include="Reports latest\IssuedCreditMemos sv.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices da.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices da.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices de.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices de.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices en.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices en.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices es.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices es.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices fr.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices fr.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices is.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices is.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices nl-BE.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices nl-BE.rpdsc" />
+    <None Include="Reports latest\Item sales - all items and prices sv.rdlc" />
+    <None Include="Reports latest\Item sales - all items and prices sv.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor da.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor da.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor de.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor de.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor en.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor en.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor es.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor es.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor fr.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor fr.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor is.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor is.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor nl-BE.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor nl-BE.rpdsc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor sv.rdlc" />
+    <None Include="Reports latest\Reorderpoint_by_vendor sv.rpdsc" />
+    <None Include="Reports latest\Sales by employee da.rdlc" />
+    <None Include="Reports latest\Sales by employee da.rpdsc" />
+    <None Include="Reports latest\Sales by employee de.rdlc" />
+    <None Include="Reports latest\Sales by employee de.rpdsc" />
+    <None Include="Reports latest\Sales by employee en.rdlc" />
+    <None Include="Reports latest\Sales by employee en.rpdsc" />
+    <None Include="Reports latest\Sales by employee es.rdlc" />
+    <None Include="Reports latest\Sales by employee es.rpdsc" />
+    <None Include="Reports latest\Sales by employee fr.rdlc" />
+    <None Include="Reports latest\Sales by employee fr.rpdsc" />
+    <None Include="Reports latest\Sales by employee is.rdlc" />
+    <None Include="Reports latest\Sales by employee is.rpdsc" />
+    <None Include="Reports latest\Sales by employee nl-BE.rdlc" />
+    <None Include="Reports latest\Sales by employee nl-BE.rpdsc" />
+    <None Include="Reports latest\Sales by employee sv.rdlc" />
+    <None Include="Reports latest\Sales by employee sv.rpdsc" />
+    <None Include="Reports latest\Sales by terminal da.rdlc" />
+    <None Include="Reports latest\Sales by terminal da.rpdsc" />
+    <None Include="Reports latest\Sales by terminal de.rdlc" />
+    <None Include="Reports latest\Sales by terminal de.rpdsc" />
+    <None Include="Reports latest\Sales by terminal en.rdlc" />
+    <None Include="Reports latest\Sales by terminal en.rpdsc" />
+    <None Include="Reports latest\Sales by terminal es.rdlc" />
+    <None Include="Reports latest\Sales by terminal es.rpdsc" />
+    <None Include="Reports latest\Sales by terminal fr.rdlc" />
+    <None Include="Reports latest\Sales by terminal fr.rpdsc" />
+    <None Include="Reports latest\Sales by terminal is.rdlc" />
+    <None Include="Reports latest\Sales by terminal is.rpdsc" />
+    <None Include="Reports latest\Sales by terminal nl-BE.rdlc" />
+    <None Include="Reports latest\Sales by terminal nl-BE.rpdsc" />
+    <None Include="Reports latest\Sales by terminal sv.rdlc" />
+    <None Include="Reports latest\Sales by terminal sv.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor da - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor da - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor da.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor da.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor de - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor de - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor de.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor de.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor en - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor en - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor en.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor en.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor es - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor es - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor es.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor es.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor fr - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor fr - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor fr.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor fr.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor is - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor is - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor is.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor is.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor nl-BE - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor nl-BE - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor nl-BE.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor nl-BE.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor sv - SiteService.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor sv - SiteService.rpdsc" />
+    <None Include="Reports latest\Stock_level_by_vendor sv.rdlc" />
+    <None Include="Reports latest\Stock_level_by_vendor sv.rpdsc" />
+    <None Include="Resources\Report16.png" />
+    <None Include="TEMPLATES\Financial_Report - Statement.rpdsc" />
+    <None Include="TEMPLATES\Financial_Report - User.rpdsc" />
+    <None Include="TEMPLATES\Financial_Report.rpdsc" />
+    <None Include="TEMPLATES\GiftCardSales.rpdsc" />
+    <None Include="TEMPLATES\IssuedCreditMemos.rpdsc" />
+    <None Include="TEMPLATES\Item sales - all items and prices.rpdsc" />
+    <None Include="TEMPLATES\Reorderpoint_by_vendor.rpdsc" />
+    <None Include="TEMPLATES\Sales by employee.rpdsc" />
+    <None Include="TEMPLATES\Sales by terminal.rpdsc" />
+    <None Include="TEMPLATES\Stock_level_by_vendor.rpdsc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ReportParameterControl.en-ZA.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.es-MX.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportParameterControl.it-IT.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.en-ZA.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.es-MX.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.it-IT.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.en-ZA.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.es-MX.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.it-IT.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.en-ZA.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.es-MX.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.it-IT.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ReportParameterControl.nl-BE.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.nl-BE.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.nl-BE.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.nl-BE.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ReportParameterControl.ja-JP.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.ja-JP.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.ja-JP.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.ja-JP.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports_32.png" />
+    <None Include="Resources\reports_16.png" />
+    <None Include="Resources\manage reports_32.png" />
+    <None Include="Resources\manage reports_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial reports_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ReportParameterControl.vi-VN.resx">
+      <DependentUpon>ReportParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddReportDialog.vi-VN.resx">
+      <DependentUpon>AddReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReportManagementDialog.vi-VN.resx">
+      <DependentUpon>ReportManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportManagementView.vi-VN.resx">
+      <DependentUpon>ReportManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDataProviders\SqlDataProviders.csproj">
+      <Project>{3EFB5EB2-7A0B-49C8-8DC2-F707E0A35054}</Project>
+      <Name>SqlDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

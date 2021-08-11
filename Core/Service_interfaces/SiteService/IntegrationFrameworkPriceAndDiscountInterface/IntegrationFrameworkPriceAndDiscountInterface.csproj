@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B019E704-5B76-4677-AFB9-ABAA7B9DBE6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSRetail.SiteService.IntegrationFrameworkPriceAndDiscountInterface</RootNamespace>
+    <AssemblyName>LSRetail.SiteService.IntegrationFrameworkPriceAndDiscountInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\..\..\SM\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="LSRetail.SiteService.IntegrationFrameworkBaseInterface">
+      <HintPath>..\..\..\..\SM\Build\LSRetail.SiteService.IntegrationFrameworkBaseInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="IIntegrationFrameworkPriceAndDiscountService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\..\POS\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\..\SM\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\..\SiteService\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

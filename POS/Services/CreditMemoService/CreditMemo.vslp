@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VisualStudioProjectFilename=".\CreditMemo.csproj" AssemblyName="CreditMemo" AssemblyType="Dll" RootNamespace="CreditMemo" AutoDoNotTranslate="true" InvariantLocale="en" AllowEditingInvariant="true">
+  <items>
+    <it rn="Properties\Resources.resx" nm="ConnectionFailure" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Connection failure" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Tengivilla" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Verbindungsfehler" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotConnectToSiteService" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not connect to the site service." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Tenging við Búðarþjón tókst ekki." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoAlreadyInUse" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Este vale de crédito ya se ha utilizado para el pago en esta transacción. Introduzca otro ID o anule el pago anterior e inténtelo otra vez." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Þessi inneignarnóta hefur þegar verið notuð í þessari færslu. Vinsamlegast notið aðra inneignarnótu eða ógildið fyrri greiðslu og reynið aftur&#xD;" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="This credit memo has already been used for payment in this transaction. Please enter another ID or void the previous payment and try again" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoBalanceToLow" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="El saldo de este vale de crédito es demasiado bajo." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Innistæða inneignarnótunnar er of lág" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="The balance on this credit memo is to low" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoCurrencyAndStoreCurrencyNotSame" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Credit memo currency and store currency do not match. Store currency is #1 but gift credit memo is #2." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Gjaldmiðill inneignarnótu og gjaldmiðill búðar eru ekki þeir sömu. Gjaldmiðill búðar er #1 en gjaldmiðill inneignarnótu er #2." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoDisabled" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="is" tx="Inneignarnótur eru ekki virkar. Þú þarft annaðhvort að bæta búðarþjóns prófíl á útstöðina eða virkja inneignarnótur á búðarþjóns prófíl útstöðvarinnar." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Credit memos are currently disabled. You either need to add a site service profile to the terminal or enable credit memos in the terminal's Site Service profile" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoHasZeroBalance" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="is" tx="Enginn upphæð er á inneignarnótunni og því er ekki hægt að nota hana." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Credit memo has no balance and cannot be used." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoNotFound" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="No se ha encontrado un vale de crédito con el ID determinado." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Inneignarnóta með þessu númeri fannst ekki" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="A credit memo with the given ID was not found" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoNotValid" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Credit memo is not valid" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Inneignarnóta er ógild" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoUnknownError" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Se ha producido un error desconocido." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Óþekkt villa kom upp" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="An unknown error has occurred" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CreditMemoValid" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Credit memo is valid" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Inneignarnóta er gild" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="EnterCreditMemoID" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Enter credit memo ID:" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Sláðu inn númer inneignarnótu:" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Gutschrift ID- eingeben:" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ErrorGettingBalance" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Error getting credit memo balance" ts="Changed" qs="ToReview" />
+        <li lc="is" tx="Villa við að sækja upphæð á inneignarnótu" ts="Changed" qs="ToReview" />
+        <li lc="es" tx="Error al obtener saldo del vale de crédito" ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ErrorIssuingCreditMemo" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Error al emitir vale de crédito" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Villa við útgáfu inneignarnótu" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Error issuing credit memo" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="InconsistentCurrencies" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Inconsistent currencies" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Gjaldmiðlar stemma ekki" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="IssuingCreditMemo" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Emitiendo vale de crédito..." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Gef út gjafakort..." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Issuing credit memo..." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="UpdateCreditMemoError" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Se ha producido un error al actualizar el vale de crédito a través del servidor de la tienda." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="An error occurred updating the credit memo through the Site Service" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Villa kom upp við að uppfæra inneignarnótuna í gegnum Búðarþjón" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="UpdatingCreditMemo" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Actualizando vale de crédito..." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Uppfæri inneignarnótu..." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Updating credit  memo..." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ValidatingCreditMemo" rc="" dnt="false" nms="CreditMemo.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="es" tx="Validando vale de crédito..." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Heimila inneignarnótu..." ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Validating credit memo..." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="$this.Text" rc="Text" dnt="true" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="AuthorizeGiftCardDialog" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="btnCancel.Text" rc="Text" dnt="false" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="33" wdt="120">
+      <lis>
+        <li lc="bg" tx="Отказ" ts="Translated" qs="ToReview" />
+        <li lc="cs" tx="Zrušit" ts="Translated" qs="ToReview" />
+        <li lc="da" tx="Annuller" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Abbrechen" ts="Translated" qs="ToReview" />
+        <li lc="el" tx="Ακύρωση" ts="Translated" qs="ToReview" />
+        <li lc="en-ZA" tx="Cancel" ts="Translated" qs="ToReview" />
+        <li lc="es-MX" tx="Cancelar" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Cancelar" ts="Translated" qs="ToReview" />
+        <li lc="fi" tx="Peruuta" ts="Translated" qs="ToReview" />
+        <li lc="fr" tx="Annuler" ts="Translated" qs="ToReview" />
+        <li lc="hi" tx="रद्द करें" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Hætta við" ts="Translated" qs="ToReview" />
+        <li lc="it" tx="Annullare" ts="Translated" qs="ToReview" />
+        <li lc="ja" tx="取消し" ts="Translated" qs="ToReview" />
+        <li lc="ko" tx="취소" ts="Translated" qs="ToReview" />
+        <li lc="nb-NO" tx="Avbryt" ts="Translated" qs="ToReview" />
+        <li lc="nl" tx="Annuleren" ts="Translated" qs="ToReview" />
+        <li lc="pl" tx="Anuluj" ts="Translated" qs="ToReview" />
+        <li lc="pt-BR" tx="Cancelar" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Cancel" ts="Translated" qs="ToReview" />
+        <li lc="ru" tx="Отмена" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Avbryt" ts="Translated" qs="ToReview" />
+        <li lc="zh-CHS" tx="取消" ts="Translated" qs="ToReview" />
+        <li lc="zh-CHT" tx="取消" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="btnGet.Text" rc="Text" dnt="false" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="33" wdt="120">
+      <lis>
+        <li lc="en-ZA" tx="Get" ts="Translated" qs="ToReview" />
+        <li lc="es-MX" tx="Obtener" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Obtener" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Sækja" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="Get" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Hämta" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="btnOk.Text" rc="Text" dnt="false" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="33" wdt="120">
+      <lis>
+        <li lc="bg" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="cs" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="da" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="el" tx="ΟΚ" ts="Translated" qs="ToReview" />
+        <li lc="en-ZA" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="es-MX" tx="Aceptar" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Aceptar" ts="Translated" qs="ToReview" />
+        <li lc="fi" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="fr" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="hi" tx="ठीक" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Í lagi" ts="Translated" qs="ToReview" />
+        <li lc="it" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="ja" tx="了解" ts="Translated" qs="ToReview" />
+        <li lc="ko" tx="확인" ts="Translated" qs="ToReview" />
+        <li lc="nb-NO" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="nl" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="pl" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="pt-BR" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="nn-nn" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="ru" tx="ОК" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="OK" ts="Translated" qs="ToReview" />
+        <li lc="zh-CHS" tx="确定" ts="Translated" qs="ToReview" />
+        <li lc="zh-CHT" tx="確定" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="lblCreditMemoAmount.Text" rc="Text" dnt="false" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="37" wdt="273">
+      <lis>
+        <li lc="nn-nn" tx="Credit memo balance:" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Upphæð á inneignarnótu:" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="lblCreditMemoID.Text" rc="Text" dnt="false" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="37" wdt="273">
+      <lis>
+        <li lc="nn-nn" tx="Credit memo ID:" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Númer inneignarnótu:" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="WinFormsTouch\PayCreditMemoDialog.resx" nm="touchDialogBanner1.BannerText" rc="BannerText" dnt="true" nms="CreditMemo.WinFormsTouch" cln="PayCreditMemoDialog" bac="EmbeddedResource" hgt="70" wdt="938">
+      <lis>
+        <li lc="nn-nn" tx="Pay credit memo" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+  </items>
+  <locales>
+    <locale />
+    <locale>is</locale>
+    <locale>de</locale>
+    <locale>sv</locale>
+    <locale>nb-NO</locale>
+    <locale>fi</locale>
+    <locale>ja</locale>
+    <locale>fr</locale>
+    <locale>es</locale>
+    <locale>da</locale>
+    <locale>nl</locale>
+    <locale>cs</locale>
+    <locale>pt-BR</locale>
+    <locale>zh-CHS</locale>
+    <locale>ru</locale>
+    <locale>el</locale>
+    <locale>it</locale>
+    <locale>ko</locale>
+    <locale>zh-CHT</locale>
+    <locale>pl</locale>
+    <locale>bg</locale>
+    <locale>hi</locale>
+    <locale>en-ZA</locale>
+    <locale>es-MX</locale>
+  </locales>
+  <Name>CreditMemo</Name>
+</Project>

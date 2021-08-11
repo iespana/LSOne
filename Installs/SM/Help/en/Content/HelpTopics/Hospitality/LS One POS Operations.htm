@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Hospitality|Hospitality in POS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>LS One POS Hospitality Operations</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Hospitality/LS One POS Operations.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>LS One POS Hospitality Operations</h1>
+        <p>There are a few operations in LS One POS that are specific to hospitality. This chapter will go through these operations and any configurations needed.</p>
+        <p>These operations need to be added to the active till layout that can be set on either each staff member, terminal, store or hospitality type.</p>
+        <h2>Exit Hospitality POS</h2>
+        <p>This operation needs to be added to the till layout so that the user can go between the Hospitality dialog and the main LS One POS retail dialog. If this operation is not added to the till layout, the user will never be able to get back into the Hospitality dialog after selecting the Run POS operation.</p>
+        <h2>Split Bill</h2>
+        <p>This operation can be added to the till layout to allow the user to go into the Split bill operation both through the Hospitality functionality and the retail functionality. This operation is not necessary for the Hospitality functionality to work.</p>
+        <h2>Set Hospitality Menu Type</h2>
+        <p><a name="kanchor79"></a>This operation will set the menu type of the item selected and any items added after that will have the same menu type until it has been changed by selecting another value with the operation.</p>
+        <p>The menu types that should be available in this operation need to be set on each store. See description of the Menu types configurations in Menu Types.</p>
+        <h2>Change Hospitality Menu Type</h2>
+        <p>This operation changes the current menu type of the selected item.</p>
+        <p>The menu types that should be available in this operation need to be set to each store. See a description of the Menu types configurations in Menu Types.</p>
+        <h2>Print Hospitality Menu Type</h2>
+        <p>Displays a dialog with all available menu types and a Print all button. The user can send a specific menu type to be printed at a printing station, or all items by clicking the Print all button. Items are only printed once when added or changed. So if items are added or changed after printing, only the new items will be printed after that.</p>
+        <h2>Item Comment</h2>
+        <p>The Item Comment operation can be used in Hospitality to set fixed texts to make specific guest requests easier. For example buttons can be configured to have texts such as “No Ice”, “Dressing on the side”, “Rare”, “Well Done” and etc. The comments can be changed by using the Change Item Comment operation and deleted all together from the item by using the Clear Item Comment operation.</p>
+        <p>
+            <img src="../../Resources/Images/Hospitality Guide - LSOne 2013/0300003D_642x275.png" style="visibility: visible;width: 642;height: 275;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

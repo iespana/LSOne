@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Data Management|Replication|Using the Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Database designs and linked tables</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Replication/Database designs and linked tables.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Database designs and linked tables</h1>
+        <h2>Database designs</h2>
+        <p>Database designs can read in the Distribution location view (<a href="Using the Scheduler.htm">Distribution Locations</a>). To view all database designs and create linked tables go to <span class="trace">General setup &gt; Replication &gt; Database designs</span>.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView_noneSelected.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView_noneSelected_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>On the left hand side is a tree view showing all database designs. Expanding a database design in the tree view will show all table designs that belong to the database design. Two checkboxes control what information is displayed in the tree view:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1">Show only where linked tables exist. When this is check marked, only table designs having linked tables will be shown.</li>
+            <li style="list-style-type: disc;" value="2">Show disabled databases. When this option is check marked, the tree view will include database designs that have been marked disabled.</li>
+        </ul>
+        <p>Once a database design is selected in the tree view, the middle part of the view will show details on that database design.</p>
+        <p>In the tree view, expand a database design to see all the tables in that design (provided that the Show only where linked tables exist option is not check marked).</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/LS Retail SC Scheduler User Guide/03000028.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="262" data-mc-height="471" src="../../Resources/Images/LS Retail SC Scheduler User Guide/03000028_thumb_0_300.png" style="width: 126px;height: 226px;" tabindex="" /></a>
+        </p>
+        <p>Selecting a table design brings up details on the table design in the middle part of the view.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The details of the table view cannot be edited. However, you can read (or re-read) the field design of a table by clicking the Read field design button to the right.</p>
+        <h2><span style="margin-right: 0pt;"> </span>Linked tables</h2>
+        <p>By expanding a table design in the tree view, any linked tables that belong to the table design are shown. A linked table is a table that has any kind of relation to the main table. For example, an Orders table could have a linked table called OrderLines. In this example, when the Orders table is replicated, all the relevant rows in the OrderLines would be replicated automatically. In this example, the job only needs to include a subjob for the Orders table; no subjob is needed for the OrderLines table. Use the add <img src="../../Resources/Images/addB.png" class="NoMargin" /> button to create a new linked table, and the remove <img src="../../Resources/Images/LS Retail SC Scheduler User Guide/03000019_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" /> button to remove a linked table.</p>
+        <h2>Linked table example</h2>
+        <p>To demonstrate how to add linked tables we are going to add a linked table for the reference between the CUSTTABLE and CUSTGROUP tables. The CUSTTABLE table represents customers and the CUSTGROUP table represents customer groups. A customer can optionally belong to a customer group. A customer group can have zero, one or more customers in it.</p>
+        <p>Select the CUSTTABLE in the tree view and click the add <img src="../../Resources/Images/addB.png" class="NoMargin" /> button. The New linked table dialog box appears.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/NewLinkedTableDialog.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="470" data-mc-height="267" src="../../Resources/Images/SiteManager/Scheduler/NewLinkedTableDialog_thumb_0_150.png" tabindex="" /></a>
+        </p>
+        <p>Select the CUSTGROUP table in the Table design field and click OK. In the tree view, a new node appears under the CUSTTABLE node for the CUSTGROUP table and the middle section of the view now shows details on the new linked table.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView_LinkedTable.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/DatabaseDesignView_LinkedTable_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The linked filters list is empty for the new linked table. Click the add <img src="../../Resources/Images/addB.png" class="NoMargin" /> button to add a new linked filter. The New linked filter dialog box appears.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/NewLinkedFilterDialog.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="470" data-mc-height="321" src="../../Resources/Images/SiteManager/Scheduler/NewLinkedFilterDialog_thumb_0_150.png" tabindex="" /></a>
+        </p>
+        <p>The From box shows the table and field where the reference originates. The Table value is fixed on the CUSTTABLE table design. In the Field field select the CUSTGROUP field.</p>
+        <p>The To box shows the table and field being referenced by the table and field in the From box. The Table value is fixed on the CUSTGROUP table design. In the field Field select the CUSTGROUP field.</p>
+        <p>Click OK to create the new linked filter. Note that the linked filter list in the Database design view now shows the new linked filter.</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">29<span class="sup">th</span> November 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

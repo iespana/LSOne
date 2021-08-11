@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Bæta við</value>
+  </data>
+  <data name="Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="AuthenticationFailed" xml:space="preserve">
+    <value>Notandanafn eða lykilorð er rangt</value>
+  </data>
+  <data name="ButtonText" xml:space="preserve">
+    <value>Texti á hnappa</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Tengist</value>
+  </data>
+  <data name="ConnectingToDatabaseError" xml:space="preserve">
+    <value>Tenging við gagnagrunn mistókst</value>
+  </data>
+  <data name="ConnectingToKitchenManager" xml:space="preserve">
+    <value>Tengist Kitchen Manager</value>
+  </data>
+  <data name="ConnectingToKitchenManagerFailed" xml:space="preserve">
+    <value>Tenging til Kitchen Manager mistókst</value>
+  </data>
+  <data name="ConnectingToKitchenManagerWorked" xml:space="preserve">
+    <value>Tenging til Kitchen Manager tókst</value>
+  </data>
+  <data name="ConnectingWorked" xml:space="preserve">
+    <value>Tenging tókst</value>
+  </data>
+  <data name="Connection" xml:space="preserve">
+    <value>Tenging</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eyða</value>
+  </data>
+  <data name="DeleteConnection" xml:space="preserve">
+    <value>Eyða tengingu</value>
+  </data>
+  <data name="DeleteConnectionQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri tengingu?</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenu" xml:space="preserve">
+    <value>Eyða eldhússkjá hnappaborðsvalmynd</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenuLine" xml:space="preserve">
+    <value>Eyða eldhússkjá hnappaborðsvalmyndarlínu</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri hnappaborðs valmyndarlínu?</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum hnappaborðs valmyndarlínum?</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenuQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri hnappaborðs valmynd ?</value>
+  </data>
+  <data name="DeleteKitchenDisplayStation" xml:space="preserve">
+    <value>Eða elhússkjá</value>
+  </data>
+  <data name="DeleteKitchenDisplayStationQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum eldhússkjá?</value>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Eyða prófíl</value>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum prófíl?</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Aftengjast</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Breyta</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Almennt</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Almenn uppsetning</value>
+  </data>
+  <data name="KitchenDisplay" xml:space="preserve">
+    <value>Eldhússkjár</value>
+  </data>
+  <data name="KitchenDisplayButton" xml:space="preserve">
+    <value>Eldhússkjástakki</value>
+  </data>
+  <data name="KitchenDisplayButtonGridMenuButtons" xml:space="preserve">
+    <value>Eldhússkjás hnappavalmyndar takkar</value>
+  </data>
+  <data name="KitchenDisplayButtonGridMenus" xml:space="preserve">
+    <value>Eldhússkjá hnappavalmyndir</value>
+  </data>
+  <data name="KitchenDisplayButtonMenus" xml:space="preserve">
+    <value>Eldhússkjá takkavalmynd</value>
+  </data>
+  <data name="KitchenDisplayFunctionalProfile" xml:space="preserve">
+    <value>Eldhússkjá virkniprófíll</value>
+  </data>
+  <data name="KitchenDisplayFunctionalProfiles" xml:space="preserve">
+    <value>Eldhússkjá virkniprófílar</value>
+  </data>
+  <data name="KitchenDisplayFunctionalProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að sjá um eldhússkjá virknisprófíla</value>
+  </data>
+  <data name="KitchenDisplayMenuButton" xml:space="preserve">
+    <value>Eldhússkjá takki</value>
+  </data>
+  <data name="KitchenDisplayStation" xml:space="preserve">
+    <value>Eldhússkjár</value>
+  </data>
+  <data name="KitchenDisplayStations" xml:space="preserve">
+    <value>Eldhússkjásstöðvar</value>
+  </data>
+  <data name="KitchenDisplayStationsDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að hafa umsjón með eldhússkjástöðvum</value>
+  </data>
+  <data name="KitchenDisplayStyleProfile" xml:space="preserve">
+    <value>Eldhússkjá stílprófíll</value>
+  </data>
+  <data name="KitchenDisplayStyleProfiles" xml:space="preserve">
+    <value>Eldhússkjá stílprófílar</value>
+  </data>
+  <data name="KitchenDisplayStyleProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að sjá um eldhússkjá stílprófíla</value>
+  </data>
+  <data name="KitchenDisplayVisualProfile" xml:space="preserve">
+    <value>Eldhússkjá skjáprófill</value>
+  </data>
+  <data name="KitchenDisplayVisualProfiles" xml:space="preserve">
+    <value>Eldhússkjá skjáprófílar</value>
+  </data>
+  <data name="KitchenDisplayVisualProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að sjá um eldhússkjá skjáprófíla</value>
+  </data>
+  <data name="KitchenManager" xml:space="preserve">
+    <value>Eldhússtjóri</value>
+  </data>
+  <data name="KitchenManagerButtonPanel" xml:space="preserve">
+    <value>Takkaborð</value>
+  </data>
+  <data name="KitchenManagerProfile" xml:space="preserve">
+    <value>Eldhússtjóra prófíll</value>
+  </data>
+  <data name="KitchenManagerProfiles" xml:space="preserve">
+    <value>Eldhússtjóra prófílar</value>
+  </data>
+  <data name="KitchenManagerProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan valkost til að hafa umsjón með Eldhússtjóraprófílum</value>
+  </data>
+  <data name="KithcenDisplayButtonGridMenuDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að skoða eldhússkjá takkavalmyndir</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Útlit</value>
+  </data>
+  <data name="RemoveProfile" xml:space="preserve">
+    <value>Eyða prófíl</value>
+  </data>
+  <data name="RemoveProfileQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða þessum Kitchen Manager prófíl?</value>
+  </data>
+  <data name="RoutingLogic" xml:space="preserve">
+    <value>Sendingar virkni</value>
+  </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="ViewAllKitchenDisplayStations" xml:space="preserve">
+    <value>Skoða alla eldhússkjái</value>
+  </data>
+  <data name="CouldNotGetConfig" xml:space="preserve">
+    <value>Gat ekki náð í stillingar</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenus" xml:space="preserve">
+    <value>Eyða valmyndum hnappaborða</value>
+  </data>
+  <data name="DeleteKdsButtonGridMenusQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum valmyndum hnappaborða?</value>
+  </data>
+  <data name="DeleteKitchenDisplayStations" xml:space="preserve">
+    <value>Eyða eldhússkjástöðvum</value>
+  </data>
+  <data name="DeleteKitchenDisplayStationsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum eldhússkjástöðvum?</value>
+  </data>
+  <data name="DeleteProfiles" xml:space="preserve">
+    <value>Eyða prófílum</value>
+  </data>
+  <data name="DeleteProfilesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum prófílum?</value>
+  </data>
+  <data name="HospitalityConnection" xml:space="preserve">
+    <value>Veitingakerfis tenging</value>
+  </data>
+  <data name="ItemConnection" xml:space="preserve">
+    <value>Vörutenging</value>
+  </data>
+  <data name="KitchenManagerButtonPane" xml:space="preserve">
+    <value>Kitchen Manager takkaborð</value>
+  </data>
+  <data name="RemoveProfiles" xml:space="preserve">
+    <value>Fjarlægja prófíla</value>
+  </data>
+  <data name="RemoveProfilesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum Kitchen Manager prófílum?</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Stílar</value>
+  </data>
+  <data name="TerminalConnection" xml:space="preserve">
+    <value>Kassatenging</value>
+  </data>
+  <data name="ConfigSent" xml:space="preserve">
+    <value>Grunnstillingar sendar</value>
+  </data>
+  <data name="CouldNotSendConfig" xml:space="preserve">
+    <value>Gat ekki sent grunnstillingar</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Prófílar</value>
+  </data>
+  <data name="GettingConfig" xml:space="preserve">
+    <value>Sæki stillingar</value>
+  </data>
+  <data name="ManageConfig" xml:space="preserve">
+    <value>Umsjón stillinga</value>
+  </data>
+  <data name="ManageProfilesDescription" xml:space="preserve">
+    <value>Notið þennan valkost til að sjá um prófíla</value>
+  </data>
+  <data name="TextColor" xml:space="preserve">
+    <value>Textalitur</value>
+  </data>
+  <data name="Butotn" xml:space="preserve">
+    <value>Takki</value>
+  </data>
+  <data name="ButtonProfile" xml:space="preserve">
+    <value>Takkaprófill</value>
+  </data>
+  <data name="ButtonProfileDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að sjá um takkaprófíla</value>
+  </data>
+  <data name="ButtonProfiles" xml:space="preserve">
+    <value>Takkaprófill</value>
+  </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Hnappar</value>
+  </data>
+  <data name="ConnectingToKitchenService" xml:space="preserve">
+    <value>Tengist Eldhúsþjónustu</value>
+  </data>
+  <data name="ConnectingToKitchenServiceFailed" xml:space="preserve">
+    <value>Mistókst að tengjast Eldhúsþjónustu</value>
+  </data>
+  <data name="ConnectingToKitchenServiceWorked" xml:space="preserve">
+    <value>Tenging við Eldhústþjónstu tókst</value>
+  </data>
+  <data name="ConnectionToKSDatabaseFailed" xml:space="preserve">
+    <value>Villa við að tengjast gagnagrunni Eldhúsþjónustu</value>
+  </data>
+  <data name="Deals" xml:space="preserve">
+    <value>Tilboð - sölur (Magn)</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Eyða eldhússkjá hnappaborðsvalmynd</value>
+  </data>
+  <data name="DisplayStation" xml:space="preserve">
+    <value>Eldhússkjár</value>
+  </data>
+  <data name="DisplayStations" xml:space="preserve">
+    <value>Eldhússkjásstöðvar</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Allur skjár</value>
+  </data>
+  <data name="FunctionalProfile" xml:space="preserve">
+    <value>Virkniprófíll</value>
+  </data>
+  <data name="FunctionalProfiles" xml:space="preserve">
+    <value>Eldhússkjá virkniprófílar</value>
+  </data>
+  <data name="HeaderFooter" xml:space="preserve">
+    <value>Haus og fótur</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Fela</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>Einkenni vantar</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>Einkenni vantar. Viltu láta búa til einkennið sjálfkrafa?</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Vörur</value>
+  </data>
+  <data name="KitchenService" xml:space="preserve">
+    <value>Eldhúsþjónstua</value>
+  </data>
+  <data name="KitchenServiceProfile" xml:space="preserve">
+    <value>Eldhúsþjónustuprófíll</value>
+  </data>
+  <data name="KitchenServiceProfiles" xml:space="preserve">
+    <value>Eldhúsþjónustuprófílar</value>
+  </data>
+  <data name="KitchenServiceProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan valmöguleika til að sjá um Eldhúsþjónustuprófíla</value>
+  </data>
+  <data name="Modifiers" xml:space="preserve">
+    <value>Breytingar</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Pöntun</value>
+  </data>
+  <data name="OrderPane" xml:space="preserve">
+    <value>Pantana svæðisstíll</value>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Stíls prófíll</value>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Stíls prófílar</value>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Útlitsprófíll</value>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Útlitsprófílar</value>
+  </data>
+  <data name="Chit" xml:space="preserve">
+    <value>Miði</value>
+  </data>
+  <data name="ChitHeaderFooter" xml:space="preserve">
+    <value>Haus / fótur miða</value>
+  </data>
+  <data name="ChitHeaderFooterPart" xml:space="preserve">
+    <value>Hluti af haus / fót miða</value>
+  </data>
+  <data name="ChitItemModifierGlyph" xml:space="preserve">
+    <value>Tákn fyrir vörubreytu á miða</value>
+  </data>
+  <data name="ChitLine" xml:space="preserve">
+    <value>Miðalína</value>
+  </data>
+  <data name="DefaultChit" xml:space="preserve">
+    <value>Sjálfgefinn miði</value>
+  </data>
+  <data name="DefaultChitLine" xml:space="preserve">
+    <value>Sjálfgefin miðalína</value>
+  </data>
+  <data name="DeleteButtonProfile" xml:space="preserve">
+    <value>Eyða takkaprófíl</value>
+  </data>
+  <data name="DeleteButtonProfileQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða takkaprófíl ?</value>
+  </data>
+  <data name="DeleteButtonProfiles" xml:space="preserve">
+    <value>Eyða takkaprófílum</value>
+  </data>
+  <data name="DeleteButtonProfilesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða takkaprófílunum ?</value>
+  </data>
+  <data name="DeleteButtonQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða takkanum ?</value>
+  </data>
+  <data name="DeleteButtons" xml:space="preserve">
+    <value>Eyða tökkum</value>
+  </data>
+  <data name="DeleteButtonsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða tökkunum ?</value>
+  </data>
+  <data name="DeleteDisplayStation" xml:space="preserve">
+    <value>Eyða eldhússkjá</value>
+  </data>
+  <data name="DeleteDisplayStations" xml:space="preserve">
+    <value>Eyða eldhússkjám</value>
+  </data>
+  <data name="DeleteKitchenPrinter" xml:space="preserve">
+    <value>Eyða eldhúsprentara</value>
+  </data>
+  <data name="DeleteKitchenPrinterQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum eldhúsprentara ?</value>
+  </data>
+  <data name="DisplayStationIDExists" xml:space="preserve">
+    <value>Einkenni eldhússkjás er þegar til í gagnagrunni</value>
+  </data>
+  <data name="DisplayStationsDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um eldhússkjái</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Engin tæki fundust á hýsli {0}, ath. hvort það séu einhverjir prentarar settir upp og að kerfið sé keyrandi</value>
+  </data>
+  <data name="FunctionalProfileHasNoButtons" xml:space="preserve">
+    <value>Virkniprófíll hefur enga takka á sér</value>
+  </data>
+  <data name="FunctionalProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um eldhússkjá virkniprófíla</value>
+  </data>
+  <data name="KitchenDisplaySystem" xml:space="preserve">
+    <value>Eldhússkjáakerfi</value>
+  </data>
+  <data name="NoButtonsFound" xml:space="preserve">
+    <value>Engir takkar fundust</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Prentari</value>
+  </data>
+  <data name="PrinterNameHostCombinationExists" xml:space="preserve">
+    <value>Þessi prentunarstöð og prentaranafn eru þegar til saman í kerfinu</value>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>Prentarar</value>
+  </data>
+  <data name="PrintersDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um eldhús prentara</value>
+  </data>
+  <data name="SeparatorLineColor" xml:space="preserve">
+    <value>Litur skiptilínu</value>
+  </data>
+  <data name="StyleProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um eldhússkjá stílaprófíla</value>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um eldhússkjá útlitsprófíla</value>
+  </data>
+</root>

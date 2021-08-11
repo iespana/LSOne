@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2B76886-5B6B-4D48-9672-97355AF02B50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.SerialNumbers</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.SerialNumbers</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\EditFileImportProfileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditFileImportProfileDialog.Designer.cs">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SerialNumberDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SerialNumberDialog.Designer.cs">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SerialNumberImportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SerialNumberImportDialog.Designer.cs">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="PluginProviders.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\SiteServiceViewSerialNumbersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\SiteServiceViewSerialNumbersPage.Designer.cs">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SerialNumbersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SerialNumbersView.Designer.cs">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.bg.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.cs.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.da.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.de.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.el.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.en-ZA.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.es-MX.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.es.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.fi.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.fr.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.hi.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.is.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.it.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.ja.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.ko.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.nb-NO.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.nl-BE.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.nl.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.pl.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.pt-BR.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.ru.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.sv.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.zh-CHS.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.zh-CHT.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.zh-CHS.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.zh-CHT.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.zh-CHS.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.zh-CHT.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.zh-CHS.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.zh-CHT.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.bg.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.cs.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.da.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.de.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.el.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.en-ZA.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.es-MX.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.es.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.fi.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.fr.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.hi.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.is.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.it.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.ja.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.ko.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.nb-NO.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.nl-BE.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.nl.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.pl.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.pt-BR.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.ru.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.sv.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.bg.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.cs.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.da.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.de.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.el.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.en-ZA.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.es-MX.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.es.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.fi.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.fr.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.hi.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.is.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.it.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.ja.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.ko.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.nb-NO.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.nl-BE.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.nl.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.pl.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.pt-BR.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.ru.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.sv.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.bg.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.cs.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.da.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.de.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.el.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.en-ZA.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.es-MX.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.es.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.fi.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.fr.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.hi.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.is.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.it.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.ja.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.ko.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.nb-NO.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.nl-BE.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.nl.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.pl.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.pt-BR.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.ru.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.sv.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.da.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.de.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.es.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.fr.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.is.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.nl-BE.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.ru.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.sv.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serial number_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serial number_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SerialNumbersView.fi.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SerialNumbersView.bg.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\EditFileImportProfileDialog.vi-VN.resx">
+      <DependentUpon>EditFileImportProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberDialog.vi-VN.resx">
+      <DependentUpon>SerialNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SerialNumberImportDialog.vi-VN.resx">
+      <DependentUpon>SerialNumberImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SiteServiceViewSerialNumbersPage.vi-VN.resx">
+      <DependentUpon>SiteServiceViewSerialNumbersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerialNumbersView.vi-VN.resx">
+      <DependentUpon>SerialNumbersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serial_number_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serial_number_32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDataProviders\SqlDataProviders.csproj">
+      <Project>{3EFB5EB2-7A0B-49C8-8DC2-F707E0A35054}</Project>
+      <Name>SqlDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB2CA6A0-DF49-4834-8F12-42581237C764}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.SaleByPaymentMediaReport</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.SaleByPaymentMediaReport</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\Build\bin\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Datalayer\DataEntities\TerminalPaymentMethod.cs" />
+    <Compile Include="Datalayer\DataEntities\PaymentMethodAmount.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="PluginOperations.Partner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData\TenderReportData.cs" />
+    <Compile Include="Views\SaleByPaymentMediaReportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SaleByPaymentMediaReportView.Designer.cs">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaleByPaymentMediaReportView.Partner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+    <Folder Include="Resources\" />
+    <Folder Include="ViewPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.bg.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.cs.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.da.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.de.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.el.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.en-ZA.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.es-MX.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.es.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.fi.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.fr.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.hi.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.is.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.it-IT.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.it.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.ja.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.ko.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.nb-NO.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.nl.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.pl.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.pt-BR.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.ru.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.sv.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.nl-BE.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.ja-JP.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SaleByPaymentMediaReportView.vi-VN.resx">
+      <DependentUpon>SaleByPaymentMediaReportView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

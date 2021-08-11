@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="Default.Work in progress" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2016.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title> Scheduler Updates for 2016.1</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2016_1/UpdateScheduler.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Update Scheduler data to 2016.1</h1>
+        <p>When you receive a new version LS&#160;One and need to upgrade your database and scheduler data you can either </p>
+        <ul>
+            <li value="1">delete the old scheduler data and import the new replication data package </li>
+            <li value="2">or you can upgrade the old one. </li>
+        </ul>
+        <p>To be able to upgrade you will need the following information</p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />New tables</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Create both normal and action jobs for these new tables:</p>
+                <ul>
+                    <li value="1">IMPORTPROFILE</li>
+                    <li value="2">IMPORTPROFILELINES</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Tables that should not be replicated anymore</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Due to the inventory changes in this release the subjobs for the following tables can be removed as this information now flows through the LS&#160;<span class="MyVariablesSite Service">Site Service</span></p>
+                <ul>
+                    <li value="1">PURCHASEORDERLINE</li>
+                    <li value="2">PURCHASEORDERMISCCHARGES</li>
+                    <li value="3">PURCHASEORDERS</li>
+                    <li value="4">GOODSRECEIVING</li>
+                    <li value="5">GOODSRECEIVINGLINE</li>
+                </ul>
+            </div>
+        </div>
+        <h2>Scheduler data update</h2>
+        <p>To update your scheduler data from LS&#160;One version 2016 to version 2016.1 you will first have to do a <i>Read design</i>. Then you will have to remove old subjobs from the jobs and at last create subjobs for the new tables and add them to the jobs being sent. </p>
+        <p>Run Site Manager version 2016.1 and log in to your database.			</p>
+        <div class="Warning">
+            <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note">When you do this the first time your database will be upgraded to 2016.1 version. New tables and fields are added to your database. It is a good practice to backup your database before you upgrade it. </p>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadSteps"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />1. Do a Read design</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ol style="list-style-type: lower-alpha;">
+                    <li value="1">Go to <span class="trace">General setup &gt; Replication &gt; Distribution location</span>. Open the location from where you manage your replication and scheduling. <br /></li>
+                    <li value="2">In the right hand navigation press Read design<p style="text-align: center;"><img src="../../Resources/Images/SiteManager/ReadDesign_500x337.png" class="fiveh" style="width: 500;height: 337;" /></p></li>
+                    <li value="3">Select Tables and fields option and press OK. </li>
+                    <li value="4">Now the Data&#160;Director will run through your database design and update it to include all new fields and tables. </li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadSteps"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />2. Add new subjobs</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Add both action (A-) and normal (N-) jobs for all the new data tables listed above. On further information on how to do so read <a href="../../HelpTopics/Replication/Subjobs.htm" class="MCXref xref">Subjobs</a></p>
+                <ul>
+                    <li value="1">A-IMPORTPROFILE</li>
+                    <li value="2">A-IMPORTPROFILELINES</li>
+                    <li value="3">N-IMPORTPROFILE</li>
+                    <li value="4">N-IMPORTPROFILELINES</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadSteps"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />3. Delete unused jobs and subjobs</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Delete the <u>Inventory</u> job and then delete all the subjobs for the data tables that do not need to be replicated anymore. These are:</p>
+                <ul>
+                    <li value="1">A-PURCHASEORDERLINE</li>
+                    <li value="2">A-PURCHASEORDERMISCCHARGES</li>
+                    <li value="3">A-PURCHASEORDERS</li>
+                    <li value="4">A-GOODSRECEIVING</li>
+                    <li value="5">A-GOODSRECEIVINGLINE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadSteps"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />4. Add new subjobs to the jobs</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Add the new action and normal jobs to the existing jobs. Read this topic:&#160;<a href="../../HelpTopics/Replication/Jobs.htm" class="MCXref xref">Jobs</a> for more information on how to create and manage jobs. <br />Below is a list of all the job changes that were made to the demo replication data package:</p>
+                <p>Preload store:</p>
+                <ul>
+                    <li value="1">N-IMPORTPROFILE</li>
+                    <li value="2">N-IMPORTPROFILELINES</li>
+                </ul>
+                <p>Store settings:</p>
+                <ul>
+                    <li value="1">A-IMPORTPROFILE</li>
+                    <li value="2">A-IMPORTPROFILELINES</li>
+                </ul>
+                <h2>Missing subjobs</h2>
+                <p>Subjobs for 4 new tables are missing from the replenishment data package and need to be added manually. Subjobs should be added to <b><a name="kanchor56"></a>Item</b>, <b>Preload POS</b> and <b>Preload store</b> jobs.</p>
+                <ul>
+                    <li value="1">SPECIALGROUPS</li>
+                    <li value="2">SPECIALGROUPITEMS</li>
+                    <li value="3">DIMENSIONATTRIBUTE</li>
+                    <li value="4">DIMENSIONTEMPLATE</li>
+                </ul>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">6<span class="sup">th</span> October 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

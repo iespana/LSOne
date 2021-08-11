@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Pvm</value>
+  </data>
+  <data name="LineDiscount" xml:space="preserve">
+    <value>Rivialennus</value>
+  </data>
+  <data name="TotalDiscounts" xml:space="preserve">
+    <value>Loppusumma-alennus</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kuvaus:</value>
+  </data>
+  <data name="TenderAmount" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Laskut</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Kokonaissumma</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Asiakas</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Aika</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Tili</value>
+  </data>
+  <data name="AmtInclTax" xml:space="preserve">
+    <value>Summa sis. ALV</value>
+  </data>
+  <data name="BankDrop" xml:space="preserve">
+    <value>Pankkipussi</value>
+  </data>
+  <data name="BankDropReversal" xml:space="preserve">
+    <value>Pankkipussin peruutus</value>
+  </data>
+  <data name="BusinessDay" xml:space="preserve">
+    <value>Myyntipäivä</value>
+  </data>
+  <data name="ChangeBackReport" xml:space="preserve">
+    <value>Vaihda takaisin raportti</value>
+  </data>
+  <data name="CombinedReturns" xml:space="preserve">
+    <value>Palautukset</value>
+  </data>
+  <data name="ConfirmZReportPrinting" xml:space="preserve">
+    <value>Haluatko varmasti tulostaa Z-raportin?</value>
+  </data>
+  <data name="CurrencyReport" xml:space="preserve">
+    <value>Valuuttaraportti</value>
+  </data>
+  <data name="CustomerDeposits" xml:space="preserve">
+    <value>Asiakkaan ennakkomaksut</value>
+  </data>
+  <data name="CustomerOrderDeposits" xml:space="preserve">
+    <value>Asiakkastilausten ennakot</value>
+  </data>
+  <data name="EndOfDayOperationQuestion" xml:space="preserve">
+    <value>Oletko varma, että haluat suorittaa päivän päätös -toiminnon?</value>
+  </data>
+  <data name="EndOfShiftQuestion" xml:space="preserve">
+    <value>Haluatko varmasti tehdä vuoron vaihdon?</value>
+  </data>
+  <data name="EnterGrossAmt" xml:space="preserve">
+    <value>Anna bruttosumma</value>
+  </data>
+  <data name="EnterNetAmt" xml:space="preserve">
+    <value>Anna nettosumma</value>
+  </data>
+  <data name="EnterNewZ" xml:space="preserve">
+    <value>Anna uusi Z-tunnus</value>
+  </data>
+  <data name="EnterNewZID" xml:space="preserve">
+    <value>Anna uuden Z-raportin tunnus</value>
+  </data>
+  <data name="ExclTax" xml:space="preserve">
+    <value>(ilman Alv.)</value>
+  </data>
+  <data name="FloatEntry" xml:space="preserve">
+    <value>Pohjakassan ilmoittaminen</value>
+  </data>
+  <data name="GrandTotal" xml:space="preserve">
+    <value>LOPPUSUMMA:</value>
+  </data>
+  <data name="GrossAmtLowerThanNetAmt" xml:space="preserve">
+    <value>Bruttosumma ei voi olla pienempi kuin nettosumma</value>
+  </data>
+  <data name="GrossReturns" xml:space="preserve">
+    <value>Bruttopalautukset</value>
+  </data>
+  <data name="GrossSales" xml:space="preserve">
+    <value>Bruttomyynti</value>
+  </data>
+  <data name="InclTax" xml:space="preserve">
+    <value>Summa sis. ALV</value>
+  </data>
+  <data name="IncomeExpenseDescr" xml:space="preserve">
+    <value>Tulo- / Kulutilit</value>
+  </data>
+  <data name="InOut" xml:space="preserve">
+    <value>Sisään / ulos</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Tuote</value>
+  </data>
+  <data name="ItemSalesReport" xml:space="preserve">
+    <value>Tuotemyyntiraportti</value>
+  </data>
+  <data name="NetAmt" xml:space="preserve">
+    <value>Net sum</value>
+  </data>
+  <data name="NetReturns" xml:space="preserve">
+    <value>Nettopalautukset yhteensä</value>
+  </data>
+  <data name="NetSales" xml:space="preserve">
+    <value>Nettomyynti yhteensä</value>
+  </data>
+  <data name="NoOfCustomerTransactions" xml:space="preserve">
+    <value>Asiakastapahtumien lkm.</value>
+  </data>
+  <data name="NoOfDepositTransactions" xml:space="preserve">
+    <value>Ennakkomaksutapahtumien lkm.</value>
+  </data>
+  <data name="NoOfDrawerOpenings" xml:space="preserve">
+    <value>Kassalaatikin avausten lkm.</value>
+  </data>
+  <data name="NoOfItems" xml:space="preserve">
+    <value>Myytyjen tuotteiden lkm.</value>
+  </data>
+  <data name="NoOfItemsReturned" xml:space="preserve">
+    <value>Palautettujen tuotteiden lkm.</value>
+  </data>
+  <data name="NoOfLogins" xml:space="preserve">
+    <value>Sisäänkirjausten lkm.</value>
+  </data>
+  <data name="NoOfReturnedTransactions" xml:space="preserve">
+    <value>Palautettujen tapahtumien lkm.</value>
+  </data>
+  <data name="NoOfSalesTransactions" xml:space="preserve">
+    <value>Myyntitapahtumien lkm.</value>
+  </data>
+  <data name="NoOfSuspendedTransactions" xml:space="preserve">
+    <value>Kuittiparkkitapahtumien lkm.</value>
+  </data>
+  <data name="NoOfVoidedTransactions" xml:space="preserve">
+    <value>Mitätöityjen tapahtumien lkm.</value>
+  </data>
+  <data name="NoPrinterConfiguredNoXRpt" xml:space="preserve">
+    <value>Tulostinta ei ole määritetty. X-raportti perutaan</value>
+  </data>
+  <data name="NoPrinterConfiguredNoZRpt" xml:space="preserve">
+    <value>Tulostinta ei ole määritetty. Z-raportti perutaan</value>
+  </data>
+  <data name="NoSaleReport" xml:space="preserve">
+    <value>Ei myyntiraporttia</value>
+  </data>
+  <data name="NoZReportID" xml:space="preserve">
+    <value>Ei Z-raportti -tunnusta luotuna. Toiminto ei voi jatkua</value>
+  </data>
+  <data name="OldXReport" xml:space="preserve">
+    <value>Vanha X-raportti</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operaattori</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Käyttäjän tunnus</value>
+  </data>
+  <data name="OtherInformation" xml:space="preserve">
+    <value>Muita tietoja</value>
+  </data>
+  <data name="PreviousZAmtNotValid" xml:space="preserve">
+    <value>Edellisten Z-raporttien määrät ovat virheellisiä. Toiminto ei ole sallittu</value>
+  </data>
+  <data name="PreviousZNotValid" xml:space="preserve">
+    <value>Aiemmat Z-raportit ovat virheellisiä. Toiminto ei ole sallittu</value>
+  </data>
+  <data name="PreviousZReportsMissing" xml:space="preserve">
+    <value>Aiemmat Z-raportit puuttuvat. Toiminto ei ole sallittu</value>
+  </data>
+  <data name="PrintedOn" xml:space="preserve">
+    <value>Tulostettu</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Lkm.</value>
+  </data>
+  <data name="ReceiptCopies" xml:space="preserve">
+    <value>Kuittikopioita</value>
+  </data>
+  <data name="RedeemedDeposits" xml:space="preserve">
+    <value>Lunastettu ennakko</value>
+  </data>
+  <data name="ReturnReport" xml:space="preserve">
+    <value>Palautusmyyntien raportti #1</value>
+  </data>
+  <data name="Returns" xml:space="preserve">
+    <value>palautukset</value>
+  </data>
+  <data name="RoundingDifference" xml:space="preserve">
+    <value>Pyöristysero</value>
+  </data>
+  <data name="RoundingReport" xml:space="preserve">
+    <value>Pyöristysraportti</value>
+  </data>
+  <data name="SafeDrop" xml:space="preserve">
+    <value>Turvapussi</value>
+  </data>
+  <data name="SafeDropReversal" xml:space="preserve">
+    <value>Turvapussin peruutus</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>myynti</value>
+  </data>
+  <data name="SalesInvoice" xml:space="preserve">
+    <value>Myyntilasku</value>
+  </data>
+  <data name="SalesOrder" xml:space="preserve">
+    <value>Myyntitilaus</value>
+  </data>
+  <data name="SalesReport" xml:space="preserve">
+    <value>Myyntiraportti #1</value>
+  </data>
+  <data name="StaffID" xml:space="preserve">
+    <value>Henkilökunta</value>
+  </data>
+  <data name="StatisticDescription" xml:space="preserve">
+    <value>Tilastot</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Myymälä:</value>
+  </data>
+  <data name="StoreID" xml:space="preserve">
+    <value>Myymälän tunnus:</value>
+  </data>
+  <data name="SumOfReturnedTransactions" xml:space="preserve">
+    <value>Palautusten summa</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Vero</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>Veroluokka</value>
+  </data>
+  <data name="TaxNumber" xml:space="preserve">
+    <value>Verotunnus:</value>
+  </data>
+  <data name="TaxReport" xml:space="preserve">
+    <value>Veroraportti #1</value>
+  </data>
+  <data name="TenderDeclarationReport" xml:space="preserve">
+    <value>Maksutapojen laskentaraportti</value>
+  </data>
+  <data name="TenderName" xml:space="preserve">
+    <value>Masun nimi</value>
+  </data>
+  <data name="TenderRemoval" xml:space="preserve">
+    <value>Kassasta otto</value>
+  </data>
+  <data name="TenderReport" xml:space="preserve">
+    <value>Maksuvälineraportti</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Päätteen tunnus:</value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>Päätteen tunnus:</value>
+  </data>
+  <data name="TotalAmountAbbreviated" xml:space="preserve">
+    <value>Yhteensä sum</value>
+  </data>
+  <data name="TotalNetAmount" xml:space="preserve">
+    <value>Yhteensä sum</value>
+  </data>
+  <data name="TotalNetAmountInclTax" xml:space="preserve">
+    <value>Yhteensä sum sis. Alv</value>
+  </data>
+  <data name="TotalNetSales" xml:space="preserve">
+    <value>Nettomyynti yhteensä</value>
+  </data>
+  <data name="TotalNoOfTransactions" xml:space="preserve">
+    <value>Tapahtumien lkm</value>
+  </data>
+  <data name="TotalPOSSalesAmt" xml:space="preserve">
+    <value>Kassan kokonaismyyntisumma:</value>
+  </data>
+  <data name="TotalPOSSalesAmtChanges" xml:space="preserve">
+    <value>Kassamyynnin kokonaismuutos summa:</value>
+  </data>
+  <data name="TotalReturnAmount" xml:space="preserve">
+    <value>Palautustumma yht.</value>
+  </data>
+  <data name="TotalReturnNetAmount" xml:space="preserve">
+    <value>Palautustumma yht.</value>
+  </data>
+  <data name="TotalReturnNetAmountInclTax" xml:space="preserve">
+    <value>Palautussumma yht. sis. Alv</value>
+  </data>
+  <data name="TotalReturns" xml:space="preserve">
+    <value>PALAUTUKSET YHTEENSÄ:</value>
+  </data>
+  <data name="TotalSales" xml:space="preserve">
+    <value>KOKONAISMYYNTI:</value>
+  </data>
+  <data name="TotalSalesAmt" xml:space="preserve">
+    <value>Kokonaismyynti summa</value>
+  </data>
+  <data name="TrainingTransactions" xml:space="preserve">
+    <value>Koulutus tapahtumat</value>
+  </data>
+  <data name="WithoutTaxAbbreviated" xml:space="preserve">
+    <value>Ilman veroa</value>
+  </data>
+  <data name="WithTaxAbbreviation" xml:space="preserve">
+    <value>Verollinen</value>
+  </data>
+  <data name="WTax" xml:space="preserve">
+    <value>Verollinen</value>
+  </data>
+  <data name="XReport" xml:space="preserve">
+    <value>X-Raportti</value>
+  </data>
+  <data name="ZReport" xml:space="preserve">
+    <value>Z-Raportti</value>
+  </data>
+  <data name="ZReportID" xml:space="preserve">
+    <value>Z-Raportin tunnus</value>
+  </data>
+  <data name="ZReportIDAlreadyExists" xml:space="preserve">
+    <value>Odotettu Z-raportti -tunnus on jo olemassa. Toiminto peruutetaan</value>
+  </data>
+</root>

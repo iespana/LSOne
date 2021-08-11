@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2016.1|Release Notes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Inventory improvements in 2016.1</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2016_1/InventoryImprovements2016_2.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Inventory improvements in 2016.1</h1>
+        <p>All inventory functionality in LS One has been centralized through Site service. What this means is that the Site service profile that is set for the Site Manager decides which database inventory information is fetch from. No information is stored in the local database (unless the Site service is pointing to that database).</p>
+        <h2><a name="kanchor167"></a>Retail/Variant item - inventory tabs</h2>
+        <p>Information on Inventory on hand and Vendors tabs on the <a href="../../FieldHelp/RetailItems/ItemView.htm" name="kanchor168">Retail item card</a> is now retrieved through the Site service. </p>
+        <p>If the user opens up the tabs and no site service is connected the vendor tab will display any information that is available locally. Both views will also display messages to the user to explain why not all the information is being displayed.</p>
+        <p>All values in item inventory tab are now displayed using the quantity max decimals that can be configured in the decimal formats page in <a href="../../FieldHelp/Administration/AdministrationView.htm">Administration view</a></p>
+        <h2>Item ledger</h2>
+        <p>The item ledger, visible on the <a href="../../FieldHelp/RetailItems/ItemView.htm">retail item card</a>, has been completely changed and updated. It is now retrieving the information from the head office database through the Site Service as well as displaying more detailed information.</p>
+        <p>Information about each movement in the ledger is always displayed in the inventory unit (column "Quantity") and then also displayed in the unit that the movement was done in.</p>
+        <p>A reference ID&#160;has been added to identify which process created the movement e.g. if the movement is a sale the reference is a receipt ID and etc.</p>
+        <p>Due to the changes that were done to the item ledger and it's inner workings and calculations, any and all movements that were created in a previous release will not be displayed in this new, improved ledger.</p>
+        <h2>Purchase orders</h2>
+        <div>
+            <p><b>Purchase order wizard</b>
+            </p>
+            <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/PurchaseOrderWizard.png"><img class="MCPopupThumbnail img imgthumbRight" data-mc-width="700" data-mc-height="684" src="../../Resources/Images/PurchaseOrderWizard_thumb_0_200.png" style="width: 168px;height: 163px;" tabindex="" /></a>There are now several different ways to create a new purchase order and access to purchase order has been moved from several buttons to one <a href="../../FieldHelp/Inventory/PurchaseOrderWizard.htm">purchase order wizard dialog.</a> Each of the options in the wizard dialog will ask the user for additional information when and if it is needed for creating the purchase orders.</p>
+            <p><b>Purchase orders</b>
+            </p>
+            <p>When viewing a list of all <a href="../../FieldHelp/Inventory/PurchaseOrdersView.htm">purchase orders</a> all data is now retrieved and saved to head office database, no inventory data is saved locally.</p>
+        </div>
+        <p>More information about each purchase order is now displayed in the list view and an optional description field has been added to a purchase order. </p>
+        <p>When printing the purchase order a new, updated report is now used for the preview and printing of the purchase order information.</p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/About/2016_1/PurchaseOrdersView.png"><img class="MCPopupThumbnail img imgthumbRight" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/About/2016_1/PurchaseOrdersView_thumb_0_200.png" style="width: 235px;height: 167px;" tabindex="" /></a>
+        <p><b>A purchase order</b>
+        </p>
+        <p>List views and dialogs have been updated and more information added to the list views that display the items on a <a href="../../FieldHelp/Inventory/PurchaseOrderView.htm">purchase order</a>. </p>
+        <p>In the item page a search bar has been added to ease searching for specific items within a purchase order</p>
+        <p>The process of posting a purchase order document has also been changed. A purchase order can be posted as it is sent to a vendor or at any other time. If however it is not posted it will be posted automatically as soon as the goods receiving document that is attached to it is posted.</p>
+        <p>All data is now retrieved and saved to head office database, no inventory data is saved locally.</p>
+        <p><b>Adding an item to a purchase order</b>
+        </p>
+        <p>The <a href="../../FieldHelp/Inventory/PurchaseOrderLineDialog.htm">dialog that adds items to the purchase order</a> has been updated so that an item can be created through the dialog, as well as a "Create another" check box has been added to the dialog and is by default set to true so that the user can quickly add more than one item without closing the dialog in between.</p>
+        <p>The dialog also has a barcode search field to search for an item and the focus will move between fields in a way to make the entering items quick and easy. As an example if a price exists for the item then the focus will jump over the price field and go directly to the quantity field.</p>
+        <h2>Goods receiving document</h2>
+        <p><b>Goods receiving documents</b>
+        </p>
+        <p>The view that displays all <a href="../../FieldHelp/Inventory/GoodsReceivingDocumentsView.htm">goods receiving documents</a> has been updated and more information added to the list. </p>
+        <p>A search bar has been added to make searching for a specific goods receiving document easier.</p>
+        <p>When creating a new goods receiving document a dialog is displayed with a search bar when the user can search for a purchase order using various filters.</p>
+        <p>If a goods receiving document has been fully received but not posted the document is colored yellow in this view. To post a goods receiving document go into the document itself and click "Post document".</p>
+        <p>All data is now retrieved and saved to head office database, no inventory data is saved locally.</p>
+        <p><b>A goods receiving document </b>
+        </p>
+        <p>When the button "Post all lines" is clicked and the <a href="../../FieldHelp/Inventory/GoodsReceivingDocumentView.htm">goods receiving document</a> has been fully received both the goods receiving document and the purchase order document attached to it are posted automatically (if it isn't posted already)</p>
+        <p>All functionality of goods receiving documents has been centralized through Site service.</p>
+        <p><b>Receiving an item in a goods receiving document</b>
+        </p>
+        <p>The <a href="../../FieldHelp/Inventory/GoodsReceivingDocumentLineDialog.htm">dialog that receives items within the document</a> has been updated to allow for a quick and easy entering of data. A "Create another" check box has been added to the dialog and is by default set to true so that the user can quickly add more than one item without closing the dialog in between.</p>
+        <p>The dialog also has a barcode search field to search for an item and the focus will move between fields in a way to make the entering items quick and easy.</p>
+        <p>Receiving an item that was not originally on the purchaser order is now possible. The item is then automatically added to the purchase order with qty 0</p>
+        <h2>Stock counting</h2>
+        <p><b>Stock counting wizard</b>
+        </p>
+        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/InventoryWizard.png"><img class="MCPopupThumbnail img imgthumbRight" data-mc-width="686" data-mc-height="678" src="../../Resources/Images/InventoryWizard_thumb_0_200.png" tabindex="" /></a>There are now several different ways to create a new stock counting journal and access to stock counting journals has been moved from several buttons to one <a href="../../FieldHelp/Inventory/StockCountingWizard.htm">stock counting wizard dialog</a>. Each of the options in the wizard dialog will ask the user for additional information when and if it is needed for creating the stock counting journals.</p>
+        <p><b>Stock counting journals</b>
+        </p>
+        <p>The view that displays the <a href="../../FieldHelp/Inventory/StockCountingView.htm">stock counting journals</a> retrieves all information from head office database as the other inventory views now do.</p>
+        <p>A search bar has been added to ease the finding of stock counting journals.</p>
+        <p>A stock counting journal can now be created for any store at head office level.</p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/About/2016_1/StockCounting.png"><img class="MCPopupThumbnail img imgthumbRight" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/About/2016_1/StockCounting_thumb_0_200.png" tabindex="" /></a>
+        <p><b>A stock counting journal</b>
+        </p>
+        <p>More information has been added to the item view on each stock counting journal such as the difference between the counted number and the expected number both in numbers and percentage.</p>
+        <p> A color palette has been incorporated to the list view to make it easier to view items that have been counted as less or more than the expected count.</p>
+        <p>An excel document for stock counting can now be exported from the <a href="../../FieldHelp/RetailItems/ItemsView.htm">Retail items view</a> and then imported through the <a href="../../FieldHelp/Inventory/StockCountingWizard.htm">Stock counting wizard</a>.</p>
+        <p>All stock counting functionality has been centralized through Site service.</p>
+        <p><b>Adding an item to a stock counting journal</b>
+        </p>
+        <p>The <a href="../../FieldHelp/Inventory/StockCountingDialog.htm">dialog that adds the stock counting information per item</a> has been updated to allow for a quick and easy entering of data. A "Create another" check box has been added to the dialog and is by default set to true so that the user can quickly add more than one item without closing the dialog in between.</p>
+        <p>The dialog also has a barcode search field to search for an item and the focus will move between fields in a way to make the entering items quick and easy.</p>
+        <p>&#160;</p>
+        <h2>Adjustments and reservation</h2>
+        <p>Inventory adjustments are now central and all adjustments are created, viewed, edited and deleted through Site Service.</p>
+        <p><b>Adding an item to an inventory adjustment</b>
+        </p>
+        <p>The <a href="../../FieldHelp/Inventory/ProfitLossDialog.htm">dialog that adds items to the inventory adjustment</a> has been updated to allow for a quick and easy entering of data. A "Create another" check box has been added to the dialog and is by default set to true so that the user can quickly add more than one item without closing the dialog in between.</p>
+        <p>The dialog also has a barcode search field to search for an item and the focus will move between fields in a way to make the entering items quick and easy.</p>
+        <h2>Inventory transfers</h2>
+        <p><b>Stock transfers and requests </b>
+        </p>
+        <p><a href="../../FieldHelp/Inventory/InventoryTransferOrdersView.htm">Inventory transfer orders</a> and <a href="../../FieldHelp/Inventory/InventoryTransferRequestsView.htm">requests</a> mostly work in the same way that they did previously, i.e. the Site Manager needs to be configured to be at a specific store to create and retrieve both transfer requests and orders.</p>
+        <p>Two main changes were done to this functionality:</p>
+        <p>1)&#160;When the orders are sent the inventory information is saved in the head office database (not locally as before)&#160;</p>
+        <p>2) When a transfer order is received and the received quantity is not the same as the sent quantity an inventory adjustment is created for the difference. This "Stock transfer" adjustment can be viewed in the item ledger for the item.</p>
+        <p><b>Inventory in transit </b>
+        </p>
+        <p><a href="../../FieldHelp/Inventory/InventoryInTransitView.htm">Inventory in transit</a> can now be viewed from any store if the user has permission to create inventory transfer request or order.</p>
+        <h2>Vendors</h2>
+        <p>A search bar has been added to the <a href="../../FieldHelp/Inventory/VendorsView.htm">list of vendors</a> in the system to easily find a vendor.</p>
+        <p>All information about vendors are now retrieved, edited and saved to the head office database through the Site Service. </p>
+        <p>When adding <a href="../../FieldHelp/Inventory/VendorView.htm">items to a vendor</a> this change is saved in the head office database not in the local database.</p>
+        <p>All Vendor items for a vendor are now deleted when the Vendor is deleted.</p>
+        <h2>Other improvements</h2>
+        <p>When <a href="../../FieldHelp/Inventory/GoodsReceivingDocumentLineDialog.htm">receiving items</a> in a goods receiving document the originally ordered quantity for variant items is now shown in the dialog</p>
+        <p>Default purchase price has been added to <a href="../../FieldHelp/Inventory/VendorItemDialog.htm">vendor item</a> information</p>
+        <p>It is now possible to edit vendor items from the vendors tab in <a href="../../FieldHelp/RetailItems/ItemView.htm">Retail item view</a></p>
+        <p>It is now possible to delete multiple items from both a transfer order and request at one time.</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">6<span class="sup">th</span> October 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

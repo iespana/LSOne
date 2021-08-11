@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E16D120-EA79-4B68-B505-DA3136C1A62A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.TaxRefund</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.TaxRefund</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\EditTaxRefundRangeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditTaxRefundRangeDialog.Designer.cs">
+      <DependentUpon>EditTaxRefundRangeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TaxRefundRangesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TaxRefundRangesView.Designer.cs">
+      <DependentUpon>TaxRefundRangesView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\EditTaxRefundRangeDialog.resx">
+      <DependentUpon>EditTaxRefundRangeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TaxRefundRangesView.resx">
+      <DependentUpon>TaxRefundRangesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDataProviders\SqlDataProviders.csproj">
+      <Project>{3EFB5EB2-7A0B-49C8-8DC2-F707E0A35054}</Project>
+      <Name>SqlDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlTransactionDataProviders\SqlTransactionDataProviders.csproj">
+      <Project>{AFA063C6-C2F9-4358-BACB-AFE86BA08E76}</Project>
+      <Name>SqlTransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

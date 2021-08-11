@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services.Interfaces</RootNamespace>
+    <AssemblyName>LSOne.Services.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\LSOne.Services.Interfaces.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\SM\Build\bin\Ionic.Zip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\..\SM\Build\bin\Ionic.Zlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\..\SM\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\..\SM\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.DD.Common">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.DD.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.DD.Common.Data">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.DD.Common.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Client">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.Forecourt.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Interface">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.Forecourt.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Licensing.Common">
+      <HintPath>..\..\..\SM\Build\LSRetail.Licensing.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\SM\Build\bin\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\..\..\SM\Build\bin\SevenZipSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TransAutomClient">
+      <HintPath>..\..\..\SM\Build\bin\TransAutomClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AsyncResults\CompletedAsyncResult.cs" />
+    <Compile Include="Constants\IntegrationFrameworkConstants.cs" />
+    <Compile Include="Constants\KDSLSOneWebServiceConstants.cs" />
+    <Compile Include="Constants\PartnerVersionConstants.cs" />
+    <Compile Include="Enums\AddCustomerResultEnum.cs" />
+    <Compile Include="Enums\EFT\EFTCardTypes.cs" />
+    <Compile Include="Enums\EFT\IssueNumber.cs" />
+    <Compile Include="Enums\EFT\TransactionType.cs" />
+    <Compile Include="Enums\TradeAgreementPriceType.cs" />
+    <Compile Include="Enums\ReturnTransactionDialogBehaviourEnum.cs" />
+    <Compile Include="EventArguments\PreRefreshStatusStripArgs.cs" />
+    <Compile Include="IAddressLookupService.cs" />
+    <Compile Include="Configurations\SiteServiceConfig.cs" />
+    <Compile Include="Configurations\SiteServiceSettings.cs" />
+    <Compile Include="Constants\ApplicationSettingsConstants.cs" />
+    <Compile Include="Constants\SiteServiceConfigurationConstants.cs" />
+    <Compile Include="Delegates\ForecourtDelegates.cs" />
+    <Compile Include="Delegates\HospitalityDelegates.cs" />
+    <Compile Include="Enums\CashGuardEnums.cs" />
+    <Compile Include="Enums\DiscountEnums.cs" />
+    <Compile Include="Enums\EMailTruncateEnum.cs" />
+    <Compile Include="Enums\ExcelStandardFormats.cs" />
+    <Compile Include="Enums\ItemSearchViewModeEnum.cs" />
+    <Compile Include="Enums\PharmacyEnums.cs" />
+    <Compile Include="Enums\SaleLineItemEnums.cs" />
+    <Compile Include="Enums\TransactionMemoryTableEnums.cs" />
+    <Compile Include="EventArguments\ReceiptItemDataChangeArgs.cs" />
+    <Compile Include="ICashManagementService.cs" />
+    <Compile Include="IInventoryService.ReasonCodes.cs" />
+    <Compile Include="IInventoryService.TransferRequests.cs" />
+    <Compile Include="IInventoryService.Replenishment.cs" />
+    <Compile Include="IInventoryService.Worksheet.cs" />
+    <Compile Include="IInventoryService.Template.cs" />
+    <Compile Include="IInventoryService.GoodsReceiving.cs" />
+    <Compile Include="IInventoryService.InventoryAdjustment.cs" />
+    <Compile Include="IInventoryService.PurchaseOrders.cs" />
+    <Compile Include="IInventoryService.ReserveStock.cs" />
+    <Compile Include="IInventoryService.StockCounting.cs" />
+    <Compile Include="IInventoryService.Vendors.cs" />
+    <Compile Include="IInventoryService.TransferOrders.cs" />
+    <Compile Include="ISiteServiceService.Inventory.Omni.cs" />
+    <Compile Include="ISiteServiceService.Omni.cs" />
+    <Compile Include="ISiteServiceService.SalesInvoices.cs" />
+    <Compile Include="ISiteServiceService.SalesOrders.cs" />
+    <Compile Include="ISiteServiceService.ImageBank.cs" />
+    <Compile Include="ISiteServiceService.SerialNumbers.cs" />
+    <Compile Include="ISiteServiceService.Inventory.TransferRequests.cs" />
+    <Compile Include="ISiteServiceService.Inventory.Replenishment.cs" />
+    <Compile Include="ISiteServiceService.Inventory.Worksheet.cs" />
+    <Compile Include="ISiteServiceService.Inventory.Template.cs" />
+    <Compile Include="ISiteServiceService.Inventory.cs" />
+    <Compile Include="ISiteServiceService.Inventory.InventoryAdjustment.cs" />
+    <Compile Include="ISiteServiceService.Inventory.StockCounting.cs" />
+    <Compile Include="ISiteServiceService.Inventory.GoodsReceiving.cs" />
+    <Compile Include="ISiteServiceService.Inventory.PurchaseOrders.cs" />
+    <Compile Include="ISiteServiceService.Inventory.StockReservation.cs" />
+    <Compile Include="ISiteServiceService.Inventory.TransferOrders.cs" />
+    <Compile Include="ISiteServiceService.Inventory.Vendors.cs" />
+    <Compile Include="IBackupService.cs" />
+    <Compile Include="IBlankOperationsService.cs" />
+    <Compile Include="ICustomerOrderService.cs" />
+    <Compile Include="IMigrationService.cs" />
+    <Compile Include="ICashChangerService.cs" />
+    <Compile Include="ICCTVService.cs" />
+    <Compile Include="ICorporateCardService.cs" />
+    <Compile Include="ICreditMemoService.cs" />
+    <Compile Include="ICouponService.cs" />
+    <Compile Include="ICustomerService.cs" />
+    <Compile Include="IDDService.cs" />
+    <Compile Include="IDimensionService.cs" />
+    <Compile Include="IDiscountService.cs" />
+    <Compile Include="IEFTService.cs" />
+    <Compile Include="IEFTSession.cs" />
+    <Compile Include="IEFTSetupForm.cs" />
+    <Compile Include="IEndOfDayBackOfficeService.cs" />
+    <Compile Include="IEndOfDayService.cs" />
+    <Compile Include="IEventService.cs" />
+    <Compile Include="IFiscalService.cs" />
+    <Compile Include="IForecourtService.cs" />
+    <Compile Include="IGiftCardService.cs" />
+    <Compile Include="IHospitalityService.cs" />
+    <Compile Include="IInfocodesService.cs" />
+    <Compile Include="IItemService.cs" />
+    <Compile Include="ILabelService.cs" />
+    <Compile Include="IInventoryService.cs" />
+    <Compile Include="Delegates\Delegates.cs" />
+    <Compile Include="Enums\InputTypeEnum.cs" />
+    <Compile Include="Enums\JournalDialogResults.cs" />
+    <Compile Include="Enums\LineEnums.cs" />
+    <Compile Include="Enums\LogonFormOperation.cs" />
+    <Compile Include="Enums\OKPressedActions.cs" />
+    <Compile Include="Enums\PriceHandlings.cs" />
+    <Compile Include="Enums\StatusDialogIcon.cs" />
+    <Compile Include="Enums\UsageCategories.cs" />
+    <Compile Include="EventArguments\LogonFormEventArguments.cs" />
+    <Compile Include="IApplicationService.cs" />
+    <Compile Include="IBarcodeService.cs" />
+    <Compile Include="ICardService.cs" />
+    <Compile Include="ICentralSuspensionService.cs" />
+    <Compile Include="ICurrencyService.cs" />
+    <Compile Include="IDialogService.cs" />
+    <Compile Include="IDualDisplayService.cs" />
+    <Compile Include="Enums\StoreServerEnums.cs" />
+    <Compile Include="ICustomerPaymentTransaction.cs" />
+    <Compile Include="IDiscountVoucherItem.cs" />
+    <Compile Include="IExcelService.cs" />
+    <Compile Include="IFuelSalesLineItem.cs" />
+    <Compile Include="IInfocodeLineItem.cs" />
+    <Compile Include="ILicense.cs" />
+    <Compile Include="ILicenseService.cs" />
+    <Compile Include="ILoginPanelService.cs" />
+    <Compile Include="ILoyaltyService.cs" />
+    <Compile Include="IPharmacyService.cs" />
+    <Compile Include="ITimeKeeperService.cs" />
+    <Compile Include="SupportClasses\Calculation\ChangeBackAmountsInfo.cs" />
+    <Compile Include="SupportClasses\DBConnection.cs" />
+    <Compile Include="SupportClasses\HostSettings.cs" />
+    <Compile Include="SupportClasses\IPOSPlugin\POSPluginAction.cs" />
+    <Compile Include="SupportClasses\LogonInfo.cs" />
+    <Compile Include="SupportClasses\Price\TradeAgreementPriceInfo.cs" />
+    <Compile Include="SupportInterfaces\EFT\IEFTExtraInfo.cs" />
+    <Compile Include="SupportInterfaces\EFT\IEFTInfo.cs" />
+    <Compile Include="SupportInterfaces\EFT\IEFTTransactionExtraInfo.cs" />
+    <Compile Include="SupportInterfaces\IAuthorizeOperationPage.cs" />
+    <Compile Include="SupportInterfaces\ICloneTransactions.cs" />
+    <Compile Include="SupportInterfaces\IEngineResult.cs" />
+    <Compile Include="SupportInterfaces\ILogTransaction.cs" />
+    <Compile Include="SupportInterfaces\IPosEngine.cs" />
+    <Compile Include="IPOSPlugin.cs" />
+    <Compile Include="IPriceService.cs" />
+    <Compile Include="IPrintingService.cs" />
+    <Compile Include="IRFIDService.cs" />
+    <Compile Include="ISalesInvoiceService.cs" />
+    <Compile Include="ISalesOrderService.cs" />
+    <Compile Include="IScaleService.cs" />
+    <Compile Include="IStartOfDayService.cs" />
+    <Compile Include="ITenderRestrictionService.cs" />
+    <Compile Include="ITenderService.cs" />
+    <Compile Include="ITransactionService.cs" />
+    <Compile Include="SupportClasses\Employee\Employee.cs" />
+    <Compile Include="SupportClasses\Forecourt\ForecourtDevices.cs" />
+    <Compile Include="SupportClasses\PermissionInfo.cs" />
+    <Compile Include="SupportClasses\PreTriggerResults.cs" />
+    <Compile Include="SupportClasses\QueuedMessage.cs" />
+    <Compile Include="SupportClasses\ImportExport\CellOptions.cs" />
+    <Compile Include="SupportClasses\ImportExport\WorksheetOptions.cs" />
+    <Compile Include="SupportClasses\ImportExport\WorksheetCell.cs" />
+    <Compile Include="SupportClasses\ImportExport\WorkbookHandle.cs" />
+    <Compile Include="SupportClasses\IDialog\Group.cs" />
+    <Compile Include="SupportClasses\IDialog\Item.cs" />
+    <Compile Include="SupportClasses\ImportExport\WorksheetHandle.cs" />
+    <Compile Include="SupportClasses\PartnerObjectBase.cs" />
+    <Compile Include="SupportClasses\IDialog\PopUpFormData.cs" />
+    <Compile Include="SupportClasses\SQLServerLoginEntry.cs" />
+    <Compile Include="SupportInterfaces\Forecourt\IFcConfig.cs" />
+    <Compile Include="SupportInterfaces\IBaseSaleItem.cs" />
+    <Compile Include="SupportInterfaces\ICardTenderLineItem.cs" />
+    <Compile Include="SupportInterfaces\ICreditMemoItem.cs" />
+    <Compile Include="SupportInterfaces\ICreditMemoTenderLineItem.cs" />
+    <Compile Include="SupportInterfaces\ICustomerDiscountItem.cs" />
+    <Compile Include="SupportInterfaces\ICustomerOrderItem.cs" />
+    <Compile Include="SupportInterfaces\IDepositTenderLineItem.cs" />
+    <Compile Include="SupportInterfaces\IDepositTransaction.cs" />
+    <Compile Include="SupportInterfaces\IEndOfDayTransaction.cs" />
+    <Compile Include="SupportInterfaces\IEndOfShiftTransaction.cs" />
+    <Compile Include="SupportInterfaces\IGiftCertificateItem.cs" />
+    <Compile Include="SupportInterfaces\IGiftCertificateTenderLineItem.cs" />
+    <Compile Include="SupportInterfaces\IItemSale.cs" />
+    <Compile Include="SupportInterfaces\ILicenseValidator.cs" />
+    <Compile Include="ILSStationPrinting.cs" />
+    <Compile Include="ISiteServiceService.cs" />
+    <Compile Include="ITaxService.cs" />
+    <Compile Include="ICustomerDepositItem.cs" />
+    <Compile Include="IPeriodicDiscountItem.cs" />
+    <Compile Include="IDiscountItem.cs" />
+    <Compile Include="ITaxFreeService.cs" />
+    <Compile Include="ITaxItem.cs" />
+    <Compile Include="ICalculationService.cs" />
+    <Compile Include="Enums\RoundingEnums.cs" />
+    <Compile Include="IRoundingService.cs" />
+    <Compile Include="ITotalDiscountItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.cs" />
+    <Compile Include="SupportClasses\MainFormInfo.cs" />
+    <Compile Include="SupportInterfaces\ILineDiscountItem.cs" />
+    <Compile Include="SupportInterfaces\ILoginPanelPage.cs" />
+    <Compile Include="SupportInterfaces\ILoyaltyDiscountItem.cs" />
+    <Compile Include="SupportInterfaces\ILoyaltyItem.cs" />
+    <Compile Include="SupportInterfaces\ILoyaltyTenderLineItem.cs" />
+    <Compile Include="SupportInterfaces\IMarkupItem.cs" />
+    <Compile Include="SupportInterfaces\IMenuTypeItem.cs" />
+    <Compile Include="SupportInterfaces\IDepositItem.cs" />
+    <Compile Include="SupportInterfaces\IOrderItem.cs" />
+    <Compile Include="SupportInterfaces\IPeriod.cs" />
+    <Compile Include="SupportInterfaces\IPeriodicDiscount.cs" />
+    <Compile Include="SupportInterfaces\IPOSApp.cs" />
+    <Compile Include="SupportInterfaces\IPosTransaction.cs" />
+    <Compile Include="SupportInterfaces\IReceiptInfo.cs" />
+    <Compile Include="SupportInterfaces\IReprintInfo.cs" />
+    <Compile Include="SupportInterfaces\IRetailTransaction.cs" />
+    <Compile Include="SupportInterfaces\ISaleLineItem.cs" />
+    <Compile Include="SupportInterfaces\ISerializable.cs" />
+    <Compile Include="SupportInterfaces\ISession.cs" />
+    <Compile Include="SupportInterfaces\ISettings.cs" />
+    <Compile Include="SupportInterfaces\ITenderLineItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Datalayer\DatabaseUtil\DatabaseUtil.csproj">
+      <Project>{F6DEDE96-E635-4798-84E6-C4449D1813AC}</Project>
+      <Name>DatabaseUtil</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{a89ccb7c-4bf2-4840-9c2a-765a19eede1d}</Project>
+      <Name>DataProviders</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Datalayer\DDBusinessObjects\DDBusinessObjects.csproj">
+      <Project>{4d61cb6b-c9e1-4716-b0da-8c705a890417}</Project>
+      <Name>DDBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{fde0c333-8073-4774-a412-add8cccf805c}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISiteServiceService.Inventory.ReasonCodes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SM\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SiteService\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

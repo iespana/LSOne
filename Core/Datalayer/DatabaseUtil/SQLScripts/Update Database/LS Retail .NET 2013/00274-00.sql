@@ -1,0 +1,22 @@
+﻿/*
+
+	Incident No.	: 20814
+	Responsible		: Erna Guðrún Sigurðardóttir
+	Sprint			: LS Retail .NET 2013\Jupiter
+	Date created	: 04.01.2012
+
+	Description		: Adding columns
+	
+	
+	Tables affected	: KITCHENDISPLAYVISUALPROFILE
+						
+*/
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('KITCHENDISPLAYVISUALPROFILE') AND NAME='BORDERCOLOR')
+BEGIN
+	 ALTER TABLE KITCHENDISPLAYVISUALPROFILE Add BORDERCOLOR int NULL 
+END	
+GO

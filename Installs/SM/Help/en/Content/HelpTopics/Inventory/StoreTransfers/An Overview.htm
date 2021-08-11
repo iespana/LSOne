@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>An Overview</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../Default.htm#HelpTopics/Inventory/StoreTransfers/An Overview.htm">Open topic with navigation</a>
+        </p>
+        <h1>An Overview:&#160;Transfer Orders and Requests</h1>
+        <p>The Store transfer functionality can be split into two parts: </p>
+        <h2>Inventory transfer requests </h2>
+        <p>A store can send a request for items to another store (inventory transfer request). That store can then create a transfer (inventory transfer order) based on the request.</p>
+        <h2>Inventory transfer orders</h2>
+        <p>A store can create a transfer of items order that is to be sent to another store. This transfer can be based on a transfer request or not. Once the items are sent, the receiving store has to confirm the receipt of the items. </p>
+        <p>&#160;</p>
+        <p>To explain inventory transfers, the documentation uses an example of a high inventory store *HI&#160;(Store B in scenario below) and a low inventory store *LI (Store A in scenario below). </p>
+        <p>This is the company setup that we are going to use in these scenarios:</p>
+        <p>
+            <img src="../../../Resources/Images/Store Transfer User Guide LSOne2013/06000009_573x236.png" style="width: 573;height: 236;" />
+        </p>
+        <p>&#160;</p>
+        <h2>A basic scenario</h2>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li value="1">Store A has a shortage of product X (HI)&#160;and store B has an excess of X (LI).<ul><li value="1">This is done manually or through the inventory lookup in the POS</li></ul></li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li value="2">Store A sends an inventory transfer request to store B.</li>
+            <li value="3">Site Manager &gt; General setup &gt; Inventory &gt; Transfer requests &gt; Sending tab &gt; Add button &gt; [enter information] &gt; Items in request area &gt; Select Add button [add information on items] &gt; Select Send Request button</li>
+            <li value="4">Store B receives the request and sends an inventory transfer order to Store A to confirm how much of product X it is going to send to store A.</li>
+            <li value="5">Site Manager &gt; General setup &gt; Inventory &gt; Transfer orders &gt; Sending tab &gt; Add button &gt; [From request] &gt; Send request button</li>
+            <li value="6">Head Office monitors the sent order through Inventory in transit.<ul style="list-style-type: disc;margin-left: 36pt;"><li style="list-style-type: disc;" value="1">Site Manager &gt; General setup &gt; Inventory &gt; Inventory in transit &gt; Highlight line and select View Inventory Transfer button</li></ul></li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="7">
+            <li value="7">Product X is delivered to store A. </li>
+            <li value="8">Store A confirms the delivery.<ul style="list-style-type: disc;margin-left: 36pt;"><li style="list-style-type: disc;" value="1">Site Manager &gt; General setup &gt; Inventory &gt; Transfer orders &gt; Highlight order line &gt; To receive tab &gt; Receive button</li></ul></li>
+        </ol>
+        <h2>Additional features</h2>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li value="1">Store A can add to the inventory transfer request until it is fetched by store B.<br />If Fetched check box is clear:<ul style="list-style-type: disc;margin-left: 36pt;"><li style="list-style-type: disc;" value="1">Site Manager &gt; General setup &gt; Inventory &gt; Transfer requests &gt; Select Add button / Highlight order line and select Delete button</li></ul></li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li value="2">Store B is closing for the weekend and has an excess of perishable goods. Store B creates an inventory transfer order which it sends to store A, which is open at the weekend.<ul style="list-style-type: disc;margin-left: 36pt;"><li style="list-style-type: disc;" value="1"> Site Manager &gt; General setup &gt; Inventory &gt; Transfer orders &gt; Sending tab &gt; Add button &gt; [Create empty transfer] &gt; Items in transfer area &gt; Select Add button &gt; [enter item information] &gt; Send request button</li></ul></li>
+        </ol>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">12<span class="sup">th</span> May 2013</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2013.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

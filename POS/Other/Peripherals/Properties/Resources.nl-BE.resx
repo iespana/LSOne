@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarcodeReaderEmpty" xml:space="preserve">
+    <value>Barcodescanner: Naam is leeg.</value>
+  </data>
+  <data name="CardReaderEmpty" xml:space="preserve">
+    <value>Kaartlezer. Naam is leeg.</value>
+  </data>
+  <data name="CashDrawerIsClosed" xml:space="preserve">
+    <value>De lade van de kassa is dicht.</value>
+  </data>
+  <data name="CashDrawerIsIllegallyClosed" xml:space="preserve">
+    <value>De lade van de kassa werd onrechtmatig gesloten.</value>
+  </data>
+  <data name="CashDrawerTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor het sluiten van de lade van de kassa is verstreken.</value>
+  </data>
+  <data name="CheckForPaperJam" xml:space="preserve">
+    <value>Fout. Controleer of er papier klem zit.</value>
+  </data>
+  <data name="CouldNotLoadCashDrawer" xml:space="preserve">
+    <value>Kon lade kassa niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadDallasKey" xml:space="preserve">
+    <value>Kon Dallas-sleutel niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadDualDisplay" xml:space="preserve">
+    <value>Kon dubbele display niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadForecourtManager" xml:space="preserve">
+    <value>Kon Forecourt Manager niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadKeylock" xml:space="preserve">
+    <value>Kon sleutelslot niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadLineDisplay" xml:space="preserve">
+    <value>Kon regeldisplay niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadMSR" xml:space="preserve">
+    <value>Kon msr niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadPrinter" xml:space="preserve">
+    <value>Kon printer niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadRFIDScanner" xml:space="preserve">
+    <value>Kon RFID-scanner niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadScale" xml:space="preserve">
+    <value>Kon weegschaal niet laden: #1</value>
+  </data>
+  <data name="CouldNotLoadScanner" xml:space="preserve">
+    <value>Kon scanner niet laden: #1</value>
+  </data>
+  <data name="DisplayIsClosed" xml:space="preserve">
+    <value>De Display is dicht.</value>
+  </data>
+  <data name="DisplayIsIllegallyClosed" xml:space="preserve">
+    <value>De Display werd onrechtmatig gesloten.</value>
+  </data>
+  <data name="DisplayTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor de Display is verstreken.</value>
+  </data>
+  <data name="DrawerEmpty" xml:space="preserve">
+    <value>Lade: Naam is leeg</value>
+  </data>
+  <data name="EnterWeight" xml:space="preserve">
+    <value>Gewicht invoeren</value>
+  </data>
+  <data name="FixProblemAndRetry" xml:space="preserve">
+    <value>Wilt u het probleem proberen te herstellen en het nog eens proberen?</value>
+  </data>
+  <data name="HardwareProfileErrorString" xml:space="preserve">
+    <value>De volgende apparaten hebben ongeldige instellingen: {0}Laat de Site Manager draaien en los alle problemen op voordat u de POS opnieuw opstart</value>
+  </data>
+  <data name="InsertSlipIntoPrinter" xml:space="preserve">
+    <value>Strook in printer schuiven</value>
+  </data>
+  <data name="KeylockEmpty" xml:space="preserve">
+    <value>Sleutelslot: Naam is leeg</value>
+  </data>
+  <data name="KeylockIsClosed" xml:space="preserve">
+    <value>Het sleutelslot is dicht.</value>
+  </data>
+  <data name="KeylockIsIllegallyClosed" xml:space="preserve">
+    <value>Het sleutelslot werd onrechtmatig gesloten.</value>
+  </data>
+  <data name="KeylockTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor het sleutelslot is verstreken.</value>
+  </data>
+  <data name="LineDisplayEmpty" xml:space="preserve">
+    <value>Lijnweergave: Naam is leeg</value>
+  </data>
+  <data name="MSRIllegallyClosed" xml:space="preserve">
+    <value>De MSR werd onrechtmatig gesloten.</value>
+  </data>
+  <data name="MSRIsClosed" xml:space="preserve">
+    <value>De MSR is dicht.</value>
+  </data>
+  <data name="MSRTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor de MSR is verstreken.</value>
+  </data>
+  <data name="NoInputdetected" xml:space="preserve">
+    <value>Geen input gedetecteerd. Controleer de weegschaal en start de POS opnieuw op</value>
+  </data>
+  <data name="NoPrinterFound" xml:space="preserve">
+    <value>Geen printer gevonden</value>
+  </data>
+  <data name="NoScaleDetected" xml:space="preserve">
+    <value>Geen weegschaal gedetecteerd</value>
+  </data>
+  <data name="PrinterCompletedOutput" xml:space="preserve">
+    <value>De printer is klaar!</value>
+  </data>
+  <data name="PrinterCoverIsOK" xml:space="preserve">
+    <value>De printerklep is oké</value>
+  </data>
+  <data name="PrinterCoverIsOpen" xml:space="preserve">
+    <value>De printerklep staat open</value>
+  </data>
+  <data name="PrinterEmpty" xml:space="preserve">
+    <value>Printer: Naam is leeg</value>
+  </data>
+  <data name="PrinterFiredOffAnEvent" xml:space="preserve">
+    <value>De printer veroorzaakte een fout!</value>
+  </data>
+  <data name="PrinterIsClosed" xml:space="preserve">
+    <value>De printer is dicht.</value>
+  </data>
+  <data name="PrinterIsIllegallyClosed" xml:space="preserve">
+    <value>De printer werd onrechtmatig gesloten.</value>
+  </data>
+  <data name="PrinterIsOpen" xml:space="preserve">
+    <value>De printer staat open</value>
+  </data>
+  <data name="PrinterIsOutOfPaper" xml:space="preserve">
+    <value>Er is geen papier in de printer of de printer werd losgekoppeld</value>
+  </data>
+  <data name="PrinterNotAccessible" xml:space="preserve">
+    <value>Printer #1 is niet toegankelijk. De afdrukopdracht werd geannuleerd.</value>
+  </data>
+  <data name="PrinterTimeout" xml:space="preserve">
+    <value>Time-out; dit kan door andere programma's of processen veroorzaakt zijn die eerder de printer hadden opgeëist</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Afdrukken ...</value>
+  </data>
+  <data name="PrintingDeviceIsDisabled" xml:space="preserve">
+    <value>De printer is uitgeschakeld</value>
+  </data>
+  <data name="PrintingInProgress" xml:space="preserve">
+    <value>Afdrukken bezig ...</value>
+  </data>
+  <data name="RemoveSlipFromPrinter" xml:space="preserve">
+    <value>Strook uit printer verwijderen</value>
+  </data>
+  <data name="ScaleEmpty" xml:space="preserve">
+    <value>Weegschaal: Naam is leeg</value>
+  </data>
+  <data name="ScaleIsClosed" xml:space="preserve">
+    <value>De weegschaal is gesloten.</value>
+  </data>
+  <data name="ScaleIsDiabledReconnect" xml:space="preserve">
+    <value>Sluit de weegschaal opnieuw aan en start de POS opnieuw op</value>
+  </data>
+  <data name="ScaleIsDisabled" xml:space="preserve">
+    <value>De weegschaal is uitgeschakeld. Maak opnieuw verbinding met de weegschaal.</value>
+  </data>
+  <data name="ScaleIsDisabledEnterWeight" xml:space="preserve">
+    <value>De weegschaal is uitgeschakeld. Wilt u het gewicht handmatig invoeren?</value>
+  </data>
+  <data name="ScaleIsIllegallyClosed" xml:space="preserve">
+    <value>De weegschaal werd onrechtmatig gesloten</value>
+  </data>
+  <data name="ScaleTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor de weegschaal is verstreken</value>
+  </data>
+  <data name="ScannedTimedOut" xml:space="preserve">
+    <value>De toegelaten tijd voor de scanner is verstreken.</value>
+  </data>
+  <data name="ScannerIsClosesd" xml:space="preserve">
+    <value>De scanner is dicht.</value>
+  </data>
+  <data name="ScannerIsIllegallyClosed" xml:space="preserve">
+    <value>De scanner werd onrechtmatig gesloten</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Barcodelezer</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Kaartlezer</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Lade</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Lijnweergave</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Er werd geen printer geselecteerd; het is misschien niet mogelijk om met behulp van deze instellingen LS One POS op te starten.</value>
+  </data>
+  <data name="PleaseCheckThePrinter" xml:space="preserve">
+    <value>Controleer de printer</value>
+  </data>
+  <data name="AutoDetectionResults" xml:space="preserve">
+    <value>Autom. detectieresultaten</value>
+  </data>
+  <data name="AutoDetectOPOS_Failed" xml:space="preserve">
+    <value>Mislukte test voor {0}: {1}</value>
+  </data>
+  <data name="AutoDetectOPOS_Successfully" xml:space="preserve">
+    <value>{0}: {1} met succes toegevoegd</value>
+  </data>
+  <data name="BarcodePrintingRequiresCustomization" xml:space="preserve">
+    <value>&lt;#1 barcode wordt niet ondersteund&gt;</value>
+  </data>
+  <data name="CouldNotLoadHardware" xml:space="preserve">
+    <value>Kon hardware niet laden</value>
+  </data>
+  <data name="CouldNotLoadHardwareProfile" xml:space="preserve">
+    <value>Kon hardwareprofiel niet laden als gevolg van volgende fout: #1Wilt u het hardwareprofiel openen om de hardware-instelling te testen en aanpassingen uit te voeren?</value>
+  </data>
+  <data name="CouldNotLoadHardwareSetupWithError" xml:space="preserve">
+    <value>Kon hardware-instelling met fout niet laden</value>
+  </data>
+  <data name="CouldNotTestPrintingOfReceipt" xml:space="preserve">
+    <value>Kon afdrukken van ontvangstbewijs niet testen</value>
+  </data>
+  <data name="CurrentProfileWillBeApplied" xml:space="preserve">
+    <value>Huidig profiel zal worden toegepast</value>
+  </data>
+  <data name="EFTNotSavedOnHO" xml:space="preserve">
+    <value>Geen toegang tot service mogelijk om EFT-instellingen centraal op te slaan, alleen lokale wijzigingen worden uitgevoerd.</value>
+  </data>
+  <data name="HardwareNotSavedOnHO" xml:space="preserve">
+    <value>Geen toegang tot service om hardware-instellingen centraal op te slaan, alleen lokale wijzigingen worden uitgevoerd.</value>
+  </data>
+  <data name="HardwareProfileSufficientPermissions" xml:space="preserve">
+    <value>Om het hardwareprofiel te wijzigen, moet een gebruiker met voldoende machtigingen zich aanmelden.</value>
+  </data>
+  <data name="MoreThanOneOPOSDevice" xml:space="preserve">
+    <value>{0} {1} apparaten gevonden, wilt u de POS een actief apparaat laten zoeken en selecteren?</value>
+  </data>
+  <data name="NoHardwareProfilePermission" xml:space="preserve">
+    <value>U hebt geen machtiging om het hardwareprofiel te wijzigen.</value>
+  </data>
+  <data name="NoOPOSDevice" xml:space="preserve">
+    <value>Geen {0} gevonden</value>
+  </data>
+  <data name="TestFailed" xml:space="preserve">
+    <value>Apparaattest mislukt: #1</value>
+  </data>
+  <data name="TestSuccessful" xml:space="preserve">
+    <value>Apparaat met succes getest</value>
+  </data>
+  <data name="WelcomeTo" xml:space="preserve">
+    <value>Welkom bij</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Printstation</value>
+  </data>
+  <data name="CouldNotStartPrintJob" xml:space="preserve">
+    <value>Afdruktaak kan niet worden gestart.</value>
+  </data>
+  <data name="PleaseCheckPrinterOrPrintingStation" xml:space="preserve">
+    <value>Controleer de printer of het afdrukstation</value>
+  </data>
+  <data name="PrintingStationError" xml:space="preserve">
+    <value>Fout op afdrukstation</value>
+  </data>
+</root>

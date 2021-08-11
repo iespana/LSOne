@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Barcodeleser</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Aussteller</value>
+  </data>
+  <data name="HardwareProfile" xml:space="preserve">
+    <value>Hardwareprofil</value>
+  </data>
+  <data name="HardwareProfiles" xml:space="preserve">
+    <value>Hardwareprofile</value>
+  </data>
+  <data name="HardwareProfilesRibbon" xml:space="preserve">
+    <value>Hardware</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Drucker</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Kartenleser</value>
+  </data>
+  <data name="IsSystemStyle" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Formate</value>
+  </data>
+  <data name="VisualProfileDefaultScreenResolution" xml:space="preserve">
+    <value>Standardbildschirmauflösung</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="AlwaysPrint" xml:space="preserve">
+    <value>Immer drucken</value>
+  </data>
+  <data name="Context" xml:space="preserve">
+    <value>Kontext</value>
+  </data>
+  <data name="CreditCardService" xml:space="preserve">
+    <value>Kreditkartenservice</value>
+  </data>
+  <data name="DeleteFuncProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie das ausgewählte Funktionsprofil löschen wollen?</value>
+  </data>
+  <data name="DeleteHardwareProfile" xml:space="preserve">
+    <value>Hardwareprofil löschen</value>
+  </data>
+  <data name="DeleteHardwareProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie das ausgewählte Hardwareprofil löschen wollen?</value>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Visuelles Profil löschen</value>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie das ausgewählte visuelle Profil löschen wollen?</value>
+  </data>
+  <data name="DeleteStyleProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie den ausgewählten Stil löschen wollen?
+?</value>
+  </data>
+  <data name="DualDisplay" xml:space="preserve">
+    <value>Dual-Bildschirm</value>
+  </data>
+  <data name="EditContext" xml:space="preserve">
+    <value>Kontext bearbeiten</value>
+  </data>
+  <data name="FiscalPrinter" xml:space="preserve">
+    <value>Finanzdrucker</value>
+  </data>
+  <data name="ForecourtManager" xml:space="preserve">
+    <value>Forcourt Manager</value>
+  </data>
+  <data name="FunctionalityProfile" xml:space="preserve">
+    <value>Funktionalitätsprofil</value>
+  </data>
+  <data name="FunctionalityProfiles" xml:space="preserve">
+    <value>Funktionalitätsprofile</value>
+  </data>
+  <data name="FunctionalityProfilesDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Funktionsprofile anzusehen oder zu bearbeiten</value>
+  </data>
+  <data name="FunctionalityProfilesRibbon" xml:space="preserve">
+    <value>Funktionalität</value>
+  </data>
+  <data name="HardwareProfilesDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Hardwareprofile anzusehen oder zu bearbeiten</value>
+  </data>
+  <data name="ImageDirectory" xml:space="preserve">
+    <value>Wählen Sie ein Verzeichnis, das die Bilder enthält</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Schlüssel</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Zeilenbildschirm</value>
+  </data>
+  <data name="NewContext" xml:space="preserve">
+    <value>Neuer Kontext</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="ProfileManagement" xml:space="preserve">
+    <value>Profilverwaltung</value>
+  </data>
+  <data name="PumpConnection" xml:space="preserve">
+    <value>Pumpenanschluss</value>
+  </data>
+  <data name="RFIDReader" xml:space="preserve">
+    <value>RFID-Leser</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Waage</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Geschäftssetup</value>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Stilprofil</value>
+  </data>
+  <data name="StyleProfileLines" xml:space="preserve">
+    <value>Stilprofilzeilen</value>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Stilprofile</value>
+  </data>
+  <data name="SurveillanceCamera" xml:space="preserve">
+    <value>Überwachungskamera</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Visuelles Profil</value>
+  </data>
+  <data name="VisualProfileRibbon" xml:space="preserve">
+    <value>Visuell</value>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Visuelle Profile</value>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um visuelle Profile anzusehen oder zu bearbeiten</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="FormLayouts" xml:space="preserve">
+    <value>Formular-Layouts</value>
+  </data>
+  <data name="FormLayoutsDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Formular-Layouts anzuzeigen oder zu bearbeiten</value>
+  </data>
+  <data name="CashChanger" xml:space="preserve">
+    <value>Bargeldwechsler</value>
+  </data>
+  <data name="DallasKey" xml:space="preserve">
+    <value>Dallas-Schlüssel</value>
+  </data>
+  <data name="DeleteFuncProfile" xml:space="preserve">
+    <value>Funktionsprofil löschen</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Look and feel</value>
+  </data>
+  <data name="NeverPrint" xml:space="preserve">
+    <value>Niemals drucken</value>
+  </data>
+  <data name="PromptUser" xml:space="preserve">
+    <value>Benutzer auffordern</value>
+  </data>
+  <data name="ShowPreview" xml:space="preserve">
+    <value>Vorschau anzeigen</value>
+  </data>
+  <data name="Contexts" xml:space="preserve">
+    <value>Kontexte</value>
+  </data>
+  <data name="ContextsDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Kontexte, die im Stilprofil verwendet werden, anzusehen oder zu bearbeiten.</value>
+  </data>
+  <data name="ContextUsedInProfileCannotBeDeleted" xml:space="preserve">
+    <value>Einige oder alle der ausgewählten Kontexte werden in einem Stilprofil verwendet und können nicht gelöscht werden</value>
+  </data>
+  <data name="DeleteContextQuestion" xml:space="preserve">
+    <value>Möchten Sie den ausgewählten Kontext wirklich löschen?</value>
+  </data>
+  <data name="DeleteFormProfile" xml:space="preserve">
+    <value>Formularprofil löschen</value>
+  </data>
+  <data name="DeleteFormProfileLine" xml:space="preserve">
+    <value>Formularprofilzeile löschen</value>
+  </data>
+  <data name="DeleteFormProfileLineQuestion" xml:space="preserve">
+    <value>Möchten Sie die ausgewählte Formularprofilzeile wirklich löschen?</value>
+  </data>
+  <data name="DeleteFormProfileQuestion" xml:space="preserve">
+    <value>Möchten Sie das ausgewählte Formularprofil wirklich löschen?</value>
+  </data>
+  <data name="DeleteStyleProfile" xml:space="preserve">
+    <value>Stilprofil löschen</value>
+  </data>
+  <data name="DeleteStyleProfileLine" xml:space="preserve">
+    <value>Stilprofilzeile löschen</value>
+  </data>
+  <data name="DeleteStyleProfileLineQuestion" xml:space="preserve">
+    <value>Möchten Sie die ausgewählte Stilprofilzeile wirklich löschen?</value>
+  </data>
+  <data name="EditStyleProfileLine" xml:space="preserve">
+    <value>Profilzeile bearbeiten</value>
+  </data>
+  <data name="FormProfileDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Formularprofile anzusehen oder zu bearbeiten</value>
+  </data>
+  <data name="FormProfiles" xml:space="preserve">
+    <value>Formularprofile</value>
+  </data>
+  <data name="InsertDefaultData" xml:space="preserve">
+    <value>„Standarddaten eingeben”</value>
+  </data>
+  <data name="NewStyleProfileLine" xml:space="preserve">
+    <value>Neue Profilzeile</value>
+  </data>
+  <data name="NoBarCodeReaderSelected" xml:space="preserve">
+    <value>Es wurde kein Barcode-Lesegerät ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoCardReaderSelected" xml:space="preserve">
+    <value>Es wurde kein Kartenlesegerät ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoDrawerSelected" xml:space="preserve">
+    <value>Es wurde keine Schublade ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoKeySelected" xml:space="preserve">
+    <value>Es wurde kein Schlüssel ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoLineDisplaySelected" xml:space="preserve">
+    <value>Es wurde keine Zeilenanzeige ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Es wurde kein Drucker ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="NoScaleSelected" xml:space="preserve">
+    <value>Es wurde keine Skala ausgewählt. Möglicherweise ist es nicht möglich, LS One POS mit diesen Einstellungen zu starten.</value>
+  </data>
+  <data name="OneTypePerProfile" xml:space="preserve">
+    <value>Es kann nur eine Instanz für jeden Typ pro Profil vorhanden sein</value>
+  </data>
+  <data name="ReceiptData" xml:space="preserve">
+    <value>„Kassenbondaten”</value>
+  </data>
+  <data name="StartOfDay" xml:space="preserve">
+    <value>Tagesbeginn</value>
+  </data>
+  <data name="StyleProfileDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Stilprofile anzusehen oder zu bearbeiten</value>
+  </data>
+  <data name="StyleProfileLineAlreadyExists" xml:space="preserve">
+    <value>Diese Stilprofilzeilenkombination existiert bereits und kann nicht gespeichert werden.</value>
+  </data>
+  <data name="VisualProfileUserResizable" xml:space="preserve">
+    <value>Der Benutzer kann die Größe ändern</value>
+  </data>
+  <data name="CSVFieldBarcode" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="CSVFieldCounted" xml:space="preserve">
+    <value>Gezählt</value>
+  </data>
+  <data name="CSVFieldDescription" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="CSVFieldItemId" xml:space="preserve">
+    <value>Artikel-ID</value>
+  </data>
+  <data name="CSVFieldUnitId" xml:space="preserve">
+    <value>Einheits-ID</value>
+  </data>
+  <data name="CSVImportTypeStockCounting" xml:space="preserve">
+    <value>Lagerzählung</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Formulare</value>
+  </data>
+  <data name="SetDefaultCSVImportProfile" xml:space="preserve">
+    <value>Als Standard festlegen</value>
+  </data>
+  <data name="CSVFieldSerialNumber" xml:space="preserve">
+    <value>Seriennummer</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Lager</value>
+  </data>
+  <data name="Replication" xml:space="preserve">
+    <value>Replikation</value>
+  </data>
+  <data name="AddMappingToProfile" xml:space="preserve">
+    <value>Bitte fügen Sie dem Profil eine Zuordnung hinzu.</value>
+  </data>
+  <data name="CSVFieldSerialType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="CSVFieldTypeDecimal" xml:space="preserve">
+    <value>Kommazahl</value>
+  </data>
+  <data name="CSVFieldTypeInteger" xml:space="preserve">
+    <value>Ganzzahl</value>
+  </data>
+  <data name="CSVFieldTypeString" xml:space="preserve">
+    <value>Zeichenfolge</value>
+  </data>
+  <data name="CSVImportProfile" xml:space="preserve">
+    <value>CSV-Importprofil</value>
+  </data>
+  <data name="CSVImportProfiles" xml:space="preserve">
+    <value>CSV-Importprofil</value>
+  </data>
+  <data name="CSVImportProfilesDescription" xml:space="preserve">
+    <value>Verwenden Sie diese Option, um Importprofile für CSV-Dateiimporte anzuzeigen oder zu bearbeiten</value>
+  </data>
+  <data name="CSVImportProfilesTooltipDescription" xml:space="preserve">
+    <value>Verwalten Sie CSV-Importprofile, um festzulegen, wie Bestandszählungsjournale und Seriennummern aus CSV-Dateien importiert werden</value>
+  </data>
+  <data name="CSVMappingNotSet" xml:space="preserve">
+    <value>Das CSV-Profil kann nicht Standardprofil festgelegt werden, da es über keine Zuordnungszeilen verfügt.</value>
+  </data>
+  <data name="DeleteCSVImportProfile" xml:space="preserve">
+    <value>CSV-Importprofil löschen</value>
+  </data>
+  <data name="DeleteCSVImportProfileLine" xml:space="preserve">
+    <value>CSV-Importprofilzeile löschen</value>
+  </data>
+  <data name="DeleteCSVImportProfileLineQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie die ausgewählte CSV-Importprofilzeile löschen möchten?</value>
+  </data>
+  <data name="DeleteCSVImportProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie die ausgewählte CSV-Importprofilzeile löschen möchten?</value>
+  </data>
+  <data name="FormProfilesTooltipDescription" xml:space="preserve">
+    <value>Organisieren Sie Formularlayouts in Profile, um verschiedene Ausdrucke in verschiedenen Geschäften nutzen zu können</value>
+  </data>
+  <data name="FunctionalityProfilesTooltipDescription" xml:space="preserve">
+    <value>Funktionsprofile verwalten, die verschiedene Einstellungen für Kassen enthalten</value>
+  </data>
+  <data name="HardwareProfilesTooltipDescription" xml:space="preserve">
+    <value>Hardwareprofile verwalten, die die Kassen mit verschiedenen Peripheriegeräten verbinden, z. B. Drucker für Kassenbons und Kassenladen</value>
+  </data>
+  <data name="NoFolderLocationSelected" xml:space="preserve">
+    <value>Kein Ordnerspeicherort für Windows-Drucker ausgewählt</value>
+  </data>
+  <data name="NoLinesForDefaultProfile" xml:space="preserve">
+    <value>Das CSV-Profil kann nicht als Standardprofil festgelegt werden, da es über keine Zuordnungszeilen verfügt. Bitte fügen Sie dem Profil eine Zuordnung hinzu.</value>
+  </data>
+  <data name="Related_CSVProfiles" xml:space="preserve">
+    <value>CSV-Profile</value>
+  </data>
+  <data name="SelectFolderLocation" xml:space="preserve">
+    <value>Ordnerspeicherort auswählen</value>
+  </data>
+  <data name="SetDefaultCSVImportProfileQuestion" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie das ausgewählte Importprofil als Standard festlegen möchten?</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Standorte</value>
+  </data>
+  <data name="TheFolderSelectedDoesNotExist" xml:space="preserve">
+    <value>Ordner {0} ist nicht vorhanden. Bitte wählen Sie einen bereits vorhandenen Ordner aus.</value>
+  </data>
+  <data name="VisualProfilesTooltipDescription" xml:space="preserve">
+    <value>Visuelle Profile verwalten, die die Bildschirmeinrichtung für Kassen festlegen</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Es wurde keine Geräteliste beim Host {0} gefunden. Prüfen Sie, ob der Druckstationsdienst beim Host ausgeführt wird und ob Drucker installiert wurden</value>
+  </data>
+  <data name="Related_ResetDefaultProfile" xml:space="preserve">
+    <value>Standardprofil zurücksetzen</value>
+  </data>
+  <data name="ResetDefaultProfileHeader" xml:space="preserve">
+    <value>Formularprofil zurücksetzen</value>
+  </data>
+  <data name="ResetDefaultProfileQuestion" xml:space="preserve">
+    <value>Dies wird alle Änderungen, die an den Formularlayouts im Standardformular vorgenommenen wurden, überschreiben. Möchten Sie wirklich fortfahren?</value>
+  </data>
+  <data name="DiscountSettings" xml:space="preserve">
+    <value>Rabatteinstellungen</value>
+  </data>
+  <data name="EditStore" xml:space="preserve">
+    <value>Geschäft bearbeiten</value>
+  </data>
+  <data name="EditVisualProfile" xml:space="preserve">
+    <value>Visuelle Profile bearbeiten</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Sprach-Code</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>Keine Auswahl</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Sonstige</value>
+  </data>
+  <data name="SelectLayoutLabel" xml:space="preserve">
+    <value>Layout:</value>
+  </data>
+  <data name="SelectStoreLabel" xml:space="preserve">
+    <value>Geschäft:</value>
+  </data>
+  <data name="SelectVisualProfileLabel" xml:space="preserve">
+    <value>Visuelles Profil:</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Geschäft</value>
+  </data>
+  <data name="StoreDefault" xml:space="preserve">
+    <value>Geschäftsstandard</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="DeleteUserProfile" xml:space="preserve">
+    <value>Möchten Sie das ausgewählte Benutzerprofil wirklich löschen?</value>
+  </data>
+  <data name="DeleteUserProfileCaption" xml:space="preserve">
+    <value>Benutzerprofil(e) löschen</value>
+  </data>
+  <data name="DeleteUserProfiles" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Benutzerprofile wirklich löschen?</value>
+  </data>
+  <data name="DeleteUserProfilesInUse" xml:space="preserve">
+    <value>Einige der ausgewählten Benutzerprofile werden verwendet und können nicht gelöscht werden. Möchten Sie fortfahren?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung:</value>
+  </data>
+  <data name="DoNotCopyUserProfile" xml:space="preserve">
+    <value>Vorhandene Benutzerprofile nicht kopieren</value>
+  </data>
+  <data name="EditLayout" xml:space="preserve">
+    <value>Layout bearbeiten</value>
+  </data>
+  <data name="RemoveUserFromUserProfile" xml:space="preserve">
+    <value>Möchten Sie die ausgewählten Benutzer wirklich aus diesem Profil entfernen?</value>
+  </data>
+  <data name="SelectLayoutHeaderText" xml:space="preserve">
+    <value>Ein Layout für das Benutzerprofil auswählen</value>
+  </data>
+  <data name="SelectStoreHeaderText" xml:space="preserve">
+    <value>Ein Geschäft für das Benutzerprofil auswählen</value>
+  </data>
+  <data name="SelectVisualProfileHeaderText" xml:space="preserve">
+    <value>Ein visuelles Profil für das Benutzerprofil auswählen</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Benutzerprofil:</value>
+  </data>
+  <data name="UserProfiles" xml:space="preserve">
+    <value>Benutzerprofile</value>
+  </data>
+  <data name="UserProfilesInUse" xml:space="preserve">
+    <value>Alle ausgewählten Profile werden verwendet und können nicht gelöscht werden.</value>
+  </data>
+  <data name="UserProfilesTooltipDescription" xml:space="preserve">
+    <value>Benutzerprofile anzeigen und verwalten</value>
+  </data>
+</root>

@@ -1,0 +1,34 @@
+/*
+
+	Incident No.	: ONE-4639
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: Turmeric 1.12 - 15.12
+	Date created	: 9.12.2016
+
+	Description		: Adding new form types, adding an Email form profile to the store
+	
+	
+	Tables affected	: RBOSTORETABLE, POSFORMTYPE
+						
+*/
+
+USE LSPOSNET
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOSTORETABLE' AND COLUMN_NAME = 'RECEIPTEMAILPROFILEID')
+BEGIN
+	ALTER TABLE dbo.RBOSTORETABLE ADD RECEIPTEMAILPROFILEID uniqueidentifier NULL
+END
+GO
+
+IF NOT EXISTS (SELECT ID FROM POSFORMTYPE WHERE ID = '39ddba4e-f7c6-4dc6-bc44-895e729d9112')
+BEGIN
+	INSERT INTO POSFORMTYPE 
+	VALUES ('39ddba4e-f7c6-4dc6-bc44-895e729d9112', 'Receipt email subject', 35, 'LSR')
+END
+GO
+
+IF NOT EXISTS (SELECT ID FROM POSFORMTYPE WHERE ID = '72cb906c-d2d3-41c6-965a-0f7948420dbf')
+BEGIN
+	INSERT INTO POSFORMTYPE 
+	VALUES ('72cb906c-d2d3-41c6-965a-0f7948420dbf', 'Receipt email text', 34, 'LSR')
+END
+GO

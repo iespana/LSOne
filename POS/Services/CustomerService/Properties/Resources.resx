@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>[Term:373] - 51100</comment>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+    <comment>[Term:654] - 51101</comment>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Could not connect to the Site service. The customer will be saved locally.</value>
+    <comment>[Term:21105]</comment>
+  </data>
+  <data name="CouldNotTransferCustomers" xml:space="preserve">
+    <value>Could not transfer the customers.</value>
+    <comment>[Term:16819]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DownArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>DownArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmailFieldDoesNotContainValidEmail" xml:space="preserve">
+    <value>Email field does not contain valid email address.</value>
+    <comment>[Term:16816]</comment>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+    <comment>[Term:411]</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>[Term:452]</comment>
+  </data>
+  <data name="NotCharged" xml:space="preserve">
+    <value>Not charged</value>
+    <comment>[Term:16822] - 51153</comment>
+  </data>
+  <data name="PageDownArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>PageDownArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PageUpArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>PageUpArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Payment</value>
+    <comment>[Term:2759] - 51152</comment>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sales</value>
+    <comment>[Term:3672] - 51151</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+    <comment>[Term:2860] - 51103</comment>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ShowKeyboard" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAARj0lEQVR4Xu3aBdRW1RIGYBN12di6xEAW
+        YneDhQUYKNid2F1gYhcqGNggStoJdrdixzLA7ibsuTzjv//7XQOugIr3nr3WXl+ds/fMO++8M+ecb6Jq
+        VKMa1ahGNapRjWpUoxrVqEY1qlGNalSjGtX4e8dnn30W77//frzyyivxyCOPxF133RWDBg2KBx98MG6+
+        +ea4+uqrc959993x5JNP1s+nn3463nnnnfj8889j+PDhUbfcP3uMGDEiXn311XjooYdiwIABccEFF8TR
+        Rx8dBxxwQGy66aax3nrrxRprrBFbbLFF9OzZMy655JLo3bt33HjjjdGnT5+44oor8jy/nXvuuXHZZZfl
+        PO+88+KWW26JO+64I5599tl44403ErjvvvvunwGciHP0jDPOiOOOOy7nUUcdFZ06dYqDDjoodt5559hg
+        gw1iww03TJD23HPPeOGFF9JRYF588cX5/oknnkjmmJ9++ml88MEH8dJLL8VNN90Up512Wtx7771x6623
+        JgMB2rdv37j22mvjnnvuSeA+/vjjCQuw1157LU499dQ4/vjjo3PnznH44YfHfvvtl4BgzEYbbRSbb755
+        vjc322yzaN++fWy11VZx++23pzOcw4zHH388vvrqq3Tyyy+/zN+++eab+P7775NVgB4yZEiC+PLLL2fK
+        YqvgSFsM69+/f/Tq1SvBu+222/J351vrLx8048gjj0yWdOjQIbbccstYf/31o2XLljk33njjBMrcfvvt
+        Y8cdd4yddtop53bbbRfHHHNMXHrppfHYY4+lAxz+6KOP8j02YRj9Ap61n3vuufjxxx/zO7/bHxCDBw/O
+        iXVApnNnnnlmLLfcctG8efM47LDD4pxzzomBAwfG22+//deAhdo2FtVdd901tt1225yc33///TPFTjjh
+        hHzFKnPfffdNdu2zzz6ZYrvvvnt+vvLKK+PFF1/MdHrrrbfqHXj00UdThzhHrH339ddfZ8phBgDPP//8
+        +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
+</value>
+  </data>
+  <data name="TerminalNotStandalone" xml:space="preserve">
+    <value>This operation is only available when the terminal is standalone</value>
+    <comment>[Term:16590]</comment>
+  </data>
+  <data name="TransferLocalCustomers" xml:space="preserve">
+    <value>Sending customers to head office</value>
+    <comment>[Term:21721] - Text on a process dialog</comment>
+  </data>
+  <data name="UpArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>UpArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnterCustomerID" xml:space="preserve">
+    <value>Enter a customer ID</value>
+    <comment>[Term:17518] - 3060</comment>
+  </data>
+  <data name="AddedCustomer" xml:space="preserve">
+    <value>Added customer:</value>
+    <comment>[Term:17519] - 3061</comment>
+  </data>
+  <data name="CustomerNotFound" xml:space="preserve">
+    <value>Customer not found</value>
+    <comment>[Term:6827] - 3062</comment>
+  </data>
+  <data name="CustomerBlockedNoTransactionsAllowed" xml:space="preserve">
+    <value>This customer has been blocked. No sales or transactions are allowed.</value>
+    <comment>[Term:17520] - 51002</comment>
+  </data>
+  <data name="InvoicedCustomerBlockedChargingNotAllowed" xml:space="preserve">
+    <value>This customer is limited to invoices. This account cannot be charged.</value>
+    <comment>[Term:19583] - 51005</comment>
+  </data>
+  <data name="InvoicedCustomerBlockedSalesNotAllowed" xml:space="preserve">
+    <value>The invoiced customer has been blocked. No sales or transactions are allowed.</value>
+    <comment>[Term:17522] - 51004</comment>
+  </data>
+  <data name="NoTransactionsFound" xml:space="preserve">
+    <value>No transactions are found for the customer</value>
+    <comment>[Term:18096] - 51000</comment>
+  </data>
+  <data name="AmountHigerThanCreditLimit" xml:space="preserve">
+    <value>The amount charged is higher than existing credit limit</value>
+    <comment>[Term:19575] - 51007</comment>
+  </data>
+  <data name="CustomerBlockedCannotBeCharged" xml:space="preserve">
+    <value>This customer has been blocked. This account can not be charged to.</value>
+    <comment>[Term:17521] - 51006</comment>
+  </data>
+  <data name="PurchaseRequestID" xml:space="preserve">
+    <value>Purchase request ID</value>
+    <comment>[Term:18097] - 51001</comment>
+  </data>
+  <data name="NewCustomer" xml:space="preserve">
+    <value>New customer</value>
+    <comment>[Term:446] - Button to create a new customer</comment>
+  </data>
+  <data name="PosGrayArrowDown32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayArrowDown32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PosGrayArrowPageDown32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayArrowPageDown32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PosGrayArrowPageUp32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayArrowPageUp32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PosGrayArrowUp32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayArrowUp32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PosGrayPlus32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayPlus32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SendCustomersToCloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SendCustomersToCloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CouldNotConnectToSiteService" xml:space="preserve">
+    <value>Could not connect to the site service</value>
+    <comment>[Term:20379]</comment>
+  </data>
+  <data name="SiteServiceAuthenticationFailed" xml:space="preserve">
+    <value>Site service user could not connect to the database because user authentication failed</value>
+    <comment>[Term:22361]</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+    <comment>[Term:2156]</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>[Term:367]</comment>
+  </data>
+  <data name="BALANCEREPORT" xml:space="preserve">
+    <value>BALANCE REPORT</value>
+    <comment>[Term:18098]</comment>
+  </data>
+  <data name="ReportPrinted" xml:space="preserve">
+    <value>Report printed</value>
+    <comment>[Term:18099]</comment>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+    <comment>[Term:2877]</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>[Term:445]</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+    <comment>[Term:6074]</comment>
+  </data>
+  <data name="TOTAL" xml:space="preserve">
+    <value>TOTAL</value>
+    <comment>[Term:2930]</comment>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>Select period</value>
+    <comment>[Term:18101]</comment>
+  </data>
+  <data name="ThisMonth" xml:space="preserve">
+    <value>This month</value>
+    <comment>[Term:18102]</comment>
+  </data>
+  <data name="ThreeMonths" xml:space="preserve">
+    <value>Three months</value>
+    <comment>[Term:18103]</comment>
+  </data>
+  <data name="SixMonths" xml:space="preserve">
+    <value>Six months</value>
+    <comment>[Term:18104]</comment>
+  </data>
+  <data name="LastYear" xml:space="preserve">
+    <value>Last year</value>
+    <comment>[Term:9335]</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+    <comment>[Term:2850]</comment>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Receipt</value>
+    <comment>[Term:2919]</comment>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+    <comment>[Term:380]</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>[Term:2696]</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>[Term:3792]</comment>
+  </data>
+  <data name="SUBTOTAL" xml:space="preserve">
+    <value>SUBTOTAL</value>
+    <comment>[Term:7983]</comment>
+  </data>
+  <data name="BALANCENOW" xml:space="preserve">
+    <value>BALANCE NOW</value>
+    <comment>[Term:18100]</comment>
+  </data>
+  <data name="PageDown" xml:space="preserve">
+    <value>Page down</value>
+    <comment>[Term:9546]</comment>
+  </data>
+  <data name="PageUp" xml:space="preserve">
+    <value>Page up</value>
+    <comment>[Term:9547]</comment>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Down</value>
+    <comment>[Term:2498]</comment>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Up</value>
+    <comment>[Term:2497]</comment>
+  </data>
+  <data name="SearchCriteria" xml:space="preserve">
+    <value>Search criteria</value>
+    <comment>[Term:16708]</comment>
+  </data>
+  <data name="NoCustomerSelected" xml:space="preserve">
+    <value>No customer was selected</value>
+    <comment>[Term:17693]</comment>
+  </data>
+  <data name="double_arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double arrow down_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="double_arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double arrow up_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="single_arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\single arrow down_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="single_arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\single arrow up_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="send_customers_to_cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send customers to cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoCustomerDepositOnTraining" xml:space="preserve">
+    <value>No deposit was made for the customer. The POS is in training mode.</value>
+    <comment>[Term:23816]</comment>
+  </data>
+  <data name="ConcludeTransactionCustomerAccount" xml:space="preserve">
+    <value>Please conclude the transaction before depositing into a customer account.</value>
+    <comment>[Term:17524]</comment>
+  </data>
+  <data name="NoItemsToDiscount" xml:space="preserve">
+    <value>There are no items to discount.</value>
+    <comment>[Term:17552]</comment>
+  </data>
+  <data name="OnlySingleDepositPerTransaction" xml:space="preserve">
+    <value>Only a single deposit is allowed per transaction</value>
+    <comment>[Term:17526]</comment>
+  </data>
+  <data name="CustomerBlocked" xml:space="preserve">
+    <value>This customer has been blocked. No sales or transactions are allowed.</value>
+    <comment>[Term:17520]</comment>
+  </data>
+  <data name="CustomerIsCashCustomer" xml:space="preserve">
+    <value>This account cannot be charged to. This customer is a cash customer.</value>
+    <comment>[Term:19574]</comment>
+  </data>
+  <data name="CustomerLimitedToInvoice" xml:space="preserve">
+    <value>This customer is limited to invoices. This account cannot be charged.</value>
+    <comment>[Term:19583]</comment>
+  </data>
+  <data name="DialogMessage_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogMessage_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomerAccountDeposit" xml:space="preserve">
+    <value>Customer account deposit</value>
+    <comment>[Term:16476]</comment>
+  </data>
+  <data name="edit_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PosGrayEdit32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PosGrayEdit32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddressMandatoryError" xml:space="preserve">
+    <value>Address is mandatory and cannot be empty.</value>
+    <comment>[Term:23900]</comment>
+  </data>
+  <data name="CustomerNameMandatoryError" xml:space="preserve">
+    <value>Customer name is mandatory and cannot be empty.</value>
+    <comment>[Term:23901]</comment>
+  </data>
+  <data name="DateOfBirthMandatoryError" xml:space="preserve">
+    <value>Date of birth is mandatory and needs to be set to a valid date.</value>
+    <comment>[Term:23902]</comment>
+  </data>
+  <data name="EmailMandatoryError" xml:space="preserve">
+    <value>Email is mandatory and cannot be empty.</value>
+    <comment>[Term:23903]</comment>
+  </data>
+  <data name="GenderMandatoryError" xml:space="preserve">
+    <value>Gender is mandatory and cannot be set to n/a.</value>
+    <comment>[Term:23907]</comment>
+  </data>
+  <data name="PhoneMandatoryError" xml:space="preserve">
+    <value>Phone number is mandatory and cannot be empty.</value>
+    <comment>[Term:23908]</comment>
+  </data>
+  <data name="ReceiptEmailMandatoryError" xml:space="preserve">
+    <value>Receipt email is mandatory and cannot be empty.</value>
+    <comment>[Term:23909]</comment>
+  </data>
+  <data name="SearchAliasMandatoryError" xml:space="preserve">
+    <value>Search alias is mandatory and cannot be empty.</value>
+    <comment>[Term:23910]</comment>
+  </data>
+  <data name="CustomerIDAlreadyExists" xml:space="preserve">
+    <value>A customer with this ID already exists.</value>
+    <comment>[Term:23899]</comment>
+  </data>
+  <data name="VerifyingID" xml:space="preserve">
+    <value>Verifying ID</value>
+    <comment>[Term:23898]</comment>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+    <comment>[Term:356]</comment>
+  </data>
+  <data name="Loyalty" xml:space="preserve">
+    <value>Loyalty</value>
+    <comment>[Term:13376]</comment>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+    <comment>[Term:23134]</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+    <comment>[Term:482]</comment>
+  </data>
+  <data name="Ledger" xml:space="preserve">
+    <value>Ledger</value>
+    <comment>[Term:19771]</comment>
+  </data>
+  <data name="HeadOffice" xml:space="preserve">
+    <value>Head office</value>
+    <comment>[Term:3106]</comment>
+  </data>
+  <data name="white_line_arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\white line arrow down_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_line_arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\white line arrow up_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClearSearch" xml:space="preserve">
+    <value>Clear search</value>
+    <comment>[Term:16495]</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>[Term:484]</comment>
+  </data>
+  <data name="CustomerLedgerLoadedItems" xml:space="preserve">
+    <value>Loaded {0} items out of {1}</value>
+    <comment>[Term:20668]</comment>
+  </data>
+  <data name="TransferCustomerInformation" xml:space="preserve">
+    <value>Transfer customer information</value>
+    <comment>[Term:23976]</comment>
+  </data>
+  <data name="LoadingCustomerLedger" xml:space="preserve">
+    <value>Loading customer transactions...</value>
+    <comment>[Term:23977]</comment>
+  </data>
+  <data name="GettingTransaction" xml:space="preserve">
+    <value>Getting transaction</value>
+    <comment>[Term:22784]</comment>
+  </data>
+  <data name="EditCustomerDetailsButtonText" xml:space="preserve">
+    <value>Details</value>
+    <comment>[Term:23970]</comment>
+  </data>
+  <data name="verifyID_24_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\verifyID_24_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddCard" xml:space="preserve">
+    <value>Add card</value>
+    <comment>[Term:24006]</comment>
+  </data>
+  <data name="UseCard" xml:space="preserve">
+    <value>Use card</value>
+    <comment>[Term:24007]</comment>
+  </data>
+  <data name="ThisOperationIsInvalidForThisTypeOfTransaction" xml:space="preserve">
+    <value>This operation is invalid for this type of transaction.</value>
+    <comment>[Term:16685]</comment>
+  </data>
+  <data name="LoyaltyCardAddedToSale" xml:space="preserve">
+    <value>Loyalty card has been added to the sale.</value>
+    <comment>[Term:21399]</comment>
+  </data>
+  <data name="InvoiceAccount" xml:space="preserve">
+    <value>Invoice account</value>
+    <comment>[Term:15064]</comment>
+  </data>
+  <data name="CreatingCustomer" xml:space="preserve">
+    <value>Creating customer</value>
+  </data>
+  <data name="EditCustomerNotAllowedInTrainingMode" xml:space="preserve">
+    <value>The POS is in training mode, a customer cannot be edited</value>
+  </data>
+  <data name="NewCustomerNotAllowedInTrainingMode" xml:space="preserve">
+    <value>The POS is in training mode, a new customer cannot be created</value>
+  </data>
+  <data name="TransferCustomerNotAllowedInTrainingMode" xml:space="preserve">
+    <value>The POS is in training mode, the customer information cannot be transferred</value>
+  </data>
+  <data name="CustomerID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="EnterPurchaseRequestID" xml:space="preserve">
+    <value>Enter a purchase request ID</value>
+  </data>
+  <data name="ArrowDown16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowDown16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowDown24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowDown24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowDown32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowDown32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowUp16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowUp16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowUp24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowUp24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowUp32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowUp32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Movetocloud_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Movetocloud_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Movetocloud_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Movetocloud_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Movetocloud_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Movetocloud_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plusincircle_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plusincircle_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plusincircle_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plusincircle_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plusincircle_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plusincircle_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReceiptEmailFieldDoesNotContainValidEmail" xml:space="preserve">
+    <value>Receipt email field does not contain a valid email address.</value>
+  </data>
+  <data name="CustomerCouldNotBeSaved" xml:space="preserve">
+    <value>Customer could not be saved. Please review the customer information.</value>
+  </data>
+  <data name="Doublearrowdownthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doublearrowdownthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doublearrowupthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doublearrowupthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Checkmark_white_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checkmark_white_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="OtherTenders" xml:space="preserve">
+    <value>Other tenders</value>
+  </data>
+  <data name="PaymentIntoAccount" xml:space="preserve">
+    <value>Payment into account</value>
+  </data>
+  <data name="CustomerIsBlocked" xml:space="preserve">
+    <value>Customer is blocked</value>
+  </data>
+  <data name="CustomerLimitedToInvoices" xml:space="preserve">
+    <value>Customer limited to invoices</value>
+  </data>
+  <data name="CustomerNotBlocked" xml:space="preserve">
+    <value>Customer is not blocked</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+</root>

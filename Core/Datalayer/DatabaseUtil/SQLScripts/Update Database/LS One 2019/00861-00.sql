@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-9610
+	Responsible		: Ovidiu Caba
+	Sprint			: Romulans
+	Date created	: 28.01.2019
+
+	Description		: Add index on table RBOTRANSACTIONTABLE to speed up the searching
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT * FROM sys.indexes WHERE NAME = 'LS_RBOTRANSACTIONTABLE_TRANSDATE')
+BEGIN
+	CREATE NONCLUSTERED INDEX LS_RBOTRANSACTIONTABLE_TRANSDATE
+	ON RBOTRANSACTIONTABLE(TRANSDATE)
+END
+GO

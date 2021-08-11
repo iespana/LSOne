@@ -1,0 +1,67 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: dac36cd0-2bdf-11e5-a2cb-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Émission de notes de crédit
+
+// Extra description for the report as it will appear in some of the system menus
+Description: Ce rapport affiche toutes les notes de crédit émises pendant la période choisie.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: fr
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_IssuedCreditmemos]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_IssuedCreditmemos]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_IssuedCreditmemos]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set nocount on
+declare @docid int
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select 
+	Cast(r.TRANSACTIONDATE as smalldatetime) as THEDATE, IIF (r.operation = 0, r.AMOUNT, r.AMOUNT*-1) as AMOUNT, r.VOUCHERID, st.NAME as STOREID, u.LOGIN + ' - ' + u.FirstName as STAFFID, t.NAME as TERMINALID
+	from RBOCREDITVOUCHERTRANSACTIONS r
+	join (select [text] as USERID from openxml(@docid, '/p', 1) where not [text] is null) us on r.STAFFID = cast(us.USERID as nvarchar(20))
+	join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on r.STOREID = CAST(ur.STORESID as nvarchar(20)) 
+	join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on r.TERMINALID = CAST(ut.TERMINALSID as nvarchar(20))
+	left outer join RBOSTORETABLE st on r.STOREID = st.STOREID and r.DATAAREAID = st.DATAAREAID
+	left outer join RBOTERMINALTABLE t on r.TERMINALID = t.TERMINALID and r.DATAAREAID = t.DATAAREAID
+	left outer join USERS u on r.STAFFID = u.STAFFID
+	where r.DATAAREAID = @DataareaID and r.TRANSACTIONDATE >= @StartDate and r.TRANSACTIONDATE <= @EndDate
+	order by r.VOUCHERID 
+
+exec sp_xml_removedocument @docid
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+
+GO

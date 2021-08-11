@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="General" xml:space="preserve">
+    <value>Allmänt</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lägg till</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Radera</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Tillgänglig</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Teckensnitt</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Utskrift</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attribut</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Allmänna inställningar</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Inte tillgänglig</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Förhandsgranska</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Begäranden</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reservationer</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Restauranger</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Förs.typ</value>
+  </data>
+  <data name="SalesTypeText" xml:space="preserve">
+    <value>Förs.typ</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Konfigurera</value>
+  </data>
+  <data name="OPOSPrinter" xml:space="preserve">
+    <value>OPOS-skrivare</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Sekvens</value>
+  </data>
+  <data name="WindowsPrinter" xml:space="preserve">
+    <value>Windows-skrivare</value>
+  </data>
+  <data name="AddRestaurantDiningTables" xml:space="preserve">
+    <value>Lägg till restaurang bord</value>
+  </data>
+  <data name="ChangeFromDefaultFont" xml:space="preserve">
+    <value>Ändra från standard font</value>
+  </data>
+  <data name="ChangingFromDefaultFontQuestion" xml:space="preserve">
+    <value>Standardfont är #1 med standardstorlek #2. Om du ändrar inställning kan utskriften bli felaktig. Vill du ändra dessa värden? </value>
+  </data>
+  <data name="Clicked" xml:space="preserve">
+    <value>Klickat:</value>
+  </data>
+  <data name="DeleteDiningTableLayout" xml:space="preserve">
+    <value>Radera bordslayout</value>
+  </data>
+  <data name="DeleteDiningTableLayoutQuestion" xml:space="preserve">
+    <value>Vill du radera vald bordslayout?</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreen" xml:space="preserve">
+    <value>Radera bordslayout skärm
+</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreenQuestion" xml:space="preserve">
+    <value>Vill du radera vald bordslayout skärm?</value>
+  </data>
+  <data name="DeleteHospitalityType" xml:space="preserve">
+    <value>Radera restaurangtyp</value>
+  </data>
+  <data name="DeleteHospitalityTypeQuestion" xml:space="preserve">
+    <value>Vill du radera vald restaurang typ?</value>
+  </data>
+  <data name="DeletePosMenu" xml:space="preserve">
+    <value>Radera kassameny</value>
+  </data>
+  <data name="DeletePosMenuLine" xml:space="preserve">
+    <value>Radera kassameny rad</value>
+  </data>
+  <data name="DeletePosMenuLineQuestion" xml:space="preserve">
+    <value>Vill du radera vald kassa menyrad?</value>
+  </data>
+  <data name="DeletePosMenuQuestion" xml:space="preserve">
+    <value>Vill du radera vald kassa meny?</value>
+  </data>
+  <data name="DeletePrintingRoute" xml:space="preserve">
+    <value>Radera skrivarväg</value>
+  </data>
+  <data name="DeletePrintingRouteQuestion" xml:space="preserve">
+    <value>Vill du radera vald skrivarväg?</value>
+  </data>
+  <data name="DeleteRestaurantDiningTable" xml:space="preserve">
+    <value>Radera restaurang bord</value>
+  </data>
+  <data name="DeleteRestaurantDiningTableQuestion" xml:space="preserve">
+    <value>Vill du radera valt restaurangbord?</value>
+  </data>
+  <data name="DeleteRestaurantMenuType" xml:space="preserve">
+    <value>Radera restaurang menytyp</value>
+  </data>
+  <data name="DeleteRestaurantMenuTypeQuestion" xml:space="preserve">
+    <value>Vill du radera vald restaurangmeny typ?</value>
+  </data>
+  <data name="DeleteRestaurantStation" xml:space="preserve">
+    <value>Radera restaurang station</value>
+  </data>
+  <data name="DeleteRestaurantStationQuestion" xml:space="preserve">
+    <value>Är du säker på att du vill radera vald restaurang station?</value>
+  </data>
+  <data name="DeleteSalesType" xml:space="preserve">
+    <value>Radera förs.typ</value>
+  </data>
+  <data name="DeleteSalesTypeQuestion" xml:space="preserve">
+    <value>Vill du radera vald förs.typ?</value>
+  </data>
+  <data name="DeleteStationSelection" xml:space="preserve">
+    <value>Radera station val</value>
+  </data>
+  <data name="DeleteStationSelectionQuestion" xml:space="preserve">
+    <value>Vill du radera vald station?</value>
+  </data>
+  <data name="DeliveryAndTakeout" xml:space="preserve">
+    <value>Leverans och hämtning</value>
+  </data>
+  <data name="DineIn" xml:space="preserve">
+    <value>Äta här</value>
+  </data>
+  <data name="DiningTableLayout" xml:space="preserve">
+    <value>Bordlayout</value>
+  </data>
+  <data name="DiningTableLayoutScreenExists" xml:space="preserve">
+    <value>En bordslayout skärm med det skärmnumret finns redan</value>
+  </data>
+  <data name="DiningTableLayoutSreenInUse" xml:space="preserve">
+    <value>Vald skärm kan inte raderas därför att ett restaurangbord är tilldelat till den</value>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Kopiera inte</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redigera</value>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Glyf</value>
+  </data>
+  <data name="Hospitality" xml:space="preserve">
+    <value>Restaurang</value>
+  </data>
+  <data name="HospitalityMenuGroups" xml:space="preserve">
+    <value>Restaurang menygrupper</value>
+  </data>
+  <data name="HospitalityPosMenus" xml:space="preserve">
+    <value>Restaurang kassa menyer</value>
+  </data>
+  <data name="HospitalitySetup" xml:space="preserve">
+    <value>Restaurang inställning</value>
+  </data>
+  <data name="HospitalitySetupDescription" xml:space="preserve">
+    <value>Använd alternativet för att installera restaurang</value>
+  </data>
+  <data name="HospitalityTypes" xml:space="preserve">
+    <value>Restaurang typer</value>
+  </data>
+  <data name="HospitalityTypesDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera restaurangtyper</value>
+  </data>
+  <data name="HospitalityTypeText" xml:space="preserve">
+    <value>Restaurang typ</value>
+  </data>
+  <data name="LayoutID" xml:space="preserve">
+    <value>Layout-ID</value>
+  </data>
+  <data name="LayoutIDExists" xml:space="preserve">
+    <value>En bordslayout med det här layout-ID finns redan i databasen.</value>
+  </data>
+  <data name="Listing" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="NumberOfRestaurantDiningTablesExceeds" xml:space="preserve">
+    <value>Antal bord överskrider maximum antal bord tillåtet för aktuellt bordslayout</value>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Process-ID</value>
+  </data>
+  <data name="PosColorExists" xml:space="preserve">
+    <value>En kassa färg med detta ID finns redan </value>
+  </data>
+  <data name="POSColorSetup" xml:space="preserve">
+    <value>Kassa färg inställning</value>
+  </data>
+  <data name="POSColorSetupDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera färger använda i restaurang</value>
+  </data>
+  <data name="PosLookupsDescription" xml:space="preserve">
+    <value>Använd alternativet för att se och redigera kassa menygrupper</value>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Kassa menyknapp</value>
+  </data>
+  <data name="PosMenuButtons" xml:space="preserve">
+    <value>Kassa meny knappar</value>
+  </data>
+  <data name="PosMenusDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera kassamenyer</value>
+  </data>
+  <data name="PrintingRoutes" xml:space="preserve">
+    <value>Utskriftsvägar</value>
+  </data>
+  <data name="PrintingRoutesDescription" xml:space="preserve">
+    <value>Använd alternativet att hantera skrivarvägar</value>
+  </data>
+  <data name="RestaurantDiningTableRangeExists" xml:space="preserve">
+    <value>Ett bord finns redan i detta intervall</value>
+  </data>
+  <data name="RestaurantId" xml:space="preserve">
+    <value>Restaurang ID</value>
+  </data>
+  <data name="RestaurantMenuTypeCodeOnPosExists" xml:space="preserve">
+    <value>En restaurang menytyp med order och kod finns redan i kassan</value>
+  </data>
+  <data name="RestaurantMenuTypeExists" xml:space="preserve">
+    <value>En restaurang menytyp med restaurang ID och order finns redan</value>
+  </data>
+  <data name="RestaurantMenuTypes" xml:space="preserve">
+    <value>Menytyper</value>
+  </data>
+  <data name="RestaurantSalesTypeExists" xml:space="preserve">
+    <value>En restaurang typ med restaurang ID och förs. typ finns redan</value>
+  </data>
+  <data name="RestaurantsDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera restauranger</value>
+  </data>
+  <data name="RestaurantStationExists" xml:space="preserve">
+    <value>En restaurang med detta ID finns redan</value>
+  </data>
+  <data name="RestaurantStations" xml:space="preserve">
+    <value>Restaurang stationer</value>
+  </data>
+  <data name="RestaurantStationText" xml:space="preserve">
+    <value>Restaurang station</value>
+  </data>
+  <data name="SalesTypes" xml:space="preserve">
+    <value>Förs.typer</value>
+  </data>
+  <data name="SalesTypesDescription" xml:space="preserve">
+    <value>Använd alternativet för att se och redigera förs.typer</value>
+  </data>
+  <data name="Screens" xml:space="preserve">
+    <value>Skärmar</value>
+  </data>
+  <data name="SplitBillTransferLines" xml:space="preserve">
+    <value>Dela meny/Överför rader</value>
+  </data>
+  <data name="StationSelectionExists" xml:space="preserve">
+    <value>Ett val med samma information finns redan</value>
+  </data>
+  <data name="TableButtonGraphicalLayout" xml:space="preserve">
+    <value>Bordsknapp/grafisk layout</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Dricks</value>
+  </data>
+  <data name="ViewAllHospitalityTypes" xml:space="preserve">
+    <value>Vy alla restaurangtyper</value>
+  </data>
+  <data name="ViewAllRestaurantStations" xml:space="preserve">
+    <value>Vy alla restaurangstationer</value>
+  </data>
+  <data name="ViewAllSalesTypes" xml:space="preserve">
+    <value>Vy alla förs.typer</value>
+  </data>
+  <data name="ViewPosMenus" xml:space="preserve">
+    <value>Vy kassa menyer</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Restaurang station</value>
+  </data>
+  <data name="PrintingStations" xml:space="preserve">
+    <value>Restaurang station</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Radera kassans knappsatsmenyrad</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Är du säker på att du vill radera kassameny rader?</value>
+  </data>
+  <data name="DeletePosLookup" xml:space="preserve">
+    <value>Radera restaurangmenygrupp</value>
+  </data>
+  <data name="DeletePosLookupQuestion" xml:space="preserve">
+    <value>Är du säker på att du vill radera vald restaurang menygrupp?</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Tomt</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Inga maskiner hittades på fjärrvärd {0}, kolla att skrivaren är rätt uppsätt och att tjänsten är startad</value>
+  </data>
+  <data name="HardwareProfilePrinter" xml:space="preserve">
+    <value>Hårdvaruprofil skrivare</value>
+  </data>
+  <data name="HospitalityType" xml:space="preserve">
+    <value>Restaurang typ</value>
+  </data>
+  <data name="ManageSetupDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera restaurang inställningar</value>
+  </data>
+  <data name="PaymentStatus" xml:space="preserve">
+    <value>Betalningsstatus</value>
+  </data>
+  <data name="PosId" xml:space="preserve">
+    <value>Kassa id</value>
+  </data>
+  <data name="PrintingStationsDescription" xml:space="preserve">
+    <value>Använd alternativet för att hantera restaurang stationer</value>
+  </data>
+  <data name="ReceiptNumber" xml:space="preserve">
+    <value>Kvittonummer</value>
+  </data>
+  <data name="SendConfig" xml:space="preserve">
+    <value>Inställningarna har skickats till fjärrvärden</value>
+  </data>
+  <data name="StaffName" xml:space="preserve">
+    <value>Personalnamn</value>
+  </data>
+  <data name="StationIsInUseCannotBeDeleted" xml:space="preserve">
+    <value>Restaurang stationen #1 används av stationsvalsreglerna och kan därför inte raderas</value>
+  </data>
+  <data name="StationRouting" xml:space="preserve">
+    <value>Stationsval</value>
+  </data>
+  <data name="StationRoutingDescription" xml:space="preserve">
+    <value>Använd alterativet för att hantera hur varor skickas till restaurang stationerna</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Butiksinställning</value>
+  </data>
+  <data name="TableNumber" xml:space="preserve">
+    <value>Bordnr</value>
+  </data>
+  <data name="Text1" xml:space="preserve">
+    <value>Text 1</value>
+  </data>
+  <data name="Text2" xml:space="preserve">
+    <value>Text 2</value>
+  </data>
+  <data name="Text3" xml:space="preserve">
+    <value>Text 3</value>
+  </data>
+  <data name="Text4" xml:space="preserve">
+    <value>Text 4</value>
+  </data>
+  <data name="Text5" xml:space="preserve">
+    <value>Text 5</value>
+  </data>
+  <data name="Text6" xml:space="preserve">
+    <value>Text 6</value>
+  </data>
+  <data name="TransactionNumber" xml:space="preserve">
+    <value>Transaktionsnummer</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Alla filer</value>
+  </data>
+  <data name="TextFiles" xml:space="preserve">
+    <value>Textfiler</value>
+  </data>
+  <data name="Hosts" xml:space="preserve">
+    <value>Värdar</value>
+  </data>
+  <data name="HospitalityMenuGroupsTooltip" xml:space="preserve">
+    <value>Välj restaurangkassamenyer för delad nota och överför tabellmenyer</value>
+  </data>
+  <data name="HospitalityPosMenusTooltip" xml:space="preserve">
+    <value>Tilldela knappar kassafunktioner och utforma knappsatser som ska användas i menygrupper för restaurang</value>
+  </data>
+  <data name="HospitalitySetupTooltipDescription" xml:space="preserve">
+    <value>Hantera globala inställningar för restauranger</value>
+  </data>
+  <data name="HospitalityTypesTooltipDescription" xml:space="preserve">
+    <value>Hantera typer av restauranger och motsvarande tabellayouter och funktioner</value>
+  </data>
+  <data name="KitchenPrinting" xml:space="preserve">
+    <value>Köksutskrift</value>
+  </data>
+  <data name="PosMenus" xml:space="preserve">
+    <value>Kassamenyer</value>
+  </data>
+  <data name="RestaurantsTooltipDescription" xml:space="preserve">
+    <value>Öppna listan över restauranger/butiker för att visa och hantera dem</value>
+  </data>
+  <data name="SalesTypesTooltipDescription" xml:space="preserve">
+    <value>Hantera försäljningstyper som ska användas för att tilldela restaurangtyper en momsgrupp och en prisgrupp</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Anläggningar</value>
+  </data>
+  <data name="StationPrinting" xml:space="preserve">
+    <value>Stationsutskrift</value>
+  </data>
+  <data name="StationPrintingDescription" xml:space="preserve">
+    <value>Använd det här alternativet för att hantera stationsutskrift</value>
+  </data>
+  <data name="StationPrintingTooltipDescription" xml:space="preserve">
+    <value>Hantera köksutskriftsstationer och artikeldirigering till stationerna</value>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Du har ökat storleken på kassans knappsatsmeny och det finns utrymme för #1 nya knappsatsrader. Vill du generera nya rader för att fylla det tomma utrymmet ?</value>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Vill du kopiera aktuell stil till knappegenskaper?</value>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Kopiera aktuell stil?</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Utseende och känsla</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Huvudmeny</value>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Menyknappar</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>Ingen åtgärd</value>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>Knappmenyer</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Stil</value>
+  </data>
+</root>

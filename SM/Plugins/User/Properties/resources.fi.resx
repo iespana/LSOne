@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Users" xml:space="preserve">
+    <value>Käyttäjät</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Vaihda salasana</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Käyttöoikeudet</value>
+  </data>
+  <data name="RemoveFromGroup" xml:space="preserve">
+    <value>Poista ryhmästä</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Turvallisuus</value>
+  </data>
+  <data name="UserGroups" xml:space="preserve">
+    <value>Käyttäjäryhmät</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Käyttäjä</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Poista käyttäjä</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="UserInformation" xml:space="preserve">
+    <value>Käyttäjän tiedot</value>
+  </data>
+  <data name="UserPermissions" xml:space="preserve">
+    <value>Käyttöoikeudet</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="AddToGroup" xml:space="preserve">
+    <value>Lisää ryhmään</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Todennus:</value>
+  </data>
+  <data name="AuthenticationTokens" xml:space="preserve">
+    <value>Autentikointitunnukset</value>
+  </data>
+  <data name="ConfirmPasswordMustMatch" xml:space="preserve">
+    <value>Vahvistetun salasanan on vastattava salasanaa.</value>
+  </data>
+  <data name="CopyUserError" xml:space="preserve">
+    <value>Sinulla ei ole oikeuksia luoda käyttäjää valitun mukaiseen rooliin</value>
+  </data>
+  <data name="DeleteAuthenticationToken" xml:space="preserve">
+    <value>Poista autentikointitunnus</value>
+  </data>
+  <data name="DeleteAuthenticationTokenQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut autentikointitunnukset?</value>
+  </data>
+  <data name="DeleteAuthenticationTokens" xml:space="preserve">
+    <value>Poista autentikointitunnukset</value>
+  </data>
+  <data name="DeleteAuthenticationTokensQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut autentikointitunnukset?</value>
+  </data>
+  <data name="DeleteUserGroup" xml:space="preserve">
+    <value>Poista käyttäjäryhmä</value>
+  </data>
+  <data name="DeleteUserGroupQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun käyttäjäryhmän?</value>
+  </data>
+  <data name="DeleteUserQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun käyttäjän?</value>
+  </data>
+  <data name="DeletingAllAdmins" xml:space="preserve">
+    <value>Yrität poistaa viimeisen käyttäjän ryhmästä #1. Tämä voi aiheuttaa epävakautta. Oletko varma, että haluat poistaa tämän käyttäjän ryhmästä #1?</value>
+  </data>
+  <data name="DeletingAllAdminsQuestion" xml:space="preserve">
+    <value>Yrität poistaa viimeisen käyttäjän ryhmästä #1. Tämä voi aiheuttaa epävakautta. Oletko varma, että haluat poistaa tämän käyttäjän ryhmästä #1?</value>
+  </data>
+  <data name="Denied" xml:space="preserve">
+    <value>Estetty</value>
+  </data>
+  <data name="DeniedFromGroups" xml:space="preserve">
+    <value>Estetty ryhmistä</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Poistettu käytöstä</value>
+  </data>
+  <data name="DisableLogin" xml:space="preserve">
+    <value>Estä kirjautuminen</value>
+  </data>
+  <data name="DoNotCopyExistingGroup" xml:space="preserve">
+    <value>Älä kopioi olemassa olevaa ryhmää</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Muokkaa käyttäjää</value>
+  </data>
+  <data name="EditUserGroup" xml:space="preserve">
+    <value>Muokkaa käyttäjäryhmää</value>
+  </data>
+  <data name="EditUserGroupCaption" xml:space="preserve">
+    <value>Muokkaa käyttäjäryhmän nimeä</value>
+  </data>
+  <data name="EditUserProfile" xml:space="preserve">
+    <value>Muokkaa käyttäjäprofiilia</value>
+  </data>
+  <data name="EmailNotValid" xml:space="preserve">
+    <value>Sähköpostiosoite ei kelpaa</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Käytössä:</value>
+  </data>
+  <data name="EnableLogin" xml:space="preserve">
+    <value>Salli sisäänkirjaus</value>
+  </data>
+  <data name="FirstAndLastMustHaveOneLetter" xml:space="preserve">
+    <value>Etunimessä tai sukunimessä on oltava vähintään yksi kirjain.</value>
+  </data>
+  <data name="Granted" xml:space="preserve">
+    <value>Myönnetty</value>
+  </data>
+  <data name="GrantedFromGroups" xml:space="preserve">
+    <value>Myönnetty ryhmistä</value>
+  </data>
+  <data name="GroupPermissions" xml:space="preserve">
+    <value>Ryhmäluvat</value>
+  </data>
+  <data name="LinkToPOSUser" xml:space="preserve">
+    <value>Linkitä POS-käyttäjään</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Sisäänkirjaus</value>
+  </data>
+  <data name="ManageUserGroups" xml:space="preserve">
+    <value>Hallitse käyttäjäryhmiä</value>
+  </data>
+  <data name="MigrateUsers" xml:space="preserve">
+    <value>Muunna käyttäjät</value>
+  </data>
+  <data name="NameOnReceipt" xml:space="preserve">
+    <value>Nimi kuitilla:</value>
+  </data>
+  <data name="NeedsToBeSelected" xml:space="preserve">
+    <value>Ryhmä on valittava siirtääksesi POS-käyttäjiä</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Uusi</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>Uusi käyttäjä</value>
+  </data>
+  <data name="NewUserDescription" xml:space="preserve">
+    <value>Tämän valinnan avulla voit luoda uuden käyttäjän</value>
+  </data>
+  <data name="NewUserGroup" xml:space="preserve">
+    <value>Uusi käyttäjäryhmä</value>
+  </data>
+  <data name="NewUserGroupCaption" xml:space="preserve">
+    <value>Anna uuden käyttäjäryhmän nimi</value>
+  </data>
+  <data name="NewUserGroupDescription" xml:space="preserve">
+    <value>Tämän valinnan avulla voit luoda uuden käyttäjäryhmän</value>
+  </data>
+  <data name="NewUserGroupTooltipDescription" xml:space="preserve">
+    <value>Luo uusi käyttäjäryhmä</value>
+  </data>
+  <data name="NewUserTooltipDescription" xml:space="preserve">
+    <value>Luo uusi käyttäjä</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Ei yhtään</value>
+  </data>
+  <data name="NoPermissionToEditUser" xml:space="preserve">
+    <value>Sinulla ei ole lupaa muokata käyttäjää.</value>
+  </data>
+  <data name="NoPOSUsersExist" xml:space="preserve">
+    <value>Ei muunnettavia POS-käyttäjiä</value>
+  </data>
+  <data name="NothingToMigrate" xml:space="preserve">
+    <value>Yhtään Site Manager -käyttäjää tai POS-käyttäjää ei tarvitse muuntaa</value>
+  </data>
+  <data name="NoUsersExist" xml:space="preserve">
+    <value>Yhtään Site Manager -käyttäjää ei tarvitse muuntaa</value>
+  </data>
+  <data name="OneUserIsLockedOut" xml:space="preserve">
+    <value>1 käyttäjä on lukittuna monien epäonnistuneiden kirjautumisyritysten vuoksi</value>
+  </data>
+  <data name="OnlyAdminSetUp" xml:space="preserve">
+    <value>Vain järjestelmänvalvojakäyttäjä on perustettu</value>
+  </data>
+  <data name="PasswordHasTobe4Letters" xml:space="preserve">
+    <value>Salasanassa on oltava vähintään 4 merkkiä</value>
+  </data>
+  <data name="PermissionAssignment" xml:space="preserve">
+    <value>Käyttöoikeuden linkittäminen</value>
+  </data>
+  <data name="POSuser" xml:space="preserve">
+    <value>Kassakäyttäjä:</value>
+  </data>
+  <data name="POSUsersMigrated" xml:space="preserve">
+    <value>Valitut POS-käyttäjät on muunnettu valittuihin käyttäjäryhmiin</value>
+  </data>
+  <data name="POSUsersNotMigrated" xml:space="preserve">
+    <value>Yhtään POS-käyttäjää ei muunnettu</value>
+  </data>
+  <data name="RevertConditions" xml:space="preserve">
+    <value>Huomaa, että ryhmiä ja käyttöoikeuksia ei voida palauttaa</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Haku</value>
+  </data>
+  <data name="SearchForUser" xml:space="preserve">
+    <value>Etsi käyttäjää</value>
+  </data>
+  <data name="SecurityRolesWarning" xml:space="preserve">
+    <value>Huomaa, että käyttöoikeusrooleja ei täysin kloonattu, koska sinulla ei ollut oikeuksia kaikkiin tarvittaviin rooleihin</value>
+  </data>
+  <data name="TokenAlreadyExists" xml:space="preserve">
+    <value>Tämä tunniste-ID on jo olemassa</value>
+  </data>
+  <data name="TokenPresetDescription" xml:space="preserve">
+    <value>Tunniste #1</value>
+  </data>
+  <data name="UnlinkPOSUser" xml:space="preserve">
+    <value>Poista liitos POS-käyttäjään</value>
+  </data>
+  <data name="UnlinkPOSUserQuestion" xml:space="preserve">
+    <value>Oletko varma, että haluat poistaa liitoksen valitulta käyttäjältä sen POS-käyttäjään?</value>
+  </data>
+  <data name="UserGroupsNew" xml:space="preserve">
+    <value>Uusi</value>
+  </data>
+  <data name="UserGroupsTooltipDescription" xml:space="preserve">
+    <value>Luo uusi käyttäjäryhmä</value>
+  </data>
+  <data name="UserGroupsViews" xml:space="preserve">
+    <value>Näytä ryhmät</value>
+  </data>
+  <data name="UserLogins" xml:space="preserve">
+    <value>Käyttäjän sisäänkirjautumistiedot</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>Käyttäjien hallinta</value>
+  </data>
+  <data name="UserMigrated" xml:space="preserve">
+    <value>Valitut Site Manager käyttäjät on muunnettu</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Käyttäjänimi</value>
+  </data>
+  <data name="UserNameHasTobe2Letters" xml:space="preserve">
+    <value>Käyttäjänimessä tulee olla vähintään 2 kirjainta.</value>
+  </data>
+  <data name="UserNotMigrated" xml:space="preserve">
+    <value>Yhtään Site Manager -käyttäjää ei muunnettu</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Käyttäjäprofiili:</value>
+  </data>
+  <data name="UserSearchTooltip" xml:space="preserve">
+    <value>Kirjoita käyttäjänimi käyttäjän etsimiseksi</value>
+  </data>
+  <data name="UsersInGroup" xml:space="preserve">
+    <value>Ryhmän käyttäjät</value>
+  </data>
+  <data name="UsersManage" xml:space="preserve">
+    <value>Hallitse</value>
+  </data>
+  <data name="UsersNew" xml:space="preserve">
+    <value>Uusi</value>
+  </data>
+  <data name="UsersTooltipDescription" xml:space="preserve">
+    <value>Avaa käyttäjäluettelo käyttäjien tarkastelemiseksi ja hallinnoimiseksi</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>Näytä kaikki</value>
+  </data>
+  <data name="ViewAllUsers" xml:space="preserve">
+    <value>Näytä kaikki käyttäjät</value>
+  </data>
+  <data name="ViewAllUsersDescription" xml:space="preserve">
+    <value>Tämän valinnan avulla voit etsiä kaikkia käyttäjiä</value>
+  </data>
+  <data name="ViewPOSUser" xml:space="preserve">
+    <value>Näytä POS-käyttäjä</value>
+  </data>
+  <data name="ViewUserGroups" xml:space="preserve">
+    <value>Näytä käyttäjäryhmät</value>
+  </data>
+  <data name="ViewUserGroupsDescription" xml:space="preserve">
+    <value>Tämän valinnan avulla voit tarkastella käyttäjäryhmiä</value>
+  </data>
+  <data name="WarningTitle" xml:space="preserve">
+    <value>Varoitus</value>
+  </data>
+  <data name="XUsersAreLockedOut" xml:space="preserve">
+    <value>#1 käyttäjät on lukittu liian monen epäonnistuneen sisäänkirjautumisen takia</value>
+  </data>
+  <data name="XUsersHaveBeenSetUp" xml:space="preserve">
+    <value>#1 käyttäjää on perustettu</value>
+  </data>
+</root>

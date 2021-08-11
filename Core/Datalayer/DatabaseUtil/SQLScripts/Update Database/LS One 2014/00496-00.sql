@@ -1,0 +1,22 @@
+﻿
+/*
+
+	Incident No.	: N/A
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: LS One 2014 - Nimbo
+	Date created	: 20.1.2014
+
+	Description		: Adds a field to the PosTransactionProfile table
+	
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSTRANSACTIONSERVICEPROFILE' AND COLUMN_NAME = 'CENTRALRETURNLOOKUP') 
+BEGIN
+	ALTER TABLE dbo.POSTRANSACTIONSERVICEPROFILE ADD CENTRALRETURNLOOKUP int NULL
+END
+GO
+

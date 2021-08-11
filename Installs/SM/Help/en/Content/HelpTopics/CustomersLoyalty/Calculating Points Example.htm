@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Customers and Loyalty|Loyalty Schemes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Calculating Points Example</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/CustomersLoyalty/Calculating Points Example.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Calculating Points Example</h1>
+        <p>&#160;</p>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note"><a name="kanchor37"></a>The loyalty item lines are independent from each other, so one loyalty card can accrue and spend points (if the card type is Card Tender or Contact Type).<br /></p>
+        </div>
+        <h2>Loyalty Scheme Rules:</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+            <col class="TableStyle-FieldStyles-Column-Column1" style="width: 46px;" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-FieldStyles-Head-Header1">
+                    <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">No.</th>
+                    <th class="TableStyle-FieldStyles-HeadF-Column2-Header1">Calculation type</th>
+                    <th class="TableStyle-FieldStyles-HeadF-Column2-Header1">Type name</th>
+                    <th class="TableStyle-FieldStyles-HeadF-Column2-Header1">Quantity/Amount</th>
+                    <th class="TableStyle-FieldStyles-HeadF-Column2-Header1">Multiplier type</th>
+                    <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Loyalty points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">1</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Tender</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Credit Card</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">1</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">Amount</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1" style="text-align: center;">1</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">2</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Retail Group</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Meat</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">20</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">Amount</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1" style="text-align: center;">10</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">3</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Retail Group</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Clothes</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">2</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">Quantity</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1" style="text-align: center;">20</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">4</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Item</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">551000</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">100</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">Amount</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1" style="text-align: center;">10</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">5</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">Item</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1">551000</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">5</td>
+                    <td class="TableStyle-FieldStyles-BodyI-Column2-Body1" style="text-align: center;">Quantity</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1" style="text-align: center;">10</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">6</td>
+                    <td class="TableStyle-FieldStyles-BodyC-Column2-Body1">Tender</td>
+                    <td class="TableStyle-FieldStyles-BodyC-Column2-Body1">Loyalty Card</td>
+                    <td class="TableStyle-FieldStyles-BodyC-Column2-Body1" style="text-align: center;">1</td>
+                    <td class="TableStyle-FieldStyles-BodyC-Column2-Body1" style="text-align: center;">Amount</td>
+                    <td class="TableStyle-FieldStyles-BodyA-Column2-Body1" style="text-align: center;">10*</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>* used as payment/subtraction from total in POS calculation</p>
+        <p><b>Results:</b>
+        </p>
+        <p>1.	For every $1 paid by credit card, the customer accrues 1 loyalty point.</p>
+        <p>2.	For every $20 spent on items in the Retail Group: Meat the customer accrues 10 loyalty points.</p>
+        <p>3.	For every 2 items purchased in the Retail Group: Clothes the customer accrues 20 loyalty points.</p>
+        <p>4.	When a customer spends $100 on item 55100 the customer accrues 10 points, if the customer spends $200 on these items, they would accrue 20 points, however, if they spend $150, they would only accrue 10 points.</p>
+        <p>5.	When a customer purchases 5 of the item 55100, they accrue 10 points.</p>
+        <p>6.	When paying with a loyalty card, for every $1, 10 points are used</p>
+        <h2>See also</h2>
+        <p><a href="Loyalty Scheme Rules.htm">Loyalty Scheme Rules</a>
+        </p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Reviewed:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">25<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="UpdateInfo.2013_2" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Field help|Customer Loyalty">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Loyalty Scheme Rule Dialog</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#FieldHelp/CustomerLoyalty/LoyaltySchemeRuleDialog.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Loyalty Scheme Rule Dialog</h1>
+        <p class="SystemPath">Retail &gt; Loyalty &gt; Loyalty schemes &gt;&#160;Click on loyalty scheme &gt;&#160;Select Add/Edit button in loyalty scheme rules section (lower pane)</p>
+        <h2>What is the dialog used for?</h2>
+        <ul>
+            <li value="1">Create or edit a loyalty scheme rule. </li>
+            <li value="2">A loyalty scheme can have many different rules, and they are ordered within the scheme in a hierarchy:<ul><li value="1"><a name="kanchor193"></a>Item</li><li value="2">Retail group</li><li value="3">Retail department</li><li value="4">Tender</li></ul></li>
+            <li value="3">When accruing points only one of the rules will work for each sales line of the transaction. </li>
+        </ul>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+            <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-FieldStyles-Head-Header1">
+                    <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                    <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Calculation type</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">Select the way in which the rule is defined:</p>
+                        <ul>
+                            <li class="table" value="1"><b>Item</b> - The rule applies to a single item, single variant item or a header item which includes all variants of the item. Buy this item to collect certain amount of points. </li>
+                            <li class="table" value="2"><b>Retail group</b> - The rule applies to all items in a retail group. </li>
+                            <li class="table" value="3"><b>Retail department</b> - The rule applies to all items in a retail department. </li>
+                            <li class="table" value="4"><b>Tender</b> - If the selected tender type is the Loyalty tender type then the rule is a point reduction rule but if you set up a rule for cash for an example then the rule is to accrue points. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Type relation</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">Select a type relation, this is connected to the calculation type. For example, if you select ITEM, the type relation list will be all items, TENDER will show all tender types available.</p>
+                        <p class="table"><span class="Note">Note:</span>Tender can also be used with Type relation: Loyalty Card Payment which is used to spend points. The card type must be set to <u>Card tender </u>or<u> Contact tender</u> for “Loyalty Card Payment” to work on the POS. This can be seen and edited in the <a href="LoyaltyCardsView.htm">Loyalty Cards view.</a></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Starting date</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select a starting date for the rule. Deselect the check box if there is not a starting date.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Ending date</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select an ending date for the rule. Deselect the check box if there is not an ending date.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Quantity/Amount</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">Enter/edit the quantity of items or amount of tender that needs to be bought/used in the transaction to accrue/spend loyalty points. </p>
+                        <p class="table"><span class="Note">Note:</span>&#160;Tender is used for the multiplier type “Amount”. This means that the loyalty points are calculated based on the amount spent in a transaction. For example, if $20 are spent (Quantity/Amount field), the customer gains 2 points (Loyalty points field).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Multiplier type</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Quantity (of items, either as stand-alone items, or items in a retail group or department) or Amounts which can either be used to accrue points through tender payment or spend them with Loyalty Card Payment. </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Loyalty points</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">Number of loyalty points accrued or spent in the rule. </p>
+                        <p class="table"><span class="Note">Note:</span>&#160;Like for like rule:&#160;If quantity is set to 5 and loyalty points to 5, there must be 5 in quantity to gain 5 points, if there are 9 in quantity, the customer will still only gain 5 points, if there are 10 or 12, they will gain 10 points. </p>
+                        <p class="table"><span class="Note">Note:</span>&#160;(!) symbol: hover mouse over this symbol to see the message: “Rules that have tender with the action Pay Loyalty will convert the point value to a negative value in the POS calculations when they are used for payment.” </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Edit.png" />&#160;Create another</td>
+                    <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Select this button to save this loyalty scheme rule and open a new loyalty scheme rule dialog.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="LoyaltySchemeDialog.htm">Loyalty scheme dialog</a>
+            </li>
+            <li style="font-weight: bold;" value="2"><a href="../../HelpTopics/CustomersLoyalty/Loyalty Schemes.htm">Loyalty Schemes</a>
+            </li>
+            <li style="font-weight: bold;" value="3"><a href="../../HelpTopics/CustomersLoyalty/Loyalty Scheme Rules.htm">Loyalty Scheme Rules</a>
+            </li>
+            <li style="font-weight: bold;" value="4"><a href="../../HelpTopics/CustomersLoyalty/Calculating Points Example.htm">Calculating points in Loyalty</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">28<span class="sup">th</span> November 2013</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2013.2</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

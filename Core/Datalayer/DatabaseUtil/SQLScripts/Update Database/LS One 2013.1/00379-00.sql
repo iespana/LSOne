@@ -1,0 +1,27 @@
+﻿/*
+
+	Responsible		: Björn Eiríksson
+	Sprint			: -
+	Date created	: 1.7.2013
+
+	Description		: Adds indexes to replenishment tables
+	
+*/
+
+USE LSPOSNET
+
+GO
+
+if not Exists(SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ITEMREPLENISHMENTSETTING]') AND name = N'IX_ITEMREPLENISHMENTSETTING_ITEMID')
+begin
+	CREATE INDEX IX_ITEMREPLENISHMENTSETTING_ITEMID
+	ON dbo.ITEMREPLENISHMENTSETTING (ITEMID)
+end
+
+if not Exists(SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[ITEMREPLENISHMENTSETTING]') AND name = N'IX_ITEMREPLENISHMENTSETTING_STOREID')
+begin
+	CREATE INDEX IX_ITEMREPLENISHMENTSETTING_STOREID
+	ON dbo.ITEMREPLENISHMENTSETTING (STOREID)
+end
+
+GO

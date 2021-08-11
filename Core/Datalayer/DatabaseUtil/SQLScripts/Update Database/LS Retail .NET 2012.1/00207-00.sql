@@ -1,0 +1,25 @@
+﻿/*
+
+	Incident No.	: 17492
+	Responsible		: Sigfús Jóhannesson
+	Sprint			: LS Retail .NET 2013\Mercury
+	Date created	: 02.07.2012
+
+	Description		: Increasing the field size of KEYBOARDMAPPINGID
+	
+	
+	Tables affected	: POSHARDWAREPROFILE
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+IF((SELECT [CHARACTER_MAXIMUM_LENGTH] FROM [INFORMATION_SCHEMA].[COLUMNS] WHERE [TABLE_NAME] = 'POSHARDWAREPROFILE' AND [COLUMN_NAME] = 'KEYBOARDMAPPINGID') <= 10)
+BEGIN
+
+ALTER TABLE [dbo].[POSHARDWAREPROFILE]
+ALTER COLUMN [KEYBOARDMAPPINGID] NVARCHAR(20)
+
+END

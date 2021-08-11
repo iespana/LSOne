@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Cộng thêm</value>
+  </data>
+  <data name="AddMappingToProfile" xml:space="preserve">
+    <value>Vui lòng bổ sung tham chiếu đến hồ sơ</value>
+  </data>
+  <data name="AlwaysPrint" xml:space="preserve">
+    <value>Luôn in</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Đầu đọc mã vạch</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Bộ đọc thẻ (thiết bị đọc dữ kiện được xử lý bằng máy tính)</value>
+  </data>
+  <data name="CashChanger" xml:space="preserve">
+    <value>Đổi tiền mặt</value>
+  </data>
+  <data name="Context" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="Contexts" xml:space="preserve">
+    <value>Bối cảnh</value>
+  </data>
+  <data name="ContextsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa nội dung được sử dụng trong giao diện</value>
+  </data>
+  <data name="ContextUsedInProfileCannotBeDeleted" xml:space="preserve">
+    <value>Một số hoặc tất cả các nội dung được chọn được sử dụng trong giao diện hồ sơ và không thể xóa</value>
+  </data>
+  <data name="CreditCardService" xml:space="preserve">
+    <value>Dịch vụ thẻ tín dụng</value>
+  </data>
+  <data name="CSVFieldBarcode" xml:space="preserve">
+    <value>Mã vạch</value>
+  </data>
+  <data name="CSVFieldCounted" xml:space="preserve">
+    <value>Số lượng kiểm đếm:</value>
+  </data>
+  <data name="CSVFieldDescription" xml:space="preserve">
+    <value>Mô tả:</value>
+  </data>
+  <data name="CSVFieldItemId" xml:space="preserve">
+    <value>Mã số mặt hàng</value>
+  </data>
+  <data name="CSVFieldSerialNumber" xml:space="preserve">
+    <value>Phiên bản số:</value>
+  </data>
+  <data name="CSVFieldSerialType" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="CSVFieldTypeDecimal" xml:space="preserve">
+    <value>thập phân</value>
+  </data>
+  <data name="CSVFieldTypeInteger" xml:space="preserve">
+    <value>số nguyên</value>
+  </data>
+  <data name="CSVFieldTypeString" xml:space="preserve">
+    <value>chuỗi</value>
+  </data>
+  <data name="CSVFieldUnitId" xml:space="preserve">
+    <value>ID đơn vị</value>
+  </data>
+  <data name="CSVImportProfile" xml:space="preserve">
+    <value>Hồ sơ nhập CSV</value>
+  </data>
+  <data name="CSVImportProfiles" xml:space="preserve">
+    <value>Hồ sơ nhập CSV</value>
+  </data>
+  <data name="CSVImportProfilesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa hồ sơ kết nhập cho tệp csv</value>
+  </data>
+  <data name="CSVImportProfilesTooltipDescription" xml:space="preserve">
+    <value>Quản lý tệp CSV để xác định cách thức các dòng kiểm kê và số serila được kết nhập từ tệp CSV</value>
+  </data>
+  <data name="CSVImportTypeStockCounting" xml:space="preserve">
+    <value>Kiểm kê
+</value>
+  </data>
+  <data name="CSVMappingNotSet" xml:space="preserve">
+    <value>Tệp CSV không thể đặt làm cấu hình mặc định vì nó không có dòng mapping</value>
+  </data>
+  <data name="DallasKey" xml:space="preserve">
+    <value>Chìa khóa Dallas</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DeleteContextQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa nội dung đã lựa chọn?</value>
+  </data>
+  <data name="DeleteCSVImportProfile" xml:space="preserve">
+    <value>Xóa tệp kêt nhập CSV</value>
+  </data>
+  <data name="DeleteCSVImportProfileLine" xml:space="preserve">
+    <value>Xóa dòng của tệp kết nhập CSV</value>
+  </data>
+  <data name="DeleteCSVImportProfileLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng tệp kết nhập CSV đã chọn không?</value>
+  </data>
+  <data name="DeleteCSVImportProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng tệp kết nhập CSV đã chọn không?</value>
+  </data>
+  <data name="DeleteFormProfile" xml:space="preserve">
+    <value>Xóa hồ sơ mẫu</value>
+  </data>
+  <data name="DeleteFormProfileLine" xml:space="preserve">
+    <value>Xóa dòng hồ sơ mẫu</value>
+  </data>
+  <data name="DeleteFormProfileLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng Dòng hồ sơ đã lựa chọn?</value>
+  </data>
+  <data name="DeleteFormProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hồ sơ mẫu đã chọn?</value>
+  </data>
+  <data name="DeleteFuncProfile" xml:space="preserve">
+    <value>Xóa hồ sơ chức năng</value>
+  </data>
+  <data name="DeleteFuncProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hồ sơ chức năng đã chọn?</value>
+  </data>
+  <data name="DeleteHardwareProfile" xml:space="preserve">
+    <value>Xóa hồ sơ phần cứng</value>
+  </data>
+  <data name="DeleteHardwareProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng phần cứng hồ sơ?</value>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Xóa hồ sơ trực quan</value>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hồ sơ trực quan đã chọn?</value>
+  </data>
+  <data name="DeleteStyleProfile" xml:space="preserve">
+    <value>Xóa giao diện hồ sơ</value>
+  </data>
+  <data name="DeleteStyleProfileLine" xml:space="preserve">
+    <value>Xóa dòng giao diện hồ sơ</value>
+  </data>
+  <data name="DeleteStyleProfileLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng hồ sơ giao diện đã lựa chọn?</value>
+  </data>
+  <data name="DeleteStyleProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng giao diện?</value>
+  </data>
+  <data name="DeleteUserProfile" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng Hồ sơ người dùng?</value>
+  </data>
+  <data name="DeleteUserProfileCaption" xml:space="preserve">
+    <value>Xóa (các) hồ sơ người dùng</value>
+  </data>
+  <data name="DeleteUserProfiles" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hồ sơ người dùng đã chọn?</value>
+  </data>
+  <data name="DeleteUserProfilesInUse" xml:space="preserve">
+    <value>Một số hồ sơ người dùng đã chọn đang được sử dụng và không thể xóa. Bạn có muốn tiếp tục?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả:</value>
+  </data>
+  <data name="DiscountSettings" xml:space="preserve">
+    <value>Cài đặt chiết khấu</value>
+  </data>
+  <data name="DoNotCopyUserProfile" xml:space="preserve">
+    <value>Không sao chép hồ sơ người dùng hiện có</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Ngăn kéo</value>
+  </data>
+  <data name="DualDisplay" xml:space="preserve">
+    <value>Màn hình kép</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="EditContext" xml:space="preserve">
+    <value>Chỉnh sửa nội dung</value>
+  </data>
+  <data name="EditLayout" xml:space="preserve">
+    <value>Sửa giao diện</value>
+  </data>
+  <data name="EditStore" xml:space="preserve">
+    <value>Sửa cửa hàng</value>
+  </data>
+  <data name="EditStyleProfileLine" xml:space="preserve">
+    <value>Chỉnh sửa hồ sơ</value>
+  </data>
+  <data name="EditVisualProfile" xml:space="preserve">
+    <value>Chỉnh sửa hồ sơ trực quan</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Không tìm thấy danh sách thiết bị tại máy chủ {0}, kiểm tra xem dịch vụ trạm in có chạy ở máy chủ không và đã cài đặt máy in chưa</value>
+  </data>
+  <data name="FiscalPrinter" xml:space="preserve">
+    <value>Máy in tài chính</value>
+  </data>
+  <data name="ForecourtManager" xml:space="preserve">
+    <value>Quản lý Forcourt</value>
+  </data>
+  <data name="FormLayouts" xml:space="preserve">
+    <value>Bố cục</value>
+  </data>
+  <data name="FormLayoutsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa bố cục biểu mẫu</value>
+  </data>
+  <data name="FormProfileDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa hồ sơ biểu mẫu</value>
+  </data>
+  <data name="FormProfiles" xml:space="preserve">
+    <value>Hồ sơ</value>
+  </data>
+  <data name="FormProfilesTooltipDescription" xml:space="preserve">
+    <value>Sắp xếp bố cục biểu mẫu của hồ sơ để có thể sử dụng các bản in khác nhau tại các cửa hàng khác nhau</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Biểu mẫu</value>
+  </data>
+  <data name="FunctionalityProfile" xml:space="preserve">
+    <value>Hồ sơ chức năng</value>
+  </data>
+  <data name="FunctionalityProfiles" xml:space="preserve">
+    <value>Hồ sơ chức năng</value>
+  </data>
+  <data name="FunctionalityProfilesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa hồ sơ chức năng</value>
+  </data>
+  <data name="FunctionalityProfilesRibbon" xml:space="preserve">
+    <value>Chức năng</value>
+  </data>
+  <data name="FunctionalityProfilesTooltipDescription" xml:space="preserve">
+    <value>Quản lý hồ sơ chức năng bao gồm các cài đặt khác nhau cho quầy thanh toán</value>
+  </data>
+  <data name="HardwareProfile" xml:space="preserve">
+    <value>Hồ sơ phần cứng</value>
+  </data>
+  <data name="HardwareProfiles" xml:space="preserve">
+    <value>Hồ sơ phần cứng</value>
+  </data>
+  <data name="HardwareProfilesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa hồ sơ phần cứng</value>
+  </data>
+  <data name="HardwareProfilesRibbon" xml:space="preserve">
+    <value>Phần cứng</value>
+  </data>
+  <data name="HardwareProfilesTooltipDescription" xml:space="preserve">
+    <value>Quản lý hồ sơ phần cứng để kết nối các quầy thu ngân với các thiết bị ngoại vi khác nhau như máy in hóa đơn và ngăn kéo đựng tiền</value>
+  </data>
+  <data name="ImageDirectory" xml:space="preserve">
+    <value>Chọn một thư mục chứa các hình ảnh</value>
+  </data>
+  <data name="InsertDefaultData" xml:space="preserve">
+    <value>"Chèn dữ liệu mặc định"</value>
+  </data>
+  <data name="IsSystemStyle" xml:space="preserve">
+    <value>Có</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Mặt hàng</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Mã khóa</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Mã ngôn ngữ</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Bố cục:</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Dòng hiển thị</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Xem và cảm nhận</value>
+  </data>
+  <data name="NeverPrint" xml:space="preserve">
+    <value>Không bao giờ in</value>
+  </data>
+  <data name="NewContext" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="NewStyleProfileLine" xml:space="preserve">
+    <value>Hồ sơ mới</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="NoBarCodeReaderSelected" xml:space="preserve">
+    <value>Không có đầu đọc mã vạch nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoCardReaderSelected" xml:space="preserve">
+    <value>Không có đầu đọc thẻ nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoDrawerSelected" xml:space="preserve">
+    <value>Không có ngăn kéo nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoFolderLocationSelected" xml:space="preserve">
+    <value>Không có vị trí thư mục được chọn cho máy in windows</value>
+  </data>
+  <data name="NoKeySelected" xml:space="preserve">
+    <value>Không có khóa chính nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoLineDisplaySelected" xml:space="preserve">
+    <value>Không có dòng hiển thị nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoLinesForDefaultProfile" xml:space="preserve">
+    <value>Không thể đặt cấu hình CSV làm cấu hình mặc định vì nó không có dòng mapping. Vui lòng thêm mâpping vào hồ sơ.</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Không có máy in nào được chọn, không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoScaleSelected" xml:space="preserve">
+    <value>Không có cân nào nào được chọn, có thể không thể khởi động LS One POS bằng các cài đặt này.</value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>Không có sự lựa chọn nào</value>
+  </data>
+  <data name="OneTypePerProfile" xml:space="preserve">
+    <value>Chỉ có thể có một phiên bản của mỗi loại cho mỗi hồ sơ</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Máy in</value>
+  </data>
+  <data name="ProfileManagement" xml:space="preserve">
+    <value>Quản lí hồ sơ</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Hồ sơ</value>
+  </data>
+  <data name="PromptUser" xml:space="preserve">
+    <value>Nhắc người dùng</value>
+  </data>
+  <data name="PumpConnection" xml:space="preserve">
+    <value>Kết nối nhanh</value>
+  </data>
+  <data name="ReceiptData" xml:space="preserve">
+    <value>"Nhận dữ liệu"</value>
+  </data>
+  <data name="Related_CSVProfiles" xml:space="preserve">
+    <value>Tệp CSV</value>
+  </data>
+  <data name="Related_ResetDefaultProfile" xml:space="preserve">
+    <value>Đặt lại hồ sơ mặc định</value>
+  </data>
+  <data name="RemoveUserFromUserProfile" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa (các) người dùng đã chọn khỏi hồ sơ này không?</value>
+  </data>
+  <data name="Replication" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="ResetDefaultProfileHeader" xml:space="preserve">
+    <value>Đặt lại hồ sơ mẫu</value>
+  </data>
+  <data name="ResetDefaultProfileQuestion" xml:space="preserve">
+    <value>Điều này sẽ ghi đè bất kỳ thay đổi nào được thực hiện trong biêu mẫu ở biểu mẫu mặc định. Bạn có chắc chắn muốn tiếp tục?</value>
+  </data>
+  <data name="RFIDReader" xml:space="preserve">
+    <value>Đầu đọc RFID</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Cân</value>
+  </data>
+  <data name="SelectFolderLocation" xml:space="preserve">
+    <value>Chọn vị trí thư mục</value>
+  </data>
+  <data name="SelectLayoutHeaderText" xml:space="preserve">
+    <value>Chọn một biểu mẫu cho hồ sơ người dùng</value>
+  </data>
+  <data name="SelectLayoutLabel" xml:space="preserve">
+    <value>Bố cục:</value>
+  </data>
+  <data name="SelectStoreHeaderText" xml:space="preserve">
+    <value>Chọn một cửa hàng cho hồ sơ người dùng</value>
+  </data>
+  <data name="SelectStoreLabel" xml:space="preserve">
+    <value>Cửa hàng</value>
+  </data>
+  <data name="SelectVisualProfileHeaderText" xml:space="preserve">
+    <value>Chọn một hồ sơ trực quan cho hồ sơ người dùng</value>
+  </data>
+  <data name="SelectVisualProfileLabel" xml:space="preserve">
+    <value>Hồ sơ trực quan</value>
+  </data>
+  <data name="SetDefaultCSVImportProfile" xml:space="preserve">
+    <value>Đặt làm mặc định</value>
+  </data>
+  <data name="SetDefaultCSVImportProfileQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn chọn khấu hình vừa kết nhập đã chọn làm mặc định?</value>
+  </data>
+  <data name="ShowPreview" xml:space="preserve">
+    <value>Hiển thị xem trước</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Websites</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="StartOfDay" xml:space="preserve">
+    <value>Bắt đầu cuả ngày hôm nay</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Kho hàng</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Cửa hàng</value>
+  </data>
+  <data name="StoreDefault" xml:space="preserve">
+    <value>Cửa hàng mặc định</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Thiết lập cửa hàng</value>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Giao diện hồ sơ</value>
+  </data>
+  <data name="StyleProfileDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa giao diện hồ sơ</value>
+  </data>
+  <data name="StyleProfileLineAlreadyExists" xml:space="preserve">
+    <value>Sự kết hợp giao diện hồ sơ này đã tồn tại và không thể được lưu.</value>
+  </data>
+  <data name="StyleProfileLines" xml:space="preserve">
+    <value>Dòng giao diện hồ sơ</value>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Giao diện hồ sơ</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Các kiểu</value>
+  </data>
+  <data name="SurveillanceCamera" xml:space="preserve">
+    <value>Camera giám sát</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Thiết bị đầu cuối</value>
+  </data>
+  <data name="TheFolderSelectedDoesNotExist" xml:space="preserve">
+    <value>Thư mục {0} không tồn tại. Vui lòng chọn một thư mục đã tồn tại.</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Hồ sơ người dùng:</value>
+  </data>
+  <data name="UserProfiles" xml:space="preserve">
+    <value>Thông tin người dùng</value>
+  </data>
+  <data name="UserProfilesInUse" xml:space="preserve">
+    <value>Tất cả các cấu hình đã chọn đang được sử dụng và không thể xóa.</value>
+  </data>
+  <data name="UserProfilesTooltipDescription" xml:space="preserve">
+    <value>Xem và quản lý hồ sơ người dùng</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Hồ sơ trực quan</value>
+  </data>
+  <data name="VisualProfileDefaultScreenResolution" xml:space="preserve">
+    <value>Độ phân giải màn hình mặc định</value>
+  </data>
+  <data name="VisualProfileRibbon" xml:space="preserve">
+    <value>Trực quan</value>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Hồ sơ trực quan</value>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa hồ sơ trực quan</value>
+  </data>
+  <data name="VisualProfilesTooltipDescription" xml:space="preserve">
+    <value>Quản lý cấu hình trực quan xác định thiết lập màn hình cho quầy thanh toán</value>
+  </data>
+  <data name="VisualProfileUserResizable" xml:space="preserve">
+    <value>Người dùng có thể thay đổi kích thước</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Có</value>
+  </data>
+</root>

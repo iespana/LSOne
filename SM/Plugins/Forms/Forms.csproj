@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DA623FC-56FF-4B76-BEDA-CD749E146542}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.Forms</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.Forms.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Sparkline.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraRichEdit.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ReportDesigner">
+      <HintPath>..\..\Build\LSOne.Controls.ReportDesigner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\FormTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormTypeDialog.designer.cs">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewFormDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewFormDialog.designer.cs">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormTypesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FormTypesView.designer.cs">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FormView.Designer.cs">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FormsView.designer.cs">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.cs.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.da.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.de.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.el.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.en-ZA.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.es-MX.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.es.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.fi.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.fr.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.hi.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.is.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.it.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.ja.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.ko.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.nb-NO.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.nl.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.pl.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.pt-BR.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.ru.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.sv.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.zh-CHS.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.zh-CHT.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.cs.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.da.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.de.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.el.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.es.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.fi.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.fr.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.hi.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.is.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.it.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.ja.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.ko.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.nb-NO.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.nl.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.pl.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.pt-BR.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewFormDialog.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.ru.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.sv.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.zh-CHS.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.zh-CHT.resx">
+      <DependentUpon>NewFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Views\FormTypesView.cs.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.da.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.de.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.el.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.es.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.fi.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.fr.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.hi.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.is.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.it.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.ja.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.ko.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.nb-NO.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.nl.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.pl.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.pt-BR.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.ru.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.sv.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.zh-CHS.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.zh-CHT.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formsview.cs.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formsview.fi.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formsview.hi.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formsview.nb-NO.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formsview.pl.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.cs.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.da.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.de.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.el.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.es.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.fi.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.fr.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.hi.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.is.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.it.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.ja.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.ko.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.nb-NO.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.nl.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.pl.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.pt-BR.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.ru.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.sv.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.zh-CHS.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormView.zh-CHT.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.da.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.de.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.el.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.es.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.fr.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.is.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.it.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.ja.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.ko.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.nl.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.pt-BR.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.ru.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.sv.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.zh-CHS.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.zh-CHT.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\FormsImage.png" />
+    <None Include="_Diagrams\Data model.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormsImage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.bg.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.it-IT.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.bg.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.en-ZA.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.es-MX.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.it-IT.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.bg.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.en-ZA.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.es-MX.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.it-IT.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.bg.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.en-ZA.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.es-MX.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.it-IT.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.bg.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.en-ZA.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.es-MX.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.it-IT.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.nl-BE.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.nl-BE.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.nl-BE.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.nl-BE.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.nl-BE.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form layouts_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form layouts_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\FormTypeDialog.vi-VN.resx">
+      <DependentUpon>FormTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newformdialog.vi-VN.resx">
+      <DependentUpon>newformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormsView.vi-VN.resx">
+      <DependentUpon>FormsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTypesView.vi-VN.resx">
+      <DependentUpon>FormTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\formview.vi-VN.resx">
+      <DependentUpon>formview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

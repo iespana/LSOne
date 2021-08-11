@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarcodePrintingRequiresCustomization" xml:space="preserve">
+    <value>&lt;#1 barcode is not supported&gt;</value>
+    <comment>[Term:21227]</comment>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Barcode reader</value>
+    <comment>[Term:3000]</comment>
+  </data>
+  <data name="ETax" xml:space="preserve">
+    <value>eTax</value>
+  </data>
+  <data name="BarcodeReaderEmpty" xml:space="preserve">
+    <value>Barcode scanner: Name is empty.</value>
+    <comment>[Term:20121]</comment>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Card reader</value>
+    <comment>[Term:2998]</comment>
+  </data>
+  <data name="CardReaderEmpty" xml:space="preserve">
+    <value>Card Reader: Name is empty.</value>
+    <comment>[Term:20122]</comment>
+  </data>
+  <data name="CashDrawerIsClosed" xml:space="preserve">
+    <value>The cash drawer is closed.</value>
+    <comment>[Term:16390]</comment>
+  </data>
+  <data name="CashDrawerIsIllegallyClosed" xml:space="preserve">
+    <value>The cash drawer is illegally closed.</value>
+    <comment>[Term:16391]</comment>
+  </data>
+  <data name="CashDrawerTimedOut" xml:space="preserve">
+    <value>The cash drawer timed out.</value>
+    <comment>[Term:16402]</comment>
+  </data>
+  <data name="CheckForPaperJam" xml:space="preserve">
+    <value>Printer failure: Check for paper jam or power failure.</value>
+    <comment>[Term:22159]</comment>
+  </data>
+  <data name="CouldNotLoadCashDrawer" xml:space="preserve">
+    <value>Could not load cash drawer: #1</value>
+    <comment>[Term:16370]</comment>
+  </data>
+  <data name="CouldNotLoadDallasKey" xml:space="preserve">
+    <value>Could not load Dallas key: #1</value>
+    <comment>[Term:19808]</comment>
+  </data>
+  <data name="CouldNotLoadDualDisplay" xml:space="preserve">
+    <value>Could not load dual display: #1</value>
+    <comment>[Term:16372]</comment>
+  </data>
+  <data name="CouldNotLoadForecourtManager" xml:space="preserve">
+    <value>Could not load forecourt manager: #1</value>
+    <comment>[Term:16373]</comment>
+  </data>
+  <data name="CouldNotLoadHardwareProfile" xml:space="preserve">
+    <value>Unable to load hardware profile, due to the following error: #1Would you like to open the hardware profile to test hardware setup and make modifications?</value>
+    <comment>[Term:22417]</comment>
+  </data>
+  <data name="CouldNotLoadKeylock" xml:space="preserve">
+    <value>Could not load keylock: #1</value>
+    <comment>[Term:16382]</comment>
+  </data>
+  <data name="CouldNotLoadLineDisplay" xml:space="preserve">
+    <value>Could not load line display: #1</value>
+    <comment>[Term:16374]</comment>
+  </data>
+  <data name="CouldNotLoadMSR" xml:space="preserve">
+    <value>Could not load msr: #1</value>
+    <comment>[Term:16376]</comment>
+  </data>
+  <data name="CouldNotLoadPrinter" xml:space="preserve">
+    <value>Could not load printer: #1</value>
+    <comment>[Term:16375]</comment>
+  </data>
+  <data name="CouldNotLoadRFIDScanner" xml:space="preserve">
+    <value>Could not load RFID scanner: #1</value>
+    <comment>[Term:16369]</comment>
+  </data>
+  <data name="CouldNotLoadScale" xml:space="preserve">
+    <value>Could not load scale: #1</value>
+    <comment>[Term:16377]</comment>
+  </data>
+  <data name="CouldNotLoadScanner" xml:space="preserve">
+    <value>Could not load scanner: #1</value>
+    <comment>[Term:16378]</comment>
+  </data>
+  <data name="CouldNotLoadETax" xml:space="preserve">
+    <value>Could not load eTax device: #1</value>
+  </data>
+  <data name="DisplayIsClosed" xml:space="preserve">
+    <value>The Display is closed.</value>
+    <comment>[Term:16386]</comment>
+  </data>
+  <data name="DisplayIsIllegallyClosed" xml:space="preserve">
+    <value>The Display is illegally closed.</value>
+    <comment>[Term:16387]</comment>
+  </data>
+  <data name="DisplayTimedOut" xml:space="preserve">
+    <value>The Display timed out.</value>
+    <comment>[Term:16400]</comment>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Drawer</value>
+    <comment>[Term:2997]</comment>
+  </data>
+  <data name="DrawerEmpty" xml:space="preserve">
+    <value>Drawer: Name is empty</value>
+    <comment>[Term:20123]</comment>
+  </data>
+  <data name="EnterWeight" xml:space="preserve">
+    <value>Enter weight</value>
+    <comment>[Term:17638]</comment>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+    <comment>[Term:411]</comment>
+  </data>
+  <data name="FixProblemAndRetry" xml:space="preserve">
+    <value>Do you want to try to fix the problem and retry?</value>
+    <comment>[Term:16379]</comment>
+  </data>
+  <data name="HardwareProfileErrorString" xml:space="preserve">
+    <value>The following device(s) have invalid settings: {0}Please run the site manager and resolve all issues before restarting the POS</value>
+    <comment>[Term:20128]</comment>
+  </data>
+  <data name="InsertSlipIntoPrinter" xml:space="preserve">
+    <value>Insert slip into the printer</value>
+    <comment>[Term:16989] - 14001</comment>
+  </data>
+  <data name="KeylockEmpty" xml:space="preserve">
+    <value>Key Lock: Name is empty</value>
+    <comment>[Term:20124]</comment>
+  </data>
+  <data name="KeylockIsClosed" xml:space="preserve">
+    <value>The keylock is closed.</value>
+    <comment>[Term:16403]</comment>
+  </data>
+  <data name="KeylockIsIllegallyClosed" xml:space="preserve">
+    <value>The keylock is illegally closed.</value>
+    <comment>[Term:16405]</comment>
+  </data>
+  <data name="KeylockTimedOut" xml:space="preserve">
+    <value>The keylock timed out.</value>
+    <comment>[Term:16406]</comment>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Line display</value>
+    <comment>[Term:3041]</comment>
+  </data>
+  <data name="LineDisplayEmpty" xml:space="preserve">
+    <value>Line Display: Name is empty</value>
+    <comment>[Term:20125]</comment>
+  </data>
+  <data name="MSRIllegallyClosed" xml:space="preserve">
+    <value>The MSR is illegally closed.</value>
+    <comment>[Term:16389]</comment>
+  </data>
+  <data name="MSRIsClosed" xml:space="preserve">
+    <value>The MSR is closed.</value>
+    <comment>[Term:16388]</comment>
+  </data>
+  <data name="MSRTimedOut" xml:space="preserve">
+    <value>The MSR timed out</value>
+    <comment>[Term:16401]</comment>
+  </data>
+  <data name="NoInputdetected" xml:space="preserve">
+    <value>No input was detected.Please check the scale and restart the POS</value>
+    <comment>[Term:21115]</comment>
+  </data>
+  <data name="NoPrinterFound" xml:space="preserve">
+    <value>No printer found</value>
+    <comment>[Term:16381]</comment>
+  </data>
+  <data name="NoScaleDetected" xml:space="preserve">
+    <value>No scale detected</value>
+    <comment>[Term:19654]</comment>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+    <comment>[Term:2441]</comment>
+  </data>
+  <data name="PrinterCompletedOutput" xml:space="preserve">
+    <value>The printer has completed it's output!</value>
+    <comment>[Term:18773]</comment>
+  </data>
+  <data name="PrinterCoverIsOK" xml:space="preserve">
+    <value>The printer cover is OK</value>
+    <comment>[Term:16392]</comment>
+  </data>
+  <data name="PrinterCoverIsOpen" xml:space="preserve">
+    <value>The printer cover is open</value>
+    <comment>[Term:16393]</comment>
+  </data>
+  <data name="PrinterEmpty" xml:space="preserve">
+    <value>Printer: Name is empty</value>
+    <comment>[Term:20126]</comment>
+  </data>
+  <data name="PrinterFiredOffAnEvent" xml:space="preserve">
+    <value>The printer fired off an error event!</value>
+    <comment>[Term:18772]</comment>
+  </data>
+  <data name="PrinterIsClosed" xml:space="preserve">
+    <value>The printer is closed.</value>
+    <comment>[Term:16394]</comment>
+  </data>
+  <data name="PrinterIsIllegallyClosed" xml:space="preserve">
+    <value>The printer is illegally closed.</value>
+    <comment>[Term:16395]</comment>
+  </data>
+  <data name="PrinterIsOpen" xml:space="preserve">
+    <value>Printer is open</value>
+    <comment>[Term:16383]</comment>
+  </data>
+  <data name="PrinterIsOutOfPaper" xml:space="preserve">
+    <value>Printer is out of paper or printer was disconnected</value>
+    <comment>[Term:19885]</comment>
+  </data>
+  <data name="PrinterNotAccessible" xml:space="preserve">
+    <value>Printer #1 is not accessible. The printing has been cancelled.</value>
+    <comment>[Term:18771]</comment>
+  </data>
+  <data name="PrinterTimeout" xml:space="preserve">
+    <value>Timeout encountered, this may be caused by other programs or processes having previously claimed the printer</value>
+    <comment>[Term:20341]</comment>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Printing</value>
+    <comment>[Term:5168]</comment>
+  </data>
+  <data name="PrintingDeviceIsDisabled" xml:space="preserve">
+    <value>Printing device is disabled</value>
+    <comment>[Term:16385]</comment>
+  </data>
+  <data name="PrintingInProgress" xml:space="preserve">
+    <value>Printing in progress...</value>
+    <comment>[Term:16991] - 14002</comment>
+  </data>
+  <data name="RemoveSlipFromPrinter" xml:space="preserve">
+    <value>Remove slip from printer</value>
+    <comment>[Term:16992] - 14003</comment>
+  </data>
+  <data name="ScaleEmpty" xml:space="preserve">
+    <value>Scale: Name is empty</value>
+    <comment>[Term:20127]</comment>
+  </data>
+  <data name="ScaleIsClosed" xml:space="preserve">
+    <value>The scale is closed.</value>
+    <comment>[Term:16396]</comment>
+  </data>
+  <data name="ScaleIsDiabledReconnect" xml:space="preserve">
+    <value>Please reconnect the scale and restart the POS</value>
+    <comment>[Term:19656]</comment>
+  </data>
+  <data name="ScaleIsDisabled" xml:space="preserve">
+    <value>The scale is disabled, Please reconnect the scale and restart the POS</value>
+    <comment>[Term:19652]</comment>
+  </data>
+  <data name="ScaleIsDisabledEnterWeight" xml:space="preserve">
+    <value>The scale is disabled, Do you want to manually enter weight?</value>
+    <comment>[Term:19651]</comment>
+  </data>
+  <data name="ScaleIsIllegallyClosed" xml:space="preserve">
+    <value>The scale is illegally closed</value>
+    <comment>[Term:16397]</comment>
+  </data>
+  <data name="ScaleTimedOut" xml:space="preserve">
+    <value>The scale timed out</value>
+    <comment>[Term:16407]</comment>
+  </data>
+  <data name="ScannedTimedOut" xml:space="preserve">
+    <value>The scanned timed out</value>
+    <comment>[Term:16408]</comment>
+  </data>
+  <data name="ScannerIsClosesd" xml:space="preserve">
+    <value>The scanner is closed.</value>
+    <comment>[Term:16398]</comment>
+  </data>
+  <data name="ScannerIsIllegallyClosed" xml:space="preserve">
+    <value>The scanner is illegally closed</value>
+    <comment>[Term:16399]</comment>
+  </data>
+  <data name="TestFailed" xml:space="preserve">
+    <value>Device test failed: #1</value>
+    <comment>[Term:22405]</comment>
+  </data>
+  <data name="TestSuccessful" xml:space="preserve">
+    <value>Device tested successfully</value>
+    <comment>[Term:22411]</comment>
+  </data>
+  <data name="EFTNotSavedOnHO" xml:space="preserve">
+    <value>Could not access service to save EFT settings centrally, only local changes will be performed.</value>
+    <comment>[Term:22400]</comment>
+  </data>
+  <data name="HardwareNotSavedOnHO" xml:space="preserve">
+    <value>Could not access service to save hardware settings centrally, only local changes will be performed.</value>
+    <comment>[Term:22401]</comment>
+  </data>
+  <data name="MoreThanOneOPOSDevice" xml:space="preserve">
+    <value>Found {0} {1} devices, do you want the POS to try to find and select an active device?</value>
+    <comment>[Term:22413]</comment>
+  </data>
+  <data name="NoOPOSDevice" xml:space="preserve">
+    <value>No {0} found</value>
+    <comment>[Term:22416]</comment>
+  </data>
+  <data name="CouldNotTestPrintingOfReceipt" xml:space="preserve">
+    <value>Could not test printing of receipt</value>
+    <comment>[Term:22403]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Hardware48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hardware48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AutoDetectionResults" xml:space="preserve">
+    <value>Auto detection results</value>
+    <comment>[Term:22398]</comment>
+  </data>
+  <data name="WelcomeTo" xml:space="preserve">
+    <value>Welcome to</value>
+    <comment>[Term:22319] - Displayed on customers line display's top line if setting is empty</comment>
+  </data>
+  <data name="NoHardwareProfilePermission" xml:space="preserve">
+    <value>You do not have permission to change the hardware profile.</value>
+    <comment>[Term:22393]</comment>
+  </data>
+  <data name="HardwareProfileSufficientPermissions" xml:space="preserve">
+    <value>To change the hardware profile a user with sufficient permissions needs to log in.</value>
+    <comment>[Term:22394]</comment>
+  </data>
+  <data name="CouldNotLoadHardwareSetupWithError" xml:space="preserve">
+    <value>Could not load hardware setup with error</value>
+    <comment>[Term:22402]</comment>
+  </data>
+  <data name="PeripheralsDevicesLoadDevicesErrorLogger" xml:space="preserve">
+    <value>Peripherals.Devices.LoadDevices()</value>
+    <comment>DO NOT TRANSLATE</comment>
+  </data>
+  <data name="PeripheralsDevicesUnloadDevicesErrorLogger" xml:space="preserve">
+    <value>Peripherals.Devices.UnloadDevices()</value>
+    <comment>DO NOT TRANSLATE</comment>
+  </data>
+  <data name="CouldNotLoadHardware" xml:space="preserve">
+    <value>Could not load hardware</value>
+    <comment>[Term:22425]</comment>
+  </data>
+  <data name="CurrentProfileWillBeApplied" xml:space="preserve">
+    <value>Current profile will be applied</value>
+    <comment>[Term:22426]</comment>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>No printer has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21080]</comment>
+  </data>
+  <data name="PleaseCheckThePrinter" xml:space="preserve">
+    <value>Please check the printer</value>
+    <comment>[Term:17266]</comment>
+  </data>
+  <data name="AutoDetectOPOS_Successfully" xml:space="preserve">
+    <value>Successfully added {0}: {1}</value>
+    <comment>[Term:22506]</comment>
+  </data>
+  <data name="AutoDetectOPOS_Failed" xml:space="preserve">
+    <value>Failed test for {0}: {1}</value>
+    <comment>[Term:22505]</comment>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Printing station</value>
+    <comment>[Term:16931]</comment>
+  </data>
+  <data name="CouldNotStartPrintJob" xml:space="preserve">
+    <value>Could not start print job.</value>
+    <comment>[Term:23884]</comment>
+  </data>
+  <data name="PrintingStationError" xml:space="preserve">
+    <value>Printing station error</value>
+    <comment>[Term:23886]</comment>
+  </data>
+  <data name="PleaseCheckPrinterOrPrintingStation" xml:space="preserve">
+    <value>Please check the printer or the printing station</value>
+    <comment>[Term:23885]</comment>
+  </data>
+  <data name="PleaseSelectACOMPort" xml:space="preserve">
+    <value>Please select a COM port</value>
+  </data>
+  <data name="SucessfullyConnectedToETax" xml:space="preserve">
+    <value>Successfully connected to eTax device.</value>
+  </data>
+  <data name="UnableToConnectToETaxOnPort" xml:space="preserve">
+    <value>Unable to connect to the eTax to retrieve device properties on port </value>
+  </data>
+  <data name="ETaxSettingsChangedMustRebootDevice" xml:space="preserve">
+    <value>eTax settings were changed. A restart of the device must be manually performed. Please remove and re-attach it to the POS.</value>
+  </data>
+  <data name="ETaxConfigChangeFail" xml:space="preserve">
+    <value>Could not connect to the eTax device to configure device properties to use 'Hardware flow control' instead of 'No flow control'</value>
+  </data>
+  <data name="AutoDetect" xml:space="preserve">
+    <value>Auto detect</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LS_One_spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LS-One-spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="OPOS" xml:space="preserve">
+    <value>OPOS</value>
+  </data>
+  <data name="WindowsPrinter" xml:space="preserve">
+    <value>Windows printer</value>
+  </data>
+  <data name="Checkmark_white_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checkmark_white_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MultipleErrorMessages" xml:space="preserve">
+    <value>There are multiple errors. Press here to see all error messages.</value>
+  </data>
+  <data name="Warning_red_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning_red_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeviceNameCannotBeEmpty" xml:space="preserve">
+    <value>Device name cannot be empty</value>
+  </data>
+</root>

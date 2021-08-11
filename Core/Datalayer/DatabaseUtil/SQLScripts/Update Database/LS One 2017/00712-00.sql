@@ -1,0 +1,39 @@
+/*
+
+	Incident No.	: ONE-4639
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: Oregano 18.11- 1.12
+	Date created	: 19.11.2016
+
+	Description		: Create a new transaction table to save receipt strings that are printed per transaction
+	
+	
+	Tables affected	: New table added RBOTRANSACTIONRECEIPTS
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('RBOTRANSACTIONRECEIPTS') AND TYPE IN ('U'))
+BEGIN
+	CREATE TABLE [dbo].[RBOTRANSACTIONRECEIPTS](
+		[TRANSACTIONID] [nvarchar](20) NOT NULL,
+		[STORE] [nvarchar](20) NOT NULL,
+		[TERMINAL] [nvarchar](20) NOT NULL,
+		[DATAAREAID] [nvarchar](4) NOT NULL,
+		[LINENUM] [int] NOT NULL,
+		[REPLICATIONCOUNTER] [int] IDENTITY(1,1) NOT NULL,
+		[FORMTYPE] [uniqueidentifier] NOT NULL,
+		[PRINTSTRING] [nvarchar](max) NOT NULL,
+	 CONSTRAINT [PK_RBOTRANSACTIONRECEIPTS] PRIMARY KEY CLUSTERED 
+	(
+		[TRANSACTIONID] ASC,
+		[STORE] ASC,
+		[TERMINAL] ASC,
+		[DATAAREAID] ASC,
+		[LINENUM] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+END
+GO

@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{632D48D8-FBAF-420E-8A2C-25B50466165F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewCore.Dialogs</RootNamespace>
+    <AssemblyName>LSOne.ViewCore.Dialogs</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.SharedDialogs.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ChangePasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordDialog.designer.cs">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateItemPricesTaxQuestionDialog.cs" />
+    <Compile Include="ContactDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactDialog.designer.cs">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IWizardPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignatureDialog.designer.cs">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleValueEditor.designer.cs">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WizardBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardBase.designer.cs">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="changepassworddialog.bg.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.cs.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.da.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.de.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.el.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.es.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.fi.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.fr.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.hi.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.is.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.it.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.ja.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.ko.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.nb-NO.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.nl.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.pl.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.pt-BR.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.ru.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.sv.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.vi-VN.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.zh-CHS.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepassworddialog.zh-CHT.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.bg.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.cs.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.da.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.de.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.el.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.es.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.fi.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.fr.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.hi.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.is.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.it.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.ja.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.ko.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.nb-NO.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.nl.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.pl.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.pt-BR.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.ru.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.sv.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.vi-VN.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.zh-CHS.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.zh-CHT.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-PT.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="signaturedialog.bg.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.cs.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.da.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.de.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.el.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.es.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.fi.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.fr.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.hi.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.is.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.it.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.ja.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.ko.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.nb-NO.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.nl.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.pl.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.pt-BR.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.ru.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.sv.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.vi-VN.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.zh-CHS.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signaturedialog.zh-CHT.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.bg.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.cs.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.da.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.de.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.el.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.es.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.fi.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.fr.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.hi.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.is.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.it.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.ja.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.ko.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.nb-NO.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.nl.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.pl.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.pt-BR.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.ru.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.sv.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.vi-VN.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.zh-CHS.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="simplevalueeditor.zh-CHT.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.bg.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.cs.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.da.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.de.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.el.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.es.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.fi.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.fr.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.hi.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.is.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.it.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.ja.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.ko.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.nb-NO.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.nl.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.pl.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.pt-BR.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.ru.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.sv.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.vi-VN.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.zh-CHS.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wizardbase.zh-CHT.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CertificateImage48.png" />
+    <None Include="Resources\HelpSmallImage.png" />
+    <None Include="_Diagrams\Dialog diagram.cd" />
+    <None Include="Resources\ContactImage48.png" />
+    <None Include="Resources\home_16.png" />
+    <None Include="Resources\help_16.png" />
+    <Content Include="Resources\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangePasswordDialog.en-ZA.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.es-MX.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.nl-BE.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.pt-PT.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.en-ZA.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.es-MX.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.nl-BE.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDialog.pt-PT.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.en-ZA.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.es-MX.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.nl-BE.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureDialog.pt-PT.resx">
+      <DependentUpon>SignatureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.en-ZA.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.es-MX.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.nl-BE.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleValueEditor.pt-PT.resx">
+      <DependentUpon>SimpleValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.en-ZA.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.es-MX.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.nl-BE.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardBase.pt-PT.resx">
+      <DependentUpon>WizardBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

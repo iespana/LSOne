@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddToGroup" xml:space="preserve">
+    <value>Add to group</value>
+    <comment>[Term:355]</comment>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+    <comment>[Term:369]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete user</value>
+    <comment>[Term:383]</comment>
+  </data>
+  <data name="DeleteUserGroup" xml:space="preserve">
+    <value>Delete user group</value>
+    <comment>[Term:384]</comment>
+  </data>
+  <data name="DeleteUserGroupQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected user group?</value>
+    <comment>[Term:359]</comment>
+  </data>
+  <data name="DeleteUserQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected user?</value>
+    <comment>[Term:360]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DeleteUserSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteUserSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Denied" xml:space="preserve">
+    <value>Denied</value>
+    <comment>[Term:385]</comment>
+  </data>
+  <data name="DeniedFromGroups" xml:space="preserve">
+    <value>Denied from groups</value>
+    <comment>[Term:386]</comment>
+  </data>
+  <data name="DisableLogin" xml:space="preserve">
+    <value>Disable login</value>
+    <comment>[Term:390]</comment>
+  </data>
+  <data name="DisableLoginSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DisableLoginSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Edit user</value>
+    <comment>[Term:400]</comment>
+  </data>
+  <data name="EditUserGroup" xml:space="preserve">
+    <value>Edit user group</value>
+    <comment>[Term:401]</comment>
+  </data>
+  <data name="EnableLogin" xml:space="preserve">
+    <value>Enable login</value>
+    <comment>[Term:404]</comment>
+  </data>
+  <data name="EnableLoginSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EnableLoginSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Granted" xml:space="preserve">
+    <value>Granted</value>
+    <comment>[Term:417]</comment>
+  </data>
+  <data name="GrantedFromGroups" xml:space="preserve">
+    <value>Granted from groups</value>
+    <comment>[Term:418]</comment>
+  </data>
+  <data name="GreenLightSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenLightSmall.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GroupPermissions" xml:space="preserve">
+    <value>Group permissions</value>
+    <comment>[Term:420]</comment>
+  </data>
+  <data name="KeySmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeySmall.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManageUserGroups" xml:space="preserve">
+    <value>Manage user groups</value>
+    <comment>[Term:439]</comment>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>New User</value>
+    <comment>[Term:450]</comment>
+  </data>
+  <data name="NewUserGroup" xml:space="preserve">
+    <value>New user group</value>
+    <comment>[Term:451]</comment>
+  </data>
+  <data name="NewUserSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewUserSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoPermissionToEditUser" xml:space="preserve">
+    <value>You do not have permission to edit a user.</value>
+    <comment>[Term:515]</comment>
+  </data>
+  <data name="PermissionAssignment" xml:space="preserve">
+    <value>Permission Assignment</value>
+    <comment>[Term:466]</comment>
+  </data>
+  <data name="RedLightSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedLightSmall.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RemoveFromGroup" xml:space="preserve">
+    <value>Remove from group</value>
+    <comment>[Term:477]</comment>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+    <comment>[Term:485]</comment>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+    <comment>[Term:501]</comment>
+  </data>
+  <data name="UserDisabledSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserDisabledSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGroups" xml:space="preserve">
+    <value>User groups</value>
+    <comment>[Term:502]</comment>
+  </data>
+  <data name="UserInformation" xml:space="preserve">
+    <value>User information</value>
+    <comment>[Term:503]</comment>
+  </data>
+  <data name="UserLogins" xml:space="preserve">
+    <value>User logins</value>
+    <comment>[Term:505]</comment>
+  </data>
+  <data name="UserPermissions" xml:space="preserve">
+    <value>User permissions</value>
+    <comment>[Term:509]</comment>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+    <comment>[Term:511]</comment>
+  </data>
+  <data name="UsersInGroup" xml:space="preserve">
+    <value>Users in group</value>
+    <comment>[Term:512]</comment>
+  </data>
+  <data name="UserNameHasTobe2Letters" xml:space="preserve">
+    <value>User name must be at least 2 letters.</value>
+    <comment>[Term:508]</comment>
+  </data>
+  <data name="PasswordHasTobe4Letters" xml:space="preserve">
+    <value>Password must be at least 4 letters</value>
+    <comment>[Term:462]</comment>
+  </data>
+  <data name="ConfirmPasswordMustMatch" xml:space="preserve">
+    <value>Confirm password must match the password.</value>
+    <comment>[Term:376]</comment>
+  </data>
+  <data name="FirstAndLastMustHaveOneLetter" xml:space="preserve">
+    <value>First name or last name must have at least one letter.</value>
+    <comment>[Term:413]</comment>
+  </data>
+  <data name="ViewUserGroups" xml:space="preserve">
+    <value>View user groups</value>
+    <comment>[Term:2706]</comment>
+  </data>
+  <data name="SearchForUser" xml:space="preserve">
+    <value>Search for user</value>
+    <comment>[Term:2707]</comment>
+  </data>
+  <data name="NewUserDescription" xml:space="preserve">
+    <value>Use this option to create a new user</value>
+    <comment>[Term:2708]</comment>
+  </data>
+  <data name="NewUserGroupDescription" xml:space="preserve">
+    <value>Use this option to create a new user group</value>
+    <comment>[Term:2711]</comment>
+  </data>
+  <data name="ViewAllUsers" xml:space="preserve">
+    <value>View all users</value>
+    <comment>[Term:2710]</comment>
+  </data>
+  <data name="ViewAllUsersDescription" xml:space="preserve">
+    <value>Use this option to search for all users</value>
+    <comment>[Term:2709]</comment>
+  </data>
+  <data name="ViewUserGroupsDescription" xml:space="preserve">
+    <value>Use this option to view user groups</value>
+    <comment>[Term:2712]</comment>
+  </data>
+  <data name="User24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGroup24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserGroup24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGroupSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserGroupSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LinkToPOSUser" xml:space="preserve">
+    <value>Link to POS user</value>
+    <comment>[Term:2829]</comment>
+  </data>
+  <data name="POSuser" xml:space="preserve">
+    <value>POS user</value>
+    <comment>[Term:2770]</comment>
+  </data>
+  <data name="UnlinkPOSUser" xml:space="preserve">
+    <value>Unlink POS user</value>
+    <comment>[Term:2828]</comment>
+  </data>
+  <data name="UnlinkPOSUserQuestion" xml:space="preserve">
+    <value>Are you sure you want to unlink the selected user from its POS user?</value>
+    <comment>[Term:2827]</comment>
+  </data>
+  <data name="ViewPOSUser" xml:space="preserve">
+    <value>View POS user</value>
+    <comment>[Term:2830]</comment>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>User management</value>
+    <comment>[Term:2870]</comment>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+    <comment>[Term:467]</comment>
+  </data>
+  <data name="RevertConditions" xml:space="preserve">
+    <value>Note that groups and permissions cannot be reverted</value>
+    <comment>[Term:3407]</comment>
+  </data>
+  <data name="UserAddImage32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserAddImage32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UsersNew" xml:space="preserve">
+    <value>New</value>
+    <comment>[Term:446] - Users -&gt; New</comment>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>View all</value>
+    <comment>[Term:3410] - Users -&gt; View all</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>[Term:2760]</comment>
+  </data>
+  <data name="NewUserGroupCaption" xml:space="preserve">
+    <value>Please enter name for the new user group</value>
+    <comment>[Term:3409]</comment>
+  </data>
+  <data name="EditUserGroupCaption" xml:space="preserve">
+    <value>Please edit the name of the user group</value>
+    <comment>[Term:3408]</comment>
+  </data>
+  <data name="UserGroupAddImage32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserGroupAddImage32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGroupsNew" xml:space="preserve">
+    <value>New</value>
+    <comment>[Term:3406] - User groups -&gt; New</comment>
+  </data>
+  <data name="UserGroupsViews" xml:space="preserve">
+    <value>View groups</value>
+    <comment>[Term:3411] - User groups -&gt; View groups</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+    <comment>[Term:3461]</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>[Term:454]</comment>
+  </data>
+  <data name="ServerUser16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ServerUser16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514]</comment>
+  </data>
+  <data name="DeletingAllAdmins" xml:space="preserve">
+    <value>You are trying to remove the last user from group #1. This might give you an unstable system. Are you sure you wish to remove this user from #1 group ?</value>
+    <comment>[Term:16844]</comment>
+  </data>
+  <data name="DeletingAllAdminsQuestion" xml:space="preserve">
+    <value>You are trying to remove the last user from group #1. This might give you an unstable system. Are you sure you wish to remove this user from #1 group ?</value>
+    <comment>[Term:16844]</comment>
+  </data>
+  <data name="MigrateUsers" xml:space="preserve">
+    <value>Migrate users</value>
+    <comment>[Term:16846]</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+    <comment>[Term:2509]</comment>
+  </data>
+  <data name="UserMigrated" xml:space="preserve">
+    <value>Selected Site Manager users have been migrated</value>
+    <comment>[Term:19497]</comment>
+  </data>
+  <data name="POSUsersMigrated" xml:space="preserve">
+    <value>Selected POS users have been migrated to the selected user groups</value>
+    <comment>[Term:16856]</comment>
+  </data>
+  <data name="POSUsersNotMigrated" xml:space="preserve">
+    <value>No POS users were migrated</value>
+    <comment>[Term:16848]</comment>
+  </data>
+  <data name="UserNotMigrated" xml:space="preserve">
+    <value>No Site Manager users were migrated</value>
+    <comment>[Term:19239]</comment>
+  </data>
+  <data name="NeedsToBeSelected" xml:space="preserve">
+    <value>Group needs to be selected to migrate POS users</value>
+    <comment>[Term:16857]</comment>
+  </data>
+  <data name="NoPOSUsersExist" xml:space="preserve">
+    <value>No POS users to migrate</value>
+    <comment>[Term:16847]</comment>
+  </data>
+  <data name="NothingToMigrate" xml:space="preserve">
+    <value>No Site Manager users or POS users need to be migrated</value>
+    <comment>[Term:19235]</comment>
+  </data>
+  <data name="NoUsersExist" xml:space="preserve">
+    <value>No Site Manager users to migrate</value>
+    <comment>[Term:19236]</comment>
+  </data>
+  <data name="DoNotCopyExistingGroup" xml:space="preserve">
+    <value>Do not copy existing group</value>
+    <comment>[Term:18532]</comment>
+  </data>
+  <data name="AuthenticationTokens" xml:space="preserve">
+    <value>Authentication tokens</value>
+    <comment>[Term:19170]</comment>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>[Term:668]</comment>
+  </data>
+  <data name="TokenPresetDescription" xml:space="preserve">
+    <value>Token #1</value>
+    <comment>[Term:19172] - Here the #1 represents a number</comment>
+  </data>
+  <data name="DeleteAuthenticationTokenQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected authentication token?</value>
+    <comment>[Term:19180]</comment>
+  </data>
+  <data name="DeleteAuthenticationToken" xml:space="preserve">
+    <value>Delete authentication token</value>
+    <comment>[Term:19178]</comment>
+  </data>
+  <data name="DeleteAuthenticationTokens" xml:space="preserve">
+    <value>Delete authentication tokens</value>
+    <comment>[Term:19177]</comment>
+  </data>
+  <data name="DeleteAuthenticationTokensQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected authentication tokens?</value>
+    <comment>[Term:19179]</comment>
+  </data>
+  <data name="TokenAlreadyExists" xml:space="preserve">
+    <value>This token identifier already exists</value>
+    <comment>[Term:19173]</comment>
+  </data>
+  <data name="CopyUserError" xml:space="preserve">
+    <value>You do not have permission to create user in security roles like the selected user</value>
+    <comment>[Term:21856]</comment>
+  </data>
+  <data name="SecurityRolesWarning" xml:space="preserve">
+    <value>Please note that security roles were not perfectly cloned since you did not have permissions for all the needed roles</value>
+    <comment>[Term:21855]</comment>
+  </data>
+  <data name="WarningTitle" xml:space="preserve">
+    <value>Warning</value>
+    <comment>[Term:14896]</comment>
+  </data>
+  <data name="OnlyAdminSetUp" xml:space="preserve">
+    <value>Only administrator user has been set up</value>
+    <comment>[Term:21903]</comment>
+  </data>
+  <data name="XUsersHaveBeenSetUp" xml:space="preserve">
+    <value>#1 users have been set up</value>
+    <comment>[Term:21902]</comment>
+  </data>
+  <data name="XUsersAreLockedOut" xml:space="preserve">
+    <value>#1 users are locked out because of to many failed login attempts</value>
+    <comment>[Term:22237]</comment>
+  </data>
+  <data name="OneUserIsLockedOut" xml:space="preserve">
+    <value>1 user is locked out because of to many failed login attempts</value>
+    <comment>[Term:22236]</comment>
+  </data>
+  <data name="UsersManage" xml:space="preserve">
+    <value>Manage</value>
+    <comment>[Term:22235] - Users -&gt;Manage</comment>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+    <comment>[Term:3406] - Users -&gt; New</comment>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+    <comment>[Term:2397]</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+    <comment>[Term:434]</comment>
+  </data>
+  <data name="NameOnReceipt" xml:space="preserve">
+    <value>Name on receipt</value>
+    <comment>[Term:12771]</comment>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User name</value>
+    <comment>[Term:14738]</comment>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+    <comment>[Term:3728]</comment>
+  </data>
+  <data name="UserGroupAddImage16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserGroupAddImage16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_user_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new user_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_user_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new user_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_user_group_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new user group_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_user_group_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new user group_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_group_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user group_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_group_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user group_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security_green_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security green_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security_green_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security green_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_inverted_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check inverted_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notification_inverted_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notification inverted_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SSuser_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SSuser_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disabled_user_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disabled user_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewUserGroupTooltipDescription" xml:space="preserve">
+    <value>Create a new user group</value>
+    <comment>[Term:23489]</comment>
+  </data>
+  <data name="NewUserTooltipDescription" xml:space="preserve">
+    <value>Create a new user</value>
+    <comment>[Term:23488]</comment>
+  </data>
+  <data name="UserSearchTooltip" xml:space="preserve">
+    <value>Type in a user name to search for a user</value>
+    <comment>[Term:23491]</comment>
+  </data>
+  <data name="UsersTooltipDescription" xml:space="preserve">
+    <value>Open the users list to view and manage users</value>
+    <comment>[Term:23490]</comment>
+  </data>
+  <data name="UserGroupsTooltipDescription" xml:space="preserve">
+    <value>Manage user groups and which permissions the groups include</value>
+    <comment>[Term:23489]</comment>
+  </data>
+  <data name="EmailNotValid" xml:space="preserve">
+    <value>Email address is not valid.</value>
+    <comment>[Term:23881]</comment>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>User profile</value>
+  <comment>[Term:24052]</comment></data>
+  <data name="EditUserProfile" xml:space="preserve">
+    <value>Edit user profile</value>
+  <comment>[Term:24061]</comment></data>
+</root>

@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C67B35A2-40C8-40FD-BD77-5D80DA5378CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services.LoginPanel</RootNamespace>
+    <AssemblyName>LSOne.Services.LoginPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="LSOne.POS.Processes">
+      <HintPath>..\..\Build\LSOne.POS.Processes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginControlList.Designer.cs">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanelService.Partner.cs" />
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="LoginPanelService.cs" />
+    <Compile Include="Pages\AuthorizeOperationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\AuthorizeOperationPage.Designer.cs">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogOnListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\LogOnListPage.Designer.cs">
+      <DependentUpon>LogOnListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogOnPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\LogOnPage.Designer.cs">
+      <DependentUpon>LogOnPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\ChangePasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\ChangePasswordDialog.Designer.cs">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SwitchUserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SwitchUserDialog.Designer.cs">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\LockTerminalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\LockTerminalDialog.Designer.cs">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\PermissionOverrideDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\PermissionOverrideDialog.Designer.cs">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LoginControl.bg.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.cs.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.da.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.de.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.el.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.en-ZA.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.es-MX.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.es.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.fi.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.fr.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.hi.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.is.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.it.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.ja.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.ko.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.nb-NO.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.nl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.pl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.pt-BR.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.ru.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.sv.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.zh-CHS.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.zh-CHT.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.bg.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.cs.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.da.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.de.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.el.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.en-ZA.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.es-MX.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.es.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.fi.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.fr.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.hi.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.is.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.it.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.ja.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.ko.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.nb-NO.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.nl.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.pl.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.pt-BR.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.ru.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.sv.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.zh-CHS.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.zh-CHT.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LogOnListPage.resx">
+      <DependentUpon>LogOnListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LogOnPage.resx">
+      <DependentUpon>LogOnPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.bg.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.cs.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.da.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.de.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.el.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.en-ZA.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.es-MX.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.es.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.fi.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.fr.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.hi.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.is.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.it.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.ja.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.ko.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.nb-NO.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.nl.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.pl.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.pt-BR.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.ru.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.sv.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.zh-CHS.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.zh-CHT.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.bg.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.cs.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.da.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.de.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.el.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.en-ZA.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.es-MX.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.es.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.fi.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.fr.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.hi.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.is.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.it.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.ja.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.ko.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.nb-NO.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.nl.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.pl.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.pt-BR.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.ru.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.sv.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.zh-CHS.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.zh-CHT.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.bg.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.cs.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.da.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.de.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.el.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.en-ZA.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.es-MX.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.es.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.fi.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.fr.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.hi.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.is.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.it.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.ja.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.ko.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.nb-NO.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.nl.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.pl.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.pt-BR.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.ru.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.sv.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.zh-CHS.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.zh-CHT.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.bg.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.cs.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.da.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.de.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.el.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.en-ZA.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.es-MX.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.es.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.fi.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.fr.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.hi.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.is.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.it.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.ja.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.ko.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.nb-NO.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.nl.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.pl.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.pt-BR.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.ru.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.sv.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.zh-CHS.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.zh-CHT.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_red_32px.png" />
+    <None Include="Resources\Warning_red_24px.png" />
+    <None Include="Resources\Warning_red_16px.png" />
+    <None Include="Resources\user_32.png" />
+    <None Include="Resources\warning_sq_16.png" />
+    <None Include="Resources\Card36.png" />
+    <None Include="Resources\InputValidation36.png" />
+    <None Include="Resources\password_login_grey_24.png" />
+    <None Include="Resources\card_login_grey_24.png" />
+    <None Include="Resources\posloginbanner.png" />
+    <None Include="Resources\DialogLock_48.png" />
+    <None Include="Resources\Login_48.png" />
+    <None Include="Resources\Password_48.png" />
+    <None Include="Resources\LS One logo_180px.png" />
+    <None Include="Resources\LS One logo_120px.png" />
+    <Content Include="Resources\POSLoginLarge.png" />
+    <None Include="LoginPanelService.vslp" />
+    <None Include="Resources\Security.png" />
+    <None Include="Resources\Refresh36.png" />
+    <None Include="Resources\refresh_32.png" />
+    <None Include="Resources\refresh_24.png" />
+    <None Include="Resources\refresh_gray_24.png" />
+    <None Include="Resources\refreshV2_24.png" />
+    <Content Include="Resources\User32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POSLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Other\Peripherals\Peripherals.csproj">
+      <Project>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</Project>
+      <Name>Peripherals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Other\POSSharedDialogs\POSSharedDialogs.csproj">
+      <Project>{159c5050-398a-487d-88e0-e4050d3e9336}</Project>
+      <Name>POSSharedDialogs</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LoginControl.nl-BE.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.nl-BE.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.nl-BE.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.nl-BE.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.nl-BE.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.nl-BE.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LoginControl.ja-JP.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.ja-JP.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.ja-JP.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.ja-JP.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.ja-JP.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.ja-JP.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.is.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.bg.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.cs.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.da.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.de.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.el.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.en-ZA.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.es-MX.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.es.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.fi.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.fr.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.hi.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.it.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.ja.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.ko.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.nb-NO.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.nl-BE.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.nl.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.pl.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.pt-BR.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.ru.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.sv.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LoginControl.vi-VN.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControlList.vi-VN.resx">
+      <DependentUpon>LoginControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AuthorizeOperationPage.vi-VN.resx">
+      <DependentUpon>AuthorizeOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ChangePasswordDialog.vi-VN.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\LockTerminalDialog.vi-VN.resx">
+      <DependentUpon>LockTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\PermissionOverrideDialog.vi-VN.resx">
+      <DependentUpon>PermissionOverrideDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SwitchUserDialog.vi-VN.resx">
+      <DependentUpon>SwitchUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\Services\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element msdata:IsDataSet="true" name="root">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+                <xsd:element minOccurs="0" msdata:Ordinal="2" name="comment" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute msdata:Ordinal="1" name="name" type="xsd:string" use="required" />
+              <xsd:attribute msdata:Ordinal="3" name="type" type="xsd:string" />
+              <xsd:attribute msdata:Ordinal="4" name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="BarCodeExists" xml:space="preserve">
+    <value>Ese código de barras ya existe en la base de datos.</value>
+  </data>
+  <data name="BarCodeMaxLengthError" xml:space="preserve">
+    <value>Un código de barras que utiliza esta configuración de código de barras debe tener como máximo #1 letras.</value>
+  </data>
+  <data name="BarCodeMinLengthError" xml:space="preserve">
+    <value>Un código de barras que utiliza esta configuración de código de barras debe tener como mínimo #1 letras.</value>
+  </data>
+  <data name="BarCodes" xml:space="preserve">
+    <value>Códigos de barras</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Estilo</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Número de variante</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sí</value>
+    <comment>Mask type: Item</comment>
+  </data>
+  <data name="NoBarCode" xml:space="preserve">
+    <value>Sin código de barras</value>
+  </data>
+  <data name="BarCodeSetup" xml:space="preserve">
+    <value>Configuración de código de barras</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Ninguno</value>
+    <comment>Mask type: None</comment>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Artículo</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Cliente</value>
+    <comment>Mask type: Customer</comment>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Empleado</value>
+    <comment>Mask type: Employee</comment>
+  </data>
+  <data name="Coupon" xml:space="preserve">
+    <value>Cupón</value>
+    <comment>Mask type: Coupon</comment>
+  </data>
+  <data name="DataEntry" xml:space="preserve">
+    <value>Entrada de datos</value>
+    <comment>Mask type: Data entry</comment>
+  </data>
+  <data name="SalesPerson" xml:space="preserve">
+    <value>Vendedor</value>
+    <comment>Mask type: Sales person</comment>
+  </data>
+  <data name="Pharmacy" xml:space="preserve">
+    <value>Farmacia</value>
+    <comment>Mask type: Pharmacy</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>No conocido</value>
+    <comment>Mask type: Unknown</comment>
+  </data>
+  <data name="Mask" xml:space="preserve">
+    <value>Máscara</value>
+  </data>
+  <data name="Symbology" xml:space="preserve">
+    <value>Simbología</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>Mask: Type</comment>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+  <data name="Ratio" xml:space="preserve">
+    <value>Índice</value>
+  </data>
+  <data name="DeleteBarCodeSetupQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar la configuración del código de barras seleccionada?</value>
+  </data>
+  <data name="DeleteBarCodeSetup" xml:space="preserve">
+    <value>Borrar configuración de código de barras</value>
+  </data>
+  <data name="BarCodeMaskSetup" xml:space="preserve">
+    <value>Configuración de máscara de código de barras</value>
+  </data>
+  <data name="ManageBarCodeMasks" xml:space="preserve">
+    <value>Administrar máscaras de código de barras</value>
+  </data>
+  <data name="AnyNumber" xml:space="preserve">
+    <value>Cualquier número</value>
+  </data>
+  <data name="CheckDigit" xml:space="preserve">
+    <value>Comprobar dígito</value>
+  </data>
+  <data name="ColorDigit" xml:space="preserve">
+    <value>Dígito de color</value>
+  </data>
+  <data name="EANLicenseCode" xml:space="preserve">
+    <value>Código de licencia EAN</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="SizeDigit" xml:space="preserve">
+    <value>Dígito de tamaño</value>
+  </data>
+  <data name="StyleDigit" xml:space="preserve">
+    <value>Dígito de estilo</value>
+  </data>
+  <data name="BarCodeSetupID" xml:space="preserve">
+    <value>ID de configuración de código de barras</value>
+  </data>
+  <data name="MaskInvalidLetterError" xml:space="preserve">
+    <value>La máscara contiene letras que no se corresponden con tipos conocidos.</value>
+  </data>
+  <data name="DeleteSegmentQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el segmento seleccionado?</value>
+  </data>
+  <data name="DeleteSegment" xml:space="preserve">
+    <value>Borrar segmento</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Bajar</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Subir</value>
+  </data>
+  <data name="BarCodeMaskExists" xml:space="preserve">
+    <value>Esa máscara de código de barras ya existe en la base de datos</value>
+  </data>
+  <data name="DeleteBarCodeMask" xml:space="preserve">
+    <value>Borrar máscara de código de barras</value>
+  </data>
+  <data name="DeleteBarCodeMaskQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar la máscara del código de barras seleccionada?</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Configuración general</value>
+  </data>
+  <data name="BarCodeSetupDescription" xml:space="preserve">
+    <value>Utilice esta opción para configurar reglas de código de barras.</value>
+  </data>
+  <data name="BarCodeMaskSetupDescription" xml:space="preserve">
+    <value>Utilice esta opción para definir máscaras de código de barras.</value>
+  </data>
+  <data name="BarCodeMasks" xml:space="preserve">
+    <value>Máscaras de código de barras</value>
+  </data>
+  <data name="BarCodeMaskSegments" xml:space="preserve">
+    <value>Segmentos de máscara de código de barras</value>
+  </data>
+  <data name="PrefixExists" xml:space="preserve">
+    <value>Ese prefijo de código de barras ya existe en la base de datos</value>
+  </data>
+  <data name="SetupBarCode" xml:space="preserve">
+    <value>Configuración</value>
+    <comment>Bar codes: Setup</comment>
+  </data>
+  <data name="MaskSetupBarCode" xml:space="preserve">
+    <value>Configurar máscaras</value>
+    <comment>Bar codes: Setup mask</comment>
+  </data>
+  <data name="NewBarCode" xml:space="preserve">
+    <value>Nuevo código de barras</value>
+  </data>
+  <data name="DeleteBarCode" xml:space="preserve">
+    <value>Borrar código de barras</value>
+  </data>
+  <data name="DeleteBarCodeQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar el código de barras seleccionado?</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Convertible</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidad de la unidad seleccionada a la unidad de inventario para el artículo seleccionado. ¿Desea crear la regla?</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Falta la regla de conversión de unidad</value>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidades de la unidad seleccionada a la unidad de inventario para el artículo seleccionado.</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Recibo</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Tienda</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="ReceiptBarcode" xml:space="preserve">
+    <value>Código de barras de recibo</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="BarcodeFieldsNotfilledIn" xml:space="preserve">
+    <value>Es necesario que ambos campos de códigos de barras estén rellenos o que ninguno de ellos lo esté.</value>
+  </data>
+  <data name="BarcodeNotCorrectlySetup" xml:space="preserve">
+    <value>La configuración de códigos de barras o el código de barras no se han configurado correctamente.</value>
+  </data>
+  <data name="PleaseSelectBarCodeSetup" xml:space="preserve">
+    <value>Seleccione la configuración de códigos de barras antes de introducir el código de barras.</value>
+  </data>
+  <data name="BarcodesOneWord" xml:space="preserve">
+    <value>Códigos de barras</value>
+  </data>
+  <data name="BarcodesTooltip" xml:space="preserve">
+    <value>Configurar reglas de códigos de barras</value>
+  </data>
+  <data name="MatchBarcodeMask" xml:space="preserve">
+    <value>En las notas de crédito, es necesario configurar la secuencia numérica de forma que coincida con el prefijo de la máscara del código de barras</value>
+  </data>
+  <data name="SalesUnitConversionQuestion" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidades para pasar de la unidad seleccionada a la unidad de venta para el artículo seleccionado. ¿Desea crear una regla?</value>
+  </data>
+  <data name="SalesUnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No existe ninguna regla de conversión de unidades para pasar de la unidad seleccionada a la unidad de venta del artículo seleccionado.</value>
+  </data>
+  <data name="BarcodeMaskInUse" xml:space="preserve">
+    <value>Esta máscara de código de barras está en uso y no se puede eliminar</value>
+  </data>
+  <data name="BarcodeSetupInUse" xml:space="preserve">
+    <value>Esta configuración de código de barras está en uso y no se puede eliminar</value>
+  </data>
+</root>

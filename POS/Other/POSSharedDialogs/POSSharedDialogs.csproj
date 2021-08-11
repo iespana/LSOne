@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{159C5050-398A-487D-88E0-E4050D3E9336}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Controls.Dialogs</RootNamespace>
+    <AssemblyName>LSOne.Controls.Dialogs</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.CalendarControl">
+      <HintPath>..\..\Build\LSOne.Controls.CalendarControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemFramework">
+      <HintPath>..\..\Build\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ChangeBackDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeBackDialog.Designer.cs">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccountDepositDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAccountDepositDialog.Designer.cs">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatePickerDialog.Designer.cs">
+      <DependentUpon>DatePickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePickerTouch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatePickerTouch.Designer.cs">
+      <DependentUpon>DatePickerTouch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="BusinessDayErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusinessDayErrorDialog.Designer.cs">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLLEntrySetter.cs" />
+    <Compile Include="OverrideMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverrideMessageDialog.Designer.cs">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumPad.Designer.cs">
+      <DependentUpon>NumPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumpadAmountQtyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumpadAmountQtyDialog.Designer.cs">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCashDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCashDialog.Designer.cs">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCheckDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCheckDialog.Designer.cs">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCurrencyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCurrencyDialog.Designer.cs">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashManagementDialog.Designer.cs">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCustomerAccountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCustomerAccountDialog.Designer.cs">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScaleDialog.Designer.cs">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionDialog\BarCodeSelectionList.cs" />
+    <Compile Include="SelectionDialog\InvoiceSelectionList.cs" />
+    <Compile Include="SelectionDialog\SalesOrderSelectionList.cs" />
+    <Compile Include="SelectionDialog\InfocodeSelectionList.cs" />
+    <Compile Include="SelectionDialog\UnitConversionSelectionList.cs" />
+    <Compile Include="SelectionDialog\DataEntitySelectionList.cs" />
+    <Compile Include="SelectionDialog\SelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionDialog\SelectionDialog.Designer.cs">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionDialog\ISelectionListView.cs" />
+    <Compile Include="TouchErrorProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TouchErrorProvider.Designer.cs">
+      <DependentUpon>TouchErrorProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TouchScrollButtonsCurrencyHelper.cs" />
+    <Compile Include="TouchScrollButtonsListViewHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessDayErrorDialog.zh-CHS.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.zh-CHT.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.bg.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.cs.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.da.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.de.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.el.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.en-ZA.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.es-MX.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.es.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.fi.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.fr.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.hi.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.is.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.it.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.ja.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.ko.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.nb-NO.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.nl.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.pl.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.pt-BR.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.ru.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.sv.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.zh-CHS.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.zh-CHT.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.bg.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.cs.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.da.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.de.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.el.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.en-ZA.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.es-MX.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.es.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.fi.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.fr.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.hi.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.is.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.it.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.ja.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.ko.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.nb-NO.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.nl.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.pl.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.pt-BR.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.ru.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.sv.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.zh-CHS.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.zh-CHT.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.bg.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.cs.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.da.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.de.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.el.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.en-ZA.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.es-MX.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.es.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.fi.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.fr.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.hi.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.is.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.it.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.ja.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.ko.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.nb-NO.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.nl-BE.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.nl.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.pl.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.pt-BR.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.ru.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.sv.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerDialog.resx">
+      <DependentUpon>DatePickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerTouch.resx">
+      <DependentUpon>DatePickerTouch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumPad.resx">
+      <DependentUpon>NumPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.bg.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.cs.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.da.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.de.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.el.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.en-ZA.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.es-MX.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.es.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.fi.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.fr.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.hi.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.is.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.it.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.ja.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.ko.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.nb-NO.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.nl.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.pl.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.pt-BR.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.ru.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.sv.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.zh-CHS.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.zh-CHT.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.bg.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.cs.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.da.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.de.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.el.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.en-ZA.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.es-MX.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.es.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.fi.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.fr.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.hi.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.is.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.it.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.ja.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.ko.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.nb-NO.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.nl.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.pl.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.pt-BR.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.ru.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.sv.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.zh-CHS.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.zh-CHT.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.bg.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.cs.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.da.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.de.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.el.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.en-ZA.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.es-MX.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.es.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.fi.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.fr.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.hi.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.is.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.it.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.ja.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.ko.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.nb-NO.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.nl.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.pl.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.pt-BR.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.ru.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.sv.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.zh-CHS.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.zh-CHT.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.bg.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.cs.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.da.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.de.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.el.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.en-ZA.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.es-MX.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.es.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.fi.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.fr.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.hi.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.is.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.it.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.ja.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.ko.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.nb-NO.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.nl.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.pl.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.pt-BR.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.ru.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.sv.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.zh-CHS.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.zh-CHT.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.bg.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.cs.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.da.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.de.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.el.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.en-ZA.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.es-MX.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.es.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.fi.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.fr.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.hi.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.is.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.it.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.ja.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.ko.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.nb-NO.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.nl.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.pl.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.pt-BR.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.ru.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.sv.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.zh-CHS.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.zh-CHT.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ScaleDialog.bg.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.cs.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.da.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.de.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.el.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.en-ZA.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.es-MX.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.es.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.fi.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.fr.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.hi.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.is.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.it.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.ja-JP.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.ja.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.ko.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.nb-NO.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.nl-BE.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.nl.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.pl.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.pt-BR.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.ru.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.sv.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.zh-CHS.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.zh-CHT.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.bg.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.cs.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.da.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.de.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.el.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.en-ZA.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.es-MX.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.es.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.fi.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.fr.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.hi.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.is.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.it.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.ja-JP.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.ja.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.ko.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.nb-NO.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.nl-BE.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.nl.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.pl.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.pt-BR.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.ru.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.sv.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.vi-VN.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.zh-CHS.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionDialog\SelectionDialog.zh-CHT.resx">
+      <DependentUpon>SelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchErrorProvider.resx">
+      <DependentUpon>TouchErrorProvider.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Peripherals\Peripherals.csproj">
+      <Project>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</Project>
+      <Name>Peripherals</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="POSSharedDialogs.vslp">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\DownArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageDownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessDayErrorDialog.bg.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.cs.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.da.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.de.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.el.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.en-ZA.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.es-MX.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.es.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.fi.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.fr.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.hi.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.is.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.it.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.ja.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.ko.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.nb-NO.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.nl.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.pl.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.pt-BR.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.ru.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDayErrorDialog.sv.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessDayErrorDialog.nl-BE.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.nl-BE.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.nl-BE.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.nl-BE.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.nl-BE.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.nl-BE.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.nl-BE.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.nl-BE.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionMark.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionDialogIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OverrideMessageDialog.bg.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.cs.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.da.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.de.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.el.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.en-ZA.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.es-MX.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.es.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.fi.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.fr.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.hi.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.is.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.ja.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.ko.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.nb-NO.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.nl-BE.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.nl.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.pl.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.pt-BR.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.ru.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.sv.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessDayErrorDialog.ja-JP.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.ja-JP.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.ja-JP.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.ja-JP.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.it.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.ja-JP.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCashDialog.ja-JP.resx">
+      <DependentUpon>PayCashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.ja-JP.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.ja-JP.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.ja-JP.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single arrow up_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single arrow down_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double arrow up_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double arrow down_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogInfo_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogQuestion_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogExclamation-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialogMessage_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessDayErrorDialog.vi-VN.resx">
+      <DependentUpon>BusinessDayErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashManagementDialog.vi-VN.resx">
+      <DependentUpon>CashManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeBackDialog.vi-VN.resx">
+      <DependentUpon>ChangeBackDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountDepositDialog.vi-VN.resx">
+      <DependentUpon>CustomerAccountDepositDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumpadAmountQtyDialog.vi-VN.resx">
+      <DependentUpon>NumpadAmountQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideMessageDialog.vi-VN.resx">
+      <DependentUpon>OverrideMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckDialog.vi-VN.resx">
+      <DependentUpon>PayCheckDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCurrencyDialog.vi-VN.resx">
+      <DependentUpon>PayCurrencyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCustomerAccountDialog.vi-VN.resx">
+      <DependentUpon>PayCustomerAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleDialog.vi-VN.resx">
+      <DependentUpon>ScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Whitesearch48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_red_24px.png" />
+    <None Include="Resources\Doublearrowupthin_32px.png" />
+    <None Include="Resources\Doublearrowdownthin_32px.png" />
+    <None Include="Resources\Arrowdownthin_32px.png" />
+    <None Include="Resources\Arrowupthin_32px.png" />
+    <Content Include="Resources\Calendar_48px.png" />
+    <None Include="Resources\Whitesearch32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

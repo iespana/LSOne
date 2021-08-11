@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup|Barcodes|Barcode usage">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Gift card barcode setup</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/SiteService/GiftCardBarcodeSetup.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Gift card barcode setup</h1>
+        <p>The POS now supports connecting gift cards to a barcode that can be scanned directly into the POS to pay with gift card.</p>
+        <h2>Gift card barcode mask</h2>
+        <p>For this to work correctly a gift card barcode mask must be created so the POS recognizes the barcode as a gift card payment. In this example we will assume that the prefix of the gift card barcode is 13 and the original gift card number sequence is ########</p>
+        <p><b>To create a gift card barcode mask do the following:</b>
+        </p>
+        <p>1.	In the ribbon navigate to Setup &gt; Barcodes and select Barcode mask setup from the drow down menu.</p>
+        <p>2.	Enter a description, select the Type = Gift card, Symbology = No bar code and then enter the mask 13XXXXXXXX and press enter. This automatically splits the mask in to a prefix (13) and the mask segment.</p>
+        <p>3.	Press OK and the mask setup is complete. Now all barcodes that start with 13 and are of length 10 will be taken as gift card payments.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_GiftCard.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="568" data-mc-height="552" src="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_GiftCard_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <h2>Barcode setup requirements for different Gift card options</h2>
+        <p>There are three different Site service settings for <a href="../SiteManager/StoreSetup/Gift Card Options.htm">gift card options</a> and the barcode setup requirements are a bit different for each of them.</p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />ID</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Example scenario – preprinted gift cards with amounts</p>
+                <p><b>For gift card option ID you need to do the following:</b>
+                </p>
+                <ol>
+                    <li value="1">	In the ribbon navigate to Sales &gt; Gift cards &gt; New gift card</li>
+                    <li value="2">Enter amount, currency and how many gift cards you want to create</li>
+                    <li value="3">Enter the same prefix as was used in the barcode setup. In our example this prefix is 13.</li>
+                    <li value="4">You can change the sequence start to fit the gift card series you want to create.</li>
+                    <li value="5">And you can select whether the gift cards created should be refillable or not.</li>
+                    <li value="6">Press OK –&gt; The gift cards are created.</li>
+                </ol>
+                <p><b>Selling and activating gift card on the POS</b>
+                </p>
+                <ol>
+                    <li value="1">	Select Issue gift card</li>
+                    <li value="2">Scan in the gift card ID for one of the gift cards created in Site Manager</li>
+                    <li value="3">Press OK</li>
+                    <li value="4">Accept payment for the gift card -&gt; gift card is now active and ready to be used for payment.</li>
+                </ol>
+                <p><b>Using gift card for payment</b>
+                </p>
+                <ol>
+                    <li value="1">Add items to the transaction</li>
+                    <li value="2">Scan the gift card ID into the barcode field (this field should have the focus by default	-&gt; Gift card payment dialog is displayed showing gift card ID and balance.</li>
+                    <li value="3">Press OK to pay using the scanned gift card</li>
+                </ol>
+                <div class="Note1">
+                    <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+                    <p class="note">When using this option there is no need to change the gift card number sequence.<br /></p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />ID and amount</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>For gift card option ID and amount you only need to select in the Site service profile whether you want the gift cards to be refillable or not. If you want to you can set a maximum amount for the gift cards. All gift cards are then created and activated on the POS.</p>
+                <p><b>Selling and activating gift card on the POS</b>
+                </p>
+                <ol>
+                    <li value="1">Select Issue gift card</li>
+                    <li value="2">Scan in the gift card ID and select or enter the amount. Make sure that the prefix and length of the gift card ID matches the gift card barcode mask.</li>
+                    <li value="3">Press OK</li>
+                    <li value="4">Accept payment for the gift card -&gt; gift card has now been created and activated and is ready to be used for payment.</li>
+                </ol>
+                <p><b>Using gift card for payment</b>
+                </p>
+                <ol>
+                    <li value="1">Add items to the transaction</li>
+                    <li value="2">Scan the gift card ID into the barcode field (this field should have the focus by default) -&gt; Gift card payment dialog is displayed showing gift card ID and balance.</li>
+                    <li value="3">Press OK to pay using the scanned gift card</li>
+                </ol>
+                <div class="Tips">
+                    <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+                    <p class="note">If using preprinted gift cards or magnetic cards then remember to turn of the gift card receipt printing.<br /></p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Amount</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Example scenario – gift cards printed on receipt printer.</p>
+                <p>For gift card option Amount you only need to select in the Site service profile whether you want the gift cards to be refillable or not. If you want to you can set a maximum amount for the gift cards. All gift cards are then created and activated on the POS.</p>
+                <p><b>Modifying the number sequence</b>
+                </p>
+                <p>If you want to print the gift cards on the receipt printer then gift card IDs will be generated by the system. To be able to use the barcode scanning of gift cards when paying with them you need to modify the number sequence to match the gift card barcode mask.</p>
+                <p>In our example the mask prefix is 13 and the gift card number sequence is ######## so the gift card number sequence format must be changed to 13########.</p>
+                <p><b>Selling and activating gift card on the POS</b>
+                </p>
+                <p>1.	Select Issue gift card</p>
+                <p>2.	Select or enter the amount.</p>
+                <p>3.	Press OK</p>
+                <p>4.	Accept payment for the gift card -&gt; gift card has now been created and actived and is ready to be used for payment.</p>
+                <p><b>Using gift card for payment</b>
+                </p>
+                <ol>
+                    <li value="1">Add items to the transaction</li>
+                    <li value="2">Scan the gift card ID into the barcode field (this field should have the focus by default -&gt; Gift card payment dialog is displayed showing gift card ID and balance.</li>
+                    <li value="3">Press OK to pay using the scanned gift card</li>
+                </ol>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">2<span class="sup">nd</span> January 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2017</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

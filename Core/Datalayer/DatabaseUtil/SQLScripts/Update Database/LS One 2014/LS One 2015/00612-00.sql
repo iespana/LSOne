@@ -1,0 +1,27 @@
+﻿/*
+
+	Incident No.	: ONE-1550
+	Responsible		: Björn Eiríksson
+	Sprint			: -
+	Date created	: 20.03.2015
+
+	Description		: Adds system report flag to the REPORTS table
+	
+	
+	Tables affected	: INVENTDIMGROUP
+						
+*/
+USE LSPOSNET
+GO
+  
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'REPORTS' and COLUMN_NAME = 'SYSTEMREPORT' )
+BEGIN
+	ALTER TABLE REPORTS ADD SYSTEMREPORT bit NOT NULL default 0
+END	
+GO
+ 
+IF NOT EXISTS(SELECT * FROM PERMISSIONGROUP WHERE [GUID] = '{CEAC1AD0-E997-11DA-8AD9-0800200C9A66}')
+	Insert into PERMISSIONGROUP (GUID,Name,DATAAREAID) 
+	values ('{CEAC1AD0-E997-11DA-8AD9-0800200C9A66}','Reports','LSR');
+
+GO

@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1EE4B4B8-B522-496B-B759-5381F9185E7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.ExcelFiles</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.ExcelFiles</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.HelloWorld.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\Build\bin\Ionic.Zip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\Build\bin\Ionic.Zlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.DD.Common">
+      <HintPath>..\..\Build\bin\LSRetail.DD.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.DD.Common.Data">
+      <HintPath>..\..\Build\bin\LSRetail.DD.Common.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Build\bin\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\..\Build\bin\SevenZipSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TransAutomClient">
+      <HintPath>..\..\Build\bin\TransAutomClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\ConfigureExcelFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ConfigureExcelFolder.Designer.cs">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportExcelProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportExcelProgressDialog.Designer.cs">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportExcelDocumentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportExcelDocumentDialog.Designer.cs">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportExcelProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportExcelProgressDialog.Designer.cs">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ExporterEnums.cs" />
+    <Compile Include="ImportSettings.cs" />
+    <Compile Include="Enums\ImporterEnums.cs" />
+    <Compile Include="Exceptions\ColumnMissingException.cs" />
+    <Compile Include="MappingLogic\CustomerMapper.cs" />
+    <Compile Include="MappingLogic\DimensionMapper.cs" />
+    <Compile Include="MappingLogic\SerialNumberMapper.cs" />
+    <Compile Include="MappingLogic\StockCountingMapper.cs" />
+    <Compile Include="MappingLogic\ItemReplenishmentMapper.cs" />
+    <Compile Include="MappingLogic\MapperBase.cs" />
+    <Compile Include="MappingLogic\RetailDepartmentMapper.cs" />
+    <Compile Include="MappingLogic\RetailGroupMapper.cs" />
+    <Compile Include="MappingLogic\RetailItemMapper.cs" />
+    <Compile Include="MappingLogic\VendorMapper.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExcelImportResultsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExcelImportResultsView.Designer.cs">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.bg.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.cs.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.da.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.de.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.el.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.en-ZA.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.es-MX.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.es.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.fi.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.fr.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.hi.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.is.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.it.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.ja.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.ko.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.nb-NO.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.nl.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.pl.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.pt-BR.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.ru.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.sv.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.zh-CHS.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.zh-CHT.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.bg.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.cs.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.da.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.de.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.el.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.en-ZA.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.es-MX.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.es.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.fi.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.fr.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.hi.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.is.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.it.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.ja.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.ko.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.nb-NO.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.nl.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.pl.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.pt-BR.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.ru.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.sv.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.zh-CHS.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.zh-CHT.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Views\ExcelImportResultsView.bg.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.cs.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.da.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.de.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.el.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.es.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.fi.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.fr.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.hi.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.is.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.it.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.ja.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.ko.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.nb-NO.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.nl.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.pl.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.pt-BR.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.ru.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.sv.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.zh-CHS.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.zh-CHT.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Basic Import Template.xlsx" />
+    <None Include="Documents\Import Basic Example.xlsx" />
+    <None Include="Documents\Import Error Log.xlsx" />
+    <None Include="Documents\Import Example.xlsx" />
+    <None Include="Documents\Import Template.xlsx" />
+    <None Include="Documents\Replenishment template.xlsx" />
+    <None Include="Documents\Serial number export template.xlsx" />
+    <None Include="Documents\Serial number import template.xlsx" />
+    <None Include="Documents\Stock counting template.xlsx" />
+    <None Include="Resources\SystemImage.png" />
+    <None Include="_Diagrams\Mapping logic diagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SystemImage24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelImport16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExcelNewTemplate16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.it-IT.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.it-IT.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.nl-BE.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.nl-BE.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.bg.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.cs.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.da.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.de.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.el.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.en-ZA.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.es-MX.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.es.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.fi.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.fr.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.hi.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.is.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.it.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.ja.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.ko.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.nb-NO.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.nl-BE.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.nl.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.pl.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.pt-BR.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.ru.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.sv.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.it-IT.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableImport16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.da.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.de.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.es.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.fi.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.fr.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.hi.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.is.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.ja.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.nb-NO.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.nl-BE.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.pt-BR.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.ru.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.sv.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel template_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel template_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.en-ZA.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.es-MX.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.nl-BE.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.nl.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.bg.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConfigureExcelFolder.vi-VN.resx">
+      <DependentUpon>ConfigureExcelFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportExcelProgressDialog.vi-VN.resx">
+      <DependentUpon>ExportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelDocumentDialog.vi-VN.resx">
+      <DependentUpon>ImportExcelDocumentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportExcelProgressDialog.vi-VN.resx">
+      <DependentUpon>ImportExcelProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExcelImportResultsView.vi-VN.resx">
+      <DependentUpon>ExcelImportResultsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DDBusinessObjects\DDBusinessObjects.csproj">
+      <Project>{4D61CB6B-C9E1-4716-B0DA-8C705A890417}</Project>
+      <Name>DDBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DDDataProviders\DDDataProviders.csproj">
+      <Project>{37E21514-1171-4F36-B47E-17A2270552B2}</Project>
+      <Name>DDDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDDDataProviders\SqlDDDataProviders.csproj">
+      <Project>{312EE2F4-5032-49D9-B75D-D5B2068B918A}</Project>
+      <Name>SqlDDDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Common_services\DDService\DDService.csproj">
+      <Project>{534E2898-CB42-4712-A785-2563560D278A}</Project>
+      <Name>DDService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

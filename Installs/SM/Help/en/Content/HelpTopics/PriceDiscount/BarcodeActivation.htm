@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup|Barcodes|Barcode usage">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Discount activation with barcodes</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/PriceDiscount/BarcodeActivation.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Discount activation with barcodes</h1>
+        <p><a name="kanchor157"></a>Periodic discounts (discount offers, multibuy and Mix and match) can be manually triggered by scanning barcodes. </p>
+        <p>To set this up you first need to create a barcode setup and a barcode mask and then you add the barcode to the discount. </p>
+        <h2>Barcode setup</h2>
+        <p>To create the barcode setup and barcode mask:</p>
+        <ol>
+            <li value="1">Go to Setup &gt;&#160;Barcodes &gt; Barcode setup</li>
+            <li value="2">Create a new barcode setup by pressing the <img src="../../Resources/Images/SiteManager/addB.png" class="NoMargin" /> button. </li>
+            <li value="3">Enter a description and press OK</li>
+            <li value="4">In the Barcode setup view select a barcode type and then press the <img src="../../Resources/Images/SiteManager/addB.png" class="NoMargin" /> button to create a new barcode mask.<br /><p style="text-align: left;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/BarCodes/BarCodeSetupView_DiscountSetup.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="733" src="../../Resources/Images/SiteManager/BarCodes/BarCodeSetupView_DiscountSetup_thumb_0_300.png" tabindex="" /></a></p></li>
+            <li value="5">In the Barcode mask dialog<ol style="list-style-type: lower-alpha;"><li value="1">Enter a desciption</li><li value="2">select the maks type Discount</li><li value="3">Select a barcode symbology to use. This affects the length of the barcode mask and barcodes that will be used. </li><li value="4">Enter a prefix all the barcodes. All the discount barcodes will have to start with these numbers. </li><li value="5">Press the <img src="../../Resources/Images/SiteManager/addB.png" class="NoMargin" /> button to add mask segments to fill the requried length of the barcodes with the segment type "Any number" that is X. It depends on what barcode symbology and prefix length how long the segment has to be. See an example on the image below.<p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_DiscountSetup.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="568" data-mc-height="552" src="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_DiscountSetup_thumb_0_300.png" tabindex="" /></a></p></li><li value="6">Press Ok</li></ol></li>
+            <li value="6">Close and save the barcode setup view. </li>
+        </ol>
+        <p>&#160;</p>
+        <h2>Add barcodes to discount offers</h2>
+        <p>To add a barcode to a discount offer of any type:</p>
+        <ol>
+            <li value="1">Go to <span class="trace">Items &gt;&#160;Price/discount category</span> select one of the following:&#160;Discount offers, Multibuy or Mix and Match depending on the type of the discount you are adding a barcode to.</li>
+            <li value="2">In the upper list either select a discount offer to edit (periodic discounts need to be disabled so they can be edited) or create a new discount. </li>
+            <li value="3">In the dialog set Triggering to be Manual</li>
+            <li value="4">Enter the barcode into the barcode field and press ok
+                <div class="Tips"><img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" /><p class="note">Remember to enable the discount after this change. <br /></p></div></li>
+        </ol>
+        <p>&#160;</p>
+        <h2>Activating the discount in the POS</h2>
+        <p>To trigger the discount in the POS:</p>
+        <p>At anytime  during a transaction (after adding the first item to the transaction) the barcode can be scanned even though the item included in the discount offer has not yet been added to the transaction.</p>
+        <p>If the discounted items have already been added the discount will be triggered for those items when you scan the barcode or if the item is scanned after the barcode the discount is triggered when the item is added to the transaction. </p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Inserted:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">January 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2017</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

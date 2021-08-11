@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoDetectionResults" xml:space="preserve">
+    <value>Резултати за автоматично откриване</value>
+  </data>
+  <data name="AutoDetectOPOS_Failed" xml:space="preserve">
+    <value>Неуспешен тест за {0}: {1}</value>
+  </data>
+  <data name="AutoDetectOPOS_Successfully" xml:space="preserve">
+    <value>Успешно е добавена {0}: {1}</value>
+  </data>
+  <data name="BarcodePrintingRequiresCustomization" xml:space="preserve">
+    <value>&lt;#1 баркод не се поддържа&gt;</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Четец на баркодове</value>
+  </data>
+  <data name="BarcodeReaderEmpty" xml:space="preserve">
+    <value>Скенер за баркодове: Името е празно.</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Четец на карти</value>
+  </data>
+  <data name="CardReaderEmpty" xml:space="preserve">
+    <value>Четец на карти: Името е празно.</value>
+  </data>
+  <data name="CashDrawerIsClosed" xml:space="preserve">
+    <value>Касово чекмедже е затворено.</value>
+  </data>
+  <data name="CashDrawerIsIllegallyClosed" xml:space="preserve">
+    <value>Касовото чекмедже е неправилно затворено.</value>
+  </data>
+  <data name="CashDrawerTimedOut" xml:space="preserve">
+    <value>Таймерът на касовото чекмедже изтече.</value>
+  </data>
+  <data name="CheckForPaperJam" xml:space="preserve">
+    <value>Отказ на принтера: Проверете за засядане на хартия или прекъсване на захранването.</value>
+  </data>
+  <data name="CouldNotLoadCashDrawer" xml:space="preserve">
+    <value>Касовото чекмедже не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadDallasKey" xml:space="preserve">
+    <value>Ключът на Dallas не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadDualDisplay" xml:space="preserve">
+    <value>Двойният дисплей не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadForecourtManager" xml:space="preserve">
+    <value>Forecourt manager не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadHardware" xml:space="preserve">
+    <value>Хардуерът не можа да се зареди</value>
+  </data>
+  <data name="CouldNotLoadHardwareProfile" xml:space="preserve">
+    <value>Профилът на хардуера не може да се зареди поради следната грешка: # 1 Искате ли да отворите хардуерния профил, за да тествате настройките на хардуера и да правите промени?</value>
+  </data>
+  <data name="CouldNotLoadHardwareSetupWithError" xml:space="preserve">
+    <value>Настройката на хардуера не можа да се зареди с грешка</value>
+  </data>
+  <data name="CouldNotLoadKeylock" xml:space="preserve">
+    <value>Заключване на клавиатурата не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadLineDisplay" xml:space="preserve">
+    <value>Не може да се зареди ред дисплей: #1</value>
+  </data>
+  <data name="CouldNotLoadMSR" xml:space="preserve">
+    <value>Не може да се зареди msr: #1</value>
+  </data>
+  <data name="CouldNotLoadPrinter" xml:space="preserve">
+    <value>Принтерът не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadRFIDScanner" xml:space="preserve">
+    <value>RFID скенерът не може да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadScale" xml:space="preserve">
+    <value>Везната не може да се зареди: #1</value>
+  </data>
+  <data name="CouldNotLoadScanner" xml:space="preserve">
+    <value>Скенерът не можа да се зареди: #1</value>
+  </data>
+  <data name="CouldNotStartPrintJob" xml:space="preserve">
+    <value>Заданието за печат не можа да се стартира.</value>
+  </data>
+  <data name="CouldNotTestPrintingOfReceipt" xml:space="preserve">
+    <value>Не можа да се тества отпечатването на разписката</value>
+  </data>
+  <data name="CurrentProfileWillBeApplied" xml:space="preserve">
+    <value>Ще се приложи текущият профил</value>
+  </data>
+  <data name="DisplayIsClosed" xml:space="preserve">
+    <value>Дисплеят е затворен.</value>
+  </data>
+  <data name="DisplayIsIllegallyClosed" xml:space="preserve">
+    <value>Дисплеят е незаконно затворен.</value>
+  </data>
+  <data name="DisplayTimedOut" xml:space="preserve">
+    <value>Времето на дисплея изтече</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Чекмедже</value>
+  </data>
+  <data name="DrawerEmpty" xml:space="preserve">
+    <value>Чекмедже: Името е празно</value>
+  </data>
+  <data name="EFTNotSavedOnHO" xml:space="preserve">
+    <value>Няма достъп до услугата, за да се запазят централизирано настройките на EFT, промените ще бъдат запазени локално</value>
+  </data>
+  <data name="EnterWeight" xml:space="preserve">
+    <value>Въведете тегло</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Приключване</value>
+  </data>
+  <data name="FixProblemAndRetry" xml:space="preserve">
+    <value>Искате ли да опитате да разрешите проблема и да опитате отново?</value>
+  </data>
+  <data name="HardwareNotSavedOnHO" xml:space="preserve">
+    <value>Не може да има достъп до услугата, за да се запазят централизирано настройките на хардуера, промените ще бъдат запазени локално</value>
+  </data>
+  <data name="HardwareProfileErrorString" xml:space="preserve">
+    <value>Следното(ите) устройство(а) имат невалидни настройки: {0} Моля стартирайте мениджъра на сайта и разрешете всички проблеми, преди да рестартирате POS</value>
+  </data>
+  <data name="HardwareProfileSufficientPermissions" xml:space="preserve">
+    <value>За да промените хардуерния профил, потребителят с необходимите разрешения трябва да влезе в профила си.</value>
+  </data>
+  <data name="InsertSlipIntoPrinter" xml:space="preserve">
+    <value>Insert slip into the printer</value>
+  </data>
+  <data name="KeylockEmpty" xml:space="preserve">
+    <value>Заключване на клавишите: Името е празно</value>
+  </data>
+  <data name="KeylockIsClosed" xml:space="preserve">
+    <value>Заключването на клавиатурата е затворено.</value>
+  </data>
+  <data name="KeylockIsIllegallyClosed" xml:space="preserve">
+    <value>Заключването на клавиатурата е неправилно затворено.</value>
+  </data>
+  <data name="KeylockTimedOut" xml:space="preserve">
+    <value>Заключването на клавиатурата изтече.</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Изглед ред</value>
+  </data>
+  <data name="LineDisplayEmpty" xml:space="preserve">
+    <value>Показване на линия: Името е празно</value>
+  </data>
+  <data name="MoreThanOneOPOSDevice" xml:space="preserve">
+    <value>Намерени са {0} {1} устройства, искате ли POS да намери и избере активно устройство?</value>
+  </data>
+  <data name="MSRIllegallyClosed" xml:space="preserve">
+    <value>MSR е незаконно затворен.</value>
+  </data>
+  <data name="MSRIsClosed" xml:space="preserve">
+    <value>MSR е затворен.</value>
+  </data>
+  <data name="MSRTimedOut" xml:space="preserve">
+    <value>MSR изтекъл</value>
+  </data>
+  <data name="NoHardwareProfilePermission" xml:space="preserve">
+    <value>Нямате разрешение да променяте хардуерния профил</value>
+  </data>
+  <data name="NoInputdetected" xml:space="preserve">
+    <value>Не намира запис. Моля проверете везната и рестартирайте POS</value>
+  </data>
+  <data name="NoOPOSDevice" xml:space="preserve">
+    <value>Не е намерен {0}</value>
+  </data>
+  <data name="NoPrinterFound" xml:space="preserve">
+    <value>Няма намерен принтер</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Не е избран принтер, и може да бъде невъзможно да се стартира LS One POS с тези настройки.</value>
+  </data>
+  <data name="NoScaleDetected" xml:space="preserve">
+    <value>Не е открита везна</value>
+  </data>
+  <data name="PleaseCheckPrinterOrPrintingStation" xml:space="preserve">
+    <value>Моля проверете принтера или печатната станция</value>
+  </data>
+  <data name="PleaseCheckThePrinter" xml:space="preserve">
+    <value>Моля проверете принтера</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Принтер</value>
+  </data>
+  <data name="PrinterCompletedOutput" xml:space="preserve">
+    <value>The printer has completed it's output!</value>
+  </data>
+  <data name="PrinterCoverIsOK" xml:space="preserve">
+    <value>Капакът на принтера е ОК</value>
+  </data>
+  <data name="PrinterCoverIsOpen" xml:space="preserve">
+    <value>Капакът на принтера е отворен</value>
+  </data>
+  <data name="PrinterEmpty" xml:space="preserve">
+    <value>Принтер: Името е празно</value>
+  </data>
+  <data name="PrinterFiredOffAnEvent" xml:space="preserve">
+    <value>Принтерът изключи грешка!</value>
+  </data>
+  <data name="PrinterIsClosed" xml:space="preserve">
+    <value>Принтерът е затворен.</value>
+  </data>
+  <data name="PrinterIsIllegallyClosed" xml:space="preserve">
+    <value>Принтерът е затворен неправилно.</value>
+  </data>
+  <data name="PrinterIsOpen" xml:space="preserve">
+    <value>Принтерът е отворен</value>
+  </data>
+  <data name="PrinterIsOutOfPaper" xml:space="preserve">
+    <value>Принтерът няма хартия или принтерът е изключен</value>
+  </data>
+  <data name="PrinterNotAccessible" xml:space="preserve">
+    <value>Принтер #1 не е достъпен. Отпечатването е отменено.</value>
+  </data>
+  <data name="PrinterTimeout" xml:space="preserve">
+    <value>Възникнало прекъсване, това може да e причинено от други програми или процеси, свързани с принтера</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Отпечатване</value>
+  </data>
+  <data name="PrintingDeviceIsDisabled" xml:space="preserve">
+    <value>Устройството за печат е деактивирано</value>
+  </data>
+  <data name="PrintingInProgress" xml:space="preserve">
+    <value>Извършва се отпечатване...</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Печатна станция</value>
+  </data>
+  <data name="PrintingStationError" xml:space="preserve">
+    <value>Грешка в печатащата станция</value>
+  </data>
+  <data name="RemoveSlipFromPrinter" xml:space="preserve">
+    <value>Премахване на приплъзване от принтера</value>
+  </data>
+  <data name="ScaleEmpty" xml:space="preserve">
+    <value>Везна: Името е празно</value>
+  </data>
+  <data name="ScaleIsClosed" xml:space="preserve">
+    <value>Везната е затворена.</value>
+  </data>
+  <data name="ScaleIsDiabledReconnect" xml:space="preserve">
+    <value>Моля свържете отново везната и рестартирайте POS</value>
+  </data>
+  <data name="ScaleIsDisabled" xml:space="preserve">
+    <value>Везната е деактивирана, моля свържете отново везната и рестартирайте POS</value>
+  </data>
+  <data name="ScaleIsDisabledEnterWeight" xml:space="preserve">
+    <value>Везната е деактивирана, искате ли ръчно да въведете теглото?</value>
+  </data>
+  <data name="ScaleIsIllegallyClosed" xml:space="preserve">
+    <value>Везната е неправилно затворена</value>
+  </data>
+  <data name="ScaleTimedOut" xml:space="preserve">
+    <value>Времето на везната изтече</value>
+  </data>
+  <data name="ScannedTimedOut" xml:space="preserve">
+    <value>Времето за сканиране изтече</value>
+  </data>
+  <data name="ScannerIsClosesd" xml:space="preserve">
+    <value>Скенерът е затворен.</value>
+  </data>
+  <data name="ScannerIsIllegallyClosed" xml:space="preserve">
+    <value>Скенерът е незаконно затворен</value>
+  </data>
+  <data name="TestFailed" xml:space="preserve">
+    <value>Тестът на устройството не бе успешен: #1</value>
+  </data>
+  <data name="TestSuccessful" xml:space="preserve">
+    <value>Устройството е тествано успешно</value>
+  </data>
+  <data name="WelcomeTo" xml:space="preserve">
+    <value>Добре дошли в</value>
+  </data>
+</root>

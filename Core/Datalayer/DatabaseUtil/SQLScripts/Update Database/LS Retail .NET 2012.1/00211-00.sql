@@ -1,0 +1,23 @@
+﻿/*
+
+	Incident No.	: 17877
+	Responsible		: Erna Guðrún Sigurðardóttir
+	Sprint			: LS Retail .NET 2013\Merkúr
+	Date created	: 19.07.2012
+
+	Description		: Add KitchenManagerProfileId to RBOTERMINALTABLE
+	
+	
+	Tables affected	: RBOTERMINALTABLE
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('RBOTERMINALTABLE') AND NAME='KITCHENMANAGERPROFILEID')
+BEGIN
+	ALTER TABLE dbo.RBOTERMINALTABLE ADD KITCHENMANAGERPROFILEID uniqueidentifier NULL
+END
+GO

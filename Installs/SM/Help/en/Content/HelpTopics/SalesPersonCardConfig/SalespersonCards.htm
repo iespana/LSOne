@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup|Barcodes|Barcode usage">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SalespersonCard</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/SalesPersonCardConfig/SalespersonCards.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>How to setup a barcode for a sales person card</h1>
+        <p>User can have his/her account linked to a Sales person card which can be scanned or entered manually, when doing a  transaction in POS. </p>
+        <p class="heading"><b>Example:</b> <![CDATA[ ]]></p>
+        <p>Sales persons card numbers are e.g. 7 characters and all start with the four digits <i>7911</i>.The three last digits represent the user login or ID. If you would for example scan or enter manually card number <i>7911101</i> then the POS looks up user with ID or login number 101. To set the card numbers up as barcodes do the following:</p>
+        <ol>
+            <li value="1"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_SalesPerson.png"><img class="MCPopupThumbnail img imgthumbRight" data-mc-width="568" data-mc-height="552" src="../../Resources/Images/SiteManager/BarCodes/BarCodeMaskDialog_SalesPerson_thumb_0_200.png" tabindex="" /></a>
+			Go to <a href="../../FieldHelp/BarCodes/BarCodeMaskSetupView.htm" class="MCXref xref">Bar code Mask Setup View</a></li>
+            <li value="2">Add a new barcode mask by clicking the Add button</li>
+            <li value="3">New bar code mask setup dialog is displayed</li>
+            <li value="4">Enter <i>Sales person card</i> as description</li>
+            <li value="5">Select <i>Sales person</i> as type of mask</li>
+            <li value="6">Select <i>EAN8</i> as symbology</li>
+            <li value="7">Enter <i>7911</i> as the mask</li>
+            <li value="8"> Prefix gets automatically the same value as the mask and mask length is 7</li>
+            <li value="9">In the lower view click the <img src="../../Resources/Images/add button.png" class="NoMargin" /> Add button to add a barcode mask segment </li>
+            <li value="10">Enter <i>1</i> as segment number</li>
+            <li value="11">Select <i>Sales person</i> as type</li>
+            <li value="12">Set segmentChar as <i>R</i></li>
+            <li value="13">Enter <i>3</i> as length</li>
+            <li value="14">Click the OK button to save the mask segment</li>
+            <li value="15">Click the OK button to save and close the barcode mask dialog</li>
+            <li value="16">Open the <a href="../../FieldHelp/BarCodes/BarCodeSetupView.htm">Barcode setup view</a> <![CDATA[ ]]></li>
+            <li value="17">Click the Add button to add a new barcode setup for sales person card</li>
+            <li value="18">Enter a description e.g. <i>Sales person card</i></li>
+            <li value="19">A barcode setup view opens up</li>
+            <li value="20">Select <i>EAN8</i> as barcode type</li>
+            <li value="21">Select <i>Sales person card</i> as mask</li>
+            <li value="22">Close the view</li>
+        </ol>
+        <p>&#160;</p>
+        <h4>Display sales person card information in POS</h4>
+        <p> You have now setup a barcode for a sales person and are able to scan the barcode or enter manually the card number into the POS. The sales person ID and name can now be displayed in the receipt panel and on the customer receipt printout.</p>
+        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SalespersonInfoOnReceiptPanel.png"><img class="MCPopupThumbnail img imgthumbLeft" data-mc-width="599" data-mc-height="320" src="../../Resources/Images/SalespersonInfoOnReceiptPanel_thumb_0_200.png" tabindex="" /></a><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SalespersonInfoOnReceipt.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="487" data-mc-height="585" src="../../Resources/Images/SalespersonInfoOnReceipt_thumb_0_300.png" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;margin-bottom: 10px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note"><a name="kanchor109"></a>If a sales person ID on the barcode doesn't exist the ID is still added to the sale item. The barcode operation will work as if <i>Hereafter</i> is true. If no item is on the transaction then the next item will get the sales person scanned.
+            </p>
+        </div>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="SalespersonCardBinSeries.htm">How to setup a sales person card for a card reader</a>
+            </li>
+            <li value="2"><a href="../POSSetup/Layout/Changing the Receipt Panel.htm">Changing the receipt panel</a>
+            </li>
+            <li value="3"><a href="../LSOnePOS/SalesPersonOperation.htm">Sales person operations</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">27<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

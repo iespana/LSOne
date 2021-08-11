@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="POS |POS Setup|Sending email receipts">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Sending email receipts</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/EmailReceipts/EmailReceiptPOS.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Sending email receipts</h1>
+        <p>Receipts can be sent by emails from the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> to a customer. </p>
+        <p>The setup needed for emailing of receipts are explained in this <a href="EmailReceipts.htm">topic</a>.</p>
+        <p>The <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> will respond differently depending on how the email option is selected in the <a href="../../FieldHelp/Profiles/TransactionServiceProfileView.htm">site service profile</a>. </p>
+        <p>These are the options:</p>
+        <h2>Never</h2>
+        <p>An email receipt will never be sent. </p>
+        <h2>Always</h2>
+        <p>For any finalized transaction that normally would print a form, an email will be sent to the customer or another captured email address. </p>
+        <p>When a transaction is finalized the POS first checks if a customer is registered for the transaction. If a customer has been added to the transaction and this customer has an email registerd for receipt emails the receipt will be sent to this email. </p>
+        <p>If no email exists or a customer has not been added to the transaction the POS the email address dialog will pop up where the POS&#160;user can enter the email address the receipt should be sent to. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/POS/EmailAddressDialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="549" src="../../Resources/Images/POS/EmailAddressDialog_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <h2>Only to registerd customers</h2>
+        <p>An email receipt will only be sent if a customer has been added to the transaction being completed. </p>
+        <p>If the customer has a registered receipt email address the email dialog will popup with the registered address already inserted, to confirm the email address being sent to. And the address can be edited before sending. </p>
+        <p>If the customer has NO registered receipt email address the email address dialog is opened to capture an email address to send to. </p>
+        <p>&#160;</p>
+        <h2>On request</h2>
+        <p>Receipts are never sent automatically when a transaction is finalized. A cashier can press a button to trigger the emailing of a receipt. </p>
+        <p>When the <b>Send an email receipt</b>(the button might have another name in your layout) button is pressed the email address dialog opens and captures an email address to send the receipt for the last finalized transaction to. </p>
+        <p>The operation Send an email receipts needs to be added to the touch button layout, see how to edit a button operation here: <a href="../POSSetup/Layout/Button Properties.htm" class="MCXref xref">Button Properties</a>. </p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Inserted:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">January 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2017</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

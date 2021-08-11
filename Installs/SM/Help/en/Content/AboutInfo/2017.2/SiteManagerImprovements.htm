@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.2">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Site Manager improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.2/SiteManagerImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1><span class="MyVariablesSite Manager">Site Manager</span> improvements</h1>
+        <p>In this section general improvements that mostly or only affect the <span class="MyVariablesSite Manager">Site Manager</span> are explained. Some changes may affect both the <span class="MyVariablesSite Manager">Site Manager</span> and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>. For smaller improvements and bug fixes please see the other improvements section of the release notes.</p>
+        <p>&#160;</p>
+        <h2>Button menus</h2>
+        <p>In order to be able to create the operation menus necessary for the Inventory apps some changes to how button menus were created in the <span class="MyVariablesSite Manager">Site Manager</span> were needed. Now button menus can be found both under "Look and feel" and "Omni" sections in the "Sites" ribbon tab.</p>
+        <p style="text-align: center;">&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Sites ribbon - Button menus.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1172" data-mc-height="147" src="Resources/Sites ribbon - Button menus_thumb_0_300.png" style="width: 728px;height: 91px;" tabindex="" /></a>
+        </p>
+        <h3>User interface changes</h3>
+        <p>For the touch button layouts the button menu functionality remains the same as before but the user interface for the management of the menus and buttons has been changed. Now when entering the button menus a the first view is a list of all menu headers and a search filter to search for button menus. To view the buttons on each menu the edit button must be selected where information about the look and feel of the button menu is displayed and the tab "Menu buttons" has the list of buttons included in the menu. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Button Menus - Menu buttons.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1172" data-mc-height="653" src="Resources/Button Menus - Menu buttons_thumb_0_300.png" style="width: 585px;height: 325px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>The option of creating more than one button at a time (Add button in Menu buttons list) and the user being able to scroll between the buttons from within the button view, for an easier way of editing multiple buttons, has not been changed.</p>
+        <p>&#160;</p>
+        <h3>Functionality changes</h3>
+        <p>When creating buttons for the POS&#160;touch layout the user should not see any changes but the main change is that operations that are available in LS&#160;One system are now marked if they can be used for All button menus, POS operation menus or OMNI operation menus. Which means that when creating button menus for Mobile inventory app only the operations that can be used in the app are available in the operations list. The same goes for when the POS&#160;menus are being created i.e. only POS&#160;operations are displayed in the operation lists (as before).</p>
+        <p>The "Main menu" option that can be selected on the button menus is a new configuration that is necessary for the Mobile&#160;inventory app. Only menus that have been marked as main menus can be selected as the&#160;menu that will be displayed in the Inventory app when it is first started. See changes in the functionality profile for further information.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Button menus - Inventory operations.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="768" data-mc-height="439" src="Resources/Button menus - Inventory operations_thumb_0_300.png" style="width: 439px;height: 250px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <h2>Customer</h2>
+        <p>The address tab on the <a href="../../FieldHelp/Customer/CustomerView.htm">customer card</a> has been changed so that the address information can be viewed in an easier manner.</p>
+        <p>All addresses are now displayed in this one tab and they are marked as Shipping address or Billing address. The customer can have as many of each type as is necessary and now one shipping and one billing address can be marked as default. In previous releases the customer could only have one of each type of the addresses and the addresses that are already in the system will be set as defaults when the system is upgraded.</p>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Customers - Address tab.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1021" data-mc-height="731" src="Resources/Customers - Address tab_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>When a new customer is created and "Copy from" option is used the following fields are now copied from the selected customer to the new customer that is being created:</p>
+        <ul>
+            <li value="1">Invoice customer</li>
+            <li value="2">Language code</li>
+            <li value="3">Receipt option</li>
+            <li value="4">Currency</li>
+            <li value="5">Sales tax group</li>
+            <li value="6">Blocking</li>
+            <li value="7">Cash customer</li>
+            <li value="8">Line discounts</li>
+            <li value="9">Periodic discounts</li>
+            <li value="10">Group limit</li>
+            <li value="11">Customer groups</li>
+            <li value="12">Infocodes</li>
+            <li value="13">Sales prices</li>
+            <li value="14">Promotions</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The customer search in <span class="MyVariablesSite Manager">Site Manager</span> can now be filtered by invoice customer.</p>
+        <p>Searching customers on the POS will also search for the invoice customer if there is any.</p>
+        <p>Fixed an issues causing the customer name to not be visible on multiple screen when the customer only had a display name set.</p>
+        <p>When adding a payment to a customer account through Site Manager a negative payment can now be entered.</p>
+        <p>Invoice customer can now be set when creating or editing customers on the POS.</p>
+        <p>&#160;</p>
+        <h2>User profile</h2>
+        <p>In previous releases of LS&#160;One when setting up a user settings regarding maximum returns, maximum discount, store, visual profile, layout language settings and etc. had to be configured on each and every user. We have now created a <a href="../../FieldHelp/Profiles/UserProfileView.htm">user profile</a> to make this setup easier for the store manager.</p>
+        <p>When the system updates itself these profiles will be created automatically from the information that is already on each of the existing users and the correct profiles attached to the users. An admin user profile will also be created along with the admin user when creating a new database.</p>
+        <p>When creating a new user a user profile has to be selected and the user profile is now visible on the user card (settings tab)&#160;instead of the configurations that were there before.</p>
+        <p>On the user profile card itself a list of users that are attached to the user profile can be seen and multiple users can be added to the use profile through that list as well as updating each user with a new profile.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/User profile - discount settings.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1025" data-mc-height="728" src="Resources/User profile - discount settings_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <h2>Gift card balance receipt</h2>
+        <p>A new receipt has been added to the system receipts called Gift card balance. This receipt is printed when the customer pays with a gift card. This receipt prints out information about the gift card with the amount that was paid as well as the remaining balance on the gift card after the payment if the gift card is a refillable gift card. If the gift card is not refillable then the remaining amount will always be 0.</p>
+        <p>To get the new receipt into existing data go to the <a href="../../FieldHelp/Profiles/FormProfilesView.htm">Form profiles view</a> and reset the <a href="../../HelpTopics/POSSetup/DefaultProfileAndReceiptData.htm">default form profile</a>.</p>
+        <p>If this receipt should not be printed then it can be configured to <a href="../../FieldHelp/Forms/FormView.htm">not be printed</a>. </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

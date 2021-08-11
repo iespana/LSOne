@@ -1,0 +1,967 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" 
+            xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x10012874" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x10012874">
+            <complexType name="KitchenServiceConfiguration">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="KMListenPort" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DisplayStationBasePort" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="PosBasePort" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" name="DatabaseHost" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" name="DatabaseName" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" name="DatabasePassword" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" name="DatabaseUser" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" name="DebugLevel" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" default="false" name="WindowsAuthentication" type="boolean"/>
+                    <element minOccurs="1" maxOccurs="1" name="DatabaseConnectionType" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" name="DataAreaId" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="ClearRoutingCacheInterval" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DebugKeepFileDays" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DaysToKeepKitchenDisplayLogRecs" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="OrderFilesKeepHours" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="false" name="UseCachedValues" type="boolean"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DebugFileCnt" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DebugFileSize" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" default="false" name="UsePercentCookingTime" type="boolean"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="DefaultCookingTime" type="int"/>
+                    <element minOccurs="1" maxOccurs="1" name="kdsDatabaseType" type="string"/>
+                    <element minOccurs="1" maxOccurs="1" default="0" name="WebServiceCheckForNewKOTsInterval" type="int"/>
+                </sequence>
+                <attribute name="KMHostName" type="string" use="required"/>
+            </complexType>
+            <complexType name="KDSConfigurationXML" mixed="true">
+                <sequence>
+                    <element minOccurs="1" maxOccurs="unbounded" name="KitchenServiceConfiguration" type="tns:KitchenServiceConfiguration"/>
+                </sequence>
+            </complexType>
+            <element name="KDSConfigurationXML" type="tns:KDSConfigurationXML"/>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" 
+            xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x10012873" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x10012873">
+            <complexType name="PrintBuffer">
+                <sequence/>
+                <attribute name="TransactionNo" type="string" use="required"/>
+                <attribute name="BufferIndex" type="string" use="required"/>
+                <attribute name="StationNo" type="string" use="required"/>
+                <attribute name="PageNo" type="string" use="required"/>
+                <attribute name="PrintedLineNo" type="string" use="required"/>
+                <attribute name="LineType" type="string" use="required"/>
+                <attribute name="FiscalLineType" type="string" use="required"/>
+                <attribute name="HostID" type="string" use="required"/>
+                <attribute name="ProfileID" type="string" use="required"/>
+                <attribute name="TransactionType" type="string" use="required"/>
+                <attribute name="Text" type="string" use="required"/>
+                <attribute name="Width" type="string" use="required"/>
+                <attribute name="Height" type="string" use="required"/>
+                <attribute name="BCType" type="string" use="required"/>
+                <attribute name="BCPos" type="string" use="required"/>
+                <attribute name="SetBackPrinting" type="string" use="required"/>
+                <attribute name="FontType" type="string" use="required"/>
+                <attribute name="StoreNo." type="string" use="required"/>
+                <attribute name="TerminalNo" type="string" use="required"/>
+                <attribute name="EntryNo" type="string" use="required"/>
+                <attribute name="Training" type="string" use="required"/>
+                <attribute name="DesignText" type="string" use="required"/>
+            </complexType>
+            <complexType name="KOTRouting">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="unbounded" name="PrintBuffer" type="tns:PrintBuffer"/>
+                </sequence>
+                <attribute name="DispStation" type="string" use="required"/>
+                <attribute name="TimeOffs" type="string" use="required"/>
+                <attribute name="ProductionTime" type="string" use="required"/>
+                <attribute name="FallbackStation" type="string" use="required"/>
+                <attribute name="ExpoBumpStationID" type="string" use="required"/>
+                <attribute name="KotHdrRoutingStatus" type="string" use="required"/>
+            </complexType>
+            <complexType name="Modifier">
+                <sequence/>
+                <attribute name="LineNo" type="string" use="required"/>
+                <attribute name="Description" type="string" use="required"/>
+                <attribute name="Quantity" type="string" use="required"/>
+                <attribute name="Type" type="string" use="required"/>
+                <attribute name="Voided" type="string" use="required"/>
+                <attribute name="ItemModifierNo" type="string" use="required"/>
+                <attribute name="LineType" type="string" use="required"/>
+            </complexType>
+            <complexType name="Routing">
+                <sequence/>
+                <attribute name="DisplayStation" type="string" use="required"/>
+                <attribute name="CookingTime" type="string" use="required"/>
+                <attribute name="TimeOffset" type="string" use="required"/>
+                <attribute name="KotLineStatus" type="string" use="required"/>
+            </complexType>
+            <complexType name="Line">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="unbounded" name="Modifier" type="tns:Modifier"/>
+                    <element minOccurs="0" maxOccurs="unbounded" name="Routing" type="tns:Routing"/>
+                </sequence>
+                <attribute name="LineNo" type="string" use="required"/>
+                <attribute name="No" type="string" use="required"/>
+                <attribute name="Description" type="string" use="required"/>
+                <attribute name="Quantity" type="string" use="required"/>
+                <attribute name="Voided" type="string" use="required"/>
+                <attribute name="SeatNo" type="string" use="required"/>
+                <attribute name="DealID" type="string" use="required"/>
+                <attribute name="DealName" type="string" use="required"/>
+                <attribute name="DealLineNo" type="string" use="required"/>
+                <attribute name="PartOfDeal" type="string" use="required"/>
+                <attribute name="LineType" type="string" use="required"/>
+            </complexType>
+            <complexType name="POSTag">
+                <sequence/>
+                <attribute name="POSTagName" type="string" use="required"/>
+                <attribute name="POSTagValue" type="string" use="required"/>
+            </complexType>
+            <complexType name="Order">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="unbounded" name="KOTRouting" type="tns:KOTRouting"/>
+                    <element minOccurs="0" maxOccurs="unbounded" name="Line" type="tns:Line"/>
+                    <element minOccurs="0" maxOccurs="unbounded" name="POSTag" type="tns:POSTag"/>
+                </sequence>
+                <attribute name="ID" type="string" use="required"/>
+                <attribute name="KOTNo" type="string" use="required"/>
+                <attribute name="KOTTime" type="string" use="required"/>
+                <attribute name="HospTypeID" type="string" use="required"/>
+                <attribute name="HospTypeText" type="string" use="required"/>
+                <attribute name="TableNo" type="string" use="required"/>
+                <attribute name="OrderingTime" type="string" use="required"/>
+                <attribute name="EmployeeName" type="string" use="required"/>
+                <attribute name="TransactionNo" type="string" use="required"/>
+                <attribute name="PosID" type="string" use="required"/>
+                <attribute name="PaymentStatus" type="string" use="required"/>
+                <attribute name="Voided" type="string" use="required"/>
+                <attribute name="MenuTypeDescription" type="string" use="required"/>
+                <attribute name="Text2" type="string" use="required"/>
+                <attribute name="Text3" type="string" use="required"/>
+                <attribute name="Text4" type="string" use="required"/>
+                <attribute name="Text5" type="string" use="required"/>
+                <attribute name="Text6" type="string" use="required"/>
+                <attribute name="RushOrder" type="string" use="required"/>
+                <attribute name="DateTimeDue" type="string" use="required"/>
+                <attribute name="StaffID" type="string" use="required"/>
+                <attribute name="Covers" type="string" use="required"/>
+                <attribute name="CustomerOrderQueueNo" type="string" use="required"/>
+            </complexType>
+            <complexType name="Orders" mixed="true">
+                <sequence>
+                    <element minOccurs="0" maxOccurs="unbounded" name="Order" type="tns:Order"/>
+                </sequence>
+            </complexType>
+            <element name="Orders" type="tns:Orders"/>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS">
+            <element name="GetHWSMappingsFromDStoPrinters">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetHWSMappingsFromDStoPrinters_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetHWSPrintersInfo">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetHWSPrintersInfo_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateGroupItems">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateGroupItems_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateProfileGroups">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateProfileGroups_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateProfiles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSAggregateProfiles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfileLineColumns">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfileLineColumns_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfileLines">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfileLines_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfiles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayProfiles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayStations">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSDisplayStations_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSFunctionalProfiles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSFunctionalProfiles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSPosMenuHeaders">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSPosMenuHeaders_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSPosMenuLines">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSPosMenuLines_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSStyleProfiles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSStyleProfiles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSTimeStyles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSTimeStyles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKDSVisualProfiles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKDSVisualProfiles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKitchenDisplayPrinters">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKitchenDisplayPrinters_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKitchenServiceConfigXML">
+                <complexType>
+                    <sequence>
+                        <element xmlns:q1="urn:microsoft-dynamics-nav/xmlports/x10012874" minOccurs="1" maxOccurs="1" name="kDSConfigurationXML" type="q1:KDSConfigurationXML"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKitchenServiceConfigXML_Result">
+                <complexType>
+                    <sequence>
+                        <element xmlns:q2="urn:microsoft-dynamics-nav/xmlports/x10012874" minOccurs="1" maxOccurs="1" name="kDSConfigurationXML" type="q2:KDSConfigurationXML"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetKitchenServiceConfig">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetKitchenServiceConfig_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetStationPrintingHosts">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetStationPrintingHosts_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetUIStyles">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="GetUIStyles_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetUnsentKOTsJSON">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="storeNo" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="terminalNo" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetUnsentKOTsJSON_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetUnsentKOTsXML">
+                <complexType>
+                    <sequence>
+                        <element xmlns:q3="urn:microsoft-dynamics-nav/xmlports/x10012873" minOccurs="1" maxOccurs="1" name="kDSOrder" type="q3:Orders"/>
+                        <element minOccurs="1" maxOccurs="1" name="storeNo" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="terminalNo" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="GetUnsentKOTsXML_Result">
+                <complexType>
+                    <sequence>
+                        <element xmlns:q4="urn:microsoft-dynamics-nav/xmlports/x10012873" minOccurs="1" maxOccurs="1" name="kDSOrder" type="q4:Orders"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="LogKitchenServiceEvent">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="iD" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="replCounter" type="int"/>
+                        <element minOccurs="1" maxOccurs="1" name="deviceID" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="deviceType" type="int"/>
+                        <element minOccurs="1" maxOccurs="1" name="storeID" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="kotNo" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="itemID" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="itemLineNo" type="int"/>
+                        <element minOccurs="1" maxOccurs="1" name="status" type="int"/>
+                        <element minOccurs="1" maxOccurs="1" name="modifiedTime" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="message" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="printerStatus" type="int"/>
+                        <element minOccurs="1" maxOccurs="1" name="printerName" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="LogKitchenServiceEvent_Result">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="LogKitchenServiceMsgToWSLog">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="storeNo" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="terminalNo" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="subject" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="message" type="string"/>
+                        <element minOccurs="1" maxOccurs="1" name="entryType" type="int"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="LogKitchenServiceMsgToWSLog_Result">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="Ping">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="Ping_Result">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </types>
+    <message name="GetHWSMappingsFromDStoPrinters">
+        <part name="parameters" element="tns:GetHWSMappingsFromDStoPrinters"/>
+    </message>
+    <message name="GetHWSMappingsFromDStoPrinters_Result">
+        <part name="parameters" element="tns:GetHWSMappingsFromDStoPrinters_Result"/>
+    </message>
+    <message name="GetHWSPrintersInfo">
+        <part name="parameters" element="tns:GetHWSPrintersInfo"/>
+    </message>
+    <message name="GetHWSPrintersInfo_Result">
+        <part name="parameters" element="tns:GetHWSPrintersInfo_Result"/>
+    </message>
+    <message name="GetKDSAggregateGroupItems">
+        <part name="parameters" element="tns:GetKDSAggregateGroupItems"/>
+    </message>
+    <message name="GetKDSAggregateGroupItems_Result">
+        <part name="parameters" element="tns:GetKDSAggregateGroupItems_Result"/>
+    </message>
+    <message name="GetKDSAggregateProfileGroups">
+        <part name="parameters" element="tns:GetKDSAggregateProfileGroups"/>
+    </message>
+    <message name="GetKDSAggregateProfileGroups_Result">
+        <part name="parameters" element="tns:GetKDSAggregateProfileGroups_Result"/>
+    </message>
+    <message name="GetKDSAggregateProfiles">
+        <part name="parameters" element="tns:GetKDSAggregateProfiles"/>
+    </message>
+    <message name="GetKDSAggregateProfiles_Result">
+        <part name="parameters" element="tns:GetKDSAggregateProfiles_Result"/>
+    </message>
+    <message name="GetKDSDisplayProfileLineColumns">
+        <part name="parameters" element="tns:GetKDSDisplayProfileLineColumns"/>
+    </message>
+    <message name="GetKDSDisplayProfileLineColumns_Result">
+        <part name="parameters" element="tns:GetKDSDisplayProfileLineColumns_Result"/>
+    </message>
+    <message name="GetKDSDisplayProfileLines">
+        <part name="parameters" element="tns:GetKDSDisplayProfileLines"/>
+    </message>
+    <message name="GetKDSDisplayProfileLines_Result">
+        <part name="parameters" element="tns:GetKDSDisplayProfileLines_Result"/>
+    </message>
+    <message name="GetKDSDisplayProfiles">
+        <part name="parameters" element="tns:GetKDSDisplayProfiles"/>
+    </message>
+    <message name="GetKDSDisplayProfiles_Result">
+        <part name="parameters" element="tns:GetKDSDisplayProfiles_Result"/>
+    </message>
+    <message name="GetKDSDisplayStations">
+        <part name="parameters" element="tns:GetKDSDisplayStations"/>
+    </message>
+    <message name="GetKDSDisplayStations_Result">
+        <part name="parameters" element="tns:GetKDSDisplayStations_Result"/>
+    </message>
+    <message name="GetKDSFunctionalProfiles">
+        <part name="parameters" element="tns:GetKDSFunctionalProfiles"/>
+    </message>
+    <message name="GetKDSFunctionalProfiles_Result">
+        <part name="parameters" element="tns:GetKDSFunctionalProfiles_Result"/>
+    </message>
+    <message name="GetKDSPosMenuHeaders">
+        <part name="parameters" element="tns:GetKDSPosMenuHeaders"/>
+    </message>
+    <message name="GetKDSPosMenuHeaders_Result">
+        <part name="parameters" element="tns:GetKDSPosMenuHeaders_Result"/>
+    </message>
+    <message name="GetKDSPosMenuLines">
+        <part name="parameters" element="tns:GetKDSPosMenuLines"/>
+    </message>
+    <message name="GetKDSPosMenuLines_Result">
+        <part name="parameters" element="tns:GetKDSPosMenuLines_Result"/>
+    </message>
+    <message name="GetKDSStyleProfiles">
+        <part name="parameters" element="tns:GetKDSStyleProfiles"/>
+    </message>
+    <message name="GetKDSStyleProfiles_Result">
+        <part name="parameters" element="tns:GetKDSStyleProfiles_Result"/>
+    </message>
+    <message name="GetKDSTimeStyles">
+        <part name="parameters" element="tns:GetKDSTimeStyles"/>
+    </message>
+    <message name="GetKDSTimeStyles_Result">
+        <part name="parameters" element="tns:GetKDSTimeStyles_Result"/>
+    </message>
+    <message name="GetKDSVisualProfiles">
+        <part name="parameters" element="tns:GetKDSVisualProfiles"/>
+    </message>
+    <message name="GetKDSVisualProfiles_Result">
+        <part name="parameters" element="tns:GetKDSVisualProfiles_Result"/>
+    </message>
+    <message name="GetKitchenDisplayPrinters">
+        <part name="parameters" element="tns:GetKitchenDisplayPrinters"/>
+    </message>
+    <message name="GetKitchenDisplayPrinters_Result">
+        <part name="parameters" element="tns:GetKitchenDisplayPrinters_Result"/>
+    </message>
+    <message name="GetKitchenServiceConfigXML">
+        <part name="parameters" element="tns:GetKitchenServiceConfigXML"/>
+    </message>
+    <message name="GetKitchenServiceConfigXML_Result">
+        <part name="parameters" element="tns:GetKitchenServiceConfigXML_Result"/>
+    </message>
+    <message name="GetKitchenServiceConfig">
+        <part name="parameters" element="tns:GetKitchenServiceConfig"/>
+    </message>
+    <message name="GetKitchenServiceConfig_Result">
+        <part name="parameters" element="tns:GetKitchenServiceConfig_Result"/>
+    </message>
+    <message name="GetStationPrintingHosts">
+        <part name="parameters" element="tns:GetStationPrintingHosts"/>
+    </message>
+    <message name="GetStationPrintingHosts_Result">
+        <part name="parameters" element="tns:GetStationPrintingHosts_Result"/>
+    </message>
+    <message name="GetUIStyles">
+        <part name="parameters" element="tns:GetUIStyles"/>
+    </message>
+    <message name="GetUIStyles_Result">
+        <part name="parameters" element="tns:GetUIStyles_Result"/>
+    </message>
+    <message name="GetUnsentKOTsJSON">
+        <part name="parameters" element="tns:GetUnsentKOTsJSON"/>
+    </message>
+    <message name="GetUnsentKOTsJSON_Result">
+        <part name="parameters" element="tns:GetUnsentKOTsJSON_Result"/>
+    </message>
+    <message name="GetUnsentKOTsXML">
+        <part name="parameters" element="tns:GetUnsentKOTsXML"/>
+    </message>
+    <message name="GetUnsentKOTsXML_Result">
+        <part name="parameters" element="tns:GetUnsentKOTsXML_Result"/>
+    </message>
+    <message name="LogKitchenServiceEvent">
+        <part name="parameters" element="tns:LogKitchenServiceEvent"/>
+    </message>
+    <message name="LogKitchenServiceEvent_Result">
+        <part name="parameters" element="tns:LogKitchenServiceEvent_Result"/>
+    </message>
+    <message name="LogKitchenServiceMsgToWSLog">
+        <part name="parameters" element="tns:LogKitchenServiceMsgToWSLog"/>
+    </message>
+    <message name="LogKitchenServiceMsgToWSLog_Result">
+        <part name="parameters" element="tns:LogKitchenServiceMsgToWSLog_Result"/>
+    </message>
+    <message name="Ping">
+        <part name="parameters" element="tns:Ping"/>
+    </message>
+    <message name="Ping_Result">
+        <part name="parameters" element="tns:Ping_Result"/>
+    </message>
+    <portType name="Dyn365BCWebServiceForKDS_Port">
+        <operation name="GetHWSMappingsFromDStoPrinters">
+            <input name="GetHWSMappingsFromDStoPrinters" message="tns:GetHWSMappingsFromDStoPrinters"/>
+            <output name="GetHWSMappingsFromDStoPrinters_Result" message="tns:GetHWSMappingsFromDStoPrinters_Result"/>
+        </operation>
+        <operation name="GetHWSPrintersInfo">
+            <input name="GetHWSPrintersInfo" message="tns:GetHWSPrintersInfo"/>
+            <output name="GetHWSPrintersInfo_Result" message="tns:GetHWSPrintersInfo_Result"/>
+        </operation>
+        <operation name="GetKDSAggregateGroupItems">
+            <input name="GetKDSAggregateGroupItems" message="tns:GetKDSAggregateGroupItems"/>
+            <output name="GetKDSAggregateGroupItems_Result" message="tns:GetKDSAggregateGroupItems_Result"/>
+        </operation>
+        <operation name="GetKDSAggregateProfileGroups">
+            <input name="GetKDSAggregateProfileGroups" message="tns:GetKDSAggregateProfileGroups"/>
+            <output name="GetKDSAggregateProfileGroups_Result" message="tns:GetKDSAggregateProfileGroups_Result"/>
+        </operation>
+        <operation name="GetKDSAggregateProfiles">
+            <input name="GetKDSAggregateProfiles" message="tns:GetKDSAggregateProfiles"/>
+            <output name="GetKDSAggregateProfiles_Result" message="tns:GetKDSAggregateProfiles_Result"/>
+        </operation>
+        <operation name="GetKDSDisplayProfileLineColumns">
+            <input name="GetKDSDisplayProfileLineColumns" message="tns:GetKDSDisplayProfileLineColumns"/>
+            <output name="GetKDSDisplayProfileLineColumns_Result" message="tns:GetKDSDisplayProfileLineColumns_Result"/>
+        </operation>
+        <operation name="GetKDSDisplayProfileLines">
+            <input name="GetKDSDisplayProfileLines" message="tns:GetKDSDisplayProfileLines"/>
+            <output name="GetKDSDisplayProfileLines_Result" message="tns:GetKDSDisplayProfileLines_Result"/>
+        </operation>
+        <operation name="GetKDSDisplayProfiles">
+            <input name="GetKDSDisplayProfiles" message="tns:GetKDSDisplayProfiles"/>
+            <output name="GetKDSDisplayProfiles_Result" message="tns:GetKDSDisplayProfiles_Result"/>
+        </operation>
+        <operation name="GetKDSDisplayStations">
+            <input name="GetKDSDisplayStations" message="tns:GetKDSDisplayStations"/>
+            <output name="GetKDSDisplayStations_Result" message="tns:GetKDSDisplayStations_Result"/>
+        </operation>
+        <operation name="GetKDSFunctionalProfiles">
+            <input name="GetKDSFunctionalProfiles" message="tns:GetKDSFunctionalProfiles"/>
+            <output name="GetKDSFunctionalProfiles_Result" message="tns:GetKDSFunctionalProfiles_Result"/>
+        </operation>
+        <operation name="GetKDSPosMenuHeaders">
+            <input name="GetKDSPosMenuHeaders" message="tns:GetKDSPosMenuHeaders"/>
+            <output name="GetKDSPosMenuHeaders_Result" message="tns:GetKDSPosMenuHeaders_Result"/>
+        </operation>
+        <operation name="GetKDSPosMenuLines">
+            <input name="GetKDSPosMenuLines" message="tns:GetKDSPosMenuLines"/>
+            <output name="GetKDSPosMenuLines_Result" message="tns:GetKDSPosMenuLines_Result"/>
+        </operation>
+        <operation name="GetKDSStyleProfiles">
+            <input name="GetKDSStyleProfiles" message="tns:GetKDSStyleProfiles"/>
+            <output name="GetKDSStyleProfiles_Result" message="tns:GetKDSStyleProfiles_Result"/>
+        </operation>
+        <operation name="GetKDSTimeStyles">
+            <input name="GetKDSTimeStyles" message="tns:GetKDSTimeStyles"/>
+            <output name="GetKDSTimeStyles_Result" message="tns:GetKDSTimeStyles_Result"/>
+        </operation>
+        <operation name="GetKDSVisualProfiles">
+            <input name="GetKDSVisualProfiles" message="tns:GetKDSVisualProfiles"/>
+            <output name="GetKDSVisualProfiles_Result" message="tns:GetKDSVisualProfiles_Result"/>
+        </operation>
+        <operation name="GetKitchenDisplayPrinters">
+            <input name="GetKitchenDisplayPrinters" message="tns:GetKitchenDisplayPrinters"/>
+            <output name="GetKitchenDisplayPrinters_Result" message="tns:GetKitchenDisplayPrinters_Result"/>
+        </operation>
+        <operation name="GetKitchenServiceConfigXML">
+            <input name="GetKitchenServiceConfigXML" message="tns:GetKitchenServiceConfigXML"/>
+            <output name="GetKitchenServiceConfigXML_Result" message="tns:GetKitchenServiceConfigXML_Result"/>
+        </operation>
+        <operation name="GetKitchenServiceConfig">
+            <input name="GetKitchenServiceConfig" message="tns:GetKitchenServiceConfig"/>
+            <output name="GetKitchenServiceConfig_Result" message="tns:GetKitchenServiceConfig_Result"/>
+        </operation>
+        <operation name="GetStationPrintingHosts">
+            <input name="GetStationPrintingHosts" message="tns:GetStationPrintingHosts"/>
+            <output name="GetStationPrintingHosts_Result" message="tns:GetStationPrintingHosts_Result"/>
+        </operation>
+        <operation name="GetUIStyles">
+            <input name="GetUIStyles" message="tns:GetUIStyles"/>
+            <output name="GetUIStyles_Result" message="tns:GetUIStyles_Result"/>
+        </operation>
+        <operation name="GetUnsentKOTsJSON">
+            <input name="GetUnsentKOTsJSON" message="tns:GetUnsentKOTsJSON"/>
+            <output name="GetUnsentKOTsJSON_Result" message="tns:GetUnsentKOTsJSON_Result"/>
+        </operation>
+        <operation name="GetUnsentKOTsXML">
+            <input name="GetUnsentKOTsXML" message="tns:GetUnsentKOTsXML"/>
+            <output name="GetUnsentKOTsXML_Result" message="tns:GetUnsentKOTsXML_Result"/>
+        </operation>
+        <operation name="LogKitchenServiceEvent">
+            <input name="LogKitchenServiceEvent" message="tns:LogKitchenServiceEvent"/>
+            <output name="LogKitchenServiceEvent_Result" message="tns:LogKitchenServiceEvent_Result"/>
+        </operation>
+        <operation name="LogKitchenServiceMsgToWSLog">
+            <input name="LogKitchenServiceMsgToWSLog" message="tns:LogKitchenServiceMsgToWSLog"/>
+            <output name="LogKitchenServiceMsgToWSLog_Result" message="tns:LogKitchenServiceMsgToWSLog_Result"/>
+        </operation>
+        <operation name="Ping">
+            <input name="Ping" message="tns:Ping"/>
+            <output name="Ping_Result" message="tns:Ping_Result"/>
+        </operation>
+    </portType>
+    <binding name="Dyn365BCWebServiceForKDS_Binding" type="tns:Dyn365BCWebServiceForKDS_Port">
+        <binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetHWSMappingsFromDStoPrinters">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetHWSMappingsFromDStoPrinters" style="document"/>
+            <input name="GetHWSMappingsFromDStoPrinters">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetHWSMappingsFromDStoPrinters_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetHWSPrintersInfo">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetHWSPrintersInfo" style="document"/>
+            <input name="GetHWSPrintersInfo">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetHWSPrintersInfo_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSAggregateGroupItems">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSAggregateGroupItems" style="document"/>
+            <input name="GetKDSAggregateGroupItems">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSAggregateGroupItems_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSAggregateProfileGroups">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSAggregateProfileGroups" style="document"/>
+            <input name="GetKDSAggregateProfileGroups">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSAggregateProfileGroups_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSAggregateProfiles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSAggregateProfiles" style="document"/>
+            <input name="GetKDSAggregateProfiles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSAggregateProfiles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSDisplayProfileLineColumns">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSDisplayProfileLineColumns" style="document"/>
+            <input name="GetKDSDisplayProfileLineColumns">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSDisplayProfileLineColumns_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSDisplayProfileLines">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSDisplayProfileLines" style="document"/>
+            <input name="GetKDSDisplayProfileLines">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSDisplayProfileLines_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSDisplayProfiles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSDisplayProfiles" style="document"/>
+            <input name="GetKDSDisplayProfiles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSDisplayProfiles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSDisplayStations">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSDisplayStations" style="document"/>
+            <input name="GetKDSDisplayStations">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSDisplayStations_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSFunctionalProfiles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSFunctionalProfiles" style="document"/>
+            <input name="GetKDSFunctionalProfiles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSFunctionalProfiles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSPosMenuHeaders">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSPosMenuHeaders" style="document"/>
+            <input name="GetKDSPosMenuHeaders">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSPosMenuHeaders_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSPosMenuLines">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSPosMenuLines" style="document"/>
+            <input name="GetKDSPosMenuLines">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSPosMenuLines_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSStyleProfiles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSStyleProfiles" style="document"/>
+            <input name="GetKDSStyleProfiles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSStyleProfiles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSTimeStyles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSTimeStyles" style="document"/>
+            <input name="GetKDSTimeStyles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSTimeStyles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKDSVisualProfiles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKDSVisualProfiles" style="document"/>
+            <input name="GetKDSVisualProfiles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKDSVisualProfiles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKitchenDisplayPrinters">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKitchenDisplayPrinters" style="document"/>
+            <input name="GetKitchenDisplayPrinters">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKitchenDisplayPrinters_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKitchenServiceConfigXML">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKitchenServiceConfigXML" style="document"/>
+            <input name="GetKitchenServiceConfigXML">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKitchenServiceConfigXML_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetKitchenServiceConfig">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetKitchenServiceConfig" style="document"/>
+            <input name="GetKitchenServiceConfig">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetKitchenServiceConfig_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetStationPrintingHosts">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetStationPrintingHosts" style="document"/>
+            <input name="GetStationPrintingHosts">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetStationPrintingHosts_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetUIStyles">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetUIStyles" style="document"/>
+            <input name="GetUIStyles">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetUIStyles_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetUnsentKOTsJSON">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetUnsentKOTsJSON" style="document"/>
+            <input name="GetUnsentKOTsJSON">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetUnsentKOTsJSON_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetUnsentKOTsXML">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:GetUnsentKOTsXML" style="document"/>
+            <input name="GetUnsentKOTsXML">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="GetUnsentKOTsXML_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="LogKitchenServiceEvent">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:LogKitchenServiceEvent" style="document"/>
+            <input name="LogKitchenServiceEvent">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="LogKitchenServiceEvent_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="LogKitchenServiceMsgToWSLog">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:LogKitchenServiceMsgToWSLog" style="document"/>
+            <input name="LogKitchenServiceMsgToWSLog">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="LogKitchenServiceMsgToWSLog_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+        <operation name="Ping">
+            <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:microsoft-dynamics-schemas/codeunit/Dyn365BCWebServiceForKDS:Ping" style="document"/>
+            <input name="Ping">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </input>
+            <output name="Ping_Result">
+                <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="Dyn365BCWebServiceForKDS">
+        <port name="Dyn365BCWebServiceForKDS_Port" binding="tns:Dyn365BCWebServiceForKDS_Binding">
+            <address xmlns="http://schemas.xmlsoap.org/wsdl/soap/" location="http://lsr000295.lsretail.local:9047/CEN-1154/WS/CRONUS%20-%20LS%20Central/Codeunit/Dyn365BCWebServiceForKDS"/>
+        </port>
+    </service>
+</definitions>

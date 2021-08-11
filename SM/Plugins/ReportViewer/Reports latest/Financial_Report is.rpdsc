@@ -1,0 +1,1088 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 5115ef40-bb4f-11e4-bb52-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Fjárstreymisskýrsla
+
+// Extra description for the report as it will appear in some of the system menus
+Description: Fjárstreymisskýrsla fyrir búðir og útstöðvar
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: is
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+//Total sum of day------------------------------------------------------------------------------------
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_TotalSumOfDay]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_TotalSumOfDay]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_TotalSumOfDay]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select 
+sum(COLLECTIVETOTAL)-sum(TOTALVOIDEDLINESINVOIDEDTRANSAMOUNT)+sum(TRAININGAMOUNT)+sum(TRAININGRETURNAMOUNT)-sum(TRAININGAMOUNTVOIDED)+sum(TOTALVOIDEDLINESAMOUNT)+sum(TOTALVOIDEDTRANSAMOUNT)+sum(TOTALRETURNAMOUNT)+sum(TOTAL_ALL_DISCOUNTS_INCLTAX)+sum(TOTAL_ALL_TRAINING_DISCOUNTS_INCLTAX)+sum(TOTALROUNDING) as COLLECTIVETOTALSUMOFDAY,
+sum(COLLECTIVETOTAL)-sum(TOTALVOIDEDLINESINVOIDEDTRANSAMOUNT)+sum(TOTAL_ALL_TRAINING_DISCOUNTS_INCLTAX)-sum(TRAININGAMOUNTVOIDED*2)+sum(TRAININGRETURNAMOUNT) as COLLECTIVETOTAL,
+sum(TOTALVOIDEDLINESAMOUNT) as TOTALVOIDEDLINESAMOUNT,
+sum(TOTALVOIDEDTRANSAMOUNT) as TOTALVOIDEDTRANSAMOUNT,
+sum(TOTALVOIDEDLINESINVOIDEDTRANSAMOUNT) as TOTALVOIDEDLINESINVOIDEDTRANSAMOUNT,
+sum(TRAININGAMOUNT) as TRAININGAMOUNT,
+sum(TRAININGAMOUNTVOIDED) as TRAININGAMOUNTVOIDED,
+sum(TOTALRETURNAMOUNT) as TOTALRETURNAMOUNT,
+sum(TRAININGRETURNAMOUNT) as TRAININGRETURNAMOUNT,
+sum(TOTAL_ALL_DISCOUNTS_INCLTAX) as TOTAL_ALL_DISCOUNTS_INCLTAX,
+sum(TOTAL_ALL_TRAINING_DISCOUNTS_INCLTAX) as TOTAL_ALL_TRAINING_DISCOUNTS_INCLTAX,
+sum(TOTALROUNDING) as TOTALROUNDING
+from
+(
+select
+(select COALESCE(sum(PRICE*ABS(QTY)),0) 
+from VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+AND (s.QTY < 0 OR TRANSACTIONSTATUS = 1)) as COLLECTIVETOTAL
+,
+(select  COALESCE(sum(NETAMOUNTINCLTAX),0)  
+from VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID 
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and t.ENTRYSTATUS = 5 AND TRANSACTIONSTATUS = 0) as TRAININGAMOUNT
+,
+(select  COALESCE(sum(NETAMOUNTINCLTAX),0)  
+from VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID 
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and t.ENTRYSTATUS = 5 AND TRANSACTIONSTATUS = 1)  as TRAININGAMOUNTVOIDED
+,
+(select COALESCE(sum(s.NETAMOUNTINCLTAX*-1)+sum(s.WHOLEDISCAMOUNTWITHTAX),0)
+from VTRANSACTIONSALESTRANSHASPRICE s
+left outer join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and s.TRANSACTIONSTATUS = 0 and t.ENTRYSTATUS = 5 and s.QTY > 0) as TRAININGRETURNAMOUNT
+,
+(select  COALESCE(sum(NETAMOUNTINCLTAX*-1),0)  
+from VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID 
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and s.TRANSACTIONSTATUS = 1 and t.ENTRYSTATUS = 0) as TOTALVOIDEDLINESAMOUNT
+,
+(select COALESCE(sum(NETAMOUNTINCLTAX),0)
+from VTRANSACTIONSALESTRANSHASPRICE s
+left outer join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID 
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and t.ENTRYSTATUS = 1 AND s.TRANSACTIONSTATUS = 0) as TOTALVOIDEDTRANSAMOUNT
+,
+(select COALESCE(sum(NETAMOUNTINCLTAX),0)
+from VTRANSACTIONSALESTRANSHASPRICE s
+left outer join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID 
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and t.ENTRYSTATUS = 1 AND s.TRANSACTIONSTATUS = 1) as TOTALVOIDEDLINESINVOIDEDTRANSAMOUNT
+,
+(select COALESCE(sum(s.NETAMOUNTINCLTAX*-1)+sum(s.WHOLEDISCAMOUNTWITHTAX),0) 
+from VTRANSACTIONSALESTRANSHASPRICE s
+left outer join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and s.TRANSACTIONSTATUS = 0 and t.ENTRYSTATUS = 0 and s.QTY > 0) as TOTALRETURNAMOUNT
+,
+(SELECT COALESCE(SUM(S.WHOLEDISCAMOUNTWITHTAX)* -1, 0)
+FROM VTRANSACTIONSALESTRANSHASPRICE S
+JOIN RBOTRANSACTIONTABLE T ON S.TRANSACTIONID = T.TRANSACTIONID AND S.STORE = T.STORE AND S.TERMINALID = T.TERMINAL AND S.DATAAREAID = T.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and T.ENTRYSTATUS = 0 AND T.[TYPE] = 2 AND S.TRANSACTIONSTATUS = 0) AS TOTAL_ALL_DISCOUNTS_INCLTAX
+,
+(SELECT COALESCE(SUM(S.WHOLEDISCAMOUNTWITHTAX)* -1, 0)
+FROM VTRANSACTIONSALESTRANSHASPRICE S
+JOIN RBOTRANSACTIONTABLE T ON S.TRANSACTIONID = T.TRANSACTIONID AND S.STORE = T.STORE AND S.TERMINALID = T.TERMINAL AND S.DATAAREAID = T.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+and T.ENTRYSTATUS = 5 AND T.[TYPE] = 2 AND S.TRANSACTIONSTATUS = 0) AS TOTAL_ALL_TRAINING_DISCOUNTS_INCLTAX
+,
+(select COALESCE(round(sum(ROUNDEDAMOUNT),3)*-1,0) 
+from RBOTRANSACTIONTABLE t
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+AND t.ENTRYSTATUS = 0) as TOTALROUNDING
+
+from RBOTRANSACTIONTABLE tr
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on tr.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on tr.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+where tr.TYPE = 2 and tr.DATAAREAID = @DataareaID
+) src 
+
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+
+//Sum of day------------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_SumOfDay]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_SumOfDay]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_SumOfDay]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select 
+sum(TOTALAMOUNTSALES)-sum(VOIDEDTRANSAMOUNT) as TOTAL,
+sum(TOTALQTYSOLD) as TOTALQTY,
+sum(TOTALTRANS) as TOTALTRANS,
+
+sum(TOTALAMOUNTSALES)-sum(VOIDEDTRANSAMOUNT)-sum(TRAININGAMOUNT) as TOTALAMOUNTENTERED,
+sum(TOTALQTYSOLD)+sum(NUMBEROFTRAININGITEMS)+sum(NUMBEROFVOIDEDITEMS)+sum(NUMBEROFVOIDTRANSITEMS)+sum(RETURNQTY) as TOTALQTYENTERED,
+sum(TOTALTRANS) as TOTALTRANSENTERED,
+
+--Total sum not - rounding
+sum(TOTALAMOUNTSALES)+sum(VOIDEDLINESAMOUNT)+sum(RETURNAMOUNT)+sum(ALL_DISCOUNTS_INCLTAX) as TOTALSUMOFDAY,
+sum(TOTALQTYSOLD) as TOTALQTYOFDAY,
+sum(TOTALTRANS)-sum(VOIDEDTRANSACTIONS)-sum(TRAININGTRANS) as TOTALTRANSOFDAY,
+
+sum(NUMBEROFTRAININGITEMS) as NUMBEROFTRAININGITEMS, 
+sum(TRAININGAMOUNT) as TRAININGAMOUNT, 
+sum(TRAININGTRANS) as TRAININGTRANS,
+
+sum(NUMBEROFVOIDEDITEMS) as NUMBEROFVOIDEDITEMS, 
+sum(VOIDEDLINESAMOUNT) as VOIDEDLINESAMOUNT,
+
+sum(NUMBEROFVOIDTRANSITEMS) as NUMBEROFVOIDTRANSITEMS, 
+sum(VOIDEDTRANSAMOUNT) as VOIDEDTRANSAMOUNT, 
+sum(VOIDEDTRANSACTIONS) as VOIDEDTRANSACTIONS,
+
+sum(RETURNTRANSACTIONS) as RETURNTRANSACTIONS, 
+sum(RETURNQTY) as RETURNQTY, 
+sum(RETURNAMOUNT) as RETURNAMOUNT,
+
+sum(TOTAL_DISCOUNTS_ITEMS) as TOTAL_DISCOUNTS_ITEMS,
+sum(LINE_DISCOUNTS_ITEMS) as LINE_DISCOUNTS_ITEMS,
+sum(PERIODIC_DISCOUNTS_ITEMS) as PERIODIC_DISCOUNT_ITEMS,
+sum(ALL_DISCOUNTS_INCLTAX) as ALL_DISCOUNTS_INCLTAX, sum(TOTAL_DISCOUNTS_INCLTAX) as TOTAL_DISCOUNTS_INCLTAX, 
+sum(LINE_DISCOUNTS_INCLTAX) as LINE_DISCOUNTS_INCLTAX, sum(PERIODIC_DISCOUNTS_INCLTAX) as PERIODIC_DISCOUNTS_INCLTAX,
+
+sum(INCOMEACCOUNTAMOUNT) as INCOMEACCOUNTAMOUNT, sum(INCOMEACCOUNTCOUNT) as INCOMEACCOUNTCOUNT, 
+sum(EXPENSEACCOUNTAMOUNT) as EXPENSEACCOUNTAMOUNT, sum(EXPENSEACCOUNTCOUNT) as EXPENSEACCOUNTCOUNT,
+
+sum(FLOATENTRY) as FLOATENTRY,
+sum(FLOATENTRYAMOUNT) as FLOATENTRYAMOUNT,
+sum(TENDERREMOVAL) as TENDERREMOVAL,
+sum(TENDERREMOVALAMOUNT) as TENDERREMOVALAMOUNT,
+
+sum(BANKDROP) as BANKDROP,
+sum(BANKDROPAMOUNT) as BANKDROPAMOUNT,
+sum(SAFEDROP) as SAFEDROP,
+sum(SAFEDROPAMOUNT) as SAFEDROPAMOUNT,
+
+sum(CUSTOMERACCOUNTDEPOSIT) as CUSTOMERACCOUNTDEPOSIT, sum(CUSTOMERACCOUNTDEPOSITCOUNT) as CUSTOMERACCOUNTDEPOSITCOUNT,
+sum(CUSTOMERORDERDEPOSIT) as CUSTOMERORDERDEPOSIT, sum(CUSTOMERORDERDEPOSITCOUNT) as CUSTOMERORDERDEPOSITCOUNT
+from (
+select 
+ 
+ COALESCE(
+       sum(
+       case 
+             when 
+                    trans.type = 2 and
+                    trans.entrystatus = 0 and 
+                    (saletrans.QTY<0 OR saletrans.TRANSACTIONSTATUS = 1) AND 
+                    (ENTRYSTATUS <> 5)
+             then
+                    saletrans.PRICE*ABS(saletrans.QTY)
+       end),0) TOTALAMOUNTSALES, 
+
+COALESCE(
+       sum( 
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    trans.ENTRYSTATUS = 0 AND 
+                    saletrans.TRANSACTIONSTATUS = 0
+             then
+                    saletrans.QTY
+       end)*-1,0) TOTALQTYSOLD,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    saletrans.TRANSACTIONSTATUS = 0
+             then
+                    saletrans.TRANSACTIONID + saletrans.TERMINALID
+       end),0) TOTALTRANS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 5
+             then
+                    saletrans.QTY
+       end)*-1,0) NUMBEROFTRAININGITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 5
+             then
+                    saletrans.NETAMOUNTINCLTAX
+       end),0) TRAININGAMOUNT,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 5
+             then
+                    saletrans.TRANSACTIONID + saletrans.TERMINALID
+       end),0) TRAININGTRANS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 1 and 
+                    trans.ENTRYSTATUS = 0
+             then
+                    saletrans.QTY
+       end),0) NUMBEROFVOIDEDITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 1 AND 
+                    trans.ENTRYSTATUS = 0
+             then
+                    abs(saletrans.NETAMOUNTINCLTAX) --changed to abs value to include voided returns
+       end)*-1,0) VOIDEDLINESAMOUNT,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 1 AND 
+                    saletrans.TRANSACTIONSTATUS = 0
+             then
+                    saletrans.QTY
+       end)*-1,0) NUMBEROFVOIDTRANSITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 1 AND 
+                    saletrans.TRANSACTIONSTATUS = 0
+             then
+                    saletrans.NETAMOUNTINCLTAX
+       end),0) VOIDEDTRANSAMOUNT,
+       COALESCE( 
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    trans.ENTRYSTATUS = 1 AND 
+                    saletrans.TRANSACTIONSTATUS = 0
+             then
+                    trans.TRANSACTIONID + saletrans.TERMINALID
+       end),0) VOIDEDTRANSACTIONS,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 0 and 
+                    trans.ENTRYSTATUS = 0 and 
+                    saletrans.QTY > 0
+             then
+                    saletrans.TRANSACTIONID
+       end),0) RETURNTRANSACTIONS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 0 and 
+                    trans.ENTRYSTATUS = 0 and 
+                    saletrans.QTY > 0
+             then
+                    saletrans.QTY
+       end),0) RETURNQTY,
+
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 0 and 
+                    trans.ENTRYSTATUS = 0 and 
+                    saletrans.QTY > 0
+             then
+                    saletrans.NETAMOUNTINCLTAX*-1
+       end)
+       +
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 and 
+                    saletrans.TRANSACTIONSTATUS = 0 and 
+                    trans.ENTRYSTATUS = 0 and 
+                    saletrans.QTY > 0
+             then
+                    saletrans.WHOLEDISCAMOUNTWITHTAX
+       end),0) RETURNAMOUNT,
+
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    Saletrans.WHOLEDISCAMOUNTWITHTAX 
+       end)*-1,0) ALL_DISCOUNTS_INCLTAX,
+       
+       sum(
+       case 
+             when 
+                    Saletrans.TOTALDISCAMOUNTWITHTAX <> 0 AND
+                    trans.TYPE = 2 and 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0 
+             then
+                    abs(saletrans.QTY)
+       end) TOTAL_DISCOUNTS_ITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    saletrans.TOTALDISCAMOUNTWITHTAX
+       end)*-1,0) TOTAL_DISCOUNTS_INCLTAX,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    Saletrans.LINEDISCAMOUNTWITHTAX <> 0 and
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    abs(saletrans.QTY) 
+       end),0) LINE_DISCOUNTS_ITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    Saletrans.LINEDISCAMOUNTWITHTAX
+       end)*-1,0) LINE_DISCOUNTS_INCLTAX,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    Saletrans.PERIODICDISCAMOUNTWITHTAX <> 0 and
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    abs(saletrans.QTY)
+       end),0) PERIODIC_DISCOUNTS_ITEMS,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    Saletrans.TRANSACTIONSTATUS = 0
+             then
+                    Saletrans.PERIODICDISCAMOUNTWITHTAX
+       end)*-1,0) PERIODIC_DISCOUNTS_INCLTAX,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    incometrans.TRANSACTIONSTATUS = 0 AND 
+                    incometrans.ACCOUNTTYPE = 0
+             then
+                    incometrans.amount
+       end)*-1,0) INCOMEACCOUNTAMOUNT,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    incometrans.TRANSACTIONSTATUS = 0 AND 
+                    incometrans.ACCOUNTTYPE = 0
+             then
+                    incometrans.TRANSACTIONID + incometrans.TERMINAL
+       end),0) INCOMEACCOUNTCOUNT,
+       COALESCE(
+       sum(
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    incometrans.TRANSACTIONSTATUS = 0 AND 
+                    incometrans.ACCOUNTTYPE = 1
+             then
+                    incometrans.AMOUNT
+       end),0)*-1 EXPENSEACCOUNTAMOUNT,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    trans.TYPE = 2 AND 
+                    Trans.ENTRYSTATUS = 0 AND 
+                    incometrans.TRANSACTIONSTATUS = 0 AND 
+                    incometrans.ACCOUNTTYPE = 1
+             then
+                    incometrans.TRANSACTIONID + incometrans.TERMINAL
+       end),0) EXPENSEACCOUNTCOUNT,
+      
+	  -------Float entry and tender removal
+		COALESCE(
+		count(
+		case
+			when
+					trans.TYPE = 5 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					trans.TRANSACTIONID
+		end),0) AS FLOATENTRY,
+
+		COALESCE(
+		sum(
+		case
+			when
+					trans.TYPE = 5 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					Trans.GROSSAMOUNT*-1
+		end),0) AS FLOATENTRYAMOUNT,
+
+		COALESCE(
+		Count(
+		case
+			when
+					trans.TYPE = 4 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					trans.TRANSACTIONID
+		end),0) AS TENDERREMOVAL,
+
+		COALESCE(
+		sum(
+		case
+			when
+					trans.TYPE = 4 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					Trans.GROSSAMOUNT*-1
+		end),0) AS TENDERREMOVALAMOUNT,
+
+-----Bank and safe drop (not in new)
+		COALESCE(
+		Count(
+		case
+			when
+					trans.TYPE = 16 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					trans.TRANSACTIONID
+		end),0) AS BANKDROP,
+
+				COALESCE(
+		sum(
+		case
+			when
+					trans.TYPE = 16 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					Trans.GROSSAMOUNT*-1
+		end),0) AS BANKDROPAMOUNT,
+
+		COALESCE(
+		Count(
+		case
+			when
+					trans.TYPE = 17 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					trans.TRANSACTIONID
+		end),0) AS SAFEDROP,
+
+		COALESCE(
+		sum(
+		case
+			when
+					trans.TYPE = 17 AND 
+					Trans.ENTRYSTATUS <> 5
+			then
+					Trans.GROSSAMOUNT*-1
+		end),0) AS SAFEDROPAMOUNT,
+---Customer order deposits
+COALESCE(
+       sum( 
+       case 
+             when 
+                    Trans.TYPE = 22 AND 
+                    Trans.ENTRYSTATUS = 0
+             then
+                    GROSSAMOUNT
+       end)*-1,0) AS CUSTOMERORDERDEPOSIT,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    Trans.TYPE = 22 AND 
+                    Trans.ENTRYSTATUS = 0
+             then
+                    Trans.TRANSACTIONID
+       end),0) AS CUSTOMERORDERDEPOSITCOUNT,
+---Customer account deposits	  
+	   COALESCE(
+       sum( 
+       case 
+             when 
+                    Trans.TYPE = 3 AND 
+                    Trans.ENTRYSTATUS = 0
+             then
+                    GROSSAMOUNT
+       end)*-1,0) AS CUSTOMERACCOUNTDEPOSIT,
+       COALESCE(
+       count( distinct
+       case 
+             when 
+                    Trans.TYPE = 3 AND 
+                    Trans.ENTRYSTATUS = 0
+             then
+                    Trans.TRANSACTIONID
+       end),0) AS CUSTOMERACCOUNTDEPOSITCOUNT
+from 
+       RBOTRANSACTIONTABLE trans
+       left join VTRANSACTIONSALESTRANSHASPRICE saletrans
+       on 
+             trans.TRANSACTIONID = saletrans.TRANSACTIONID AND 
+             trans.STORE = saletrans.STORE AND 
+             trans.TERMINAL = saletrans.TERMINALID AND 
+             trans.DATAAREAID = saletrans.DATAAREAID
+       left join RBOTRANSACTIONINCOMEEXPEN20158 incometrans
+       ON 
+             Trans.TRANSACTIONID = incometrans.TRANSACTIONID AND 
+             Trans.DATAAREAID = incometrans.DATAAREAID AND 
+             Trans.TERMINAL = incometrans.TERMINAL AND     
+             Trans.STORE = incometrans.STORE  
+	   join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) storeparam on trans.STORE = CAST(storeparam.STORESID as nvarchar(20)) 
+	   join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) terminalparam on trans.TERMINAL = CAST(terminalparam.TERMINALSID as nvarchar(20))
+	   where trans.TRANSDATE >= @StartDate and trans.TRANSDATE <= @EndDate and trans.DATAAREAID = @DataareaID
+) src
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+//Rounding--------------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Rounding]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Rounding]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Rounding]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+Select COALESCE(round(sum(trans.ROUNDEDAMOUNT),4)*-1,0) AS TOTALROUNDING
+from RBOTRANSACTIONTABLE trans
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on trans.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on trans.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+where trans.TYPE = 2 AND trans.ENTRYSTATUS = 0 and trans.TRANSDATE >= @StartDate and trans.TRANSDATE <= @EndDate and trans.DATAAREAID = @DataareaID
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+   
+//Redeemed customer order deposits--------------------------------------------------------------------
+//This amount should be deducted from the sales amount
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Redeemeddeposit]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Redeemeddeposit]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Redeemeddeposit]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+SELECT COALESCE((SUM(AMOUNTTENDERED)*-1),0) as RDAMOUNT,  COALESCE(COUNT(*),0) as RDQTY
+from RBOTRANSACTIONPAYMENTTRANS PTR
+JOIN RBOTRANSACTIONTABLE TA 
+	ON PTR.TRANSACTIONID = TA.TRANSACTIONID 
+	AND PTR.DATAAREAID = TA.DATAAREAID 
+	AND PTR.STORE = TA.STORE 
+	AND PTR.TERMINAL = TA.TERMINAL	
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on TA.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on TA.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+WHERE TA.TRANSDATE >= @StartDate and TA.TRANSDATE <= @EndDate and TA.DATAAREAID = @DataareaID	  
+AND TA.ENTRYSTATUS = 0 AND PTR.TRANSACTIONSTATUS = 6
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+//Tenders---------------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Tenders]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Tenders]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Tenders]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	--@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+--declare @docid int
+declare @docid2 int
+declare @docid3 int
+--exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+SELECT 
+	TA.TRANSACTIONID, PTR.TENDERTYPE AS TENDER, STT.NAME as TENDERNAME,
+	SUM(PTR.AMOUNTTENDERED) AS AMOUNTTENDERED, 
+	COUNT(PTR.CARDTYPEID) AS COUNT,	
+	PTR.CARDTYPEID AS CARDTYPEID,
+	ISNULL(STC.NAME,PTR.CARDTYPEID) AS CARDNAME  
+FROM 
+	RBOTRANSACTIONPAYMENTTRANS PTR
+JOIN RBOTRANSACTIONTABLE TA 
+	ON PTR.TRANSACTIONID = TA.TRANSACTIONID 
+	AND PTR.DATAAREAID = TA.DATAAREAID 
+	AND PTR.STORE = TA.STORE 
+	AND PTR.TERMINAL = TA.TERMINAL	   
+LEFT OUTER JOIN RBOSTORETENDERTYPECARDTABLE STC
+	ON PTR.STORE = STC.STOREID 
+	AND PTR.DATAAREAID = STC.DATAAREAID 
+	AND PTR.CARDTYPEID = STC.CARDTYPEID
+LEFT OUTER JOIN RBOTENDERTYPETABLE TT
+	ON STC.DATAAREAID = TT.DATAAREAID
+	AND STC.TENDERTYPEID = TT.TENDERTYPEID
+JOIN RBOSTORETENDERTYPETABLE STT 
+	ON PTR.STORE = STT.STOREID 
+	AND PTR.DATAAREAID = STT.DATAAREAID 
+	AND PTR.TENDERTYPE = STT.TENDERTYPEID
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on TA.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on TA.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+WHERE TA.TRANSDATE >= @StartDate and TA.TRANSDATE <= @EndDate and TA.DATAAREAID = @DataareaID	   
+AND TA.ENTRYSTATUS = 0 AND PTR.TRANSACTIONSTATUS = 0
+  AND TA.TYPE in (2,3,4,5,16,17,20,21,22)
+  AND (TT.DEFAULTFUNCTION is NULL OR TT.DEFAULTFUNCTION <> 4)
+GROUP BY PTR.CARDTYPEID, PTR.TENDERTYPE, STC.NAME, STT.NAME, TA.TRANSACTIONID
+ORDER BY TENDERTYPE
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+//Scanned----------------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Scan]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Scan]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Scan]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	--@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+--declare @docid int
+declare @docid2 int
+declare @docid3 int
+--exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select 
+sum(SCANNED) as SCANNED,
+sum(MANUALENTERED) as MANUALENTERED,
+sum(GIFTCARDS) as GIFTCARDS
+from (
+select 
+(SELECT COALESCE((SUM(b.QTY) * -1),0) 
+FROM RBOTRANSACTIONTABLE t, VTRANSACTIONSALESTRANSHASPRICE b 
+WHERE b.ITEMIDSCANNED = 1 AND b.GIFTCARD = 0
+AND t.TRANSACTIONID = b.TRANSACTIONID  AND t.STORE = b.STORE AND t.TERMINAL = b.TERMINALID AND t.DATAAREAID = b.DATAAREAID
+AND t.ENTRYSTATUS = 0 
+AND b.TRANSACTIONSTATUS = 0
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS SCANNED
+, 
+(SELECT COALESCE((SUM(b.QTY) * -1),0) 
+FROM RBOTRANSACTIONTABLE t, VTRANSACTIONSALESTRANSHASPRICE b 
+WHERE b.ITEMIDSCANNED = 1 AND b.GIFTCARD = 1
+AND t.TRANSACTIONID = b.TRANSACTIONID  AND t.STORE = b.STORE AND t.TERMINAL = b.TERMINALID AND t.DATAAREAID = b.DATAAREAID
+AND t.ENTRYSTATUS = 0 
+AND b.TRANSACTIONSTATUS = 0
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS GIFTCARDS
+, 
+(SELECT COALESCE((SUM(b.QTY)*-1),0)
+FROM RBOTRANSACTIONTABLE t, VTRANSACTIONSALESTRANSHASPRICE b 
+WHERE b.ITEMIDSCANNED = 0
+AND t.TRANSACTIONID = b.TRANSACTIONID 
+AND t.STORE = b.STORE AND t.TERMINAL = b.TERMINALID 
+AND t.ENTRYSTATUS = 0 
+AND b.TRANSACTIONSTATUS = 0
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS MANUALENTERED
+
+from RBOTRANSACTIONTABLE tr
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on tr.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on tr.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+where tr.TRANSDATE >= @StartDate and tr.TRANSDATE <= @EndDate and tr.DATAAREAID = @DataareaID
+) src1 
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+//TOTALS--------------------------------------------------------------------------------------------------
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Totals]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Totals]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Totals]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	--@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+--declare @docid int
+declare @docid2 int
+declare @docid3 int
+--exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select 
+sum(NUMNEGATIVE) as NUMNEGATIVE,
+sum(AMOUNTNEGATIVE) as AMOUNTNEGATIVE,
+sum(OPERATIONDRAWEROPENED) as OPERATIONDRAWEROPENED,
+sum(DRAWREOPENEDAMOUNT) as DRAWREOPENEDAMOUNT,
+sum(TENDERDECLARATION) as TENDERDECLARATION,
+sum(TENDERDECLARATIONAMOUNT) as TENDERDECLARATIONAMOUNT,
+sum(NUMTRANS) as NUMTRANS,
+sum(NUMITEMS) as NUMITEMS
+from (
+SELECT 
+(SELECT COUNT(*)
+FROM RBOTRANSACTIONTABLE t 
+WHERE t.GROSSAMOUNT > 0 
+AND t.ENTRYSTATUS = 0  
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS NUMNEGATIVE
+,
+(SELECT sum(T.GROSSAMOUNT)*-1 
+FROM RBOTRANSACTIONTABLE t 
+WHERE t.GROSSAMOUNT > 0 
+AND t.ENTRYSTATUS = 0  
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS AMOUNTNEGATIVE 
+,
+(SELECT COUNT(*) AS OPENEDNOSALES
+FROM RBOTRANSACTIONTABLE t
+WHERE OPENDRAWER = 1 
+AND ENTRYSTATUS <> 5
+AND TYPE = 9
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS OPERATIONDRAWEROPENED
+,
+(SELECT sum(T.GROSSAMOUNT)*-1 
+FROM RBOTRANSACTIONTABLE t 
+WHERE OPENDRAWER = 1 
+AND ENTRYSTATUS <> 5
+AND TYPE = 9 
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS DRAWREOPENEDAMOUNT
+,
+(SELECT COUNT(*) 
+FROM RBOTRANSACTIONTABLE t
+WHERE ENTRYSTATUS <> 5
+AND TYPE = 7
+AND t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID) AS TENDERDECLARATION
+,
+(SELECT sum(TD.AMOUNTTENDERED)
+FROM RBOTRANSACTIONTENDERDECLA20165 td
+WHERE td.TRANSACTIONID = tr.TRANSACTIONID AND td.STORE = tr.STORE AND td.TERMINAL = tr.TERMINAL AND td.DATAAREAID = tr.DATAAREAID) AS TENDERDECLARATIONAMOUNT
+,
+(SELECT COALESCE(count(distinct s.TRANSACTIONID),0)
+from VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID
+where t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+AND tr.TYPE = 2 and t.ENTRYSTATUS = 0) AS NUMTRANS
+,
+(SELECT COALESCE(sum(QTY)*-1,0) 
+FROM VTRANSACTIONSALESTRANSHASPRICE s
+join RBOTRANSACTIONTABLE t  on t.TRANSACTIONID = s.TRANSACTIONID AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.DATAAREAID = s.DATAAREAID
+WHERE t.TRANSACTIONID = tr.TRANSACTIONID AND t.STORE = tr.STORE AND t.TERMINAL = tr.TERMINAL AND t.DATAAREAID = tr.DATAAREAID
+AND tr.TYPE = 2 and t.ENTRYSTATUS = 0 AND s.TRANSACTIONSTATUS = 0) as NUMITEMS
+
+from RBOTRANSACTIONTABLE tr
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on tr.STORE = CAST(ur.STORESID as nvarchar(20)) 
+join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on tr.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+where tr.TRANSDATE >= @StartDate and tr.TRANSDATE <= @EndDate and tr.DATAAREAID = @DataareaID
+) src 
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+
+
+
+//Sales by hour --------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_ByHour]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_ByHour]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_ByHour]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	--@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+--declare @docid int
+declare @docid2 int
+declare @docid3 int
+--exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+SELECT CASE 
+WHEN DATEPART(hour,t.TRANSDATE) = 0 THEN '00:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 1 THEN '01:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 2 THEN '02:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 3 THEN '03:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 4 THEN '04:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 5 THEN '05:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 6 THEN '06:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 7 THEN '07:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 8 THEN '08:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 9 THEN '09:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 10 THEN '10:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 11 THEN '11:00'
+WHEN DATEPART(hour,t.TRANSDATE) = 12 THEN '12:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 13 THEN '13:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 14 THEN '14:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 15 THEN '15:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 16 THEN '16:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 17 THEN '17:00'
+WHEN DATEPART(hour,t.TRANSDATE) = 18 THEN '18:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 19 THEN '19:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 20 THEN '20:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 21 THEN '21:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 22 THEN '22:00' 
+WHEN DATEPART(hour,t.TRANSDATE) = 23 THEN '23:00' 
+END AS TIME,  count(distinct t.transactionid) AS NUMBEROFTRANSACTIONS, SUM(s.NETAMOUNTINCLTAX)*(-1) AS AMOUNT, SUM(s.QTY)*(-1) AS NUMOFITEMSSOLD
+FROM RBOTRANSACTIONTABLE t
+left outer join rbotransactionsalestrans s on t.transactionid = s.transactionid AND t.STORE = s.STORE AND t.TERMINAL = s.TERMINALID AND t.dataareaid = s.dataareaid 
+	join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on t.STORE = CAST(ur.STORESID as nvarchar(20)) 
+	join (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on t.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+WHERE
+t.TYPE=2 and t.ENTRYSTATUS = 0 and s.TRANSACTIONSTATUS = 0 and t.DATAAREAID = @DataareaID 
+and t.TRANSDATE >= @StartDate and t.TRANSDATE <= @EndDate
+GROUP BY DATEPART(hh,t.TRANSDATE)
+ORDER BY DATEPART(hh,t.TRANSDATE) ASC
+
+--exec sp_xml_removedocument @docid
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go
+
+// Sales by tax group and no tax - n�ja----------------------------------------------------------------------
+ 
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_TaxData]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_TaxData]
+
+GO
+ 
+CREATE PROCEDURE [dbo].[spDB_TaxData]
+(
+ 	@StartDate datetime,
+ 	@EndDate datetime,
+ 	@StoresID nvarchar(max),
+ 	@TerminalsID nvarchar(max),
+ 	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+declare @docid2 int
+declare @docid3 int
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+Select TAXGROUPID, TAXGROUP, sum(NETAMOUNT) as NETAMOUNT, sum(TAXAMOUNT*-1) as TAXAMOUNT, sum(GROSSAMOUNT) as GROSSAMOUNT 
+from
+(select 
+case when st.GIFTCARD = 1 then isnull(st.TAXGROUP, '') else isnull(st.TAXGROUP, '') end as TAXGROUPID, st.TRANSACTIONID, 
+case when st.GIFTCARD = 1 then isnull(th.NAME, 'Gift card') else isnull(th.NAME, 'No tax group') end as TAXGROUP, st.GIFTCARD as GIFTCARD, sum(st.NETAMOUNT*-1) as NETAMOUNT,
+isnull(sum(st.TAXAMOUNT), 0) as TAXAMOUNT, sum(st.NETAMOUNTINCLTAX*-1) AS GROSSAMOUNT 
+from VTRANSACTIONSALESTRANSHASPRICE st
+left outer join RBOTRANSACTIONTABLE t on  t.TRANSACTIONID = st.TRANSACTIONID and t.STORE = st.STORE and t.TERMINAL = st.TERMINALID
+left outer join TAXITEMGROUPHEADING th on st.TAXGROUP = th.TAXITEMGROUP
+join (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on t.STORE = CAST(ur.STORESID as nvarchar(20))
+where t.TYPE = 2 AND t.ENTRYSTATUS = 0 and st.transactionstatus = 0 and st.DATAAREAID = @DataareaID and t.TRANSDATE >= @StartDate and t.TRANSDATE <= @EndDate
+group by st.TAXGROUP, st.TRANSACTIONID, st.NETAMOUNT, th.NAME, GROSSAMOUNT, st.GIFTCARD
+)temp
+group by TAXGROUPID, TAXGROUP
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+
+GO
+
+//Currency--------------------------------------------------------------------------------------------
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Fin_Currency]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Fin_Currency]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Fin_Currency]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	--@UsersID nvarchar(max),
+	@StoresID nvarchar(max),
+	@TerminalsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+
+--declare @docid int
+declare @docid2 int
+declare @docid3 int
+--exec sp_xml_preparedocument @docid output, @UsersID
+exec sp_xml_preparedocument @docid2 output, @StoresID
+exec sp_xml_preparedocument @docid3 output, @TerminalsID
+
+select CURRENCYCODE, TXT AS CURRENCYNAME, sum(AMOUNTCUR) AMOUNTCUR, sum(P.AMOUNTTENDERED) as AMOUNTTENDERED,count(*) as NUMTRANS,
+TT.TENDERTYPEID AS TENDERTYPEID, TT.NAME AS TENDERTYPENAME, TT.DEFAULTFUNCTION AS DEFAULTFUNCTION
+FROM 
+CURRENCY C
+JOIN RBOTRANSACTIONPAYMENTTRANS P ON P.CURRENCY = C.CURRENCYCODE AND P.DATAAREAID = C.DATAAREAID
+JOIN RBOSTORETABLE S ON P.STORE = S.STOREID AND S.DATAAREAID = P.DATAAREAID
+JOIN RBOTRANSACTIONTABLE T ON P.TRANSACTIONID = T.TRANSACTIONID AND P.STORE = T.STORE AND P.TERMINAL = T.TERMINAL AND P.DATAAREAID = T.DATAAREAID
+JOIN RBOTENDERTYPETABLE TT ON P.TENDERTYPE = TT.TENDERTYPEID AND P.DATAAREAID = TT.DATAAREAID
+JOIN (select [text] as STORESID from openxml(@docid2, '/p', 1) where not [text] is null) ur on T.STORE = CAST(ur.STORESID as nvarchar(20)) 
+JOIN (select [text] as TERMINALSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on T.TERMINAL = CAST(ut.TERMINALSID as nvarchar(20))
+WHERE P.CURRENCY <> S.CURRENCY AND T.TYPE IN (2,3,4,5,16,17,20,21) AND TT.DEFAULTFUNCTION <> 4 AND P.TRANSACTIONSTATUS = 0 AND T.ENTRYSTATUS = 0
+and T.TRANSDATE >= @StartDate and T.TRANSDATE <= @EndDate and T.DATAAREAID = @DataareaID
+
+GROUP BY 
+P.CURRENCY, C.CURRENCYCODE, C.TXT, TT.TENDERTYPEID, TT.NAME,TT.DEFAULTFUNCTION
+
+ORDER BY 
+P.CURRENCY
+
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+Go

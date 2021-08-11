@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2017">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Other improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017/OtherImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Other improvements</h1>
+        <p>Here various new and improve functionalities are mentioned and explained.</p>
+        <h2>Serial number functionality</h2>
+        <p>The <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> has had functionality for serial numbers for a long time but the functionality to view and import serial numbers into the <span class="MyVariablesSite Manager">Site Manager</span> has not been available before now. With the variant framework changes that were done in the last release the serial number functionality had to be disconnected.</p>
+        <p>In this release Serial numbers can be added to items in the Site Manager, they can be manually entered or imported through either an Excel file or a CSV file. The item needs to be configured to ask for serial numbers (see Key in serial numbers) and if serial numbers are imported into the system then the user will get a list of serial numbers to choose from, but the user can always manually enter a serial number if needed. If no serial numbers are added/imported the POS will ask for a manual input of a serial number. The serial number functionality requires a Site service connection as the serial numbers are updated as soon as they are selected (as reserved) and then once the item is paid for information about receipt ID, date and time as added to the serial number. </p>
+        <p>Please see our <a href="../../HelpTopics/SerialNumbers/SerialNumbersAbout.htm">help topic on this issue</a> for further information.</p>
+        <p>Please note that the serial numbers are only handled in the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>, the functionality to handle serial numbers in the inventory has not been implemented.</p>
+        <h2>Additional barcode functionality</h2>
+        <p>Barcodes assigned to gift cards and credit memos can now be scanned directly into the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> and payment operations for these types of payments will be activated (Pay gift card and Pay credit memo). For further information on how to configure barcodes for <a href="../../HelpTopics/SiteService/GiftCardBarcodeSetup.htm">gift cards</a> and <a href="../../HelpTopics/SiteService/CreditMemoBarcodeSetup.htm">credit memos</a> please see our help topics on the issue.</p>
+        <p>A new section for gift cards was created in the Receipt designer with a variable so that the gift card or credit memo number can be printed as a barcode.</p>
+        <p>Periodic discounts that are configured to be triggered manually can now be activated by a barcode as well as by a button. Barcode setup needs to be done for the POS to recognize the barcode as a discount barcode and the barcode needs to be added to the periodic discount itself as well.</p>
+        <h2>Embed terminal ID&#160;in receipt ID</h2>
+        <p>A new option that embeds a terminal ID to a number sequence has been added to the number sequence view. By default only the receipt ID is configured to have this active in a new empty database. When updating an existing database the receipt ID number sequence is not updated to embed the terminal ID. To update an existing customer to have this option the change needs to be done manually through the database table itself.</p>
+        <h2>Payment limitations</h2>
+        <p>Configurations for the payment limitations have been reviewed and updated. Limitations can be created on specific items, retail group, special group, retail department and everything. The limitations can be set to be inclusive or exclusive. To activate these limitations they need to be attached to the payment method on the Allowed payment method tab on the <a href="../../FieldHelp/Store/StoreView.htm">Store card</a>. In the release the pay operations for cash, currency, customer account and check have been implemented to respect the payment limitations. But other payment methods (gift cards, loyalty, credit memo, cards) needs to be implemented in a customization.</p>
+        <h2>System reports</h2>
+        <p>Three of the system reports have been updated and need to be re-imported into the system. Those are Financial report, Reorder point by vendor and Stock level report by vendor. These reports are part of the report package on the partner portal and can be downloaded there.</p>
+        <h2>Concluding the transaction</h2>
+        <p>Before anything is done when concluding the transaction in the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> we now check to see if there is anything that could possible require the site service and if so then we test the connection to the site service. If the test is not successful then a message is displayed saying what needs the site service connection and that the operation cannot continue</p>
+        <h2><span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>        improvements</h2>
+        <p>Variant column in the Item search list in the POS is now not visible except when there are variant items in the list</p>
+        <p>Fixed an error that was displayed if a manual discounts was applied to an item that had a price of zero</p>
+        <p><a name="kanchor129"></a>Discount offer price for variant items is now calculated from variant item price not variant header price as before</p>
+        <p>An infocode that is added to a card type was not getting activated in when payment was done using that card type. This issue has now been fixed.</p>
+        <p>When returning a sale with a customer line discount the discount was not calculated again and included in the return.</p>
+        <p>X/Z report width can now be configured in the Functionality profile. The default value is 55 which is how it was before.</p>
+        <p>The sales person list in the POS does not display deleted users anymore</p>
+        <p>Operations Customer transactions, Customer transactions report and Customer balance report has been set as non-user operations and cannot be selected on a button</p>
+        <p>If a gift card is being refilled and the transaction is voided the gift card is not deleted anymore. But the refillable amount is voided.</p>
+        <h2><span class="MyVariablesSite Manager">Site Manager</span>       improvements</h2>
+        <p>Now all reports can be viewed from the Tools &gt; View report button in the ribbon. The ribbon us updated at run time so when a new report is imported the Site Manager needs to be restarted for the report to appear in the list of reports.</p>
+        <p>When creating a new item, if the retail group selected has a tax group on it, that tax group is set on the new item automatically.</p>
+        <p>When the store property on the terminal is changed then the terminal is now moved to the other store. Before the terminal was duplicated.</p>
+        <p>When adding a linked item to another item a variant header item cannot be selected.</p>
+        <p>In a few list views, in the right click menu, the "Add" option was named "New". This has been changed to "Add"</p>
+        <p>The paging in the <a href="../../FieldHelp/TradeAgreements/ItemDiscountGroupView.htm">Item discount groups</a> view was not working properly and has been fixed.</p>
+        <p>A change has been done that does not allow a deleted item to be edited anymore. In order to edit a deleted item it has to be activated again.</p>
+        <p>Both item sales tax group view and customer sales tax view now have a "Add another" check box on the dialogs that add the tax codes, to allow the user to add more than one tax code at a time.</p>
+        <p>All fields are now visible in the Triggers tab on the <a href="../../FieldHelp/Scheduler/JobView.htm">View jobs card</a> when the <span class="MyVariablesSite Manager">Site Manager</span> is set to be in it's smallest size</p>
+        <p>When a customer is deleted, it is now in effect archived so that is can be activated again. Any reports that deal with customer information will still be able to display customer information even if they have been deleted. A customer also cannot be deleted if for example he has a negative balance, any customer orders outstanding and etc. Deleted customer can be seen by selecting the deleted option in the search bar in the customers view</p>
+        <p>The styles view has been updated considerably and all system styles have now been updated to have descriptions that can be translated. Also the system styles can be set back to "factory settings" so that an existing customer can get new updated system styles or change them back to how they were originally.</p>
+        <p>The number sequence view has been updated and a search bar has been added to the list view to make finding a specific number sequence easier.</p>
+        <p>The user can now sort by "Variant" name in the <a href="../../FieldHelp/RetailItems/ItemsView.htm">retail items list</a></p>
+        <p>When importing an item that has been previously deleted through the Excel import a message is now displayed explaining that the item has been deleted and cannot be imported again.</p>
+        <p>The virtual printer has been retired and to test receipts the hardware profile can be configured to print to a "Windows printer" and then select for example Snagit or any other image editor that can be used as a printer </p>
+        <p>An additional search option on the items view has been added where the list can be filtered by retail items or service items</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Minor improvements that touch the inventory functionality can be viewed in the <a href="InventoryEnhancements.htm">inventory section</a> of the release notes</p>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

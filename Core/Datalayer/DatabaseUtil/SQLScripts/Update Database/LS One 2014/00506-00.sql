@@ -1,0 +1,21 @@
+﻿
+/*
+	Incident No.	: N/A
+	Responsible		: Birgir Kristmannsson
+	Sprint			: LS One 2014 - Nimbo
+	Date created	: 03.02.2014
+
+	Description		: Added columns to LOOKUPORDER
+						
+*/
+USE LSPOSNET
+GO
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOEFTMAPPING' AND COLUMN_NAME = 'LOOKUPORDER')
+BEGIN
+	ALTER TABLE RBOEFTMAPPING ADD LOOKUPORDER SMALLINT
+END
+
+
+
+

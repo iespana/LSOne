@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Data Management|Replication|Using the Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Subjobs</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Replication/Subjobs.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Subjobs</h1>
+        <p>A subjob specifies the unit of data to replicate. Subjobs can only be run within the context of a job that defines the source and destination locations for the data. Subjobs are, however, independent of jobs in the sense that they can exist on their own without being actually used by a job. In that sense, a subjob can be on the subjob list of zero, one or more jobs.</p>
+        <p>There are 3 types of subjobs:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li value="1"><b>Normal:</b> The contents of a database table are replicated as a whole. Normal subjobs are suitable for small tables or cases where entire tables must be replicated like when preloading a new store or a POS. Normal subjobs also support replication counters, where a unique index exists that can be used to select records to be replicated.&#160; This is useful when replicating transactions from POS, so only the newest records will be replicated.</li>
+            <li value="2"><b>Action:</b> The contents of a database table are replicated by reading a second table, the action table. The action table determines which rows in the main database table have changed and how. Action subjobs are suitable for large tables when you want to minimize data flow by replicating only the changes made in the source location.</li>
+            <li value="3"><b>Stored Procedure:</b> An action table is read on the source location and for each suitable entry in the action table, a stored procedure is run on the destination locations. Stored procedure subjobs are suitable for replicating business logic transactions implemented through stored procedures. </li>
+        </ol>
+        <p>Normal and action subjobs are always bound to a particular database design for their source database table. This means, for example, that a normal subjob using the Items table in database design A can only be used to replicate data from a distribution location that has database design A assigned to it (see section <a href="Using the Scheduler.htm#_Ref294702111" class="ParaTextOnly MCXref xref xrefParaTextOnly">Using the Scheduler</a>).</p>
+        <p>Subjobs can be created in the Job view and in the Subjobs list view. To create a subjob from the Subjobs list view go to <span class="trace">General setup &gt; Replication &gt; Subjobs</span>.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/SubJobListView.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/SubJobListView_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>Click the add <img src="../../Resources/Images/SiteManager/addB.png" class="NoMargin" /> button to create a new subjob.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/NewSubJobDialog.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="470" data-mc-height="284" src="../../Resources/Images/SiteManager/Scheduler/NewSubJobDialog_thumb_0_150.png" tabindex="" /></a>
+        </p>
+        <p>Enter a short description of the subjob and select the replication method to use. You can optionally select an existing subjob to copy settings from. Click OK to continue and open the Subjob view.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/SubjobView_Actions.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/SubjobView_Actions_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2>The Actions Tab</h2>
+        <p>The fields in the Actions tab are only enabled for action and stored procedure subjobs.</p>
+        <p>Click the Load Actions button to get a list of actions for the table.</p>
+        <h2>The Replication Counters Tab</h2>
+        <p>The fields in the Replication counters tab are only enabled for normal subjobs.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/SubjobView_ReplicationCounters.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/SubjobView_ReplicationCounters_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>You can set a subjob to use a replication counter. To use a replication counter the table being replicated must contain a replication counter field. A replication counter field is a not-null integer column that is guaranteed to be unique for all rows in the table. Furthermore, the values in the column must only increase for new values so that when a new row is added to the table it must contain a value greater than all existing replication counter values in the table. Most replication counter fields are defined in MS SQL Server as:</p>
+        <p>REPLICATIONCOUNTER INT IDENTITY NOT NULL</p>
+        <p>When a job is run that contains a subjob with a replication counter field, the Scheduler automatically stores the last value of the replication counter field so that it knows where to start replicating the next time the job is run. These values are store per job, subjob and location. These automatically created values are visible at the bottom of the Subjob view.</p>
+        <p>When performing tests or for some reason you want to retransmit rows based on replication counters, you can edit or delete the replication counters using the edit <img src="../../Resources/Images/editB.png" class="NoMargin" /> and add <img src="../../Resources/Images/addB.png" class="NoMargin" /> buttons.</p>
+        <h2>The From-table-filters Tab</h2>
+        <p>You can apply filtering to a subjob for specific fields. You then need to select which field to filter by, type of filter to use, filtering value and how the filtering value is interpreted.</p>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/SubjobView_From-tableFilters.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/SubjobView_From-tableFilters_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">29<span class="sup">th</span> November 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

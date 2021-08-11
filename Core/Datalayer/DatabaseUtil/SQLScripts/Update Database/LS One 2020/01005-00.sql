@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-11365
+	Responsible		: Hörður Kristjánsson
+	Sprint			: Labradoodle
+	Date created	: 03.02.2020
+
+	Description		: Added record for PosReceiptSaleLineStyle in POSSTYLE
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS (SELECT * FROM POSSTYLE WHERE NAME = 'PosReceiptSaleLineStyle' OR ID = 2000034)
+BEGIN
+INSERT INTO POSSTYLE (ID, NAME, FONTNAME, FONTSIZE, FONTBOLD, FORECOLOR, BACKCOLOR, FONTITALIC, FONTCHARSET, DATAAREAID, BACKCOLOR2, GRADIENTMODE, SHAPE, SYSTEMSTYLE, STYLETYPE)
+     VALUES (2000034, 'PosReceiptSaleLineStyle', 'Segoe UI', 12, 0, -13550528, -1, 0, 0, 'LSR', -1, 0, 5, 1, 27)
+END
+GO

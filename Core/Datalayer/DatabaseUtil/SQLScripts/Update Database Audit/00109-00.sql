@@ -1,0 +1,21 @@
+﻿/*
+
+	Incident No.	: ONE-5643
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: Oregano
+
+	Description		: Parameter field made larger
+	
+						
+*/
+
+USE LSPOSNET_Audit
+GO
+
+  
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_NAME LIKE 'POSMENULINELog' AND COLUMN_NAME = 'PARAMETER' AND CHARACTER_MAXIMUM_LENGTH < 51  )
+BEGIN
+	ALTER TABLE dbo.POSMENULINELog  
+	ALTER COLUMN PARAMETER NVARCHAR(500)
+END	
+GO

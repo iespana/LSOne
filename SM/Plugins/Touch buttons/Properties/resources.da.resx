@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AmountLabelText" xml:space="preserve">
+    <value>Beløb</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Skrifttype</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Generelt</value>
+  </data>
+  <data name="PaymentTypeLabelText" xml:space="preserve">
+    <value>Betalingstype</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Beløb</value>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Stregkode</value>
+  </data>
+  <data name="BarCodeLabelText" xml:space="preserve">
+    <value>Stregkode</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farve</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Mængde</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Enhed</value>
+  </data>
+  <data name="Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="SearchModeDefault" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Slet</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importerer</value>
+  </data>
+  <data name="NoHereafter" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="YesHereafter" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiler</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Tilføj</value>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Du har øget den samlede størrelse for kassens knapmatrixmenu, og der er plads til #1 nye knapmatrixlinjer. Vil du generere linjer for at udfylde den tomme plads?</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Egenskaber</value>
+  </data>
+  <data name="BlankOperationLabelText" xml:space="preserve">
+    <value>Tom handling</value>
+  </data>
+  <data name="ButtonGridLabelText" xml:space="preserve">
+    <value>Knapmatrix:</value>
+  </data>
+  <data name="ButtonGridMenus" xml:space="preserve">
+    <value>Knapmatrixmenuer</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Kode:</value>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Kontrol</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopier</value>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Vil du kopiere den aktuelle stil til knapegenskaberne?</value>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Kopier aktuelt tema?</value>
+  </data>
+  <data name="CopyLastReceipt" xml:space="preserve">
+    <value>Kopier seneste kvittering</value>
+  </data>
+  <data name="CreateNewStyle" xml:space="preserve">
+    <value>Opret tema fra sidehoved</value>
+  </data>
+  <data name="CustomReceipt" xml:space="preserve">
+    <value>Tilpasset kvittering</value>
+  </data>
+  <data name="CustomText" xml:space="preserve">
+    <value>Tilpasset tekst</value>
+  </data>
+  <data name="DeletePosButtonGridMenu" xml:space="preserve">
+    <value>Slet kassens knapmatrixmenu</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Slet linje i kassens knapmatrixmenu</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte linje i kassens knapmatrixmenu?</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte linjer i kassens knapmatrixmenu?</value>
+  </data>
+  <data name="DeletePosButtonGridMenuQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte knapmatrixmenu og alle menulinjer, der tilhører denne menu?</value>
+  </data>
+  <data name="DeletePosButtonGridMenus" xml:space="preserve">
+    <value>Slet kassemenuer for knapmatrix</value>
+  </data>
+  <data name="DeletePosButtonGridMenusQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte knapmatrixmenuer og alle menulinjer, der tilhører disse menuer?</value>
+  </data>
+  <data name="DeleteStyle" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette det/de valgte temaer?</value>
+  </data>
+  <data name="DeleteTouchLayoutQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte touchknap-opsætning?</value>
+  </data>
+  <data name="DeleteTouchLayoutsQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte touchknap-opsætninger?</value>
+  </data>
+  <data name="DescriptionInvalid" xml:space="preserve">
+    <value>Beskrivelsen må ikke starte med "{0}" eller slutte med ")"</value>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Kopier ikke</value>
+  </data>
+  <data name="EditButtonGridMenus" xml:space="preserve">
+    <value>Rediger knapmatrixmenuer</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Rediger ...</value>
+  </data>
+  <data name="EditStyle" xml:space="preserve">
+    <value>Rediger temakonfiguration</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Rediger ...</value>
+  </data>
+  <data name="ExpenseAccountLabelText" xml:space="preserve">
+    <value>Udgiftskonto:</value>
+  </data>
+  <data name="FontNotApplicable" xml:space="preserve">
+    <value>Den valgte skrifttype kan ikke anvendes. Standardskrifttypen anvendes i stedet</value>
+  </data>
+  <data name="FontPreview" xml:space="preserve">
+    <value>Forhåndsvisning af skrifttype</value>
+  </data>
+  <data name="GiftReceipt" xml:space="preserve">
+    <value>Gavekvittering</value>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Specialtegn</value>
+  </data>
+  <data name="GlyphsBottomLeft" xml:space="preserve">
+    <value>Nederste venstre specialtegn</value>
+  </data>
+  <data name="GlyphsBottomRight" xml:space="preserve">
+    <value>Nederste højre specialtegn</value>
+  </data>
+  <data name="GlyphsTopLeft" xml:space="preserve">
+    <value>Øverste venstre specialtegn</value>
+  </data>
+  <data name="GlyphsTopRight" xml:space="preserve">
+    <value>Øverste højre specialtegn</value>
+  </data>
+  <data name="Hereafter" xml:space="preserve">
+    <value>Herefter</value>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>Billedfil</value>
+  </data>
+  <data name="ImportConflicts" xml:space="preserve">
+    <value>Importkonflikter</value>
+  </data>
+  <data name="IncomeAccountLabelText" xml:space="preserve">
+    <value>Indtægtskonto</value>
+  </data>
+  <data name="ItemLabelText" xml:space="preserve">
+    <value>Vare</value>
+  </data>
+  <data name="LayoutsAndMenusConflict" xml:space="preserve">
+    <value>De touchknap-opsætninger og knapmatrixmenuer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="LayoutsAndStylesConflict" xml:space="preserve">
+    <value>De touchknap-opsætninger og temaer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="LayoutsConflict" xml:space="preserve">
+    <value>De touchknap-opsætninger og temaer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="LayoutsMenusAndStylesConflict" xml:space="preserve">
+    <value>De touchknap-opsætninger, knapmatrixmenuer og temaer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Udseende og følelse</value>
+  </data>
+  <data name="MenusAndStylesConflict" xml:space="preserve">
+    <value>De knapmatrixmenuer og temaer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="MenusConflict" xml:space="preserve">
+    <value>De knapmatrixmenuer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>Ingen handling</value>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Handlings-ID</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overskriv</value>
+  </data>
+  <data name="ParameterCannotBeEmpty" xml:space="preserve">
+    <value>Parameter må ikke være tom</value>
+  </data>
+  <data name="ParameterLabelText" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="ParameterMustBeNumeric" xml:space="preserve">
+    <value>Parameter skal have en numerisk værdi</value>
+  </data>
+  <data name="PeriodicDiscountLabelText" xml:space="preserve">
+    <value>Periodisk rabat:</value>
+  </data>
+  <data name="POSButtonGridMenuButtons" xml:space="preserve">
+    <value>Kassens knapper til knapmatrixmenu</value>
+  </data>
+  <data name="POSButtonGridMenus" xml:space="preserve">
+    <value>Kassens knapmatrixmenuer</value>
+  </data>
+  <data name="POSButtonGridMenusDescription" xml:space="preserve">
+    <value>Anvend denne valgmulighed for at få vist kassens knapmatrixmenuer</value>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Kassemenuknap</value>
+  </data>
+  <data name="PosMenuLabelText" xml:space="preserve">
+    <value>Kassemenu:</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Forhåndsvisning</value>
+  </data>
+  <data name="PrintType" xml:space="preserve">
+    <value>Udskriftstype</value>
+  </data>
+  <data name="ResetToDefault" xml:space="preserve">
+    <value>Dette vil nulstille systemets tema til standardværdierne.
+
+
+
+Vil du fortsætte?</value>
+  </data>
+  <data name="RetailGroupLabelText" xml:space="preserve">
+    <value>Varegruppe</value>
+  </data>
+  <data name="RunEndOfDayLabelText" xml:space="preserve">
+    <value>Kør dagsafslutning:</value>
+  </data>
+  <data name="RunJob" xml:space="preserve">
+    <value>Kør opgave</value>
+  </data>
+  <data name="SalesPerson" xml:space="preserve">
+    <value>Sælger</value>
+  </data>
+  <data name="SalesPersonNotFound" xml:space="preserve">
+    <value>Ikke fundet</value>
+  </data>
+  <data name="SearchMode" xml:space="preserve">
+    <value>Søgetilstand</value>
+  </data>
+  <data name="SearchModeImages" xml:space="preserve">
+    <value>Billeder</value>
+  </data>
+  <data name="SearchModeImagesWithPrices" xml:space="preserve">
+    <value>Billeder med priser</value>
+  </data>
+  <data name="SearchModeList" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="SearchModeListWithPrices" xml:space="preserve">
+    <value>Liste med priser</value>
+  </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Skift</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Butiksopsætning</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="StyleInUseOnButton" xml:space="preserve">
+    <value>Temaet #1 anvendes til knappen #2 i menuen #3. Temaet kan ikke slettes.</value>
+  </data>
+  <data name="StyleInUseOnButtonWithNoDescription" xml:space="preserve">
+    <value>Temaet #1 anvendes til en knap i menuen #2. Temaet kan ikke slettes.</value>
+  </data>
+  <data name="StyleInUseOnHeader" xml:space="preserve">
+    <value>Temaet #1 anvendes i menuen #2. Temaet kan ikke slettes.</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Temaer</value>
+  </data>
+  <data name="StylesConflict" xml:space="preserve">
+    <value>De temaer, der importeres nu, er allerede blevet importeret. Vil du overskrive dem eller tilføje kopier?</value>
+  </data>
+  <data name="StylesDescription" xml:space="preserve">
+    <value>Anvend denne valgmulighed for at oprette nye temaer og se eksisterende</value>
+  </data>
+  <data name="StylesSetup" xml:space="preserve">
+    <value>Temaopsætning</value>
+  </data>
+  <data name="SuspensionTypeLabelText" xml:space="preserve">
+    <value>Suspenderingstype</value>
+  </data>
+  <data name="SystemStyleCannotBeDeleted" xml:space="preserve">
+    <value>Et systemtema kan ikke slettes</value>
+  </data>
+  <data name="TaxFreeReceipt" xml:space="preserve">
+    <value>Kvittering eksl. moms</value>
+  </data>
+  <data name="TaxGroupInfocodeLabelText" xml:space="preserve">
+    <value>Infokode</value>
+  </data>
+  <data name="TouchButtonLayout" xml:space="preserve">
+    <value>Touchknap-opsætning</value>
+  </data>
+  <data name="TouchButtonLayouts" xml:space="preserve">
+    <value>Touchknap-opsætning</value>
+  </data>
+  <data name="TouchButtonLayoutsDescription" xml:space="preserve">
+    <value>Anvend denne valgmulighed for at få vist touchknap-opsætninger</value>
+  </data>
+  <data name="TouchbuttonSetup" xml:space="preserve">
+    <value>Touchknap-opsætninger</value>
+  </data>
+  <data name="UnableToDelete" xml:space="preserve">
+    <value>Temaet kunne ikke slettes</value>
+  </data>
+  <data name="UseButtonProperties" xml:space="preserve">
+    <value>Anvend knapegenskaber</value>
+  </data>
+  <data name="ViewPosButtonGridMenus" xml:space="preserve">
+    <value>Vis kassens knapmatrixmenuer</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Eksporter</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importer</value>
+  </data>
+  <data name="ParameterTooLong" xml:space="preserve">
+    <value>Parameteren er for lang</value>
+  </data>
+  <data name="MoveLineDown" xml:space="preserve">
+    <value>Flyt ned</value>
+  </data>
+  <data name="MoveLineUp" xml:space="preserve">
+    <value>Flyt op</value>
+  </data>
+  <data name="LastReceipt" xml:space="preserve">
+    <value>Sidste kvittering</value>
+  </data>
+  <data name="POSButtonGridMenusTooltipDescription" xml:space="preserve">
+    <value>Organiser POS-betjeninger på knapper, og style knappemenuerne, der skal bruges i touch-knaplayouterne</value>
+  </data>
+  <data name="SelectAReceiptID" xml:space="preserve">
+    <value>Søg efter en kvittering</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Lokationer</value>
+  </data>
+  <data name="TouchButtonLayoutsTooltipDescription" xml:space="preserve">
+    <value>Design layout for terminalerne</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="ImageBank" xml:space="preserve">
+    <value>Billedarkiv</value>
+  </data>
+  <data name="ReasonCode" xml:space="preserve">
+    <value>Årsagskode</value>
+  </data>
+  <data name="ReserveStock" xml:space="preserve">
+    <value>Reservelager</value>
+  </data>
+  <data name="SelectionType" xml:space="preserve">
+    <value>Udvalgstype:</value>
+  </data>
+  <data name="Specific" xml:space="preserve">
+    <value>Specifik</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Hovedmenu</value>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Menuknapper</value>
+  </data>
+  <data name="Infocode" xml:space="preserve">
+    <value>Infokode</value>
+  </data>
+  <data name="InfocodeOnRequest_Item" xml:space="preserve">
+    <value>Vare</value>
+  </data>
+  <data name="InfocodeOnRequest_Sale" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="TriggerFor" xml:space="preserve">
+    <value>Udløser for</value>
+  </data>
+  <data name="ButtonMenus" xml:space="preserve">
+    <value>Menuer til knapper</value>
+  </data>
+  <data name="DoNotCopyMenuHeader" xml:space="preserve">
+    <value>Kopier ikke eksisterende menuhoved</value>
+  </data>
+  <data name="OmniInvButtonGridMenus" xml:space="preserve">
+    <value>Omni-knappemenuer</value>
+  </data>
+  <data name="OmniInvMenuButton" xml:space="preserve">
+    <value>Omni-lagermenuknap</value>
+  </data>
+  <data name="OmniInvMenuHeader" xml:space="preserve">
+    <value>Omni-knapmenu</value>
+  </data>
+  <data name="OmniInvMenuLabelText" xml:space="preserve">
+    <value>Omni-lagermenu:</value>
+  </data>
+  <data name="OmniInvNewMenuHeaderText" xml:space="preserve">
+    <value>Indtast beskrivelse og konfigurer Omni-lager menuhovedet</value>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>POS knap menu</value>
+  </data>
+  <data name="ViewOmniInvButtonGridMenus" xml:space="preserve">
+    <value>Vis Omni lagerknap gittermenu</value>
+  </data>
+</root>

@@ -1,0 +1,1 @@
+define({numchunks:2,prefix:'Index_Chunk',terms:[{t:'Discounts',c:0,$:0},{t:'Item',c:1,$:1},{t:'Retail Item',c:1,$:0}]});

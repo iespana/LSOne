@@ -1,0 +1,115 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 7b8bbc70-b806-11e8-b568-0800200c9a66
+
+//This is a site service report
+IsSiteServiceReport:true
+
+// Name of the report as it will appear in the system menus.
+Name: Lagernivå rapport
+
+// Extra description for the report as it will appear in some of the system menus
+Description: Den här rapporten visar lagernivå för varje artikel per leverantör
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: sv
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button, EOD
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_StockByVendor]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_StockByVendor]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_StockByVendor]
+(
+	@StoresID nvarchar(max),
+	@RetailDepartmentsID nvarchar(max),
+	@RetailGroupsID nvarchar(max),
+	@VendorsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set nocount on
+declare @docid int
+declare @docid2 int
+declare @docid3 int
+declare @docid4 int
+exec sp_xml_preparedocument @docid output, @StoresID
+exec sp_xml_preparedocument @docid2 output, @RetailDepartmentsID
+exec sp_xml_preparedocument @docid3 output, @RetailGroupsID
+exec sp_xml_preparedocument @docid4 output, @VendorsID
+
+; with ITEMSTOREVENDOR(VENDORNAME, VENDORITEMID, ITEMID, ITEMNAME, STOREID, STORENAME, UNIT)
+as (
+	select
+		vt.NAME, 
+		vi.VENDORITEMID, 
+		i.ITEMID, 
+		i.ITEMNAME + case 
+			when i.VARIANTNAME <> '' then (' - ' + i.VARIANTNAME) 
+			else isnull(i.VARIANTNAME, '') 
+		end as ITEMNAME, 
+		st.STOREID,
+		st.NAME,
+		u.TXT as UNIT
+	from RETAILITEM i
+	cross apply (select * from RBOSTORETABLE) st
+	left outer join VENDORITEMS vi on vi.RETAILITEMID = i.ITEMID 
+	left outer join VENDTABLE vt on vt.ACCOUNTNUM = vi.VENDORID
+	left outer join UNIT u on u.UNITID = i.INVENTORYUNITID
+	left outer join RETAILGROUP rg on rg.MASTERID = i.RETAILGROUPMASTERID
+	left outer join RETAILDEPARTMENT rd on rd.MASTERID = rg.DEPARTMENTMASTERID
+	join (select [text] as STORESID from openxml(@docid, '/p', 1) where not [text] is null) ur on st.STOREID = CAST(ur.STORESID as nvarchar(20)) 
+	join (select [text] as DEPARTMENTSID from openxml(@docid2, '/p', 1) where not [text] is null) us on rd.DEPARTMENTID = CAST(us.DEPARTMENTSID as nvarchar(20)) 
+	join (select [text] as GROUPSID from openxml(@docid3, '/p', 1) where not [text] is null) ut on rg.GROUPID = CAST(ut.GROUPSID as nvarchar(20)) 
+	join (select [text] as VENDORSID from openxml(@docid4, '/p', 1) where not [text] is null) uu on vi.VENDORID = CAST(uu.VENDORSID as nvarchar(20)) 	
+	where i.ITEMTYPE NOT IN (2,4)
+),
+GROUPEDITEMS(VENDORS, VENDORITEMID, ITEMID, ITEMNAME, STOREID, STORENAME, UNIT)
+as (
+	select
+		VENDORS = STUFF(
+			(
+				select char(13) + char(10) + VENDORNAME
+				from ITEMSTOREVENDOR items2
+				where items2.ITEMID = items.ITEMID 
+				and items2.STOREID = items.STOREID
+				order by VENDORNAME
+				for xml path(N''), type
+			).value(N'.[1]', N'nvarchar(max)'), 1, 2, N''
+		),
+		case 
+			when count(distinct items.VENDORNAME) = 1 then max(items.VENDORITEMID)
+			else ''
+		end as VENDORITEMID,
+		items.ITEMID, items.ITEMNAME, items.STOREID, items.STORENAME, items.UNIT
+	from ITEMSTOREVENDOR items
+	group by items.ITEMID, items.ITEMNAME, items.STOREID, items.STORENAME, items.UNIT
+)
+select
+	i.VENDORS, i.VENDORITEMID, i.ITEMID, i.ITEMNAME, i.STORENAME as STORE, i.UNIT,
+	isnull(s.QUANTITY, 0) as QUANTITY,
+	isnull(c.COST * s.QUANTITY, 0) as VALUE
+from GROUPEDITEMS i
+left outer join VINVENTSUM s on s.ITEMID = i.ITEMID and s.STOREID = i.STOREID
+left outer join GETRETAILITEMCOST('') c on c.ITEMID = i.ITEMID and c.STOREID = i.STOREID
+
+exec sp_xml_removedocument @docid
+exec sp_xml_removedocument @docid2
+exec sp_xml_removedocument @docid3
+exec sp_xml_removedocument @docid4
+
+GO

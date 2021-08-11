@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lvItems.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="column11.HeaderText" xml:space="preserve">
+    <value>Item ID</value>
+  <comment>[Term:14974]</comment></data>
+  <data name="column5.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  <comment>[Term:2403]</comment></data>
+  <data name="column6.HeaderText" xml:space="preserve">
+    <value>Variant</value>
+  <comment>[Term:4897]</comment></data>
+  <data name="column7.HeaderText" xml:space="preserve">
+    <value>Sent quantity</value>
+  <comment>[Term:19719]</comment></data>
+  <data name="column8.HeaderText" xml:space="preserve">
+    <value>Received quantity</value>
+  <comment>[Term:14976]</comment></data>
+  <data name="column10.HeaderText" xml:space="preserve">
+    <value>Requested quantity</value>
+  <comment>[Term:19714]</comment></data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lvItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 29</value>
+  </data>
+  <data name="lvItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>595, 165</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lvItems.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lvItems.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lvItems.Name" xml:space="preserve">
+    <value>lvItems</value>
+  </data>
+  <data name="&gt;&gt;lvItems.Type" xml:space="preserve">
+    <value>LSOne.Controls.ListView, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lvItems.Parent" xml:space="preserve">
+    <value>groupPanelNoSelection</value>
+  </data>
+  <data name="&gt;&gt;lvItems.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblItemHeader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lblItemHeader.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblItemHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lblItemHeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblItemHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="lblItemHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="lblItemHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblItemHeader.Text" xml:space="preserve">
+    <value>Items in order</value>
+  <comment>[Term:19707]</comment></data>
+  <data name="lblItemHeader.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblItemHeader.Name" xml:space="preserve">
+    <value>lblItemHeader</value>
+  </data>
+  <data name="&gt;&gt;lblItemHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblItemHeader.Parent" xml:space="preserve">
+    <value>groupPanelNoSelection</value>
+  </data>
+  <data name="&gt;&gt;lblItemHeader.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lvTransfers.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="column1.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="column9.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  <comment>[Term:2572]</comment></data>
+  <data name="column3.HeaderText" xml:space="preserve">
+    <value>Sent</value>
+  <comment>[Term:19658]</comment></data>
+  <data name="column2.HeaderText" xml:space="preserve">
+    <value>Sending store</value>
+  <comment>[Term:19717]</comment></data>
+  <data name="column4.HeaderText" xml:space="preserve">
+    <value>Receiving store</value>
+  <comment>[Term:19718]</comment></data>
+  <data name="lvTransfers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lvTransfers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>610, 211</value>
+  </data>
+  <data name="lvTransfers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lvTransfers.Name" xml:space="preserve">
+    <value>lvTransfers</value>
+  </data>
+  <data name="&gt;&gt;lvTransfers.Type" xml:space="preserve">
+    <value>LSOne.Controls.ListView, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lvTransfers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lvTransfers.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupPanelNoSelection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="btnEditItem.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnEditItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnEditItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAe
+        wgAAHsIBbtB1PgAAAAd0SU1FB9kKBw0cHjoiNDIAAAEoSURBVDhPYyAVzGBgWAllkg6Amv8f1pT8D6Kh
+        QsSBVeUM/KumWP9fxcnw7X+aw/+f9iKkGQLS/ON9y38QDTMA6hLC3tGt1/yvXq38A6T5378ZYEPW8zJ9
+        IcoFIM16TXrf45eH/G+5GA3WfGahzv+ZmSzEabbqsPpeuDHj/8Qbef+D1pr/Z0lj+ALSvLyMORaqDDsA
+        aXbtd/3Rsrvm/7y7Df8jNtj/ZwBqZiHG5owM5jVek7x+TzvW/3/1o4n/E7a4E695TjKD0KIS/ovuTVq/
+        1t+f9T9jewDxmkFgViqD38XVrpc+vm79b14t9oshneE30ZpBwFKd+eTCaUF/L271+LqwnOe5YxbjVqgU
+        cUBGhPmdshTzh54k5ui+QgZOqDBJgCxNAwkYGAAoEZdhgVG+fgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnEditItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 197</value>
+  </data>
+  <data name="btnEditItem.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="btnEditItem.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="btnEditItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="btnEditItem.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnEditItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnEditItem.Name" xml:space="preserve">
+    <value>btnEditItem</value>
+  </data>
+  <data name="&gt;&gt;btnEditItem.Type" xml:space="preserve">
+    <value>LSOne.Controls.ContextButton, LSOne.Controls, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnEditItem.Parent" xml:space="preserve">
+    <value>groupPanelNoSelection</value>
+  </data>
+  <data name="&gt;&gt;btnEditItem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblNoSelection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="lblNoSelection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="lblNoSelection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNoSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 13</value>
+  </data>
+  <data name="lblNoSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 207</value>
+  </data>
+  <data name="lblNoSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblNoSelection.Text" xml:space="preserve">
+    <value>No Selection</value>
+  <comment>[Term:2772]</comment></data>
+  <data name="lblNoSelection.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblNoSelection.Name" xml:space="preserve">
+    <value>lblNoSelection</value>
+  </data>
+  <data name="&gt;&gt;lblNoSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNoSelection.Parent" xml:space="preserve">
+    <value>groupPanelNoSelection</value>
+  </data>
+  <data name="&gt;&gt;lblNoSelection.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupPanelNoSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 249</value>
+  </data>
+  <data name="groupPanelNoSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>610, 237</value>
+  </data>
+  <data name="groupPanelNoSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;groupPanelNoSelection.Name" xml:space="preserve">
+    <value>groupPanelNoSelection</value>
+  </data>
+  <data name="&gt;&gt;groupPanelNoSelection.Type" xml:space="preserve">
+    <value>LSOne.Controls.GroupPanel, LSOne.Controls, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupPanelNoSelection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupPanelNoSelection.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnReceive.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnReceive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnReceive.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnReceive.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnReceive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btnReceive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 23</value>
+  </data>
+  <data name="btnReceive.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnReceive.Text" xml:space="preserve">
+    <value>Receive</value>
+  <comment>[Term:11979]</comment></data>
+  <data name="&gt;&gt;btnReceive.Name" xml:space="preserve">
+    <value>btnReceive</value>
+  </data>
+  <data name="&gt;&gt;btnReceive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReceive.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnReceive.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="flowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnViewTransferRequest.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnViewTransferRequest.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnViewTransferRequest.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnViewTransferRequest.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnViewTransferRequest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 3</value>
+  </data>
+  <data name="btnViewTransferRequest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 23</value>
+  </data>
+  <data name="btnViewTransferRequest.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnViewTransferRequest.Text" xml:space="preserve">
+    <value>View transfer request</value>
+  <comment>[Term:19729]</comment></data>
+  <data name="&gt;&gt;btnViewTransferRequest.Name" xml:space="preserve">
+    <value>btnViewTransferRequest</value>
+  </data>
+  <data name="&gt;&gt;btnViewTransferRequest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnViewTransferRequest.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnViewTransferRequest.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 214</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>562, 29</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 510</value>
+  </data>
+  <data name="&gt;&gt;column11.Name" xml:space="preserve">
+    <value>column11</value>
+  </data>
+  <data name="&gt;&gt;column11.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column5.Name" xml:space="preserve">
+    <value>column5</value>
+  </data>
+  <data name="&gt;&gt;column5.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column6.Name" xml:space="preserve">
+    <value>column6</value>
+  </data>
+  <data name="&gt;&gt;column6.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column7.Name" xml:space="preserve">
+    <value>column7</value>
+  </data>
+  <data name="&gt;&gt;column7.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column8.Name" xml:space="preserve">
+    <value>column8</value>
+  </data>
+  <data name="&gt;&gt;column8.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column10.Name" xml:space="preserve">
+    <value>column10</value>
+  </data>
+  <data name="&gt;&gt;column10.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column1.Name" xml:space="preserve">
+    <value>column1</value>
+  </data>
+  <data name="&gt;&gt;column1.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column9.Name" xml:space="preserve">
+    <value>column9</value>
+  </data>
+  <data name="&gt;&gt;column9.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column3.Name" xml:space="preserve">
+    <value>column3</value>
+  </data>
+  <data name="&gt;&gt;column3.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column2.Name" xml:space="preserve">
+    <value>column2</value>
+  </data>
+  <data name="&gt;&gt;column2.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;column4.Name" xml:space="preserve">
+    <value>column4</value>
+  </data>
+  <data name="&gt;&gt;column4.Type" xml:space="preserve">
+    <value>LSOne.Controls.Columns.Column, LSOne.Controls.ListView, Version=9.8.2016.5418, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TransferOrdersToReceivePage</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-11363
+	Responsible		: Adrian Chiorean
+	Sprint			: Bichon
+	Date created	: 17.01.2020
+
+	Description		: Add column SystemKeyboardButtonStyle in POSSTYLE
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS (SELECT * FROM POSSTYLE WHERE NAME = 'SystemKeyboardButtonStyle' OR ID = 2000033)
+BEGIN
+INSERT INTO POSSTYLE (ID, NAME, FONTNAME, FONTSIZE, FONTBOLD, FORECOLOR, BACKCOLOR, FONTITALIC, FONTCHARSET, DATAAREAID, BACKCOLOR2, GRADIENTMODE, SHAPE, SYSTEMSTYLE, STYLETYPE)
+     VALUES (2000033, 'SystemKeyboardButtonStyle', 'Segoe UI', 14, 0, -1, -13550528, 0, 0, 'LSR', -1, 0, 5, 1, 26)
+END
+GO

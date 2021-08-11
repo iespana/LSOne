@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{583BE690-D026-4908-8606-D4934B40D604}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.DataLayer.TransactionObjects</RootNamespace>
+    <AssemblyName>LSOne.DataLayer.TransactionObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\..\SM\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Client">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.Forecourt.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Interface">
+      <HintPath>..\..\..\SM\Build\bin\LSRetail.Forecourt.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\SM\Build\bin\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="BankDropReversalTransaction.cs" />
+    <Compile Include="BankDropTransaction.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DepositTransaction.cs" />
+    <Compile Include="CustomerPaymentTransaction.cs" />
+    <Compile Include="DataDirectorTransactionJob.cs" />
+    <Compile Include="DiningTableTransaction.cs" />
+    <Compile Include="DiscountItems\CustomerDiscountItem.cs" />
+    <Compile Include="DiscountItems\DiscountItem.cs" />
+    <Compile Include="DiscountItems\LineDiscountItem.cs" />
+    <Compile Include="DiscountItems\LoyaltyDiscountItem.cs" />
+    <Compile Include="DiscountItems\PeriodicDiscountItem.cs" />
+    <Compile Include="DiscountItems\TotalDiscountItem.cs" />
+    <Compile Include="EFT\EFTInfo.cs" />
+    <Compile Include="EndOfDayTransaction.cs" />
+    <Compile Include="EndOfShiftTransaction.cs" />
+    <Compile Include="Enums\EODEnums.cs" />
+    <Compile Include="Enums\LoyaltyEnums.cs" />
+    <Compile Include="Enums\SalesOrderInvoice.cs" />
+    <Compile Include="EOD\CustomerDepositLine.cs" />
+    <Compile Include="EOD\DiscountInfo.cs" />
+    <Compile Include="EOD\ItemSaleReportLine.cs" />
+    <Compile Include="EOD\OtherInfo.cs" />
+    <Compile Include="EOD\TenderDeclarationLine.cs" />
+    <Compile Include="EOD\CurrenciesInfo.cs" />
+    <Compile Include="EOD\EODInfo.cs" />
+    <Compile Include="EOD\NoSaleInfo.cs" />
+    <Compile Include="EOD\ChangeBackLine.cs" />
+    <Compile Include="EOD\TenderInfo.cs" />
+    <Compile Include="EOD\VatInfo.cs" />
+    <Compile Include="FloatEntryTransaction.cs" />
+    <Compile Include="ForecourtSound.cs" />
+    <Compile Include="Forecourt\ForecourtDevices.cs" />
+    <Compile Include="HospitalityTransaction.cs" />
+    <Compile Include="InventorySerial.cs" />
+    <Compile Include="ItemSale.cs" />
+    <Compile Include="Line\CustomerOrder\DepositItem.cs" />
+    <Compile Include="Line\CustomerOrder\OrderItem.cs" />
+    <Compile Include="Line\SaleItem\IFSaleLineItem.cs" />
+    <Compile Include="Line\TenderItem\DepositTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\IFTenderLineItem.cs" />
+    <Compile Include="LogTransaction.cs" />
+    <Compile Include="PosCustomerTransaction.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="InternalTransaction.cs" />
+    <Compile Include="InventoryTransaction.cs" />
+    <Compile Include="Line\BaseSaleItem.cs" />
+    <Compile Include="Line\CreditMemoItem\CreditMemoItem.cs" />
+    <Compile Include="Line\CustomerDepositItem\CustomerDepositItem.cs" />
+    <Compile Include="Line\GiftCertificateItem\GiftCertificateItem.cs" />
+    <Compile Include="Line\Hospitality\MenuTypeItem.cs" />
+    <Compile Include="Line\IncomeExpenseItem\IncomeExpenseItem.cs" />
+    <Compile Include="Line\InventoryLineItem.cs" />
+    <Compile Include="Line\Loyalty\LoyaltyItem.cs" />
+    <Compile Include="Line\MarkupItem\MarkupItem.cs" />
+    <Compile Include="Line\SaleItem\Dimensions\Dimensions.cs" />
+    <Compile Include="Line\SaleItem\DiscountVoucherItem.cs" />
+    <Compile Include="Line\SaleItem\FuelSalesLineItem.cs" />
+    <Compile Include="Line\SaleItem\PharmacySalesLineItem.cs" />
+    <Compile Include="Line\SaleItem\SaleLineItem.cs" />
+    <Compile Include="Line\SalesInvoiceItem\SalesInvoiceLineItem.cs" />
+    <Compile Include="Line\SalesOrderItem\SalesOrderLineItem.cs" />
+    <Compile Include="Line\TenderItem\CardTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\ChequeTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\CorporateCardTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\CouponTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\CreditMemoTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\CustomerTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\GiftCertificateTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\LoyaltyTenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\TenderLineItem.cs" />
+    <Compile Include="Line\TenderItem\TradeInTenderLineItem.cs" />
+    <Compile Include="LogOnOffTransaction.cs" />
+    <Compile Include="MemoryTables\Period.cs" />
+    <Compile Include="MemoryTables\PeriodicDiscount.cs" />
+    <Compile Include="NoSaleTransaction.cs" />
+    <Compile Include="PosTransaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipts\ReceiptInfo.cs" />
+    <Compile Include="RemoveTenderTransaction.cs" />
+    <Compile Include="Receipts\ReprintInfo.cs" />
+    <Compile Include="IFRetailTransaction.cs" />
+    <Compile Include="RetailTransaction.cs" />
+    <Compile Include="SafeDropReversalTransaction.cs" />
+    <Compile Include="SafeDropTransaction.cs" />
+    <Compile Include="TenderChangeTransaction.cs" />
+    <Compile Include="TenderCountTransaction.cs" />
+    <Compile Include="TenderDeclarationTransaction.cs" />
+    <Compile Include="TenderTransferTransaction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{feecb18d-cb75-447c-b96e-fb13c8aac5aa}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SM\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SiteService\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" DependsOnTargets="AssignTargetPaths;Compile;ResolveKeySource" Inputs="$(MSBuildAllProjects);@(IntermediateAssembly)" Outputs="$(OutputPath)$(_SGenDllName)">
+    <!-- Delete the file because I can't figure out how to force the SGen task. -->
+    <Delete Files="$(TargetDir)$(TargetName).XmlSerializers.dll" ContinueOnError="true" />
+    <SGen BuildAssemblyName="$(TargetFileName)" BuildAssemblyPath="$(OutputPath)" References="@(ReferencePath)" ShouldGenerateSerializer="true" UseProxyTypes="false" KeyContainer="$(KeyContainerName)" KeyFile="$(KeyOriginatorFile)" DelaySign="$(DelaySign)" ToolPath="$(TargetFrameworkSDKToolsDirectory)" Platform="$(Platform)">
+      <Output TaskParameter="SerializationAssembly" ItemName="SerializationAssembly" />
+    </SGen>
+  </Target>
+</Project>

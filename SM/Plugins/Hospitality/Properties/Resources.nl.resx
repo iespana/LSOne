@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="General" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschrijving</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Algemene instellingen</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Kenmerken</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuratie</value>
+  </data>
+  <data name="OPOSPrinter" xml:space="preserve">
+    <value>OPOS-printer</value>
+  </data>
+  <data name="WindowsPrinter" xml:space="preserve">
+    <value>Windows-printer</value>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Je hebt verhoogd de totale grootte van dit menu voor het raster van de POS knop en er is ruimte voor #1 nieuwe POS knop rasterlijnen menu. Wilt u voor het genereren van nieuwe regels om de leegte te vullen?</value>
+  </data>
+  <data name="AddRestaurantDiningTables" xml:space="preserve">
+    <value>Restaurant dining tabellen toevoegen</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Alle bestanden</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Beschikbaar</value>
+  </data>
+  <data name="ChangeFromDefaultFont" xml:space="preserve">
+    <value>Standaard Font</value>
+  </data>
+  <data name="ChangingFromDefaultFontQuestion" xml:space="preserve">
+    <value>The default font is #1 with default size #2. Your printing might behave unexpectedly if you change from these settings. Are you sure you want to change these values ?</value>
+  </data>
+  <data name="Clicked" xml:space="preserve">
+    <value>Geklikt op</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code:</value>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Wilt u de huidige stijl naar de knopeigenschappen kopiëren?</value>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Huidige Stijl</value>
+  </data>
+  <data name="DeleteDiningTableLayout" xml:space="preserve">
+    <value>Eettafel lay-out verwijderen</value>
+  </data>
+  <data name="DeleteDiningTableLayoutQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde eettafel lay-out?</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreen" xml:space="preserve">
+    <value>Prijzen Tabel Layout</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreenQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde eettafel lay-out scherm?</value>
+  </data>
+  <data name="DeleteHospitalityType" xml:space="preserve">
+    <value>Gastvrijheid tekst verwijderen</value>
+  </data>
+  <data name="DeleteHospitalityTypeQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Verwijderen van de POS-knop Raster menuregel</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde lijnen van de POS menu?</value>
+  </data>
+  <data name="DeletePosLookup" xml:space="preserve">
+    <value>Delete hospitality menu group</value>
+  </data>
+  <data name="DeletePosLookupQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde groep wilt verwijderen?</value>
+  </data>
+  <data name="DeletePosMenu" xml:space="preserve">
+    <value>Delete Pos menu</value>
+  </data>
+  <data name="DeletePosMenuLine" xml:space="preserve">
+    <value>Verwijderen van POS menuregel</value>
+  </data>
+  <data name="DeletePosMenuLineQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeletePosMenuQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeletePrintingRoute" xml:space="preserve">
+    <value>Afdrukken route verwijderen</value>
+  </data>
+  <data name="DeletePrintingRouteQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeleteRestaurantDiningTable" xml:space="preserve">
+    <value>Restaurant dining tabel verwijderen</value>
+  </data>
+  <data name="DeleteRestaurantDiningTableQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde restaurant eettafel?</value>
+  </data>
+  <data name="DeleteRestaurantMenuType" xml:space="preserve">
+    <value>Restaurant Menu</value>
+  </data>
+  <data name="DeleteRestaurantMenuTypeQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeleteRestaurantStation" xml:space="preserve">
+    <value>Afdrukken station verwijderen</value>
+  </data>
+  <data name="DeleteRestaurantStationQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde afdrukken zender?</value>
+  </data>
+  <data name="DeleteSalesType" xml:space="preserve">
+    <value>Verkoop type vervangingsregel</value>
+  </data>
+  <data name="DeleteSalesTypeQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde Advertenties wilt wissen?</value>
+  </data>
+  <data name="DeleteStationSelection" xml:space="preserve">
+    <value>Station selectie verwijderen</value>
+  </data>
+  <data name="DeleteStationSelectionQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van de geselecteerde zender selectie?</value>
+  </data>
+  <data name="DeliveryAndTakeout" xml:space="preserve">
+    <value>Levering en takeout</value>
+  </data>
+  <data name="DineIn" xml:space="preserve">
+    <value>Dine-in</value>
+  </data>
+  <data name="DiningTableLayout" xml:space="preserve">
+    <value>Prijzen Tabel Layout</value>
+  </data>
+  <data name="DiningTableLayoutScreenExists" xml:space="preserve">
+    <value>Een eettafel lay-out scherm met dat scherm nummer allready bestaat</value>
+  </data>
+  <data name="DiningTableLayoutSreenInUse" xml:space="preserve">
+    <value>Deze routetabel is toegewezen aan een of meer actieve werkstromen en kan niet verwijderd worden.</value>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Niet copieren </value>
+  </data>
+  <data name="DoNotCopyMenuHeader" xml:space="preserve">
+    <value>Kopieer niet bestaande menu kop</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Leeg</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>No device list found at host {0}, check if the printing station service is running at the host and has printers installed</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Glief</value>
+  </data>
+  <data name="HardwareProfilePrinter" xml:space="preserve">
+    <value>Hardwareprofiel</value>
+  </data>
+  <data name="Hospitality" xml:space="preserve">
+    <value>Horeca</value>
+  </data>
+  <data name="HospitalityMenuGroups" xml:space="preserve">
+    <value>Hospitality menu groups</value>
+  </data>
+  <data name="HospitalityMenuGroupsTooltip" xml:space="preserve">
+    <value>Select hospitality POS menus for the split bill and transfer table menus</value>
+  </data>
+  <data name="HospitalityPosMenus" xml:space="preserve">
+    <value>Hospitality POS menus</value>
+  </data>
+  <data name="HospitalityPosMenusTooltip" xml:space="preserve">
+    <value>Organiseren van POS operaties op knoppen en stijl van de rasters van de knop moet worden gebruikt in de menugroepen van gastvrijheid</value>
+  </data>
+  <data name="HospitalitySetup" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="HospitalitySetupDescription" xml:space="preserve">
+    <value>Gebruik deze optie om op rekening te betalen.</value>
+  </data>
+  <data name="HospitalitySetupTooltipDescription" xml:space="preserve">
+    <value>Algemene visuele thema&amp;apos;s van KDE beherenName</value>
+  </data>
+  <data name="HospitalityType" xml:space="preserve">
+    <value>Hospitality:</value>
+  </data>
+  <data name="HospitalityTypes" xml:space="preserve">
+    <value>Gastvrijheid</value>
+  </data>
+  <data name="HospitalityTypesDescription" xml:space="preserve">
+    <value>Gebruik deze optie om op rekening te betalen.</value>
+  </data>
+  <data name="HospitalityTypesTooltipDescription" xml:space="preserve">
+    <value>Beheren van gastvrijheid typen en hun tabelindeling en functionaliteit</value>
+  </data>
+  <data name="HospitalityTypeText" xml:space="preserve">
+    <value>Hospitality:</value>
+  </data>
+  <data name="Hosts" xml:space="preserve">
+    <value>Gastheer</value>
+  </data>
+  <data name="KitchenPrinting" xml:space="preserve">
+    <value>Keuken afdrukken</value>
+  </data>
+  <data name="LayoutID" xml:space="preserve">
+    <value>Layout:</value>
+  </data>
+  <data name="LayoutIDExists" xml:space="preserve">
+    <value>A dining table layout with the given layout id exists in the database.</value>
+  </data>
+  <data name="Listing" xml:space="preserve">
+    <value>Vermelding</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Look and feel</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Hoofdmenu</value>
+  </data>
+  <data name="ManageSetupDescription" xml:space="preserve">
+    <value>Gebruik deze optie om op rekening te betalen.</value>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Menuknoppen</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>Geen actie</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Niet beschikbaar</value>
+  </data>
+  <data name="NumberOfRestaurantDiningTablesExceeds" xml:space="preserve">
+    <value>Het totale aantal tabellen overschrijdt het maximum aantal tabellen toegestaan voor de huidige lay-out van de eettafel</value>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Actief ID</value>
+  </data>
+  <data name="PaymentStatus" xml:space="preserve">
+    <value>Betaalstatus</value>
+  </data>
+  <data name="PosColorExists" xml:space="preserve">
+    <value>Een pos kleur met die id bestaat al</value>
+  </data>
+  <data name="POSColorSetup" xml:space="preserve">
+    <value>Kleur Instelling</value>
+  </data>
+  <data name="POSColorSetupDescription" xml:space="preserve">
+    <value>Gebruik deze optie voor het beheer van de kleuren die worden gebruikt in gastvrijheid</value>
+  </data>
+  <data name="PosId" xml:space="preserve">
+    <value>POS-ID</value>
+  </data>
+  <data name="PosLookupsDescription" xml:space="preserve">
+    <value>Met deze optie kunt weergeven en bewerken van POS menugroepen</value>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Knop</value>
+  </data>
+  <data name="PosMenuButtons" xml:space="preserve">
+    <value>Knop menu 's</value>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>Menuknop</value>
+  </data>
+  <data name="PosMenus" xml:space="preserve">
+    <value>Menu's</value>
+  </data>
+  <data name="PosMenusDescription" xml:space="preserve">
+    <value>Gebruik deze optie voor het beheer van de POS-menu 's</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Voorbeeld</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Bezig met printen</value>
+  </data>
+  <data name="PrintingRoutes" xml:space="preserve">
+    <value>Drukken</value>
+  </data>
+  <data name="PrintingRoutesDescription" xml:space="preserve">
+    <value>Gebruik deze optie om op rekening te betalen.</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Drukken</value>
+  </data>
+  <data name="PrintingStations" xml:space="preserve">
+    <value>Drukken</value>
+  </data>
+  <data name="PrintingStationsDescription" xml:space="preserve">
+    <value>Gebruik deze optie om op rekening te betalen.</value>
+  </data>
+  <data name="ReceiptNumber" xml:space="preserve">
+    <value>Bonnummer</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Verzoeken</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reserveringen</value>
+  </data>
+  <data name="RestaurantDiningTableRangeExists" xml:space="preserve">
+    <value>Een eettafel restaurant bestaat al binnen het opgegeven bereik</value>
+  </data>
+  <data name="RestaurantId" xml:space="preserve">
+    <value>Restaurant ID:</value>
+  </data>
+  <data name="RestaurantMenuTypeCodeOnPosExists" xml:space="preserve">
+    <value>Een restaurant order met deze code bestaat reeds</value>
+  </data>
+  <data name="RestaurantMenuTypeExists" xml:space="preserve">
+    <value>De distributielijst met de opgegeven naam  bestaat al. Selecteer a.u.b. een andere naam.</value>
+  </data>
+  <data name="RestaurantMenuTypes" xml:space="preserve">
+    <value>Menu typen</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+  <data name="RestaurantSalesTypeExists" xml:space="preserve">
+    <value>Een gastvrijheid type met die restaurant id en het veld Verkoopsoort bestaat reeds</value>
+  </data>
+  <data name="RestaurantsDescription" xml:space="preserve">
+    <value>Gebruik deze optie voor het beheer van de restaurants</value>
+  </data>
+  <data name="RestaurantStationExists" xml:space="preserve">
+    <value>Een afdrukken station met die id bestaat al</value>
+  </data>
+  <data name="RestaurantStations" xml:space="preserve">
+    <value>Afdrukken stations</value>
+  </data>
+  <data name="RestaurantStationText" xml:space="preserve">
+    <value>Horecagelegenheid</value>
+  </data>
+  <data name="RestaurantsTooltipDescription" xml:space="preserve">
+    <value>De lijst van de restaurants/winkels te bekijken en te beheren hen openen</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Omzet:</value>
+  </data>
+  <data name="SalesTypes" xml:space="preserve">
+    <value>Verkoopstypes</value>
+  </data>
+  <data name="SalesTypesDescription" xml:space="preserve">
+    <value>Met deze optie kunt weergeven en bewerken van verkoop typen</value>
+  </data>
+  <data name="SalesTypesTooltipDescription" xml:space="preserve">
+    <value>Verkoop typen die worden gebruikt voor het instellen van een BTW-Fractie en de Fractie van de prijs op gastvrijheid typen beheren</value>
+  </data>
+  <data name="SalesTypeText" xml:space="preserve">
+    <value>Omzet:</value>
+  </data>
+  <data name="Screens" xml:space="preserve">
+    <value>Slides</value>
+  </data>
+  <data name="SendConfig" xml:space="preserve">
+    <value>Stuur Aan</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Reeks</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Sites</value>
+  </data>
+  <data name="SplitBillTransferLines" xml:space="preserve">
+    <value>Overbrengingsleidingen</value>
+  </data>
+  <data name="StaffName" xml:space="preserve">
+    <value>Naam personeel:</value>
+  </data>
+  <data name="StationIsInUseCannotBeDeleted" xml:space="preserve">
+    <value>Station #1 in omleidingsregels wordt gebruikt en kan niet worden verwijderd</value>
+  </data>
+  <data name="StationPrinting" xml:space="preserve">
+    <value>Station afdrukken</value>
+  </data>
+  <data name="StationPrintingDescription" xml:space="preserve">
+    <value>Gebruik deze optie voor het beheren van station afdrukken</value>
+  </data>
+  <data name="StationPrintingTooltipDescription" xml:space="preserve">
+    <value>Keuken afdrukken stations en het bewerkingsplan van het artikel naar de stations beheren</value>
+  </data>
+  <data name="StationRouting" xml:space="preserve">
+    <value>Station routering</value>
+  </data>
+  <data name="StationRoutingDescription" xml:space="preserve">
+    <value>Gebruik deze optie om het bewerkingsplan van artikel naar stations</value>
+  </data>
+  <data name="StationSelectionExists" xml:space="preserve">
+    <value>De selectie van een station met dezelfde gegevens al bestaat</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Winkel instellingen</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Stijl</value>
+  </data>
+  <data name="TableButtonGraphicalLayout" xml:space="preserve">
+    <value>Knop tabel</value>
+  </data>
+  <data name="TableNumber" xml:space="preserve">
+    <value>Tafelnummer</value>
+  </data>
+  <data name="Text1" xml:space="preserve">
+    <value>Tekst 1</value>
+  </data>
+  <data name="Text2" xml:space="preserve">
+    <value>Tekst 2</value>
+  </data>
+  <data name="Text3" xml:space="preserve">
+    <value>Tekst 3</value>
+  </data>
+  <data name="Text4" xml:space="preserve">
+    <value>Tekst 4</value>
+  </data>
+  <data name="Text5" xml:space="preserve">
+    <value>Tekst 5</value>
+  </data>
+  <data name="Text6" xml:space="preserve">
+    <value>Tekst 6</value>
+  </data>
+  <data name="TextFiles" xml:space="preserve">
+    <value>Tekstbestanden</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Tips</value>
+  </data>
+  <data name="TransactionNumber" xml:space="preserve">
+    <value>Transactienummer</value>
+  </data>
+  <data name="ViewAllHospitalityTypes" xml:space="preserve">
+    <value>Alle gastvrijheid weergavetypen</value>
+  </data>
+  <data name="ViewAllRestaurantStations" xml:space="preserve">
+    <value>Bekijk alle afdrukken station</value>
+  </data>
+  <data name="ViewAllSalesTypes" xml:space="preserve">
+    <value>Alle verkoop weergavetypen</value>
+  </data>
+  <data name="ViewPosMenus" xml:space="preserve">
+    <value>Bekijk posmenu's</value>
+  </data>
+</root>

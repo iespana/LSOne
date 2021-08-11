@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountSelectionCannotBeEmpty" xml:space="preserve">
+    <value>Lựa chọn tài khoản không thể để trống</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Kích hoạt</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Cộng thêm</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="AmountMayNotBeHigherThanBasePrice" xml:space="preserve">
+    <value>Số tiền chiết khấu có thể không cao hơn giá cơ sở của mặt hàng</value>
+  </data>
+  <data name="BarcodeAlreadyAssignedToAnOffer" xml:space="preserve">
+    <value>Mã vạch này đã được gán cho một ưu đãi</value>
+  </data>
+  <data name="CannotSortByThisColumn" xml:space="preserve">
+    <value>Không thể sắp xếp theo cột này</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Màu</value>
+  </data>
+  <data name="CouldNotDeleteLineGroup" xml:space="preserve">
+    <value>Không thể xóa nhóm dòng vì nhóm đang sử dụng</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Hủy kích hoạt</value>
+  </data>
+  <data name="DealPrice" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="DealPriceDiscountPct" xml:space="preserve">
+    <value>Giá thỏa thuận / Phần trăm chiết khấu</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Cửa hàng mặc định không có nhóm thuế kèm theo</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DeleteDiscountOffer" xml:space="preserve">
+    <value>Xóa ưu đãi giảm giá</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Xóa dòng khuyến mại</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng khuyến mại đã chọn?</value>
+  </data>
+  <data name="DeleteDiscountOfferLines" xml:space="preserve">
+    <value>Xóa dòng khuyến mại</value>
+  </data>
+  <data name="DeleteDiscountOfferLinesQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng khuyến mại đã chọn không?</value>
+  </data>
+  <data name="DeleteDiscountOfferQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng khuyến mại đã chọn?</value>
+  </data>
+  <data name="DeleteDiscountPeriod" xml:space="preserve">
+    <value>Xóa khoảng thời gian hiệu lực khuyến mại</value>
+  </data>
+  <data name="DeleteDiscountPeriodQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng khuyến mại đã chọn?</value>
+  </data>
+  <data name="DeleteLineGroup" xml:space="preserve">
+    <value>Xóa nhóm các dòng</value>
+  </data>
+  <data name="DeleteLineGroupQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng khuyến mại đã chọn không?</value>
+  </data>
+  <data name="DeleteLineGroups" xml:space="preserve">
+    <value>Xóa nhóm các dòng</value>
+  </data>
+  <data name="DeleteLineGroupsQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa các nhóm dòng đã chọn?</value>
+  </data>
+  <data name="DeleteMixAndMatch" xml:space="preserve">
+    <value>Xóa khuyến mại mix match</value>
+  </data>
+  <data name="DeleteMixAndMatchQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa khuyến mại mix match đã chọn không?</value>
+  </data>
+  <data name="DeleteMultibuy" xml:space="preserve">
+    <value>Xóa thiết lập khuyến mại multibuy</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Xóa dòng khuyến mại multibuy</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng multibuy đã chọn?</value>
+  </data>
+  <data name="DeleteMultibuyLines" xml:space="preserve">
+    <value>Xóa dòng khuyến mại multibuy</value>
+  </data>
+  <data name="DeleteMultibuyLinesQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa các dòng multibuy đã chọn?</value>
+  </data>
+  <data name="DeleteMultibuyQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa thiết lập multibuy đã chọn?</value>
+  </data>
+  <data name="DeletePriceGroup" xml:space="preserve">
+    <value>Xóa nhóm giá</value>
+  </data>
+  <data name="DeletePriceGroupQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa nhóm giá đã chọn không?</value>
+  </data>
+  <data name="DeletePromotion" xml:space="preserve">
+    <value>Xóa ưu đãi giảm giá</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Xóa dòng ưu đãi giảm giá</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng ưu đãi đã chọn không?</value>
+  </data>
+  <data name="DeletePromotionLines" xml:space="preserve">
+    <value>Xóa dòng ưu đãi giảm giá</value>
+  </data>
+  <data name="DeletePromotionLinesQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng ưu đãi đã chọn không?</value>
+  </data>
+  <data name="DeletePromotionQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa dòng ưu đãi đã chọn không?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroup" xml:space="preserve">
+    <value>Xóa cửa hàng khỏi nhóm giá</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroupQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa cửa hàng đã chọn khỏi nhóm giá không?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả:</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Vô hiệu hóa</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="DiscountExceedsPrice" xml:space="preserve">
+    <value>Ưu đãi giảm giá không thể vượt quá giá bán tiêu chuẩn</value>
+  </data>
+  <data name="DiscountOffer" xml:space="preserve">
+    <value>Giảm giá</value>
+  </data>
+  <data name="DiscountOfferLines" xml:space="preserve">
+    <value>Dòng khuyến mại </value>
+  </data>
+  <data name="DiscountOffers" xml:space="preserve">
+    <value>Gói khuyến mại</value>
+  </data>
+  <data name="DiscountOffersDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa gói khuyến mại</value>
+  </data>
+  <data name="DiscountOffersTooltipDescription" xml:space="preserve">
+    <value>Quản lý gói giảm giá cho các mặt hàng, các nhóm và phòng ban</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Chiết khấu</value>
+  </data>
+  <data name="DiscountPercentCannotBeZero" xml:space="preserve">
+    <value>Phần trăm chiết khấu không thể bằng không</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Chiết khấu:</value>
+  </data>
+  <data name="DiscountsDescription" xml:space="preserve">
+    <value>Hiển thị menu con cho các hoạt động liên quan đến giảm giá</value>
+  </data>
+  <data name="DiscountType" xml:space="preserve">
+    <value>Loại Chiết khấu</value>
+  </data>
+  <data name="DiscountValuesAreMissing" xml:space="preserve">
+    <value>Sô tiền giảm giá bị thiếu</value>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Chỉnh sửa tất cả</value>
+  </data>
+  <data name="EditDiscount" xml:space="preserve">
+    <value>Sửa giảm giá</value>
+  </data>
+  <data name="EditPriority" xml:space="preserve">
+    <value>Chỉnh sửa ưu tiên</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="EditTypeNone" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Cho phép</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Bật:</value>
+  </data>
+  <data name="ErrorSomeDataHasBeenDeleted" xml:space="preserve">
+    <value>Lỗi: Một số dữ liệu đã bị xóa</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Mặt hàng</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Sản phẩm không có nhóm thuế đi kèm</value>
+  </data>
+  <data name="ItemRelation" xml:space="preserve">
+    <value>Mối quan hệ của sản phẩm</value>
+  </data>
+  <data name="LevelMustBeAPositiveNumber" xml:space="preserve">
+    <value>Cấp bậc phải là một số dương</value>
+  </data>
+  <data name="LineGroup" xml:space="preserve">
+    <value>Nhóm dòng:</value>
+  </data>
+  <data name="MBConfigHeaderPercent" xml:space="preserve">
+    <value>Chọn số lượng tối thiểu duy nhất và phần trăm chiết khấu</value>
+  </data>
+  <data name="MixAndMatch" xml:space="preserve">
+    <value>Pha trộn và kết hợp</value>
+  </data>
+  <data name="MixAndMatchDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa khuyến mại mix match</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Nhóm dòng mix &amp; match</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Dòng khuyến mại mix match</value>
+  </data>
+  <data name="MixAndMatchTooltipDescription" xml:space="preserve">
+    <value>Thiết lập gói khuyến mại mix -mat cho phép thiết lập gói giảm giá cho bất kỳ sự kết hợp các mặt hàng nào</value>
+  </data>
+  <data name="MixMatch" xml:space="preserve">
+    <value>Pha trộn và kết hợp</value>
+  </data>
+  <data name="MovePriorityDown" xml:space="preserve">
+    <value>Xuống dưới</value>
+  </data>
+  <data name="MovePriorityUp" xml:space="preserve">
+    <value>Lên trên</value>
+  </data>
+  <data name="Multibuy" xml:space="preserve">
+    <value>Mua nhiều</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Cấu hình gói khuyến mại Multibuy</value>
+  </data>
+  <data name="MultibuyDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa thiết lập gói multibuy</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Dòng Multibuy</value>
+  </data>
+  <data name="MultibuyTooltipDescription" xml:space="preserve">
+    <value>Thiết lập gói giảm giá multibuy liên quan đến số lượng bán</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Không có cửa hàng mặc định được chọn</value>
+  </data>
+  <data name="NoDiscountsAreActive" xml:space="preserve">
+    <value>Không có gói giảm giá được kích hoạt</value>
+  </data>
+  <data name="NoDiscountsAreConfigured" xml:space="preserve">
+    <value>Không có gói giảm giá được cấu hình</value>
+  </data>
+  <data name="OfferCount" xml:space="preserve">
+    <value>#1 gói giảm giá tìm thấy</value>
+  </data>
+  <data name="OfferLinesCount" xml:space="preserve">
+    <value>#1 dòng tìm thấy</value>
+  </data>
+  <data name="OfferLinesLoaded" xml:space="preserve">
+    <value># 1 dòng được tải (của # 2)</value>
+  </data>
+  <data name="OneDiscountIsExpiringThisWeek" xml:space="preserve">
+    <value>1 giảm giá sẽ hết hạn trong tuần này</value>
+  </data>
+  <data name="OneDiscountsIsActive" xml:space="preserve">
+    <value>1 gói giảm giá được kích hoạt</value>
+  </data>
+  <data name="PeriodicDiscountPriorities" xml:space="preserve">
+    <value>Thứ tự uu tiên giảm giá cuối kỳ</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để quản lý thự tự ưu tiên các gói giảm giá cuối kỳ</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesTooltipDescription" xml:space="preserve">
+    <value>Quản lý thứ tự ưu tiên cho tất cả các gói ưu đãi giảm giá . Thứ tự ưu tiên được sử dụng khi có nhiều ưu đãi cho cùng một mặt hàng.</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Chiết khấu định kỳ:</value>
+  </data>
+  <data name="PeriodicDiscountsManage" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Giảm giá</value>
+  </data>
+  <data name="PriceGroupDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa các nhóm giá</value>
+  </data>
+  <data name="PriceGroupExists" xml:space="preserve">
+    <value>Mã nhóm giá này đã tồn tại</value>
+  </data>
+  <data name="PriceGroups" xml:space="preserve">
+    <value>Nhóm giá</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Giá bán</value>
+  </data>
+  <data name="PricesAndDiscounts" xml:space="preserve">
+    <value>Giá bán và giảm giá</value>
+  </data>
+  <data name="PricesDescription" xml:space="preserve">
+    <value>Hiển thị menu con cho các hoạt động liên quan đến giá bán</value>
+  </data>
+  <data name="PriceUnit" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="PriceUnitIncludingTax" xml:space="preserve">
+    <value>Giá bao gồm thuế</value>
+  </data>
+  <data name="PriceValuesAreMissing" xml:space="preserve">
+    <value>Giá bán bị thiếu</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Mức ưu tiên:</value>
+  </data>
+  <data name="PriorityAlreadyInUse" xml:space="preserve">
+    <value>Thứ tự ưu tiên này đã được sử dụng bởi gói ưu đãi giảm giá khác</value>
+  </data>
+  <data name="PriorityAlreadyInUseNextIs" xml:space="preserve">
+    <value>Thứ tự ưu tiên này đã được sử dụng bởi gói ưu đãi giảm giá khác. Thứ tự ưu tiên có sẵn tiếp theo là # 1</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Dòng ưu đãi</value>
+  </data>
+  <data name="PromotionOffer" xml:space="preserve">
+    <value>Ưu đãi khuyến mãi</value>
+  </data>
+  <data name="PromotionOffers" xml:space="preserve">
+    <value>Gói Ưu đãi khuyến mãi</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Gói ưu đãi</value>
+  </data>
+  <data name="PromotionsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa chương trình khuyến mãi</value>
+  </data>
+  <data name="PromotionsTooltipDescription" xml:space="preserve">
+    <value>Quản lý chương trình ưu đãi cho các mặt hàng, nhóm và phòng ban</value>
+  </data>
+  <data name="RelationExists" xml:space="preserve">
+    <value>Một dòng khuyến mại với mối quan hệ này đã tồn tại</value>
+  </data>
+  <data name="RemoveConfiguration" xml:space="preserve">
+    <value>Xóa cấu hình</value>
+  </data>
+  <data name="RemoveConfigurationQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa những cấu hình đã lựa chọn này?</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Bán lẻ</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Bộ phận bán lẻ</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Nhóm bán lẻ</value>
+  </data>
+  <data name="RetailItemNotExistsError" xml:space="preserve">
+    <value>Mặt hàng bán lẻ trong bản ghi này đã bị xóa. Vui lòng xóa bản ghi để khắc phục sự cố</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Chọn hoạt động</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="ShowOffer" xml:space="preserve">
+    <value>Xem gói giảm giá</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Kích cỡ</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Đặc biệt</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Nhóm đặc biệt</value>
+  </data>
+  <data name="StandardPriceIsZero" xml:space="preserve">
+    <value>Giá bán bằng không</value>
+  </data>
+  <data name="StoreAlreadyInPriceGroup" xml:space="preserve">
+    <value>Cửa hàng được chọn đã nằm trong nhóm giá được chọn</value>
+  </data>
+  <data name="StoresInPriceGroups" xml:space="preserve">
+    <value>Cửa hàng trong nhóm giá</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="ThatMinimumQuantityExists" xml:space="preserve">
+    <value>Số lượng tối thiểu đó tồn tại trong cơ sở dữ liệu</value>
+  </data>
+  <data name="TimeDoesNotEndAfterMidnight" xml:space="preserve">
+    <value>Thời gian không kết thúc sau nửa đêm</value>
+  </data>
+  <data name="TimeEndsAfterMidnight" xml:space="preserve">
+    <value>Thời gian kết thúc sau nửa đêm</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Loại:</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Hoàn tác</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="ValidationPeriodDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem và chỉnh sửa khoảng thời gian có hiệu lực</value>
+  </data>
+  <data name="ValidationPeriods" xml:space="preserve">
+    <value>Thời gian có hiệu lực</value>
+  </data>
+  <data name="ValidationPeriodTooltipDescription" xml:space="preserve">
+    <value>Quản lý thời gian có hiệu lực cho các gói ưu đãi giảm giá và khuyến mãi</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Biến thể</value>
+  </data>
+  <data name="VariantNeedsToBeSelected" xml:space="preserve">
+    <value>Mã con cần được chọn cho các sản phẩm có mã con</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Số biến</value>
+  </data>
+  <data name="VariationNotExistsError" xml:space="preserve">
+    <value>Các biến thể của bản ghi này đã bị xóa. Vui lòng xóa bản ghi này để khắc phục sự cố</value>
+  </data>
+  <data name="ViewConflictingPriorities" xml:space="preserve">
+    <value>Thứ tự ưu tiên này đã được sử dụng bởi  gói khuyến mại khác. Nhấn vào đây để xem tất cả các ưu tiên</value>
+  </data>
+  <data name="ViewPriorities" xml:space="preserve">
+    <value>Xem thứ tự ưu tiên</value>
+  </data>
+  <data name="XDiscountsAreActive" xml:space="preserve">
+    <value>#1 gói giảm giá đã kích hoạt</value>
+  </data>
+  <data name="XDiscountsAreExpiringThisWeek" xml:space="preserve">
+    <value>#1 gói giảm giá sẽ hết hạn trong tuần này</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Có</value>
+  </data>
+</root>

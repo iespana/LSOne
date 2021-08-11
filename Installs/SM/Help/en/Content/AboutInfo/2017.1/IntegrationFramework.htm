@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Integration Framework</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.1/IntegrationFramework.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Integration Framework</h1>
+        <p>&#160;</p>
+        <p>In this release we are happy to announce the release of the LS&#160;One Integration Framework which will help our partners to integrate to 3rd party ERP&#160;systems. The Integration Framework will run as a webservice on a customer server (or a partner cloud server)&#160;and will be able to save to and retrieve information from the LS&#160;One system from and to the ERP system.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Integration Framework - overview.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1739" data-mc-height="524" src="Resources/Integration Framework - overview_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>When integrating to a 3rd party ERP&#160;system the main questions are always; What information is needed and when is it needed?</p>
+        <h2>What information?</h2>
+        <p>The information generally replicated from the ERP&#160;system is:</p>
+        <table style="width: 100%;">
+            <col style="width: 282px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;">Information</td>
+                    <td style="font-weight: bold;">Comments</td>
+                </tr>
+                <tr>
+                    <td>Items</td>
+                    <td>IDs&#160;(SKU), Description, Extended description, Price, Barcode, Tax group, Unit and etc. Any configuration that exists in the LS&#160;One system can be sent from the ERP system</td>
+                </tr>
+                <tr>
+                    <td>Item hierarchy</td>
+                    <td>Retail group, retail department, retail division. Not necessary for the LS&#160;One system to work but is beneficial to have if the ERP&#160;system does provide this kind of hierarchy especially when configuring periodic discounts</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Name, address, credit limit, tax group and etc. Any configuration that exists int he LS&#160;One system can be sent from the ERP system.</td>
+                </tr>
+                <tr>
+                    <td>Customer based prices and discounts</td>
+                    <td>Prices and price groups can be sent to the LS&#160;One system from the ERP system</td>
+                </tr>
+                <tr>
+                    <td>Sales information</td>
+                    <td>This information is retrieved from the LS&#160;One system to be saved to the ERP system. There are various ways to get this information, please see the Integration framework documentation when it will be made available in the Development help.</td>
+                </tr>
+                <tr>
+                    <td>End of day statements</td>
+                    <td>End of day statements can be created, calculated, posted and retrieved from the ERP through the Integration service</td>
+                </tr>
+                <tr>
+                    <td>Cash management information</td>
+                    <td>Transactions for the cash management operations in the POS can be retrieved from the ERP&#160;system through the Integration service</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>When is it needed?</h2>
+        <p>When do we need all of this information? Does some of this information need to be real-time information or can all of it be scheduled information?</p>
+        <p>Any information that is saved or retrieved through the <span class="MyVariablesSite Service">Site Service</span> can be redirected to an ERP&#160;system. The image displays all the functionality that is available through the <span class="MyVariablesSite Service">Site Service</span>. </p>
+        <p>So if an integration to a 3rd party ERP&#160;system would include retrieving, displaying and saving the inventory information directly from the LS&#160;One system to the ERP&#160;system this can be done through the <span class="MyVariablesSite Service">Site Service</span>. A very good example of that would be the Inventory functionality in the LS&#160;One system.</p>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Integration Framework - Site service.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="586" data-mc-height="243" src="Resources/Integration Framework - Site service_thumb_0_150.png" style="width: 421px;height: 174px;" tabindex="" /></a>
+        </p>
+        <p>In this image the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> and the <span class="MyVariablesSite Manager">Site Manager</span> are all talking to the same <span class="MyVariablesSite Service">Site Service</span> but when any and all systems ask for Inventory information the <span class="MyVariablesSite Service">Site Service</span> is redirected to retrieve and save the information to the ERP&#160;system rather then get the information from the LS&#160;One system. </p>
+        <p>All functions in the <span class="MyVariablesSite Service">Site Service</span> are virtual which means that only the functions that need to be redirected (for example the Inventory functionality)&#160;have to be implemented not the entire Site service functionality. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Integration Framework - Site service redirection.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1630" data-mc-height="810" src="Resources/Integration Framework - Site service redirection_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2>Environment</h2>
+        <p>When installing the Integration Framework, regardless of how many LS&#160;One databases it should be talking to, there is only ever need for one webservice to be installed. The LS&#160;One Integration Framework was designed in such a way that it can communicate with one or multiple LS&#160;One databases. Each connection to the Integration Framework needs to know which database it should be talking to.</p>
+        <p>By designing the framework this way the partners have the option of creating a software as a service environment with multiple LS&#160;One databases (LS&#160;One Express perhaps) but only one LS&#160;One Integration framwork and one LS&#160;One <span class="MyVariablesSite Service">Site Service</span>, both of which could be talking to a specific ERP system to get and send information .</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Integration Framework - overview2.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1574" data-mc-height="731" src="Resources/Integration Framework - overview2_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2>License</h2>
+        <p>In order to use the Integration framework the LS&#160;One license account has to be updated to activate the Integration framework. Please contact LS&#160;Retail <a href="mailto:Licenses@lsretail.com?subject=LS One license update: Activation of Integration framework">Licensing department</a> to update the LS&#160;One license account to include the Integration framework</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

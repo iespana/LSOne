@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96D8CEBE-93CD-42AC-91E8-5B93ECB272CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services</RootNamespace>
+    <AssemblyName>LSOne.Services.Item</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/Item/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ItemService.Partner.cs" />
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="ItemService.cs" />
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SerialIDDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SerialIDDialog.Designer.cs">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram_Item 14. August 2007.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.bg.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.cs.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.da.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.de.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.el.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.en-ZA.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.es-MX.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.es.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.fi.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.fr.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.hi.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.is.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.it.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.ja.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.ko.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.nb-NO.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.nl.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.pl.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.pt-BR.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.ru.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.sv.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.zh-CHS.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.zh-CHT.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double arrow up_32.png" />
+    <None Include="Resources\double arrow down_32.png" />
+    <None Include="Resources\Arrowdownthin_32px.png" />
+    <None Include="Resources\Arrowupthin_32px.png" />
+    <None Include="Resources\Doublearrowdownthin_32px.png" />
+    <None Include="Resources\Doublearrowupthin_32px.png" />
+    <Content Include="Resources\DownArrow.png" />
+    <Content Include="Resources\PageDownArrow.png" />
+    <Content Include="Resources\PageUpArrow.png" />
+    <None Include="Resources\PosGrayArrowDown32.png" />
+    <None Include="Resources\PosGrayArrowPageDown32.png" />
+    <None Include="Resources\PosGrayArrowPageUp32.png" />
+    <None Include="Resources\PosGrayArrowUp32.png" />
+    <None Include="Resources\PosGrayPlus32.png" />
+    <None Include="Resources\single arrow up_32.png" />
+    <None Include="Resources\single arrow down_32.png" />
+    <None Include="Resources\Plusincircle_16px.png" />
+    <None Include="Resources\Plusincircle_24px.png" />
+    <Content Include="Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Other\Peripherals\Peripherals.csproj">
+      <Project>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</Project>
+      <Name>Peripherals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.nl-BE.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.ja-JP.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\SerialIDDialog.vi-VN.resx">
+      <DependentUpon>SerialIDDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\Services\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

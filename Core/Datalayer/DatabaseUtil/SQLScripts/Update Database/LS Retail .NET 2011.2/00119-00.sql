@@ -1,0 +1,172 @@
+﻿
+/*
+
+	Incident No.	: 12062	
+	Responsible		: Óskar Bjarnason	
+	Sprint			: LS Retail .NET 2012/Freyr
+	Date created	: 05.10.2011
+
+	Description		: Add TransactionID, Linenum, Description, ALLOWEOD, Active 
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected	: POSISSUSPENDTRANSADDINFO - Added Table	
+					  POSISSUSPENDEDTRANSACTIONS - Drop contraint, change column name and added constraint
+					  
+					  	
+*/		
+
+USE LSPOSNET
+
+GO
+						
+--Drop Constraint 
+
+IF EXISTS (SELECT 'X' FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE  CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'POSISSUSPENDEDTRANSACTIONS' AND CONSTRAINT_NAME = 'PK_POSISSUSPENDEDTRANSACTIONS')
+Begin
+	Alter Table POSISSUSPENDEDTRANSACTIONS
+	DROP CONSTRAINT PK_POSISSUSPENDEDTRANSACTIONS
+End
+GO
+
+
+
+--Delete old transactionID
+IF EXISTS (SELECT 'X' FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_NAME='POSISSUSPENDEDTRANSACTIONS' AND COLUMN_NAME='TRANSACTIONID'  AND CHARACTER_MAXIMUM_LENGTH = 40)
+Begin
+	Alter Table POSISSUSPENDEDTRANSACTIONS
+	DROP COLUMN TRANSACTIONID
+End
+GO
+
+
+
+--rename suspendtransactionid
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='POSISSUSPENDEDTRANSACTIONS' AND COLUMN_NAME='SUSPENDEDTRANSACTIONID')
+Begin
+	EXEC sp_rename 'DBO.POSISSUSPENDEDTRANSACTIONS.SUSPENDEDTRANSACTIONID' , 'TRANSACTIONID', 'COLUMN'
+
+END
+GO
+
+--change length
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='POSISSUSPENDEDTRANSACTIONS' AND COLUMN_NAME='TRANSACTIONID' AND CHARACTER_MAXIMUM_LENGTH = 20)
+begin
+	IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE where CONSTRAINT_NAME = 'PK_POSISSUSPENDEDTRANSACTIONS_NEW' and TABLE_NAME = 'POSISSUSPENDEDTRANSACTIONS')
+	begin
+		ALTER TABLE POSISSUSPENDEDTRANSACTIONS DROP CONSTRAINT PK_POSISSUSPENDEDTRANSACTIONS_NEW
+	end
+	ALTER TABLE POSISSUSPENDEDTRANSACTIONS
+	ALTER COLUMN TRANSACTIONID NVARCHAR(50) not null
+	ALTER TABLE POSISSUSPENDEDTRANSACTIONS ADD  CONSTRAINT PK_POSISSUSPENDEDTRANSACTIONS_NEW PRIMARY KEY CLUSTERED 
+	(
+		TRANSACTIONID ASC,
+		DATAAREAID ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+end
+GO
+
+IF NOT EXISTS (SELECT 'X' FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE  CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'POSISSUSPENDEDTRANSACTIONS' AND CONSTRAINT_NAME = 'PK_POSISSUSPENDEDTRANSACTIONS_NEW')
+BEGIN
+
+ALTER TABLE dbo.POSISSUSPENDEDTRANSACTIONS ADD CONSTRAINT
+		PK_POSISSUSPENDEDTRANSACTIONS_NEW PRIMARY KEY CLUSTERED 
+		(
+		TRANSACTIONID,
+		DATAAREAID
+		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+END
+
+
+
+
+exec spDB_SetTableDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','Table that stores header informaton on suspended transactions'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','TRANSACTIONDATA','Not used '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','BYTELENGTH','Not used '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','TRANSDATE','Date of transaction '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','STAFF','Staffmember who sent the transaction '
+--exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','NETAMOUNT','Transaction balance excluding tax'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','STOREID','Id of the store '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','TERMINALID','Id of the terminal'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','DATAAREAID','Id of the Dataarea'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','TRANSACTIONXML','XML data of the transaction'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','RECALLEDBY','Who recalled the transaction'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','TRANSACTIONID','ID of the TRANSACTION'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','DESCRIPTION','Description of the suspended transaction'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','ALLOWEOD','Flag that specifies if its allowed to do end of day operation when there are suspended transactions ( 0 = Store Default, 1 = Terminal Default, 2=Yes, 3=No) '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','ACTIVE','Flag that specifies if the transaction is active( 0  = No, 1 = yes'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDEDTRANSACTIONS','SUSPENSIONTYPEID','ID of the SuspensionType'
+
+
+
+
+Go
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('POSISSUSPENDTRANSADDINFO'))
+BEGIN
+CREATE TABLE POSISSUSPENDTRANSADDINFO
+	(
+	ID uniqueidentifier Default NEWID() NOT NULL,
+	TRANSACTIONID nvarchar(40) NOT NULL,
+	PROMPT nvarchar(60),
+	FIELDORDER int NOT NULL,
+	INFOTYPE int NOT NULL, 
+	INFOTYPESELECTION nvarchar(20) NOT NULL,
+	TEXTRESULT1 nvarchar(255) null,
+	TEXTRESULT2 nvarchar(255) null,
+	TEXTRESULT3 nvarchar(60) null,
+	TEXTRESULT4 nvarchar(10) null,
+	TEXTRESULT5 nvarchar(30) null,
+	TEXTRESULT6 nvarchar(20) null,
+	DATERESULT Datetime,
+	DATAAREAID nvarchar(4) NOT NULL		
+	)  ON [PRIMARY]
+
+	ALTER TABLE POSISSUSPENDTRANSADDINFO ADD CONSTRAINT
+		PK_POSISSUSPENDTRANSADDINFO PRIMARY KEY CLUSTERED 
+		(
+		ID,
+		TRANSACTIONID,
+		DATAAREAID
+		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+
+
+end
+
+GO
+
+exec spDB_SetTableDescription_1_0 'POSISSUSPENDTRANSADDINFO','Table that stores additional  informaton on suspended transactions'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','ID','The ID of PossuspendTransAddinfo'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TRANSACTIONID','The ID of the suspended transaction'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','PROMPT','The text used to prompt the user for the information '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','FIELDORDER','The order in which the information should be asked for'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','INFOTYPE','INFOTYPE ENUMS '
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','INFOTYPESELECTION','If the Infotype is infocode this field will have the name of the infocode to be displayed. Can be either a single infocode or an infocode group'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT1','Stores text, infocode result, Address1 or First name depending on field type'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT2','Address2 or First name depending on field type'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT3','City or MiddleName depending on field type'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT4','ZIP or NameSuffix depending on field type'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT5','State or NameSuffix depending on field type'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','TEXTRESULT6','Country ID if field type was address'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','DATERESULT','Date result if the field type was date'
+exec spDB_SetFieldDescription_1_0 'POSISSUSPENDTRANSADDINFO','DATAAREAID','COMPANY id - not visible to the user'
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+

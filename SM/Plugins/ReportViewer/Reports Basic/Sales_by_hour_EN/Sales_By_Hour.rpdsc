@@ -1,0 +1,64 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 387b5140-6eb4-11e1-b0c4-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Sales by hour
+
+// Extra description for the report as it will appear in some of the system menus
+Description: This report shows total sales over a selected period grouped by hour of the day.
+
+/ LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: en
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report,Store
+Contexts: Report, Button, Store, Terminal
+
+Enum: Type; Display; Gross sales = 1, Number of transactions = 2, Average amount per transaction = 3
+//Number of items = 2
+//Average number of items per transaction = 4
+
+/ Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_SumByHour]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_SumByHour]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_SumByHour]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@UsersID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+declare @docid int
+exec sp_xml_preparedocument @docid output, @UsersID
+select 
+THEDATE, D, M, Y, H, count(distinct TRANSACTIONID) as TRANSACTIONS, sum(NETAMOUNT) as NETAMOUNT, sum(GROSSAMOUNT) as GROSSAMOUNT, sum(DISCAMOUNT) as DISCAMOUNT, sum(PAYMENTAMOUNT) as PAYMENTAMOUNT, sum(NUMBEROFITEMLINES) as NUMBEROFITEMLINES, round(avg(NUMBEROFITEMLINES), 0) as AVG_NUMBEROFITEMLINES, STORE, STORENAME, CURRENCY, TERMINAL, TERMINALNAME, STAFF, STAFFNAME, CUSTACCOUNT, CUSTACCOUNTNAME
+from
+(
+	select 
+	Cast(t.TRANSDATE as date) as THEDATE, DatePart(HH, t.TRANSDATE) as H, Day(t.TRANSDATE)	as D, Month(t.TRANSDATE) as M, Year(t.TRANSDATE) as Y, t.TRANSACTIONID, t.CUSTACCOUNT, ISNULL(u.NAME,'') as CUSTACCOUNTNAME, t.NETAMOUNT * -1 as NETAMOUNT, (t.GROSSAMOUNT * -1)+(t.INCOMEEXPENSEAMOUNT) as GROSSAMOUNT, t.DISCAMOUNT, t.PAYMENTAMOUNT, t.NUMBEROFITEMLINES, t.STORE, s.NAME as STORENAME, s.CURRENCY, t.TERMINAL, v.NAME as TERMINALNAME, t.STAFF, w.NAME as STAFFNAME, t.DATAAREAID 
+	from RboTransactionTable t
+	join (select [text] as USERID from openxml(@docid, '/p', 1) where not [text] is null) us on t.STAFF = cast(us.USERID as nvarchar(20))
+	left outer join CUSTTABLE u on t.CUSTACCOUNT = u.ACCOUNTNUM and t.DATAAREAID = u.DATAAREAID
+	left outer join RBOSTORETABLE s on t.STORE = s.STOREID and t.DATAAREAID = s.DATAAREAID
+	left outer join RBOTERMINALTABLE v on t.TERMINAL = v.TERMINALID and t.STORE = v.STOREID and t.DATAAREAID = v.DATAAREAID
+	left outer join RBOSTAFFTABLE w on t.STAFF = w.STAFFID and t.DATAAREAID = w.DATAAREAID
+	where type = 2 and t.entrystatus = 0  and t.DATAAREAID = @DataareaID and t.TRANSDATE >= @StartDate and t.TRANSDATE <= @EndDate
+)temp
+group by THEDATE, Y, M, D, H, STORE, STORENAME, CURRENCY, STAFF, STAFFNAME, TERMINAL, TERMINALNAME, CUSTACCOUNT, CUSTACCOUNT, CUSTACCOUNTNAME
+order by Y, M, D, H
+exec sp_xml_removedocument @docid
+Go

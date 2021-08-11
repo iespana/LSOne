@@ -1,0 +1,1517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="POSMENUHEADER">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MENUID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COLUMNS" type="xs:int" minOccurs="0" />
+                  <xs:element name="ROWS" type="xs:int" minOccurs="0" />
+                  <xs:element name="MENUCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTBOLD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTITALIC" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTCHARSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="USENAVOPERATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="APPLIESTO" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GRADIENTMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHAPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="MENUTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="STYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFAULTOPERATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="GUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="IMPORTDATETIME" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DEVICETYPE" type="xs:int" />
+                  <xs:element name="MAINMENU" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSMENULINE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MENUID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEQUENCE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYNO" type="xs:int" />
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OPERATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="PARAMETER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PARAMETERTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTBOLD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTITALIC" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTCHARSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISABLED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PICTURE" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="PICTUREFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDEDESCRONPICTURE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTSTRIKETHROUGH" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTUNDERLINE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="COLUMNSPAN" type="xs:int" minOccurs="0" />
+                  <xs:element name="ROWSPAN" type="xs:int" minOccurs="0" />
+                  <xs:element name="NAVOPERATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDDEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHADEWHENDISABLED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BACKGROUNDHIDDEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TRANSPARENT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="GLYPH" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH3" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH4" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXTFONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT2FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT3FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT4FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXTFONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT2FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT3FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT4FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXTFORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT2FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT3FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT4FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHOFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH2OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH3OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH4OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GRADIENTMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHAPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="USEHEADERFONT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USEHEADERATTRIBUTES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="IMAGEPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="STYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYMAPPING" type="xs:int" minOccurs="0" />
+                  <xs:element name="PICTUREID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSMENUHEADER" />
+          <xs:field xpath="MENUID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSMENULINE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSMENULINE" />
+          <xs:field xpath="MENUID" />
+          <xs:field xpath="SEQUENCE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <POSMENUHEADER>
+      <MENUID>OMNI001</MENUID>
+      <DESCRIPTION>Inventory menu</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>5</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>30f51c6b-418b-4c04-ba8c-1afbeba3c6c6</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>true</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>OMNI002</MENUID>
+      <DESCRIPTION>Utilities</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>4</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>f0a67776-a5de-4b96-b6de-5a3a8e4fdf99</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>OMNI003</MENUID>
+      <DESCRIPTION>Lookups</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>2</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>c8084700-c1ca-4b7c-9af4-c44673309eff</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>OMNI004</MENUID>
+      <DESCRIPTION>Goods receiving</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>1</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>be0f5342-31ea-4a66-94be-5496f707ea60</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>OMNI005</MENUID>
+      <DESCRIPTION>Purchase orders</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>3</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>9c262868-10cf-4c52-bdd5-6f66f68d1944</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+	<POSMENUHEADER>
+      <MENUID>OMNI006</MENUID>
+      <DESCRIPTION>Transfer orders</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>2</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>c7c0306d-f180-4cc3-96e1-4b9f52deb1c7</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000001</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Utilities</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>OMNI002</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-16744448</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>0</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>0</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>0</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>0</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>0</GLYPHOFFSET>
+      <GLYPH2OFFSET>0</GLYPH2OFFSET>
+      <GLYPH3OFFSET>0</GLYPH3OFFSET>
+      <GLYPH4OFFSET>0</GLYPH4OFFSET>
+      <BACKCOLOR2>-16711872</BACKCOLOR2>
+      <GRADIENTMODE>2</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000032</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Lookups</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>OMNI003</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000035</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Stock counting</DESCRIPTION>
+      <OPERATION>2107</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000036</SEQUENCE>
+      <KEYNO>4</KEYNO>
+      <DESCRIPTION>Goods receiving</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>OMNI004</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000038</SEQUENCE>
+      <KEYNO>5</KEYNO>
+      <DESCRIPTION>Purchase orders</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>OMNI005</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+	<POSMENULINE>
+      <MENUID>OMNI001</MENUID>
+      <SEQUENCE>0000039</SEQUENCE>
+      <KEYNO>6</KEYNO>
+      <DESCRIPTION>Transfer orders</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>OMNI006</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI002</MENUID>
+      <SEQUENCE>0000003</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Change store</DESCRIPTION>
+      <OPERATION>2100</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-16744320</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-16711872</BACKCOLOR2>
+      <GRADIENTMODE>2</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI002</MENUID>
+      <SEQUENCE>0000052</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Update master data</DESCRIPTION>
+      <OPERATION>2101</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI002</MENUID>
+      <SEQUENCE>0000055</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Full master data update</DESCRIPTION>
+      <OPERATION>2102</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI002</MENUID>
+      <SEQUENCE>0000100</SEQUENCE>
+      <KEYNO>4</KEYNO>
+      <DESCRIPTION>Customer / vendor full update</DESCRIPTION>
+      <OPERATION>2103</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI003</MENUID>
+      <SEQUENCE>0000059</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Item lookup</DESCRIPTION>
+      <OPERATION>2104</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-65536</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-128</BACKCOLOR2>
+      <GRADIENTMODE>4</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI003</MENUID>
+      <SEQUENCE>0000105</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Customer lookup</DESCRIPTION>
+      <OPERATION>2105</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI003</MENUID>
+      <SEQUENCE>0000124</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Vendor lookup</DESCRIPTION>
+      <OPERATION>2106</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI004</MENUID>
+      <SEQUENCE>0000125</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Goods receiving</DESCRIPTION>
+      <OPERATION>2108</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI004</MENUID>
+      <SEQUENCE>0000137</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Post goods receiving</DESCRIPTION>
+      <OPERATION>2109</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI005</MENUID>
+      <SEQUENCE>0000138</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Purchase worksheet</DESCRIPTION>
+      <OPERATION>2110</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI006</MENUID>
+      <SEQUENCE>0000139</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Receiving</DESCRIPTION>
+      <OPERATION>2115</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>OMNI006</MENUID>
+      <SEQUENCE>0000140</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Sending</DESCRIPTION>
+      <OPERATION>2116</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>	
+  </NewDataSet>
+</root>

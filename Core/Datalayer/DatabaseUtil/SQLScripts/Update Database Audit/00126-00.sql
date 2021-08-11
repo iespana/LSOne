@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-8449
+	Responsible		: Hörður Kristjánsson
+	Sprint			: DuraS
+	Date created	: 05.03.2018
+
+	Description		: Expanding length of tax code names
+*/
+
+USE LSPOSNET_Audit
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'TAXTABLELog' AND COLUMN_NAME = 'TAXNAME' AND CHARACTER_MAXIMUM_LENGTH < 60)
+BEGIN
+	ALTER TABLE TAXTABLELog
+	ALTER COLUMN TAXNAME NVARCHAR(60)
+END
+GO

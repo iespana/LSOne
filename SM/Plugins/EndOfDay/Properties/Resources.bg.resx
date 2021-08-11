@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NotSpecified" xml:space="preserve">
+    <value>Не е посочено</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Валута</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Отстъпка</value>
+  </data>
+  <data name="LineDiscount" xml:space="preserve">
+    <value>Отстъпка по ред</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Обща сума</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавяне</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Сума</value>
+  </data>
+  <data name="Amounts" xml:space="preserve">
+    <value>Суми</value>
+  </data>
+  <data name="CalculateStatement" xml:space="preserve">
+    <value>Изчислете</value>
+  </data>
+  <data name="CurrencyAmount" xml:space="preserve">
+    <value>Сума на валутата:</value>
+  </data>
+  <data name="CurrentTurnover" xml:space="preserve">
+    <value>Текущ оборот</value>
+  </data>
+  <data name="DataErrorTender" xml:space="preserve">
+    <value>Има несъответствия в данните ви. Вероятно причината е, че начин на плащане се използва в продажба, а не е дефиниран в системата</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Изтриване</value>
+  </data>
+  <data name="DeleteDeclaration" xml:space="preserve">
+    <value>Изтриване на декларацията</value>
+  </data>
+  <data name="DeleteDeclarationQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете тази декларация?</value>
+  </data>
+  <data name="DeleteStatement" xml:space="preserve">
+    <value>Изтриване на отчет</value>
+  </data>
+  <data name="DeleteStatementQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избрания отчет? Обърнете внимание, че всички свързани с него редове ще бъдат изтрити.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактиране</value>
+  </data>
+  <data name="EndOfDay" xml:space="preserve">
+    <value>Край на деня</value>
+  </data>
+  <data name="EndOfDayTransactionMissingForTerminal" xml:space="preserve">
+    <value>Липсва транзакция в края на деня за терминала</value>
+  </data>
+  <data name="EnterCountingFor" xml:space="preserve">
+    <value>Въведете резултати броене за</value>
+  </data>
+  <data name="EOD" xml:space="preserve">
+    <value>Край на деня</value>
+  </data>
+  <data name="EOD_ID" xml:space="preserve">
+    <value>EOD ID</value>
+  </data>
+  <data name="EODSettings" xml:space="preserve">
+    <value>Край на деня</value>
+  </data>
+  <data name="EOS" xml:space="preserve">
+    <value>Край на смяната</value>
+  </data>
+  <data name="ExchangeRate" xml:space="preserve">
+    <value>Обменен курс</value>
+  </data>
+  <data name="Financial" xml:space="preserve">
+    <value>Финанси</value>
+  </data>
+  <data name="FinancialReport" xml:space="preserve">
+    <value>Финансов отчет</value>
+  </data>
+  <data name="FinancialReportByEmployee" xml:space="preserve">
+    <value>Финансов отчет по служител</value>
+  </data>
+  <data name="FinancialReportByStatement" xml:space="preserve">
+    <value>Финансов отчет по отчет</value>
+  </data>
+  <data name="FinancialReports" xml:space="preserve">
+    <value>Финансови отчети</value>
+  </data>
+  <data name="FinancialReportsTooltipDescription" xml:space="preserve">
+    <value>Генериране на финансови отчети за определен период от време, магазини, терминали, служител и отчет</value>
+  </data>
+  <data name="GiftcardSales" xml:space="preserve">
+    <value>Продажби гифт карти</value>
+  </data>
+  <data name="GiftcardSalesDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате отчет за продажбите на гифт карти</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Група</value>
+  </data>
+  <data name="IssuedCreditMemos" xml:space="preserve">
+    <value>Издадени кредитни известия</value>
+  </data>
+  <data name="IssuedCreditMemosDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате издаден отчет за кредитните известия</value>
+  </data>
+  <data name="ItemSales" xml:space="preserve">
+    <value>Артикул продажби</value>
+  </data>
+  <data name="ItemSalesReport" xml:space="preserve">
+    <value>Отчет за продажби на артикули</value>
+  </data>
+  <data name="ItemSalesReports" xml:space="preserve">
+    <value>Отчети за продажби на артикули</value>
+  </data>
+  <data name="ItemSalesReportsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да генерирате отчети за продажби на продукти</value>
+  </data>
+  <data name="LastStatementEnd" xml:space="preserve">
+    <value>Край на последен отчет</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="NegativeTransactions" xml:space="preserve">
+    <value>Отрицателни транзакции</value>
+  </data>
+  <data name="NoCountingRequired" xml:space="preserve">
+    <value>Не е необходимо броене, за този магазин са настроени видове плащания</value>
+  </data>
+  <data name="NoPaymentInformation" xml:space="preserve">
+    <value>Няма информация за плащане</value>
+  </data>
+  <data name="NosaleActions" xml:space="preserve">
+    <value>Няма действия за продажба</value>
+  </data>
+  <data name="NoStatementFound" xml:space="preserve">
+    <value>Няма намерен отчет</value>
+  </data>
+  <data name="NoStatementsDoneToday" xml:space="preserve">
+    <value>Няма отчети с днешна дата.</value>
+  </data>
+  <data name="NoTenderDeclarationSelected" xml:space="preserve">
+    <value>Не е избран отчет начин на плащане</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Нищо не е открито</value>
+  </data>
+  <data name="NothingCountedYet" xml:space="preserve">
+    <value>Нищо не е преброено все още</value>
+  </data>
+  <data name="NoTransactionFound" xml:space="preserve">
+    <value>Не е намерена транзакция</value>
+  </data>
+  <data name="NumberOfCustomers" xml:space="preserve">
+    <value>Брой клиенти</value>
+  </data>
+  <data name="NumberOfItems" xml:space="preserve">
+    <value>Брой артикули</value>
+  </data>
+  <data name="NumberOfUnits" xml:space="preserve">
+    <value>Брой единици</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="PaymentTotals" xml:space="preserve">
+    <value>Общо плащания</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="PostedStatements" xml:space="preserve">
+    <value>Осчетоводени отчети</value>
+  </data>
+  <data name="PostedStatementsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате осчетоводени отчети</value>
+  </data>
+  <data name="PostedStatementsTooltipDescription" xml:space="preserve">
+    <value>Преглед осчетоводени отчети за магазини</value>
+  </data>
+  <data name="PostStatement" xml:space="preserve">
+    <value>Осчетоводяване</value>
+  </data>
+  <data name="Ratio" xml:space="preserve">
+    <value>Съотношение</value>
+  </data>
+  <data name="RecalculateStatement" xml:space="preserve">
+    <value>Прекалкулиране на отчет</value>
+  </data>
+  <data name="ReceiptID" xml:space="preserve">
+    <value>Разписка ID</value>
+  </data>
+  <data name="RemoveConfirm" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да премахнете #1 #2 ?</value>
+  </data>
+  <data name="RemoveCount" xml:space="preserve">
+    <value>Премахване изброено</value>
+  </data>
+  <data name="ReportOption" xml:space="preserve">
+    <value>Използвайте тази опция, за да генерирате финансови отчети</value>
+  </data>
+  <data name="ReportOptionByEmployee" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате финансови отчети по служител</value>
+  </data>
+  <data name="ReportOptionByStatement" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате финансови отчети по отчет</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Отчети</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Търговия на дребно</value>
+  </data>
+  <data name="SaleIncludingVAT" xml:space="preserve">
+    <value>Продажбата включва #1% данък</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Продажби</value>
+  </data>
+  <data name="SalesPerEmployee" xml:space="preserve">
+    <value>Продажби на служител</value>
+  </data>
+  <data name="SalesPerEmployeeDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате отчет за продажби на служител</value>
+  </data>
+  <data name="SalesPerTerminal" xml:space="preserve">
+    <value>Продажби на терминал</value>
+  </data>
+  <data name="SalesPerTerminalDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да стартирате продажби на отчет за терминал</value>
+  </data>
+  <data name="SalesReports" xml:space="preserve">
+    <value>Отчет на продажбите</value>
+  </data>
+  <data name="SalesReportsTooltipDescription" xml:space="preserve">
+    <value>Генериране различни отчети за продажби</value>
+  </data>
+  <data name="ScannedItems" xml:space="preserve">
+    <value>Сканирани артикули</value>
+  </data>
+  <data name="ScannerUsage" xml:space="preserve">
+    <value>Използване на скенера</value>
+  </data>
+  <data name="SelectRemoveItem" xml:space="preserve">
+    <value>Моля изберете артикул за премахване</value>
+  </data>
+  <data name="ShowReport" xml:space="preserve">
+    <value>Показва отчет</value>
+  </data>
+  <data name="StartingTimeCannotBeBigger" xml:space="preserve">
+    <value>Началното време не може да бъде по-голямо от крайното време</value>
+  </data>
+  <data name="StatementCountingDifference" xml:space="preserve">
+    <value>Разлика за броене в отчета</value>
+  </data>
+  <data name="StatementCountingDifferenceQuestion" xml:space="preserve">
+    <value>Преброената разлика за отчета е по-висока от лимита, определен от магазина. Все още ли искате да осчетоводите отчета?</value>
+  </data>
+  <data name="StatementLines" xml:space="preserve">
+    <value>Редове за отчет</value>
+  </data>
+  <data name="Statements" xml:space="preserve">
+    <value>Отчети</value>
+  </data>
+  <data name="StatementsDoneForAllStores" xml:space="preserve">
+    <value>Отчети направени за всички магазини</value>
+  </data>
+  <data name="StatementsDoneForXStores" xml:space="preserve">
+    <value>Отчети направени за #1 от #2 магазини</value>
+  </data>
+  <data name="StatementSettings" xml:space="preserve">
+    <value>Настройки отчет</value>
+  </data>
+  <data name="StatementWillBeRecalculated" xml:space="preserve">
+    <value>Сега отчетът ще бъде преизчислен</value>
+  </data>
+  <data name="SuspendedTransactions" xml:space="preserve">
+    <value>Отложени транзакции</value>
+  </data>
+  <data name="SuspendedTransactionsQuestion" xml:space="preserve">
+    <value>Има отложени транзакции в рамките на отчетния период. Искате ли да продължите с осчетоводяване на отчета?</value>
+  </data>
+  <data name="SystemReportNotFound" xml:space="preserve">
+    <value>Системният отчет #1 не може да бъде намерен. Моля импортирайте пакета с данни за системния отчет</value>
+  </data>
+  <data name="TenderDeclaration" xml:space="preserve">
+    <value>Декларация POS плащане</value>
+  </data>
+  <data name="TenderDeclarationsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да генерирате отчети начин на плащане</value>
+  </data>
+  <data name="TenderDeclarationsTooltipDescription" xml:space="preserve">
+    <value>Направете отчет начин на плащане за конкретен терминал, ако той не е направен през LS One POS</value>
+  </data>
+  <data name="TerminalHasSuspendedTransactions" xml:space="preserve">
+    <value>Терминалът е отложил транзакциите</value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>Терминал ID:</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Време</value>
+  </data>
+  <data name="TodaysStatements" xml:space="preserve">
+    <value>Дневни отчети</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Общо</value>
+  </data>
+  <data name="TotalAmountEntered" xml:space="preserve">
+    <value>Общо въведена сума</value>
+  </data>
+  <data name="TotalDiscount" xml:space="preserve">
+    <value>Обща отстъпка</value>
+  </data>
+  <data name="TotalForLocalCurr" xml:space="preserve">
+    <value>Обща сума в местна валута:</value>
+  </data>
+  <data name="Totals" xml:space="preserve">
+    <value>Всички</value>
+  </data>
+  <data name="TransactionType" xml:space="preserve">
+    <value>Вид транзакция</value>
+  </data>
+  <data name="TurnoverDuringTheDay" xml:space="preserve">
+    <value>Оборот през деня</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Вид:</value>
+  </data>
+  <data name="UndefinedPeriod" xml:space="preserve">
+    <value>Неопределен период</value>
+  </data>
+  <data name="UnpostedStatements" xml:space="preserve">
+    <value>Неосчетоводени отчети</value>
+  </data>
+  <data name="UnpostedStatementsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате неосчетоводени отчети</value>
+  </data>
+  <data name="UnpostedStatementsTooltipDescription" xml:space="preserve">
+    <value>Създаване и осчетоводяване на отчети за магазини</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>ДДС</value>
+  </data>
+  <data name="VoidedTransactions" xml:space="preserve">
+    <value>Анулирани транзакции</value>
+  </data>
+  <data name="XZReport" xml:space="preserve">
+    <value>X/Z отчет</value>
+  </data>
+</root>

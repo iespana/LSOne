@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2014">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>2014 Release notes</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2014/ReleaseNotes.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>2014 Release notes</h1>
+        <p>This release includes various functionality changes as well as minor changes and fixes that are listed below. This feature list is not complete but gives a good overview of the changes and additions made in this release. </p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Licensing</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="heading" style="margin-top: 10pt;">Subscription based licenses</p>
+                <p>With the release of LS One 2014, LS Retail offers subscription licensing for all partners. Licenses can be paid on a monthly basis in a pay-as-you-go model with no commitment upfront.</p>
+                <p>To participate the partner shall have agreed to LS Retail’s terms and conditions, and a subscription addendum between the partner and LS Retail needs to be in place. A good credit history with LS Retail is also required and no pre-payment terms must have been agreed upon between the partner and LS Retail.</p>
+                <p>Perpetual licenses are also available.</p>
+                <p class="heading">Demo/Partner licenses</p>
+                <p><a name="kanchor31"></a>The new POS Demo license always expires three months after the LS One POS has been installed. The demo license is restricted and will not be able to perform the following operations: End of day, End of shift, Print X, Print Z, Tender declaration, Clear quantity, Void item, Return item, Return transaction, Customer search and it will not be possible to sell more than 6 items.</p>
+                <p>Partners can apply for partner licenses through the partner portal.</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Transaction pushing from POS</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>In this release the LS One POS can trigger a scheduler job which replicates the all the transactional data from the terminal database to the store database. </p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Centralized returns</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>The operation <i>Return transaction</i> can now look up in all transactions stored at the Store/Head office. And when items are returned from a sale they are marked as such and cannot be returned again.</p>
+                <p>The POS first looks centrally. If the transaction does not exist there, it will look for it in the local database.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/ReturnableItems_410x184.png" style="width: 410;height: 184;" />
+                </p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Hospitality improvements</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="heading">Restaurant management</p>
+                <p>When guests are seated you can register how many guests have been seated at the table. This number can be displayed on the table in the table view.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/NumberofGuests_183x274.png" style="width: 183;height: 274;" />
+                </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/button_265x160.png" style="width: 265;height: 160;" />
+                </p>
+                <p>A registered customer can be added to a table. The customer search is opened where a customer is selected and his/her name can be listed on the table in the table view. </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/customerButton_247x163.png" style="width: 247;height: 163;" />
+                </p>
+                <p>
+                    <img src="../../Resources/Images/About/2014/Receipt.png" class="imgright" />For restaurants not using the table management system the Kitchen BOM can include an order number which also can be printed on the customer receipt, see images. </p>
+                <p> <![CDATA[ ]]></p>
+                <p>&#160;</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/BOM.png" />
+                    <br />
+                </p>
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <p class="heading">Unit of measure set on item sale</p>
+                <p>For items such as beer or wine which are sold in different size glasses or bottles but all have the same inventory unit, the POS can now request the POS user to enter which unit is being sold. So, when the item is sold, a dialog pops up where you can select a glass or a bottle of wine for an example.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/UnitofMeasure_495x204.png" style="width: 495;height: 204;" />
+                </p>
+                <p>&#160;</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Usability improvements</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="heading">Stock counting</p>
+                <p>Stock counting has been made easier. You can either export a stock counting lists which can be filled in and then imported again or the stock counting can be done within the Site Manager where the Stock counting dialog has been modified to be filled in more easily by enabling barcode scanning  and the entering of counted quantity.</p>
+                <p class="heading">Transaction search in Site Manager</p>
+                <p>The Search bar has been added to the Receipt browser in the Site Manager where you can search in all receipts with the following search parameters:</p>
+                <ul>
+                    <li value="1">Date and time</li>
+                    <li value="2">Store</li>
+                    <li value="3">Employee</li>
+                    <li value="4">Receipt number</li>
+                    <li value="5">Terminal</li>
+                </ul>
+                <p>Also the total amount has been added to the list of receipts to help with the search.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/TransactionSearch.png" />
+                </p>
+                <p>&#160;</p>
+                <p class="heading">Authentication token login</p>
+                <p>Both in the LS One POS and Site Manager, the authentication token logins are now not scanned directly into the Login field. But first you have to select the card login button and then scan you authentication token. This increases the security as the token number can be hidden to the user.</p>
+                <p>The POS and Site Manager remembers the type of the last login and opens in the token login, if that was used to log in the last time.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/login.png" />
+                </p>
+                <p style="text-align: center;">Normal login screen at the POS – The card button has been added.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/tokenlogin.png" />
+                </p>
+                <p style="text-align: center;">The new token login – there is a button to get back to the username and password login.</p>
+                <p style="text-align: left;"><span class="Note">Note:</span> Employee card setup has been removed and the authentication token should be used instead. </p>
+                <p class="heading">Numeric keypad</p>
+                <p style="text-align: left;">In the POS systems, numeric usernames and passwords are often used to speed up user login. On the small screens of some hardware it can be hard to enter the password on the touch-screen keyboard. </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/keyboard_691x400.jpg" style="width: 691;height: 400;" />
+                </p>
+                <p style="text-align: left;">Now the user can switch to using numeric keypad to insert the username and password and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> remembers which was used for the last login. So if all users have numeric logins and passwords, the keyboard can always only have numbers. </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/numpad_305x491.jpg" style="width: 305;height: 491;" />
+                </p>
+                <p style="text-align: left;">&#160;</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Scale certification</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>LS One has been modified to fulfill the requirements of the WELMEC 2.2 guide for testing Point of Sale Devices connected with a Non-Automatic Weighing instrument. The certification process is in progress at the time of the release.</p>
+                <p>These changes involve displaying units such as kg and $ or € or all numbers shown on the POS screen, Customer displays and receipts. And some parts of the code that controls the connection to the scale, line display and printer have been locked with checksums. So if this code has been manipulated, a scale cannot be connected to the POS.</p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/About/2014/About POS_404x266.png" style="width: 404;height: 266;" />
+                </p>
+                <p>The POS About dialog includes all version numbers, checksums and will include the scale test certificate number when the test certification process is done. The POS will also display the certification number in its status bar when a scale is connected to it. </p>
+                <p>&#160;</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Z-report changes</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>It depends on where you are in the world what demands authorities do to a retailers Z-report. Retailers and restaurant owners also have various needs. Therefore the X/Z-report can be modified with some settings in the functionality profile. </p>
+                <ul>
+                    <li value="1">The Sales and returns can be printed as a sum or divided into two and whether it includes the tax or not. This both applies to the Grand total sales and the sales for this report. </li>
+                    <li value="2">The X/Z-report can include the sum of returns</li>
+                    <li value="3">The X/Z-report can include the sum of all suspended transactions and how many they are. </li>
+                    <li value="4">X/Z-report can include a box of other information such as number of training transactions and number of receipt copies and invoices. </li>
+                    <li value="5">The tender report can include floats made during the day and tender declarations. </li>
+                </ul>
+                <p style="font-weight: bold;text-align: center;">
+                    <img src="../../Resources/Images/About/2014/zSettings_365x357.png" style="width: 365;height: 357;" />
+                </p>
+                <p>&#160;</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Tax free receipt printing</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>Now <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> can print tax free receipts on the hardware profile printer. The POS&#160;calculates the tax refund from some given ranges and does so for all tax codes on the sale. </p>
+                <p>There is no user interface in the <span class="MyVariablesSite Manager">Site Manager</span> yet but the tax ranges can be set up with a database script. </p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Demo data</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul class="release">
+                    <li class="release" value="1">Demo reports have been fixed so that voided transaction are not calculated and displayed in the reports.</li>
+                    <li class="release" value="2">Replication data has been  updated for the new tables and fields</li>
+                    <li class="release" value="3">New demo data package with American settings preset. <br />Company currency is set to dollars, prices are shown without tax and calculations are done to prices without tax. </li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Other improvements</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p><b>Sales Order</b> <![CDATA[ ]]></p>
+                <ul class="release">
+                    <li class="release" value="1">Dialogs have been re-factored to the new style dialogs and the SalesOrder service has been converted to the new style service. </li>
+                    <li class="release" value="2">Error handling when connection to <span class="MyVariablesSite Service">Site Service</span> fails has been added. </li>
+                </ul>
+                <p><b>Excel import/export</b>
+                </p>
+                <ul class="release">
+                    <li class="release" value="1">Allowed empty IDs.</li>
+                    <li class="release" value="2">Importing new customers did not work.</li>
+                    <li class="release" value="3">Replenishment export did not export new items.</li>
+                    <li class="release" value="4">Vendor information was not updated in the item import.</li>
+                </ul>
+                <p><b>Customer</b> <![CDATA[ ]]></p>
+                <ul class="release">
+                    <li class="release" value="1">Operation "Recreate customer ledger" deleted customer payments registered in the <span class="MyVariablesSite Manager">Site Manager</span>. </li>
+                    <li class="release" value="2">Customer ledger displayed voided payments.</li>
+                    <li class="release" value="3">Customer credit limit was not updated in customer ledger. </li>
+                    <li class="release" value="4">Customer gender and birth date have been added to the customer card.</li>
+                    <li class="release" value="5">Search alias was added to the new customer dialog and it has been added to the customer search in the POS. </li>
+                    <li class="release" value="6">The new fields can also be set when registering a new customer on the POS. </li>
+                </ul>
+                <p><b>Training mode</b>
+                </p>
+                <ul class="release">
+                    <li class="release" value="1">Training transactions are now saved to the database but marked as such. </li>
+                    <li class="release" value="2">Training transactions are not shown in any reports or the financial report. </li>
+                    <li class="release" value="3">When the POS&#160;is in training the system does not allow connecting a customer to a loyalty card. </li>
+                    <li class="release" value="4">The number of training transaction can be printed in the x/z reports. </li>
+                </ul>
+                <p class="heading">Buglist</p>
+                <ul class="release">
+                    <li class="release" value="1">Error in price check functionality due to line display, has been fixed. </li>
+                    <li class="release" value="2">Find Transaction - If two terminals had the same ID then the receipt from one terminal was displayed twice</li>
+                    <li class="release" value="3">GUI&#160;Fix - The lower list of both Unposted - and Posted statements view have been fixed to be consistent with other views in the Site Manager.</li>
+                    <li class="release" value="4">Adding fields to Database mapping in General setup &gt; Replication did not save to the database. </li>
+                    <li class="release" value="5">Read table design in Distribution location was very slow. </li>
+                    <li class="release" value="6">Line display did not update the total amount when overriding the price. </li>
+                    <li class="release" value="7">Line display needed an extra space before the currency symbol </li>
+                    <li class="release" value="8">Dual display did not follow the DualDisplayLine style when returning items</li>
+                    <li class="release" value="9">The columns in the Dual Display receipt were not in a logical order. </li>
+                    <li class="release" value="10">The POS&#160;did not give the user the correct information when the printer was turned off. </li>
+                    <li class="release" value="11"><span class="MyVariablesSite Manager">Site Manager</span> dashboard has been removed. </li>
+                    <li class="release" value="12">The column Unit of measure in the POS&#160;Receipt was renamed Unit. </li>
+                    <li class="release" value="13">Various bugs regarding payments for and with gift cards have been fixed.</li>
+                    <li class="release" value="14">Unexpected error when editing styles has been fixed. </li>
+                    <li class="release" value="15">Horizontal scroll bar has been added to the Styles view. </li>
+                    <li class="release" value="16">Related links were added to the Form profiles view. </li>
+                    <li class="release" value="17">It was not possible to insert text into specific text boxes in the customer receipt form when creating a new customer receipt. </li>
+                    <li class="release" value="18">The permission <i>Manage price groups</i> has been split into <i>Manage price groups</i> and <i>View price groups</i>. </li>
+                    <li class="release" value="19">The POS&#160;now notifies the user if the company currency has not been set or if the exchange rate of the company currency is not 1.</li>
+                    <li class="release" value="20">Customer total amount discount was not distributed on all the item lines but applied the discount on every sales line. </li>
+                    <li class="release" value="21">Now the Use tax rounding setting is set to false by default. </li>
+                    <li class="release" value="22">Financial report fixes. </li>
+                    <li class="release" value="23">Now the logo set on the store is saved to the Program data folder rather than the POS&#160;installation folder. </li>
+                    <li class="release" value="24">Voiding the operations expense account and income account triggered error in POS</li>
+                    <li class="release" value="25">Pressing enter in the login field in the POS&#160;moves the focus to the password field. </li>
+                    <li class="release" value="26">An error occurred when paging between lines in the daily journal</li>
+                    <li class="release" value="27">The <span class="MyVariablesSite Manager">Site Manager</span> now remembers the window size it had when closed last time. '</li>
+                    <li class="release" value="28">The name of the OK&#160;button in the Tender declaration screen in the POS&#160;was changed to Submit all. </li>
+                    <li class="release" value="29">Log off in the Lock terminal dialog resulted the POS&#160;to crash. </li>
+                    <li class="release" value="30">It is now longer possible to bypass the lock terminal </li>
+                    <li class="release" value="31">In some cases in return transaction items did not get marked as returned. </li>
+                </ul>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <p><span class="Note">Note:</span> Please read the about <a href="KnownIssues.htm">Known Issues. </a></p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">16<span class="sup">th</span> September 2014</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2014</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

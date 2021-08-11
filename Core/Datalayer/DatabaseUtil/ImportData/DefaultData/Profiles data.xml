@@ -1,0 +1,2529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="POSFUNCTIONALITYPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NOTAXUSED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ADDTAXONPRICES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SKIPTAXONRECEIPT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MULTIBLEITEMSYMBOL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CURRENCYSYMBOL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AMOUNTROUNDINGTO" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="PRICEROUNDINGTO" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="AMOUNTDECIMALPLACES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRICEDECIMALPLACES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVEADJUSTMENT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDISPRESSED" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDPAYMENT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REFUNDSALE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MARKDOWN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MARKUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OVERRIDEPRICE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTOFTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISCOUNTATTOTAL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TENDERDECLARATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENDOFTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SERIALNUMBER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SALESPERSON" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ITEMNOTONFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVESALESLINE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MUSTKEYINPRICEIFZERO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SALESPERSONMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYSECONDARYTOTALCURRENCY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SECONDARYTOTALCURRENCY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MINIMUMPASSWORDLENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="BLOCKEDCLOSEDACCOUNT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTXREPORTONTERMINAL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STAFFBARCODELOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STAFFCARDLOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MAXIMUMSTORETRANSLOG" type="xs:int" minOccurs="0" />
+                  <xs:element name="MAXIMUMPRICE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="MAXIMUMQTY" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="BACKUPTRAININGTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DAYSTRANSACTIONSEXISTS" type="xs:int" minOccurs="0" />
+                  <xs:element name="TRANSACTIONDELETEREMINDER" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXREGISTRATIONNUMBERONRECEIPT" type="xs:int" minOccurs="0" />
+                  <xs:element name="SENDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDPOSTEDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SUSPENDRETRIEVETRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STAFFVALIDATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAENTRIES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FLOATINGCASHIER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMER2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INVENTORYLOOKUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CENTRALTABLESERVER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TSSENDTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSENDVOIDTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSUSPENDRETRIEVETRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSTAFF" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSCUSTOMER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSDATAENTRIES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSFLOATINGCASHIER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSINVENTORYLOOKUP" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSCENTRALTABLESERVER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSUPDATEREPLICATIONCOUNTER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSTRANSACTIONRESENDLIMIT" type="xs:int" minOccurs="0" />
+                  <xs:element name="TSRESENDDELAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="AGGREGATEITEMS" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LOGLEVEL" type="xs:int" minOccurs="0" />
+                  <xs:element name="CENTRALTABLESERVERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AGGREGATEPAYMENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="AGGREGATEITEMSFORPRINTING" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALLOWSALESIFDRAWERISOPEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHOWSTAFFLISTATLOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="LIMITSTAFFLISTTOSTORE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALWAYSASKFORPASSWORD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SYNCTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ISHOSPITALITYPROFILE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMPADENTRYSTARTSINDECIMALS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMPADAMOUNTOFDECIMALS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SAFEDROPUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SAFEDROPREVUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BANKDROPUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BANKDROPREVUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TENDERDECLUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="POLLINGINTERVAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="SKIPHOSPITALITYTABLEVIEW" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYVOIDEDITEMS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALLOWCHANGESAFTERSPLITBILL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DEFAULTITEMIMAGE" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="ALLOWIMAGEVIEWINITEMLOOKUP" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="REMEMBERLISTIMAGESELECTION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CLEARUSERBETWEENLOGINS" type="xs:short" minOccurs="0" />
+                  <xs:element name="CLEARSETTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="CLEARGRACEPERIOD" type="xs:int" minOccurs="0" />
+                  <xs:element name="ALLOWSALEANDRETURNINSAMETX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="POSTTRANSACTIONDDJOB" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="127" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DDSCHEDULERLOCATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="127" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="USESTARTOFDAY" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="FORCESTARTOFDAYONLOGON" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="ZRPTINCLUDEFLOATINCASH" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTCOMBINESALESRETURNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTINCLUDETENDERDECLARATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STARTOFTRANSACTIONINFOCODETYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYRETURNINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYSUSPENDED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYOTHERINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTGRANDTOTALAMTDISPLAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTSALESRPTAMTDISPLAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTCOMBINESALESREPORTSALESRETURNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYDEPOSITINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDEPOSITORDERBY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTREPORTWIDTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="OMNISUSPENSIONTYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OMNIPRINTINGSTATIONID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMERREQUIREDONRETURN" type="xs:boolean" />
+                  <xs:element name="OMNIITEMIMAGELOOKUPGROUP" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                  <xs:element name="OPENDRAWER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OMNIMAINMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SHOWPRICESBYDEFAULT" type="xs:boolean" />
+                  <xs:element name="ZRPTDISPLAYOVERSHORTAMOUNT" type="xs:boolean" />
+                  <xs:element name="ZRPTPRINTGRANDTOTALS" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="DISPLAYVOIDEDPAYMENTS" type="xs:boolean" />
+                  <xs:element name="SALESPERSONPROMPT" type="xs:int" />
+                  <xs:element name="OMNIENTERINGTYPE" type="xs:int" />
+                  <xs:element name="OMNIQUANTITYMETHOD" type="xs:int" />
+                  <xs:element name="OMNIDEFAULTQUANTITY" type="xs:decimal" />
+                  <xs:element name="LIMITATIONDISPLAYTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYLIMITATIONSTOTALSINPOS" type="xs:unsignedByte" />
+                  <xs:element name="KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT" type="xs:boolean" />
+                  <xs:element name="OMNIALLOWOFFLINETRANS" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="OMNISHOWMINVENTORY" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSHARDWAREPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMXPOS" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORMYPOS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCREENKEYBOARD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DRAWERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DRAWERSTATUS" type="xs:int" minOccurs="0" />
+                  <xs:element name="DRAWER" type="xs:int" minOccurs="0" />
+                  <xs:element name="DRAWERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DRAWEROPENTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DRAWERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBINCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYDEVICE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYTOTALTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBALANCETEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCLOSEDLINE1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCLOSEDLINE2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCHARACTERSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="DELAYFORLINKEDITEMS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHOWPICTURE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSR" type="xs:int" minOccurs="0" />
+                  <xs:element name="MSRDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MSRDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MSRAUTODISABLE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSRDISABLEEVENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSRREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ENTERREPEATSLASTITEM" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="LOGOALIGNMENT" type="xs:int" minOccurs="0" />
+                  <xs:element name="LOGOBITMAP" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="LOGO" type="xs:int" minOccurs="0" />
+                  <xs:element name="STARTTRACK1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEPARATOR1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENDTRACK1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTTRACK2AFTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="ENDTRACK2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMBEROFLINESONINVOICE" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTDISCOUNTDETAIL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTERNORMAL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERBOLD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERWIDE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERHIGH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERWIDEHIGH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERCHARACTERSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTERNETWORKHOST" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERITALIC" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DECIMALSINENTRY" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERSHARING" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MAXINVOICELINES" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTBINARYCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HARDTOTAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="HARDTOTALDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HARDTOTALDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HARDTOTALSREMOTE" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARD" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARDDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYBOARDDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYBOARDREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TONEINDICATOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONEDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TONEDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TONEREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TONE1PITCH" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE1VOLUME" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE1DURATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2PITCH" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2VOLUME" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2DURATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="INTERTONEWAIT" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCANNER" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCANNERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCANNERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCANNERDISABLEEVENT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCANNERAUTODISABLE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCANNERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCALE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCALEDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCALEDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCALEREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TIMEOUTINSEC" type="xs:int" minOccurs="0" />
+                  <xs:element name="MANUALINPUTALLOWED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="KEYLOCK" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYLOCKDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYLOCKDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYLOCKREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="KEYLOCKDISABLEEVENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMBEROFLFATRECEIPTEND" type="xs:int" minOccurs="0" />
+                  <xs:element name="NUMBEROFLFATINVOICETOP" type="xs:int" minOccurs="0" />
+                  <xs:element name="DOCINSERTREMOVALTIMEOUT" type="xs:int" minOccurs="0" />
+                  <xs:element name="LEFTMARGINONRECEIPT" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFT" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFTDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTSERVERNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTSERVERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCOMPANYID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTUSERID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTPASSWORD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CAPTUREEXTRADATA" type="xs:int" minOccurs="0" />
+                  <xs:element name="MICR" type="xs:int" minOccurs="0" />
+                  <xs:element name="MICRDRIVERNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MICRDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MICRREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURT" type="xs:int" minOccurs="0" />
+                  <xs:element name="HOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PUMPCONTROLLERTYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SLEEPPERIODWHENIDLE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SLEEPPERIODWHENACTIVE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CCTV" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CCTVPORT" type="xs:int" minOccurs="0" />
+                  <xs:element name="CCTVHOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CCTVCAMERA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTAMOUNTDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTPRICEDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTVOLUMETDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONEACTIVE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTONEFREQUENCY" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONELENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONEREPEATS" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTSYNCTIMEWITHPOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PHARMACY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PHARMACYHOST" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHARMACYPORT" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARDMAPPINGID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTBATCHINCREMENTATEOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RFIDSCANNERTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="RFIDDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RFIDDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYRECEIPTPERCENTAGE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYIMAGEPATH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="260" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYIMAGEINTERVAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYBROWSERURL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CASHCHANGER" type="xs:int" minOccurs="0" />
+                  <xs:element name="CASHCHANGERPORTSETTINGS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CASHCHANGERINITSETTINGS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGER" type="xs:unsignedByte" />
+                  <xs:element name="FORECOURTMANAGERHOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERPOSPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERScreenHeightPercentage" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERControllerHostName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERLogLevel" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERImplFileName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERImplFileType" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERScreenExtHeightPercentage" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERVolumeUnit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERCallingSound" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERCallingBlink" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERFuellingPointColumns" type="xs:int" minOccurs="0" />
+                  <xs:element name="FISCALPRINTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="FISCALPRINTERCONNECTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FISCALPRINTERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTSUSPENDALLOWED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USEKITCHENDISPLAY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYSCREENNUMBER" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASKEYCONNECTED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DALLASMESSAGEPREFIX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASKEYREMOVEDMESSAGE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASCOMPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASBAUDRATE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASPARITY" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASSTOPBITS" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASDATABITS" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFTMERCHANTACCOUNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTMERCHANTKEY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCUSTOMFIELD1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCUSTOMFIELD2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBINARYCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTEREXTRALINES" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_LEFTMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_RIGHTMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_PRINTDESIGNBOXES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="WINPRINT_FOLDERLOCATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WINPRINT_TOPMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_BOTTOMMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="STATIONPRINTINGHOSTID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WINDOWSPRINTERCONFIGURATIONID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ETAX" type="xs:int" minOccurs="0" />
+                  <xs:element name="ETAXPORTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSTRANSACTIONSERVICEPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="USERNAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PASSWORD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COMPANY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DOMAIN">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AOSSERVER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AOSINSTANCE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AOSPORT">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CONFIGURATION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TSSENDTRANSACTIONS" type="xs:unsignedByte" />
+                  <xs:element name="TSSENDVOIDTRANSACTIONS" type="xs:unsignedByte" />
+                  <xs:element name="TSSUSPENDRETRIEVETRANSACTIONS" type="xs:unsignedByte" />
+                  <xs:element name="TSCUSTOMER" type="xs:unsignedByte" />
+                  <xs:element name="TSDATAENTRIES" type="xs:unsignedByte" />
+                  <xs:element name="TSSTAFF" type="xs:unsignedByte" />
+                  <xs:element name="TSFLOATINGCASHIER" type="xs:unsignedByte" />
+                  <xs:element name="TSINVENTORYLOOKUP" type="xs:unsignedByte" />
+                  <xs:element name="SENDTRANSACTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDPOSTEDTRANSACTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SUSPENDRETRIEVETRANSACTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAENTRIES">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STAFFVALIDATION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FLOATINGCASHIER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INVENTORYLOOKUP">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TSUPDATEREPLICATIONCOUNTER" type="xs:unsignedByte" />
+                  <xs:element name="TSTRANSACTIONRESENDLIMIT" type="xs:int" />
+                  <xs:element name="TSRESENDDELAY" type="xs:int" />
+                  <xs:element name="LANGUAGE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AXVERSION" type="xs:int" />
+                  <xs:element name="CENTRALTABLESERVER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CENTRALTABLESERVERPORT">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" />
+                  <xs:element name="MODIFIEDBY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ISSUEGIFTCARDOPTION" type="xs:int" minOccurs="0" />
+                  <xs:element name="USEGIFTCARDS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USECENTRALSUSPENSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USERCONFIRMATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USECREDITVOUCHERS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CUSTOMERADDDEFAULTTAXGROUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMERADDDEFAULTTAXGROUPNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CASHCUSTOMERSETTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="GIFTCARDREFILLSETTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="MAXIMUMGIFTCARDAMOUNT" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="IMMEDIATELYUPDATEINVENTORY" type="xs:boolean" />
+                  <xs:element name="CENTRALRETURNLOOKUP" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USESERIALNUMBERS" type="xs:boolean" />
+                  <xs:element name="SENDRECEIPTEMAIL" type="xs:int" />
+                  <xs:element name="ALLOWCUSTOMERMANUALID" type="xs:boolean" />
+                  <xs:element name="CUSTOMERDEFAULTCREDITLIMIT" type="xs:decimal" />
+                  <xs:element name="CUSTOMERNAMEMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERSEARCHALIASMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERADDRESSMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERPHONEMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMEREMAILMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERRECEIPTEMAILMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERGENDERMANDATORY" type="xs:boolean" />
+                  <xs:element name="CUSTOMERBIRTHDATEMANDATORY" type="xs:boolean" />
+                  <xs:element name="IFAUTHTOKEN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IFTCPPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IFHTTPPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IFPROTOCOLS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IFSSLTHUMBNAIL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="512" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIMEOUT" type="xs:int" />
+                  <xs:element name="MAXMESSAGESIZE" type="xs:int" />
+                  <xs:element name="EMAILWINDOWSPRINTERCONFIGURATIONID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSVISUALPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SALESMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PAYMENTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TENDEROPERATIONMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVEADJUSTMENTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHYSICALINVENTORYMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NORMALCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDEDCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MULTIBUYCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MIXANDMATCHCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TOTALDISCOUNTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INCOMEEXPENSECOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COUPONLINECOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LINESELECTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FREETEXTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDETITLEBAR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDEMENU" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDECURSOR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDENUMBERCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDEDISCPCTCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DIALOGBOXONERROR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHOWTOPMENU" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TABLEMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDEGUESTCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TOPLINEMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JOURNALMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RESOLUTION" type="xs:int" minOccurs="0" />
+                  <xs:element name="TERMINALTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESIGNALLOWEDONPOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="OPAQUEBACKGROUNDFORM" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="OPACITY" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="USEFORMBACKGROUNDIMAGE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCREENINDEX" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHOWCURRENCYSYMBOLONCOLUMNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RECEIPTPAYMENTLINESSIZE" type="xs:int" />
+                  <xs:element name="RECEIPTRETURNBACKGROUNDIMAGEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RECEIPTRETURNBACKGROUNDIMAGELAYOUT" type="xs:int" />
+                  <xs:element name="RECEIPTRETURNBORDERCOLOR" type="xs:int" />
+                  <xs:element name="CONFIRMBUTTONSTYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CANCELBUTTONSTYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACTIONBUTTONSTYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NORMALBUTTONSTYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OTHERBUTTONSTYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OVERRIDEPOSCONTROLBORDERCOLOR" type="xs:boolean" />
+                  <xs:element name="POSCONTROLBORDERCOLOR" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSFUNCTIONALITYPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSHARDWAREPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSHARDWAREPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSTRANSACTIONSERVICEPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSTRANSACTIONSERVICEPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSVISUALPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSVISUALPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <POSFUNCTIONALITYPROFILE>
+      <PROFILEID>DEMO</PROFILEID>
+      <NAME>Demonstration Profile</NAME>
+      <NOTAXUSED>0</NOTAXUSED>
+      <ADDTAXONPRICES>0</ADDTAXONPRICES>
+      <SKIPTAXONRECEIPT>0</SKIPTAXONRECEIPT>
+      <MULTIBLEITEMSYMBOL>@</MULTIBLEITEMSYMBOL>
+      <CURRENCYSYMBOL>EUR</CURRENCYSYMBOL>
+      <AMOUNTROUNDINGTO>0.010000000000</AMOUNTROUNDINGTO>
+      <PRICEROUNDINGTO>0.010000000000</PRICEROUNDINGTO>
+      <AMOUNTDECIMALPLACES>2:2</AMOUNTDECIMALPLACES>
+      <PRICEDECIMALPLACES>2:2</PRICEDECIMALPLACES>
+      <NEGATIVEADJUSTMENT></NEGATIVEADJUSTMENT>
+      <VOIDISPRESSED></VOIDISPRESSED>
+      <VOIDTRANSACTION></VOIDTRANSACTION>
+      <VOIDPAYMENT></VOIDPAYMENT>
+      <REFUNDSALE></REFUNDSALE>
+      <MARKDOWN></MARKDOWN>
+      <MARKUP></MARKUP>
+      <OVERRIDEPRICE></OVERRIDEPRICE>
+      <STARTOFTRANSACTION></STARTOFTRANSACTION>
+      <DISCOUNTATTOTAL></DISCOUNTATTOTAL>
+      <TENDERDECLARATION></TENDERDECLARATION>
+      <ENDOFTRANSACTION></ENDOFTRANSACTION>
+      <SERIALNUMBER></SERIALNUMBER>
+      <SALESPERSON></SALESPERSON>
+      <ITEMNOTONFILE></ITEMNOTONFILE>
+      <NEGATIVESALESLINE></NEGATIVESALESLINE>
+      <MUSTKEYINPRICEIFZERO>0</MUSTKEYINPRICEIFZERO>
+      <SALESPERSONMODE>0</SALESPERSONMODE>
+      <DISPLAYSECONDARYTOTALCURRENCY>0</DISPLAYSECONDARYTOTALCURRENCY>
+      <SECONDARYTOTALCURRENCY></SECONDARYTOTALCURRENCY>
+      <MINIMUMPASSWORDLENGTH>0</MINIMUMPASSWORDLENGTH>
+      <BLOCKEDCLOSEDACCOUNT>0</BLOCKEDCLOSEDACCOUNT>
+      <PRINTXREPORTONTERMINAL>0</PRINTXREPORTONTERMINAL>
+      <STAFFBARCODELOGON>0</STAFFBARCODELOGON>
+      <STAFFCARDLOGON>0</STAFFCARDLOGON>
+      <MAXIMUMSTORETRANSLOG>100</MAXIMUMSTORETRANSLOG>
+      <MAXIMUMPRICE>99999.000000000000</MAXIMUMPRICE>
+      <MAXIMUMQTY>9999.000000000000</MAXIMUMQTY>
+      <BACKUPTRAININGTRANSACTIONS>0</BACKUPTRAININGTRANSACTIONS>
+      <DAYSTRANSACTIONSEXISTS>0</DAYSTRANSACTIONSEXISTS>
+      <TRANSACTIONDELETEREMINDER>0</TRANSACTIONDELETEREMINDER>
+      <TAXREGISTRATIONNUMBERONRECEIPT>0</TAXREGISTRATIONNUMBERONRECEIPT>
+      <SENDTRANSACTION></SENDTRANSACTION>
+      <VOIDPOSTEDTRANSACTION></VOIDPOSTEDTRANSACTION>
+      <SUSPENDRETRIEVETRANSACTION></SUSPENDRETRIEVETRANSACTION>
+      <STAFFVALIDATION></STAFFVALIDATION>
+      <CUSTOMER></CUSTOMER>
+      <DATAENTRIES></DATAENTRIES>
+      <FLOATINGCASHIER></FLOATINGCASHIER>
+      <CUSTOMER2></CUSTOMER2>
+      <INVENTORYLOOKUP></INVENTORYLOOKUP>
+      <CENTRALTABLESERVER></CENTRALTABLESERVER>
+      <TSSENDTRANSACTIONS>0</TSSENDTRANSACTIONS>
+      <TSSENDVOIDTRANSACTIONS>0</TSSENDVOIDTRANSACTIONS>
+      <TSSUSPENDRETRIEVETRANSACTIONS>0</TSSUSPENDRETRIEVETRANSACTIONS>
+      <TSSTAFF>0</TSSTAFF>
+      <TSCUSTOMER>0</TSCUSTOMER>
+      <TSDATAENTRIES>0</TSDATAENTRIES>
+      <TSFLOATINGCASHIER>0</TSFLOATINGCASHIER>
+      <TSINVENTORYLOOKUP>0</TSINVENTORYLOOKUP>
+      <TSCENTRALTABLESERVER>0</TSCENTRALTABLESERVER>
+      <TSUPDATEREPLICATIONCOUNTER>0</TSUPDATEREPLICATIONCOUNTER>
+      <TSTRANSACTIONRESENDLIMIT>0</TSTRANSACTIONRESENDLIMIT>
+      <TSRESENDDELAY>0</TSRESENDDELAY>
+      <AGGREGATEITEMS>0</AGGREGATEITEMS>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <LOGLEVEL>1</LOGLEVEL>
+      <AGGREGATEPAYMENTS>0</AGGREGATEPAYMENTS>
+      <AGGREGATEITEMSFORPRINTING>0</AGGREGATEITEMSFORPRINTING>
+      <ALLOWSALESIFDRAWERISOPEN>0</ALLOWSALESIFDRAWERISOPEN>
+      <SHOWSTAFFLISTATLOGON>0</SHOWSTAFFLISTATLOGON>
+      <LIMITSTAFFLISTTOSTORE>0</LIMITSTAFFLISTTOSTORE>
+      <ALWAYSASKFORPASSWORD>0</ALWAYSASKFORPASSWORD>
+      <SYNCTRANSACTIONS>0</SYNCTRANSACTIONS>
+      <ISHOSPITALITYPROFILE>0</ISHOSPITALITYPROFILE>
+      <NUMPADENTRYSTARTSINDECIMALS>0</NUMPADENTRYSTARTSINDECIMALS>
+      <NUMPADAMOUNTOFDECIMALS>2</NUMPADAMOUNTOFDECIMALS>
+      <SAFEDROPUSESDENOMINATION>1</SAFEDROPUSESDENOMINATION>
+      <SAFEDROPREVUSESDENOMINATION>1</SAFEDROPREVUSESDENOMINATION>
+      <BANKDROPUSESDENOMINATION>1</BANKDROPUSESDENOMINATION>
+      <BANKDROPREVUSESDENOMINATION>1</BANKDROPREVUSESDENOMINATION>
+      <TENDERDECLUSESDENOMINATION>1</TENDERDECLUSESDENOMINATION>
+      <POLLINGINTERVAL>0</POLLINGINTERVAL>
+      <SKIPHOSPITALITYTABLEVIEW>0</SKIPHOSPITALITYTABLEVIEW>
+      <DISPLAYVOIDEDITEMS>1</DISPLAYVOIDEDITEMS>
+      <ALLOWCHANGESAFTERSPLITBILL>0</ALLOWCHANGESAFTERSPLITBILL>
+      <DEFAULTITEMIMAGE>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</DEFAULTITEMIMAGE>
+      <ALLOWIMAGEVIEWINITEMLOOKUP>1</ALLOWIMAGEVIEWINITEMLOOKUP>
+      <REMEMBERLISTIMAGESELECTION>1</REMEMBERLISTIMAGESELECTION>
+      <CLEARUSERBETWEENLOGINS>0</CLEARUSERBETWEENLOGINS>
+      <CLEARSETTING>1</CLEARSETTING>
+      <CLEARGRACEPERIOD>1</CLEARGRACEPERIOD>
+      <ALLOWSALEANDRETURNINSAMETX>1</ALLOWSALEANDRETURNINSAMETX>
+      <POSTTRANSACTIONDDJOB></POSTTRANSACTIONDDJOB>
+      <DDSCHEDULERLOCATION></DDSCHEDULERLOCATION>
+      <USESTARTOFDAY>false</USESTARTOFDAY>
+      <FORCESTARTOFDAYONLOGON>false</FORCESTARTOFDAYONLOGON>
+      <ZRPTINCLUDEFLOATINCASH>1</ZRPTINCLUDEFLOATINCASH>
+      <ZRPTCOMBINESALESRETURNS>1</ZRPTCOMBINESALESRETURNS>
+      <ZRPTINCLUDETENDERDECLARATION>0</ZRPTINCLUDETENDERDECLARATION>
+      <STARTOFTRANSACTIONINFOCODETYPE>0</STARTOFTRANSACTIONINFOCODETYPE>
+      <ZRPTDISPLAYRETURNINFO>1</ZRPTDISPLAYRETURNINFO>
+      <ZRPTDISPLAYSUSPENDED>1</ZRPTDISPLAYSUSPENDED>
+      <ZRPTDISPLAYOTHERINFO>1</ZRPTDISPLAYOTHERINFO>
+      <ZRPTGRANDTOTALAMTDISPLAY>0</ZRPTGRANDTOTALAMTDISPLAY>
+      <ZRPTSALESRPTAMTDISPLAY>0</ZRPTSALESRPTAMTDISPLAY>
+      <ZRPTCOMBINESALESREPORTSALESRETURNS>1</ZRPTCOMBINESALESREPORTSALESRETURNS>
+      <ZRPTDISPLAYDEPOSITINFO>1</ZRPTDISPLAYDEPOSITINFO>
+      <ZRPTDEPOSITORDERBY>0</ZRPTDEPOSITORDERBY>
+      <ZRPTREPORTWIDTH>55</ZRPTREPORTWIDTH>
+      <OMNISUSPENSIONTYPE></OMNISUSPENSIONTYPE>
+      <OMNIPRINTINGSTATIONID></OMNIPRINTINGSTATIONID>
+      <CUSTOMERREQUIREDONRETURN>false</CUSTOMERREQUIREDONRETURN>
+      <OMNIITEMIMAGELOOKUPGROUP>00000000-0000-0000-0000-000000000000</OMNIITEMIMAGELOOKUPGROUP>
+      <OPENDRAWER></OPENDRAWER>
+      <OMNIMAINMENU>OMNI001</OMNIMAINMENU>
+      <SHOWPRICESBYDEFAULT>false</SHOWPRICESBYDEFAULT>
+      <ZRPTDISPLAYOVERSHORTAMOUNT>false</ZRPTDISPLAYOVERSHORTAMOUNT>
+      <ZRPTPRINTGRANDTOTALS>true</ZRPTPRINTGRANDTOTALS>
+      <DISPLAYVOIDEDPAYMENTS>true</DISPLAYVOIDEDPAYMENTS>
+      <SALESPERSONPROMPT>0</SALESPERSONPROMPT>
+      <OMNIENTERINGTYPE>0</OMNIENTERINGTYPE>
+      <OMNIQUANTITYMETHOD>0</OMNIQUANTITYMETHOD>
+      <OMNIDEFAULTQUANTITY>1</OMNIDEFAULTQUANTITY>
+      <LIMITATIONDISPLAYTYPE>0</LIMITATIONDISPLAYTYPE>
+      <DISPLAYLIMITATIONSTOTALSINPOS>0</DISPLAYLIMITATIONSTOTALSINPOS>
+      <KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>false</KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>
+      <OMNIALLOWOFFLINETRANS>false</OMNIALLOWOFFLINETRANS>
+      <OMNISHOWMINVENTORY>false</OMNISHOWMINVENTORY>
+    </POSFUNCTIONALITYPROFILE>
+    <POSFUNCTIONALITYPROFILE>
+      <PROFILEID>HOSP</PROFILEID>
+      <NAME>Hospitality profile</NAME>
+      <NOTAXUSED>0</NOTAXUSED>
+      <ADDTAXONPRICES>0</ADDTAXONPRICES>
+      <SKIPTAXONRECEIPT>0</SKIPTAXONRECEIPT>
+      <MULTIBLEITEMSYMBOL>@</MULTIBLEITEMSYMBOL>
+      <CURRENCYSYMBOL>EUR</CURRENCYSYMBOL>
+      <AMOUNTROUNDINGTO>0.010000000000</AMOUNTROUNDINGTO>
+      <PRICEROUNDINGTO>0.010000000000</PRICEROUNDINGTO>
+      <AMOUNTDECIMALPLACES>2:2</AMOUNTDECIMALPLACES>
+      <PRICEDECIMALPLACES>2:2</PRICEDECIMALPLACES>
+      <NEGATIVEADJUSTMENT></NEGATIVEADJUSTMENT>
+      <VOIDISPRESSED></VOIDISPRESSED>
+      <VOIDTRANSACTION></VOIDTRANSACTION>
+      <VOIDPAYMENT></VOIDPAYMENT>
+      <REFUNDSALE></REFUNDSALE>
+      <MARKDOWN></MARKDOWN>
+      <MARKUP></MARKUP>
+      <OVERRIDEPRICE></OVERRIDEPRICE>
+      <STARTOFTRANSACTION></STARTOFTRANSACTION>
+      <DISCOUNTATTOTAL></DISCOUNTATTOTAL>
+      <TENDERDECLARATION></TENDERDECLARATION>
+      <ENDOFTRANSACTION></ENDOFTRANSACTION>
+      <SERIALNUMBER></SERIALNUMBER>
+      <SALESPERSON></SALESPERSON>
+      <ITEMNOTONFILE></ITEMNOTONFILE>
+      <NEGATIVESALESLINE></NEGATIVESALESLINE>
+      <MUSTKEYINPRICEIFZERO>0</MUSTKEYINPRICEIFZERO>
+      <SALESPERSONMODE>0</SALESPERSONMODE>
+      <DISPLAYSECONDARYTOTALCURRENCY>0</DISPLAYSECONDARYTOTALCURRENCY>
+      <SECONDARYTOTALCURRENCY></SECONDARYTOTALCURRENCY>
+      <MINIMUMPASSWORDLENGTH>0</MINIMUMPASSWORDLENGTH>
+      <BLOCKEDCLOSEDACCOUNT>0</BLOCKEDCLOSEDACCOUNT>
+      <PRINTXREPORTONTERMINAL>0</PRINTXREPORTONTERMINAL>
+      <STAFFBARCODELOGON>0</STAFFBARCODELOGON>
+      <STAFFCARDLOGON>0</STAFFCARDLOGON>
+      <MAXIMUMSTORETRANSLOG>100</MAXIMUMSTORETRANSLOG>
+      <MAXIMUMPRICE>99999.000000000000</MAXIMUMPRICE>
+      <MAXIMUMQTY>999.000000000000</MAXIMUMQTY>
+      <BACKUPTRAININGTRANSACTIONS>0</BACKUPTRAININGTRANSACTIONS>
+      <DAYSTRANSACTIONSEXISTS>0</DAYSTRANSACTIONSEXISTS>
+      <TRANSACTIONDELETEREMINDER>0</TRANSACTIONDELETEREMINDER>
+      <TAXREGISTRATIONNUMBERONRECEIPT>0</TAXREGISTRATIONNUMBERONRECEIPT>
+      <SENDTRANSACTION></SENDTRANSACTION>
+      <VOIDPOSTEDTRANSACTION></VOIDPOSTEDTRANSACTION>
+      <SUSPENDRETRIEVETRANSACTION></SUSPENDRETRIEVETRANSACTION>
+      <STAFFVALIDATION></STAFFVALIDATION>
+      <CUSTOMER></CUSTOMER>
+      <DATAENTRIES></DATAENTRIES>
+      <FLOATINGCASHIER></FLOATINGCASHIER>
+      <CUSTOMER2></CUSTOMER2>
+      <INVENTORYLOOKUP></INVENTORYLOOKUP>
+      <CENTRALTABLESERVER></CENTRALTABLESERVER>
+      <TSSENDTRANSACTIONS>0</TSSENDTRANSACTIONS>
+      <TSSENDVOIDTRANSACTIONS>0</TSSENDVOIDTRANSACTIONS>
+      <TSSUSPENDRETRIEVETRANSACTIONS>0</TSSUSPENDRETRIEVETRANSACTIONS>
+      <TSSTAFF>0</TSSTAFF>
+      <TSCUSTOMER>0</TSCUSTOMER>
+      <TSDATAENTRIES>0</TSDATAENTRIES>
+      <TSFLOATINGCASHIER>0</TSFLOATINGCASHIER>
+      <TSINVENTORYLOOKUP>0</TSINVENTORYLOOKUP>
+      <TSCENTRALTABLESERVER>0</TSCENTRALTABLESERVER>
+      <TSUPDATEREPLICATIONCOUNTER>0</TSUPDATEREPLICATIONCOUNTER>
+      <TSTRANSACTIONRESENDLIMIT>0</TSTRANSACTIONRESENDLIMIT>
+      <TSRESENDDELAY>0</TSRESENDDELAY>
+      <AGGREGATEITEMS>0</AGGREGATEITEMS>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <LOGLEVEL>3</LOGLEVEL>
+      <AGGREGATEPAYMENTS>0</AGGREGATEPAYMENTS>
+      <AGGREGATEITEMSFORPRINTING>0</AGGREGATEITEMSFORPRINTING>
+      <ALLOWSALESIFDRAWERISOPEN>0</ALLOWSALESIFDRAWERISOPEN>
+      <SHOWSTAFFLISTATLOGON>0</SHOWSTAFFLISTATLOGON>
+      <LIMITSTAFFLISTTOSTORE>0</LIMITSTAFFLISTTOSTORE>
+      <ALWAYSASKFORPASSWORD>0</ALWAYSASKFORPASSWORD>
+      <SYNCTRANSACTIONS>0</SYNCTRANSACTIONS>
+      <ISHOSPITALITYPROFILE>1</ISHOSPITALITYPROFILE>
+      <NUMPADENTRYSTARTSINDECIMALS>0</NUMPADENTRYSTARTSINDECIMALS>
+      <NUMPADAMOUNTOFDECIMALS>2</NUMPADAMOUNTOFDECIMALS>
+      <SAFEDROPUSESDENOMINATION>1</SAFEDROPUSESDENOMINATION>
+      <SAFEDROPREVUSESDENOMINATION>1</SAFEDROPREVUSESDENOMINATION>
+      <BANKDROPUSESDENOMINATION>1</BANKDROPUSESDENOMINATION>
+      <BANKDROPREVUSESDENOMINATION>1</BANKDROPREVUSESDENOMINATION>
+      <TENDERDECLUSESDENOMINATION>1</TENDERDECLUSESDENOMINATION>
+      <POLLINGINTERVAL>0</POLLINGINTERVAL>
+      <SKIPHOSPITALITYTABLEVIEW>0</SKIPHOSPITALITYTABLEVIEW>
+      <DISPLAYVOIDEDITEMS>1</DISPLAYVOIDEDITEMS>
+      <ALLOWCHANGESAFTERSPLITBILL>0</ALLOWCHANGESAFTERSPLITBILL>
+      <DEFAULTITEMIMAGE>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</DEFAULTITEMIMAGE>
+      <ALLOWIMAGEVIEWINITEMLOOKUP>1</ALLOWIMAGEVIEWINITEMLOOKUP>
+      <REMEMBERLISTIMAGESELECTION>1</REMEMBERLISTIMAGESELECTION>
+      <CLEARUSERBETWEENLOGINS>0</CLEARUSERBETWEENLOGINS>
+      <CLEARSETTING>1</CLEARSETTING>
+      <CLEARGRACEPERIOD>1</CLEARGRACEPERIOD>
+      <ZRPTDISPLAYDEPOSITINFO>1</ZRPTDISPLAYDEPOSITINFO>
+      <ZRPTDEPOSITORDERBY>0</ZRPTDEPOSITORDERBY>
+      <CUSTOMERREQUIREDONRETURN>false</CUSTOMERREQUIREDONRETURN>
+      <OPENDRAWER></OPENDRAWER>
+      <OMNIMAINMENU></OMNIMAINMENU>
+      <SHOWPRICESBYDEFAULT>false</SHOWPRICESBYDEFAULT>
+      <ZRPTDISPLAYOVERSHORTAMOUNT>false</ZRPTDISPLAYOVERSHORTAMOUNT>
+      <ZRPTPRINTGRANDTOTALS>true</ZRPTPRINTGRANDTOTALS>
+      <DISPLAYVOIDEDPAYMENTS>true</DISPLAYVOIDEDPAYMENTS>
+      <SALESPERSONPROMPT>0</SALESPERSONPROMPT>
+      <OMNIENTERINGTYPE>0</OMNIENTERINGTYPE>
+      <OMNIQUANTITYMETHOD>0</OMNIQUANTITYMETHOD>
+      <OMNIDEFAULTQUANTITY>1</OMNIDEFAULTQUANTITY>
+      <LIMITATIONDISPLAYTYPE>0</LIMITATIONDISPLAYTYPE>
+      <DISPLAYLIMITATIONSTOTALSINPOS>0</DISPLAYLIMITATIONSTOTALSINPOS>
+      <KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>false</KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>
+      <OMNIALLOWOFFLINETRANS>false</OMNIALLOWOFFLINETRANS>
+      <OMNISHOWMINVENTORY>false</OMNISHOWMINVENTORY>
+    </POSFUNCTIONALITYPROFILE>
+    <POSFUNCTIONALITYPROFILE>
+      <PROFILEID>HOSP-TA</PROFILEID>
+      <NAME>HOSP - Take Away</NAME>
+      <NOTAXUSED>0</NOTAXUSED>
+      <ADDTAXONPRICES>0</ADDTAXONPRICES>
+      <SKIPTAXONRECEIPT>0</SKIPTAXONRECEIPT>
+      <MULTIBLEITEMSYMBOL></MULTIBLEITEMSYMBOL>
+      <CURRENCYSYMBOL></CURRENCYSYMBOL>
+      <AMOUNTROUNDINGTO>0.000000000000</AMOUNTROUNDINGTO>
+      <PRICEROUNDINGTO>0.000000000000</PRICEROUNDINGTO>
+      <AMOUNTDECIMALPLACES></AMOUNTDECIMALPLACES>
+      <PRICEDECIMALPLACES>2:2</PRICEDECIMALPLACES>
+      <NEGATIVEADJUSTMENT></NEGATIVEADJUSTMENT>
+      <VOIDISPRESSED></VOIDISPRESSED>
+      <VOIDTRANSACTION></VOIDTRANSACTION>
+      <VOIDPAYMENT></VOIDPAYMENT>
+      <REFUNDSALE></REFUNDSALE>
+      <MARKDOWN></MARKDOWN>
+      <MARKUP></MARKUP>
+      <OVERRIDEPRICE></OVERRIDEPRICE>
+      <STARTOFTRANSACTION></STARTOFTRANSACTION>
+      <DISCOUNTATTOTAL></DISCOUNTATTOTAL>
+      <TENDERDECLARATION></TENDERDECLARATION>
+      <ENDOFTRANSACTION></ENDOFTRANSACTION>
+      <SERIALNUMBER></SERIALNUMBER>
+      <SALESPERSON></SALESPERSON>
+      <ITEMNOTONFILE></ITEMNOTONFILE>
+      <NEGATIVESALESLINE></NEGATIVESALESLINE>
+      <MUSTKEYINPRICEIFZERO>0</MUSTKEYINPRICEIFZERO>
+      <SALESPERSONMODE>0</SALESPERSONMODE>
+      <DISPLAYSECONDARYTOTALCURRENCY>0</DISPLAYSECONDARYTOTALCURRENCY>
+      <SECONDARYTOTALCURRENCY></SECONDARYTOTALCURRENCY>
+      <MINIMUMPASSWORDLENGTH>0</MINIMUMPASSWORDLENGTH>
+      <BLOCKEDCLOSEDACCOUNT>0</BLOCKEDCLOSEDACCOUNT>
+      <PRINTXREPORTONTERMINAL>0</PRINTXREPORTONTERMINAL>
+      <STAFFBARCODELOGON>0</STAFFBARCODELOGON>
+      <STAFFCARDLOGON>0</STAFFCARDLOGON>
+      <MAXIMUMSTORETRANSLOG>0</MAXIMUMSTORETRANSLOG>
+      <MAXIMUMPRICE>99999.000000000000</MAXIMUMPRICE>
+      <MAXIMUMQTY>999.000000000000</MAXIMUMQTY>
+      <BACKUPTRAININGTRANSACTIONS>0</BACKUPTRAININGTRANSACTIONS>
+      <DAYSTRANSACTIONSEXISTS>0</DAYSTRANSACTIONSEXISTS>
+      <TRANSACTIONDELETEREMINDER>0</TRANSACTIONDELETEREMINDER>
+      <TAXREGISTRATIONNUMBERONRECEIPT>0</TAXREGISTRATIONNUMBERONRECEIPT>
+      <SENDTRANSACTION></SENDTRANSACTION>
+      <VOIDPOSTEDTRANSACTION></VOIDPOSTEDTRANSACTION>
+      <SUSPENDRETRIEVETRANSACTION></SUSPENDRETRIEVETRANSACTION>
+      <STAFFVALIDATION></STAFFVALIDATION>
+      <CUSTOMER></CUSTOMER>
+      <DATAENTRIES></DATAENTRIES>
+      <FLOATINGCASHIER></FLOATINGCASHIER>
+      <CUSTOMER2></CUSTOMER2>
+      <INVENTORYLOOKUP></INVENTORYLOOKUP>
+      <CENTRALTABLESERVER></CENTRALTABLESERVER>
+      <TSSENDTRANSACTIONS>0</TSSENDTRANSACTIONS>
+      <TSSENDVOIDTRANSACTIONS>0</TSSENDVOIDTRANSACTIONS>
+      <TSSUSPENDRETRIEVETRANSACTIONS>0</TSSUSPENDRETRIEVETRANSACTIONS>
+      <TSSTAFF>0</TSSTAFF>
+      <TSCUSTOMER>0</TSCUSTOMER>
+      <TSDATAENTRIES>0</TSDATAENTRIES>
+      <TSFLOATINGCASHIER>0</TSFLOATINGCASHIER>
+      <TSINVENTORYLOOKUP>0</TSINVENTORYLOOKUP>
+      <TSCENTRALTABLESERVER>0</TSCENTRALTABLESERVER>
+      <TSUPDATEREPLICATIONCOUNTER>0</TSUPDATEREPLICATIONCOUNTER>
+      <TSTRANSACTIONRESENDLIMIT>0</TSTRANSACTIONRESENDLIMIT>
+      <TSRESENDDELAY>0</TSRESENDDELAY>
+      <AGGREGATEITEMS>0</AGGREGATEITEMS>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <LOGLEVEL>3</LOGLEVEL>
+      <AGGREGATEPAYMENTS>0</AGGREGATEPAYMENTS>
+      <AGGREGATEITEMSFORPRINTING>0</AGGREGATEITEMSFORPRINTING>
+      <ALLOWSALESIFDRAWERISOPEN>0</ALLOWSALESIFDRAWERISOPEN>
+      <SHOWSTAFFLISTATLOGON>0</SHOWSTAFFLISTATLOGON>
+      <LIMITSTAFFLISTTOSTORE>0</LIMITSTAFFLISTTOSTORE>
+      <ALWAYSASKFORPASSWORD>0</ALWAYSASKFORPASSWORD>
+      <SYNCTRANSACTIONS>0</SYNCTRANSACTIONS>
+      <ISHOSPITALITYPROFILE>1</ISHOSPITALITYPROFILE>
+      <NUMPADENTRYSTARTSINDECIMALS>0</NUMPADENTRYSTARTSINDECIMALS>
+      <NUMPADAMOUNTOFDECIMALS>2</NUMPADAMOUNTOFDECIMALS>
+      <SAFEDROPUSESDENOMINATION>1</SAFEDROPUSESDENOMINATION>
+      <SAFEDROPREVUSESDENOMINATION>1</SAFEDROPREVUSESDENOMINATION>
+      <BANKDROPUSESDENOMINATION>1</BANKDROPUSESDENOMINATION>
+      <BANKDROPREVUSESDENOMINATION>1</BANKDROPREVUSESDENOMINATION>
+      <TENDERDECLUSESDENOMINATION>1</TENDERDECLUSESDENOMINATION>
+      <POLLINGINTERVAL>0</POLLINGINTERVAL>
+      <SKIPHOSPITALITYTABLEVIEW>1</SKIPHOSPITALITYTABLEVIEW>
+      <DISPLAYVOIDEDITEMS>1</DISPLAYVOIDEDITEMS>
+      <ALLOWCHANGESAFTERSPLITBILL>0</ALLOWCHANGESAFTERSPLITBILL>
+      <DEFAULTITEMIMAGE>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</DEFAULTITEMIMAGE>
+      <ALLOWIMAGEVIEWINITEMLOOKUP>1</ALLOWIMAGEVIEWINITEMLOOKUP>
+      <REMEMBERLISTIMAGESELECTION>1</REMEMBERLISTIMAGESELECTION>
+      <CLEARUSERBETWEENLOGINS>0</CLEARUSERBETWEENLOGINS>
+      <CLEARSETTING>1</CLEARSETTING>
+      <CLEARGRACEPERIOD>1</CLEARGRACEPERIOD>
+      <ALLOWSALEANDRETURNINSAMETX>1</ALLOWSALEANDRETURNINSAMETX>
+      <POSTTRANSACTIONDDJOB></POSTTRANSACTIONDDJOB>
+      <DDSCHEDULERLOCATION></DDSCHEDULERLOCATION>
+      <USESTARTOFDAY>false</USESTARTOFDAY>
+      <FORCESTARTOFDAYONLOGON>false</FORCESTARTOFDAYONLOGON>
+      <ZRPTINCLUDEFLOATINCASH>1</ZRPTINCLUDEFLOATINCASH>
+      <ZRPTCOMBINESALESRETURNS>1</ZRPTCOMBINESALESRETURNS>
+      <ZRPTINCLUDETENDERDECLARATION>0</ZRPTINCLUDETENDERDECLARATION>
+      <STARTOFTRANSACTIONINFOCODETYPE>0</STARTOFTRANSACTIONINFOCODETYPE>
+      <ZRPTDISPLAYRETURNINFO>1</ZRPTDISPLAYRETURNINFO>
+      <ZRPTDISPLAYSUSPENDED>1</ZRPTDISPLAYSUSPENDED>
+      <ZRPTDISPLAYOTHERINFO>1</ZRPTDISPLAYOTHERINFO>
+      <ZRPTGRANDTOTALAMTDISPLAY>0</ZRPTGRANDTOTALAMTDISPLAY>
+      <ZRPTSALESRPTAMTDISPLAY>0</ZRPTSALESRPTAMTDISPLAY>
+      <ZRPTCOMBINESALESREPORTSALESRETURNS>1</ZRPTCOMBINESALESREPORTSALESRETURNS>
+      <ZRPTDISPLAYDEPOSITINFO>1</ZRPTDISPLAYDEPOSITINFO>
+      <ZRPTDEPOSITORDERBY>0</ZRPTDEPOSITORDERBY>
+      <ZRPTREPORTWIDTH>55</ZRPTREPORTWIDTH>
+      <OMNISUSPENSIONTYPE></OMNISUSPENSIONTYPE>
+      <OMNIPRINTINGSTATIONID></OMNIPRINTINGSTATIONID>
+      <CUSTOMERREQUIREDONRETURN>false</CUSTOMERREQUIREDONRETURN>
+      <OPENDRAWER></OPENDRAWER>
+      <OMNIMAINMENU></OMNIMAINMENU>
+      <SHOWPRICESBYDEFAULT>false</SHOWPRICESBYDEFAULT>
+      <ZRPTDISPLAYOVERSHORTAMOUNT>false</ZRPTDISPLAYOVERSHORTAMOUNT>
+      <ZRPTPRINTGRANDTOTALS>true</ZRPTPRINTGRANDTOTALS>
+      <DISPLAYVOIDEDPAYMENTS>true</DISPLAYVOIDEDPAYMENTS>
+      <SALESPERSONPROMPT>0</SALESPERSONPROMPT>
+      <OMNIENTERINGTYPE>0</OMNIENTERINGTYPE>
+      <OMNIQUANTITYMETHOD>0</OMNIQUANTITYMETHOD>
+      <OMNIDEFAULTQUANTITY>1</OMNIDEFAULTQUANTITY>
+      <LIMITATIONDISPLAYTYPE>0</LIMITATIONDISPLAYTYPE>
+      <DISPLAYLIMITATIONSTOTALSINPOS>0</DISPLAYLIMITATIONSTOTALSINPOS>
+      <KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>false</KEEPDAILYJOURNALOPENAFTERPRINTINGRECEIPT>
+      <OMNIALLOWOFFLINETRANS>false</OMNIALLOWOFFLINETRANS>
+      <OMNISHOWMINVENTORY>false</OMNISHOWMINVENTORY>
+    </POSFUNCTIONALITYPROFILE>
+    <POSHARDWAREPROFILE>
+      <PROFILEID>00000001</PROFILEID>
+      <NAME>Gas Station</NAME>
+      <FORMXPOS>0</FORMXPOS>
+      <FORMYPOS>0</FORMYPOS>
+      <SCREENKEYBOARD>0</SCREENKEYBOARD>
+      <DRAWERREMOTE>0</DRAWERREMOTE>
+      <DRAWERSTATUS>0</DRAWERSTATUS>
+      <DRAWER>0</DRAWER>
+      <DRAWERDEVICENAME></DRAWERDEVICENAME>
+      <DRAWEROPENTEXT></DRAWEROPENTEXT>
+      <DRAWERDESCRIPTION></DRAWERDESCRIPTION>
+      <DISPLAYBINCONVERSION>0</DISPLAYBINCONVERSION>
+      <DISPLAYDEVICE>0</DISPLAYDEVICE>
+      <DISPLAYDEVICENAME></DISPLAYDEVICENAME>
+      <DISPLAYDESCRIPTION></DISPLAYDESCRIPTION>
+      <DISPLAYREMOTE>0</DISPLAYREMOTE>
+      <DISPLAYTOTALTEXT></DISPLAYTOTALTEXT>
+      <DISPLAYBALANCETEXT></DISPLAYBALANCETEXT>
+      <DISPLAYCLOSEDLINE1></DISPLAYCLOSEDLINE1>
+      <DISPLAYCLOSEDLINE2></DISPLAYCLOSEDLINE2>
+      <DISPLAYCHARACTERSET>850</DISPLAYCHARACTERSET>
+      <DELAYFORLINKEDITEMS>0</DELAYFORLINKEDITEMS>
+      <SHOWPICTURE>0</SHOWPICTURE>
+      <MSR>0</MSR>
+      <MSRDEVICENAME></MSRDEVICENAME>
+      <MSRDESCRIPTION></MSRDESCRIPTION>
+      <MSRAUTODISABLE>0</MSRAUTODISABLE>
+      <MSRDISABLEEVENTS>0</MSRDISABLEEVENTS>
+      <MSRREMOTE>0</MSRREMOTE>
+      <ENTERREPEATSLASTITEM>0</ENTERREPEATSLASTITEM>
+      <LOGOALIGNMENT>0</LOGOALIGNMENT>
+      <LOGO>0</LOGO>
+      <STARTTRACK1></STARTTRACK1>
+      <SEPARATOR1></SEPARATOR1>
+      <ENDTRACK1></ENDTRACK1>
+      <STARTTRACK2AFTER>0</STARTTRACK2AFTER>
+      <ENDTRACK2></ENDTRACK2>
+      <NUMBEROFLINESONINVOICE>0</NUMBEROFLINESONINVOICE>
+      <PRINTDISCOUNTDETAIL>0</PRINTDISCOUNTDETAIL>
+      <PRINTERNORMAL></PRINTERNORMAL>
+      <PRINTER>0</PRINTER>
+      <PRINTERDEVICENAME></PRINTERDEVICENAME>
+      <PRINTERBOLD></PRINTERBOLD>
+      <PRINTERWIDE></PRINTERWIDE>
+      <PRINTERHIGH></PRINTERHIGH>
+      <PRINTERWIDEHIGH></PRINTERWIDEHIGH>
+      <PRINTERCHARACTERSET>850</PRINTERCHARACTERSET>
+      <PRINTERDESCRIPTION></PRINTERDESCRIPTION>
+      <PRINTERREMOTE>0</PRINTERREMOTE>
+      <PRINTERNETWORKHOST></PRINTERNETWORKHOST>
+      <PRINTERITALIC></PRINTERITALIC>
+      <DECIMALSINENTRY>0</DECIMALSINENTRY>
+      <PRINTERSHARING>0</PRINTERSHARING>
+      <MAXINVOICELINES>0</MAXINVOICELINES>
+      <PRINTBINARYCONVERSION>0</PRINTBINARYCONVERSION>
+      <HARDTOTAL>0</HARDTOTAL>
+      <HARDTOTALDEVICENAME></HARDTOTALDEVICENAME>
+      <HARDTOTALDESCRIPTION></HARDTOTALDESCRIPTION>
+      <HARDTOTALSREMOTE>0</HARDTOTALSREMOTE>
+      <KEYBOARD>0</KEYBOARD>
+      <KEYBOARDDEVICENAME></KEYBOARDDEVICENAME>
+      <KEYBOARDDESCRIPTION></KEYBOARDDESCRIPTION>
+      <KEYBOARDREMOTE>0</KEYBOARDREMOTE>
+      <TONEINDICATOR>0</TONEINDICATOR>
+      <TONEDEVICENAME></TONEDEVICENAME>
+      <TONEDESCRIPTION></TONEDESCRIPTION>
+      <TONEREMOTE>0</TONEREMOTE>
+      <TONE1PITCH>0</TONE1PITCH>
+      <TONE1VOLUME>0</TONE1VOLUME>
+      <TONE1DURATION>0</TONE1DURATION>
+      <TONE2PITCH>0</TONE2PITCH>
+      <TONE2VOLUME>0</TONE2VOLUME>
+      <TONE2DURATION>0</TONE2DURATION>
+      <INTERTONEWAIT>0</INTERTONEWAIT>
+      <SCANNER>0</SCANNER>
+      <SCANNERDEVICENAME></SCANNERDEVICENAME>
+      <SCANNERDESCRIPTION></SCANNERDESCRIPTION>
+      <SCANNERDISABLEEVENT>0</SCANNERDISABLEEVENT>
+      <SCANNERAUTODISABLE>0</SCANNERAUTODISABLE>
+      <SCANNERREMOTE>0</SCANNERREMOTE>
+      <SCALE>0</SCALE>
+      <SCALEDEVICENAME></SCALEDEVICENAME>
+      <SCALEDESCRIPTION></SCALEDESCRIPTION>
+      <SCALEREMOTE>0</SCALEREMOTE>
+      <TIMEOUTINSEC>0</TIMEOUTINSEC>
+      <MANUALINPUTALLOWED>0</MANUALINPUTALLOWED>
+      <KEYLOCK>0</KEYLOCK>
+      <KEYLOCKDEVICENAME></KEYLOCKDEVICENAME>
+      <KEYLOCKDESCRIPTION></KEYLOCKDESCRIPTION>
+      <KEYLOCKREMOTE>0</KEYLOCKREMOTE>
+      <KEYLOCKDISABLEEVENTS>0</KEYLOCKDISABLEEVENTS>
+      <NUMBEROFLFATRECEIPTEND>0</NUMBEROFLFATRECEIPTEND>
+      <NUMBEROFLFATINVOICETOP>0</NUMBEROFLFATINVOICETOP>
+      <DOCINSERTREMOVALTIMEOUT>0</DOCINSERTREMOVALTIMEOUT>
+      <LEFTMARGINONRECEIPT>0</LEFTMARGINONRECEIPT>
+      <EFT>0</EFT>
+      <EFTDESCRIPTION></EFTDESCRIPTION>
+      <EFTSERVERNAME></EFTSERVERNAME>
+      <EFTSERVERPORT>0</EFTSERVERPORT>
+      <EFTCOMPANYID></EFTCOMPANYID>
+      <EFTUSERID></EFTUSERID>
+      <EFTPASSWORD></EFTPASSWORD>
+      <CAPTUREEXTRADATA>0</CAPTUREEXTRADATA>
+      <MICR>0</MICR>
+      <MICRDRIVERNAME></MICRDRIVERNAME>
+      <MICRDESCRIPTION></MICRDESCRIPTION>
+      <MICRREMOTE>0</MICRREMOTE>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <FORECOURT>0</FORECOURT>
+      <HOSTNAME></HOSTNAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <CCTV>0</CCTV>
+      <CCTVPORT>0</CCTVPORT>
+      <CCTVHOSTNAME></CCTVHOSTNAME>
+      <CCTVCAMERA></CCTVCAMERA>
+      <FORECOURTAMOUNTDECPOINTPOSITION>0</FORECOURTAMOUNTDECPOINTPOSITION>
+      <FORECOURTPRICEDECPOINTPOSITION>0</FORECOURTPRICEDECPOINTPOSITION>
+      <FORECOURTVOLUMETDECPOINTPOSITION>0</FORECOURTVOLUMETDECPOINTPOSITION>
+      <FORECOURTONEACTIVE>0</FORECOURTONEACTIVE>
+      <FORECOURTONEFREQUENCY>0</FORECOURTONEFREQUENCY>
+      <FORECOURTONELENGTH>0</FORECOURTONELENGTH>
+      <FORECOURTONEREPEATS>0</FORECOURTONEREPEATS>
+      <PHARMACY>0</PHARMACY>
+      <PHARMACYHOST>0</PHARMACYHOST>
+      <EFTBATCHINCREMENTATEOS>0</EFTBATCHINCREMENTATEOS>
+      <RFIDSCANNERTYPE>0</RFIDSCANNERTYPE>
+      <RFIDDEVICENAME></RFIDDEVICENAME>
+      <RFIDDESCRIPTION></RFIDDESCRIPTION>
+      <DUALDISPLAY>0</DUALDISPLAY>
+      <DUALDISPLAYDEVICENAME>127.0.0.1</DUALDISPLAYDEVICENAME>
+      <DUALDISPLAYDESCRIPTION></DUALDISPLAYDESCRIPTION>
+      <DUALDISPLAYTYPE>0</DUALDISPLAYTYPE>
+      <DUALDISPLAYPORT>1250</DUALDISPLAYPORT>
+      <DUALDISPLAYRECEIPTPERCENTAGE>50.000000000000</DUALDISPLAYRECEIPTPERCENTAGE>
+      <DUALDISPLAYIMAGEPATH></DUALDISPLAYIMAGEPATH>
+      <DUALDISPLAYIMAGEINTERVAL>1</DUALDISPLAYIMAGEINTERVAL>
+      <DUALDISPLAYBROWSERURL></DUALDISPLAYBROWSERURL>
+      <CASHCHANGER>0</CASHCHANGER>
+      <CASHCHANGERPORTSETTINGS></CASHCHANGERPORTSETTINGS>
+      <CASHCHANGERINITSETTINGS></CASHCHANGERINITSETTINGS>
+      <FORECOURTMANAGER>1</FORECOURTMANAGER>
+      <FORECOURTMANAGERHOSTNAME>127.0.0.1</FORECOURTMANAGERHOSTNAME>
+      <FORECOURTMANAGERPORT>1248</FORECOURTMANAGERPORT>
+      <FORECOURTMANAGERPOSPORT>1249</FORECOURTMANAGERPOSPORT>
+      <FORECOURTMANAGERScreenHeightPercentage>15.000000000000</FORECOURTMANAGERScreenHeightPercentage>
+      <FORECOURTMANAGERControllerHostName>127.0.0.1</FORECOURTMANAGERControllerHostName>
+      <FORECOURTMANAGERLogLevel>0</FORECOURTMANAGERLogLevel>
+      <FORECOURTMANAGERImplFileName>LSForecourtSimulatorImpl.dll</FORECOURTMANAGERImplFileName>
+      <FORECOURTMANAGERImplFileType>LSForecourtSimulatorImpl.LSForecourtSimulatorImpl</FORECOURTMANAGERImplFileType>
+      <FORECOURTMANAGERScreenExtHeightPercentage>50.000000000000</FORECOURTMANAGERScreenExtHeightPercentage>
+      <FORECOURTMANAGERVolumeUnit>L</FORECOURTMANAGERVolumeUnit>
+      <FORECOURTMANAGERCallingSound>1</FORECOURTMANAGERCallingSound>
+      <FORECOURTMANAGERCallingBlink>1</FORECOURTMANAGERCallingBlink>
+      <FORECOURTMANAGERFuellingPointColumns>8</FORECOURTMANAGERFuellingPointColumns>
+      <FISCALPRINTER>0</FISCALPRINTER>
+      <FISCALPRINTERCONNECTION></FISCALPRINTERCONNECTION>
+      <FISCALPRINTERDESCRIPTION></FISCALPRINTERDESCRIPTION>
+      <USEKITCHENDISPLAY>0</USEKITCHENDISPLAY>
+      <DUALDISPLAYSCREENNUMBER>0</DUALDISPLAYSCREENNUMBER>
+      <DALLASKEYCONNECTED>0</DALLASKEYCONNECTED>
+      <DALLASMESSAGEPREFIX></DALLASMESSAGEPREFIX>
+      <DALLASKEYREMOVEDMESSAGE></DALLASKEYREMOVEDMESSAGE>
+      <DALLASCOMPORT></DALLASCOMPORT>
+      <DALLASBAUDRATE>9600</DALLASBAUDRATE>
+      <DALLASPARITY>0</DALLASPARITY>
+      <DALLASSTOPBITS>1</DALLASSTOPBITS>
+      <DALLASDATABITS>8</DALLASDATABITS>
+      <EFTMERCHANTACCOUNT></EFTMERCHANTACCOUNT>
+      <EFTMERCHANTKEY></EFTMERCHANTKEY>
+      <EFTCUSTOMFIELD1></EFTCUSTOMFIELD1>
+      <EFTCUSTOMFIELD2></EFTCUSTOMFIELD2>
+      <DISPLAYBINARYCONVERSION>0</DISPLAYBINARYCONVERSION>
+      <PRINTEREXTRALINES>0</PRINTEREXTRALINES>
+      <WINPRINT_LEFTMARGIN>45</WINPRINT_LEFTMARGIN>
+      <WINPRINT_RIGHTMARGIN>5</WINPRINT_RIGHTMARGIN>
+      <WINPRINT_FONTSIZE>3</WINPRINT_FONTSIZE>
+      <WINPRINT_PRINTDESIGNBOXES>0</WINPRINT_PRINTDESIGNBOXES>
+      <WINPRINT_FOLDERLOCATION>C:\ProgramData\LS Retail\LS One POS\</WINPRINT_FOLDERLOCATION>
+      <WINPRINT_TOPMARGIN>5</WINPRINT_TOPMARGIN>
+      <WINPRINT_BOTTOMMARGIN>60</WINPRINT_BOTTOMMARGIN>
+      <STATIONPRINTINGHOSTID></STATIONPRINTINGHOSTID>
+    </POSHARDWAREPROFILE>
+    <POSHARDWAREPROFILE>
+      <PROFILEID>DEMO</PROFILEID>
+      <NAME>Demonstration Profile</NAME>
+      <FORMXPOS>0</FORMXPOS>
+      <FORMYPOS>0</FORMYPOS>
+      <SCREENKEYBOARD>1</SCREENKEYBOARD>
+      <DRAWERREMOTE>0</DRAWERREMOTE>
+      <DRAWERSTATUS>0</DRAWERSTATUS>
+      <DRAWER>0</DRAWER>
+      <DRAWERDEVICENAME></DRAWERDEVICENAME>
+      <DRAWEROPENTEXT></DRAWEROPENTEXT>
+      <DRAWERDESCRIPTION></DRAWERDESCRIPTION>
+      <DISPLAYBINCONVERSION>0</DISPLAYBINCONVERSION>
+      <DISPLAYDEVICE>0</DISPLAYDEVICE>
+      <DISPLAYDEVICENAME></DISPLAYDEVICENAME>
+      <DISPLAYDESCRIPTION></DISPLAYDESCRIPTION>
+      <DISPLAYREMOTE>0</DISPLAYREMOTE>
+      <DISPLAYTOTALTEXT>Total</DISPLAYTOTALTEXT>
+      <DISPLAYBALANCETEXT>Balance</DISPLAYBALANCETEXT>
+      <DISPLAYCLOSEDLINE1>Till is closed</DISPLAYCLOSEDLINE1>
+      <DISPLAYCLOSEDLINE2></DISPLAYCLOSEDLINE2>
+      <DISPLAYCHARACTERSET>850</DISPLAYCHARACTERSET>
+      <DELAYFORLINKEDITEMS>0</DELAYFORLINKEDITEMS>
+      <SHOWPICTURE>1</SHOWPICTURE>
+      <MSR>0</MSR>
+      <MSRDEVICENAME></MSRDEVICENAME>
+      <MSRDESCRIPTION></MSRDESCRIPTION>
+      <MSRAUTODISABLE>0</MSRAUTODISABLE>
+      <MSRDISABLEEVENTS>0</MSRDISABLEEVENTS>
+      <MSRREMOTE>0</MSRREMOTE>
+      <ENTERREPEATSLASTITEM>0</ENTERREPEATSLASTITEM>
+      <LOGOALIGNMENT>0</LOGOALIGNMENT>
+      <LOGO>0</LOGO>
+      <STARTTRACK1>æ</STARTTRACK1>
+      <SEPARATOR1>;</SEPARATOR1>
+      <ENDTRACK1>ö</ENDTRACK1>
+      <STARTTRACK2AFTER>0</STARTTRACK2AFTER>
+      <ENDTRACK2></ENDTRACK2>
+      <NUMBEROFLINESONINVOICE>40</NUMBEROFLINESONINVOICE>
+      <PRINTDISCOUNTDETAIL>0</PRINTDISCOUNTDETAIL>
+      <PRINTERNORMAL>&lt;27&gt;&lt;124&gt;&lt;78&gt;</PRINTERNORMAL>
+      <PRINTER>0</PRINTER>
+      <PRINTERDEVICENAME></PRINTERDEVICENAME>
+      <PRINTERBOLD>&lt;27&gt;&lt;124&gt;&lt;98&gt;&lt;67&gt;</PRINTERBOLD>
+      <PRINTERWIDE>&lt;27&gt;&lt;124&gt;&lt;50&gt;&lt;67&gt;</PRINTERWIDE>
+      <PRINTERHIGH>&lt;27&gt;&lt;124&gt;&lt;51&gt;&lt;67&gt;</PRINTERHIGH>
+      <PRINTERWIDEHIGH>&lt;27&gt;&lt;124&gt;&lt;52&gt;&lt;67&gt;</PRINTERWIDEHIGH>
+      <PRINTERCHARACTERSET>0</PRINTERCHARACTERSET>
+      <PRINTERDESCRIPTION></PRINTERDESCRIPTION>
+      <PRINTERREMOTE>0</PRINTERREMOTE>
+      <PRINTERNETWORKHOST></PRINTERNETWORKHOST>
+      <PRINTERITALIC>&lt;27&gt;&lt;124&gt;&lt;105&gt;&lt;67&gt;</PRINTERITALIC>
+      <DECIMALSINENTRY>0</DECIMALSINENTRY>
+      <PRINTERSHARING>0</PRINTERSHARING>
+      <MAXINVOICELINES>0</MAXINVOICELINES>
+      <PRINTBINARYCONVERSION>0</PRINTBINARYCONVERSION>
+      <HARDTOTAL>0</HARDTOTAL>
+      <HARDTOTALDEVICENAME></HARDTOTALDEVICENAME>
+      <HARDTOTALDESCRIPTION></HARDTOTALDESCRIPTION>
+      <HARDTOTALSREMOTE>0</HARDTOTALSREMOTE>
+      <KEYBOARD>1</KEYBOARD>
+      <KEYBOARDDEVICENAME></KEYBOARDDEVICENAME>
+      <KEYBOARDDESCRIPTION></KEYBOARDDESCRIPTION>
+      <KEYBOARDREMOTE>0</KEYBOARDREMOTE>
+      <TONEINDICATOR>0</TONEINDICATOR>
+      <TONEDEVICENAME></TONEDEVICENAME>
+      <TONEDESCRIPTION></TONEDESCRIPTION>
+      <TONEREMOTE>0</TONEREMOTE>
+      <TONE1PITCH>0</TONE1PITCH>
+      <TONE1VOLUME>0</TONE1VOLUME>
+      <TONE1DURATION>0</TONE1DURATION>
+      <TONE2PITCH>0</TONE2PITCH>
+      <TONE2VOLUME>0</TONE2VOLUME>
+      <TONE2DURATION>0</TONE2DURATION>
+      <INTERTONEWAIT>0</INTERTONEWAIT>
+      <SCANNER>0</SCANNER>
+      <SCANNERDEVICENAME></SCANNERDEVICENAME>
+      <SCANNERDESCRIPTION></SCANNERDESCRIPTION>
+      <SCANNERDISABLEEVENT>0</SCANNERDISABLEEVENT>
+      <SCANNERAUTODISABLE>0</SCANNERAUTODISABLE>
+      <SCANNERREMOTE>0</SCANNERREMOTE>
+      <SCALE>0</SCALE>
+      <SCALEDEVICENAME></SCALEDEVICENAME>
+      <SCALEDESCRIPTION></SCALEDESCRIPTION>
+      <SCALEREMOTE>0</SCALEREMOTE>
+      <TIMEOUTINSEC>0</TIMEOUTINSEC>
+      <MANUALINPUTALLOWED>0</MANUALINPUTALLOWED>
+      <KEYLOCK>0</KEYLOCK>
+      <KEYLOCKDEVICENAME></KEYLOCKDEVICENAME>
+      <KEYLOCKDESCRIPTION></KEYLOCKDESCRIPTION>
+      <KEYLOCKREMOTE>0</KEYLOCKREMOTE>
+      <KEYLOCKDISABLEEVENTS>0</KEYLOCKDISABLEEVENTS>
+      <NUMBEROFLFATRECEIPTEND>0</NUMBEROFLFATRECEIPTEND>
+      <NUMBEROFLFATINVOICETOP>0</NUMBEROFLFATINVOICETOP>
+      <DOCINSERTREMOVALTIMEOUT>0</DOCINSERTREMOVALTIMEOUT>
+      <LEFTMARGINONRECEIPT>0</LEFTMARGINONRECEIPT>
+      <EFT>0</EFT>
+      <EFTDESCRIPTION></EFTDESCRIPTION>
+      <EFTSERVERNAME></EFTSERVERNAME>
+      <EFTSERVERPORT>0</EFTSERVERPORT>
+      <EFTCOMPANYID></EFTCOMPANYID>
+      <EFTUSERID></EFTUSERID>
+      <EFTPASSWORD></EFTPASSWORD>
+      <CAPTUREEXTRADATA>0</CAPTUREEXTRADATA>
+      <MICR>0</MICR>
+      <MICRDRIVERNAME></MICRDRIVERNAME>
+      <MICRDESCRIPTION></MICRDESCRIPTION>
+      <MICRREMOTE>0</MICRREMOTE>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <FORECOURT>0</FORECOURT>
+      <HOSTNAME></HOSTNAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <CCTV>0</CCTV>
+      <CCTVPORT>0</CCTVPORT>
+      <CCTVHOSTNAME></CCTVHOSTNAME>
+      <CCTVCAMERA></CCTVCAMERA>
+      <FORECOURTAMOUNTDECPOINTPOSITION>0</FORECOURTAMOUNTDECPOINTPOSITION>
+      <FORECOURTPRICEDECPOINTPOSITION>0</FORECOURTPRICEDECPOINTPOSITION>
+      <FORECOURTVOLUMETDECPOINTPOSITION>0</FORECOURTVOLUMETDECPOINTPOSITION>
+      <FORECOURTONEACTIVE>0</FORECOURTONEACTIVE>
+      <FORECOURTONEFREQUENCY>0</FORECOURTONEFREQUENCY>
+      <FORECOURTONELENGTH>0</FORECOURTONELENGTH>
+      <FORECOURTONEREPEATS>0</FORECOURTONEREPEATS>
+      <PHARMACY>0</PHARMACY>
+      <PHARMACYHOST>0</PHARMACYHOST>
+      <KEYBOARDMAPPINGID>DEMO</KEYBOARDMAPPINGID>
+      <EFTBATCHINCREMENTATEOS>0</EFTBATCHINCREMENTATEOS>
+      <RFIDSCANNERTYPE>0</RFIDSCANNERTYPE>
+      <RFIDDEVICENAME></RFIDDEVICENAME>
+      <RFIDDESCRIPTION></RFIDDESCRIPTION>
+      <DUALDISPLAY>0</DUALDISPLAY>
+      <DUALDISPLAYDEVICENAME></DUALDISPLAYDEVICENAME>
+      <DUALDISPLAYDESCRIPTION></DUALDISPLAYDESCRIPTION>
+      <DUALDISPLAYTYPE>2</DUALDISPLAYTYPE>
+      <DUALDISPLAYPORT>0</DUALDISPLAYPORT>
+      <DUALDISPLAYRECEIPTPERCENTAGE>0.000000000000</DUALDISPLAYRECEIPTPERCENTAGE>
+      <DUALDISPLAYIMAGEPATH></DUALDISPLAYIMAGEPATH>
+      <DUALDISPLAYIMAGEINTERVAL>0</DUALDISPLAYIMAGEINTERVAL>
+      <DUALDISPLAYBROWSERURL></DUALDISPLAYBROWSERURL>
+      <CASHCHANGER>0</CASHCHANGER>
+      <CASHCHANGERPORTSETTINGS></CASHCHANGERPORTSETTINGS>
+      <CASHCHANGERINITSETTINGS></CASHCHANGERINITSETTINGS>
+      <FORECOURTMANAGER>0</FORECOURTMANAGER>
+      <FORECOURTMANAGERHOSTNAME></FORECOURTMANAGERHOSTNAME>
+      <FORECOURTMANAGERPORT></FORECOURTMANAGERPORT>
+      <FORECOURTMANAGERPOSPORT>0</FORECOURTMANAGERPOSPORT>
+      <FORECOURTMANAGERScreenHeightPercentage>0.000000000000</FORECOURTMANAGERScreenHeightPercentage>
+      <FORECOURTMANAGERControllerHostName></FORECOURTMANAGERControllerHostName>
+      <FORECOURTMANAGERLogLevel>0</FORECOURTMANAGERLogLevel>
+      <FORECOURTMANAGERImplFileName></FORECOURTMANAGERImplFileName>
+      <FORECOURTMANAGERImplFileType></FORECOURTMANAGERImplFileType>
+      <FORECOURTMANAGERScreenExtHeightPercentage>0.000000000000</FORECOURTMANAGERScreenExtHeightPercentage>
+      <FORECOURTMANAGERVolumeUnit></FORECOURTMANAGERVolumeUnit>
+      <FORECOURTMANAGERCallingSound>0</FORECOURTMANAGERCallingSound>
+      <FORECOURTMANAGERCallingBlink>0</FORECOURTMANAGERCallingBlink>
+      <FORECOURTMANAGERFuellingPointColumns>0</FORECOURTMANAGERFuellingPointColumns>
+      <FISCALPRINTER>0</FISCALPRINTER>
+      <FISCALPRINTERCONNECTION></FISCALPRINTERCONNECTION>
+      <FISCALPRINTERDESCRIPTION></FISCALPRINTERDESCRIPTION>
+      <USEKITCHENDISPLAY>0</USEKITCHENDISPLAY>
+      <DUALDISPLAYSCREENNUMBER>3</DUALDISPLAYSCREENNUMBER>
+      <DALLASKEYCONNECTED>0</DALLASKEYCONNECTED>
+      <DALLASMESSAGEPREFIX></DALLASMESSAGEPREFIX>
+      <DALLASKEYREMOVEDMESSAGE></DALLASKEYREMOVEDMESSAGE>
+      <DALLASCOMPORT></DALLASCOMPORT>
+      <DALLASBAUDRATE>9600</DALLASBAUDRATE>
+      <DALLASPARITY>0</DALLASPARITY>
+      <DALLASSTOPBITS>1</DALLASSTOPBITS>
+      <DALLASDATABITS>8</DALLASDATABITS>
+      <EFTMERCHANTACCOUNT></EFTMERCHANTACCOUNT>
+      <EFTMERCHANTKEY></EFTMERCHANTKEY>
+      <EFTCUSTOMFIELD1></EFTCUSTOMFIELD1>
+      <EFTCUSTOMFIELD2></EFTCUSTOMFIELD2>
+      <DISPLAYBINARYCONVERSION>0</DISPLAYBINARYCONVERSION>
+      <PRINTEREXTRALINES>0</PRINTEREXTRALINES>
+      <WINPRINT_LEFTMARGIN>45</WINPRINT_LEFTMARGIN>
+      <WINPRINT_RIGHTMARGIN>5</WINPRINT_RIGHTMARGIN>
+      <WINPRINT_FONTSIZE>3</WINPRINT_FONTSIZE>
+      <WINPRINT_PRINTDESIGNBOXES>0</WINPRINT_PRINTDESIGNBOXES>
+      <WINPRINT_FOLDERLOCATION>C:\ProgramData\LS Retail\LS One POS\</WINPRINT_FOLDERLOCATION>
+      <WINPRINT_TOPMARGIN>10</WINPRINT_TOPMARGIN>
+      <WINPRINT_BOTTOMMARGIN>60</WINPRINT_BOTTOMMARGIN>
+    </POSHARDWAREPROFILE>
+    <POSTRANSACTIONSERVICEPROFILE>
+      <PROFILEID>00000001</PROFILEID>
+      <NAME>LS Site Service</NAME>
+      <USERNAME></USERNAME>
+      <PASSWORD></PASSWORD>
+      <COMPANY></COMPANY>
+      <DOMAIN></DOMAIN>
+      <AOSSERVER></AOSSERVER>
+      <AOSINSTANCE></AOSINSTANCE>
+      <AOSPORT>0</AOSPORT>
+      <CONFIGURATION></CONFIGURATION>
+      <TSSENDTRANSACTIONS>0</TSSENDTRANSACTIONS>
+      <TSSENDVOIDTRANSACTIONS>0</TSSENDVOIDTRANSACTIONS>
+      <TSSUSPENDRETRIEVETRANSACTIONS>0</TSSUSPENDRETRIEVETRANSACTIONS>
+      <TSCUSTOMER>1</TSCUSTOMER>
+      <TSDATAENTRIES>0</TSDATAENTRIES>
+      <TSSTAFF>0</TSSTAFF>
+      <TSFLOATINGCASHIER>0</TSFLOATINGCASHIER>
+      <TSINVENTORYLOOKUP>1</TSINVENTORYLOOKUP>
+      <SENDTRANSACTION></SENDTRANSACTION>
+      <VOIDPOSTEDTRANSACTION></VOIDPOSTEDTRANSACTION>
+      <SUSPENDRETRIEVETRANSACTION></SUSPENDRETRIEVETRANSACTION>
+      <CUSTOMER></CUSTOMER>
+      <DATAENTRIES></DATAENTRIES>
+      <STAFFVALIDATION></STAFFVALIDATION>
+      <FLOATINGCASHIER></FLOATINGCASHIER>
+      <INVENTORYLOOKUP></INVENTORYLOOKUP>
+      <TSUPDATEREPLICATIONCOUNTER>0</TSUPDATEREPLICATIONCOUNTER>
+      <TSTRANSACTIONRESENDLIMIT>0</TSTRANSACTIONRESENDLIMIT>
+      <TSRESENDDELAY>0</TSRESENDDELAY>
+      <LANGUAGE></LANGUAGE>
+      <AXVERSION>-1</AXVERSION>
+      <CENTRALTABLESERVER>127.0.0.1</CENTRALTABLESERVER>
+      <CENTRALTABLESERVERPORT>9101</CENTRALTABLESERVERPORT>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ISSUEGIFTCARDOPTION>2</ISSUEGIFTCARDOPTION>
+      <USEGIFTCARDS>1</USEGIFTCARDS>
+      <USECENTRALSUSPENSION>1</USECENTRALSUSPENSION>
+      <USERCONFIRMATION>1</USERCONFIRMATION>
+      <USECREDITVOUCHERS>1</USECREDITVOUCHERS>
+      <CUSTOMERADDDEFAULTTAXGROUP>TG0010</CUSTOMERADDDEFAULTTAXGROUP>
+      <CUSTOMERADDDEFAULTTAXGROUPNAME>Standard customer</CUSTOMERADDDEFAULTTAXGROUPNAME>
+      <CASHCUSTOMERSETTING>0</CASHCUSTOMERSETTING>
+      <GIFTCARDREFILLSETTING>0</GIFTCARDREFILLSETTING>
+      <MAXIMUMGIFTCARDAMOUNT>0.000000000000</MAXIMUMGIFTCARDAMOUNT>
+      <IMMEDIATELYUPDATEINVENTORY>false</IMMEDIATELYUPDATEINVENTORY>
+      <CENTRALRETURNLOOKUP>1</CENTRALRETURNLOOKUP>
+      <USESERIALNUMBERS>true</USESERIALNUMBERS>
+      <SENDRECEIPTEMAIL>3</SENDRECEIPTEMAIL>
+      <ALLOWCUSTOMERMANUALID>false</ALLOWCUSTOMERMANUALID>
+      <CUSTOMERDEFAULTCREDITLIMIT>0.000000000000</CUSTOMERDEFAULTCREDITLIMIT>
+      <CUSTOMERNAMEMANDATORY>false</CUSTOMERNAMEMANDATORY>
+      <CUSTOMERSEARCHALIASMANDATORY>false</CUSTOMERSEARCHALIASMANDATORY>
+      <CUSTOMERADDRESSMANDATORY>false</CUSTOMERADDRESSMANDATORY>
+      <CUSTOMERPHONEMANDATORY>false</CUSTOMERPHONEMANDATORY>
+      <CUSTOMEREMAILMANDATORY>false</CUSTOMEREMAILMANDATORY>
+      <CUSTOMERRECEIPTEMAILMANDATORY>false</CUSTOMERRECEIPTEMAILMANDATORY>
+      <CUSTOMERGENDERMANDATORY>false</CUSTOMERGENDERMANDATORY>
+      <CUSTOMERBIRTHDATEMANDATORY>false</CUSTOMERBIRTHDATEMANDATORY>
+      <TIMEOUT>60</TIMEOUT>
+      <MAXMESSAGESIZE>55000000</MAXMESSAGESIZE>
+    </POSTRANSACTIONSERVICEPROFILE>
+    <POSVISUALPROFILE>
+      <PROFILEID>00000001</PROFILEID>
+      <NAME>GasStation</NAME>
+      <STARTMENU></STARTMENU>
+      <SALESMENU></SALESMENU>
+      <PAYMENTMENU></PAYMENTMENU>
+      <TENDEROPERATIONMENU></TENDEROPERATIONMENU>
+      <NEGATIVEADJUSTMENTMENU></NEGATIVEADJUSTMENTMENU>
+      <PHYSICALINVENTORYMENU></PHYSICALINVENTORYMENU>
+      <NORMALCOLOR></NORMALCOLOR>
+      <VOIDEDCOLOR></VOIDEDCOLOR>
+      <MULTIBUYCOLOR></MULTIBUYCOLOR>
+      <MIXANDMATCHCOLOR></MIXANDMATCHCOLOR>
+      <TOTALDISCOUNTCOLOR></TOTALDISCOUNTCOLOR>
+      <INCOMEEXPENSECOLOR></INCOMEEXPENSECOLOR>
+      <COUPONLINECOLOR></COUPONLINECOLOR>
+      <LINESELECTCOLOR></LINESELECTCOLOR>
+      <FREETEXTCOLOR></FREETEXTCOLOR>
+      <HIDETITLEBAR>0</HIDETITLEBAR>
+      <HIDEMENU>0</HIDEMENU>
+      <HIDECURSOR>0</HIDECURSOR>
+      <HIDENUMBERCOLUMN>0</HIDENUMBERCOLUMN>
+      <HIDEDISCPCTCOLUMN>0</HIDEDISCPCTCOLUMN>
+      <DIALOGBOXONERROR>0</DIALOGBOXONERROR>
+      <SHOWTOPMENU>0</SHOWTOPMENU>
+      <TABLEMENU></TABLEMENU>
+      <HIDEGUESTCOLUMN>0</HIDEGUESTCOLUMN>
+      <TOPLINEMENU></TOPLINEMENU>
+      <JOURNALMENU></JOURNALMENU>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <RESOLUTION>0</RESOLUTION>
+      <TERMINALTYPE>0</TERMINALTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <DESIGNALLOWEDONPOS>0</DESIGNALLOWEDONPOS>
+      <OPAQUEBACKGROUNDFORM>0</OPAQUEBACKGROUNDFORM>
+      <OPACITY>0.000000000000</OPACITY>
+      <USEFORMBACKGROUNDIMAGE>0</USEFORMBACKGROUNDIMAGE>
+      <SCREENINDEX>1</SCREENINDEX>
+      <SHOWCURRENCYSYMBOLONCOLUMNS>0</SHOWCURRENCYSYMBOLONCOLUMNS>
+      <RECEIPTPAYMENTLINESSIZE>30</RECEIPTPAYMENTLINESSIZE>
+      <RECEIPTRETURNBACKGROUNDIMAGEID>000000036</RECEIPTRETURNBACKGROUNDIMAGEID>
+      <RECEIPTRETURNBACKGROUNDIMAGELAYOUT>1</RECEIPTRETURNBACKGROUNDIMAGELAYOUT>
+      <RECEIPTRETURNBORDERCOLOR>-1027247</RECEIPTRETURNBORDERCOLOR>
+      <OVERRIDEPOSCONTROLBORDERCOLOR>false</OVERRIDEPOSCONTROLBORDERCOLOR>
+    </POSVISUALPROFILE>
+    <POSVISUALPROFILE>
+      <PROFILEID>DEMO</PROFILEID>
+      <NAME>Demonstration profile</NAME>
+      <STARTMENU></STARTMENU>
+      <SALESMENU></SALESMENU>
+      <PAYMENTMENU></PAYMENTMENU>
+      <TENDEROPERATIONMENU></TENDEROPERATIONMENU>
+      <NEGATIVEADJUSTMENTMENU></NEGATIVEADJUSTMENTMENU>
+      <PHYSICALINVENTORYMENU></PHYSICALINVENTORYMENU>
+      <NORMALCOLOR></NORMALCOLOR>
+      <VOIDEDCOLOR></VOIDEDCOLOR>
+      <MULTIBUYCOLOR></MULTIBUYCOLOR>
+      <MIXANDMATCHCOLOR></MIXANDMATCHCOLOR>
+      <TOTALDISCOUNTCOLOR></TOTALDISCOUNTCOLOR>
+      <INCOMEEXPENSECOLOR></INCOMEEXPENSECOLOR>
+      <COUPONLINECOLOR></COUPONLINECOLOR>
+      <LINESELECTCOLOR></LINESELECTCOLOR>
+      <FREETEXTCOLOR></FREETEXTCOLOR>
+      <HIDETITLEBAR>0</HIDETITLEBAR>
+      <HIDEMENU>0</HIDEMENU>
+      <HIDECURSOR>0</HIDECURSOR>
+      <HIDENUMBERCOLUMN>0</HIDENUMBERCOLUMN>
+      <HIDEDISCPCTCOLUMN>0</HIDEDISCPCTCOLUMN>
+      <DIALOGBOXONERROR>0</DIALOGBOXONERROR>
+      <SHOWTOPMENU>0</SHOWTOPMENU>
+      <TABLEMENU></TABLEMENU>
+      <HIDEGUESTCOLUMN>0</HIDEGUESTCOLUMN>
+      <TOPLINEMENU></TOPLINEMENU>
+      <JOURNALMENU></JOURNALMENU>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <RESOLUTION>0</RESOLUTION>
+      <TERMINALTYPE>0</TERMINALTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <DESIGNALLOWEDONPOS>0</DESIGNALLOWEDONPOS>
+      <OPAQUEBACKGROUNDFORM>0</OPAQUEBACKGROUNDFORM>
+      <OPACITY>0.000000000000</OPACITY>
+      <USEFORMBACKGROUNDIMAGE>0</USEFORMBACKGROUNDIMAGE>
+      <SCREENINDEX>0</SCREENINDEX>
+      <SHOWCURRENCYSYMBOLONCOLUMNS>0</SHOWCURRENCYSYMBOLONCOLUMNS>
+      <RECEIPTPAYMENTLINESSIZE>30</RECEIPTPAYMENTLINESSIZE>
+      <RECEIPTRETURNBACKGROUNDIMAGEID>000000036</RECEIPTRETURNBACKGROUNDIMAGEID>
+      <RECEIPTRETURNBACKGROUNDIMAGELAYOUT>1</RECEIPTRETURNBACKGROUNDIMAGELAYOUT>
+      <RECEIPTRETURNBORDERCOLOR>-1027247</RECEIPTRETURNBORDERCOLOR>
+      <CONFIRMBUTTONSTYLEID></CONFIRMBUTTONSTYLEID>
+      <CANCELBUTTONSTYLEID></CANCELBUTTONSTYLEID>
+      <ACTIONBUTTONSTYLEID></ACTIONBUTTONSTYLEID>
+      <NORMALBUTTONSTYLEID></NORMALBUTTONSTYLEID>
+      <OTHERBUTTONSTYLEID></OTHERBUTTONSTYLEID>
+      <OVERRIDEPOSCONTROLBORDERCOLOR>false</OVERRIDEPOSCONTROLBORDERCOLOR>
+      <POSCONTROLBORDERCOLOR>-3352871</POSCONTROLBORDERCOLOR>
+    </POSVISUALPROFILE>
+  </NewDataSet>
+</root>

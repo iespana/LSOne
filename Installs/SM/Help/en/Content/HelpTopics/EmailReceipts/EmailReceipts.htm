@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="POS |POS Setup|Sending email receipts">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Email receipts settings</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/EmailReceipts/EmailReceipts.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Email receipts settings</h1>
+        <p>From version 2017 LS&#160;One can email receipts and other printable forms to the customer. To be able to email the receipts some settings need to be in place. </p>
+        <h2>1. Hardware profile</h2>
+        <p>Every terminal has a hardware profile and the hardware profile states where a receipt should be printed. If you want to email the receipt you need to configure a folder location where the receipts that will be emailed can be saved. The receipt will use the margins that are set in the hardware profile. </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li value="1">In the ribbon select <span class="trace">Sites &gt; Profiles category:&#160;Hardware &gt; Edit the hardware profile &gt; Open the Printer tab</span></li>
+            <li value="2">Edit the Folder location field at the bottom of the form, you can for an example use the following folder C:\ProgramData\LS Retail\LS One POS\. Please note that the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> as a program needs to have permission to read and write to the folder selected.</li>
+            <li value="3">Save the Hardware profile</li>
+        </ol>
+        <p>Find additional information about hardware profiles and how to set them up here:</p>
+        <ul>
+            <li value="1"><a href="../SiteManager/Hardware Profiles.htm" class="MCXref xref">Hardware Profiles</a>
+            </li>
+            <li value="2">Field help: <a href="../../FieldHelp/Profiles/HardwareProfileView.htm" class="MCXref xref">Hardware Profile ID&#160;View</a></li>
+        </ul>
+        <h2>2. Site Service email connection</h2>
+        <p>The site service profile defines how the LS&#160;One works with data that is kept centrally. The Site service also takes care of sending the email receipts which requires connection to the email server. </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li value="1">In the ribbon go to <span class="trace">Sites &gt; Site service category:&#160;Site service &gt; Site service profile &gt;Edit the Site service profile &gt; Open the Connection tab</span></li>
+            <li value="2">Press the <b>Configuration ...</b> button to configure the Site service configuration file.<p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/SiteService/SiteManagerConfigDialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="420" data-mc-height="623" src="../../Resources/Images/SiteManager/SiteService/SiteManagerConfigDialog_thumb_0_300.png" tabindex="" /></a></p><ul><li value="1"><p>Send interval (minutes) needs to be configured as the POS does not send the emails directly but rather queues them to be sent.</p></li><li value="2"><p>Batch size - says how many emails are sent each time the Site service tries to send emails</p></li><li value="3"><p>Maximum attempts: says how many times the Site service tries to send an email before it discards it</p></li></ul></li>
+            <li value="3">Open the <b>SMTP&#160;settings</b> button to configure the email server settings.<p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/SiteService/SMTPSettingsDialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="445" data-mc-height="481" src="../../Resources/Images/SiteManager/SiteService/SMTPSettingsDialog_thumb_0_300.png" tabindex="" /></a></p><ul><li value="1">Enter the server settings, email account name and password</li><li value="2">The display name is the "From" name that is added to the email being sent</li></ul> <![CDATA[ ]]></li>
+            <li value="4">Press the <b>Send test email</b> button to be able to send a test email to check the settings. <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/SiteService/SendTestE-mailMessage.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="400" data-mc-height="222" src="../../Resources/Images/SiteManager/SiteService/SendTestE-mailMessage_thumb_0_150.png" tabindex="" /></a></p><ul><li value="1">Enter a email address to send the test email to and press send. </li></ul></li>
+        </ol>
+        <p>&#160;</p>
+        <p>Find additional information about Site service profile and how to set them up here:</p>
+        <ul>
+            <li value="1"><a href="../SiteManager/StoreSetup/Site Service Profile and Connections Parameters.htm" class="MCXref xref">Site Service Profile</a>
+            </li>
+            <li value="2">Field help:<ul><li value="1"><a href="../../FieldHelp/Profiles/TransactionServiceProfileView.htm" class="MCXref xref">Site Service&#160;Profile View</a></li><li value="2"><a href="../../FieldHelp/Profiles/SiteManagerConfigDialog.htm" class="MCXref xref">Site Service Configuration Dialog</a></li><li value="3"><a href="../../FieldHelp/Profiles/SMTPSettingsDialog.htm" class="MCXref xref">E-mail Settings Dialog</a></li><li value="4"><a href="../../FieldHelp/Profiles/SendTestEMailDialog.htm" class="MCXref xref">Send&#160;Test E-mail Message Dialog</a></li></ul></li>
+        </ul>
+        <h2>3. Site service email settings</h2>
+        <p>In the Site service view additional settings are needed. </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li value="1">Open the Email receipt tab in the Site service profile. </li>
+            <li value="2">Activate the email sending by selecting the email receipts checkbox. </li>
+            <li value="3">Select one of the following options:<ul><li value="1"><b>Never:</b> email receipts will never be sent. </li><li value="2"><b>Always:</b> email receipts will be sent for every sale. The POS requests the user to enter an email address to send to. </li><li value="3"><b>Only to customers:</b> Emails will only be sent to registered customers that have been added to the transaction. </li><li value="4"><b>On request:</b>Emails are sent for the last transaction when a button has been pressed. A button with the operation: <b>Send an email receipt</b> needs to be added to the POS&#160;layout. This operation can define if the email is sent for the last transaction only or if you can search for a receipt. </li></ul></li>
+            <li value="4">Email short hand options can be setup to speed up the email address insert. Buttons with common email address endings will be added to the input form in the POS. For an example: @, .com, @gmail.com and @aol.com<p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/POS/SendEmailReceipt.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="549" src="../../Resources/Images/POS/SendEmailReceipt_thumb_0_300.png" tabindex="" /></a></p></li>
+        </ol>
+        <p>Find additional information about Site service profile and how to set them up here:</p>
+        <ul>
+            <li value="1"><a href="../SiteManager/StoreSetup/Site Service Profile and Connections Parameters.htm" class="MCXref xref">Site Service Profile</a>
+            </li>
+            <li value="2">Field help: <a href="../../FieldHelp/Profiles/TransactionServiceProfileView.htm" class="MCXref xref">Site Service&#160;Profile View</a></li>
+        </ul>
+        <h2>4. Email text and subject</h2>
+        <p>The subject and body of the email that will be sent with the receipt attached can be defined in a form. </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li value="1">To create or edit the email text and subject, in the ribbon go to <span class="trace">Sites &gt;&#160;Form and labels:&#160;Form layouts</span>. </li>
+            <li value="2">The email subject is of type:&#160;<b>Receipt email subject</b>. Create a new form of this type or edit an existing one. <div class="Warning"><img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" /><p class="note">This form can only have one line. if there is an enter (carriage return or line feed) in this text the email will not be sent. </p></div> <![CDATA[ ]]></li>
+            <li value="3">The email text is of type: <b>Receipt email text.</b> Create a new form of this type or edit an existing one. <div class="Note1"><img src="../../Resources/Images/Boxes/Note_24.png" class="Note" /><p class="note">This form can be as many lines as the user wishes and all variables except barcodes and logo can be used. </p></div></li>
+            <li value="4">
+                <p>If these form do not exist in the Form profile (on the Store card) or they are empty then no message is displayed, and the default texts are used.</p>
+            </li>
+        </ol>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">An example of these forms are included in the demo data package and the forms data package. </p>
+        </div>
+        <p>&#160;</p>
+        <p>Find additional information about Form editing:</p>
+        <ul>
+            <li value="1"><a href="../POSSetup/Forms/The Forms.htm" class="MCXref xref">Form Layouts</a>
+            </li>
+            <li value="2">Field help: <a href="../../FieldHelp/Forms/FormView.htm">List of all available variables.</a></li>
+        </ul>
+        <h2>5. Email attachment profile</h2>
+        <p>The Email attachment profile tells the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> which receipts should be sent as attachments. If the same profile is selected for both Form profile and Email attachment profile then all receipts including store's copy of credit card receipts and etc will be sent as attachments. To limit the receipts being sent to for example only the "Customers receipt" and perhaps the Gift card receipt then a new profile with only those two forms needs to be created and set as the Email attachment profile.</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li value="1">To add the forms to a form profile, in the ribbon <span class="trace">go to Sites&#160;&gt; Forms and labels: Form profiles</span>. </li>
+            <li value="2">Select an existing profile to add the emailing forms to or create a new profile</li>
+            <li value="3">Then add the receipts that should be sent as attachments to the profile. </li>
+            <li value="4">When the profile is ready select the profile on the Store. Go to:&#160;<span class="trace">Sites &gt;&#160;Stores &gt; Open the store to edit &gt; Open the Form settings tab</span></li>
+            <li value="5">In the Email attachment profile field select the form profile. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>Find additional information about Form profiles:</p>
+        <ul>
+            <li value="1"><a href="../POSSetup/Forms/Form profiles.htm" class="MCXref xref">Form profiles</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Inserted:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">19<span class="sup">th</span> January 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2017</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

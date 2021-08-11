@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Customers and Loyalty">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Loyalty on the POS</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/CustomersLoyalty/Loyalty on the POS.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Loyalty on the POS</h1>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1">The POS calculates the loyalty points and shows them in the totals section of the receipt.</li>
+            <li style="list-style-type: disc;" value="2">Points can be used as discount or tender.</li>
+            <li style="list-style-type: disc;" value="3">To accrue points on the POS, either swipe the loyalty card or use the Loyalty Request button on the POS and enter the loyalty number in the dialog.</li>
+            <li value="4">To spend points as a discount, use the Loyalty Discount operation on the POS and either swipe or enter the loyalty card number</li>
+            <li style="list-style-type: disc;" value="5">To spend points on the POS, use the Pay Loyalty operation on the POS and then swipe or enter the loyalty number.</li>
+        </ul>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">To spend points you must either use the Pay Loyalty or Loyalty points discount operations on the POS. If a loyalty card has already been swiped into the POS that card will be displayed by default in the payment and discount dialog.</p>
+        </div>
+        <p>&#160;</p>
+        <p>There are three loyalty operations available on the POS:</p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Spend points: </a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p><b>Pay loyalty</b> – with parameter Loyalty Card Payment (see  <a href="Loyalty Scheme Rules.htm">Loyalty Scheme Rules</a>) allows a customer to use their loyalty card to pay with loyalty points earned. This can be used as a tender or as a discount depending on your local setup. This is done on the POS with the loyalty card payment parameter on a button. </p>
+                <p>
+                    <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/03000007_13x13.png" style="left: 0;text-align: left;z-index: 6;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 0;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 0;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;margin-left: 0;width: 13;height: 13;" /> If the amount buttons on the payment dialog should be limited to f.ex. 1 then Minimum allowed payment on the tender type needs to be set this is done in the <a href="../../FieldHelp/Store/StoreTenderView.htm">Payment Type View</a> for the loyalty payment type on the store. </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/LoyaltyPayment_681x328.png" style="width: 681;height: 328;" />
+                </p>
+                <ul>
+                    <li value="1">When all items are added to the transaction, select the Pay Loyalty operation.</li>
+                    <li value="2">Enter the loyalty card number or scan the card.</li>
+                    <li value="3">The points are added to the transaction as tender and depending on the scheme rules, the points will work as tender or discount.</li>
+                    <li value="4">The receipt shows loyalty points spent and remaining.</li>
+                </ul>
+                <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/image3.png" class="imgright" />
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <p><b>Loyalty Points Discount</b> - is an operation that can be used to spend points to lower the price you pay. The value of the spent points is calculated as a discount distributed on the items on the reciept.</p>
+                <p>&#160;</p>
+                <p>  <![CDATA[ ]]></p>
+                <p>&#160;</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Accrue points: </a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p><b>Loyalty Request</b> is an operation on the POS to add a loyalty card that has a customer assigned to it already to the transaction. This must be done before payment for the points accrued to be calculated. </p>
+                <ul>
+                    <li value="1">At any point before payment, swipe the loyalty card or use the Loyalty Request operation to the transaction. <br /><img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/LoyaltyRequest_660x254.png" style="width: 660;height: 254;" /></li>
+                    <li value="2">The message: “Loyalty record added to the transaction” is displayed in the message area as well as the customer details. <br /><img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/03000009_332x133.png" style="visibility: visible;width: 332;height: 133;" /></li>
+                    <li value="3">The loyalty points accrued will be shown on the receipt.</li>
+                    <li value="4">Only one loyalty request can be added to a transaction, if another is added, the message “Do you want to overwrite the loyalty record” will appear. Select OK to change the loyalty request and No to cancel.<br /><img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/0300000A_369x152.png" style="visibility: visible;width: 369;height: 152;" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Issue Loyalty Card: </a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p><b>Add Customer to Loyalty Card</b> is an operation on the POS to add a customer to a loyalty card. </p>
+                <p>Before a loyalty card can be used on the POS you need to have a customer and a loyalty card ready:</p>
+                <ul>
+                    <li value="1">If the customer is new use the operation: “Customer add” on the POS or <span class="trace">Retail &gt; Customers &gt; New customer</span> on the Site Manager. </li>
+                    <li value="2">The loyalty card has to have been made on the Site Manager with no customer. (See <a href="New Loyalty Cards.htm">New Loyalty Card(s)</a>)</li>
+                </ul>
+                <p>To connect the customer to the loyalty card </p>
+                <ul>
+                    <li value="1">Run the operation by pressing a button that triggers the Add Customer to Loyalty Card operation</li>
+                    <li value="2">Enter the loyalty card number and use the customer search button to look up the customer in the database. <br /><img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/AddCustomerToLoyaltyCard_571x391.png" style="width: 571;height: 391;" /><br /><br /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Point status: </a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p><b>Loyalty card information</b>  is an operation to display information about the point balance of the loyalty card, who owns the card and which loyalty scheme the card is a part of.  </p>
+                <p style="text-align: center;">
+                    <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/LoyaltyCardInformation_568x390.png" style="width: 568;height: 390;" />
+                </p>
+                <p style="text-align: center;">&#160;</p>
+            </div>
+        </div>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="View Loyalty Cards.htm">Loyalty Cards</a>
+            </li>
+            <li value="2"><a href="Loyalty Schemes.htm">Loyalty Schemes</a>
+            </li>
+            <li value="3"><a href="View Loyalty Transactions.htm">Loyalty Transactions</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Reviewed:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">25<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

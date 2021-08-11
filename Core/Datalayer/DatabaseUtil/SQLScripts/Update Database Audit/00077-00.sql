@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: 
+	Responsible		: Sigfus Johannesson
+	Sprint			: 
+	Date created	: 12.08.13
+
+	Description		: Removed settings from Kitchen Functional Profile
+*/
+
+USE LSPOSNET_Audit
+GO
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'KITCHENDISPLAYFUNCTIONALPROFILELog' AND COLUMN_NAME = 'ONVOID')
+BEGIN
+	ALTER TABLE KITCHENDISPLAYFUNCTIONALPROFILELog DROP COLUMN ONVOID
+END
+GO

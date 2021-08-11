@@ -1,0 +1,1088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6DEDE96-E635-4798-84E6-C4449D1813AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.DataLayer.DatabaseUtil</RootNamespace>
+    <AssemblyName>LSOne.DataLayer.DatabaseUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\LSOne.DataLayer.DatabaseUtil.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DatabaseUtil.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Embedded Install\InstallSQL2017Express.cs" />
+    <Compile Include="Embedded Install\SQLMisc\DatabaseInfo.cs" />
+    <Compile Include="Embedded Install\SQLMisc\Detecting64bit.cs" />
+    <Compile Include="Embedded Install\SQLMisc\TableInfo.cs" />
+    <Compile Include="Embedded Install\SQLParams\SQL2017Params.cs" />
+    <Compile Include="Embedded Install\SQLParams\SQLParams.cs" />
+    <Compile Include="Embedded Install\InstallSQLExpress.cs" />
+    <Compile Include="Embedded Install\SQLMisc\SQLExpressInfo.cs" />
+    <Compile Include="Enums\DatabaseType.cs" />
+    <Compile Include="Enums\RunScripts.cs" />
+    <Compile Include="Enums\SQLInstall.cs" />
+    <Compile Include="Enums\SQLServerType.cs" />
+    <Compile Include="Enums\UtilityResult.cs" />
+    <Compile Include="Enums\VersionType.cs" />
+    <Compile Include="Exceptions\ConnectionException.cs" />
+    <Compile Include="Exceptions\DataAreaIdNotValidException.cs" />
+    <Compile Include="Exceptions\DatabaseNotExistsException.cs" />
+    <Compile Include="Exceptions\DatabaseUtilityExceptions.cs" />
+    <Compile Include="Exceptions\RunScriptException.cs" />
+    <Compile Include="Exceptions\SQLServerNotFoundException.cs" />
+    <Compile Include="Embedded Install\SQLMisc\SQLDetection.cs" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00144-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01000-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00895-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00859-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00841-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00799-00.sql" />
+    <EmbeddedResource Include="ImportData\SystemData\002-00 - DefaultFormProfile.sql" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptInformation\ScriptInfo.cs" />
+    <Compile Include="ScriptInformation\UpdateDatabaseProgressInfo.cs" />
+    <Compile Include="ScriptInformation\UpdateVersion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00001-SC Logic.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00406-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00407-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00429-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00430-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00463-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00493-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00494-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00611-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00612-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00614-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00001-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Create Admin\00001-SC-Create Administrator Script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Create Database\00001-POS-CreateDatabaseTables.sql" />
+    <EmbeddedResource Include="SQLScripts\Language Texts\00001-POS-CreateLanguageTexts.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00005-POS Stored Procs.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00002-00.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Logic Scripts Audit\00001-SC Audit Logic.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Users\DataDir.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00003-SC Permissions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Create Database Audit\00001-SC-CreateAuditDatabaseTables.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00003-00.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00001-00.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Create Database\00002-POS-CreateOperations.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00154-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01106-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00153-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01105-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01104-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01103-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00152-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01102-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01101-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01100-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01099-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01097-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01098-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00151-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01096-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01095-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01094-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01093-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01092-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01091-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2021\01090-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01058-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01057-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01056-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00150-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01054-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01055-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00149-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01053-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01051-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01052-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020.1\01050-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00148-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01015-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00147-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01013-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01014-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00896-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01012-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00146-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01011-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00145-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01009-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01010-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01008-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01007-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01005-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01006-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01004-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01003-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01002-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2020\01001-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00950-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00948-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00949-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00946-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00945-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00947-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00944-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00943-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00942-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00940-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00941-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00143-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00939-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00141-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00937-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00142-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00938-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00936-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00935-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00934-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00933-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00140-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00932-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00139-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00931-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00930-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00928-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00137-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00927-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00138-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00929-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00136-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00926-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00925-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00135-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00894-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00920-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00921-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00922-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00923-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019.1\00924-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00893-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00890-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00891-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00892-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00134-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00133-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00132-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00861-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00860-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00858-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00857-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00856-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00855-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00852-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00853-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00854-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00851-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00804-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00130-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00850-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00129-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00848-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00008-Inventory Stored Procs.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00849-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00803-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00847-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00846-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00128-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00845-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00844-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00843-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00127-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00842-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00840-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00839-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00838-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00837-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00802-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00836-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00835-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00126-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00834-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00125-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00800-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00833-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00832-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00831-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00830-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00829-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00828-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00124-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00827-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00826-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00825-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00824-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00823-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00822-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00821-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00798-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00797-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00796-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2019\00820-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00795-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00794-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00793-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00792-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00791-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00790-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00789-00.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\LS Commerce data.xml" />
+    <Content Include="ImportData\DefaultData\Mobile inventory data.xml" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00788-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00787-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00786-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00784-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00785-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00122-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00123-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00783-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00782-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00121-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00781-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00780-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00779-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00778-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00120-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00777-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00119-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00776-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.2\00775-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00757-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10007-SC Permission Localize %28ru%29.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00118-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00756-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00755-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00117-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00754-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00753-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00752-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00116-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00751-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00115-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00750-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00749-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00114-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00748-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00747-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00746-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00745-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00744-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00743-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00742-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00741-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00740-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00739-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00738-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00113-00.sql" />
+    <EmbeddedResource Include="ImportData\SystemData\001-01 - SystemStyles.sql" />
+    <EmbeddedResource Include="ImportData\SystemData\002-01 - DefaultFormProfile.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00737-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00736-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00112-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00735-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00734-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00733-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00732-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00731-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00730-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017.1\00729-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00728-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00727-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00726-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00725-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00111-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00724-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00723-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00722-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00721-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00720-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00719-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00718-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00717-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00716-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00715-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00110-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00714-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00713-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00712-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00711-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00109-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00710-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00709-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00708-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00707-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00706-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00704-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00705-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00703-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00108-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00702-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00701-00.sql" />
+    <EmbeddedResource Include="ImportData\SystemData\001-00 - SystemStyles.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2017\00700-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00673-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10006-SC Permission Localize %28nl-BE%29.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10005-SC Permission Localize %28fr%29.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00107-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00672-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00671-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00670-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00669-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00668-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00667-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00106-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00666-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00665-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00105-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00664-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00663-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00662-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00661-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00104-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016.1\00660-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00659-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00103-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00102-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00658-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00657-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00101-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00656-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00100-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00655-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00654-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00653-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00099-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00652-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00651-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2016\00650-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00617-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10004-SC Permission Localize %28de%29.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\Template Demo data.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\DefaultData\Report data System reports.xml" />
+    <EmbeddedResource Include="ImportData\DefaultData\Hospitalty Data.xml" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00616-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00098-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00615-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00613-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00011-JscFieldDesigns.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00012-JscLinkedTables.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00013-JscLinkedFilters.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00014-JscSubJobFromTableFilters.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00610-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00010-SiteServiceProfile.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00097-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00609-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00008-TableDesign.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00009-RBOParameters.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00608-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00607-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts Back Office\00003-SC-Create CloudAdministrator Script.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts Back Office\00002-SC-Create CloudProcedures.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00606-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00605-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00096-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00604-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts Back Office\00001-JobTriggers.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00005-JobSubJobs.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00003-Jobs.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00006-Info.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00007-DatabaseDrivers.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00001-DatabaseDesigns.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00002-Locations.sql" />
+    <EmbeddedResource Include="SQLScripts\Cloud Scripts\00004-Subjobs.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00602-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00603-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00538-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00539-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00540-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00530-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00532-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00534-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00535-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00536-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00537-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00520-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00550-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00549-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00548-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00095-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00547-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00094-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00546-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00542-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00543-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00544-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00545-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00093-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00092-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00541-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00091-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00089-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00090-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00515-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00518-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00528-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00527-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00521-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00522-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00524-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00601-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00525-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00480-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2015\00600-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00519-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00517-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00516-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00514-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00513-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00512-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00511-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00510-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00411-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00379-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00371-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00352-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00351-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00348-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00349-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00350-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00347-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00346-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00345-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00344-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00343-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00342-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00341-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00340-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00339-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00338-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00337-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00336-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00335-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00334-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00333-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00332-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00331-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00330-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00304-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00303-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00302-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00301-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00300-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00297-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00298-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00299-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00296-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00295-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00294-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00293-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00292-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00291-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00290-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00289-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00288-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00287-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00286-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00285-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00284-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00283-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00282-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00281-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00280-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00279-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00278-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00277-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00276-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00275-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00274-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00273-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00272-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00271-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00270-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00268-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00267-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00266-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00265-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00264-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00263-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00262-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00261-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00260-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00259-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00258-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00257-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00256-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00255-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00254-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00253-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00252-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00251-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00250-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00249-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00247-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00246-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2013\00244-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00243-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00239-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00240-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00241-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00242-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00238-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00237-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00236-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00235-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00234-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00233-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00222-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00232-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00231-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00230-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00229-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00228-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00227-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00226-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00225-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00224-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00223-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00221-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00220-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00219-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00218-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00217-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00215-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00214-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00213-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00212-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00211-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00210-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00209-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00208-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00207-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00205-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00206-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00204-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00203-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00202-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00201-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012.1\00200-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00185-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00184-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00183-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00182-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00179-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00180-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00181-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00178-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00177-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00176-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00175-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00174-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00173-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00172-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00171-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00170-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00169-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00168-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00167-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00166-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00165-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00164-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00163-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00162-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00161-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00160-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00159-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00158-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00157-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00156-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00155-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00154-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00153-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00152-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00151-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2012\00150-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00117-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00116-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00115-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00114-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00113-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00112-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00111-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00110-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00109-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00108-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00107-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00106-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00104-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00105-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00103-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00102-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00101-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00100-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00099-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00098-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00097-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00096-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00095-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00092-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00091-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00090-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00089-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00087-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00088-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00086-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00085-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00084-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00083-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00082-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00080-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00081-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00079-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00078-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00077-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00076-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00075-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00074-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00073-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00072-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00071-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00070-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00069-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00068-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00067-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00066-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00065-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00064-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00063-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00062-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00061-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00060-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00059-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00058-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00057-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00056-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00055-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00054-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Users\Audit_DataDir.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00052-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00050-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00051-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00053-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00049-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00048-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00047-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00046-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00045-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00014-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00015-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00044-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00043-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00042-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00041-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00040-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00039-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00038-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00037-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00035-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00036-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00034-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00033-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00032-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00010-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00031-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00008-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Create Database\00003-POS-CreatePosisErrors.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00009-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00011-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00012-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00013-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00016-00.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\Touch button layout.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\DefaultData\Currency data.xml" />
+    <EmbeddedResource Include="ImportData\DefaultData\Profiles data.xml" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00017-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00018-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00019-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00020-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00021-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00022-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00023-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00024-00.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\Bar code data.xml" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1\00093-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00025-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00026-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.1.1\00094-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00027-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00028-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00029-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00030-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00031-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00118-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00119-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2\00120-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00032-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00033-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00034-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2.1\00121-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00035-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00036-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2.1\00122-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2.1\00123-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00037-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00006-Partner SC Permissions.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00007-Partner SC Permission Localize.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00038-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00039-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00040-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00041-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00042-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00043-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10001-SC Permission Localize %28is%29.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10002-SC Permission Localize %28sv%29.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\10003-SC Permission Localize %28es%29.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\Demo data.xml" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00044-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00045-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Logic Scripts\00002-SC Lookup values.sql" />
+    <EmbeddedResource Include="ImportData\DefaultData\Replication data.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00046-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00047-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00048-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00049-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00050-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00051-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00052-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00053-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00054-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00055-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00056-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00057-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00058-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00059-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00060-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00061-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00062-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00063-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00064-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00065-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00066-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00067-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00068-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00069-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00070-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00071-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00072-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00353-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00354-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00355-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00073-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00356-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00357-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00358-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00359-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00074-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00075-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00360-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00361-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00362-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00363-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00364-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00365-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00367-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00368-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00369-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00370-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00373-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00374-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00375-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00376-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00387-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00378-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00380-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00381-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00076-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00077-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00079-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00080-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00081-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00082-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00083-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00084-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00085-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00383-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00384-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00385-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00386-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00388-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.1\00389-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00401-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00402-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00403-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00404-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00405-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00408-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00409-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00410-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00412-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00413-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00414-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00415-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00416-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00417-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00418-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00419-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00420-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00421-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00422-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00424-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00423-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00425-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00426-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00427-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00428-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00431-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00433-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00432-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00434-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00435-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00436-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00437-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00438-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00439-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00440-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00441-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00442-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00460-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00461-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00462-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00464-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2013.2\00400-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00465-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00466-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00467-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00468-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00469-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00470-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00471-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00472-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00473-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00474-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00475-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00086-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00476-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00477-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00478-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00479-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00482-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00481-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00483-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00484-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00485-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00486-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00487-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00488-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00489-00 .sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00490-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00491-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00492-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00087-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00495-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00496-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00497-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00498-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00499-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00088-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00500-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00501-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00502-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00504-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00503-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00505-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00506-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00509-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00508-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS One 2014\00507-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00011-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00029-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00030-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00004-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00005-00.sql" />
+    <Content Include="DatabaseUtil.shfbproj" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00006-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00007-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00008-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00009-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00010-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00002-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00003-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00012-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00013-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00014-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00015-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00016-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00004-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00017-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00005-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00018-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00006-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00007-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00019-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00020-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00021-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00022-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00023-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00024-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00025-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00026-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00027-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011\00028-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database\LS Retail .NET 2011.2.1\00124-00.sql" />
+    <EmbeddedResource Include="SQLScripts\Update Database Audit\00131-00.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Help\Database Utility Help.chm" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenericConnector\GenericConnector.csproj">
+      <Project>{fde0c333-8073-4774-a412-add8cccf805c}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQLScripts\Template\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SM\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SiteService\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

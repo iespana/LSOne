@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Customers and Loyalty|Loyalty Schemes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Loyalty Scheme Rules</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/CustomersLoyalty/Loyalty Scheme Rules.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1><a name="_Ref357790368"></a><a name="_Toc358125337"></a>Loyalty Scheme Rules</h1>
+        <p>When a line in the Loyalty scheme view’s upper pane is selected, its loyalty scheme’s rules are displayed in the lower pane. The loyalty scheme can have many different rules, and are ordered in a hierarchy in the system, so when accruing points only one of the rules will work for each sales line of the transaction.  Double-click on a line to edit it (or highlight it and select edit button) or select the add button to create a new loyalty scheme rule. These both open the Loyalty scheme rule dialog.</p>
+        <p>Loyalty scheme rule dialog:</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/CustomerLoyalty/LoyaltySchemeRuleDialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="447" data-mc-height="367" src="../../Resources/Images/SiteManager/CustomerLoyalty/LoyaltySchemeRuleDialog_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p><a name="kanchor237"></a>In this dialog the rule is set to an item, so the customer will accrue points when they purchase the ACE Dishwasher. The quantity of the item needed to accrue 600 loyalty points is 1. </p>
+        <h2><a name="_Ref357794431"></a><a name="_Toc358125338"></a>Hierarchy and Calculation Type</h2>
+        <p>The calculation type can be any of the following:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1">Item</li>
+            <li style="list-style-type: disc;" value="2">Retail group</li>
+            <li style="list-style-type: disc;" value="3">Retail department</li>
+            <li style="list-style-type: disc;" value="4">Tender</li>
+        </ul>
+        <p>This is also the order of the hierarchy that the system uses to calculate when an item accrues points. If the dishwasher has a loyalty scheme rule on the item, and on the retail group that it belongs to, the system will use the item rule. </p>
+        <h2><a name="_Toc358125339"></a>Quantity/Amount</h2>
+        <p>Tender is used for the multiplier type “Amount”. This means that the loyalty points are calculated based on the amount spent in a transaction. For example, if $20 are spent (Quantity/Amount field), the customer gains 2 points (Loyalty points field).</p>
+        <h2><a name="_Toc358125340"></a>Spending – Loyalty Card Payment</h2>
+        <p>Tender can also be used with Type relation: Loyalty Card Payment if the card can be used to spend points in a transaction. In the image below, the loyalty scheme rule on the left is being used to accrue points, and the loyalty scheme rule on the right is being used to spend points. Both of these can be added to a loyalty scheme. </p>
+        <p>
+            <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/03000007_17x17.png" style="z-index: 1;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 0;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 0;mso-position-horizontal: absolute;mso-position-horizontal-relative: text;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;margin-left: 0;width: 17;height: 17;" />The card type must be set to Card tender or Contact tender for “Loyalty Card Payment” to work on the POS. This can be seen and edited in the Loyalty Cards view (Retail &gt; Loyalty &gt; Loyalty Cards).</p>
+        <p>Accruing or Spending Loyalty Points with Loyalty Scheme Rules:</p>
+        <p>
+            <img src="../../Resources/Images/Loyalty User Guide - LS One 2013.1/03000014_627x255.png" style="visibility: visible;mso-wrap-style: square;width: 627;height: 255;" />
+        </p>
+        <table>
+            <col style="width: 313px;" />
+            <col style="width: 313px;" />
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">Accrue</td>
+                    <td style="text-align: center;">Spend</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">1. Accrue 100 loyalty points per $10 cash spent&#160;</td>
+                    <td style="text-align: left;">2. Use 100 loyalty points to spend $1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>(!) symbol</b>: hover mouse over this symbol to see the message: “Rules that have tender with the action Pay Loyalty will convert the point value to a negative value in the POS calculations when they are used for payment.” </p>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="Loyalty Schemes.htm">Loyalty Schemes</a>
+            </li>
+            <li value="2"><a href="../../FieldHelp/CustomerLoyalty/LoyaltySchemeRuleDialog.htm">Loyalty Scheme Rule Dialog</a>
+            </li>
+            <li value="3"><a href="../../FieldHelp/CustomerLoyalty/LoyaltySchemesView.htm">Loyalty Schemes View</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">25<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

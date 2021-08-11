@@ -1,0 +1,1050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A7C4BEE-37C2-4DCE-84D3-6A3408850F39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.BarCodes</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.BarCodes</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.BarCodes.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeCode128.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeCode39.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeEAN128.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeEAN13.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeEAN8.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeEAN_UPC.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeITF.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeMaxicode.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodePDF417.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarCodeType.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeUPCA.cs" />
+    <Compile Include="Datalayer\DataEntities\BarCodeTypes\BarcodeUPCE.cs" />
+    <Compile Include="DialogPages\NewRetailItemBarCodePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemBarCodePage.Designer.cs">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeDialog.designer.cs">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeMaskDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeMaskDialog.designer.cs">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeMaskSegmentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BarCodeMaskSegmentDialog.designer.cs">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewBarcodeSetupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewBarcodeSetupDialog.designer.cs">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewBarCodesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewBarCodesPage.designer.cs">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BarCodeSetupDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BarCodeSetupDataView.designer.cs">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BarCodeSetupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BarCodeSetupView.designer.cs">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BarCodeMaskSetupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BarCodeMaskSetupView.designer.cs">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.bg.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.cs.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.da.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.de.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.el.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.es.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.fi.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.fr.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.hi.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.is.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.it.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.ja.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.ko.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.nb-NO.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.nl.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.pl.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.pt-BR.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BarCodeDialog.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.ru.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.sv.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.zh-CHS.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.zh-CHT.resx">
+      <DependentUpon>BarCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.bg.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.cs.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.da.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.de.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.el.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.es.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.fi.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.fr.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.hi.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.is.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.it.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.ja.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.ko.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.nb-NO.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.nl.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.pl.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.pt-BR.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BarCodeMaskDialog.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.ru.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.sv.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.zh-CHS.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.zh-CHT.resx">
+      <DependentUpon>BarCodeMaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.bg.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.cs.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.da.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.de.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.el.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.es.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.fi.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.fr.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.hi.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.is.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.it.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.ja.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.ko.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.nb-NO.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.nl.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.pl.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.pt-BR.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BarCodeMaskSegmentDialog.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.ru.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.sv.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.zh-CHS.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.zh-CHT.resx">
+      <DependentUpon>BarCodeMaskSegmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.bg.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.cs.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.da.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.de.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.el.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.es.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.fi.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.fr.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.hi.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.is.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.it.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.ja.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.ko.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.nb-NO.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.nl.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.pl.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.pt-BR.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewBarcodeSetupDialog.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.ru.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.sv.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.zh-CHS.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.zh-CHT.resx">
+      <DependentUpon>NewBarcodeSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.bg.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.cs.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.da.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.de.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.el.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.es.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.fi.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.fr.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.hi.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.is.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.it.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.ja.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.ko.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.nb-NO.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.nl.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewbarcodespage.pl.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.pt-BR.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.ru.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.sv.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.zh-CHS.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.zh-CHT.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.bg.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.cs.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.da.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.de.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.el.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.es.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.fi.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.fr.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.hi.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.is.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.it.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.ja.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.ko.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.nb-NO.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.nl.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodemasksetupview.pl.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.pt-BR.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.ru.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.sv.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.zh-CHS.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.zh-CHT.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.bg.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.cs.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.da.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.de.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.el.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.es.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.fi.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.fr.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.hi.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.is.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.it.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.ja.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.ko.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.nb-NO.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.nl.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupdataview.pl.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.pt-BR.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.ru.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.sv.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.zh-CHS.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.zh-CHT.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.bg.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.cs.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.da.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.de.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.el.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.es.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.fi.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.fr.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.hi.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.is.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.it.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.ja.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.ko.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.nb-NO.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.nl.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\barcodesetupview.pl.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.pt-BR.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.ru.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.sv.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.zh-CHS.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.zh-CHT.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Diagrams\Data Model.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarcodeEditImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarcodeImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDownImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowUpImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarcodeImage24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\barcodedialog.en-ZA.resx">
+      <DependentUpon>barcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.es-MX.resx">
+      <DependentUpon>barcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.it-IT.resx">
+      <DependentUpon>barcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.en-ZA.resx">
+      <DependentUpon>barcodemaskdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.es-MX.resx">
+      <DependentUpon>barcodemaskdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.it-IT.resx">
+      <DependentUpon>barcodemaskdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.en-ZA.resx">
+      <DependentUpon>barcodemasksegmentdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.es-MX.resx">
+      <DependentUpon>barcodemasksegmentdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.it-IT.resx">
+      <DependentUpon>barcodemasksegmentdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.en-ZA.resx">
+      <DependentUpon>newbarcodesetupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.es-MX.resx">
+      <DependentUpon>newbarcodesetupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.it-IT.resx">
+      <DependentUpon>newbarcodesetupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.en-ZA.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.es-MX.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.it-IT.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.en-ZA.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.es-MX.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.it-IT.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.en-ZA.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.es-MX.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.it-IT.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.en-ZA.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.es-MX.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.it-IT.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\barcodedialog.nl-BE.resx">
+      <DependentUpon>barcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.nl-BE.resx">
+      <DependentUpon>barcodemaskdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.nl-BE.resx">
+      <DependentUpon>barcodemasksegmentdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.nl-BE.resx">
+      <DependentUpon>newbarcodesetupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.nl-BE.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.nl-BE.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.nl-BE.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.nl-BE.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.bg.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.cs.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.da.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.de.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.el.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.en-ZA.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.es-MX.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.es.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.fi.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.fr.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.hi.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.is.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.it-IT.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.it.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.ja.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.ko.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.nb-NO.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.nl-BE.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.nl.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.pl.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.pt-BR.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.ru.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.sv.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcodes_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcodes_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info codes_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemBarCodePage.vi-VN.resx">
+      <DependentUpon>NewRetailItemBarCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodedialog.vi-VN.resx">
+      <DependentUpon>barcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemaskdialog.vi-VN.resx">
+      <DependentUpon>barcodemaskdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\barcodemasksegmentdialog.vi-VN.resx">
+      <DependentUpon>barcodemasksegmentdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newbarcodesetupdialog.vi-VN.resx">
+      <DependentUpon>newbarcodesetupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewBarCodesPage.vi-VN.resx">
+      <DependentUpon>ItemViewBarCodesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeMaskSetupView.vi-VN.resx">
+      <DependentUpon>BarCodeMaskSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupDataView.vi-VN.resx">
+      <DependentUpon>BarCodeSetupDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BarCodeSetupView.vi-VN.resx">
+      <DependentUpon>BarCodeSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

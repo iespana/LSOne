@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C10F72E0-0DB9-4953-9144-D99A347A1BBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.LabelPrinting</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.LabelPrinting</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\LabelPrintingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LabelPrintingDialog.Designer.cs">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewLabelTemplateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewLabelTemplateDialog.designer.cs">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\LabelTemplatePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\LabelTemplatePage.Designer.cs">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LabelTemplatesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LabelTemplatesView.Designer.cs">
+      <DependentUpon>LabelTemplatesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LabelTemplateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LabelTemplateView.Designer.cs">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.bg.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.cs.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.da.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.de.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.el.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.en-ZA.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.es-MX.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.es.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.fi.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.fr.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.hi.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.is.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.it.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.ja.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.ko.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.nb-NO.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.nl.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.pl.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.pt-BR.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.ru.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.sv.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.zh-CHS.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.zh-CHT.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.bg.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.cs.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.da.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.de.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.el.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.en-ZA.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.es-MX.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.es.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.fi.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.fr.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.hi.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.is.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.it.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.ja.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.ko.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.nb-NO.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.nl.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.pl.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.pt-BR.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.ru.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.sv.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.zh-CHS.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.zh-CHT.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.bg.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.cs.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.da.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.de.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.el.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.en-ZA.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.es-MX.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.es.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.fi.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.fr.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.hi.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.is.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.it.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.ja.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.ko.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.nb-NO.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.nl.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.pl.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.pt-BR.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.ru.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.sv.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.zh-CHS.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.zh-CHT.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.bg.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.cs.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.da.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.de.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.el.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.en-ZA.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.es-MX.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.es.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.fi.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.fr.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.hi.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.is.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.it.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.ja.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.ko.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.nb-NO.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.nl.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.pl.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.pt-BR.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.ru.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.sv.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.zh-CHS.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.zh-CHT.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Label.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\FormsImage.png" />
+    <None Include="Resources\label templates_32.png" />
+    <None Include="Resources\label templates_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.ja-JP.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.ja-JP.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.ja-JP.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.ja-JP.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.nl-BE.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.nl-BE.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.nl-BE.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.nl-BE.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.it-IT.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.it-IT.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.it-IT.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.it-IT.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LabelPrintingDialog.vi-VN.resx">
+      <DependentUpon>LabelPrintingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewLabelTemplateDialog.vi-VN.resx">
+      <DependentUpon>NewLabelTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\LabelTemplatePage.vi-VN.resx">
+      <DependentUpon>LabelTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LabelTemplateView.vi-VN.resx">
+      <DependentUpon>LabelTemplateView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

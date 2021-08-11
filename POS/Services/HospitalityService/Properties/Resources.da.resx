@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Date" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Ordrenummer:</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Ordrenummer:</value>
+  </data>
+  <data name="AmountSelectedIsLargerThenTotal" xml:space="preserve">
+    <value>Det valgte beløb er højere end det samlede antal varer. Varerne kan ikke deles op</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Ledig</value>
+  </data>
+  <data name="AvailableMenuTypes" xml:space="preserve">
+    <value>Tilgængelige menutyper</value>
+  </data>
+  <data name="Bumped" xml:space="preserve">
+    <value>Færdiggjort</value>
+  </data>
+  <data name="CannotLoadHospitality" xml:space="preserve">
+    <value>Kan ikke indlæse restaurant</value>
+  </data>
+  <data name="ChangedItem" xml:space="preserve">
+    <value>ÆNDRET</value>
+  </data>
+  <data name="CombineExistingSplitPartQuestion" xml:space="preserve">
+    <value>Vil du kombinere %1 med den eksisterende del af gæst %2</value>
+  </data>
+  <data name="CombineLinesQuestion" xml:space="preserve">
+    <value>Vil du kombinere disse linjer med de eksisterende dele af gæst %1</value>
+  </data>
+  <data name="ConfirmChangingUserOnTable" xml:space="preserve">
+    <value>Vil du udskifte tjeneren ved dette bord fra #1 til #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableSplitBill" xml:space="preserve">
+    <value>Vil du udskifte tjeneren for de delte betalinger fra #1 til #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableTransferTable" xml:space="preserve">
+    <value>Vil du ændre tjeneren for det overførte bord fra #1 til #2?</value>
+  </data>
+  <data name="ErrorConnectingToSiteService" xml:space="preserve">
+    <value>Fejl ved oprettelse af forbindelse til Site Service. Applikationen kan ikke vise bordfordelingen i restauranten og vil blive lukket.</value>
+  </data>
+  <data name="ErrorTransferingBetweenTables" xml:space="preserve">
+    <value>Fejl ved overførsel mellem borde.</value>
+  </data>
+  <data name="FromTable" xml:space="preserve">
+    <value>Fra tabel</value>
+  </data>
+  <data name="GuestsSeated" xml:space="preserve">
+    <value>Gæster ved bordet</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Varer</value>
+  </data>
+  <data name="KitchenPrinterSlip" xml:space="preserve">
+    <value>Køkkenprinterkvittering</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Låst</value>
+  </data>
+  <data name="MaximumNoOfGuestsExceeded" xml:space="preserve">
+    <value>Det maksimale antal gæster, der kan vælges, er #1</value>
+  </data>
+  <data name="MenuTypes" xml:space="preserve">
+    <value>Menutyper</value>
+  </data>
+  <data name="MustBeHospitalityType" xml:space="preserve">
+    <value>Der skal være mindst én tilgængelig restauranttype</value>
+  </data>
+  <data name="NoHospitalityTypesFound" xml:space="preserve">
+    <value>Ingen restauranttyper fundet</value>
+  </data>
+  <data name="NoItemsOnThisTableToTransfer" xml:space="preserve">
+    <value>Der er ingen varer at overføre på dette bord</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>Ingen varer valgt</value>
+  </data>
+  <data name="NoItemsToPrint" xml:space="preserve">
+    <value>Der er ingen varer at udskrive</value>
+  </data>
+  <data name="NoMenuTypes" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="NoOfGuests" xml:space="preserve">
+    <value>Antal gæster</value>
+  </data>
+  <data name="NoSiteServiceProfileForHospitality" xml:space="preserve">
+    <value>Der er ikke konfigureret en Site Service-profil for restauranten. Applikationen kan ikke vise bordfordelingen i restauranten og vil blive lukket.</value>
+  </data>
+  <data name="NoSplitsAllowed" xml:space="preserve">
+    <value>Deling ikke tilladt.</value>
+  </data>
+  <data name="NoTransactionAailableOnTable" xml:space="preserve">
+    <value>Ingen transaktion tilgængelig for dette bord.</value>
+  </data>
+  <data name="NotServed" xml:space="preserve">
+    <value>Ikke betjent</value>
+  </data>
+  <data name="OnlyAllowedInHospitalityMode" xml:space="preserve">
+    <value>Denne handling er kun tilladt i restauranttilstand.</value>
+  </data>
+  <data name="OperationCannotApplyToGuestGrid" xml:space="preserve">
+    <value>Handlingen kan ikke anvendes for gæst</value>
+  </data>
+  <data name="OperationNotImplemented" xml:space="preserve">
+    <value>Handlingen er ikke blevet implementeret</value>
+  </data>
+  <data name="OperationOnlyValidForRetailTransaction" xml:space="preserve">
+    <value>Denne handling er kun gyldig i forbindelse med en salgstransaktion</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Operatør</value>
+  </data>
+  <data name="OrderConfirmed" xml:space="preserve">
+    <value>Ordre bekræftet</value>
+  </data>
+  <data name="OrderFinished" xml:space="preserve">
+    <value>Ordre afsluttet</value>
+  </data>
+  <data name="OrderNotPrinted" xml:space="preserve">
+    <value>Ordre ikke udskrevet</value>
+  </data>
+  <data name="OrderPrinted" xml:space="preserve">
+    <value>Ordre udskrevet</value>
+  </data>
+  <data name="OrderSent" xml:space="preserve">
+    <value>Ordre sendt</value>
+  </data>
+  <data name="OrderStarted" xml:space="preserve">
+    <value>Ordre påbegyndt</value>
+  </data>
+  <data name="OverrideTheStaffMemberOnThisTransaction" xml:space="preserve">
+    <value>Ønsker du at overskrive medarbejderen ved denne transaktion?</value>
+  </data>
+  <data name="ParameterNotImplemented" xml:space="preserve">
+    <value>Parameter ikke implementeret</value>
+  </data>
+  <data name="PleaseSelectTableBeforeRunningTheOperation" xml:space="preserve">
+    <value>Vælg et bord, inden du udfører handlingen</value>
+  </data>
+  <data name="PrintAll" xml:space="preserve">
+    <value>Udskriv alle</value>
+  </data>
+  <data name="PrintError" xml:space="preserve">
+    <value>Printerfejl – kontroller, om printeren er online og klar</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Ant.</value>
+  </data>
+  <data name="SameFromAndToTable" xml:space="preserve">
+    <value>Man kan ikke vælge det samme bord som fra- og til-bord</value>
+  </data>
+  <data name="SeatingGuestsNotPossibleNow" xml:space="preserve">
+    <value>Det er ikke muligt at placere gæster ved dette bord på nuværende tidspunkt.</value>
+  </data>
+  <data name="SelectedOperationNotAllowedInTableView" xml:space="preserve">
+    <value>Den valgte handling kan ikke udføres, når man er i bordvisning</value>
+  </data>
+  <data name="SelectedTable" xml:space="preserve">
+    <value>Valgt bord</value>
+  </data>
+  <data name="SelectedTableBelongsToCurrentStaff" xml:space="preserve">
+    <value>Det valgte bord tilhører allerede den aktuelle medarbejder.</value>
+  </data>
+  <data name="SelectMenuTypeForPrinting" xml:space="preserve">
+    <value>Vælg en menutype til udskrift</value>
+  </data>
+  <data name="SelectTableToTransferTo" xml:space="preserve">
+    <value>Vælg et bord, der skal overføres til ...</value>
+  </data>
+  <data name="SendingToKitchenPrinter" xml:space="preserve">
+    <value>Sender til køkkenprinter ...</value>
+  </data>
+  <data name="SplitBillNotConfigured" xml:space="preserve">
+    <value>Indstilling af deling af regning er ikke komplet. Kontroller indstilling #1</value>
+  </data>
+  <data name="SplitBillOnlyInHospitality" xml:space="preserve">
+    <value>Del regning kan kun udføres i restauranttilstand</value>
+  </data>
+  <data name="SplitBy" xml:space="preserve">
+    <value>Del med?</value>
+  </data>
+  <data name="SplitByAmount" xml:space="preserve">
+    <value>Del med?</value>
+  </data>
+  <data name="SplitOperationIsNotValid" xml:space="preserve">
+    <value>Delingshandling ikke gyldig</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Påbegyndt</value>
+  </data>
+  <data name="TableID" xml:space="preserve">
+    <value>Bord</value>
+  </data>
+  <data name="TableLayoutNotUpdated" xml:space="preserve">
+    <value>Bordfordeling er ikke opdateret</value>
+  </data>
+  <data name="TableLockedByAnotherTerminal" xml:space="preserve">
+    <value>Det valgte bord er låst af en anden terminal</value>
+  </data>
+  <data name="TableOpenInAnotherTerminal" xml:space="preserve">
+    <value>Dette bord er åbent i en anden terminal. Alle yderligere varer, der tilføjes til denne tabel, kan gå tabt. Den valgte vare vil ikke blive tilføjet til tabellen. Du vil blive ført tilbage til tabelvisningen</value>
+  </data>
+  <data name="TableWithDescription" xml:space="preserve">
+    <value>Bord: %1</value>
+  </data>
+  <data name="ThereAreNoItemsToSplit" xml:space="preserve">
+    <value>Der er ingen varer at opdele</value>
+  </data>
+  <data name="TheSelectedTableIsLockedToAnotherStaffMember" xml:space="preserve">
+    <value>Det valgte bord er låst til en anden medarbejder.</value>
+  </data>
+  <data name="TheSelectedTableIsUnavalible" xml:space="preserve">
+    <value>Det valgte bord er utilgængeligt</value>
+  </data>
+  <data name="TooManySplits" xml:space="preserve">
+    <value>Varen/varerne kan ikke opdeles i #1 dele. Det højeste antal opdelinger er indstillet til #2</value>
+  </data>
+  <data name="ToTable" xml:space="preserve">
+    <value>Til tabel</value>
+  </data>
+  <data name="ToTableAmt" xml:space="preserve">
+    <value>Til bord %1 – Beløb %2</value>
+  </data>
+  <data name="TotalAmountForTable" xml:space="preserve">
+    <value>Beløb i alt til bord: %1</value>
+  </data>
+  <data name="TransferFromTable" xml:space="preserve">
+    <value>OVERFØRSEL: Fra Bord %1 – Beløb %2</value>
+  </data>
+  <data name="TransferNotConfigured" xml:space="preserve">
+    <value>Indstilling af bordoverførsel er ikke komplet. Kontroller indstilling #1</value>
+  </data>
+  <data name="TransferTableSlip" xml:space="preserve">
+    <value>Overfør bordkvittering</value>
+  </data>
+  <data name="UnableToConnectToKDSTryingToReconnect" xml:space="preserve">
+    <value>Kunne ikke oprette forbindelse til køkkenskærme. Forsøger at genoprette forbindelsen ...</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Utilgængelig</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Uventet hændelse. Den valgte handling kunne ikke udføres.</value>
+  </data>
+  <data name="UnknownState" xml:space="preserve">
+    <value>Ukendt status</value>
+  </data>
+  <data name="UnsplitAllLinesQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil fjerne deling fra alle linjer og flytte dem til gæst 1?</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>ANNULLERET</value>
+  </data>
+  <data name="OrderNotSent" xml:space="preserve">
+    <value>Ordre ikke udskrevet</value>
+  </data>
+  <data name="OrderPartiallySent" xml:space="preserve">
+    <value>Ordre udskrevet</value>
+  </data>
+</root>

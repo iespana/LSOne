@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="UpdateInfo.2013_1,UpdateInfo.Work in progress" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Field help|Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Subjob View</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#FieldHelp/Scheduler/SubJobView.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Subjob View</h1>
+        <p class="SystemPath">General setup &gt; Replication &gt; Subjobs &gt; Edit a subjob</p>
+        <h2>What is the view used for?</h2>
+        <ul>
+            <li value="1">To view and edit a subjob.</li>
+            <li value="2">A subjob specifies the unit of data to replicate. Subjobs can only be run within the context of a job that defines the source and destination locations for the data. Subjobs are, however, independent of jobs in the sense that they can exist on their own without being actually used by a job. In that sense, a subjob can be on the subjob list of zero, one or more jobs.</li>
+        </ul>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+            <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-FieldStyles-Head-Header1">
+                    <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                    <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Description</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Edit the description of the subjob.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Replication method</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">There are three types of replication methods:</p>
+                        <ul>
+                            <li class="table" value="1"><b>Normal</b> - The contents of a database table are replicated as a whole. Normal subjobs are suitable for small tables or cases where entire tables must be replicated like when preloading a new store or a POS. Normal subjobs also support replication counters, where a unique index exists that can be used to select records to be replicated.  This is useful when replicating transactions from POS, so only the newest records will be replicated.
+</li>
+                            <li class="table" value="2"><b>Action</b> - The contents of a database table are replicated by reading a second table, the action table. The action table determines which rows in the main database table have changed and how. Action subjobs are suitable for large tables when you want to minimize data flow by replicating only the changes made in the source location.
+</li>
+                            <li class="table" value="3"><b>Stored Procedure</b> - An action table is read on the source location and for each suitable entry in the action table, a stored procedure is run on the destination locations. Stored procedure subjobs are suitable for replicating business logic transactions implemented through stored procedures. 
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">From table design</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p>Enabled only for normal and action subjobs.
+The table to use as the source for data. This value consists of selecting a particular table design in a particular database design:
+</p>
+                        <p>
+                            <img src="../../Resources/Images/FromTableDesign_467x317.png" style="width: 467;height: 317;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">To table name</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enabled only for normal and action subjobs.
+The table name to use as the destination of data. Unlike the From table design, this value can be any table name. To aid in specifying a correct name, the same method of selecting a table is used as when selecting the From table design.
+</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Stored procedure name</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enabled only for stored procedure subjobs.
+
+The name of the stored procedure to run in the destination location.
+</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">What to doTbla </td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p>Enabled only for normal subjobs.</p>
+                        <p>
+Specifies how to apply the data at the destination location:
+</p>
+                        <ul>
+                            <li class="table" value="1"><b>Add</b> -	All source rows are added at destination. Source records already existing at destination are ignored.
+</li>
+                            <li class="table" value="2"><b>Must add</b> -	All source rows are added at destination. If a source record exists at destination the operation fails and is rolled back.
+</li>
+                            <li class="table" value="3"><b>Delete</b>	- All destination rows are deleted.
+Update, add	If source row exists at destination, it is updated, otherwise it is added.
+<span class="Note">Note:</span> This will not work for linked tables.
+</li>
+                            <li class="table" value="4"><b>Update, add, delete</b>	- All destination rows are deleted and then the source rows are added.
+<span class="Note">Note:</span> This will not work for linked tables.
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Enabled</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Determines if this subjob is enabled. Uncheck this to hide this subjob from the subjob list and prevent it from being added to a job.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Move actions</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Determines whether actions for this subjob are moved from the source location to the destination location database when job is run. This means that when the subjob is run from the destination location to other locations the actions will be triggered again.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Include flow fields</td>
+                    <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Enabled only for normal and action subjobs.
+This setting is only relevant when the source table is in a Dynamics NAV database. Checking this field instructs the Scheduler to include NAV flow fields when replicating data.
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Actions tab</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>The fields in the Actions tab are only enabled for action and stored procedure subjobs.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Action table</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The database table in the source location where actions should be read from. As when specifying the From table design, the Action table value is a table design in a database design.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Action counter interval</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">When specified, this indicates the maximum number of actions handled in a single Data Director job. When this limit is reached, the Scheduler starts breaking down the data into additional Data Director jobs.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Load Actions</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Check this to get a view of actions for the action table</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Replication counter tab</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p class="TabText">The fields in the Replication counters tab are only enabled for normal subjobs.</p>
+                <p>You can set a subjob to use a replication counter. To use a replication counter the table being replicated must contain a replication counter field. A replication counter field is a not-null integer column that is guaranteed to be unique for all rows in the table. Furthermore, the values in the column must only increase for new values so that when a new row is added to the table it must contain a value greater than all existing replication counter values in the table. Most replication counter fields are defined in MS SQL Server as:</p>
+                <p>REPLICATIONCOUNTER 	INT IDENTITY NOT NULL</p>
+                <p>When a job is run that contains a subjob with a replication counter field, the Scheduler automatically stores the last value of the replication counter field so that it knows where to start replicating the next time the job is run. These values are store per job, subjob and location. These automatically created values are visible at the bottom of the Subjob view.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Replication counter field</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The field in the table to use as replication counter</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Replication counter interval</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">When specified, this indicates the maximum number of rows handled in a single Data Director job. When this limit is reached, the Scheduler starts breaking down the data into additional Data Director jobs.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Show counters for job</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The job of the replication counter. If the Subjob view was opened from a job view, this defaults to the originating view. You can select different jobs from the dropdown box.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Replication counters</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">A list of the replication counters that have been automatically created for the selected job, broken down by locations.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">
+                                <img src="../../Resources/Images/Edit.png" /> Edit</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select this button to edit a selected replication counter value.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">
+                                <img src="../../Resources/Images/MinusImage.png" /> Delete</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Select this button to remove the selected replication counter. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHead dropDownHeadtab MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />From-table filters</a>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p class="TabText">Info</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Field</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the field which is filtered by. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Filter type</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Displays which type of filtering is being used:</p>
+                                <ul>
+                                    <li class="table" value="1">Less</li>
+                                    <li class="table" value="2">Equal</li>
+                                    <li class="table" value="3">Higher</li>
+                                    <li class="table" value="4">Range</li>
+                                    <li class="table" value="5">Like</li>
+                                    <li class="table" value="6">Filter</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Value 1</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the filtering value.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Value 2</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">This field is only used when the filter is of type Range. Then it displays the range's to value. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Apply filter to</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Displays the how the filtering value is interpreted:</p>
+                                <ul>
+                                    <li class="table" value="1">Constant</li>
+                                    <li class="table" value="2">Date formula</li>
+                                    <li class="table" value="3">From location</li>
+                                    <li class="table" value="4">To location</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">
+                                <img src="../../Resources/Images/Edit.png" /> Edit</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select this button to edit the selected from-table filter in the <a href="SubJobFilterDialog.htm">subjob from-table filter dialog</a>. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">
+                                <img src="../../Resources/Images/PlusImage.png" /> Add</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select this button to add a new from-table filter in the <a href="SubJobFilterDialog.htm">subjob from-table filter dialog</a>. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">
+                                <img src="../../Resources/Images/MinusImage.png" /> Delete</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Select this button to delete the selected from-table filter. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="NewJobSubjobDialog.htm">Add subjob dialog</a>
+            </li>
+            <li value="2"><a href="NewSubjobDialog.htm">New subjob dialog</a>
+            </li>
+            <li value="3"><a href="NewSubJobsFromTablesDialog.htm">New subjob from tables design dialog</a>
+            </li>
+            <li value="4"><a href="SubJobFilterDialog.htm">Subjob from table filter dialog</a>
+            </li>
+            <li value="5"><a href="SubJobListView.htm">Subjobs view</a>
+            </li>
+        </ul>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">12<span class="sup">th</span> May 2013</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2013.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

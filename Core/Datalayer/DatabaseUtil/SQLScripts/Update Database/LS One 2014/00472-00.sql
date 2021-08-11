@@ -1,0 +1,16 @@
+﻿/*
+
+	Incident No.	: 
+	Responsible		: Hörður Kristjánsson
+	Sprint			: LS One 2014 - Nimbo
+	Date created	: 17.12.2013
+
+	Description		: Added a new field to table RBOTRANSACTIONTENDERDECLA20165 to store the amount that the POS expected there to be in the drawer
+*/
+
+USE LSPOSNET
+GO
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOTRANSACTIONTENDERDECLA20165' AND COLUMN_NAME = 'EXPECTEDAMOUNT')
+BEGIN
+	ALTER TABLE dbo.RBOTRANSACTIONTENDERDECLA20165 ADD EXPECTEDAMOUNT NUMERIC(28,12) NULL
+END

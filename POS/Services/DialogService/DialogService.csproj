@@ -1,0 +1,1539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19FDE46A-AF38-4295-8CB7-B7EE3F6D8D8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services</RootNamespace>
+    <AssemblyName>LSOne.Services.Dialog</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Sparkline.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraRichEdit.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.CalendarControl">
+      <HintPath>..\..\Build\LSOne.Controls.CalendarControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListViewExtensions">
+      <HintPath>..\..\Build\LSOne.Controls.ListViewExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.MenuButton">
+      <HintPath>..\..\Build\LSOne.Controls.MenuButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemFramework">
+      <HintPath>..\..\Build\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Processes">
+      <HintPath>..\..\Build\LSOne.POS.Processes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DialogService.cs" />
+    <Compile Include="DialogService.Partner.cs" />
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ListViewExtensions\ItemDetailRow.cs" />
+    <Compile Include="ListViewExtensions\ItemImageCell.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportClasses\ImageCellDictionaryManager.cs" />
+    <Compile Include="SupportClasses\ItemSearchFilter.cs" />
+    <Compile Include="SupportClasses\TenderCountEntry.cs" />
+    <Compile Include="WinFormsTouch\CloseDrawerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\CloseDrawerDialog.Designer.cs">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmJournalSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmJournalSearch.Designer.cs">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPopUpDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\frmPopUpDialog.designer.cs">
+      <DependentUpon>frmPopUpDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\InventoryPriceCheckLookupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\InventoryPriceCheckLookupDialog.Designer.cs">
+      <DependentUpon>InventoryPriceCheckLookupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\ItemSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\ItemSearchDialog.Designer.cs">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\JournalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\JournalDialog.Designer.cs">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\EmailAddressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\EmailAddressDialog.Designer.cs">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\ReasonCodeSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\ReasonCodeSelectDialog.Designer.cs">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\RemoveDiscountsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\RemoveDiscountsDialog.Designer.cs">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\ReturnTransactionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\ReturnTransactionDialog.Designer.cs">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SalesPersonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SalesPersonDialog.Designer.cs">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SetupPOSEFTDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SetupPOSEFTDialog.Designer.cs">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\SpinnerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\SpinnerDialog.Designer.cs">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\StatusDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\StatusDialog.Designer.cs">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\InputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\InputDialog.Designer.cs">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\TenderCountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\TenderCountDialog.Designer.cs">
+      <DependentUpon>TenderCountDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Other\Peripherals\Peripherals.csproj">
+      <Project>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</Project>
+      <Name>Peripherals</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Other\POSSharedDialogs\POSSharedDialogs.csproj">
+      <Project>{159C5050-398A-487D-88E0-E4050D3E9336}</Project>
+      <Name>POSSharedDialogs</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.zh-CHS.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.zh-CHT.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.bg.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.cs.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.da.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.de.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.el.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.en-ZA.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.es-MX.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.es.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.fi.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.fr.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.hi.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.is.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.it.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.ja.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.ko.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.nb-NO.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.nl.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.pl.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.pt-BR.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.ru.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.sv.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.zh-CHS.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.zh-CHT.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.en-ZA.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.en-ZA.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InventoryPriceCheckLookupDialog.resx">
+      <DependentUpon>InventoryPriceCheckLookupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.zh-CHS.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.zh-CHT.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.bg.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.cs.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.da.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.de.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.el.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.en-ZA.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.es-MX.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.es.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.fi.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.fr.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.hi.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.is.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.it.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.ja.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.ko.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.nb-NO.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.nl.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.pl.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.pt-BR.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.ru.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.sv.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.zh-CHS.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.zh-CHT.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.bg.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.cs.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.da.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.de.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.el.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.en-ZA.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.es-MX.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.es.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.fi.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.fr.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.hi.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.is.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.it.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.ja.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.ko.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.nb-NO.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.nl.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.pl.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.pt-BR.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.ru.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.sv.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.zh-CHS.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.zh-CHT.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.bg.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.cs.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.da.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.de.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.el.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.en-ZA.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.es-MX.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.es.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.fi.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.fr.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.hi.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.is.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.it.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.ja-JP.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.ja.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.ko.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.nb-NO.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.nl-BE.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.nl.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.pl.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.pt-BR.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.ru.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.sv.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.zh-CHS.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.zh-CHT.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.bg.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.cs.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.da.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.de.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.el.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.en-ZA.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.es-MX.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.es.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.fi.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.fr.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.hi.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.is.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.it.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.ja.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.ko.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.nb-NO.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.nl.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.pl.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.pt-BR.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.ru.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.sv.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.zh-CHS.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.zh-CHT.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.bg.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.cs.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.da.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.de.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.el.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.es-MX.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.es.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.fi.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.fr.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.hi.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.is.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.it.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.ja.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.ko.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.nb-NO.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.nl.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.pl.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.pt-BR.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.ru.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.sv.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.zh-CHS.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.zh-CHT.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.bg.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.cs.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.da.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.de.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.el.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.es-MX.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.es.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.fi.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.fr.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.hi.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.is.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.it.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.ja.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.ko.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.nb-NO.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.nl.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.pl.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.pt-BR.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.ru.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.sv.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.zh-CHS.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.zh-CHT.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmPopUpDialog.es.resx">
+      <DependentUpon>frmPopUpDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmPopUpDialog.resx">
+      <DependentUpon>frmPopUpDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.bg.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.cs.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.da.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.de.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.el.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.en-ZA.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.es-MX.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.es.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.fi.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.fr.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.hi.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.is.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.it.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.ja.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.ko.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.nb-NO.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.nl-BE.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.nl.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.pl.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.pt-BR.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.ru.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.sv.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.zh-CHS.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.zh-CHT.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.bg.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.cs.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.da.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.de.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.el.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.es.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.fi.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.fr.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.hi.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.is.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.it.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.ja.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.ko.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.nb-NO.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.nl.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.pl.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.pt-BR.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.ru.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.sv.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.zh-CHS.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SpinnerDialog.zh-CHT.resx">
+      <DependentUpon>SpinnerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.bg.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.cs.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.da.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.de.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.el.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.es.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.fi.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.fr.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.hi.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.is.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.it.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.ja.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.ko.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.nb-NO.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.nl.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.pl.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.pt-BR.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.ru.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.sv.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.zh-CHS.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.zh-CHT.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\TenderCountDialog.resx">
+      <DependentUpon>TenderCountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageDownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUpArrow.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white line arrow up_16.png" />
+    <None Include="Resources\white line arrow down_16.png" />
+    <None Include="Resources\single arrow down_16.png" />
+    <None Include="Resources\single arrow up_16.png" />
+    <None Include="Resources\TickCircle24.png" />
+    <None Include="Resources\Arrowdownthin_32px.png" />
+    <None Include="Resources\Arrowupthin_32px.png" />
+    <Content Include="Resources\CloudIcon48.png" />
+    <Content Include="Resources\Delete.png" />
+    <None Include="Resources\EFT48.png" />
+    <None Include="Resources\double arrow up_16.png" />
+    <None Include="Resources\double arrow down_16.png" />
+    <None Include="Resources\dialog4_48.png" />
+    <None Include="Resources\DialogExclamation-48.png" />
+    <None Include="Resources\DialogMessage_48.png" />
+    <None Include="Resources\DialogQuestion_48.png" />
+    <None Include="Resources\Doublearrowdownthin_32px.png" />
+    <None Include="Resources\Doublearrowupthin_32px.png" />
+    <Content Include="Resources\Exclamation.png" />
+    <None Include="Resources\PosGrayArrowDown32.png" />
+    <None Include="Resources\PosGrayArrowPageDown32.png" />
+    <None Include="Resources\PosGrayArrowPageUp32.png" />
+    <None Include="Resources\PosGrayArrowUp32.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\LS-One-spinner.gif" />
+    <Content Include="Resources\QuestionDialogIcon.png" />
+    <None Include="Resources\SmallArrowUp.png" />
+    <None Include="Resources\SmallArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.nl-BE.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.nl-BE.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.nl-BE.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.nl-BE.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.nl-BE.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.nl-BE.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.ja-JP.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.ja-JP.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.ja-JP.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.ja-JP.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.ja-JP.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.ja-JP.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.ja-JP.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.cs.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.da.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.de.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.el.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.en-ZA.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.es-MX.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.es.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.fi.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.fr.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.hi.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.is.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.ja.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.nb-NO.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.nl-BE.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.nl.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.pl.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.pt-BR.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.ru.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.sv.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.bg.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.it.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.ja-JP.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.ko.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.bg.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.cs.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.da.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.de.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.el.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.en-ZA.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.es-MX.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.es.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.fi.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.fr.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.hi.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.is.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.it.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.ja.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.ko.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.nb-NO.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.nl-BE.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.nl.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.pl.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.pt-BR.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.ru.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.sv.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.bg.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.cs.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.da.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.de.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.el.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.en-ZA.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.es-MX.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.es.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.fi.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.fr.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.hi.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.is.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.it.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.ja.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.ko.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.nb-NO.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.nl-BE.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.nl.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.pl.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.pt-BR.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.ru.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.sv.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.da.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.de.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.fr.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.is.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.nl-BE.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.ru.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.sv.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.nl-BE.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.es.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.nl.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.fi.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.bg.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\CloseDrawerDialog.vi-VN.resx">
+      <DependentUpon>CloseDrawerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EmailAddressDialog.vi-VN.resx">
+      <DependentUpon>EmailAddressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ErrorDialog.vi-VN.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\frmJournalSearch.vi-VN.resx">
+      <DependentUpon>frmJournalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\InputDialog.vi-VN.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ItemSearchDialog.vi-VN.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\JournalDialog.vi-VN.resx">
+      <DependentUpon>JournalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReasonCodeSelectDialog.vi-VN.resx">
+      <DependentUpon>ReasonCodeSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\RemoveDiscountsDialog.vi-VN.resx">
+      <DependentUpon>RemoveDiscountsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\ReturnTransactionDialog.vi-VN.resx">
+      <DependentUpon>ReturnTransactionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SalesPersonDialog.vi-VN.resx">
+      <DependentUpon>SalesPersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\SetupPOSEFTDialog.vi-VN.resx">
+      <DependentUpon>SetupPOSEFTDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\StatusDialog.vi-VN.resx">
+      <DependentUpon>StatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\Services\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

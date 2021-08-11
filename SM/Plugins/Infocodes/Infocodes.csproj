@@ -1,0 +1,1895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48A037B0-4EC7-4173-8AD7-1ED3E3337D2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.Infocodes</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.Infocodes</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\LSRetail.StoreController.Infocodes.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.Infocodes.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.Designer.cs">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewGroupSubcodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewGroupSubcodeDialog.Designer.cs">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewGroupInfocodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewGroupInfocodeDialog.Designer.cs">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InfocodeSpecificDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InfocodeSpecificDialog.Designer.cs">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewSubcodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewSubcodeDialog.Designer.cs">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewInfocodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewInfocodeDialog.Designer.cs">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderCardTypeInfocodePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderCardTypeInfocodePage.Designer.cs">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\FuncProfileInfocodeTabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\FuncProfileInfocodeTabPage.Designer.cs">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderInfocodePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderInfocodePage.Designer.cs">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailItemICGroupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailItemICGroupPage.Designer.cs">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CrossAndModifierInfocodeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CrossAndModifierInfocodeGeneralPage.Designer.cs">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\GroupSubcodeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\GroupSubcodeGeneralPage.Designer.cs">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeSharedPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeSharedPage.Designer.cs">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\SubcodeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\SubcodeGeneralPage.Designer.cs">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\InfocodePrintingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\InfocodePrintingPage.Designer.cs">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeConfigurationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeConfigurationPage.Designer.cs">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\InfocodeGeneralPage.Designer.cs">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\GroupInfocodeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\GroupInfocodeGeneralPage.designer.cs">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrossAndModifierInfocodesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CrossAndModifierInfocodesView.Designer.cs">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InfocodesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InfocodesView.Designer.cs">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubcodeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SubcodeView.Designer.cs">
+      <DependentUpon>SubcodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InfocodeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InfocodeView.Designer.cs">
+      <DependentUpon>InfocodeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupInfocodeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GroupInfocodeView.designer.cs">
+      <DependentUpon>GroupInfocodeView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.bg.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.en-ZA.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.es-MX.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.hi.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.bg.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.cs.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.da.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.de.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.el.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.en-ZA.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.es-MX.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.es.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.fi.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.fr.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.hi.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.is.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.it.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.ja.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.ko.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.nb-NO.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.nl.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.pl.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.pt-BR.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.ru.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.sv.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.zh-CHS.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.zh-CHT.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.bg.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.cs.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.da.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.de.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.el.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.en-ZA.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.es-MX.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.es.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.fi.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.fr.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.hi.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.is.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.it.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.ja.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.ko.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.nb-NO.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.nl.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.pl.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.pt-BR.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.ru.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.sv.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.zh-CHS.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.zh-CHT.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.bg.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.cs.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.da.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.de.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.el.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.en-ZA.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.es-MX.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.es.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.fi.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.fr.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.hi.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.is.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.it.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.ja.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.ko.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.nb-NO.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.nl.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.pl.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.pt-BR.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.ru.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.sv.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.zh-CHS.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.zh-CHT.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.bg.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.cs.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.da.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.de.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.el.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.en-ZA.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.es-MX.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.es.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.fi.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.fr.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.hi.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.is.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.it.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.ja.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.ko.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.nb-NO.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.nl.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.pl.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.pt-BR.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.cs.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.da.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.de.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.el.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.es.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.fi.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.fr.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.is.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.it.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.ja.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.ko.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.nb-NO.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.nl.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.pl.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.pt-BR.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.ru.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.sv.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.zh-CHS.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.zh-CHT.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.ru.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.sv.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.zh-CHS.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.zh-CHT.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.bg.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.cs.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.da.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.de.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.el.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.en-ZA.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.es-MX.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.es.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.fi.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.fr.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.hi.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.is.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.it.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.ja.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.ko.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.nb-NO.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.nl.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.pl.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.pt-BR.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.ru.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.sv.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.zh-CHS.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.zh-CHT.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.bg.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.cs.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.da.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.de.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.el.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.en-ZA.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.es-MX.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.es.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.fi.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.fr.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.hi.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.is.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.it.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.ja.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.ko.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.nb-NO.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.nl.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.pl.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.pt-BR.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.ru.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.sv.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.zh-CHS.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.zh-CHT.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.bg.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.cs.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.da.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.de.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.el.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.en-ZA.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.es-MX.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.es.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.fi.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.fr.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.hi.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.is.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.it.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.ja.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.ko.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.nb-NO.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.nl.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.pl.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.pt-BR.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.ru.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.sv.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.zh-CHS.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.zh-CHT.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.bg.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.cs.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.da.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.de.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.el.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.en-ZA.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.es-MX.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.es.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.fi.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.fr.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.hi.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.is.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.it.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.ja.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.ko.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.nb-NO.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.nl.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.pl.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.pt-BR.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.ru.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.sv.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.zh-CHS.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.zh-CHT.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.bg.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.cs.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.da.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.de.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.el.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.en-ZA.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.es-MX.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.es.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.fi.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.fr.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.hi.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.is.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.it.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.ja.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.ko.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.nb-NO.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.nl.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.pl.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.pt-BR.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.ru.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.sv.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.zh-CHS.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.zh-CHT.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.bg.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.cs.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.da.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.de.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.el.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.en-ZA.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.es-MX.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.es.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.fi.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.fr.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.hi.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.is.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.it.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.ja.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.ko.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.nb-NO.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.nl.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.pl.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.pt-BR.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.ru.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.sv.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.zh-CHS.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.zh-CHT.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.bg.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.cs.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.da.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.de.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.el.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.en-ZA.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.es-MX.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.es.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.fi.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.fr.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.hi.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.is.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.it.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.ja.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.ko.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.nb-NO.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.nl.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.pl.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.pt-BR.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.ru.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.sv.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.zh-CHS.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.zh-CHT.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.bg.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.cs.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.da.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.de.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.el.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.en-ZA.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.es-MX.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.es.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.fi.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.fr.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.hi.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.is.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.it.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.ja.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.ko.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.nb-NO.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.nl.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.pl.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.pt-BR.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.ru.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.sv.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.zh-CHS.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.zh-CHT.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.cs.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.da.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.de.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.el.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.es.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.fi.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.fr.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.is.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.it.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.ja.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.ko.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.nb-NO.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.nl.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.pl.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.pt-BR.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.ru.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.sv.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.zh-CHS.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypeInfocodePage.zh-CHT.resx">
+      <DependentUpon>StoreTenderCardTypeInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.cs.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.da.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.de.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.el.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.es.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.fi.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.fr.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.is.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.it.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.ja.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.ko.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.nb-NO.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.nl.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.pl.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.pt-BR.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.ru.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.sv.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.zh-CHS.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderInfocodePage.zh-CHT.resx">
+      <DependentUpon>StoreTenderInfocodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.cs.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.da.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.de.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.el.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.es.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.fi.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.fr.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.is.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.it.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.ja.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.ko.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.nb-NO.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.nl.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.pl.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.pt-BR.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.ru.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.sv.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.zh-CHS.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailItemICGroupPage.zh-CHT.resx">
+      <DependentUpon>RetailItemICGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.cs.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.da.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.de.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.el.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.es.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.fi.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.fr.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.is.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.it.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.ja.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.ko.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.nb-NO.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.nl.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.pl.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.pt-BR.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.ru.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.sv.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.zh-CHS.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeSharedPage.zh-CHT.resx">
+      <DependentUpon>InfocodeSharedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.bg.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.cs.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.da.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.de.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.el.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.en-ZA.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.es-MX.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.es.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.fi.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.fr.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.hi.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.is.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.it.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.ja.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.ko.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.nb-NO.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.nl.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.pl.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.pt-BR.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.ru.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.sv.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.zh-CHS.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.zh-CHT.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.bg.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.cs.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.da.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.de.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.el.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.en-ZA.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.es-MX.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.es.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.fi.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.fr.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.hi.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.is.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.it.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.ja.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.ko.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.nb-NO.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.nl.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.pl.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.pt-BR.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.ru.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.sv.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.zh-CHS.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.zh-CHT.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.bg.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.cs.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.da.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.de.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.el.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.en-ZA.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.es-MX.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.es.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.fi.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.fr.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.hi.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.is.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.it.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.ja.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.ko.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.nb-NO.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.nl.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.pl.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.pt-BR.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.ru.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.sv.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.zh-CHS.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.zh-CHT.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SubcodeView.resx">
+      <DependentUpon>SubcodeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodeView.resx">
+      <DependentUpon>InfocodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GroupInfocodeView.resx">
+      <DependentUpon>GroupInfocodeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoCodes16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.it-IT.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.it-IT.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.it-IT.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.it-IT.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.it-IT.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.it-IT.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.it-IT.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.it-IT.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.it-IT.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.it-IT.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.it-IT.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.it-IT.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.it-IT.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.it-IT.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.it-IT.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.it-IT.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.nl-BE.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.nl-BE.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.nl-BE.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.nl-BE.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.nl-BE.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.nl-BE.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.nl-BE.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.nl-BE.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.nl-BE.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.nl-BE.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.nl-BE.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.nl-BE.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.nl-BE.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.nl-BE.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.nl-BE.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.nl-BE.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infocode32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info codes_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info codes_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\InfocodeSpecificDialog.vi-VN.resx">
+      <DependentUpon>InfocodeSpecificDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupInfocodeDialog.vi-VN.resx">
+      <DependentUpon>NewGroupInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroupSubcodeDialog.vi-VN.resx">
+      <DependentUpon>NewGroupSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeDialog.vi-VN.resx">
+      <DependentUpon>NewInfocodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewInfocodeSpecificGroupConnectionDialog.vi-VN.resx">
+      <DependentUpon>NewInfocodeSpecificGroupConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSubcodeDialog.vi-VN.resx">
+      <DependentUpon>NewSubcodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CrossAndModifierInfocodeGeneralPage.vi-VN.resx">
+      <DependentUpon>CrossAndModifierInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FuncProfileInfocodeTabPage.vi-VN.resx">
+      <DependentUpon>FuncProfileInfocodeTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupInfocodeGeneralPage.vi-VN.resx">
+      <DependentUpon>GroupInfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GroupSubcodeGeneralPage.vi-VN.resx">
+      <DependentUpon>GroupSubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeConfigurationPage.vi-VN.resx">
+      <DependentUpon>InfocodeConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodeGeneralPage.vi-VN.resx">
+      <DependentUpon>InfocodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InfocodePrintingPage.vi-VN.resx">
+      <DependentUpon>InfocodePrintingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SubcodeGeneralPage.vi-VN.resx">
+      <DependentUpon>SubcodeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrossAndModifierInfocodesView.vi-VN.resx">
+      <DependentUpon>CrossAndModifierInfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InfocodesView.vi-VN.resx">
+      <DependentUpon>InfocodesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6EE6B3A-3C0E-440F-BEBC-3A9CCC0F9734}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.VariantFramework</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.VariantFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemDimensionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemDimensionsPage.Designer.cs">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemVariantsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemVariantsPage.Designer.cs">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddNewDimensionAttributeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddNewDimensionAttributeDialog.Designer.cs">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddNewDimensionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddNewDimensionDialog.Designer.cs">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddVariantItemsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddVariantItemsDialog.Designer.cs">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewAndEditDimensionTemplateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewAndEditDimensionTemplateDialog.Designer.cs">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditDimensionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditDimensionDialog.Designer.cs">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DimensionTemplatesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DimensionTemplatesDialog.Designer.cs">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditDimensionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditDimensionsDialog.Designer.cs">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewVariantItemsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewVariantItemsPage.Designer.cs">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.bg.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.cs.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.da.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.de.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.el.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.en-ZA.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.es-MX.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.es.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.fi.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.fr.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.hi.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.is.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.it.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.ja.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.ko.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.nb-NO.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.nl-BE.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.nl.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.pl.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.pt-BR.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.ru.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.sv.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.zh-CN.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.bg.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.cs.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.da.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.de.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.el.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.en-ZA.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.es-MX.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.es.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.fi.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.fr.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.hi.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.is.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.it.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.ja.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.ko.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.nb-NO.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.nl-BE.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.nl.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.pl.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.pt-BR.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.ru.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.sv.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.zh-CN.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.bg.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.cs.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.da.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.de.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.el.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.en-ZA.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.es-MX.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.es.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.fi.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.fr.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.hi.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.is.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.it.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.ja.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.ko.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.nb-NO.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.nl-BE.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.nl.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.pl.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.pt-BR.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.ru.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.sv.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.zh-CN.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.bg.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.cs.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.da.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.de.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.el.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.en-ZA.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.es-MX.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.es.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.fi.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.fr.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.hi.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.is.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.it.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.ja.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.ko.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.nb-NO.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.nl-BE.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.nl.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.pl.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.pt-BR.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.ru.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.sv.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.bg.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.cs.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.da.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.de.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.el.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.en-ZA.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.es-MX.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.es.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.fi.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.fr.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.hi.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.is.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.it.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.ja.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.ko.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.nb-NO.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.nl-BE.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.nl.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.pl.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.pt-BR.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.ru.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.sv.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.bg.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.cs.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.da.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.de.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.el.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.en-ZA.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.es-MX.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.es.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.fi.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.fr.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.hi.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.is.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.it.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.ja.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.ko.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.nb-NO.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.nl-BE.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.nl.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.pl.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.pt-BR.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.ru.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.sv.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.bg.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.cs.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.da.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.de.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.el.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.en-ZA.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.es-MX.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.es.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.fi.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.fr.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.hi.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.is.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.it.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.ja.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.ko.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.nb-NO.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.nl-BE.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.nl.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.pl.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.pt-BR.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.ru.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.sv.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.bg.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.cs.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.da.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.de.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.el.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.en-ZA.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.es-MX.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.es.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.fi.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.fr.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.hi.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.is.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.it.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.ja.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.ko.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.nb-NO.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.nl-BE.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.nl.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.pl.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.pt-BR.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.ru.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.sv.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.zh-CN.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.zh-CN.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.zh-CN.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.zh-CN.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.zh-CN.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.bg.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.cs.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.da.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.de.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.el.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.en-ZA.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.es-MX.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.es.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.fi.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.fr.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.hi.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.is.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.it.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.ja.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.ko.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.nb-NO.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.nl-BE.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.nl.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.pl.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.pt-BR.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.ru.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.sv.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.bg.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.cs.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.da.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.de.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.el.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.en-ZA.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.es-MX.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.es.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.fi.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.fr.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.hi.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.is.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.it.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.ja.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.ko.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.nb-NO.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.nl-BE.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.nl.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.pl.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.pt-BR.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.ru.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.sv.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\itemVariant_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemDimensionsPage.vi-VN.resx">
+      <DependentUpon>NewRetailItemDimensionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemVariantsPage.vi-VN.resx">
+      <DependentUpon>NewRetailItemVariantsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionAttributeDialog.vi-VN.resx">
+      <DependentUpon>AddNewDimensionAttributeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddNewDimensionDialog.vi-VN.resx">
+      <DependentUpon>AddNewDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddVariantItemsDialog.vi-VN.resx">
+      <DependentUpon>AddVariantItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DimensionTemplatesDialog.vi-VN.resx">
+      <DependentUpon>DimensionTemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionDialog.vi-VN.resx">
+      <DependentUpon>EditDimensionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditDimensionsDialog.vi-VN.resx">
+      <DependentUpon>EditDimensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAndEditDimensionTemplateDialog.vi-VN.resx">
+      <DependentUpon>NewAndEditDimensionTemplateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewVariantItemsPage.vi-VN.resx">
+      <DependentUpon>ItemViewVariantItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

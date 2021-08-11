@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup|Infocodes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Working with Infocodes on the LS POS</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Infocodes/Working with Infocodes on the LS POS.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Working with Infocodes on the LS POS</h1>
+        <p>On the LS POS, the infocode pop up window appears automatically whenever an automatic infocode is triggered.</p>
+        <p>Examples of infocodes in the LS POS:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1"><a name="kanchor112"></a>Sell item 50000</li>
+            <li style="list-style-type: disc;" value="2">Sell item 50060</li>
+            <li style="list-style-type: disc;" value="3">The LS POS looks like this when it is asking the cashier to select answers out of a predefined list. This could be used, for example, in an airport where there is a survey to find out the travel reason whenever a stapler is sold.<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/LS One Training Guide_2013/0300013E.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="950" data-mc-height="765" src="../../Resources/Images/LS One Training Guide_2013/0300013E_thumb_0_300.png" tabindex="" /></a></li>
+            <li style="list-style-type: disc;" value="4">Item 50060 has an infocode assigned to the item so that when it is sold the infocode pop up window appears.</li>
+            <li style="list-style-type: disc;" value="5">Select one of the options.</li>
+            <li value="6">The infocode selection is registered in the database when the item is sold. </li>
+            <li value="7">Finish the sale.</li>
+        </ul>
+        <p>Infocodes are set up to be triggered either automatically or upon request. Automatic is the default setting. </p>
+        <p>"On request" infocodes can work in two ways:</p>
+        <ul>
+            <li value="1">They can be connected to retail items and retail groups. When the items are sold with On request triggered, no infocode pops up automatically but the infocode can be requested with the "Infocode On Request" operation on the POS&#160;with parameter set to Item. If an infocode is selected that will sell another item that item will be sold as a linked item.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/SiteManager/Infocodes/InfocodeOnRequest-button.png" /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Infocodes/InfocodeOnRequest-Item.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="428" data-mc-height="159" src="../../Resources/Images/SiteManager/Infocodes/InfocodeOnRequest-Item_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <ul>
+            <li value="1">They can be run independent of an item by configuring the button on the POS&#160;layout to have parameter "Trigger for" set as Sale. Then an on request Infocode can be selected which should be run when the button is clicked. If an infocode is selected that will sell an item the item will be sold as a separate item i.e. not a linked item.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/SiteManager/Infocodes/InfocodeOnRequest-button.png" />
+            <img src="../../Resources/Images/SiteManager/Infocodes/InfocodeOnRequest-Sale.png" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

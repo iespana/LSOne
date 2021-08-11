@@ -1,0 +1,18 @@
+﻿/* 
+        Incident No.: N/A 
+        Responsible : Höður Sigurdór Heiðarsson
+        Sprint		: LS One 2013.1\July, August, September
+        Date created: 21.10.13 
+        Description	: Change FORMLAYOUTTYPEID to FORMTYPEID in POSISFORMLAYOUT 
+*/ 
+USE LSPOSNET 
+GO 
+
+if exists (select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'POSISFORMLAYOUT' and COLUMN_NAME = 'FORMLAYOUTTYPEID')
+begin 
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSISFORMLAYOUT' AND COLUMN_NAME = 'FORMTYPEID')
+	BEGIN
+		EXEC sp_rename 'DBO.POSISFORMLAYOUT.FORMLAYOUTTYPEID', 'FORMTYPEID', 'COLUMN'
+	END
+END
+GO

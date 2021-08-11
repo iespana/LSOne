@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="UpdateInfo.Work in progress,UpdateInfo.2013_1" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Field help|Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Distribution Location View</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#FieldHelp/Scheduler/LocationView.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Distribution Location View</h1>
+        <p class="SystemPath">General setup &gt; Replication &gt; Distribution location &gt; Edit a location</p>
+        <h2>What is the view used for?</h2>
+        <ul>
+            <li value="1">To view/edit the setting for the distribution location such as which data director it communicates with and which database the location uses.</li>
+        </ul>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+            <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-FieldStyles-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-FieldStyles-Head-Header1">
+                    <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                    <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Type</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                        <p class="table">Displays the type of the distribution location:</p>
+                        <ul>
+                            <li class="table" value="1">Store</li>
+                            <li class="table" value="2">Terminal</li>
+                            <li class="table" value="3">General
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Name</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the description of the store, terminal or general location.</td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1">
+                    <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">ID of external object</td>
+                    <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the ID of the store or terminal locations. </td>
+                </tr>
+                <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                    <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Enable for replication</td>
+                    <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Select to enable data replication to and from this location. </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Replication tab</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Distribution server</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the network host name of the Data Director that handles this location.
+</p>
+                                <p class="table"><span class="Note">Note:</span> Do not use location specific names such as <i>localhost</i> or 127.0.0.1.
+</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Port</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The TCP/IP port to use when communicating with the Data Director. Only change this field if the Data Director has been set up to use other ports than the default.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Network mode</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">The network mode to use when communicating with the Data Director.</p>
+                                <ul>
+                                    <li class="table" value="1"><b>TCP</b> - Unsecure TCP/IP connection. This is the default recommended network mode. Use this on a local network when the machines running the Scheduler and the Data Director are not on the same Windows domain.</li>
+                                    <li class="table" value="2"><b>TCPS</b> - Secure TCP/IP connection. Can only be used if the machines communicating are on the same Windows domain or the same Windows workgroup.</li>
+                                    <li class="table" value="3"><b>OFF</b> - Offline replication is used to send jobs to a location with dynamic address or store that is not online all the time. The Data Director at the source location will not send the job to the destination, instead the job will just wait, with status None. The destination host will send pull request to the source Data Director asking for any jobs waiting for it, and pull them from the source. </li>
+                                    <li class="table" value="4"><b>MAN</b> - Manual replication allows the Data Director to transfer job from one host to another without network connection. The source Data Director will export the job data to special output folder for the destination host, and the destination host can import this job data into the destination Data Director and be processed there. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Use database server</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Place a check mark in this value if the Data Director at this location should connect to a database. When unchecked, the Data Director for this location is only used to forward data packs to other Data Directors.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Database driver type</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">The type of database driver to use for this location:
+</p>
+                                <ul>
+                                    <li class="table" value="1"><b>MS SQL </b>- Microsoft SQL Server with SQL Server authentication. When this is selected you must provide a user ID and a password (see below)</li>
+                                    <li class="table" value="2"><b>MS SQL (Windows authentication)</b> - Microsoft SQL Server with Windows authentication. When this is selected, the Windows user account running the Data Director service must have the proper security privileges on the database server.
+</li>
+                                    <li class="table" value="3"><b>NAV Native 6.01</b> - Microsoft Dynamics NAV version 6.01 native database.
+</li>
+                                    <li class="table" value="4"><b>NAV SQL 6.01</b> - Microsoft Dynamics NAV version 6.01 using Microsoft SQL Server database.
+</li>
+                                    <li class="table" value="5"><b>OLE DB -</b> Any OLE DB compatible database server. The default provider specified in the resulting connection string is for MS SQL Server but can be replaced by manually editing the connection string.</li>
+                                    <li class="table" value="6"><b>OLE DB (Windows authentication)</b> - Any OLE DB compatible database server using Windows authentication. The default provider specified in the resulting connection string is for MS SQL Server but can be replaced by manually editing the connection string.
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Company</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Only for NAV driver types: The company to connect to in the NAV database.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">User Id</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The user ID to use when connecting to the database. Not required when using driver type MS SQL (Windows authentication).</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Password</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Password for the user ID. Not required when using driver type MS SQL (Windows authentication).</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Database server</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">The network host name of the database server. </p>
+                                <p class="table"><span class="Note">Note:</span> If you are using Microsoft SQL Server with a named instance, the instance name must be added to the host name, for example: MyHost\SQLExpress</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Database or path</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The name of the database or the file path if using a file based database.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">SQL Server connection type</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">There are 4 options:</p>
+                                <ul>
+                                    <li class="table" value="1">
+                                        <MadCap:conditionalText data-mc-conditions="UpdateInfo.TO&#160;BE&#160;LINKED"><b>(default)</b> - </MadCap:conditionalText>
+                                    </li>
+                                    <li class="table" value="2"><b>Named pipes</b> - A named pipe is a named, one-way or duplex pipe for communication between the pipe server and one or more pipe clients. Named pipes can be used to provide communication between processes on the same computer or between processes on different computers across a network.</li>
+                                    <li class="table" style="font-weight: normal;" value="3"><b>Shared memory</b> - The shared memory protocol can only be used when the Data Director is running on the same machine as the SQL Server.</li>
+                                    <li class="table" value="4"><b>TCP/IP</b> - The Data Director used the TCP/IP&#160;protocol to connect to the SQL server. </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Database string</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">The connection string used by the Data Director to connect to the database. You can automatically generate this value by clicking on the Set connection string   button. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Database design</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">The database design that describes the tables and fields in the database for this location. In most setups, each location has the same database design. To create a new database design, click the Read Design button on the right hand side of the view.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Members tab</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <ul>
+                    <li value="1">Add or delete members and/or parents</li>
+                </ul>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Name</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Displays the description of the terminal, store or general location. The type is identified with an icon:</p>
+                                <ul>
+                                    <li class="table" value="1">
+                                        <img src="../../Resources/Images/store icon.png" /> Store
+</li>
+                                    <li class="table" value="2">
+                                        <img src="../../Resources/Images/terminal ico.png" />   Terminal
+</li>
+                                    <li class="table" value="3">
+                                        <img src="../../Resources/Images/general icon.png" /> General
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">ID</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the ID of the location</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">
+                                <img src="../../Resources/Images/PlusImage.png" /> Add</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select this button to add members/parents to the highlighted group in the </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">
+                                <img src="../../Resources/Images/MinusImage.png" /> Delete</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Select this button to delete the selected member/parent from the group.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>Actions</h2>
+        <ul>
+            <li value="1"><b>Test connection</b> - The Test Connection button enables you to test if the connection to the Data Director at this location is valid. If the location has a database server, the connection to the database will be tested as well.</li>
+            <li value="2"><b>Read design</b> - The Read Design button enables you to connect to the database on this location and read design information on all tables and fields in the database. This design is then automatically assigned to the current location. You can also re-use designs amongst other locations by selecting a design from the Database design drop-down combo box.</li>
+        </ul>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="LocationListView.htm">Locations view</a>
+            </li>
+            <li value="2"><a href="NewLocationDialog.htm">New location dialog</a>
+            </li>
+            <li value="3"><a href="#">Read database design dialog</a>
+            </li>
+            <li value="4"><a href="SelectLocationsDialog.htm">Select locations dialog</a>
+            </li>
+        </ul>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">12<span class="sup">th</span> May 2013</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2013.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

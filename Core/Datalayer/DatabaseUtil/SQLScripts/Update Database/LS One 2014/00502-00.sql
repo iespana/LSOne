@@ -1,0 +1,19 @@
+/*
+	Incident No.	: N/A
+	Responsible		: Sigfús Jóhannesson
+	Sprint			: LS One 2014 - Nimbo
+	Date created	: 23.01.2014
+
+	Description		: Added column to RBOSTORETABLE
+	
+						
+*/
+USE LSPOSNET
+GO
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOSTORETABLE' AND COLUMN_NAME = 'STARTAMOUNT')
+BEGIN
+	ALTER TABLE RBOSTORETABLE ADD STARTAMOUNT NUMERIC(28,12)
+END
+
+GO

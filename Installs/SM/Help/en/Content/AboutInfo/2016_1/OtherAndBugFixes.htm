@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2016.1|Release Notes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Other improvements and bugfixes</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2016_1/OtherAndBugFixes.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Other improvements and bug fixes</h1>
+        <h2>Returnable flag</h2>
+        <p>A new flag "Returnable" has been added to the <a href="../../FieldHelp/RetailItems/ItemView.htm" name="kanchor185">retail item card</a>. This property tells the POS&#160;whether an item can be returned or not. </p>
+        <p>The "Returnable" attribute has been added to the Attribute search filter in <a href="../../FieldHelp/RetailItems/ItemsView.htm">Retail items view</a>.</p>
+        <h2>Loyalty</h2>
+        <p>"Local database" setting for loyalty in <a href="../../FieldHelp/Administration/AdministrationView.htm">Administration Options</a> has been removed. Loyalty is now always checked through Site service so if POS has no Site service profile loyalty functions will not work.</p>
+        <p>When returning a sale that has a loyalty point payment, information about the original payment is added to the returned sale</p>
+        <p>When editing a rule on a <a href="../../FieldHelp/CustomerLoyalty/LoyaltySchemesView.htm">Loyalty scheme</a> the Quantity/Amount field didn't show the existing value</p>
+        <p>If a loyalty scheme is used by one or more loyalty cards now it cannot be deleted</p>
+        <h2>Demo data</h2>
+        <p>New demo data has been created for version 2016.1</p>
+        <h2>Bug fixes in LS&#160;One POS        </h2>
+        <p>Fixed bug in POS so now a customer can only be added once to the same loyalty card</p>
+        <p>Tool tip has been removed from barcode field in Price check dialog. The tool tip is meant to make amounts easier to read not bar codes.</p>
+        <p>If a retail group was set as a parameter to the Item search operation on POS an exception was thrown. This has been fixed.</p>
+        <p>Operation Manually trigger periodic discounts did not work if a periodic discount was selected as a parameter. Now the operation can trigger a specific discount when selected or display a list of discounts if no parameter is set.</p>
+        <p>Operation Item search now cannot take parameters to display prices as a default. The prices can still be displayed by clicking a button on the item search dialog.</p>
+        <p>The "<a href="../../FieldHelp/Store/StoreTenderView.htm">max payment limitation</a>" amount on a tender is now forced for the total amount of all payment lines in the POS&#160;of the same tender type</p>
+        <p>Sum line discount and Sum total discount variables in the <a href="../../FieldHelp/Forms/FormView.htm">receipt header or footer</a> are now only printed when there are discounts on the sale. Line discount name and Total discount name variables are now translated.</p>
+        <p>Reprint receipt is now a POS permission and printing a receipt depends on that permission. If the user does not have this permission then the daily journal will display the receipt print preview but a copy can not be printed.</p>
+        <p>When items were being aggregated for printing the discount amounts were not being summed up when printing the receipt.</p>
+        <p>In the Manage database connection dialog, which is only visible when the POS&#160;is run in maintenance mode, the column marking a connection as the default connection is now the first column in the list.</p>
+        <p>When printing the receipt the currency symbol was not printed if the currency symbol was set as a suffix.</p>
+        <p>When an item is voided all linked items are now voided as well</p>
+        <h2>Bug fixes in <span class="MyVariablesSite Manager">Site Manager</span><![CDATA[       ]]></h2>
+        <p>Site Manager now displays error message when job is run if source distribution location does not have a database design. Before the it seemed like the job was scheduled but nothing appeared in Data director job monitor.</p>
+        <p>Fixed database error when changing inventory unit on <a href="../../FieldHelp/RetailItems/ItemView.htm">retail item</a>.</p>
+        <p>Fixed an error that preventing the user from removing an item from a retail group through the <a href="../../FieldHelp/RetailItems/RetailGroupView.htm">Retail group card</a>.</p>
+        <p> Purchase unit ID was not saved on variant items when they were created through the New retail item dialog. The fix included changing the data provider to return the inventory unit ID if the purchase unit ID is not available and if the item is saved the purchase unit ID is set to the inventory unit ID if it is still empty.</p>
+        <p>The list of columns that the user can choose from to design the receipt component on the <a href="../../FieldHelp/Touch buttons/TouchButtonView.htm">POS user interface</a> is now the same both in Site Manager designer and in the POS</p>
+        <p>Fixed a bug where both edit and delete buttons were enabled when opening the <a href="../../FieldHelp/Touch buttons/StylesView.htm">Styles view</a></p>
+        <p>Sum line discount and Sum total discount variables in the <a href="../../FieldHelp/Forms/FormView.htm">receipt header or footer</a> are now only printed when there are discounts on the sale. Line discount name and Total discount name variables are now translated.</p>
+        <p>In the Scheduler view the enabled column in the database design view will now be visible on smaller resolutions</p>
+        <p>It is now only possible to enter 20 characters in the receipt display field in <a href="../../FieldHelp/Sales Tax/EditTaxCodeDialog.htm">tax codes</a></p>
+        <p>In the Customer discount groups view and <a href="../../FieldHelp/TradeAgreements/ItemDiscountGroupView.htm">Item discount groups view</a> a links to view and change the <a href="../../FieldHelp/Administration/AdministrationView.htm">active discounts configurations</a> has been added.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">6<span class="sup">th</span> October 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Site Manager improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.1/SiteManagerImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1><span class="MyVariablesSite Manager">Site Manager</span> improvements</h1>
+        <p>In this section general improvements that mostly or only affect the <span class="MyVariablesSite Manager">Site Manager</span> are explained. Some changes may affect both the <span class="MyVariablesSite Manager">Site Manager</span> and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>. For smaller improvements and bug fixes please see the <a href="OtherImprovements.htm">other improvements</a> section of the release notes.</p>
+        <h2>Image bank</h2>
+        <p><a name="kanchor210"></a>A central place to store all images (except for item images) has been created and is called Image bank. The image bank can be accessed in the ribbon under the tab Site and Look and feel. The Look and feel section of the ribbon was also modified to accommodate this new option.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/TouchButtonLayouts/Ribbon - Look and feel.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="231" data-mc-height="118" src="../../Resources/Images/SiteManager/TouchButtonLayouts/Ribbon - Look and feel_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>When the LS&#160;One system is upgraded a migration happens that moves the images that already exist in various functionalities into the image bank. The following is a list of the images that are moved:</p>
+        <ul>
+            <li value="1">Logos for all touch button layouts</li>
+            <li value="2">Receipt logos from all stores</li>
+            <li value="3">Images from all buttons on POS&#160;layouts</li>
+        </ul>
+        <p>When the images are moved a reference to the new image bank is placed in each of these places instead of the image itself. This means that the same button or logo can be used in many places and when the image needs to be updated it only needs to be updated in the image bank in one place and the change will take effect where ever the image is being used. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/TouchButtonLayouts/ImageBank - view.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1023" data-mc-height="708" src="../../Resources/Images/SiteManager/TouchButtonLayouts/ImageBank - view_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The <a href="../../FieldHelp/Touch buttons/ImageBankView.htm">Image bank view</a> has a search bar which can be used to search for a description or type of image. The dialog where the images are added to the touch button layout, buttons and receipts now also has a search bar and a new image can be added directly through the dialog or added beforehand into the view.</p>
+        <p>If an image is being used it cannot be removed but it can be edited.</p>
+        <h2>Default form profile changes</h2>
+        <p>The default form profile functionality within <a href="../../FieldHelp/Profiles/FormProfilesView.htm">Form profiles</a> has been improved in this release. The default form profile can now be edited to some extent.</p>
+        <p>A new form type (created by partner for example) can be added to the default form profile through the user interface. The layouts can also be changed i.e. a new Voided transaction layout is been created which should be the default receipt for all stores. The Voided transaction form type can be selected, edited and the new layout can be set as the default layout. </p>
+        <p>A form type cannot be removed from the default form profile nor can a form type be empty i.e. without a layout attached.</p>
+        <p>In previous releases LS&#160;One included a data pack that included all receipts, this has now been replaced by <a href="../../HelpTopics/POSSetup/DefaultProfileAndReceiptData.htm">system layouts</a> which can be reset and updated after each release.</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! When resetting the default profile in an existing customer database the previously existing layouts are not removed. The resetting of the default profile will insert all the layouts again and mark them as "system layouts"</p>
+        </div>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">Tips!!! Before resetting the default profile remove all form layouts that have not been changed by the customer.<br /></p>
+        </div>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">Tips!!! To keep a copy of all layouts prior to resetting the default profile, all the layouts can be selected in Form layouts and exported in one click.<br /></p>
+        </div>
+        <h2>User interface changes</h2>
+        <p>Some general user interface changes have been done in this release. In all instances listed in this section the functionality of the view or card has not been changed but the user interface has been updated and made more user friendly.</p>
+        <p><a href="../../FieldHelp/Inventory/VendorView.htm">Vendor view</a> has been changed to create more space for information and a search bar has been added to the items list for the vendor</p>
+        <p><a href="../../FieldHelp/CentralSuspensions/SuspendedTransactionsView.htm">Suspended transactions view</a> has been updated. A search has been added to the view to make it easier for the user to find suspended transactions.</p>
+        <p><a href="../../FieldHelp/Store/StoreView.htm">Store card</a> has been changed to add more space for additional tabs on the card. The address field was moved to the Settings tab but other tabs were not changed.</p>
+        <p><a href="../../FieldHelp/GiftCards/GiftCardsView.htm">Gift cards view</a> has been updated. A search bar has been added to the view where various search parameters can be used to filter the list of gift cards.</p>
+        <p><a href="../../FieldHelp/CreditVouchers/CreditVouchersView.htm">Credit vouchers view</a> has been updated and now contains a search bar to search for credit memos. The list view has also been updated</p>
+        <p>Column names on the income / expense tab on the store card have been set to the correct casing</p>
+        <p><a href="../../FieldHelp/Forms/FormsView.htm">Forms layout view</a> has been changed to have a search bar to make it easier to find form layouts</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

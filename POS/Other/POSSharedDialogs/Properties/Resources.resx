@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AmountDue" xml:space="preserve">
+    <value>Amount due: #1</value>
+    <comment>[Term:18597] - 1120</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>[Term:367] - 5165</comment>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Currencies</value>
+    <comment>[Term:3949]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DownArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DownArrow.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PageDownArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PageDownArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PageUpArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PageUpArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpArrow.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PleaseEnterAmountToPay" xml:space="preserve">
+    <value>Please enter amount to pay</value>
+    <comment>[Term:17263] - 1397</comment>
+  </data>
+  <data name="BarCodeOrQuantity" xml:space="preserve">
+    <value>Bar code or quantity:</value>
+    <comment>[Term:16883] - 1102</comment>
+  </data>
+  <data name="ItemBarCode" xml:space="preserve">
+    <value>Item bar code:</value>
+    <comment>[Term:16884] - 2367</comment>
+  </data>
+  <data name="EnterNumber" xml:space="preserve">
+    <value>Enter number:</value>
+    <comment>[Term:15057] - 1106</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>[Term:3792] - 1103</comment>
+  </data>
+  <data name="EnterExpireDate" xml:space="preserve">
+    <value>Enter expire date</value>
+    <comment>[Term:16895] - 1367</comment>
+  </data>
+  <data name="EnterQuantity" xml:space="preserve">
+    <value>Enter quantity</value>
+    <comment>[Term:7064] - 1110</comment>
+  </data>
+  <data name="EnterAmount" xml:space="preserve">
+    <value>Enter amount</value>
+    <comment>[Term:16705] - 1365</comment>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity: </value>
+    <comment>[Term:20257] - 1104</comment>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Bar code:</value>
+    <comment>[Term:3195] - 1105</comment>
+  </data>
+  <data name="Info48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Pay</value>
+    <comment>[Term:19571]</comment>
+  </data>
+  <data name="CustomerBlocked" xml:space="preserve">
+    <value>This customer has been blocked. No sales or transactions are allowed.</value>
+    <comment>[Term:17520]</comment>
+  </data>
+  <data name="CustomerLimitedToInvoice" xml:space="preserve">
+    <value>This customer is limited to invoices. This account cannot be charged.</value>
+    <comment>[Term:19583]</comment>
+  </data>
+  <data name="CustomerIsCashCustomer" xml:space="preserve">
+    <value>This account cannot be charged to. This customer is a cash customer.</value>
+    <comment>[Term:19574]</comment>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>back:</value>
+    <comment>[Term:20256] - as in "Money back:"</comment>
+  </data>
+  <data name="CancelSearch" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>[Term:367] - Cancel button</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>[Term:9670] - Clear the search in a list view</comment>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Down</value>
+    <comment>[Term:2498] - Navigation button for list view</comment>
+  </data>
+  <data name="PageDown" xml:space="preserve">
+    <value>Page down</value>
+    <comment>[Term:9546] - Navigation button for list view</comment>
+  </data>
+  <data name="PageUp" xml:space="preserve">
+    <value>Page up</value>
+    <comment>[Term:9547] - Navigation button for list view</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>[Term:484] - Search a list view</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+    <comment>[Term:2860] - Select a line in list view</comment>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Up</value>
+    <comment>[Term:2497] - Navigation button for list view</comment>
+  </data>
+  <data name="PleaseEnterAnAmount" xml:space="preserve">
+    <value>Please enter an amount</value>
+    <comment>[Term:16545]</comment>
+  </data>
+  <data name="DeclareStartAmount" xml:space="preserve">
+    <value>Declare start amount</value>
+    <comment>[Term:17672]</comment>
+  </data>
+  <data name="DeclareFloatAmount" xml:space="preserve">
+    <value>Declare float amount</value>
+    <comment>[Term:22155]</comment>
+  </data>
+  <data name="TenderRemoval" xml:space="preserve">
+    <value>Tender removal</value>
+    <comment>[Term:17679]</comment>
+  </data>
+  <data name="Exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Processing</value>
+    <comment>[Term:16487]</comment>
+  </data>
+  <data name="ReadingQR" xml:space="preserve">
+    <value>Reading QR code</value>
+    <comment>[Term:22373]</comment>
+  </data>
+  <data name="RetryQuestion" xml:space="preserve">
+    <value>Would you like to retry?</value>
+    <comment>[Term:22156]</comment>
+  </data>
+  <data name="QuestionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuestionDialogIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenderRemovalDescription" xml:space="preserve">
+    <value>Removed</value>
+    <comment>[Term:13186]</comment>
+  </data>
+  <data name="TenderRemovalLabel" xml:space="preserve">
+    <value>Removed amount</value>
+    <comment>[Term:22375]</comment>
+  </data>
+  <data name="MaxQtyReached" xml:space="preserve">
+    <value>Maximum quantity has been reached</value>
+    <comment>[Term:17729]</comment>
+  </data>
+  <data name="UnableToReadCardStripe" xml:space="preserve">
+    <value>Unable to read card stripe, please try again</value>
+    <comment>[Term:17190]</comment>
+  </data>
+  <data name="PleaseEnterAValue" xml:space="preserve">
+    <value>Please enter a value</value>
+    <comment>[Term:16248]</comment>
+  </data>
+  <data name="NegativePaymentsNotBelowBalance" xml:space="preserve">
+    <value>Negative payments cannot go below the balance amount</value>
+    <comment>[Term:22604]</comment>
+  </data>
+  <data name="OnlyNegativeAmountsAllowed" xml:space="preserve">
+    <value>Only negative amounts are allowed</value>
+    <comment>[Term:22605]</comment>
+  </data>
+  <data name="double_arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double arrow down_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="double_arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\double arrow up_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="single_arrow_down_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\single arrow down_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="single_arrow_up_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\single arrow up_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogExclamation_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogExclamation-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogInfo_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogInfo_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogQuestion_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogQuestion_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogMessage_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogMessage_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomerAccountDeposit" xml:space="preserve">
+    <value>Customer account deposit</value>
+    <comment>[Term:16476]</comment>
+  </data>
+  <data name="NoItemOnScale" xml:space="preserve">
+    <value>No item placed on scale.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Do you want to try again?</value>
+  </data>
+  <data name="BarcodeOrQuantityGhost" xml:space="preserve">
+    <value>Barcode or quantity</value>
+  </data>
+  <data name="ExpiryDate" xml:space="preserve">
+    <value>Expiry date</value>
+  </data>
+  <data name="ItemBarcodeGhost" xml:space="preserve">
+    <value>Item barcode</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="QuantityGhost" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="AmountIn" xml:space="preserve">
+    <value>Amount in</value>
+  </data>
+  <data name="SelectCurrency" xml:space="preserve">
+    <value>Select currency</value>
+  </data>
+  <data name="Whitesearch48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Whitesearch48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="ForPrepayment" xml:space="preserve">
+    <value>For prepayment</value>
+  </data>
+  <data name="Prepaid" xml:space="preserve">
+    <value>Prepaid</value>
+  </data>
+  <data name="SalesOrder" xml:space="preserve">
+    <value>Sales order</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="SalesInvoice" xml:space="preserve">
+    <value>Sales invoice</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="NormalPrice" xml:space="preserve">
+    <value>Normal price</value>
+  </data>
+  <data name="Whitesearch32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Whitesearch32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoInformationAvailable" xml:space="preserve">
+    <value>No information available</value>
+  </data>
+  <data name="GatheringInformation" xml:space="preserve">
+    <value>Gathering information</value>
+  </data>
+  <data name="Arrowdownthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrowdownthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Arrowupthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrowupthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doublearrowdownthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doublearrowdownthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doublearrowupthin_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doublearrowupthin_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MultipleErrorMessages" xml:space="preserve">
+    <value>There are multiple errors. Press here to see all error messages.</value>
+  </data>
+  <data name="Warning_red_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning_red_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomerNotFound" xml:space="preserve">
+    <value>Customer not found</value>
+  </data>
+  <data name="PleaseSelectCustomer" xml:space="preserve">
+    <value>Please select customer</value>
+  </data>
+  <data name="BusinessDay" xml:space="preserve">
+    <value>Business day</value>
+  </data>
+  <data name="SystemDay" xml:space="preserve">
+    <value>System day</value>
+  </data>
+  <data name="BarcodeHeader" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="QuantityHeader" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item ID</value>
+  </data>
+</root>

@@ -1,0 +1,34 @@
+﻿/*
+
+	Incident No.	: ONE-2455
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: Muskat 
+	Date created	: 04.01.2017
+
+	Description		: Creating new table
+	
+	Tables affected	: PAYMENTLIMITATIONS
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'PAYMENTLIMITATIONS')
+BEGIN
+	CREATE TABLE [dbo].[PAYMENTLIMITATIONS](
+		[MASTERID] [uniqueidentifier] NOT NULL,
+		[LIMITATIONMASTERID] [uniqueidentifier] NULL,
+		[TENDERID] [nvarchar](20) NULL,
+		[RESTRICTIONCODE] [nvarchar](200) NULL,
+		[TYPE] [int] NULL,
+		[RELATIONMASTERID] [uniqueidentifier] NULL,
+		[INCLUDE] [int] NULL,
+	 CONSTRAINT [PK_PAYMENTLIMITATIONS] PRIMARY KEY CLUSTERED 
+	(
+		[MASTERID] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+
+END
+GO

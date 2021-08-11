@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Development changes and improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.1/DevelopmentNotes.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Development changes and improvements</h1>
+        <h2>Development guide</h2>
+        <p>For the last few months the LS&#160;One team has been rewriting the development guide to be published as an <a href="http://devhelp.ls-one.com/" target="_blank">online help website</a> rather then having it as a document as we've done in previous years.</p>
+        <p>As of this release most of the <span class="MyVariablesSite Manager">Site Manager</span> information has been rewritten and added to the development help but the POS sections are to be rewritten and published. On the current website the POS&#160;chapters are as they were in the last version of the LS&#160;One Development guide documents.</p>
+        <p>To see the new development guide website please <a href="http://devhelp.ls-one.com/" target="_blank">click here</a>.&#160;</p>
+        <p>The rewriting of the POS&#160;chapters as well as the Integration Framework documentation will be finished this summer.</p>
+        <h2>ExtraInfo in Receipt designer code changes</h2>
+        <p>The code to implement the "ExtraInfo" variables for the receipt header/lines/footer has been moved to the FormModulation.Partner.cs file to make the maintenance of the customization easier.</p>
+        <p>In addition the functions that get and print information for the tax lines on the receipt as well as the tender lines also call a function in FormModulation.Partner.cs where a partner can add information to the receipt using the ExtraInfo variables.</p>
+        <h2>Customer orders and Quotes</h2>
+        <p>In this release a customer order/quote cannot be created if there is a gift card on the sale. This restriction is in the Customer order service and can be removed and/or modified in a customization.</p>
+        <h2>Default form profile changes</h2>
+        <p>The system profiles that are now inserted when "Reset system profile" is selected in Form profile are now created and maintained in a SQL&#160;script that can be found in DatabaseUtil\ImportData\SytemData\002-00 - DefaultFormProfile.sql</p>
+        <p>The scripts in the System data folder that have "-00" suffix are maintained by the LS&#160;One product team. A partner can create one or more System style or Default form profile scripts to update/add to the styles or form layouts. Two example scripts have been added to the SystemData folder in DatabaseUtility for each type but all scripts that are named "001-XX - SystemStyles" are run when the user clicks "Reset system styles". The same goes for the Default form profile scripts</p>
+        <p>For an example see FormProfilesView in the Profiles plugin: function ResetSystemFormProfile</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!! The System data scripts are also run when a new database is created</p>
+        </div>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/SystemData - DatabaseUtility.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="284" data-mc-height="127" src="Resources/SystemData - DatabaseUtility_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <h2>Exit, Restart, Shutdown and Activate training</h2>
+        <p>The Exit, Restart, Shutdown and Activate training panels in the logon dialog were added to the LogonPanelService and can be customized the same way the logon panel can be customized.</p>
+        <h2>Changes in code (not functionality)</h2>
+        <p>All the code for the Recall suspended transaction operation in the POS&#160;has now been moved to the CentralSuspensionService</p>
+        <p>The Customer account deposit operation code is now in the Customer service and the new Customer account deposit dialog is in PosSharedDialogs where the other payment dialogs are as well. Before the entire functionality was within the POS core.</p>
+        <p>All properties marked Obsolete removed from:</p>
+        <ul>
+            <li value="1"> Business objects</li>
+            <li value="2">Data providers</li>
+            <li value="3">Transaction objects</li>
+            <li value="4">Service interfaces</li>
+        </ul>
+        <p>All Z-OBSOLETE files from the data layer have been removed.</p>
+        <p>Fields PURCHASEPRICEINCLTAX, PURCHASEPRICEUNIT, PURCHASEMARKUP&#160; and SALESPRICEUNIT have been removed from the RetailItem table. These fields were not used by the system. The business object properties have been set as obsolete</p>
+        <p>Migrated a handful of stored procedures related to the user, to data providers.</p>
+        <h2>Listview changes</h2>
+        <p>A bug has been fixed where the relative size of the ListView columns was ignored when used in conjunction with auto size. listView.AutoSizeColumns(true) is supposed to autosize all columns and apply the relative size but it was only auto sizing them. This change can affect list views where the relative size was set but the listView.ApplyRelativeColumnSize was not specifically called so the look and feel of the columns of those list views might change</p>
+        <h2>Help page redirection</h2>
+        <p>A new function has been added to the Site Manager framework that can be overwritten to redirect the view to display a specific help website either outside of the LS One online help or to display the correct help page when the same view is being used for more than one functionality.</p>
+        <p>If the function is not overwritten the default help functionality as it was in the Site Manager will continue to work as it was before.</p>
+        <p>This functionality uses a new object HelpSettings that is in the Business objects solution. The default URL for the LS One help website is set there and can be changed by the partner e.g. if the help has been translated.</p>
+        <p>For an example see the CustomerOrdersView in the CustomerOrders plugin.</p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Note!!!&#160;This will especially help partners that are creating add-ons to LS&#160;One and would like the F1 or Help buttons on views and dialogs to be redirected to a website with information about the functionality</p>
+        </div>
+        <h2>Image bank</h2>
+        <p>A new table was created for the images called IMAGES. A new field was added to tables;&#160;POSMENULINE, RBOSTORETABLE, POSISTILLLAYOUT that now holds the reference to the image table.</p>
+        <h2>Datalayer changes</h2>
+        <p>A new DataEntity base-class called OptimizedUpdateDataEntity has been added that enabled updating only a subset of fields in a table. This means that you can now populate only the properties on a BusinessObject that you want to update and the SqlServerStatement class will create a reduced SQL update statement based on the properties that were updated. The rest of the properties are then ignored in favor of more granular control of the BusinessObject.</p>
+        <p><a name="kanchor33"></a>For examples see Retail item, Retail group business objects and data providers. There is also a special topic on this functionality in the Development guide.</p>
+        <h2>Task bar customizations</h2>
+        <p>How to add text to the task bar sections in a customization has been documented in the development guide as well as a list of all sections that are available for customization as well as an explanation of all other sections that the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> uses</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/status bar - free text.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1021" data-mc-height="41" src="Resources/status bar - free text_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

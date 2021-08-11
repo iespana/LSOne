@@ -1,0 +1,21 @@
+﻿/*
+
+	Incident No.	: 18718
+	Responsible		: Erna Guðrún Sigurðardóttir
+	Sprint			: LS Retail .NET 2013\Mercury
+	Date created	: 17.09.2012
+
+	Description		: Add column MODIFIEDITEMS to table STATIONSELECTION
+	
+	
+	Tables affected	: STATIONSELECTION
+						
+*/
+USE LSPOSNET
+GO
+  
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('STATIONSELECTION') AND NAME='MODIFIEDITEMS')
+BEGIN
+	ALTER TABLE STATIONSELECTION ADD MODIFIEDITEMS int NULL
+END	
+GO

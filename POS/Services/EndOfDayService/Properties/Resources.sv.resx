@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount" xml:space="preserve">
+    <value>Belopp</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="LineDiscount" xml:space="preserve">
+    <value>Radrabatt</value>
+  </data>
+  <data name="StaffID" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="TotalDiscounts" xml:space="preserve">
+    <value>Total rabatt</value>
+  </data>
+  <data name="TenderName" xml:space="preserve">
+    <value>Betalningsmedel namn</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Ant</value>
+  </data>
+  <data name="TaxNumber" xml:space="preserve">
+    <value>Momsregistreringsnr:</value>
+  </data>
+  <data name="GrossReturns" xml:space="preserve">
+    <value>Bruttoreturer</value>
+  </data>
+  <data name="TotalReturnNetAmount" xml:space="preserve">
+    <value>Totalt retursumma:</value>
+  </data>
+  <data name="TotalReturnNetAmountInclTax" xml:space="preserve">
+    <value>Totalt returbelopp inkl. moms:</value>
+  </data>
+  <data name="AmtInclTax" xml:space="preserve">
+    <value>Belopp inkl. moms</value>
+  </data>
+  <data name="ConfirmZReportPrinting" xml:space="preserve">
+    <value>Vill du skriva ut Z-rapporten?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="EnterGrossAmt" xml:space="preserve">
+    <value>Ange bruttobelopp</value>
+  </data>
+  <data name="EnterNetAmt" xml:space="preserve">
+    <value>Ange nettobelopp</value>
+  </data>
+  <data name="EnterNewZ" xml:space="preserve">
+    <value>Ange ny Z-ID</value>
+  </data>
+  <data name="EnterNewZID" xml:space="preserve">
+    <value>Ange ny Z-rapport ID</value>
+  </data>
+  <data name="ExclTax" xml:space="preserve">
+    <value>(utan moms)</value>
+  </data>
+  <data name="GrossAmtLowerThanNetAmt" xml:space="preserve">
+    <value>Bruttobelopp kan inte vara lägre än nettobelopp.</value>
+  </data>
+  <data name="GrossSales" xml:space="preserve">
+    <value>Förs. före rabatter</value>
+  </data>
+  <data name="InclTax" xml:space="preserve">
+    <value>Belopp inkl. moms</value>
+  </data>
+  <data name="IncomeExpenseDescr" xml:space="preserve">
+    <value>Inkomst-/utgiftskonton</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Fakturor</value>
+  </data>
+  <data name="NetAmt" xml:space="preserve">
+    <value>Nettobelopp</value>
+  </data>
+  <data name="NetReturns" xml:space="preserve">
+    <value>Total retursumma</value>
+  </data>
+  <data name="NetSales" xml:space="preserve">
+    <value>Total försäljningssumma</value>
+  </data>
+  <data name="NoOfCustomerTransactions" xml:space="preserve">
+    <value>Antal kvitton med kundnr</value>
+  </data>
+  <data name="NoOfDrawerOpenings" xml:space="preserve">
+    <value>Antal kassaöppingar</value>
+  </data>
+  <data name="NoOfItems" xml:space="preserve">
+    <value>Antal sålda artiklar</value>
+  </data>
+  <data name="NoOfItemsReturned" xml:space="preserve">
+    <value>Antal returnerade artiklar</value>
+  </data>
+  <data name="NoOfLogins" xml:space="preserve">
+    <value>Antal inloggningar</value>
+  </data>
+  <data name="NoOfReturnedTransactions" xml:space="preserve">
+    <value>Antal returkvitton</value>
+  </data>
+  <data name="NoOfSuspendedTransactions" xml:space="preserve">
+    <value>Antal oavslutade förs.</value>
+  </data>
+  <data name="NoPrinterConfiguredNoXRpt" xml:space="preserve">
+    <value>Ingen skrivare konfigurerad. X-rapporten kommer att avbrytas</value>
+  </data>
+  <data name="NoPrinterConfiguredNoZRpt" xml:space="preserve">
+    <value>Ingen skrivare konfigurerad. Z-rapporten kommer att avbrytas</value>
+  </data>
+  <data name="NoZReportID" xml:space="preserve">
+    <value>Inget Z-rapport ID har skapats. Åtgärden kan inte fortsätta</value>
+  </data>
+  <data name="OldXReport" xml:space="preserve">
+    <value>Gammal X-rapport</value>
+  </data>
+  <data name="OtherInformation" xml:space="preserve">
+    <value>Annan information</value>
+  </data>
+  <data name="PreviousZAmtNotValid" xml:space="preserve">
+    <value>Belopp i tidigare Z-rapporter är ogiltiga. Åtgärden är inte tillåten. </value>
+  </data>
+  <data name="PreviousZNotValid" xml:space="preserve">
+    <value>Föregående Z-rapporter är ogiltiga. Åtgärden är inte tillåten</value>
+  </data>
+  <data name="PreviousZReportsMissing" xml:space="preserve">
+    <value>Föregående Z-rapporter saknas. Åtgärden är inte tillåten</value>
+  </data>
+  <data name="ReceiptCopies" xml:space="preserve">
+    <value>Kvittokopior</value>
+  </data>
+  <data name="ReturnReport" xml:space="preserve">
+    <value>Returrapport #1</value>
+  </data>
+  <data name="Returns" xml:space="preserve">
+    <value>returer</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>försäljning</value>
+  </data>
+  <data name="SalesReport" xml:space="preserve">
+    <value>Förs. före rabatter #1</value>
+  </data>
+  <data name="StatisticDescription" xml:space="preserve">
+    <value>Statistik</value>
+  </data>
+  <data name="SumOfReturnedTransactions" xml:space="preserve">
+    <value>Antal returer</value>
+  </data>
+  <data name="TaxReport" xml:space="preserve">
+    <value>Momsrapport #1</value>
+  </data>
+  <data name="TenderAmount" xml:space="preserve">
+    <value>Belopp</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Totalt belopp</value>
+  </data>
+  <data name="TotalNetAmount" xml:space="preserve">
+    <value>Totalt belopp:</value>
+  </data>
+  <data name="TotalNetAmountInclTax" xml:space="preserve">
+    <value>Totalt belopp inkl. moms:</value>
+  </data>
+  <data name="TotalNetSales" xml:space="preserve">
+    <value>Total försäljningssumma</value>
+  </data>
+  <data name="TotalNoOfTransactions" xml:space="preserve">
+    <value>Totalt antal transaktioner</value>
+  </data>
+  <data name="TotalPOSSalesAmt" xml:space="preserve">
+    <value>Totalt kassaförsäljningsbelopp:</value>
+  </data>
+  <data name="TotalPOSSalesAmtChanges" xml:space="preserve">
+    <value>Totalt kassaförsäljningsbelopp förändringar:</value>
+  </data>
+  <data name="TotalReturnAmount" xml:space="preserve">
+    <value>Totalt retursumma</value>
+  </data>
+  <data name="TrainingTransactions" xml:space="preserve">
+    <value>Övningskvitton</value>
+  </data>
+  <data name="XReport" xml:space="preserve">
+    <value>X-rapport</value>
+  </data>
+  <data name="ZReport" xml:space="preserve">
+    <value>Z-rapport</value>
+  </data>
+  <data name="ZReportID" xml:space="preserve">
+    <value>Z-rapport ID</value>
+  </data>
+  <data name="ZReportIDAlreadyExists" xml:space="preserve">
+    <value>Z-rapport ID finns redan. Åtgärden kommer att avbrytas</value>
+  </data>
+  <data name="TotalSalesAmt" xml:space="preserve">
+    <value>Ink/MOMS</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Operator-ID</value>
+  </data>
+  <data name="StoreID" xml:space="preserve">
+    <value>Butiks-ID</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal-ID</value>
+  </data>
+  <data name="ItemSalesReport" xml:space="preserve">
+    <value>Artikelförsäljning rapport</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Kund</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Konto</value>
+  </data>
+  <data name="CurrencyReport" xml:space="preserve">
+    <value>Valutarapport</value>
+  </data>
+  <data name="NoOfSalesTransactions" xml:space="preserve">
+    <value>Antal kassakvitton (sälj)</value>
+  </data>
+  <data name="NoOfVoidedTransactions" xml:space="preserve">
+    <value>Antal makulerade kvitton</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Butik</value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>Terminal-ID</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="TotalAmountAbbreviated" xml:space="preserve">
+    <value>Totalt belopp</value>
+  </data>
+  <data name="BankDrop" xml:space="preserve">
+    <value>Bankinsättning</value>
+  </data>
+  <data name="FloatEntry" xml:space="preserve">
+    <value>Växelkassa</value>
+  </data>
+  <data name="InOut" xml:space="preserve">
+    <value>In / ut</value>
+  </data>
+  <data name="NoSaleReport" xml:space="preserve">
+    <value>Ingen förs.rapport</value>
+  </data>
+  <data name="SafeDrop" xml:space="preserve">
+    <value>Kassaskåpsinsättning</value>
+  </data>
+  <data name="SalesInvoice" xml:space="preserve">
+    <value>Förs.faktura</value>
+  </data>
+  <data name="SalesOrder" xml:space="preserve">
+    <value>Förs.order</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Moms</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>Momsgrupp</value>
+  </data>
+  <data name="TenderRemoval" xml:space="preserve">
+    <value>Borttag av betalningsmedel</value>
+  </data>
+  <data name="TenderReport" xml:space="preserve">
+    <value>Betalningsmedel rapport</value>
+  </data>
+  <data name="WithoutTaxAbbreviated" xml:space="preserve">
+    <value>Exk/MOMS</value>
+  </data>
+  <data name="BankDropReversal" xml:space="preserve">
+    <value>Bankinsättning reversion</value>
+  </data>
+  <data name="SafeDropReversal" xml:space="preserve">
+    <value>Kassaskåpsinsättning reversion</value>
+  </data>
+  <data name="EndOfDayOperationQuestion" xml:space="preserve">
+    <value>Vill göra dagsavslut?</value>
+  </data>
+  <data name="EndOfShiftQuestion" xml:space="preserve">
+    <value>Vill göra skiftavslut?</value>
+  </data>
+  <data name="BusinessDay" xml:space="preserve">
+    <value>Affärsdatum</value>
+  </data>
+  <data name="ChangeBackReport" xml:space="preserve">
+    <value>Växelrapport</value>
+  </data>
+  <data name="CombinedReturns" xml:space="preserve">
+    <value>Returer</value>
+  </data>
+  <data name="CustomerDeposits" xml:space="preserve">
+    <value>Kundhandpenning</value>
+  </data>
+  <data name="GrandTotal" xml:space="preserve">
+    <value>TOTALT:</value>
+  </data>
+  <data name="PrintedOn" xml:space="preserve">
+    <value>Utskriven</value>
+  </data>
+  <data name="RoundingDifference" xml:space="preserve">
+    <value>Avrundningsskillnad</value>
+  </data>
+  <data name="RoundingReport" xml:space="preserve">
+    <value>Avrundningsrapport</value>
+  </data>
+  <data name="TenderDeclarationReport" xml:space="preserve">
+    <value>Kassaredovisningsrapport</value>
+  </data>
+  <data name="TotalReturns" xml:space="preserve">
+    <value>TOTAL RETURER:</value>
+  </data>
+  <data name="TotalSales" xml:space="preserve">
+    <value>TOTAL FÖRSÄLJNING:</value>
+  </data>
+  <data name="WithTaxAbbreviation" xml:space="preserve">
+    <value>Ink/skatt</value>
+  </data>
+  <data name="WTax" xml:space="preserve">
+    <value>Ink/skatt</value>
+  </data>
+  <data name="CustomerOrderDeposits" xml:space="preserve">
+    <value>Kundorderinbetalningar</value>
+  </data>
+  <data name="NoOfDepositTransactions" xml:space="preserve">
+    <value>Antal inbetalningstransaktioner</value>
+  </data>
+  <data name="RedeemedDeposits" xml:space="preserve">
+    <value>Inlösta inbetalningar</value>
+  </data>
+</root>

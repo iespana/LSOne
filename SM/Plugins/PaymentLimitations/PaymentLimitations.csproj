@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7F0F1ED-ABBB-43F1-A283-41C6228A6FC9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.PaymentLimitations</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.PaymentLimitations</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\CopyLimitationsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CopyLimitationsDialog.Designer.cs">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LimitationCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LimitationCodeDialog.Designer.cs">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PaymentLimitationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PaymentLimitationDialog.Designer.cs">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ViewPages\AllowedPaymentTypesLimitationsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\AllowedPaymentTypesLimitationsPage.designer.cs">
+      <DependentUpon>AllowedPaymentTypesLimitationsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\FunctionalityProfileLimitationsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\FunctionalityProfileLimitationsPage.designer.cs">
+      <DependentUpon>FunctionalityProfileLimitationsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PaymentMethodLimitationsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PaymentMethodLimitationsPage.Designer.cs">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.bg.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.cs.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.da.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.de.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.el.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.en-ZA.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.es-MX.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.es.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.fi.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.fr.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.hi.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.is.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.it.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.ja.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.ko.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.nb-NO.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.nl-BE.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.nl.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.pl.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.pt-BR.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.ru.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.sv.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.zh-CHS.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CopyLimitationsDialog.zh-CHT.resx">
+      <DependentUpon>CopyLimitationsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.bg.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.cs.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.da.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.de.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.el.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.en-ZA.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.es-MX.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.es.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.fi.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.fr.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.hi.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.is.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.it.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.ja.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.ko.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.nb-NO.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.nl-BE.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.nl.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.pl.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.pt-BR.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.ru.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LimitationCodeDialog.sv.resx">
+      <DependentUpon>LimitationCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.bg.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.cs.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.da.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.de.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.el.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.en-ZA.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.es-MX.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.es.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.fi.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.fr.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.hi.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.is.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.it-IT.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.it.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.ja-JP.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.ja.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.ko.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.nb-NO.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.nl-BE.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.nl.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.pl.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.pt-BR.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PaymentLimitationDialog.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.ru.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.sv.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.zh-CHS.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\paymentlimitationdialog.zh-CHT.resx">
+      <DependentUpon>PaymentLimitationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AllowedPaymentTypesLimitationsPage.resx">
+      <DependentUpon>AllowedPaymentTypesLimitationsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\FunctionalityProfileLimitationsPage.resx">
+      <DependentUpon>FunctionalityProfileLimitationsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.bg.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.cs.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.da.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.de.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.el.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\paymentmethodlimitationspage.en-ZA.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\paymentmethodlimitationspage.es-MX.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.es.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.fi.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.fr.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.hi.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.is.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.it-IT.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.it.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.ja-JP.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.ja.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.ko.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.nb-NO.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.nl-BE.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.nl.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.pl.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.pt-BR.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.ru.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.sv.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.zh-CHS.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PaymentMethodLimitationsPage.zh-CHT.resx">
+      <DependentUpon>PaymentMethodLimitationsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

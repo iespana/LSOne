@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <data name="BlockedForPurchase" xml:space="preserve">
+    <value>Blocked for purchase</value>
+    <comment>[Term:20305]</comment>
+  </data>
+  <data name="BlockedForPurchaseAndReplenishment" xml:space="preserve">
+    <value>Blocked for purchase and replenishment</value>
+    <comment>[Term:20306]</comment>
+  </data>
+  <data name="BlockedForReplenishment" xml:space="preserve">
+    <value>Blocked for replenishment</value>
+    <comment>[Term:20307]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Edit all</value>
+    <comment>[Term:19817]</comment>
+  </data>
+  <data name="LikeForLike" xml:space="preserve">
+    <value>Like for like</value>
+    <comment>[Term:20202]</comment>
+  </data>
+  <data name="NotBlocked" xml:space="preserve">
+    <value>Not blocked</value>
+    <comment>[Term:20317]</comment>
+  </data>
+  <data name="InventoryTemplates" xml:space="preserve">
+    <value>Inventory templates</value>
+    <comment>[Term:20223]</comment>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiles</value>
+    <comment>[Term:2713]</comment>
+  </data>
+  <data name="Replenishment" xml:space="preserve">
+    <value>Replenishment</value>
+    <comment>[Term:8193]</comment>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Retail department</value>
+    <comment>[Term:3294]</comment>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Retail group</value>
+    <comment>[Term:3295]</comment>
+  </data>
+  <data name="RetailItem" xml:space="preserve">
+    <value>Retail item</value>
+    <comment>[Term:3296]</comment>
+  </data>
+  <data name="StockLevel" xml:space="preserve">
+    <value>Stock level</value>
+    <comment>[Term:20207]</comment>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Store setup</value>
+    <comment>[Term:14627]</comment>
+  </data>
+  <data name="RevertSmallImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RevertSmallImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+    <comment>[Term:2119]</comment>
+  </data>
+  <data name="PurchaseWorksheets" xml:space="preserve">
+    <value>Purchase worksheets</value>
+    <comment>[Term:20226]</comment>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>General setup</value>
+    <comment>[Term:14659]</comment>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventory</value>
+    <comment>[Term:3667]</comment>
+  </data>
+  <data name="book_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InventoryTemplatesDescription" xml:space="preserve">
+    <value>Use this option to manage inventory templates</value>
+    <comment>[Term:20324]</comment>
+  </data>
+  <data name="AllStores" xml:space="preserve">
+    <value>All stores</value>
+    <comment>[Term:4006]</comment>
+  </data>
+  <data name="InventoryTemplate" xml:space="preserve">
+    <value>Inventory template</value>
+    <comment>[Term:20222]</comment>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+    <comment>[Term:2084]</comment>
+  </data>
+  <data name="DeletePurchaseWorksheetLine" xml:space="preserve">
+    <value>Delete line</value>
+    <comment>[Term:20210]</comment>
+  </data>
+  <data name="DeletePurchaseWorksheetLineQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected line?</value>
+    <comment>[Term:20302]</comment>
+  </data>
+  <data name="MultipleStores" xml:space="preserve">
+    <value>Multiple stores</value>
+    <comment>[Term:20314]</comment>
+  </data>
+  <data name="PurchaseWorksheetsDescription" xml:space="preserve">
+    <value>Use this option to manage purchase worksheets</value>
+    <comment>[Term:20325]</comment>
+  </data>
+  <data name="ItemFilter" xml:space="preserve">
+    <value>Item filter</value>
+    <comment>[Term:9122]</comment>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Special group</value>
+    <comment>[Term:3807]</comment>
+  </data>
+  <data name="Vendors" xml:space="preserve">
+    <value>Vendors</value>
+    <comment>[Term:14867]</comment>
+  </data>
+  <data name="DefaultVendors" xml:space="preserve">
+    <value>Default vendors</value>
+    <comment>[Term:20201]</comment>
+  </data>
+  <data name="DeleteReplenishmentSetting" xml:space="preserve">
+    <value>Delete replenishment setting</value>
+    <comment>[Term:20215]</comment>
+  </data>
+  <data name="DeleteReplenishmentSettingQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected replenishment setting ?</value>
+    <comment>[Term:20220]</comment>
+  </data>
+  <data name="DeleteInventoryTemplate" xml:space="preserve">
+    <value>Delete inventory template</value>
+    <comment>[Term:20229]</comment>
+  </data>
+  <data name="DeleteInventoryTemplateQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected inventory template?</value>
+    <comment>[Term:20232]</comment>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>[Term:2127]</comment>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+    <comment>[Term:19849]</comment>
+  </data>
+  <data name="ResetWorksheet" xml:space="preserve">
+    <value>Reset worksheet</value>
+    <comment>[Term:20206]</comment>
+  </data>
+  <data name="ResetWorksheetQuestion" xml:space="preserve">
+    <value>Are you sure you would like to reset the worksheet? You will lose all manual changes to the worksheet.</value>
+    <comment>[Term:20304]</comment>
+  </data>
+  <data name="QuantityUpdated" xml:space="preserve">
+    <value>Suggested quantity updated</value>
+    <comment>[Term:20212]</comment>
+  </data>
+  <data name="QuantityUpdatedQuestion" xml:space="preserve">
+    <value>Suggested quantity has changed for some items. Would you like to update the ordering quantity to be equal to the new suggested quantities? This will not affect manually added items nor items modified by user.</value>
+    <comment>[Term:20213]</comment>
+  </data>
+  <data name="NoPurchaseUnitFound" xml:space="preserve">
+    <value>No purchase unit found. This item will not be added</value>
+    <comment>[Term:20234]</comment>
+  </data>
+  <data name="NoVendorFound" xml:space="preserve">
+    <value>No vendor found. This item will not be added</value>
+    <comment>[Term:20316]</comment>
+  </data>
+  <data name="PostPurchaseWorksheet" xml:space="preserve">
+    <value>Post purchase worksheet</value>
+    <comment>[Term:20318]</comment>
+  </data>
+  <data name="PostPurchaseWorksheetQuestion" xml:space="preserve">
+    <value>Are you sure you would like the post the purchase worksheet ?</value>
+    <comment>[Term:20300]</comment>
+  </data>
+  <data name="PurchaseOrderCreated" xml:space="preserve">
+    <value>Purchase order created</value>
+    <comment>[Term:20319]</comment>
+  </data>
+  <data name="PurchaseOrderCreatedQuestion" xml:space="preserve">
+    <value>Would you like to view the purchase order ?</value>
+    <comment>[Term:20326]</comment>
+  </data>
+  <data name="PurchaseOrdersCreated" xml:space="preserve">
+    <value>Purchase orders created</value>
+    <comment>[Term:20321]</comment>
+  </data>
+  <data name="PurchaseOrdersCreatedQuestion" xml:space="preserve">
+    <value>#1 purchase orders created. Would you like to view them ?</value>
+    <comment>[Term:20298]</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+    <comment>[Term:2850]</comment>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Convertible</value>
+    <comment>[Term:3656]</comment>
+  </data>
+  <data name="InventoryUnitMissing" xml:space="preserve">
+    <value>Inventory unit missing for item</value>
+    <comment>[Term:15291]</comment>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the inventory unit for the selected item.</value>
+    <comment>[Term:14884]</comment>
+  </data>
+  <data name="PurchaseWorksheetSettings" xml:space="preserve">
+    <value>Purchase worksheet</value>
+    <comment>[Term:20225]</comment>
+  </data>
+  <data name="DeleteReplenishmentSettings" xml:space="preserve">
+    <value>Delete replenishment settings</value>
+    <comment>[Term:20216]</comment>
+  </data>
+  <data name="DeleteReplenishmentSettingsQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected replenishment settings ?</value>
+    <comment>[Term:20303]</comment>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Vendor</value>
+    <comment>[Term:14866]</comment>
+  </data>
+  <data name="DeletePurchaseWorksheetLines" xml:space="preserve">
+    <value>Delete purchase worksheet lines</value>
+    <comment>[Term:20231]</comment>
+  </data>
+  <data name="DeletePurchaseWorksheetLinesQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected lines ?</value>
+    <comment>[Term:20219]</comment>
+  </data>
+  <data name="DeleteInventoryTemplates" xml:space="preserve">
+    <value>Delete inventory templates</value>
+    <comment>[Term:20230]</comment>
+  </data>
+  <data name="DeleteInventoryTemplatesQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected inventory templates ?</value>
+    <comment>[Term:20301]</comment>
+  </data>
+  <data name="NoSettingFound" xml:space="preserve">
+    <value>No replenishment settings have been configured for the item. This item will not be added</value>
+    <comment>[Term:20315]</comment>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+    <comment>[Term:2177]</comment>
+  </data>
+  <data name="RemoveAction" xml:space="preserve">
+    <value>Remove action</value>
+    <comment>[Term:22723]</comment>
+  </data>
+  <data name="SelectStoreToDeleteOverwriteSettings" xml:space="preserve">
+    <value>Select store to delete overwrite settings for.</value>
+    <comment>[Term:22724]</comment>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Purchase</value>
+    <comment>[Term:3671]</comment>
+  </data>
+  <data name="PurchaseWorksheet" xml:space="preserve">
+    <value>Worksheets</value>
+    <comment>[Term:8772]</comment>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Templates</value>
+    <comment>[Term:5260]</comment>
+  </data>
+  <data name="templates_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\templates_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="templates_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\templates_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worksheets_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\worksheets_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worksheets_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\worksheets_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Could not connect to Site Service</value>
+    <comment>[Term:16005]</comment>
+  </data>
+  <data name="NoStoreServerIsSetUp" xml:space="preserve">
+    <value>Site Service has not been configured yet</value>
+    <comment>[Term:16010]</comment>
+  </data>
+  <data name="TemplateCannotBeDeletedWhenOpenWorksheetsAreAttached" xml:space="preserve">
+    <value>The template cannot be deleted as there are worksheets attached to it</value>
+    <comment>[Term:23301]</comment>
+  </data>
+  <data name="InventoryTemplatesTooltipDescription" xml:space="preserve">
+    <value>Manage inventory templates for purchase orders, store transfers and stock counting</value>
+    <comment>[Term:23504]</comment>
+  </data>
+  <data name="PurchaseWorksheetsTooltipDescription" xml:space="preserve">
+    <value>Manage purchase worksheets to create purchase orders based on replenishment settings</value>
+    <comment>[Term:23505]</comment>
+  </data>
+  <data name="PostPurchaseWorksheetNonInventoryItemsQuestion" xml:space="preserve">
+    <value>There are items on the worksheet that cannot be posted to a purchase order. Do you want to continue?</value>
+    <comment>[Term:23702]</comment>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>No unit conversion rule exists to convert from the selected unit to the inventory unit for the selected item. Would you like to create the rule?</value>
+    <comment>[Term:14885]</comment>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Unit conversion rule is missing</value>
+    <comment>[Term:14890]</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:24195]</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>[Term:24186]</comment>
+  </data>
+  <data name="StockCounting" xml:space="preserve">
+    <value>Stock counting</value>
+    <comment>[Term:11087]</comment>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+    <comment>[Term:5359]</comment>
+  </data>
+  <data name="DeleteAreaQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected area?</value>
+    <comment>[Term:24187]</comment>
+  </data>
+  <data name="DeleteAreaQuestionCaption" xml:space="preserve">
+    <value>Delete area</value>
+    <comment>[Term:24184]</comment>
+  </data>
+  <data name="NoStoresSelected" xml:space="preserve">
+    <value>No stores selected. The template will not be saved.</value>
+    <comment>[Term:24481]</comment>
+  </data>
+  <data name="PostPurchaseWorksheetNonVendorItems" xml:space="preserve">
+    <value>There are items on the worksheet that cannot be posted because they have no vendor selected.</value>
+  </data>
+  <data name="AreaLineInUse" xml:space="preserve">
+    <value>The selected area is in use and cannot be deleted.</value>
+  </data>
+  <data name="TransferOrders" xml:space="preserve">
+    <value>Transfer orders</value>
+  </data>
+  <data name="FewMinutesMessage" xml:space="preserve">
+    <value>This might take a few minutes</value>
+  </data>
+  <data name="InventoryOnHand" xml:space="preserve">
+    <value>Inventory on hand</value>
+  </data>
+  <data name="PostPurchaseWorksheetError" xml:space="preserve">
+    <value>There was an error posting the purchase worksheet.</value>
+  </data>
+  <data name="PostPurchaseWorksheetNoItems" xml:space="preserve">
+    <value>The purchase worksheet contains no items to post.</value>
+  </data>
+  <data name="PostPurchaseWorksheetTemplateNotFound" xml:space="preserve">
+    <value>The inventory template could not be found for the purchase worksheet.</value>
+  </data>
+  <data name="AssemblyItemWillBeReplacedWithComponents" xml:space="preserve">
+    <value>This assembly item will be replaced with its components when the template is used.</value>
+  </data>
+  <data name="ComponentsNotAddedHaveNoDefaultVendor" xml:space="preserve">
+    <value>The following assembly components were not added because they have no default vendor:</value>
+  </data>
+</root>

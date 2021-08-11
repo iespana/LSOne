@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.2">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Inventory improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.2/InventoryImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Inventory improvements</h1>
+        <p>Various changes and improvements needed to be done in order to accommodate the implementation of the Mobile inventory app. To see a description of the Inventory app functionality itself <a href="MobileInventory.htm">please click here</a>.</p>
+        <p>&#160;</p>
+        <h2>Inventory templates</h2>
+        <p>Previously inventory templates could only be created and used as a base for a worksheet for purchase orders. Now we have added an option to create a template and worksheets for stock counting. When the system is updated all previously existing templates and worksheets will be marked as being of type purchase order but moving forward the user must select what type of template is being created.</p>
+        <p>To accommodate the stock counting functionality and configurations the <a href="../../FieldHelp/Replenishment/InventoryTemplateView.htm">Inventory template view</a> was changed both the functionality and user interface.</p>
+        <p>The properties that were previously under "Purchase worksheet settings" have now been divided up between the "General" tab and the "Purchase worksheet" tab. The general has configurations that will apply to any template created and then each type of template will have it's own tab with the specific configurations that apply to that type.</p>
+        <h3><a name="kanchor70"></a>Item filter tab</h3>
+        <p>The "Item filter" tab applies to all types of templates and the functionality remains as it was. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/Inventory template - Stock counting.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/Inventory template - Stock counting_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h3>General tab</h3>
+        <p>On the general tab a new configuration called "Unit selection" can be viewed where the user can select which unit will be selected by default when the worksheet is being created. The default value when a new template is created is "Inventory unit" which is the functionality as it was before this option was added. This configuration is now used in both purchase order worksheets and stock journals.</p>
+        <p>Other configurations were already existing on the inventory templates and their functionality has not changed.</p>
+        <h3>Purchase worksheet</h3>
+        <p>All configurations were already existing on the inventory templates and their functionality has not changed.</p>
+        <h3>Stock counting</h3>
+        <p>"Type of entering" is a new option where it can be controlled if a new line should be created in the stock counting worksheet when an item is added again to the same worksheet or if the quantity of the existing item should be updated.</p>
+        <p>The remaining configurations all have to do with the stock counting functionality on the Mobile inventory app. </p>
+        <p>Please note that the item filter functionality in the stock counting template is not applicable to the Mobile&#160;inventory app. But it is used when creating a new stock counting journal from a template.</p>
+        <p>"Quantity method" option controls if the Mobile&#160;inventory app asks the user for the quantity when doing stock counting or if the app sets a default value for the quantity (set in "Default quantity" option)</p>
+        <p>When doing stock counting in the Mobile&#160;inventory app the user can be asked to select an area where the stock counting is being done. This area can be any text and is not connected to any location or region in any way. </p>
+        <p>By clicking the "Copy from" button below the list, previously created areas can be viewed and used again. The area information is copied onto the new template so any changes done will not change the area values on the template where original area values are being used.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Inventory template - Area.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="803" data-mc-height="418" src="Resources/Inventory template - Area_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Inventory template - copy area.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="490" data-mc-height="429" src="Resources/Inventory template - copy area_thumb_0_300.png" style="width: 332px;height: 290px;" tabindex="" /></a>
+        </p>
+        <h2>Stock counting</h2>
+        <p>When creating a new stock counting journal a new option to create a journal from a stock counting template has been added. The user must select a template that has been previously created, of the type stock counting, and if the item filter has been set on the template the items will be added to the stock counting journal otherwise it is empty.</p>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Stock counting wizard - templates.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="700" data-mc-height="681" src="Resources/Stock counting wizard - templates_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2>Regions</h2>
+        <p><a href="../../FieldHelp/Store/RegionsView.htm">Regions</a> can now be created and attached to stores. This option can be found on the Sites tab on the ribbon. </p>
+        <p>If the Site Manager is configured to be on a specific store then the "My region" option will display stores that are in the same region as the store the <span class="MyVariablesSite Manager">Site Manager</span> is configured to be in. The same functionality applies to the Inventory lookup dialog on th ePOS.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/myregion.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="452" data-mc-height="143" src="../../Resources/Images/myregion_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>If no regions are configured the functionality will remain as it was where all stores are displayed. </p>
+        <p>This functionality will be used more widely in future releases.</p>
+        <p>&#160;</p>
+        <h2>Permissions</h2>
+        <p>New permissions have been added for viewing and managing inventory, purchase orders and goods receiving for all stores.</p>
+        <p>These permissions are called: "View inventory for all stores", "Manage purchase orders for all stores", "Manage goods receiving for all stores".</p>
+        <p>If these permissions are NOT granted and the <span class="MyVariablesSite Manager">Site Manager</span> is configured to be on a specific store then the user can only create and manage these inventory documents for the store the <span class="MyVariablesSite Manager">Site Manager</span> is configured to be on. If the <span class="MyVariablesSite Manager">Site Manager</span> is configured to be at "head office" then these permissions are ignored.</p>
+        <p>Similar permissions for inventory adjustments, parked inventory and stock reservations already existed in the system.</p>
+        <div class="Tips">
+            <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">Tips!!! The configuration to change the "current store" of the <span class="MyVariablesSite Manager">Site Manager</span> is controlled by the permission "Maintain administrative settings"<br /></p>
+        </div>
+        <h2>Other improvements</h2>
+        <p>Fixed an issues causing header items to be saved instead of variant items when editing a <a href="../../HelpTopics/Inventory/StoreTransfers/StoreTransferAbout.htm">transfer order item</a> line when receiving an order.</p>
+        <p>When changing the selection between Reservations, Parked and Adjustments (under Journal menu) the <span class="MyVariablesSite Manager">Site Manager</span> screen "flashed". This has been fixed.</p>
+        <p>Created date filter in Reservations, Parked and Adjustments (under Journal menu) was not working properly. This has been fixed</p>
+        <p>Fixed an issues causing errors when selecting a variant item on the stock counting line dialog.</p>
+        <p>Fixed an issue causing the default vendor of an item to not be populated when selecting an item on the <a href="../../FieldHelp/Replenishment/PurchaseWorksheetLineDialog.htm">purchase worksheet dialog</a>.</p>
+        <p>On hand inventory from the item inventory page in Site Manager and the inventory lookup dialog in the POS can now be filtered by region.</p>
+        <p>Fixed an issue causing purchase orders created from worksheets to have no description.</p>
+        <p>Fixed an issue where variant's description was not shown when editing a purchase order line that includes a variant item</p>
+        <p>Fixed an issue causing variants to be removed when editing the quantity on a transfer inventory request item.</p>
+        <p>When generating journals or stock counting, the staff ID that is currently logged in will be saved on the respective line. Related views can now be filtered by staff and area.</p>
+        <p>When a vendor, that has been previously deleted, is being imported through the Excel import an error message is now displayed in the Excel import report and the vendor is not imported. </p>
+        <p>Fixed an issue causing the default vendor to not be shown when previewing items on templates.</p>
+        <p>In the Excel import when items are being imported the casing of the unit ID's (PCS or pcs) is being ignored, and the correct unit id is now being found for the import regardless of casing. This issue was mostly causing issues in the stock counting functionality.</p>
+        <p>Search band "Created date" in all three journal views (adjustment, reservation and parked) had no effect on the search results regardless of what dates were selected. This has now been fixed</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

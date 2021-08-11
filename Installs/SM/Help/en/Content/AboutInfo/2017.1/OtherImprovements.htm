@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Other improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.1/OtherImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Other improvements</h1>
+        <p>In this section smaller improvements and bugfixes for both the <span class="MyVariablesSite Manager">Site Manager</span> and <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> are listed.</p>
+        <h2>Receipt designer improvements</h2>
+        <p>Variables to print out net total price with and without tax have been added to the Lines section of the receipt designer.</p>
+        <p>Variable "Sum total transaction discount" was added to the Receipt designer</p>
+        <h2><span class="MyVariablesSite Manager">Site Manager</span> improvements</h2>
+        <p>&#160;</p>
+        <h3>Configuration changes and additions</h3>
+        <p>Configuration to allow training mode has been removed from the <a href="../../FieldHelp/Store/StoreView.htm">store card</a> due to changes on how to activate the training mode (see <a href="POSImprovements.htm">here</a>)</p>
+        <p>"Wrap around" functionality in <a href="../../FieldHelp/Administration/EditNumberSequenceDialog.htm">number sequences</a> has been removed.</p>
+        <p>The logo size on the Form settings tab on the Store card has been changed from being a size in pixels to being a selection of Normal and Double</p>
+        <p>An email field has been added to the <a href="../../FieldHelp/User/NewUserWizard.htm">new user dialog</a>. The email value can be edited from the <a href="../../FieldHelp/User/User.htm">POS settings tab</a> in the user view. This field is not mandatory when creating a new user</p>
+        <p>A new setting has been added to the visual profile which controls how much space the payment lines use on the receipt control on LS One POS.</p>
+        <p>&#160;</p>
+        <h3>Data management</h3>
+        <p>When deleting functionality, hardware or a visual profile the Site Manager now checks to see if the profile is being used anywhere and will not allow the profile to be deleted if it is being used</p>
+        <p>When opening up scheduler jobs in the <span class="MyVariablesSite Manager">Site Manager</span> and closing the view again without changing anything a change action was created so any jobs replicating the replication data between databases would have needlessly been run afterwards. This has now been fixed.</p>
+        <p>Distribution locations for terminals now get a combined external ID of "&lt;store ID&gt;-&lt;terminal ID&gt;". This makes sure that the "Pull from POS" job works when you have more than one terminal with the same terminal ID.</p>
+        <p><a name="kanchor202"></a>Fixed a consistency issue between the vendor item and retail items imported from the demo data</p>
+        <p>&#160;</p>
+        <h3>Excel import/export</h3>
+        <p>The configuration "Key in serial number" has been added to the Excel import template</p>
+        <p>A bug has been fixed in Site Manager where user was not alerted when importing an item with tax group that did not exist in the system</p>
+        <p>Fixed an error in Site Manager that prevented adding new dimension(s) to an imported master item. Imported items show the desciption in the Variant item list in the item view for the header item.</p>
+        <p>Fixed an issue where Import spreadsheet had monetary fields with no extra decimals</p>
+        <p>Fixed an issue in Site Manager that prevented doing a stock count on an imported variant item</p>
+        <p>Fixed an issue in Site Manager causing incorrect update of prices when importing items using merge functionality</p>
+        <p>&#160;</p>
+        <h3>Permission changes</h3>
+        <p>The <a href="../../FieldHelp/Site Manager/OptionsDialog.htm">Site manager options dialog</a> can now only be opened if the user has permission "Maintain administrative settings".</p>
+        <p>&#160;</p>
+        <h3>User interface updates</h3>
+        <p>When editing styles in the <a href="../../FieldHelp/Touch buttons/StylesView.htm">styles view</a> once the user closes the edit/add dialog the focus will remain on the selected style</p>
+        <p>When viewing information about a <a href="../../FieldHelp/BarCodes/BarCodeSetupView.htm">barcode setup</a> the barcode mask that is associated with the barcode setup is now visible in the view.</p>
+        <p>When selecting retail departments to add to a <a href="../../HelpTopics/Items/Item Hierarchy/Retail Divisions.htm">retail division</a> deleted retail departments are now not displayed in the list.</p>
+        <p>Through the <a href="../../HelpTopics/Items/Item Hierarchy/Special Groups.htm">Special groups</a>, <a href="../../HelpTopics/Items/Item Hierarchy/Retail Groups.htm">Retail groups</a>, <a href="../../HelpTopics/Items/Item Hierarchy/Retail Departments.htm">Retail department</a> and <a href="../../HelpTopics/Items/Item Hierarchy/Retail Divisions.htm">Retail division</a> views the user can now select multiple items/groups/departments and add them in one click.</p>
+        <p>The Up/Down button on the bar code mask dialog have been changed to be Context Buttons</p>
+        <p>Clicking the edit label button in the label printing dialog will now show the new label template dialog instead of the label templates view.</p>
+        <p>The title of the limitation code dialog has been changed to correctly describe the purpose of the dialog.</p>
+        <p>When resetting a tax group in an item to be None (empty) the dialog to ask the user if the price should be recalculated was stuck underneath the combo box and could not be clicked. This has been fixed.</p>
+        <p>When adding multiple items to a purchase order using the create another functionality, in some instances the unit combo box did not update itself to have the correct unit list for the new item selected. This has been fixed</p>
+        <p>A bug has been fixed in Site Manager that prevented editing an existing 'mix and match' discount on an item. This has now been fixed.</p>
+        <p>Number of characters allowed to be entered in the terminal ID field set at maximum twenty characters</p>
+        <p>Fixed a bug where creating stock counting and purchase orders from filter only added max 51 items to the journal</p>
+        <p>&#160;</p>
+        <h3>Linked items</h3>
+        <p>When selecting a linked item in the item card the user now cannot select the same item as a linked item.</p>
+        <p>When adding a linked item and the item being selected had more then one unit conversion the sales unit was not selected by default in the dialog. This has been fixed</p>
+        <p>When adding a linked item to an item now the user can set the quantity of the item to a negative value.</p>
+        <p>&#160;</p>
+        <h3>Translations</h3>
+        <p>Russian translation have been updated</p>
+        <p>Icelandic translations have been updated.</p>
+        <p>When the POS&#160;operation names are translated the lists (when selecting an operation) are now also displayed in an alphabetical order</p>
+        <p>&#160;</p>
+        <h3>Miscellaneous</h3>
+        <p>The cost price was not being calculated based on sale unit in order to calculate correctly the profit margin. This has been fixed.</p>
+        <p>A bug was fixed where the Customer ledger view crashed if user saved a new default search layout for the search filter.</p>
+        <p>When creating a <a href="../../FieldHelp/Customer/NewCustomerDialog.htm">new customer</a>  the sales tax group is now saved if selected. Before the tax group was only saved when updated on the <a href="../../FieldHelp/Customer/CustomerView.htm">customer card</a>.</p>
+        <p>When copying a system style the description can now be changed, before a description of "Normal" was always set and could not be changed.</p>
+        <p>New terminal dialog is now listens to "Allow manual entered Terminal ID" configuration to decide if the terminal ID can be entered by the user.</p>
+        <p>A bug has been fixed where the Retail Item view crashed if the user was changing the tax group for an item with zero price. </p>
+        <p>When saving the default search layout on the serial numbers view the Site Manager would crash, this has been fixed.</p>
+        <p>An issue causing the application to throw an error message when trying to save a retail group or delete a retail group from a retail department has been fixed</p>
+        <p>When creating a service item without the <span class="MyVariablesSite Service">Site Service</span> running now a notification will appear telling the user that a service item cannot be created. </p>
+        <p>When a new item was created a barcode that was already in use on another item could be assigned to the new item. This resulted in the barcode being moved from the original item to the new item without the user being informed. Now the New retail item dialog will not allow a barcode that is already in use to be added to a new item.</p>
+        <p>A bug has been fixed where an error came up when expanding variants after sorting by retail group or department</p>
+        <p>When a vendor is added to a retail item which doesn't have any other vendors assigned to it, it will automatically become the item's default vendor.</p>
+        <p>Fixed an issue allowing item barcodes to be saved without a barcode setup selected.</p>
+        <p>Creating a unit conversion rule through the New item dialog threw an exception, this has been fixed.</p>
+        <p>An issue which did not update the Purchase order view properly if a new purchase order was created from within an existing one has been fixed.</p>
+        <p>When activating the <span class="MyVariablesSite Manager">Site Manager</span> license, now only licenses that are available are displayed. Previously all licenses on the account were displayed.</p>
+        <p>An error was thrown when a vendor with an ID that included both characters and numbers was being deleted. This has been fixed.</p>
+        <p>Some of the delete lines in the SQL&#160;script that deletes old audit lines were not deleting from the correct tables. This has been fixed.</p>
+        <p>A bug has been fixed in Site Manager where users with name longer than 20 characters did not show in the list of users</p>
+        <p>Bug fixed where no message is displayed when Site Manager is unable to write license file to ProgramData folder</p>
+        <p>Scheduler bugfix: Fixed an issue causing the plugin name of an external job to not be saved if there were no changes in the parameters tab.</p>
+        <p>When saving a terminal that has a the same ID as another terminal within another store the Site Manager would throw an error. This has been fixed</p>
+        <p>&#160;</p>
+        <h2><span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> improvements</h2>
+        <p>&#160;</p>
+        <h3>Concluding the sale </h3>
+        <p>Items that were voided within the sale were not being saved to the item transaction table (RboTransactionSalesTrans). This bug was in versions 2016.1 and 2017</p>
+        <p>Fixed an issue causing the tax group ID to not be saved on linked items sold with infocodes</p>
+        <p>Fixed an issue causing the POS to crash when concluding an EFT transaction having a terminal ID longer than 10 characters.</p>
+        <p>&#160;</p>
+        <h3>User interface changes</h3>
+        <p>Dialogs that ask for user input through a touch numpad, such as price override, change the quantity, payment dialogs and many others now listen to the backspace and enter button on the physical keyboard and they work the same as the backspace and enter button on the touch numpad on the dialog.</p>
+        <p>When a return is being done and the customer is to have a refund in a foreign currency the foreign currency payment dialog did not allow the user to enter a negative number only select the exact negative payment. This has now been fixed</p>
+        <p>Changed the style of the buttons in the change comments dialog to better distinguish the bounds of the buttons.</p>
+        <p>&#160;</p>
+        <h3>Calculation changes</h3>
+        <p>When returning items, using the Return item operation, and if the items are a part of a mix and match offer, the total amount in the POS was not correct. This issue has now been fixed</p>
+        <p>Collecting loyalty points when using tenders (other than loyalty points) was not working. This has now been fixed</p>
+        <p>Fixed an issue causing the Mix and Match discount difference (happens mostly in deal prices)&#160;to be unable to be corrected when the first item had a price of 0.</p>
+        <p>&#160;</p>
+        <h3>Configuration changes</h3>
+        <p>A new setting of "Main screen" has been added to the screen selection configuration on the <a href="../../FieldHelp/Profiles/VisualProfileView.htm">Visual profile</a>. If selected, the POS will be displayed on the screen that is configured to be the main screen in Windows.</p>
+        <p>Operations Customer order and Recall customer order are now not allowed when the POS is in training mode</p>
+        <p>When the POS is in training mode and the operation customer account deposit is run, the customer ledger is now not updated with the payment and the balance is not updated either.</p>
+        <p>&#160;</p>
+        <h3>Serial number improvements</h3>
+        <p>Serial number dialog resizing issue fixed</p>
+        <p>Now when a serial number item has been sold the user cannot change the quantity nor the unit of measure of the item.</p>
+        <p>Fixed an issue causing the serial numbers dialog to show available serial numbers instead of sold serial numbers when returning items that require serial numbers.</p>
+        <p>When returning an item that requires serial numbers, the user will not be able to add new serial numbers. If there are no serial numbers to select and serial numbers are mandatory, the serial numbers dialog can be closed regardless.</p>
+        <p>&#160;</p>
+        <h3>Receipt changes</h3>
+        <p>Added a new form type for the Open Drawer operation. Added the Open drawer receipt to the default system profile.</p>
+        <p>&#160;</p>
+        <h3>Infocode changes</h3>
+        <p>Price override infocode no longer prompts the user twice</p>
+        <p>New parameters have been added to the operation "Infocode on request". Now an infocode can be triggered that is not connected to an item on the sale but rather is attached to the sale as a whole.</p>
+        <p>&#160;</p>
+        <h3>Translations</h3>
+        <p>Russian translations have been updated</p>
+        <p>Icelandic translations have been updated</p>
+        <p>Customer order functionality (in the POS) was not translated in previous releases and has now been translated in all languages</p>
+        <p>When the POS&#160;operation names are translated the lists (when selecting an operation) are now also displayed in an alphabetical order</p>
+        <p>&#160;</p>
+        <h3>Miscellaneous</h3>
+        <p>When returning an item and paying e.g. cash as partial payment and using Credit memo to finish the transaction you had to select pay credit memo button twice for it two work. This has been fixed</p>
+        <p>When a customer deposit was being paid for with the operation Pay Cheque the POS&#160;would display an "unexpected error". This has now been fixed.</p>
+        <p>Fixed an issue causing the POS to crash when doing a customer deposit using tender as credit memo.</p>
+        <p>If the first item sold after a POS&#160;has been started has a serial number on it a <span class="MyVariablesSite Service">Site Service</span> error was thrown. This has been fixed.</p>
+        <p>A bug has been fixed on POS where when the receipts were being emailed and one of the attachments was a customer order receipt. The customer order receipt was then created as a blank file.</p>
+        <p>Fixed an issue causing the POS to crash when paying a hospitality transaction after restarting the POS.</p>
+        <p>Start of day operation triggered a Null reference exception error when run in the POS. This has been fixed</p>
+        <p>A bug has been fixed where input dialog was not accepting OPOS barcode input</p>
+        <p>A bug has been fixed where the Loyalty dialogs were not accepting OPOS&#160;barcode input</p>
+        <p>Fixed an issue causing the POS to crash when trying to login with a token while having the staff list enabled.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

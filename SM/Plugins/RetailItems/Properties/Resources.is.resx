@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Bæta við</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eyða</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Breyta</value>
+  </data>
+  <data name="ItemMaster" xml:space="preserve">
+    <value>Vörumaster</value>
+  </data>
+  <data name="RetailItem" xml:space="preserve">
+    <value>Kassavara</value>
+  </data>
+  <data name="RetailItems" xml:space="preserve">
+    <value>Kassavörur</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Almennt</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Allar</value>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Umreiknanlegt</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Birgðir</value>
+  </data>
+  <data name="NewRetailItem" xml:space="preserve">
+    <value>Ný vara</value>
+  </data>
+  <data name="NewRetailItemDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að búa til nýja vöru</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Verð/afslættir</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Kaup</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Verslun</value>
+  </data>
+  <data name="RetailItemNew" xml:space="preserve">
+    <value>Ný vara</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="ViewItems" xml:space="preserve">
+    <value>Skoða vörur</value>
+  </data>
+  <data name="ViewItemsDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að finna og skoða vörur</value>
+  </data>
+  <data name="AllGroups" xml:space="preserve">
+    <value>Allir hópar</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Sjálfgefin búð hefur ekki VSK flokk á sér</value>
+  </data>
+  <data name="DeleteRetailDepartment" xml:space="preserve">
+    <value>Eyða vörudeild</value>
+  </data>
+  <data name="DeleteRetailDepartmentQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri vöru deild ?</value>
+  </data>
+  <data name="DeleteRetailGroup" xml:space="preserve">
+    <value>Eyða smásöluflokki</value>
+  </data>
+  <data name="DeleteRetailGroupQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum smásölu flokki ?</value>
+  </data>
+  <data name="DeleteRetailItem" xml:space="preserve">
+    <value>Eyða kassavöru</value>
+  </data>
+  <data name="DeleteRetailItemQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri kassa vöru ?</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Vara hefur ekki VSK flokk á sér</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Engin sjálfgefin búð er valin</value>
+  </data>
+  <data name="OverwriteValues" xml:space="preserve">
+    <value>Yfirskrifa gildi</value>
+  </data>
+  <data name="OverwriteValuesQuestion" xml:space="preserve">
+    <value>Viltu yfirskrifa gildi á kassa vöru með gildum úr völdum smásöluflokki?</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Vörudeild</value>
+  </data>
+  <data name="RetailDepartments" xml:space="preserve">
+    <value>Vörudeildir</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Smásöluflokkur</value>
+  </data>
+  <data name="RetailGroups" xml:space="preserve">
+    <value>Smásöluflokkar</value>
+  </data>
+  <data name="ViewItem" xml:space="preserve">
+    <value>Skoða vöru</value>
+  </data>
+  <data name="ViewRetailDepartments" xml:space="preserve">
+    <value>Skoða vörudeildir</value>
+  </data>
+  <data name="ViewRetailDepartmentsDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að eiga við vörudeildir</value>
+  </data>
+  <data name="ViewRetailGroups" xml:space="preserve">
+    <value>Skoða smásöluflokka</value>
+  </data>
+  <data name="ViewRetailGroupsDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að eiga við smásöluflokka</value>
+  </data>
+  <data name="AddToGroup" xml:space="preserve">
+    <value>Setja í hóp</value>
+  </data>
+  <data name="BOM" xml:space="preserve">
+    <value>Uppskrift</value>
+  </data>
+  <data name="DeleteSpecialGroup" xml:space="preserve">
+    <value>Eyða sérflokki</value>
+  </data>
+  <data name="DeleteSpecialGroupQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum sérflokki ?</value>
+  </data>
+  <data name="EditDescriptionForTheSelectedSpecialGroup" xml:space="preserve">
+    <value>Breyta lýsingu fyrir valinn sérflokk</value>
+  </data>
+  <data name="EditSpecialGroup" xml:space="preserve">
+    <value>Breyta sérflokki</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Vara</value>
+  </data>
+  <data name="RemoveFromGroup" xml:space="preserve">
+    <value>Taka úr hóp</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Þjónusta</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Sérflokkur</value>
+  </data>
+  <data name="SpecialGroups" xml:space="preserve">
+    <value>Sérflokkar</value>
+  </data>
+  <data name="ViewSpecialGroups" xml:space="preserve">
+    <value>Skoða sérflokka</value>
+  </data>
+  <data name="ViewSpecialGroupsDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða og breyta sérflokkum</value>
+  </data>
+  <data name="EditRetailItem" xml:space="preserve">
+    <value>Breyta kassavöru</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>Ótiltækt</value>
+  </data>
+  <data name="DigitsTruncated" xml:space="preserve">
+    <value>Aukastafir sem ekki voru sýndir hafa verið fjarlægðir</value>
+  </data>
+  <data name="MoreDigitsThanShown" xml:space="preserve">
+    <value>Það eru fleiri aukastafir í söluverði heldur en sýndir eru.</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Einingaumbreytingaregla er ekki til</value>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>Engin einingaumbreytingaregla fannst til að umbreyta frá birgðaeiningu yfir í sölueiningu.</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Flokkar</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>Engin einingaumbreytingaregla fannst til að umbreyta frá birgðaeiningu yfir í sölueiningu. Viltu búa regluna til?</value>
+  </data>
+  <data name="BMPfiles" xml:space="preserve">
+    <value>BMP skrár</value>
+  </data>
+  <data name="DiscardImage" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni mynd?</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Mynd</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Myndaskrár</value>
+  </data>
+  <data name="JPEGfiles" xml:space="preserve">
+    <value>JPEG skrár</value>
+  </data>
+  <data name="PNGfiles" xml:space="preserve">
+    <value>PNG skrár</value>
+  </data>
+  <data name="DeleteRetailItems" xml:space="preserve">
+    <value>Eyða vörum</value>
+  </data>
+  <data name="DeleteRetailItemsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum vörum ?</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Vörur</value>
+  </data>
+  <data name="DeleteLinkedItems" xml:space="preserve">
+    <value>Eyða tengdum vörum</value>
+  </data>
+  <data name="DeleteLinkedItemsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum tengdum vörum ?</value>
+  </data>
+  <data name="LinkedItemAlreadyExists" xml:space="preserve">
+    <value>Þessi vara með þessari einingu er þegar tengd vörunni</value>
+  </data>
+  <data name="LinkedItems" xml:space="preserve">
+    <value>Tengdar vörur</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Já</value>
+  </data>
+  <data name="OverwriteDimensionCombinations" xml:space="preserve">
+    <value>Víddarflokki hefur verið breytt</value>
+  </data>
+  <data name="OverwriteDimensionCombinationsQuestion" xml:space="preserve">
+    <value>Viltu eyða núverandi víddarsamsetningum ?</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartment" xml:space="preserve">
+    <value>Fjarlægja smásöluflokk úr smásöludeild</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartmentQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir fjarlægja valdann smásöluflokk frá valinni smásöludeild</value>
+  </data>
+  <data name="ViewRetailGroup" xml:space="preserve">
+    <value>Skoða smásöluflokk</value>
+  </data>
+  <data name="EditRetailDepartment" xml:space="preserve">
+    <value>Breyta vörudeild</value>
+  </data>
+  <data name="ManageRetailGroups" xml:space="preserve">
+    <value>Notaðu þennan kost til að sjá um mismunandi vöruflokka</value>
+  </data>
+  <data name="BarcodeFieldsNotfilledIn" xml:space="preserve">
+    <value>Annað hvort þurfa bæði strikamerkjasvæðin að vera útfyllt eða hvorugt af þeim .</value>
+  </data>
+  <data name="BarCodeMaxLengthError" xml:space="preserve">
+    <value>Strikamerki með þessari strikamerkjauppsetningu má ekki hafa fleiri en #1 stafi.</value>
+  </data>
+  <data name="BarCodeMinLengthError" xml:space="preserve">
+    <value>Strikamerki með þessari strikamerkjauppsetningu þarf að hafa a.m.k. #1 stafi.</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>Auðkenni vantar</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>Auðkenni vantar. Viltu láta búa til auðkennið sjálfvirkt?</value>
+  </data>
+  <data name="ItemIDExists" xml:space="preserve">
+    <value>Þetta vörunúmer er til í gagnagrunninum</value>
+  </data>
+  <data name="ItemsUpdated" xml:space="preserve">
+    <value>Vörur uppfærðar</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Er að vinna</value>
+  </data>
+  <data name="PromotionLinesUpdated" xml:space="preserve">
+    <value>Kynningarlínur uppfærðar</value>
+  </data>
+  <data name="TradeAgreementsUpdated" xml:space="preserve">
+    <value>Verðsamningar uppfærðir</value>
+  </data>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>Viðbótarupplýsingar</value>
+  </data>
+  <data name="CostPriceDisabled" xml:space="preserve">
+    <value>Verð er óvirkt vegna þess að hagnaðarprósenta hefur verið sett í 100 %</value>
+  </data>
+  <data name="Miscellaneous" xml:space="preserve">
+    <value>Ýmislegt</value>
+  </data>
+  <data name="DeleteItemTranslation" xml:space="preserve">
+    <value>Eyða þýðingu</value>
+  </data>
+  <data name="DeleteItemTranslationQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni þýðingu?</value>
+  </data>
+  <data name="ItemTranslation" xml:space="preserve">
+    <value>Vöruþýðing</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Vöruþýðingar</value>
+  </data>
+  <data name="ProfitMarginTooHigh" xml:space="preserve">
+    <value>Hagnaðarprósenta má ekki fara yfir 100 %</value>
+  </data>
+  <data name="AllItems" xml:space="preserve">
+    <value>Allar vörur</value>
+  </data>
+  <data name="BaseSalesPrice" xml:space="preserve">
+    <value>Grunnsöluverð</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Eyða afsláttartilboðslínu</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni afsláttartilboðslínu?</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Eyða magnkaupslínu</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni magnkaupslínu?</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Eyða kynningarlínu</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni kynningarlínu?</value>
+  </data>
+  <data name="DeleteTradeAgreement" xml:space="preserve">
+    <value>Eyða verðsamning</value>
+  </data>
+  <data name="DeleteTradeAgreementQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum viðskiptasamning?</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Óvirkt</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Afslættir</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Virkt</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Hópur</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Línuflokkur blandaðra tilboða</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Línur blandaðra tilboða</value>
+  </data>
+  <data name="MultiBuy" xml:space="preserve">
+    <value>Magnkaup</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Magnkaupsstillingar</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Magnkaupslínur</value>
+  </data>
+  <data name="Multiline" xml:space="preserve">
+    <value>Marglínu</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Tímabilsafslættir</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Verð</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Kynningarlínur</value>
+  </data>
+  <data name="SalesPrice" xml:space="preserve">
+    <value>Söluverð</value>
+  </data>
+  <data name="TradeAgreements" xml:space="preserve">
+    <value>Verðsamningar</value>
+  </data>
+  <data name="ViewCustomer" xml:space="preserve">
+    <value>Skoða viðskiptamann</value>
+  </data>
+  <data name="ViewCustomerGroup" xml:space="preserve">
+    <value>Skoða viðskiptamannahóp</value>
+  </data>
+  <data name="ViewGroup" xml:space="preserve">
+    <value>Skoða hóp</value>
+  </data>
+  <data name="ViewItemGroup" xml:space="preserve">
+    <value>Skoða vöruflokka</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Línu</value>
+  </data>
+  <data name="OnlyCharAndNumbers" xml:space="preserve">
+    <value>Auðkenni vöru má eingöngu innihalda stafi og númer
+</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Aðgerðir</value>
+  </data>
+  <data name="ActionsImportImages" xml:space="preserve">
+    <value>Innlestur mynda</value>
+  </data>
+  <data name="ImportImagesAbort" xml:space="preserve">
+    <value>Hætta við</value>
+  </data>
+  <data name="ImportImagesDataFileFormatError" xml:space="preserve">
+    <value>Snið gagnaskráarinnar er ekki rétt.</value>
+  </data>
+  <data name="ImportImagesItemNotFound" xml:space="preserve">
+    <value>Vara '{0}' fannst ekki</value>
+  </data>
+  <data name="InventoryTypeAdjustment" xml:space="preserve">
+    <value>Leiðrétting</value>
+  </data>
+  <data name="InventoryTypePurchase" xml:space="preserve">
+    <value>Kaup</value>
+  </data>
+  <data name="InventoryTypeSale" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="ItemLedgerViewScrollDisplay" xml:space="preserve">
+    <value>Færsla          </value>
+  </data>
+  <data name="SalesTransaction" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>Leiðrétting</value>
+  </data>
+  <data name="ItemLedger" xml:space="preserve">
+    <value>Birgðafærslur</value>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Strikamerki</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Dagsetning</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Lýsing</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Búð</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Útstöð</value>
+  </data>
+  <data name="Types" xml:space="preserve">
+    <value>Tegundir</value>
+  </data>
+  <data name="VariantGroup" xml:space="preserve">
+    <value>Afbrigðaflokkur</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>Ógilt</value>
+  </data>
+  <data name="VoidedLine" xml:space="preserve">
+    <value>Ógild lína</value>
+  </data>
+  <data name="VoidedSale" xml:space="preserve">
+    <value>Ógild sala</value>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Birgi</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>VSK flokkur</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Myndir</value>
+  </data>
+  <data name="CopyID" xml:space="preserve">
+    <value>Afrita auðkenni</value>
+  </data>
+  <data name="ImageImportDeleteExisting" xml:space="preserve">
+    <value>Þú hefur valið að eyða myndum sem til eru.
+
+Það þýðir að öllum myndum er eytt fyrir hverja vöru sem mynd er flutt inn fyrir.
+
+Ertu viss um að þú viljir halda áfram?</value>
+  </data>
+  <data name="DeleteRetailDivision" xml:space="preserve">
+    <value>Eyða smásölusviði</value>
+  </data>
+  <data name="DeleteRetailDivisionQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum smásölusviði?</value>
+  </data>
+  <data name="RetailDivision" xml:space="preserve">
+    <value>Smásölusvið</value>
+  </data>
+  <data name="RetailDivisions" xml:space="preserve">
+    <value>Smásölusvið</value>
+  </data>
+  <data name="ViewRetailDivisionDescription" xml:space="preserve">
+    <value>Notaðu þennan kost til að eiga við smásölusvið
+</value>
+  </data>
+  <data name="ViewRetailDivisions" xml:space="preserve">
+    <value>Skoða smásölusvið</value>
+  </data>
+  <data name="EditRetailDivision" xml:space="preserve">
+    <value>Breyta smásölusviði</value>
+  </data>
+  <data name="ColorGroup" xml:space="preserve">
+    <value>Litaflokkur</value>
+  </data>
+  <data name="SizeGroup" xml:space="preserve">
+    <value>Stærðarflokkur</value>
+  </data>
+  <data name="StyleGroup" xml:space="preserve">
+    <value>Stílflokkur</value>
+  </data>
+  <data name="ValidationPeriod" xml:space="preserve">
+    <value>Gildistími</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Birta</value>
+  </data>
+  <data name="ManyItems" xml:space="preserve">
+    <value>#1 vörur eru til</value>
+  </data>
+  <data name="New_RetailItem" xml:space="preserve">
+    <value>Ný</value>
+  </data>
+  <data name="OneItem" xml:space="preserve">
+    <value>1 vara er til</value>
+  </data>
+  <data name="NoItemsHaveBeenCreated" xml:space="preserve">
+    <value>Engar vörur eru til</value>
+  </data>
+  <data name="CreateVariationCombinations" xml:space="preserve">
+    <value>Búa til breytileikamöguleika</value>
+  </data>
+  <data name="FuelSettings" xml:space="preserve">
+    <value>Eldsneytisstillingar</value>
+  </data>
+  <data name="ViewHeaderItem" xml:space="preserve">
+    <value>Skoða yfirvöru</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Eiginleiki</value>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>Draga saman</value>
+  </data>
+  <data name="CreatingItemsMessage" xml:space="preserve">
+    <value>Bý til vörur</value>
+  </data>
+  <data name="EditMultipleItems" xml:space="preserve">
+    <value>Breyta mörgum vörum</value>
+  </data>
+  <data name="Expand" xml:space="preserve">
+    <value>Útvíkka</value>
+  </data>
+  <data name="FewMinutesMessage" xml:space="preserve">
+    <value>Þetta gæti tekið nokkrar mínútur</value>
+  </data>
+  <data name="FieldRequiresInput" xml:space="preserve">
+    <value>Svæðið '{1}' á flipanum '{0}' verður að hafa gildi</value>
+  </data>
+  <data name="MultiSaveQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir vista breytingar á öllum völdum færslum?</value>
+  </data>
+  <data name="NewSpecialGroup" xml:space="preserve">
+    <value>Nýr sérflokkur</value>
+  </data>
+  <data name="NoChange" xml:space="preserve">
+    <value>--- Engin breyting ---</value>
+  </data>
+  <data name="TabRequiresInput" xml:space="preserve">
+    <value>Flipinn {0} hefur svæði sem þurfa að vera fyllt út</value>
+  </data>
+  <data name="VariantHeader" xml:space="preserve">
+    <value>Vara með afbrigðum</value>
+  </data>
+  <data name="VariantItem" xml:space="preserve">
+    <value>Vöruafbrigði</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Afbrigði</value>
+  </data>
+  <data name="SavingItems" xml:space="preserve">
+    <value>Vista vörur</value>
+  </data>
+  <data name="SavingItemsCount" xml:space="preserve">
+    <value>Vista {0} af {1}</value>
+  </data>
+  <data name="ViewVariantHeader" xml:space="preserve">
+    <value>Sýna yfirvöru</value>
+  </data>
+  <data name="ChangeTaxGroup" xml:space="preserve">
+    <value>Breyta VSK flokk</value>
+  </data>
+  <data name="ChangeTaxGroupDetail" xml:space="preserve">
+    <value>Breyting á VSK flokki mun endurreikna verð og tilboðsverð tiltekinnar vöru</value>
+  </data>
+  <data name="ChangeTaxGroupQuestion" xml:space="preserve">
+    <value>Ert þú viss um að þú viljir breyta um VSK flokk?</value>
+  </data>
+  <data name="Undelete" xml:space="preserve">
+    <value>Afturkalla eyðingu</value>
+  </data>
+  <data name="UndeleteRetailItem" xml:space="preserve">
+    <value>Afturkalla eyðingu á kassavöru</value>
+  </data>
+  <data name="UndeleteRetailItemQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir afturkalla eyðingu á þessari kassavöru?</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Gat ekki tengst búðarþjóni</value>
+  </data>
+  <data name="StockCount" xml:space="preserve">
+    <value>Birgðatalning</value>
+  </data>
+  <data name="TransferIn" xml:space="preserve">
+    <value>Fært inn</value>
+  </data>
+  <data name="TransferOut" xml:space="preserve">
+    <value>Fært út</value>
+  </data>
+  <data name="ShowVoided" xml:space="preserve">
+    <value>Sýna ógiltar</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Valkostir</value>
+  </data>
+  <data name="ShowPostedStatements" xml:space="preserve">
+    <value>Sýna bókað uppgjör</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Deildir</value>
+  </data>
+  <data name="Groups_Retail" xml:space="preserve">
+    <value>Flokkar</value>
+  </data>
+  <data name="RetailGroupAlreadyAssignedToADepartment" xml:space="preserve">
+    <value>Þessi vöruflokkur er nú þegar tengdur við vörudeild.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Leit</value>
+  </data>
+  <data name="PostedStatement" xml:space="preserve">
+    <value>Bókað uppgjör</value>
+  </data>
+  <data name="Divisions" xml:space="preserve">
+    <value>Svið</value>
+  </data>
+  <data name="Hierarchy" xml:space="preserve">
+    <value>Stigveldi</value>
+  </data>
+  <data name="StockReservation" xml:space="preserve">
+    <value>Fráteknar birgðir</value>
+  </data>
+  <data name="UndeleteRetailItemsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir afturkalla eyðingu á þessum kassavörum?</value>
+  </data>
+  <data name="POSSettings" xml:space="preserve">
+    <value>POS stillingar</value>
+  </data>
+  <data name="ItemsTooltipDescription" xml:space="preserve">
+    <value>Opna vörulista til að skoða og hafa umsjón með vörum</value>
+  </data>
+  <data name="NewItemTooltipDescription" xml:space="preserve">
+    <value>Búa til nýja vöru</value>
+  </data>
+  <data name="NewItemTypeRetailText1" xml:space="preserve">
+    <value>Vöruáfyllingar eru læstar.</value>
+  </data>
+  <data name="NewItemTypeRetailText2" xml:space="preserve">
+    <value>Sölur sem eru nú þegar hluti af uppgjöri munu ekki búa til nýjar birgðafærslu línur (birgða hreyfingar).</value>
+  </data>
+  <data name="NewItemTypeRetailTitle" xml:space="preserve">
+    <value>Athugasemd</value>
+  </data>
+  <data name="NewItemTypeServiceQuestion" xml:space="preserve">
+    <value>Viltu halda áfram?</value>
+  </data>
+  <data name="NewItemTypeServiceTitle" xml:space="preserve">
+    <value>Staðfesta</value>
+  </data>
+  <data name="NoConnectionToSiteServiceHeader" xml:space="preserve">
+    <value>Ekki er hægt að tengjast búðarþjóni.</value>
+  </data>
+  <data name="NoConnectionToSiteServiceText" xml:space="preserve">
+    <value>Ekki er hægt að staðfesta núverandi birgðastöðu þannig að ekki er hægt að breyta tegund vöru.</value>
+  </data>
+  <data name="NoPermissionForItemType" xml:space="preserve">
+    <value>Notandi hefur ekki réttindi til að breyta vörutegund</value>
+  </data>
+  <data name="RetailDepartmentsTooltipDescription" xml:space="preserve">
+    <value>Umsjón smásöludeilda</value>
+  </data>
+  <data name="RetailDivisionsTooltipDescription" xml:space="preserve">
+    <value>Umsjón með vörudeildum sem eru á toppi vöru stigveldisins</value>
+  </data>
+  <data name="RetailGroupsTooltipDescription" xml:space="preserve">
+    <value>Umsjón með smásöluflokkum, stillingum þeirra og vörum</value>
+  </data>
+  <data name="SpecialGroupsTooltipDescription" xml:space="preserve">
+    <value>Umsjón með sérflokkum til að flokka saman óskildar vörur fyrir afslætti og kynningar</value>
+  </data>
+  <data name="AllTypes" xml:space="preserve">
+    <value>Allar tegundir</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Vörutegund</value>
+  </data>
+  <data name="ServiceItem" xml:space="preserve">
+    <value>Þjónustuvara</value>
+  </data>
+  <data name="NewItemTypeRetailText3" xml:space="preserve">
+    <value>Til að vera viss um að lagerstaða sér rétt þá er mælt með því að gera birgðatalningu fyrir vöruna.</value>
+  </data>
+  <data name="LinkedItemSameAsOriginalItem" xml:space="preserve">
+    <value>Tengda varan má ekki vera sama og upprunalega varan</value>
+  </data>
+  <data name="MultiEditServiceItemsText" xml:space="preserve">
+    <value>Þú hefur valið að minnsta kosti eina þjónustuvöru.  Ekki er leyfilegt að magnbreyta</value>
+  </data>
+  <data name="DoYouWantToContinue" xml:space="preserve">
+    <value>Viltu halda áfram?</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventory" xml:space="preserve">
+    <value>Birgða leiðréttingar verða stofnaðar til að núlla út núverandi birgðastöðu.</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventoryWithReplenishment" xml:space="preserve">
+    <value>Birgðaleiðréttingar verða stofnaðar til að núlla út núverandi birgðastöðu og lokað verður fyrir vöruáfyllingar.</value>
+  </data>
+  <data name="RetailDepartmentAssignedToDivision" xml:space="preserve">
+    <value>Ein eða fleiri vörudeildir eru nú þegar hluti af smásölusviði.</value>
+  </data>
+  <data name="ParkedInventory" xml:space="preserve">
+    <value>Ótiltækur lager</value>
+  </data>
+  <data name="ServiceItemError" xml:space="preserve">
+    <value>Ekki náðist tenging við búðarþjón. Ekki er hægt að vista upplýsingar um þjónustuvörur.</value>
+  </data>
+</root>

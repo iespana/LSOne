@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-8938 
+	Responsible		: Adrian Chiorean
+	Sprint			: Nashira
+	Date created	: 03.12.2019
+
+	Description		: Add column NUMBEROFCOPIES to POSFORMPROFILELINES
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSFORMPROFILELINES' AND COLUMN_NAME = 'NUMBEROFCOPIES')
+BEGIN
+	ALTER TABLE POSFORMPROFILELINES ADD NUMBEROFCOPIES INT NOT NULL DEFAULT 1
+	EXECUTE spDB_SetFieldDescription_1_0 'POSFORMPROFILELINES', 'NUMBEROFCOPIES', 'Represents how many copies of a receipt to print for a form profile line.';
+END
+GO

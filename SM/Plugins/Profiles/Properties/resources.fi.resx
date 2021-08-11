@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CardReader" xml:space="preserve">
+    <value>Kortinlukija</value>
+  </data>
+  <data name="HardwareProfile" xml:space="preserve">
+    <value>Laitteistoprofiili</value>
+  </data>
+  <data name="IsSystemStyle" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="HardwareProfilesRibbon" xml:space="preserve">
+    <value>Laitteisto</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiilit</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="CSVFieldDescription" xml:space="preserve">
+    <value>Kuvaus:</value>
+  </data>
+  <data name="SetDefaultCSVImportProfile" xml:space="preserve">
+    <value>Aseta oletukseksi</value>
+  </data>
+  <data name="CSVFieldSerialNumber" xml:space="preserve">
+    <value>Versionumero:</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Käyttäjät</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="AddMappingToProfile" xml:space="preserve">
+    <value>Lisää kohdistus profiiliin</value>
+  </data>
+  <data name="AlwaysPrint" xml:space="preserve">
+    <value>Tulosta aina</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Viivakoodinlukija</value>
+  </data>
+  <data name="CashChanger" xml:space="preserve">
+    <value>Valuutanvaihtaja</value>
+  </data>
+  <data name="Context" xml:space="preserve">
+    <value>Asiayhteys:</value>
+  </data>
+  <data name="Contexts" xml:space="preserve">
+    <value>Taustat</value>
+  </data>
+  <data name="ContextsDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella tai muokata taustoja tyyliprofiilissa</value>
+  </data>
+  <data name="ContextUsedInProfileCannotBeDeleted" xml:space="preserve">
+    <value>Jotkut tai kaikki valitut tausta ovat käytössä tyyliprofiileissa, eikä niitä voi poistaa</value>
+  </data>
+  <data name="CreditCardService" xml:space="preserve">
+    <value>Luottokorttipalvelu</value>
+  </data>
+  <data name="CSVFieldBarcode" xml:space="preserve">
+    <value>Viivakoodia</value>
+  </data>
+  <data name="CSVFieldCounted" xml:space="preserve">
+    <value>Laskettu:</value>
+  </data>
+  <data name="CSVFieldItemId" xml:space="preserve">
+    <value>Tuotetunnus</value>
+  </data>
+  <data name="CSVFieldSerialType" xml:space="preserve">
+    <value>Tyyppi</value>
+  </data>
+  <data name="CSVFieldTypeDecimal" xml:space="preserve">
+    <value>desimaali</value>
+  </data>
+  <data name="CSVFieldTypeInteger" xml:space="preserve">
+    <value>kokonaisluku</value>
+  </data>
+  <data name="CSVFieldTypeString" xml:space="preserve">
+    <value>merkkijono</value>
+  </data>
+  <data name="CSVFieldUnitId" xml:space="preserve">
+    <value>Yksikön tunnus</value>
+  </data>
+  <data name="CSVImportProfile" xml:space="preserve">
+    <value>CSV-tuontiprofiili</value>
+  </data>
+  <data name="CSVImportProfiles" xml:space="preserve">
+    <value>CSV-tuontiprofiili</value>
+  </data>
+  <data name="CSVImportProfilesDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella tai muokata CSV-tiedoston tuontiprofiileja</value>
+  </data>
+  <data name="CSVImportProfilesTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi CSV-tuontiprofiileja määrittääksesi, miten varaston laskennan päiväkirjat sekä sarjanumerot tuodaan CSV-tiedostoista</value>
+  </data>
+  <data name="CSVImportTypeStockCounting" xml:space="preserve">
+    <value>Varastolaskenta</value>
+  </data>
+  <data name="CSVMappingNotSet" xml:space="preserve">
+    <value>CSV-profiilia ei voi asettaa oletusprofiiliksi, koska siinä ei ole kohdistusrivejä.</value>
+  </data>
+  <data name="DallasKey" xml:space="preserve">
+    <value>Dallas-avain</value>
+  </data>
+  <data name="DeleteContextQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut taustat?</value>
+  </data>
+  <data name="DeleteCSVImportProfile" xml:space="preserve">
+    <value>Poista CSV-tuontiprofiili</value>
+  </data>
+  <data name="DeleteCSVImportProfileLine" xml:space="preserve">
+    <value>Poista CSV-tuontiprofiilin rivi</value>
+  </data>
+  <data name="DeleteCSVImportProfileLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun CSV-tuontiprofiilin rivin?</value>
+  </data>
+  <data name="DeleteCSVImportProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun CSV-tuontiprofiilin rivin?</value>
+  </data>
+  <data name="DeleteFormProfile" xml:space="preserve">
+    <value>Poista lomakeprofiili</value>
+  </data>
+  <data name="DeleteFormProfileLine" xml:space="preserve">
+    <value>Poista lomakkeen profiilin rivi</value>
+  </data>
+  <data name="DeleteFormProfileLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun profiilin rivin?</value>
+  </data>
+  <data name="DeleteFormProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun lomakeprofiilin?</value>
+  </data>
+  <data name="DeleteFuncProfile" xml:space="preserve">
+    <value>Poista toiminnallisuusprofiili</value>
+  </data>
+  <data name="DeleteFuncProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun toiminnallisuusprofiilin?</value>
+  </data>
+  <data name="DeleteHardwareProfile" xml:space="preserve">
+    <value>Poista laitteistoprofiili</value>
+  </data>
+  <data name="DeleteHardwareProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun laitteistoprofiilin?</value>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Poista visuaalinen profiili</value>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun visuaalisen profiilin?</value>
+  </data>
+  <data name="DeleteStyleProfile" xml:space="preserve">
+    <value>Poista tyyliprofiili</value>
+  </data>
+  <data name="DeleteStyleProfileLine" xml:space="preserve">
+    <value>Poista tyyliprofiilin rivi</value>
+  </data>
+  <data name="DeleteStyleProfileLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun tyyliprofiilin rivin?</value>
+  </data>
+  <data name="DeleteStyleProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun tyyliprofiilin?</value>
+  </data>
+  <data name="DeleteUserProfile" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun käyttäjäprofiilin?</value>
+  </data>
+  <data name="DeleteUserProfileCaption" xml:space="preserve">
+    <value>Poista käyttäjän profiili(t)</value>
+  </data>
+  <data name="DeleteUserProfiles" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun käyttäjäprofiilin?</value>
+  </data>
+  <data name="DeleteUserProfilesInUse" xml:space="preserve">
+    <value>Jotkut valituista käyttäjäprofiileista ovat käytössä ja niitä ei voi poistaa. Haluatko jatkaa?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kuvaus:</value>
+  </data>
+  <data name="DiscountSettings" xml:space="preserve">
+    <value>Alennusasetukset</value>
+  </data>
+  <data name="DoNotCopyUserProfile" xml:space="preserve">
+    <value>Älä kopioi olemassaolevaa käyttäjäprofiilia</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Kassalaatikko</value>
+  </data>
+  <data name="DualDisplay" xml:space="preserve">
+    <value>Tuplanäyttö</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="EditContext" xml:space="preserve">
+    <value>Muokkaa kontekstia</value>
+  </data>
+  <data name="EditLayout" xml:space="preserve">
+    <value>Muokkaa asettelua</value>
+  </data>
+  <data name="EditStore" xml:space="preserve">
+    <value>Muokkaa myymälää</value>
+  </data>
+  <data name="EditStyleProfileLine" xml:space="preserve">
+    <value>Muokkaa profiilin linjaa</value>
+  </data>
+  <data name="EditVisualProfile" xml:space="preserve">
+    <value>Muokkaa visuaalista profiilia</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Yhtään laiteluetteloa ei löydy isäntäkoneelta {0}, tarkista onko tulostusasemapalvelu käynnissä isäntäkoneelta ja että tulostimet on asennettu</value>
+  </data>
+  <data name="FiscalPrinter" xml:space="preserve">
+    <value>Fiskaalitulostin</value>
+  </data>
+  <data name="ForecourtManager" xml:space="preserve">
+    <value>Mittarikentän johtaja</value>
+  </data>
+  <data name="FormLayouts" xml:space="preserve">
+    <value>Lomakkeen asettelut</value>
+  </data>
+  <data name="FormLayoutsDescription" xml:space="preserve">
+    <value>Tämän asetuksen avulla voit tarkastella tai muokata lomakeasetteluita</value>
+  </data>
+  <data name="FormProfileDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella tai muokata lomakeprofiileja</value>
+  </data>
+  <data name="FormProfiles" xml:space="preserve">
+    <value>Lomake profiili</value>
+  </data>
+  <data name="FormProfilesTooltipDescription" xml:space="preserve">
+    <value>Järjestä lomake ulkoasut profiileiksi, jotta voit käyttää eri lomakepohjia eri myymälöissä</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Lomakkeet</value>
+  </data>
+  <data name="FunctionalityProfile" xml:space="preserve">
+    <value>Toiminnallisuusprofiili</value>
+  </data>
+  <data name="FunctionalityProfiles" xml:space="preserve">
+    <value>Toiminnallisuusprofiilit</value>
+  </data>
+  <data name="FunctionalityProfilesDescription" xml:space="preserve">
+    <value>Tämän toiminnon avulla voit tarkastella tai muokata toiminnallisuusprofiileja</value>
+  </data>
+  <data name="FunctionalityProfilesRibbon" xml:space="preserve">
+    <value>Toiminnallisuus</value>
+  </data>
+  <data name="FunctionalityProfilesTooltipDescription" xml:space="preserve">
+    <value>Hallitse toiminnallisuusprofiileja, jotka sisältävät useita erilaisia päätelaitteiden asetuksia</value>
+  </data>
+  <data name="HardwareProfiles" xml:space="preserve">
+    <value>Laitteistoprofiilit</value>
+  </data>
+  <data name="HardwareProfilesDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella tai muokata laitteistoprofiileja</value>
+  </data>
+  <data name="HardwareProfilesTooltipDescription" xml:space="preserve">
+    <value>Hallitse laitteistoprofiileja liittääksesi työaseman erilaisiin oheislaitteisiin, kuten kuititulostimiin ja rahalaatikoihin</value>
+  </data>
+  <data name="ImageDirectory" xml:space="preserve">
+    <value>Valitse hakemisto, joka sisältää kuvat</value>
+  </data>
+  <data name="InsertDefaultData" xml:space="preserve">
+    <value>"Syötä oletustiedot"</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Tuotteet</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Avain</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Kielikoodi:</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Asettelu:</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Asiakasnäyttö</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Ulkonäkö ja tunne</value>
+  </data>
+  <data name="NeverPrint" xml:space="preserve">
+    <value>Älä koskaan tulosta</value>
+  </data>
+  <data name="NewContext" xml:space="preserve">
+    <value>Uusi konteksti</value>
+  </data>
+  <data name="NewStyleProfileLine" xml:space="preserve">
+    <value>Uusi profiilirivi</value>
+  </data>
+  <data name="NoBarCodeReaderSelected" xml:space="preserve">
+    <value>Vikakoodilukijaa ei ole valittu, LS One POSin käynnistäminen näillä asetuksilla voi olla mahdotonta.</value>
+  </data>
+  <data name="NoCardReaderSelected" xml:space="preserve">
+    <value>Kortinlukijaa ei ole valittu, LS One kassaa voi olla mahdotonta käynnistää näillä asetuksilla.</value>
+  </data>
+  <data name="NoDrawerSelected" xml:space="preserve">
+    <value>Kassalaatikkoa ei ole valittu, LS One POSin käynnistäminen näillä asetuksilla voi olla mahdotonta.</value>
+  </data>
+  <data name="NoFolderLocationSelected" xml:space="preserve">
+    <value>Windows-tulostimelle ei ole valittu kansion sijaintia</value>
+  </data>
+  <data name="NoKeySelected" xml:space="preserve">
+    <value>Kassanäppäimistöä ei ole valittu, LS One POSin käynnistäminen näillä asetuksilla voi olla mahdotonta.</value>
+  </data>
+  <data name="NoLineDisplaySelected" xml:space="preserve">
+    <value>Asiakasnäyttöä ei ole valittu, LS One kassaa voi olla mahdotonta käynnistää näillä asetuksilla.</value>
+  </data>
+  <data name="NoLinesForDefaultProfile" xml:space="preserve">
+    <value>CSV-profiilia ei voi asettaa oletusprofiiliksi, koska sillä ei ole kohdistusrivejä. Ole hyvä ja lisää kohdistusrivit.</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Tulostinta ei ole valittu, LS One kassaa voi olla mahdotonta käynnistää näillä asetuksilla.</value>
+  </data>
+  <data name="NoScaleSelected" xml:space="preserve">
+    <value>Vaakaa ei ole valittu, LS One POSin käynnistäminen näillä asetuksilla voi olla mahdotonta.</value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>Ei valintaa</value>
+  </data>
+  <data name="OneTypePerProfile" xml:space="preserve">
+    <value>Jokaista tyyppiä voi olla vain yksi esiintymä profiilikohtaisesti</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Muu</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Tulostin</value>
+  </data>
+  <data name="ProfileManagement" xml:space="preserve">
+    <value>Profiilinhallinta</value>
+  </data>
+  <data name="PromptUser" xml:space="preserve">
+    <value>Kysy käyttäjältä</value>
+  </data>
+  <data name="PumpConnection" xml:space="preserve">
+    <value>Pumpun liitäntä</value>
+  </data>
+  <data name="ReceiptData" xml:space="preserve">
+    <value>"Kuittien tiedot"</value>
+  </data>
+  <data name="Related_CSVProfiles" xml:space="preserve">
+    <value>CSV-profiilit</value>
+  </data>
+  <data name="Related_ResetDefaultProfile" xml:space="preserve">
+    <value>Palauta oletusprofiili</value>
+  </data>
+  <data name="RemoveUserFromUserProfile" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut käyttäjät tästä profiilista?</value>
+  </data>
+  <data name="Replication" xml:space="preserve">
+    <value>Replikointi</value>
+  </data>
+  <data name="ResetDefaultProfileHeader" xml:space="preserve">
+    <value>Nollaa lomakeprofiili</value>
+  </data>
+  <data name="ResetDefaultProfileQuestion" xml:space="preserve">
+    <value>Tämä korvaa kaikki muutokset oletusmallin lomakeasettelussa. Haluatko varmasti jatkaa?</value>
+  </data>
+  <data name="RFIDReader" xml:space="preserve">
+    <value>RFID-lukija</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Vaaka</value>
+  </data>
+  <data name="SelectFolderLocation" xml:space="preserve">
+    <value>Valitse kansion sijainti</value>
+  </data>
+  <data name="SelectLayoutHeaderText" xml:space="preserve">
+    <value>Valitse ulkoasu käyttäjäprofiiliin</value>
+  </data>
+  <data name="SelectLayoutLabel" xml:space="preserve">
+    <value>Asettelu:</value>
+  </data>
+  <data name="SelectStoreHeaderText" xml:space="preserve">
+    <value>Valitse myymälä käyttäjäprofiiliin</value>
+  </data>
+  <data name="SelectStoreLabel" xml:space="preserve">
+    <value>Myymälä</value>
+  </data>
+  <data name="SelectVisualProfileHeaderText" xml:space="preserve">
+    <value>Valitse käyttäjäprofiilin visuaalinen profiili</value>
+  </data>
+  <data name="SelectVisualProfileLabel" xml:space="preserve">
+    <value>Visuaalinen profiili</value>
+  </data>
+  <data name="SetDefaultCSVImportProfileQuestion" xml:space="preserve">
+    <value>Haluatko varmasti asettaa valitun tuontiprofiilin oletusasetukseksi?</value>
+  </data>
+  <data name="ShowPreview" xml:space="preserve">
+    <value>Näytä esikatselu</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Sivustot</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Henkilökunta</value>
+  </data>
+  <data name="StartOfDay" xml:space="preserve">
+    <value>Päivän alku</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Varasto</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Myymälä</value>
+  </data>
+  <data name="StoreDefault" xml:space="preserve">
+    <value>Tallenna oletus</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Myymälän asetukset</value>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Tyyliprofiili</value>
+  </data>
+  <data name="StyleProfileDescription" xml:space="preserve">
+    <value>Tämän asetuksen avulla voit tarkastella tai muokata tyyliprofiileja</value>
+  </data>
+  <data name="StyleProfileLineAlreadyExists" xml:space="preserve">
+    <value>Tämä tyyliprofiilin rivi on jo olemassa, eikä sitä voi tallentaa</value>
+  </data>
+  <data name="StyleProfileLines" xml:space="preserve">
+    <value>Tyyliprofiilin rivit</value>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Tyyliprofiilit</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Tyylit</value>
+  </data>
+  <data name="SurveillanceCamera" xml:space="preserve">
+    <value>Valvontakamera</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Pääte:</value>
+  </data>
+  <data name="TheFolderSelectedDoesNotExist" xml:space="preserve">
+    <value>Kansio {0} ei ole olemassa. Valitse kansio, joka on jo olemassa.</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>Käyttäjäprofiili:</value>
+  </data>
+  <data name="UserProfiles" xml:space="preserve">
+    <value>Käyttäjäprofiilit</value>
+  </data>
+  <data name="UserProfilesInUse" xml:space="preserve">
+    <value>Kaikki valitut profiilit ovat käytössä ja niitä ei voi poistaa.</value>
+  </data>
+  <data name="UserProfilesTooltipDescription" xml:space="preserve">
+    <value>Tarkastele ja hallinnoi käyttäjäprofiileja</value>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Visuaalinen profiili</value>
+  </data>
+  <data name="VisualProfileDefaultScreenResolution" xml:space="preserve">
+    <value>Oletusnäytön resoluutio</value>
+  </data>
+  <data name="VisualProfileRibbon" xml:space="preserve">
+    <value>Visuaalinen</value>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Visuaaliset profiilit</value>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Käytä tätä toimintoa nähdäksesi tai muokataksesi visuaalisia profiileja</value>
+  </data>
+  <data name="VisualProfilesTooltipDescription" xml:space="preserve">
+    <value>Hallitse visuaalisia profiileja, jotka määrittävät päätelaitteiden näytön asetukset</value>
+  </data>
+  <data name="VisualProfileUserResizable" xml:space="preserve">
+    <value>Käyttäjä voi muuttaa kokoa</value>
+  </data>
+</root>

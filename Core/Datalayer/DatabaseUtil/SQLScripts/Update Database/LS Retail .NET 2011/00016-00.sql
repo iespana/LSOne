@@ -1,0 +1,48 @@
+﻿
+/*
+
+	Incident No.	: 6767
+	Responsible		: Hörður Kristjánsson
+	Sprint			: DotNetPM\LS POS 2010.1\Dot Net Stream\Sprint 03\Dot Net Team
+	Date created	: 18.11.2010
+	
+	Description		: Creating table DININGTABLELAYOUT
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected:	DININGTABLELAYOUT	- Created
+					 					
+						
+*/
+
+Use LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[DININGTABLELAYOUT]') AND TYPE IN ('U'))
+BEGIN
+	CREATE TABLE [dbo].[DININGTABLELAYOUT](
+		[RESTAURANTID] [nvarchar](20) NOT NULL,
+		[SEQUENCE] [int] NOT NULL,
+		[SALESTYPE] [nvarchar](20) NOT NULL,
+		[LAYOUTID] [nvarchar](20) NOT NULL,
+		[DESCRIPTION] [nvarchar](30) NULL,
+		[NOOFSCREENS] [int] NULL,
+		[STARTINGTABLENO] [int] NULL,
+		[NOOFDININGTABLES] [int] NULL,
+		[ENDINGTABLENO] [int] NULL,
+		[DININGTABLEROWS] [int] NULL,
+		[DININGTABLECOLUMNS] [int] NULL,
+		[CURRENTLAYOUT] [tinyint] NULL,
+		[DATAAREAID] [nvarchar](4) NOT NULL,
+	 CONSTRAINT [PK_DININGTABLELAYOUT] PRIMARY KEY CLUSTERED 
+	(
+		[RESTAURANTID] ASC,
+		[SEQUENCE] ASC,
+		[SALESTYPE] ASC,
+		[LAYOUTID] ASC,
+		[DATAAREAID] ASC
+	)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+END
+GO

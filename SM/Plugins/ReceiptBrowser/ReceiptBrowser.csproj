@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F066942-0C26-4793-A716-528169007C17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.ReceiptBrowser</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.ReceiptBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.ReceiptBrowser.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Sparkline.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraRichEdit.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MemoryData1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemoryData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentLines.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentLines.designer.cs">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportReceipt.designer.cs">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TaxLines.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TaxLines.designer.cs">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReceiptBrowserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReceiptBrowserView.Designer.cs">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Reports\paymentlines.da.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.de.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.el.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.en-ZA.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.es-MX.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.es.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.fr.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.is.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.it-IT.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.ja.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.nl.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.pt-BR.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentLines.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.ru.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.sv.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.zh-CHS.resx">
+      <DependentUpon>PaymentLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.da.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.de.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.el.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.en-ZA.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.es-MX.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.es.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.fr.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.is.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.it-IT.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.ja.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.nl.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.pt-BR.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportReceipt.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.ru.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.sv.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.zh-CHS.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.da.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.de.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.el.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.en-ZA.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.es-MX.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.es.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.fr.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.is.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.it-IT.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.ja.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.nl.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.pt-BR.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TaxLines.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.ru.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.sv.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.zh-CHS.resx">
+      <DependentUpon>TaxLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.bg.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.cs.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.da.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.de.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.el.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\receiptbrowserview.en-ZA.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\receiptbrowserview.es-MX.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.es.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.fi.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.fr.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.hi.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.is.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.it-IT.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.it.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.ja.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.ko.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.nb-NO.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.nl.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.pl.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.pt-BR.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.ru.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.sv.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.zh-CHS.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Reports\MemoryData.xsc">
+      <DependentUpon>MemoryData.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\MemoryData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemoryData1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\MemoryData.xss">
+      <DependentUpon>MemoryData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReceiptSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReceiptLargeImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReceiptImage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="SheetPages\" />
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\paymentlines.bg.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.cs.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.fi.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.hi.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.it.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.ko.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.nb-NO.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\paymentlines.pl.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.bg.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.cs.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.fi.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.hi.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.it.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.ko.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.nb-NO.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.pl.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.bg.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.cs.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.fi.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.hi.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.it.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.ko.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.nb-NO.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.pl.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\paymentlines.nl-BE.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportreceipt.nl-BE.resx">
+      <DependentUpon>reportreceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.nl-BE.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.nl-BE.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\paymentlines.ja-JP.resx">
+      <DependentUpon>paymentlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportReceipt.ja-JP.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.ja-JP.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.ja-JP.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transaction32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\ReportReceipt.vi-VN.resx">
+      <DependentUpon>ReportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\taxlines.vi-VN.resx">
+      <DependentUpon>taxlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReceiptBrowserView.vi-VN.resx">
+      <DependentUpon>ReceiptBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

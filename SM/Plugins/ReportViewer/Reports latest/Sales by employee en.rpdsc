@@ -1,0 +1,64 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 11da2ff0-2bcd-11e5-a2cb-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Sales per employee
+
+// Extra description for the report as it will appear in some of the system menus
+Description: This report shows sales per employee. It does not include gift card sales.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: en
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_ItemSalesUser]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_ItemSalesUser]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_ItemSalesUser]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set nocount on
+declare @docid int
+
+exec sp_xml_preparedocument @docid output, @StoresID
+
+select STORE, STORENAME, STAFFID, LastName, sum(QTY) as QTY, sum(PRICE) as PRICE, sum(COST) as COST, sum(WHOLEDISCAMOUNTWITHTAX) as WHOLEDISCAMOUNTWITHTAX, sum(NETAMOUNTINCLTAX) as NETAMOUNTINCLTAX
+from
+(
+	select r.QTY*-1 as QTY, r.NETAMOUNTINCLTAX*-1 as NETAMOUNTINCLTAX, r.WHOLEDISCAMOUNTWITHTAX, r.PRICE*(QTY*-1) as PRICE, i.PURCHASEPRICE *(QTY*-1) as COST, r.STORE, st.NAME as STORENAME, u.login as STAFFID, u.LASTNAME
+	from VTRANSACTIONSALESTRANSHASPRICE r
+	join (select [text] as STORESID from openxml(@docid, '/p', 1) where not [text] is null) ur on r.STORE = CAST(ur.STORESID as nvarchar(20)) 
+	left outer join RBOTRANSACTIONTABLE tt on r.TRANSACTIONID = tt.TRANSACTIONID and tt.TERMINAL = r.TERMINALID and tt.STORE = r.STORE
+	left outer join RETAILITEM i on r.ITEMID = i.ITEMID
+	left outer join RBOSTORETABLE st on r.STORE = st.STOREID and r.DATAAREAID = st.DATAAREAID
+	left outer join USERS u on u.STAFFID = r.STAFFID and r.DATAAREAID = u.DATAAREAID
+	where r.TRANSACTIONSTATUS = 0 and tt.ENTRYSTATUS = 0 
+	and tt.DATAAREAID = @DataareaID and tt.TRANSDATE >= @StartDate and tt.TRANSDATE <= @EndDate
+	and r.GIFTCARD = 0
+) temp
+group by STORE, STORENAME, STAFFID, LastName
+
+exec sp_xml_removedocument @docid
+
+GO

@@ -1,0 +1,24 @@
+﻿/*
+
+	Incident No.	: xxx
+	Responsible		: Guðbjörn Einarsson
+	Sprint			: LS Retail .NET 2013\Mercury
+	Date created	: 27.08.2012
+
+	Description		: Add column ITEMDEFAULTSTYLEID to KMINTERFACEPROFILE
+	
+	
+	Tables affected	: KMINTERFACEPROFILE
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('KMINTERFACEPROFILE') AND NAME='ITEMDEFAULTSTYLEID')
+BEGIN
+	ALTER TABLE dbo.KMINTERFACEPROFILE ADD ITEMDEFAULTSTYLEID nvarchar(20) NULL
+
+END
+GO

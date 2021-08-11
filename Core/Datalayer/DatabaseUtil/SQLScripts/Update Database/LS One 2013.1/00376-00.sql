@@ -1,0 +1,25 @@
+﻿
+/*
+
+	Incident No.	: 24398
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: LS One 2013.1\Sprint One
+	Date created	: 23.6.2013
+
+	Description		: Adds a new field to HospitalityType table
+	
+						
+*/
+
+
+USE LSPOSNET
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'HOSPITALITYTYPE' AND COLUMN_NAME = 'SENDSUSPENSIONSTOSTATION')
+BEGIN
+	ALTER TABLE HOSPITALITYTYPE ADD SENDSUSPENSIONSTOSTATION TINYINT NULL
+END
+GO
+
+
+
+

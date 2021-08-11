@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Peripherals</RootNamespace>
+    <AssemblyName>LSOne.Peripherals</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>obj\Release\Peripherals.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ButtonGrid">
+      <HintPath>..\..\Build\LSOne.Controls.ButtonGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.CalendarControl">
+      <HintPath>..\..\Build\LSOne.Controls.CalendarControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOposControls">
+      <HintPath>..\..\Build\bin\LSOposControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOposPrinterWin">
+      <HintPath>..\..\Build\bin\LSOposPrinterWin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Client">
+      <HintPath>..\..\Build\bin\LSRetail.Forecourt.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSRetail.Forecourt.Interface">
+      <HintPath>..\..\Build\bin\LSRetail.Forecourt.Interface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Build\bin\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSBelt">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSBelt.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSBillAcceptor">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSBillAcceptor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSBillDispenser">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSBillDispenser.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSBiometrics">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSBiometrics.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSBumpBar">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSBumpBar.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCashChanger">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCashChanger.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCashDrawer">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCashDrawer.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCAT">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCAT.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCheckScanner">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCheckScanner.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCoinAcceptor">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCoinAcceptor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSCoinDispenser">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSCoinDispenser.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSElectronicJournal">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSElectronicJournal.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSElectronicValueRW">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSElectronicValueRW.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSFiscalPrinter">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSFiscalPrinter.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSGate">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSGate.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSImageScanner">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSImageScanner.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSItemDispenser">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSItemDispenser.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSKeylock">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSKeylock.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSLights">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSLights.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSLineDisplay">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSLineDisplay.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSMICR">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSMICR.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSMotionSensor">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSMotionSensor.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSMSR">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSMSR.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSPINPad">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSPINPad.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSPointCardRW">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSPointCardRW.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSPOSKeyboard">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSPOSKeyboard.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSPOSPower">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSPOSPower.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSPOSPrinter">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSPOSPrinter.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSRemoteOrderDisplay">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSRemoteOrderDisplay.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSRFIDScanner">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSRFIDScanner.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSScale">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSScale.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSScanner">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSScanner.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSSigCap">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSSigCap.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSSmartCardRW">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSSmartCardRW.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSToneIndicator">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSToneIndicator.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.OPOSTotals">
+      <HintPath>..\..\Build\bin\POS.Devices.OPOSTotals.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="POS.Devices.Opos_Constants">
+      <HintPath>..\..\Build\bin\POS.Devices.Opos_Constants.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PrintingStationClient">
+      <HintPath>..\..\Build\bin\PrintingStationClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PrintingStationUtils">
+      <HintPath>..\..\Build\bin\PrintingStationUtils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="SystemFramework">
+      <HintPath>..\..\Build\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="CashDrawer.cs" />
+    <Compile Include="DallasKey.cs" />
+    <Compile Include="Devices.cs" />
+    <Compile Include="DialogPages\SetETaxFiscalDevicePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetETaxFiscalDevicePage.Designer.cs">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\SetBarcodeReaderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetBarcodeReaderPage.Designer.cs">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\SetCardReaderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetCardReaderPage.Designer.cs">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\SetDrawerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetDrawerPage.Designer.cs">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\SetLineDisplayPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetLineDisplayPage.Designer.cs">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPages\SetPrinterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\SetPrinterPage.Designer.cs">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DetectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DetectionDialog.Designer.cs">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HardwareConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HardwareConfigurationDialog.Designer.cs">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="DLLEntrySetter.cs" />
+    <Compile Include="ETaxSerialPort.cs" />
+    <Compile Include="ForecourtManager.cs" />
+    <Compile Include="HardwareConfigurationStep.cs" />
+    <Compile Include="Interfaces\IHardwareValidator.cs" />
+    <Compile Include="Keylock.cs" />
+    <Compile Include="LineDisplay.cs" />
+    <Compile Include="LineDisplaySimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineDisplaySimulator.Designer.cs">
+      <DependentUpon>LineDisplaySimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSR.cs" />
+    <Compile Include="OPOS\OPOSBase.cs" />
+    <Compile Include="OPOS\OPOSCashDrawer.cs" />
+    <Compile Include="OPOS\OPOSCommon.cs" />
+    <Compile Include="OPOS\OPOSConstants.cs" />
+    <Compile Include="OPOS\OPOSKeylock.cs" />
+    <Compile Include="OPOS\OPOSLineDisplay.cs" />
+    <Compile Include="OPOS\OPOSMSR.cs" />
+    <Compile Include="OPOS\OPOSPrinter.cs" />
+    <Compile Include="OPOS\OPOSScanner.cs" />
+    <Compile Include="Port.cs" />
+    <Compile Include="Printer.cs" />
+    <Compile Include="Printer.Partner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDScanner.cs" />
+    <Compile Include="ETax.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="TouchErrorProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TouchErrorProvider.Designer.cs">
+      <DependentUpon>TouchErrorProvider.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.bg.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.cs.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.da.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.de.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.el.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.en-ZA.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.es-MX.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.es.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.fi.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.fr.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.hi.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.is.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.it.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.ja-JP.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.ja.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.ko.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.nb-NO.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.nl-BE.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.nl.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.pl.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.pt-BR.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.ru.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.sv.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.zh-CHS.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetETaxFiscalDevicePage.zh-CHT.resx">
+      <DependentUpon>SetETaxFiscalDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.bg.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.cs.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.da.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.de.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.el.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.en-ZA.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.es-MX.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.es.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.fi.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.fr.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.hi.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.is.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.it.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.ja-JP.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.ja.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.ko.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.nb-NO.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.nl-BE.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.nl.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.pl.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.pt-BR.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.ru.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.sv.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.zh-CHS.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.zh-CHT.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.bg.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.cs.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.da.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.de.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.el.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.en-ZA.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.es-MX.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.es.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.fi.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.fr.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.hi.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.is.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.it.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.ja-JP.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.ja.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.ko.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.nb-NO.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.nl-BE.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.nl.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.pl.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.pt-BR.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.ru.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.sv.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.zh-CHS.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.zh-CHT.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.bg.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.cs.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.da.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.de.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.el.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.en-ZA.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.es-MX.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.es.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.fi.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.fr.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.hi.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.is.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.it.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.ja-JP.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.ja.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.ko.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.nb-NO.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.nl-BE.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.nl.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.pl.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.pt-BR.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.ru.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.sv.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.zh-CHS.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.zh-CHT.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.bg.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.cs.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.da.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.de.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.el.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.en-ZA.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.es-MX.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.es.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.fi.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.fr.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.hi.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.is.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.it.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.ja-JP.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.ja.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.ko.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.nb-NO.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.nl-BE.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.nl.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.pl.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.pt-BR.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.ru.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.sv.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.zh-CHS.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.zh-CHT.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.bg.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.cs.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.da.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.de.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.el.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.en-ZA.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.es-MX.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.es.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.fi.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.fr.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.hi.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.is.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.it.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.ja-JP.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.ja.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.ko.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.nb-NO.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.nl-BE.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.nl.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.pl.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.pt-BR.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.ru.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.sv.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.zh-CHS.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.zh-CHT.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineDisplaySimulator.resx">
+      <DependentUpon>LineDisplaySimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="TouchErrorProvider.resx">
+      <DependentUpon>TouchErrorProvider.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Peripherals.vslp">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hardware48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.bg.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.cs.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.da.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.de.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.el.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.en-ZA.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.es-MX.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.es.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.fi.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.fr.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.hi.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.is.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.ja.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.ko.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.nb-NO.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.nl-BE.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.nl.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.pl.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.pt-BR.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.ru.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.sv.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.it.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.ja-JP.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.bg.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.cs.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.da.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.de.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.el.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.en-ZA.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.es-MX.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.es.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.fi.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.fr.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.hi.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.is.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.it.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.ja-JP.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.ja.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.ko.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.nb-NO.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.nl-BE.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.nl.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.pl.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.pt-BR.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.ru.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.sv.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\SetBarcodeReaderPage.vi-VN.resx">
+      <DependentUpon>SetBarcodeReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetCardReaderPage.vi-VN.resx">
+      <DependentUpon>SetCardReaderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetDrawerPage.vi-VN.resx">
+      <DependentUpon>SetDrawerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetLineDisplayPage.vi-VN.resx">
+      <DependentUpon>SetLineDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\SetPrinterPage.vi-VN.resx">
+      <DependentUpon>SetPrinterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetectionDialog.vi-VN.resx">
+      <DependentUpon>DetectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HardwareConfigurationDialog.vi-VN.resx">
+      <DependentUpon>HardwareConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LS-One-spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_white_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_red_24px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SM\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

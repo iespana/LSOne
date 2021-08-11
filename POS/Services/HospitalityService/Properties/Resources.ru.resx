@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Номер заказа:</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Товары</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>Нет выбранных товаров</value>
+  </data>
+  <data name="NoItemsToPrint" xml:space="preserve">
+    <value>Здесь нет товаров для печати</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Номер заказа:</value>
+  </data>
+  <data name="Bumped" xml:space="preserve">
+    <value>Уволен</value>
+  </data>
+  <data name="CannotLoadHospitality" xml:space="preserve">
+    <value>Не удалось загрузить Ресторан</value>
+  </data>
+  <data name="ChangedItem" xml:space="preserve">
+    <value>ИЗМЕНЕНО</value>
+  </data>
+  <data name="ConfirmChangingUserOnTable" xml:space="preserve">
+    <value>Изменить официанта для это стола из #1 в #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableSplitBill" xml:space="preserve">
+    <value>Вы хотите изменить официанта на разделенных платежах из #1 в #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableTransferTable" xml:space="preserve">
+    <value>Вы хотите изменить официанта для перемещенного стола из #1 в #2?</value>
+  </data>
+  <data name="ErrorConnectingToSiteService" xml:space="preserve">
+    <value>Ошибка подключения к Сайту Сервиса. Приложение не может показать макет стола ресторана и будет закрыто.</value>
+  </data>
+  <data name="FromTable" xml:space="preserve">
+    <value>Из стола</value>
+  </data>
+  <data name="KitchenPrinterSlip" xml:space="preserve">
+    <value>Кухонный принтер слипов</value>
+  </data>
+  <data name="MaximumNoOfGuestsExceeded" xml:space="preserve">
+    <value>Максимальное число выбраннх гостей может быть #1</value>
+  </data>
+  <data name="MenuTypes" xml:space="preserve">
+    <value>Типы меню</value>
+  </data>
+  <data name="MustBeHospitalityType" xml:space="preserve">
+    <value>Должен быть доступным по крайней мере один тип ресторана</value>
+  </data>
+  <data name="NoHospitalityTypesFound" xml:space="preserve">
+    <value>Не найдены типы ресторанов</value>
+  </data>
+  <data name="NoMenuTypes" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="NoOfGuests" xml:space="preserve">
+    <value>Число гостей</value>
+  </data>
+  <data name="NoSiteServiceProfileForHospitality" xml:space="preserve">
+    <value>Не был настроен профиль Ресторана для Сайта Сервиса. Приложение не может показать макет стола ресторана, и оно будет закрыто.</value>
+  </data>
+  <data name="NoSplitsAllowed" xml:space="preserve">
+    <value>Разделение не разрешено.</value>
+  </data>
+  <data name="OnlyAllowedInHospitalityMode" xml:space="preserve">
+    <value>Эта операция разрешена только в режиме ресторана.</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Оператор</value>
+  </data>
+  <data name="OrderSent" xml:space="preserve">
+    <value>Заказ отправлен</value>
+  </data>
+  <data name="PrintError" xml:space="preserve">
+    <value>Ошибка принтера, проверьте, принтер включен и готов </value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Кол-во.</value>
+  </data>
+  <data name="SelectedOperationNotAllowedInTableView" xml:space="preserve">
+    <value>Выбранная операция не может быть запущена из просмотра стола</value>
+  </data>
+  <data name="SendingToKitchenPrinter" xml:space="preserve">
+    <value>Отправка на кухонный принтер...</value>
+  </data>
+  <data name="SplitBillNotConfigured" xml:space="preserve">
+    <value>Разделение счета не было польностью сконфигурировано. Пожалуйста проверьте настройку #1</value>
+  </data>
+  <data name="SplitBillOnlyInHospitality" xml:space="preserve">
+    <value>Разделение счета может быт выполнено только в режиме ресторана</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Начато</value>
+  </data>
+  <data name="TableID" xml:space="preserve">
+    <value>Стол</value>
+  </data>
+  <data name="TableLayoutNotUpdated" xml:space="preserve">
+    <value>Макет стола не был обновлен</value>
+  </data>
+  <data name="TableOpenInAnotherTerminal" xml:space="preserve">
+    <value>Этот стол открыт на другом терминале. Любые дополнительные товары, добавленные к этому столу, вероятно будут потеряны. Товар, который вы выбрали не будет добавлен к столу. Вы будете возвращены к просмотру стола</value>
+  </data>
+  <data name="TooManySplits" xml:space="preserve">
+    <value>Товар (товары) не могут быть разделены на #1 частей. Максимальное число частей установлено в #2</value>
+  </data>
+  <data name="ToTable" xml:space="preserve">
+    <value>В стол</value>
+  </data>
+  <data name="TransferNotConfigured" xml:space="preserve">
+    <value>Настройка перемещения стола не была полностью сконфигурирована. Пожалуйста, пересмотрите настройку #1</value>
+  </data>
+  <data name="TransferTableSlip" xml:space="preserve">
+    <value>Слип перемещения стола</value>
+  </data>
+  <data name="UnableToConnectToKDSTryingToReconnect" xml:space="preserve">
+    <value>Невозможно подключиться к кухонному дисплею. Повторите подключиться снова...</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>АННУЛИРОВАНО</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Доступно</value>
+  </data>
+  <data name="AvailableMenuTypes" xml:space="preserve">
+    <value>Доступные типы меню</value>
+  </data>
+  <data name="GuestsSeated" xml:space="preserve">
+    <value>Гостей посажено</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Закрыто</value>
+  </data>
+  <data name="NotServed" xml:space="preserve">
+    <value>Не обслуживать</value>
+  </data>
+  <data name="OrderConfirmed" xml:space="preserve">
+    <value>Заказ подтвержден</value>
+  </data>
+  <data name="OrderFinished" xml:space="preserve">
+    <value>Заказ закончен</value>
+  </data>
+  <data name="OrderNotPrinted" xml:space="preserve">
+    <value>Заказ не распечатан</value>
+  </data>
+  <data name="OrderPrinted" xml:space="preserve">
+    <value>Заказ распечатан</value>
+  </data>
+  <data name="OrderStarted" xml:space="preserve">
+    <value>Заказ начат</value>
+  </data>
+  <data name="PrintAll" xml:space="preserve">
+    <value>Печатать все</value>
+  </data>
+  <data name="SameFromAndToTable" xml:space="preserve">
+    <value>Один и тот же стол не может быть выбран как стол источник и стол приемник</value>
+  </data>
+  <data name="SelectedTable" xml:space="preserve">
+    <value>Выбранная таблица</value>
+  </data>
+  <data name="SelectMenuTypeForPrinting" xml:space="preserve">
+    <value>Выберите тип меню для печати</value>
+  </data>
+  <data name="SplitBy" xml:space="preserve">
+    <value>Разделить по суммам?</value>
+  </data>
+  <data name="SplitByAmount" xml:space="preserve">
+    <value>Разделить по суммам?</value>
+  </data>
+  <data name="TableWithDescription" xml:space="preserve">
+    <value>Стол %1</value>
+  </data>
+  <data name="TotalAmountForTable" xml:space="preserve">
+    <value>Итого для стола: %1</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Недоступен</value>
+  </data>
+  <data name="AmountSelectedIsLargerThenTotal" xml:space="preserve">
+    <value>Выбранная сумма больше, чем общая сумма товаров. Товары не могут быть разделены</value>
+  </data>
+  <data name="ErrorTransferingBetweenTables" xml:space="preserve">
+    <value>Ошибка перемещения между столами.</value>
+  </data>
+  <data name="NoTransactionAailableOnTable" xml:space="preserve">
+    <value>Нет доступных транзакция для этого стола.</value>
+  </data>
+  <data name="OperationNotImplemented" xml:space="preserve">
+    <value>Операция не была реализована</value>
+  </data>
+  <data name="OverrideTheStaffMemberOnThisTransaction" xml:space="preserve">
+    <value>Перезаписить код персонала в этой транзакции?</value>
+  </data>
+  <data name="ParameterNotImplemented" xml:space="preserve">
+    <value>Параметр не реализован</value>
+  </data>
+  <data name="SelectedTableBelongsToCurrentStaff" xml:space="preserve">
+    <value>Выбранный стол уже принадлежит текущему сотруднику.</value>
+  </data>
+  <data name="TableLockedByAnotherTerminal" xml:space="preserve">
+    <value>Выбранный стол блокирован другим терминалом</value>
+  </data>
+  <data name="TheSelectedTableIsLockedToAnotherStaffMember" xml:space="preserve">
+    <value>Выбранный стол блокирован другим сотрудником.</value>
+  </data>
+  <data name="TheSelectedTableIsUnavalible" xml:space="preserve">
+    <value>Выбранный стол недоступен.</value>
+  </data>
+  <data name="UnsplitAllLinesQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите отменить разделение всех строк и переместить их гостю 1?</value>
+  </data>
+  <data name="OperationOnlyValidForRetailTransaction" xml:space="preserve">
+    <value>Операция корректна только для розничной транзакции</value>
+  </data>
+  <data name="CombineExistingSplitPartQuestion" xml:space="preserve">
+    <value>Вы хотите объединить % 1 с существующей разделенной частью гостей % 2</value>
+  </data>
+  <data name="CombineLinesQuestion" xml:space="preserve">
+    <value>Вы хотите объединить эти строки с существующими разделенными частями гостей % 1</value>
+  </data>
+  <data name="NoItemsOnThisTableToTransfer" xml:space="preserve">
+    <value>Нет товаров для перемещения на этот стол</value>
+  </data>
+  <data name="OperationCannotApplyToGuestGrid" xml:space="preserve">
+    <value>Операция не может применяться к гостевой сети</value>
+  </data>
+  <data name="PleaseSelectTableBeforeRunningTheOperation" xml:space="preserve">
+    <value>Пожалуйста, выберите стол перед выполнением операции</value>
+  </data>
+  <data name="SeatingGuestsNotPossibleNow" xml:space="preserve">
+    <value>Рассадка гостей не возможна на этом столе в это время.</value>
+  </data>
+  <data name="SelectTableToTransferTo" xml:space="preserve">
+    <value>Выберите таблицу для передачи на ...</value>
+  </data>
+  <data name="SplitOperationIsNotValid" xml:space="preserve">
+    <value>Операция разделения не действительна</value>
+  </data>
+  <data name="ThereAreNoItemsToSplit" xml:space="preserve">
+    <value>Нет товаров для разделения</value>
+  </data>
+  <data name="ToTableAmt" xml:space="preserve">
+    <value>На стол %1 - Сумма %2</value>
+  </data>
+  <data name="TransferFromTable" xml:space="preserve">
+    <value>ПЕРЕМЕЩЕНИЕ: Из стола %1 - Сумма %2</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Неожиданное исключение. Не удалось выполнить требуемую операцию.</value>
+  </data>
+  <data name="UnknownState" xml:space="preserve">
+    <value>Неизвестный статус</value>
+  </data>
+</root>

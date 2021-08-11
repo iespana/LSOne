@@ -1,0 +1,22 @@
+﻿/*
+
+	Incident No.	: ONE-1269
+	Responsible		: Chan Yi Wen
+	Sprint			: 
+	Date created	: 29.7.2016
+
+	Description		: Changes to New Unit dialog/process
+	
+	
+	Tables affected	: RBOPARAMETERS
+						
+*/
+USE LSPOSNET
+GO
+  
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_NAME LIKE 'RBOPARAMETERS' AND COLUMN_NAME = 'MANUALLYENTERUNITID')
+BEGIN
+	ALTER TABLE RBOPARAMETERS ADD MANUALLYENTERUNITID TINYINT DEFAULT 1
+END	
+GO
+

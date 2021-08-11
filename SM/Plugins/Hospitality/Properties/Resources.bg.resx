@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавяне</value>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Увеличихте общия размер на менюто на мрежата на POS бутона и има място за #1 нови линии на менюто на POS бутона. Искате ли да генерирате нови линии, за да попълните празното пространство?</value>
+  </data>
+  <data name="AddRestaurantDiningTables" xml:space="preserve">
+    <value>Добавете маси за хранене в ресторанта</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Всички файлове</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Атрибути</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Налични</value>
+  </data>
+  <data name="ChangeFromDefaultFont" xml:space="preserve">
+    <value>Промяна от шрифта по подразбиране</value>
+  </data>
+  <data name="ChangingFromDefaultFontQuestion" xml:space="preserve">
+    <value>Шрифтът по подразбиране е #1 с размер по подразбиране #2. С разпечатването може да има проблем, ако промените тези настройки. Наистина ли искате да промените тези стойности?</value>
+  </data>
+  <data name="Clicked" xml:space="preserve">
+    <value>Кликване:</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Код:</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Конфигурация</value>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Искате ли да копирате текущия стил в свойствата на бутона?</value>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Копиране Текущ Стил?</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Изтриване</value>
+  </data>
+  <data name="DeleteDiningTableLayout" xml:space="preserve">
+    <value>Изтриване изглед маса за хранене</value>
+  </data>
+  <data name="DeleteDiningTableLayoutQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избрания изглед на масата за хранене?</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreen" xml:space="preserve">
+    <value>Изтрийте екрана за изглед на масата за хранене</value>
+  </data>
+  <data name="DeleteDiningTableLayoutScreenQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избрания екран за изглед на масата за хранене?</value>
+  </data>
+  <data name="DeleteHospitalityType" xml:space="preserve">
+    <value>Изтриване на типа на гостоприемството</value>
+  </data>
+  <data name="DeleteHospitalityTypeQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избрания вид гостоприемство?</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Изтриване на ред от менюто на мрежата на POS бутона</value>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избраните линии от менюто на POS?</value>
+  </data>
+  <data name="DeletePosLookup" xml:space="preserve">
+    <value>Изтрийте групата на меню за гостоприемство</value>
+  </data>
+  <data name="DeletePosLookupQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избраната група меню за гостоприемство?</value>
+  </data>
+  <data name="DeletePosMenu" xml:space="preserve">
+    <value>Изтрийте менюто POS</value>
+  </data>
+  <data name="DeletePosMenuLine" xml:space="preserve">
+    <value>Изтрийте реда на менюто на POS</value>
+  </data>
+  <data name="DeletePosMenuLineQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избраните линии на POS менюто?</value>
+  </data>
+  <data name="DeletePosMenuQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избраното POS меню?</value>
+  </data>
+  <data name="DeletePrintingRoute" xml:space="preserve">
+    <value>Изтриване на маршрута за печат</value>
+  </data>
+  <data name="DeletePrintingRouteQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избрания маршрут за печат?</value>
+  </data>
+  <data name="DeleteRestaurantDiningTable" xml:space="preserve">
+    <value>Изтрийте масата за хранене на ресторанта</value>
+  </data>
+  <data name="DeleteRestaurantDiningTableQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избраната маса за хранене в ресторанта?</value>
+  </data>
+  <data name="DeleteRestaurantMenuType" xml:space="preserve">
+    <value>Изтрийте вида меню на ресторанта</value>
+  </data>
+  <data name="DeleteRestaurantMenuTypeQuestion" xml:space="preserve">
+    <value>Наистина ли искате да изтриете избрания вид меню на ресторанта?</value>
+  </data>
+  <data name="DeleteRestaurantStation" xml:space="preserve">
+    <value>Изтриване на печатната станция</value>
+  </data>
+  <data name="DeleteRestaurantStationQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избраната печатаща станция?</value>
+  </data>
+  <data name="DeleteSalesType" xml:space="preserve">
+    <value>Изтриване на вида на продажби</value>
+  </data>
+  <data name="DeleteSalesTypeQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избрания вид продажби?</value>
+  </data>
+  <data name="DeleteStationSelection" xml:space="preserve">
+    <value>Изтриване на избор на станция</value>
+  </data>
+  <data name="DeleteStationSelectionQuestion" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете избраната станция?</value>
+  </data>
+  <data name="DeliveryAndTakeout" xml:space="preserve">
+    <value>Доставка и изнасяне</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="DineIn" xml:space="preserve">
+    <value>Вечеряйте в</value>
+  </data>
+  <data name="DiningTableLayout" xml:space="preserve">
+    <value>Изглед на масата за хранене</value>
+  </data>
+  <data name="DiningTableLayoutScreenExists" xml:space="preserve">
+    <value>Изглед на екран за маса за хранене с този номер вече съществува</value>
+  </data>
+  <data name="DiningTableLayoutSreenInUse" xml:space="preserve">
+    <value>Избраният екран не може да бъде изтрит, защото на него е назначена маса за хранене</value>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Не копирай</value>
+  </data>
+  <data name="DoNotCopyMenuHeader" xml:space="preserve">
+    <value>Не копирайте съществуващо заглавие на менюто</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактиране</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Празно</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>Няма списък с устройства на хост {0}, проверете дали услугата на печатната станция работи на хоста и дали са инсталирани принтери</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Обща информация</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Общи настройки</value>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Глиф</value>
+  </data>
+  <data name="HardwareProfilePrinter" xml:space="preserve">
+    <value>Принтер за хардуерен профил</value>
+  </data>
+  <data name="Hospitality" xml:space="preserve">
+    <value>Гостоприемство</value>
+  </data>
+  <data name="HospitalityMenuGroups" xml:space="preserve">
+    <value>Групи от меню за гостоприемство</value>
+  </data>
+  <data name="HospitalityMenuGroupsTooltip" xml:space="preserve">
+    <value>Изберете менюта за POS гостоприемство за менютата с разделенa сметка и трансферирайте менютата за масата</value>
+  </data>
+  <data name="HospitalityPosMenus" xml:space="preserve">
+    <value>POS менюта гостоприемство</value>
+  </data>
+  <data name="HospitalityPosMenusTooltip" xml:space="preserve">
+    <value>Организирайте POS операции върху бутони и оформете решетките на бутоните, които ще се използват в групите на менюто Hospitality</value>
+  </data>
+  <data name="HospitalitySetup" xml:space="preserve">
+    <value>Настройка на гостоприемството</value>
+  </data>
+  <data name="HospitalitySetupDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да настроите гостоприемството</value>
+  </data>
+  <data name="HospitalitySetupTooltipDescription" xml:space="preserve">
+    <value>Управление на глобалните настройки за гостоприемство</value>
+  </data>
+  <data name="HospitalityType" xml:space="preserve">
+    <value>Вид гостоприемство:</value>
+  </data>
+  <data name="HospitalityTypes" xml:space="preserve">
+    <value>Видове гостоприемство</value>
+  </data>
+  <data name="HospitalityTypesDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате видовете гостоприемство</value>
+  </data>
+  <data name="HospitalityTypesTooltipDescription" xml:space="preserve">
+    <value>Управлявайте видовете гостопроемство и изгледа на техните маси и функционалност</value>
+  </data>
+  <data name="HospitalityTypeText" xml:space="preserve">
+    <value>Вид гостоприемство:</value>
+  </data>
+  <data name="Hosts" xml:space="preserve">
+    <value>Хостове</value>
+  </data>
+  <data name="KitchenPrinting" xml:space="preserve">
+    <value>Кухненски печат</value>
+  </data>
+  <data name="LayoutID" xml:space="preserve">
+    <value>Изглед ID:</value>
+  </data>
+  <data name="LayoutIDExists" xml:space="preserve">
+    <value>В базата данни съществува изглед за маса за хранене с дадения идентификатор на изглед.</value>
+  </data>
+  <data name="Listing" xml:space="preserve">
+    <value>Списък</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Изглед и усещане</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Основно меню</value>
+  </data>
+  <data name="ManageSetupDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате настройките за гостоприемство</value>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Бутони на менюто</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Монитор</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>Няма операция</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Неналични</value>
+  </data>
+  <data name="NumberOfRestaurantDiningTablesExceeds" xml:space="preserve">
+    <value>Общият брой маси надвишава максималния брой маси, позволени за текущия изглед на масата за хранене</value>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Операция ID</value>
+  </data>
+  <data name="OPOSPrinter" xml:space="preserve">
+    <value>OPOS принтер</value>
+  </data>
+  <data name="PaymentStatus" xml:space="preserve">
+    <value>Статус на плащането</value>
+  </data>
+  <data name="PosColorExists" xml:space="preserve">
+    <value>Цвят на ПОС с този идентификатор вече съществува</value>
+  </data>
+  <data name="POSColorSetup" xml:space="preserve">
+    <value>POS настройка на цветовете</value>
+  </data>
+  <data name="POSColorSetupDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате цветовете, използвани в гостоприемството</value>
+  </data>
+  <data name="PosId" xml:space="preserve">
+    <value>POS ID</value>
+  </data>
+  <data name="PosLookupsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да преглеждате и редактирате групи от менюта на ПОС</value>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Бутон</value>
+  </data>
+  <data name="PosMenuButtons" xml:space="preserve">
+    <value>Менюта на бутони</value>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>Бутон Меню</value>
+  </data>
+  <data name="PosMenus" xml:space="preserve">
+    <value>POS менюта</value>
+  </data>
+  <data name="PosMenusDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате POS менюта</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Преглед</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Отпечатване</value>
+  </data>
+  <data name="PrintingRoutes" xml:space="preserve">
+    <value>Маршрути печат</value>
+  </data>
+  <data name="PrintingRoutesDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате маршрутите за печат</value>
+  </data>
+  <data name="PrintingStation" xml:space="preserve">
+    <value>Печатна станция</value>
+  </data>
+  <data name="PrintingStations" xml:space="preserve">
+    <value>Печатна станция</value>
+  </data>
+  <data name="PrintingStationsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате печатна станция</value>
+  </data>
+  <data name="ReceiptNumber" xml:space="preserve">
+    <value>Номер на разписка</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Заявки</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Резервации</value>
+  </data>
+  <data name="RestaurantDiningTableRangeExists" xml:space="preserve">
+    <value>В рамките на дадения диапазон вече има ресторантска маса за хранене</value>
+  </data>
+  <data name="RestaurantId" xml:space="preserve">
+    <value>Идентификационен номер на ресторанта:</value>
+  </data>
+  <data name="RestaurantMenuTypeCodeOnPosExists" xml:space="preserve">
+    <value>Вид меню на ресторант с дадена поръчка и код на pos вече съществува</value>
+  </data>
+  <data name="RestaurantMenuTypeExists" xml:space="preserve">
+    <value>Вид меню на ресторант с дадения код ресторант и поръчка вече съществува</value>
+  </data>
+  <data name="RestaurantMenuTypes" xml:space="preserve">
+    <value>Видове меню</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Ресторанти</value>
+  </data>
+  <data name="RestaurantSalesTypeExists" xml:space="preserve">
+    <value>Вид гостоприемство с този идентификационен номер на ресторанта и вид продажби вече съществува</value>
+  </data>
+  <data name="RestaurantsDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате ресторанти</value>
+  </data>
+  <data name="RestaurantStationExists" xml:space="preserve">
+    <value>Вече съществува печатна станция с този идентификатор</value>
+  </data>
+  <data name="RestaurantStations" xml:space="preserve">
+    <value>Печатни станции</value>
+  </data>
+  <data name="RestaurantStationText" xml:space="preserve">
+    <value>Ресторантска станция</value>
+  </data>
+  <data name="RestaurantsTooltipDescription" xml:space="preserve">
+    <value>Отворете списъка с ресторанти/магазини, за да ги прегледате и управлявате</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Вид на продажбите:</value>
+  </data>
+  <data name="SalesTypes" xml:space="preserve">
+    <value>Видове продажби</value>
+  </data>
+  <data name="SalesTypesDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да преглеждате и редактирате видове продажби</value>
+  </data>
+  <data name="SalesTypesTooltipDescription" xml:space="preserve">
+    <value>Управление на видовете продажби, които се използват за определяне на група за данък продажби и ценова група за типовете гостоприемство</value>
+  </data>
+  <data name="SalesTypeText" xml:space="preserve">
+    <value>Вид на продажбите:</value>
+  </data>
+  <data name="Screens" xml:space="preserve">
+    <value>Екрани</value>
+  </data>
+  <data name="SendConfig" xml:space="preserve">
+    <value>Конфиг.е изпратена на хост</value>
+  </data>
+  <data name="Sequence" xml:space="preserve">
+    <value>Поредност</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Настройка</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Местоположения</value>
+  </data>
+  <data name="SplitBillTransferLines" xml:space="preserve">
+    <value>Разделяне на сметки / Прехвърляне на линии</value>
+  </data>
+  <data name="StaffName" xml:space="preserve">
+    <value>Име персонал</value>
+  </data>
+  <data name="StationIsInUseCannotBeDeleted" xml:space="preserve">
+    <value>Станция #1 се използва в правилата за маршрути и не може да бъде изтрита</value>
+  </data>
+  <data name="StationPrinting" xml:space="preserve">
+    <value>Печатна станция</value>
+  </data>
+  <data name="StationPrintingDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате печатането от раб.станции</value>
+  </data>
+  <data name="StationPrintingTooltipDescription" xml:space="preserve">
+    <value>Управлявайте кухненските печатащи станции и маршрутите на артикулите до станциите</value>
+  </data>
+  <data name="StationRouting" xml:space="preserve">
+    <value>Маршрут на станцията</value>
+  </data>
+  <data name="StationRoutingDescription" xml:space="preserve">
+    <value>Използвайте тази опция, за да управлявате маршрутизирането на артикули към станции</value>
+  </data>
+  <data name="StationSelectionExists" xml:space="preserve">
+    <value>Вече съществува избор на станция със същата информация</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Настройки на магазина</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Стил</value>
+  </data>
+  <data name="TableButtonGraphicalLayout" xml:space="preserve">
+    <value>Бутон маса</value>
+  </data>
+  <data name="TableNumber" xml:space="preserve">
+    <value>Номер на масата:</value>
+  </data>
+  <data name="Text1" xml:space="preserve">
+    <value>Текст 1</value>
+  </data>
+  <data name="Text2" xml:space="preserve">
+    <value>Текст 2</value>
+  </data>
+  <data name="Text3" xml:space="preserve">
+    <value>Текст 3</value>
+  </data>
+  <data name="Text4" xml:space="preserve">
+    <value>Текст 4</value>
+  </data>
+  <data name="Text5" xml:space="preserve">
+    <value>Текст 5</value>
+  </data>
+  <data name="Text6" xml:space="preserve">
+    <value>Текст 6</value>
+  </data>
+  <data name="TextFiles" xml:space="preserve">
+    <value>Текстови документи</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Бакшиши</value>
+  </data>
+  <data name="TransactionNumber" xml:space="preserve">
+    <value>Номер на транзакцията</value>
+  </data>
+  <data name="ViewAllHospitalityTypes" xml:space="preserve">
+    <value>Преглед всички видове гостоприемство</value>
+  </data>
+  <data name="ViewAllRestaurantStations" xml:space="preserve">
+    <value>Преглед цялата станция за печат</value>
+  </data>
+  <data name="ViewAllSalesTypes" xml:space="preserve">
+    <value>Преглед всички видове продажби</value>
+  </data>
+  <data name="ViewPosMenus" xml:space="preserve">
+    <value>Преглед POS менютата</value>
+  </data>
+  <data name="WindowsPrinter" xml:space="preserve">
+    <value>Windows Принтер</value>
+  </data>
+</root>

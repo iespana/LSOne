@@ -1,0 +1,68 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: c0bdca90-2ba5-11e5-a2cb-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Ventes d'articles
+
+// Extra description for the report as it will appear in some of the system menus
+Description: Ce rapport montre toutes les ventes d'articles par article/prix. Il n'inclut pas les ventes par carte cadeau.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: fr
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_ItemSales]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_ItemSales]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_ItemSales]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@StoresID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set nocount on
+declare @docid int
+
+exec sp_xml_preparedocument @docid output, @StoresID
+
+select ITEMID, (ITEMNAME + VARIANTNAME) as ITEMNAME, sum(QTY) as QTY, UNIT, PRICE, sum(WHOLEDISCAMOUNTWITHTAX) as WHOLEDISCAMOUNTWITHTAX, sum(NETAMOUNTINCLTAX) as NETAMOUNTINCLTAX 
+from
+(
+	select r.QTY*-1 as QTY, r.NETAMOUNTINCLTAX*-1 as NETAMOUNTINCLTAX, r.WHOLEDISCAMOUNTWITHTAX, u.TXT as UNIT, r.price, r.ITEMID, 
+	case when r.GIFTCARD = 1 THEN 'Gift card' ELSE ISNULL(i.ITEMNAME, 'Item does on exist') END as ITEMNAME,
+	case when i.VARIANTNAME <> '' THEN (' - ' + i.VARIANTNAME) ELSE ISNULL(i.VARIANTNAME, '') END as VARIANTNAME,
+	g.GROUPID, g.NAME, r.STORE 
+	from VTRANSACTIONSALESTRANSHASPRICE r
+	join (select [text] as STORESID from openxml(@docid, '/p', 1) where not [text] is null) ur on r.STORE = CAST(ur.STORESID as nvarchar(20)) 
+	left outer join RBOTRANSACTIONTABLE tt on r.TRANSACTIONID = tt.TRANSACTIONID and tt.TERMINAL = r.TERMINALID and tt.STORE = r.STORE
+	left outer join RETAILITEM i on r.ITEMID = i.ITEMID 
+	left outer join RETAILGROUP g on g.MASTERID = i.RETAILGROUPMASTERID
+	left outer join UNIT u on r.UNIT = u.UNITID
+	where r.TRANSACTIONSTATUS = 0 and tt.ENTRYSTATUS = 0 and r.GIFTCARD = 0
+	and tt.DATAAREAID = @DataareaID 
+	and tt.TRANSDATE >= @StartDate and tt.TRANSDATE <= @EndDate
+) temp
+group by UNIT, PRICE, ITEMID, ITEMNAME, VARIANTNAME
+order by ITEMID
+
+exec sp_xml_removedocument @docid
+
+GO

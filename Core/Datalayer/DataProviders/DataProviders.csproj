@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.DataLayer.DataProviders</RootNamespace>
+    <AssemblyName>LSOne.DataLayer.DataProviders</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.DataLayer.KDSBusinessObjects">
+      <HintPath>..\..\..\SM\Build\bin\LSOne.DataLayer.KDSBusinessObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\..\SM\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Attributes\TableNameAttribute.cs" />
+    <Compile Include="Backup\IBackupData.cs" />
+    <Compile Include="BarCodes\BarCodeSorting.cs" />
+    <Compile Include="BarCodes\IBarCodeData.cs" />
+    <Compile Include="BarCodes\IBarcodeMaskData.cs" />
+    <Compile Include="BarCodes\IBarCodeMaskSegmentData.cs" />
+    <Compile Include="BarCodes\IBarCodeSetupData.cs" />
+    <Compile Include="Card\ICardInfoData.cs" />
+    <Compile Include="Card\ICardToTenderMappingData.cs" />
+    <Compile Include="Card\ICardTypeData.cs" />
+    <Compile Include="Companies\ICompanyInfoData.cs" />
+    <Compile Include="Companies\IParameterData.cs" />
+    <Compile Include="ConfigurationWizard\BusinessTemplateData\ITemplateStoreData.cs" />
+    <Compile Include="ConfigurationWizard\BusinessTemplateData\ITemplateTerminalData.cs" />
+    <Compile Include="ConfigurationWizard\IPaymentsAndCurrencyData.cs" />
+    <Compile Include="ConfigurationWizard\IPeripheralsData.cs" />
+    <Compile Include="ConfigurationWizard\IReceiptsData.cs" />
+    <Compile Include="ConfigurationWizard\IRetailGroupsData.cs" />
+    <Compile Include="ConfigurationWizard\IStoreSettingsData.cs" />
+    <Compile Include="ConfigurationWizard\ITouchButtonLayoutData.cs" />
+    <Compile Include="ConfigurationWizard\IUserGroupData.cs" />
+    <Compile Include="ConfigurationWizard\IWizardTemplateViewData.cs" />
+    <Compile Include="ConfigurationWizard\WizardTemplateViewSorting.cs" />
+    <Compile Include="Contacts\ContactSorting.cs" />
+    <Compile Include="Contacts\IContactData.cs" />
+    <Compile Include="Contacts\ICountryData.cs" />
+    <Compile Include="Contacts\IStateData.cs" />
+    <Compile Include="Currencies\CurrencySorting.cs" />
+    <Compile Include="Currencies\ICashDenominatorData.cs" />
+    <Compile Include="Currencies\ICurrencyData.cs" />
+    <Compile Include="Currencies\IExchangeRatesData.cs" />
+    <Compile Include="CustomerOrders\CustomerOrderSorting.cs" />
+    <Compile Include="CustomerOrders\ICustomerOrderAdditionalConfigurationData.cs" />
+    <Compile Include="CustomerOrders\ICustomerOrderData.cs" />
+    <Compile Include="CustomerOrders\ICustomerOrderSettings.cs" />
+    <Compile Include="Customers\CustomerSearchParameters.cs" />
+    <Compile Include="Customers\CustomerSorting.cs" />
+    <Compile Include="Customers\ICustomerAddressData.cs" />
+    <Compile Include="Customers\ICustomerData.cs" />
+    <Compile Include="Customers\ICustomerGroupData.cs" />
+    <Compile Include="Customers\ICustomersInGroupData.cs" />
+    <Compile Include="Customers\IGroupCategoryData.cs" />
+    <Compile Include="EFT\IEFTMappingData.cs" />
+    <Compile Include="EFT\IEFTPaymentData.cs" />
+    <Compile Include="EMails\IEMailQueueAttachmentData.cs" />
+    <Compile Include="EMails\IEMailQueueEntryData.cs" />
+    <Compile Include="EMails\IEMailSettingData.cs" />
+    <Compile Include="EOD\IZReportData.cs" />
+    <Compile Include="Exeptions\FunctionalityProfileMissingExeption.cs" />
+    <Compile Include="Financials\IFinancialReportData.cs" />
+    <Compile Include="Financials\IIncomeExpenseAccountData.cs" />
+    <Compile Include="Fiscal\IFiscalData.cs" />
+    <Compile Include="Fiscal\IFiscalLogData.cs" />
+    <Compile Include="Forms\FormSorting.cs" />
+    <Compile Include="Forms\FormTypeSorting.cs" />
+    <Compile Include="Forms\IFormData.cs" />
+    <Compile Include="Forms\IFormTypeData.cs" />
+    <Compile Include="Hospitality\HospitalityTypeSorting.cs" />
+    <Compile Include="Hospitality\IDiningTableLayoutData.cs" />
+    <Compile Include="Hospitality\IDiningTableLayoutScreenData.cs" />
+    <Compile Include="Hospitality\IFloorLayoutData.cs" />
+    <Compile Include="Hospitality\IHospitalityOperationData.cs" />
+    <Compile Include="Hospitality\IHospitalitySetupData.cs" />
+    <Compile Include="Hospitality\IHospitalityTypeData.cs" />
+    <Compile Include="Hospitality\IPosColorData.cs" />
+    <Compile Include="Hospitality\IPosLookupData.cs" />
+    <Compile Include="Hospitality\IPosParameterSetupData.cs" />
+    <Compile Include="Hospitality\IPrintingStationData.cs" />
+    <Compile Include="Hospitality\IRestaurantDiningTableData.cs" />
+    <Compile Include="Hospitality\IRestaurantMenuTypeData.cs" />
+    <Compile Include="Hospitality\ISalesTypeData.cs" />
+    <Compile Include="Hospitality\IStationPrintingHostData.cs" />
+    <Compile Include="Hospitality\IStationSelectionData.cs" />
+    <Compile Include="Hospitality\ITableInfoData.cs" />
+    <Compile Include="Hospitality\PosLookupSorting.cs" />
+    <Compile Include="Hospitality\PrintingStationSorting.cs" />
+    <Compile Include="Hospitality\SalesTypeSorting.cs" />
+    <Compile Include="ICompareListGetter.cs" />
+    <Compile Include="Images\IImageData.cs" />
+    <Compile Include="IntegrationFramework\IAccessTokenData.cs" />
+    <Compile Include="Inventory\CostCalculation.cs" />
+    <Compile Include="Inventory\IInventoryTransferData.cs" />
+    <Compile Include="Inventory\IReasonCodeData.cs" />
+    <Compile Include="IRegistrar.cs" />
+    <Compile Include="IDataProviderBase.cs" />
+    <Compile Include="Infocodes\IInfocodeData.cs" />
+    <Compile Include="Infocodes\IInfocodeSpecificData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infocodes\IInfocodeSubcodeData.cs" />
+    <Compile Include="Infocodes\InfocodeSorting.cs" />
+    <Compile Include="Infocodes\InfocodeSpecificSorting.cs" />
+    <Compile Include="Infocodes\InfocodeSubcodeSorting.cs" />
+    <Compile Include="Info\IPosisInfoData.cs" />
+    <Compile Include="Integrations\IIntegrationLogData.cs" />
+    <Compile Include="Integrations\IIntegrationMappingData.cs" />
+    <Compile Include="Inventory\GoodsReceivingDocumentLineSorting.cs" />
+    <Compile Include="Inventory\GoodsReceivingDocumentSorting.cs" />
+    <Compile Include="Inventory\IGoodsReceivingDocumentData.cs" />
+    <Compile Include="Inventory\IGoodsReceivingDocumentLineData.cs" />
+    <Compile Include="Inventory\IInventoryAdjustmentData.cs" />
+    <Compile Include="Inventory\IInventoryData.cs" />
+    <Compile Include="Inventory\IInventoryJournalTransactionData.cs" />
+    <Compile Include="Inventory\IInventoryTransactionData.cs" />
+    <Compile Include="Inventory\IInventoryTransferOrderData.cs" />
+    <Compile Include="Inventory\IInventoryTransferOrderLineData.cs" />
+    <Compile Include="Inventory\IInventoryTransferRequestData.cs" />
+    <Compile Include="Inventory\IInventoryTransferRequestLineData.cs" />
+    <Compile Include="Inventory\InventoryGroup.cs" />
+    <Compile Include="Inventory\InventorySorting.cs" />
+    <Compile Include="Inventory\ReasonCodeSorting.cs" />
+    <Compile Include="Inventory\IPurchaseOrderData.cs" />
+    <Compile Include="Inventory\IPurchaseOrderLineData.cs" />
+    <Compile Include="Inventory\IPurchaseOrderMiscChargesData.cs" />
+    <Compile Include="Inventory\IVendorData.cs" />
+    <Compile Include="Inventory\IVendorItemData.cs" />
+    <Compile Include="Inventory\PurchaseOrderLineSorting.cs" />
+    <Compile Include="Inventory\PurchaseOrderMiscChargesSorting.cs" />
+    <Compile Include="Inventory\PurchaseOrderSorting.cs" />
+    <Compile Include="Inventory\VendorItemSorting.cs" />
+    <Compile Include="Inventory\VendorSorting.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="ItemMaster\Dimensions\DimensionGroupSorting.cs" />
+    <Compile Include="ItemMaster\Dimensions\IDimensionAttributeData.cs" />
+    <Compile Include="ItemMaster\Dimensions\IDimensionTemplateData.cs" />
+    <Compile Include="ItemMaster\Dimensions\IRetailItemDimensionData.cs" />
+    <Compile Include="Inventory\IItemLedgerData.cs" />
+    <Compile Include="ItemMaster\IItemImageData.cs" />
+    <Compile Include="ItemMaster\IItemTranslationData.cs" />
+    <Compile Include="ItemMaster\ILinkedItemData.cs" />
+    <Compile Include="ItemMaster\IRetailDepartmentData.cs" />
+    <Compile Include="ItemMaster\IRetailDivisionData.cs" />
+    <Compile Include="ItemMaster\IRetailGroupData.cs" />
+    <Compile Include="ItemMaster\IRetailItemAssemblyComponentData.cs" />
+    <Compile Include="ItemMaster\IRetailItemAssemblyData.cs" />
+    <Compile Include="ItemMaster\IRetailItemCostData.cs" />
+    <Compile Include="ItemMaster\IRetailItemDataOld.cs" />
+    <Compile Include="ItemMaster\IRetailItemData.cs" />
+    <Compile Include="ItemMaster\ISpecialGroupData.cs" />
+    <Compile Include="ItemMaster\MultiEditing\IRetailItemMultiEditData.cs" />
+    <Compile Include="ItemMaster\RetailDivisionSorting.cs" />
+    <Compile Include="ItemMaster\RetailGroupSorting.cs" />
+    <Compile Include="ItemMaster\SpecialGroupItemSorting.cs" />
+    <Compile Include="ItemMaster\SpecialGroupSorting.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayAggregateGroupItemData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayAggregateProfileGroupData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayFunctionalProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayHeaderPaneLineColumnData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayHeaderPaneLineData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayHospitalityTypeRoutingConnectionData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayItemRoutingConnectionData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayHeaderPaneData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayAggregateProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayProductionSectionData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplaySectionStationRoutingData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayLineColumnData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayPrinterData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayItemSectionRoutingData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayStationData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayStyleProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayTerminalRoutingConnectionData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayTimeStyleData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayTransactionProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayVisualProfileData.cs" />
+    <Compile Include="KitchenDisplaySystem\IKitchenDisplayLineData.cs" />
+    <Compile Include="Labels\ILabelQueueData.cs" />
+    <Compile Include="Labels\ILabelTemplateData.cs" />
+    <Compile Include="Ledger\ICustomerLedgerEntriesData.cs" />
+    <Compile Include="Log\IClearPosisLog.cs" />
+    <Compile Include="LookupValues\IKeyboardMappingData.cs" />
+    <Compile Include="LookupValues\IMsrCardLinkData.cs" />
+    <Compile Include="LookupValues\IPaymentLimitationsData.cs" />
+    <Compile Include="LookupValues\IPaymentMethodData.cs" />
+    <Compile Include="LookupValues\IRemoteHostData.cs" />
+    <Compile Include="Loyalty\ILoyaltyCustomerData.cs" />
+    <Compile Include="Loyalty\ILoyaltyCustomerParamsData.cs" />
+    <Compile Include="Loyalty\ILoyaltyMSRCardData.cs" />
+    <Compile Include="Loyalty\ILoyaltyMSRCardTransData.cs" />
+    <Compile Include="Loyalty\ILoyaltyPointsData.cs" />
+    <Compile Include="Loyalty\ILoyaltySchemesData.cs" />
+    <Compile Include="Loyalty\LoyaltyMSRCardInequality.cs" />
+    <Compile Include="Loyalty\LoyaltyMSRCardSorting.cs" />
+    <Compile Include="Loyalty\LoyaltyMSRCardTransTypeSearchEnum.cs" />
+    <Compile Include="Loyalty\LoyaltyMSRCardTypeSearchEnum.cs" />
+    <Compile Include="Omni\IOmniAppLicenseData.cs" />
+    <Compile Include="Omni\IOmniJournalData.cs" />
+    <Compile Include="Operations\IBlankOperationData.cs" />
+    <Compile Include="POS\IPOSKeyboardButtonControlData.cs" />
+    <Compile Include="PricesAndDiscounts\DiscountOfferFilter.cs" />
+    <Compile Include="PricesAndDiscounts\DiscountOfferSorting.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountAndPriceActivationData.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountCalculationData.cs" />
+    <Compile Include="PricesAndDiscounts\ICouponData.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountOfferData.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountOfferLineData.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountParametersData.cs" />
+    <Compile Include="PricesAndDiscounts\IDiscountPeriodData.cs" />
+    <Compile Include="PricesAndDiscounts\IItemInPriceDiscountGroupData.cs" />
+    <Compile Include="PricesAndDiscounts\IMixAndMatchLineGroupData.cs" />
+    <Compile Include="PricesAndDiscounts\IMultibuyDiscountLineData.cs" />
+    <Compile Include="PricesAndDiscounts\IPriceDiscountGroupData.cs" />
+    <Compile Include="PricesAndDiscounts\ITradeAgreementData.cs" />
+    <Compile Include="PricesAndDiscounts\PromotionOfferLineSorting.cs" />
+    <Compile Include="PricesAndDiscounts\TradeAgreementRelation.cs" />
+    <Compile Include="Profiles\FormProfileLineSorting.cs" />
+    <Compile Include="Profiles\FormProfileSorting.cs" />
+    <Compile Include="Profiles\IFormProfileData.cs" />
+    <Compile Include="Profiles\IFormProfileLineData.cs" />
+    <Compile Include="Profiles\IFunctionalityProfileData.cs" />
+    <Compile Include="Profiles\IHardwareProfileData.cs" />
+    <Compile Include="Profiles\IImportProfileData.cs" />
+    <Compile Include="Profiles\IImportProfileLineData.cs" />
+    <Compile Include="Profiles\IPosContextData.cs" />
+    <Compile Include="Profiles\IPosStyleProfileLineData.cs" />
+    <Compile Include="Profiles\IShorthandItemData.cs" />
+    <Compile Include="Profiles\ISiteServiceProfileData.cs" />
+    <Compile Include="Profiles\IStyleProfileData.cs" />
+    <Compile Include="Profiles\IUserProfileData.cs" />
+    <Compile Include="Profiles\IVisualProfileData.cs" />
+    <Compile Include="Profiles\IWindowsPrinterConfigurationData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderConfig\BaseSerializedSectionHandler.cs" />
+    <Compile Include="ProviderConfig\Configuration.cs" />
+    <Compile Include="ProviderConfig\ConfigurationReader.cs" />
+    <Compile Include="ProviderConfig\ConfigurationSectionHandler.cs" />
+    <Compile Include="ProviderConfig\ConfigurationSerializer.cs" />
+    <Compile Include="ProviderConfig\Provider.cs" />
+    <Compile Include="Providers.cs" />
+    <Compile Include="Replenishment\IInventoryAreaData.cs" />
+    <Compile Include="Replenishment\IInventoryTemplateData.cs" />
+    <Compile Include="Replenishment\IInventoryTemplateItemFilterData.cs" />
+    <Compile Include="Replenishment\IInventoryTemplateSectionData.cs" />
+    <Compile Include="Replenishment\IInventoryTemplateSectionSelectionData.cs" />
+    <Compile Include="Replenishment\IInventoryTemplateStoreConnectionData.cs" />
+    <Compile Include="Replenishment\IItemReplenishmentSettingData.cs" />
+    <Compile Include="Replenishment\IPurchaseWorksheetData.cs" />
+    <Compile Include="Replenishment\IPurchaseWorksheetLineData.cs" />
+    <Compile Include="Reports\IProcedureParameterData.cs" />
+    <Compile Include="Reports\IReportContextData.cs" />
+    <Compile Include="Reports\IReportData.cs" />
+    <Compile Include="Reports\IReportEnumValueData.cs" />
+    <Compile Include="RFID\IRFIDData.cs" />
+    <Compile Include="DataProviderFactory.cs" />
+    <Compile Include="Sequences\INumberSequenceData.cs" />
+    <Compile Include="SerialNumbers\ISerialNumberData.cs" />
+    <Compile Include="Settings\IDecimalSettingsData.cs" />
+    <Compile Include="Statements\IStatementInfoData.cs" />
+    <Compile Include="Statements\IStatementLineData.cs" />
+    <Compile Include="Statements\StatementInfoSorting.cs" />
+    <Compile Include="StoreManagement\ICardNumberSerieData.cs" />
+    <Compile Include="StoreManagement\IRegionData.cs" />
+    <Compile Include="StoreManagement\IStoreCardTypesData.cs" />
+    <Compile Include="StoreManagement\IPaymentTypeCardTypesData.cs" />
+    <Compile Include="StoreManagement\IStoreData.cs" />
+    <Compile Include="StoreManagement\IStorePaymentLimitationData.cs" />
+    <Compile Include="StoreManagement\IStorePaymentMethodData.cs" />
+    <Compile Include="StoreManagement\ITerminalData.cs" />
+    <Compile Include="TaxFree\ITaxFreeConfigData.cs" />
+    <Compile Include="TaxFree\ITaxRefundData.cs" />
+    <Compile Include="TaxFree\ITaxRefundRangeData.cs" />
+    <Compile Include="TaxFree\ITaxRefundTransactionData.cs" />
+    <Compile Include="TaxFree\ITouristData.cs" />
+    <Compile Include="Tax\IItemSalesTaxGroupData.cs" />
+    <Compile Include="Tax\ISalesTaxGroupData.cs" />
+    <Compile Include="Tax\ITaxCodeData.cs" />
+    <Compile Include="Tax\ITaxCodeValueData.cs" />
+    <Compile Include="Tax\ITaxItemData.cs" />
+    <Compile Include="TenderDeclaration\ITenderDeclarationData.cs" />
+    <Compile Include="TenderDeclaration\ITenderDeclarationLineData.cs" />
+    <Compile Include="Terminals\ITerminalGroupConnectionData.cs" />
+    <Compile Include="Terminals\ITerminalGroupData.cs" />
+    <Compile Include="TimeKeeper\ITimeKeeperData.cs" />
+    <Compile Include="TouchButtons\IButtonGridButtonsData.cs" />
+    <Compile Include="TouchButtons\IButtonGridData.cs" />
+    <Compile Include="TouchButtons\IPosMenuHeaderData.cs" />
+    <Compile Include="TouchButtons\IPosMenuLineData.cs" />
+    <Compile Include="TouchButtons\IPosOperationData.cs" />
+    <Compile Include="TouchButtons\IPosStyleData.cs" />
+    <Compile Include="TouchButtons\ITouchLayoutData.cs" />
+    <Compile Include="TouchButtons\PosMenuHeaderFilter.cs" />
+    <Compile Include="TouchButtons\PosMenuHeaderSorting.cs" />
+    <Compile Include="TouchButtons\PosOperationSorting.cs" />
+    <Compile Include="TouchButtons\TouchLayoutSorting.cs" />
+    <Compile Include="Transactions\IInfoCodeLineData.cs" />
+    <Compile Include="Transactions\IPaymentTransactionData.cs" />
+    <Compile Include="Transactions\IReceiptData.cs" />
+    <Compile Include="Transactions\ISalesTransactionData.cs" />
+    <Compile Include="Transactions\ISuspendedTransactionAnswerData.cs" />
+    <Compile Include="Transactions\ISuspendedTransactionData.cs" />
+    <Compile Include="Transactions\ISuspendedTransactionTypeData.cs" />
+    <Compile Include="Transactions\ISuspensionTypeAdditionalInfoData.cs" />
+    <Compile Include="Transactions\ITransactionData.cs" />
+    <Compile Include="Units\IUnitConversionData.cs" />
+    <Compile Include="Units\IUnitData.cs" />
+    <Compile Include="Units\UnitSorting.cs" />
+    <Compile Include="UserManagement\IActionPermissionData.cs" />
+    <Compile Include="UserManagement\IAuthenticationTokenData.cs" />
+    <Compile Include="UserManagement\IPermissionData.cs" />
+    <Compile Include="UserManagement\IPermissionGroupData.cs" />
+    <Compile Include="UserManagement\IPOSUserData.cs" />
+    <Compile Include="UserManagement\IUserData.cs" />
+    <Compile Include="UserManagement\IUserGroupData.cs" />
+    <Compile Include="UserInterface\IUIStyleData.cs" />
+    <Compile Include="UserManagement\IUserMigrationCommands.cs" />
+    <Compile Include="Vouchers\ICreditVoucherData.cs" />
+    <Compile Include="Vouchers\ICreditVoucherLineData.cs" />
+    <Compile Include="Vouchers\IGiftCardData.cs" />
+    <Compile Include="Vouchers\IGiftCardLineData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{ea065047-ecf6-461d-932d-b86f65ba35a2}</Project>
+      <Name>BusinessObjects</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericConnector\GenericConnector.csproj">
+      <Project>{fde0c333-8073-4774-a412-add8cccf805c}</Project>
+      <Name>GenericConnector</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SM\Build\" /S /R /Y
+start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\SiteService\Build\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

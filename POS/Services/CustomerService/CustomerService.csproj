@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D317DB1-7C7B-41B0-AC36-C03C03CCBBB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.Services</RootNamespace>
+    <AssemblyName>LSOne.Services.Customer</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Data.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Printing.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <HintPath>..\..\Build\bin\DevExpress.Sparkline.v15.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.Utils.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraBars.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraEditors.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraGrid.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraLayout.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraPrinting.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions">
+      <HintPath>..\..\Build\bin\DevExpress.XtraReports.v15.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraRichEdit.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1">
+      <HintPath>..\..\Build\bin\DevExpress.XtraTreeList.v15.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.TouchKeyboard">
+      <HintPath>..\..\Build\LSOne.Controls.TouchKeyboard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Core">
+      <HintPath>..\..\Build\LSOne.POS.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="SystemFramework">
+      <HintPath>..\..\Build\SystemFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.POS.Processes">
+      <HintPath>..\..\Build\LSOne.POS.Processes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerService.Partner.cs" />
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="DLLEntry.cs" />
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Panels\CustomerLedgerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CustomerLedgerPanel.Designer.cs">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CustomerLoyaltyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CustomerLoyaltyPanel.Designer.cs">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CustomerOtherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CustomerOtherPanel.Designer.cs">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CustomerAddressPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CustomerAddressPanel.Designer.cs">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CustomerDetailsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CustomerDetailsPanel.Designer.cs">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\AddCustomerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\AddCustomerDialog.Designer.cs">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerLedgerFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerLedgerFilterDialog.Designer.cs">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsTouch\CustomerSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\EditCustomerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsTouch\EditCustomerDialog.Designer.cs">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Other\Peripherals\Peripherals.csproj">
+      <Project>{D8757EEB-7AC8-4D26-BCDC-34536EAC5659}</Project>
+      <Name>Peripherals</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Other\POSSharedDialogs\POSSharedDialogs.csproj">
+      <Project>{159c5050-398a-487d-88e0-e4050d3e9336}</Project>
+      <Name>POSSharedDialogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.is.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.cs.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.da.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.de.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.el.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.en-ZA.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.es-MX.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.es.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.fi.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.fr.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.hi.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.is.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.it.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.ja.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.ko.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.nb-NO.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.nl-BE.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.nl.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.pl.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.pt-BR.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.ru.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.sv.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.zh-CHS.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.zh-CHS.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.zh-CHT.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.bg.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.cs.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.da.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.de.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.el.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.en-ZA.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.es-MX.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.es.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.fi.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.fr.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.hi.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.is.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.it.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.ja.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.ko.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.nb-NO.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.nl-BE.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.nl.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.pl.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.pt-BR.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.ru.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.sv.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.zh-CHS.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.zh-CHT.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.bg.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.cs.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.da.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.de.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.el.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.en-ZA.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.es-MX.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.es.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.fi.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.fr.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.hi.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.is.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.it.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.ja.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.ko.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.nb-NO.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.nl.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.pl.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.pt-BR.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.ru.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.sv.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.zh-CHS.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.zh-CHT.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.bg.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.cs.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.da.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.de.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.el.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.en-ZA.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.es-MX.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.es.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.fi.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.fr.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.hi.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.is.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.it.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.ja.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.ko.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.nb-NO.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.nl.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.pl.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.pt-BR.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.ru.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.sv.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.zh-CHS.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.zh-CHT.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CustomerService.vslp" />
+    <None Include="obj\Resources\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Resources\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Resources\PageDownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Resources\PageUpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\DownArrow.png" />
+    <Content Include="Properties\PageDownArrow.png" />
+    <Content Include="Properties\PageUpArrow.png" />
+    <Content Include="Properties\UpArrow.png" />
+    <None Include="Resources\Checkmark_white_32px.png" />
+    <None Include="Resources\Doublearrowupthin_32px.png" />
+    <None Include="Resources\Doublearrowdownthin_32px.png" />
+    <None Include="Resources\Login_48.png" />
+    <None Include="Resources\Login_32px.png" />
+    <None Include="Resources\Edit_32px.png" />
+    <None Include="Resources\Edit_24px.png" />
+    <None Include="Resources\Edit_16px.png" />
+    <None Include="Resources\Movetocloud_48px.png" />
+    <None Include="Resources\Movetocloud_32px.png" />
+    <None Include="Resources\Movetocloud_24px.png" />
+    <None Include="Resources\Plusincircle_32px.png" />
+    <None Include="Resources\Plusincircle_24px.png" />
+    <None Include="Resources\Plusincircle_16px.png" />
+    <None Include="Resources\Plus in circle%4024x.png" />
+    <None Include="Resources\ArrowUp24.png" />
+    <None Include="Resources\ArrowDown24.png" />
+    <None Include="Resources\ArrowUp16.png" />
+    <None Include="Resources\ArrowDown16.png" />
+    <None Include="Resources\Plus in circle%4016x.png" />
+    <None Include="Resources\ArrowUp32.png" />
+    <None Include="Resources\ArrowDown32.png" />
+    <None Include="Resources\Plus in circle%4032x.png" />
+    <None Include="Resources\verifyID_24_black.png" />
+    <None Include="Resources\white line arrow up_16.png" />
+    <None Include="Resources\white line arrow down_16.png" />
+    <None Include="Resources\edit_32.png" />
+    <None Include="Resources\edit_16.png" />
+    <None Include="Resources\PosGrayEdit32.png" />
+    <None Include="Resources\DialogMessage_48.png" />
+    <None Include="Resources\DialogInfo_48.png" />
+    <None Include="Resources\send customers to cloud.png" />
+    <None Include="Resources\plus_32.png" />
+    <None Include="Resources\double arrow down_16.png" />
+    <None Include="Resources\double arrow up_16.png" />
+    <None Include="Resources\single arrow down_16.png" />
+    <None Include="Resources\single arrow up_16.png" />
+    <None Include="Resources\SendCustomersToCloud.png" />
+    <None Include="Resources\PosGrayPlus32.png" />
+    <None Include="Resources\PosGrayArrowUp32.png" />
+    <None Include="Resources\PosGrayArrowPageUp32.png" />
+    <None Include="Resources\PosGrayArrowPageDown32.png" />
+    <None Include="Resources\PosGrayArrowDown32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.nl-BE.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.nl-BE.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.ja-JP.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.ja-JP.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.cs.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.da.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.de.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.el.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.en-ZA.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.es-MX.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.es.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.fi.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.fr.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.hi.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.is.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.it.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.ja.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.ko.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.nb-NO.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.nl-BE.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.nl.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.pl.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.pt-BR.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.ru.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.sv.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.bg.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.cs.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.da.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.de.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.el.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.en-ZA.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.es-MX.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.es.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.fi.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.fr.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.hi.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.is.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.it.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.ja.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.ko.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.nb-NO.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.nl-BE.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.nl.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.pl.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.pt-BR.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.ru.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.sv.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.is.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.da.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.de.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.es.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.fr.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.nl-BE.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.sv.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.ru.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.cs.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.da.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.de.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.el.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.en-ZA.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.es-MX.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.es.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.fi.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.fr.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.hi.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.is.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.it.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.ja.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.ko.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.nb-NO.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.nl-BE.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.nl.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.pl.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.pt-BR.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.ru.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.sv.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.da.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.de.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.es.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.fr.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.nl-BE.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.sv.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.nl.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.nl.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.fi.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.fi.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.bg.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.bg.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.bg.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.bg.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.bg.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Panels\CustomerAddressPanel.vi-VN.resx">
+      <DependentUpon>CustomerAddressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerDetailsPanel.vi-VN.resx">
+      <DependentUpon>CustomerDetailsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLedgerPanel.vi-VN.resx">
+      <DependentUpon>CustomerLedgerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerLoyaltyPanel.vi-VN.resx">
+      <DependentUpon>CustomerLoyaltyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CustomerOtherPanel.vi-VN.resx">
+      <DependentUpon>CustomerOtherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\AddCustomerDialog.vi-VN.resx">
+      <DependentUpon>AddCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerLedgerFilterDialog.vi-VN.resx">
+      <DependentUpon>CustomerLedgerFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\CustomerSearchDialog.vi-VN.resx">
+      <DependentUpon>CustomerSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsTouch\EditCustomerDialog.vi-VN.resx">
+      <DependentUpon>EditCustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\..\POS\Build\Services\" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

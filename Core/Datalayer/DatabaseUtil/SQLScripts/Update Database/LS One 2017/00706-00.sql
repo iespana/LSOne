@@ -1,0 +1,25 @@
+/*
+
+	Incident No.	: ONE-5448
+	Responsible		: Frentiu Florin
+	Sprint			: Salt 3.11- 17.11
+	Date created	: 18.11.2016
+
+	Description		: Add new column to RETAILITEM table -> KEYINSERIALNUMBER (Never, Must key in serial number, Not mandatory) default value Never
+	
+	
+	Tables affected	: RETAILITEM
+						
+*/
+
+USE LSPOSNET
+GO
+
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RETAILITEM' AND COLUMN_NAME = 'KEYINSERIALNUMBER')
+BEGIN
+ALTER TABLE dbo.RETAILITEM ADD
+	KEYINSERIALNUMBER TINYINT NOT NULL CONSTRAINT DF_RETAILITEM_KEYINSERIALNUMBER DEFAULT 0
+END
+
+GO

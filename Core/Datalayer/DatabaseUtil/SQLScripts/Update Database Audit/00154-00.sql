@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-13547
+	Responsible		: Sigurður Bjarni Sigurðsson
+	Sprint			: Kīlauea
+	Date created	: 07.06.2021
+
+	Description		: Add "Show individual deposits" configuration to functionality profile
+*/
+
+USE LSPOSNET_Audit
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSFUNCTIONALITYPROFILELog' AND COLUMN_NAME = 'ZRPTSHOWINDIVIDUALDEPOSITS')
+BEGIN
+	ALTER TABLE POSFUNCTIONALITYPROFILELog ADD ZRPTSHOWINDIVIDUALDEPOSITS BIT	
+END
+
+GO

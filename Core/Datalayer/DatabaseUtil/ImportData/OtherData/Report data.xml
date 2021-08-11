@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="REPORTCONTEXTS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CONTEXTGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="REPORTGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="CONTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACTIVE" type="xs:boolean" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="REPORTENUMS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="REPORTGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="LANGUAGEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENUMNAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENUMVALUE" type="xs:int" />
+                  <xs:element name="ENUMTEXT">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LABEL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="REPORTS">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="REPORTGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESCRIPTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REPORTBLOB" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="SQLBLOB" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="SQLBLOBINSTALLED" type="xs:boolean" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SYSTEMREPORT" type="xs:boolean" />
+                  <xs:element name="ISSITESERVICEREPORT" type="xs:boolean" />
+                  <xs:element name="REPORTCATEGORY" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//REPORTCONTEXTS" />
+          <xs:field xpath="CONTEXTGUID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="REPORTENUMS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//REPORTENUMS" />
+          <xs:field xpath="REPORTGUID" />
+          <xs:field xpath="LANGUAGEID" />
+          <xs:field xpath="ENUMNAME" />
+          <xs:field xpath="ENUMVALUE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="REPORTS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//REPORTS" />
+          <xs:field xpath="REPORTGUID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+  </NewDataSet>
+</root>

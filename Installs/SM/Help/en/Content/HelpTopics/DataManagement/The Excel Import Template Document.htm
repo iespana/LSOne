@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Data Management|Excel Import">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The Excel Import Template Document</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/DataManagement/The Excel Import Template Document.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>The Excel Import Template Document</h1>
+        <p>The excel import template consists of different sheets:</p>
+        <ul>
+            <li value="1"><b>Retail items: </b>For the items that will be imported.</li>
+            <li value="2"><b>Retail groups: </b>For retail groups that will be imported.</li>
+            <li value="3"><b>Retail department:</b> For retail departments that will be imported.</li>
+            <li value="4" data-mc-conditions="ExcludeIncludelList.NotBasic"><b>Customers: </b>For customers that will be imported.</li>
+            <li value="5" data-mc-conditions="ExcludeIncludelList.NotBasic"><b>Vendors:</b> For vendors that will be imported.</li>
+            <li value="6"><b>_LookupValues:</b> This is a sheet for the lookup data in other sheets. Do not change anything on this sheet.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/LS One Training Guide_2013/030001E3_475x196.png" style="visibility: visible;width: 475;height: 196;" />
+        </p>
+        <p>Once a template has been fetched, the template can be populated with data either by manually entering data or by copying and pasting columns of data from other systems.</p>
+        <p>The Excel template has a few simple rules: </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1">The column’s top line has the field name as it is in the data table. Each name has a color that specifies if the field is required or optional.</li>
+            <li style="list-style-type: disc;" value="2">Red columns are required to always contain data; an example would be ITEMID on Retail Items. </li>
+            <li style="list-style-type: disc;" value="3">Blue columns are only used when importing variant items. </li>
+            <li style="list-style-type: disc;" value="4">Orange columns are required to contain data when inserting new records, while it is optional when updating records.</li>
+            <li style="list-style-type: disc;" value="5">Black columns are not required to contain data.</li>
+        </ul>
+        <p data-mc-conditions="ExcludeIncludelList.NotBasic">Some of the fields in the Excel document have a drop-down box where you can choose from valid enumerations for the given field. Other fields are filtered on maximum counts of letters or on numeric data types.</p>
+        <h2>All fields of the Excel document</h2>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Retail items worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>To import items you need to create one new line per item to be created. </p>
+                <p>To edit items through excel change the settings of your exported items in this sheet and import again. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 199px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="RED">ITEMID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Alphanumerical characters are accepted. If the ID&#160;exists in the database that item will be updated depending on your import method selection in the <a href="../../FieldHelp/ExcelFiles/ImportExcelDocumentDialog.htm">Import Excel document</a> dialog</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span style="color: #1e90ff;">VARIANT&#160;HEADER&#160;ID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the header item. The header item will be created if it does not exist. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">DESCRIPTION</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the description of the item. This description is used on the receipts, item search and reports. <br />When importing an item for the first time that is upon item creation this field must be filled in. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SEARCH&#160;ALIAS</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">An additional name for the item which is also searched through in the item search. <br />Information is inserted into <br />Retail &gt; Retail items &gt; Retail item view &gt; Additional information tab &gt; Search alias</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span style="color: #1e90ff;">VARIANT&#160;DESCRIPTION</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the description of the variant item. Variant items created in LS&#160;One usually include the names of the dimension attributes that describes them. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">NOTES</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">An additional text field to keep information about the item. <br />Information is inserted into <br />Retail &gt; Retail items &gt; Retail item view &gt; Additional information tab &gt; Extended description</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">INVENTORY&#160;UNIT</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the unit the item is ordered and stored in. This can be other than the sales unit but then make sure there exists a unit conversion between the two units. <br />Information is inserted into <br /><span class="trace">Retail &gt; Retail items &gt; Retail item view &gt; Inventory tab &gt; Inventory unit</span><br /><br /><div class="Tips"><img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" /><p class="note">You can find the ID&#160;of the units in <span class="trace">General setup &gt; Units</span>. Right click the unit line and select the Copy ID option and paste it into the Excel worksheet. </p></div><br /><br /><br /></td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">SALES UNIT</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the unit the item is sold in. This can be other than the inventory unit but then make sure there exists a unit conversion between the two units. <br />Information is inserted into <br />Retail &gt; Retail items &gt; Retail item view &gt; Inventory tab &gt; Inventory unit<br /><br /><div class="Tips"><img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" /><p class="note">You can find the ID&#160;of the units in <span class="trace">General setup &gt; Units</span>. Right click the unit line and select the Copy ID option and paste it into the Excel worksheet. </p></div><br /><br /></td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">RETAIL GROUP</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the retail group the item should be added to. If you are creating new item groups also use the ID&#160;you are using for the new group in the Retail group worksheet. <br /><br /><div class="Tips"><img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" /><p class="note">If the retail group already exists you can find the ID&#160;of the retail groups in <span class="trace">Retail&gt; Retail items &gt; Retail groups</span>. Right click the retail group line and select the Copy ID option and paste it into the Excel worksheet. </p></div><br /></td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SALES TAX GROUP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the ID&#160;of the item sales tax group the item should be in. </p>
+                                <p class="table">You can find a list of all sales tax groups and their ID's in <span class="trace">General setup &gt; Sales tax &gt; Item sales tax group</span>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">COST PRICE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the cost price of the item. The cost price is inserted into the field found at <b>Retail item view &gt; Prices tab &gt; Cost price</b>. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SALES PRICE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the cost price of the item. The cost price is inserted into the field found at <b>Retail item view &gt; Prices tab &gt; Cost price</b>. </p>
+                                <p class="table">This price is used when the item is sold on the POS. <MadCap:conditionalText data-mc-conditions="ExcludeIncludelList.NotBasic"> If no valid promotions or trade agreement sales prices are found. </MadCap:conditionalText></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">BARCODESETUP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">If you are importing bar codes for the item enter the ID&#160;of the barcode setup to be used. This field can be left empty even though you are importing bar codes. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">BARCODE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter or scan in (if you have a keyboard scanner) the barcode to sell the item with. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">BARCODEUNIT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the Unit the item is sold in when the barcode is scanned. <br /><br /></td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SCALE ITEM</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 if the item is NOT&#160;a scale item.</p>
+                                <p class="table">Enter 1 if the item IS&#160;a scale item and should be weighed when sold. </p>
+                                <p class="table">If the field is left empty the default is that the item is not a scale item. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">KEY IN PRICE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select from the drop down list how keying in price for an item is handled on the POS. </p>
+                                <p class="table">If this field is left empty the default is that keying in price is <b>Not mandatory</b></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">KEY IN QUANTITY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select from the drop down list how keying in quantity for an item is handled on the POS. </p>
+                                <p class="table">If this field is left empty the default is that keying in price is <b>Not mandatory</b></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ZERO PRICE VALID</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 if zero price is NOT&#160;valid for the item .</p>
+                                <p class="table">Enter 1 if zero price IS&#160;valid for the item. </p>
+                                <p class="table">If the field is left empty the default is that zero price is NOT&#160;valid.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">NO DISCOUNT ALLOWED</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 if manual discounts can be given to this item.</p>
+                                <p class="table">Enter 1 if NO&#160;manual discounts can be given to this item. <br /></p>
+                                <p>If the field is left empty the default is that discounts are allowed. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">MUST KEY IN COMMENT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 if a comment is not necessary. </p>
+                                <p class="table">Enter 1 if the comment dialog should pop up every time this item is sold. <br /></p>
+                                <p>If the field is left empty the comments will not be necessary. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">QTY BECOMES NEGATIVE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 to sell the item in positive quantity. That is the item is subtracted from your inventory. </p>
+                                <p class="table">Enter 1 to sell the item in negative quantity. The item is added to your inventory every time you sell it similar to when you return an item. <br /></p>
+                                <p class="table">If the field is left empty the item will be sold in positive quantity and subtracted from your inventory. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">MUST SELECT UNIT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter 0 if a unit selection is not necessary. </p>
+                                <p class="table">Enter 1 if the unit of measure selection dialog should pop up every time this item is sold. <br /></p>
+                                <p>If the field is left empty the unit selection will not be necessary. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">VENDOR ITEMID</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;your vendor uses for this product. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">VENTORID</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the ID&#160;of the vendor you purchase this product from. </p>
+                                <p class="table">If the vendor already exists in your data you can find the Vendor ID&#160;here: General setup &gt; Inventory &gt;&#160;View all vendors.</p>
+                                <p class="table">If this is a new vendor you can import the vendor by filling in the Vendor</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">VENDOR PRICE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The price you buy the item for from the vendor. This value will be imported as last purchase price for this item and vendor. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="ExcludeIncludelList.NotBasic">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1" style="font-weight: bold;">KEY&#160;IN&#160;SERIAL&#160;NUMBER</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">
+                                <p class="table">Select from the drop down list how keying in quantity for an item is handled on the POS. </p>
+                                <p class="table">If this field is left empty the default is that keying in price is <b>Not mandatory</b></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Retail groups worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>To import retail groups you need to create one new line per group to be created. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 146px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="RED">ID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Alphanumerical characters are accepted. If the ID&#160;exists in the database that retail group will be updated depending on your import method selection in the <a href="../../FieldHelp/ExcelFiles/ImportExcelDocumentDialog.htm">Import Excel document</a> dialog. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">DESCRIPTION</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the description of the retail group. This description is used on the receipts, item search and reports. <br />When importing an retail group for the first time that is upon item creation this field must be filled in. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">RETAIL DEPARTMENT ID</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the ID&#160;of the department the retail group should be included in. This is not mandatory.<br />If you are creating new item departments also use the ID&#160;you are using for the new department in the retail department worksheet. <br /><br /></p>
+                                <div class="Tips">
+                                    <img src="../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+                                    <p class="note">If the retail group already exists you can find the ID&#160;of the retail groups in <span class="trace">Retail&gt; Retail items &gt; Retail groups</span>. Right click the retail group line and select the Copy ID option and paste it into the Excel worksheet. </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1" style="font-weight: bold;">SALES TAX GROUP</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">
+                                <p class="table">Enter the ID&#160;of the item sales tax group the items in the retail group should be in. All new items created in this retail group will automatically be set to this item sales tax group (but can be changed individually)</p>
+                                <p class="table">You can find a list of all sales tax groups and their ID's in <span class="trace">General setup &gt; Sales tax &gt; Item sales tax group</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Retail department worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>To import retail departments you need to create one new line per department to be created. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 146px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="RED">ID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Alphanumerical characters are accepted. If the ID&#160;exists in the database that retail department will be updated depending on your import method selection in the <a href="../../FieldHelp/ExcelFiles/ImportExcelDocumentDialog.htm">Import Excel document</a> dialog. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">DESCRIPTION</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Enter the description of the retail departments. This description is used on the receipts, item search and reports. <br />When importing an retail department for the first time that is upon item creation this field must be filled in. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Customers worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>To import customer you need to create one new line per customer to be created. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 146px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="RED">ID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Alphanumerical characters are accepted. If the ID&#160;exists in the database that customer will be updated depending on your import method selection in the <a href="../../FieldHelp/ExcelFiles/ImportExcelDocumentDialog.htm">Import Excel document</a> dialog. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">NAME</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the name of the customer. This name is used on the receipts, item search and reports. <br />When importing a customer for the first time that is upon item creation this field must be filled in. </p>
+                                <p class="table">If the whole name is entered into this field the name will be inserted to the Display name field in the Customer view. But if you also fill in one or more of the following fields, middlename, lastname, nameprefix, namesuffix then this NAME field serves as the first name field. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">MIDDLENAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the middle name of the customer. This name is used on the receipts, item search and reports. <br /></p>
+                                <p class="table">You can also leave this field empty. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">LASTNAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the last name of the customer. This name is used on the receipts, item search and reports. <br /></p>
+                                <p class="table">You can also leave this field empty. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">NAMEPREFIX</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Use this field to add a name prefix such as Mr. or Mrs. to the customer name. <br /></p>
+                                <p class="table">You can also leave this field empty. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">NAMESUFFIX</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Use this field to add a name suffix such as Jr. to the customer name. <br /></p>
+                                <p class="table">You can also leave this field empty. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESSLINE1</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the customer. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESSLINE2</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the customer. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CITY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the city of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">STATE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the state of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ZIP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the zip of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">COUNTRY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the country of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESS FORMAT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select of which address format this address is. If nothing is selected the default set in the Site Manager will be used. </p>
+                                <p class="table">see further info in:</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SEARCH ALIAS</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter a search alias for the customer. This could be used for a ID&#160;number</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">PHONE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the customer's phone number. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">MOBILE PHONE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the customer's mobile phone number. <br /></td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">EMAIL ADDRESS</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the customer's email address</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">LANGUAGE CODE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the customer's language code. This is for informational use only. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">RECEIPT EMAIL</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the email address the customer wants to receive the receipt to. A third party system is needed to actually send out the receipts. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">RECEIPT OPTION</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select how the customer wants to receive the receipt.</p>
+                                <ul>
+                                    <li class="table" value="1">not set</li>
+                                    <li class="table" value="2">Print on POS </li>
+                                    <li class="table" value="3">Send in email</li>
+                                    <li class="table" value="4">Both<br /><br /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ACCOUNT NUMBER</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">If another customer should be invoiced for this customers credit then enter the ID&#160;of the paying customer. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">IDENTIFICATION NUMBER</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">This field can be used to keep an identification number of the customer. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CURRENCY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">The default currency for this customer. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">VAT NUMBER</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p>Enter the customer's VAT&#160;number if any. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">SALES TAX GROUP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the Customer sales tax group this customer should belong to. If nothing is selected the store sales tax group is used for tax calculations. This also depends on the tax calculation settings set on the Store. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">MAXIMUM WITHDRAWAL</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the maximum credit limit this customer should have. If this customer is allowed to charge to his account then you have to enter </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">BLOCKING</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select one of the following option:</p>
+                                <ul class="table">
+                                    <li value="1">Customer is not blocked: Select this option if you do not want to block the customer.
+</li>
+                                    <li value="2">Customer is limited to invoices: Select this option to limit the customer to invoices.
+</li>
+                                    <li value="3">Customer is blocked: Select this option to block the customer.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1" style="font-weight: bold;">CASH CUSTOMER</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">
+                                <p class="table">Enter 0 if a comment is not necessary. </p>
+                                <p class="table">Enter 1 if the comment dialog should pop up every time this item is sold. <br /></p>
+                                <p>If the field is left empty the comments will not be necessary. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Vendor worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <p>To import vendors you need to create one new line per vendor to be created. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 146px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="RED">VENDORID</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter an ID&#160;for the Vendor. </p>
+                                <p class="table">Alphanumerical characters are accepted. If the ID&#160;exists in the database that vendor will be updated depending on your import method selection in the <a href="../../FieldHelp/ExcelFiles/ImportExcelDocumentDialog.htm">Import Excel document</a> dialog. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">DESCRIPTION</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the name of the vendor. This name is used on the receipts, item search and reports. <br />When importing a customer for the first time that is upon item creation this field must be filled in. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESSLINE1</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the customer. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESSLINE2</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the customer. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CITY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the city of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">STATE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the state of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ZIP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the zip of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">COUNTRY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the country of the customer address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">ADDRESS FORMAT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select of which address format this address is. If nothing is selected the default set in the Site Manager will be used. </p>
+                                <p class="table">see further info in:</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;"><span class="YELLOW">CURRENCY</span>
+                            </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the currency used when doing business with this vendor. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">PHONE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the phone number of the vendor.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">EMAIL ADDRESS</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the vendor's email address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">FAX</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the vendor's fax number.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">LANGUAGE CODE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the vendors's language code. This is for informational use only. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">NOTES</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter any notes you might have for this vendor. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">TAX GROUP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the ID&#160;of the sales tax code used for this vendor. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT TYPE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Select which type of contact the following information is for, a company or a person.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT COMPANYNAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the name of the whole name of the company here. IF this is a person you can either enter the whole name here or skip this field and fill the other name fields. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT NAMEPREFIX</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Use this field to add a name prefix such as Mr. or Mrs. to the contact name. <br /></p>
+                                <p class="table">You can also leave this field empty. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT FIRSTNAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the first name of the contact. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT MIDDLENAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the middle name of the contact. <br /></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT LASTNAME</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Enter the last name of the contact. <br /></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT NAMESUFFIX</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Use this field to add a name suffix such as Jr. to the contact name. <br /> </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT ADDRESSLINE1</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the contact. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT ADDRESSLINE2</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the default address of the contact. There are two lines to have enough space for a long address. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT CITY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the city of the contact address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT STATE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the state of the contact address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT ZIP</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the zip of the contact address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT COUNTRY</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter the country of the contact address.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT ADDRESS FORMAT</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">
+                                <p class="table">Select of which address format this address is. If nothing is selected the default set in the Site Manager will be used. </p>
+                                <p class="table">see further info in:</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT PHONE</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter a phone number for the vendor contact. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1" style="font-weight: bold;">CONTACT PHONE2</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Enter another phone number for the vendor contact. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1" style="font-weight: bold;">CONTACT FAX</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Enter a fax number for the vendor tasks. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />_LookupValues worksheet</a></span>
+            <div class="MCDropDownBody dropDownBody dropDownBodyp">
+                <div class="Warning">
+                    <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+                    <p class="note">This worksheet only includes lookup information for the other worksheets and should not be edited. </p>
+                </div>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">May 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2017.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

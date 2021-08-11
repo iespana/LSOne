@@ -1,0 +1,23 @@
+﻿/*
+	Incident No.	: ONE-10609
+	Responsible		: Adrian Chiorean
+	Sprint			: Bellatrix
+	Date created	: 24.09.2019
+
+	Description		: Create goods receiving docs when posting a purchase worksheet from app
+*/
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVENTORYTEMPLATE' AND COLUMN_NAME = 'CREATEGOODSRECEIVINGDOCUMENT')
+BEGIN
+	ALTER TABLE INVENTORYTEMPLATE ADD CREATEGOODSRECEIVINGDOCUMENT BIT NOT NULL DEFAULT 0
+	EXECUTE spDB_SetFieldDescription_1_0 'INVENTORYTEMPLATE', 'CREATEGOODSRECEIVINGDOCUMENT', 'If true, a goods receiving document will be created when a purchase order is created based on this template or when posting a worksheet';
+END
+GO
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVENTORYTEMPLATE' AND COLUMN_NAME = 'AUTOPOPULATEGOODSRECEIVINGDOCUMENT')
+BEGIN
+	ALTER TABLE INVENTORYTEMPLATE ADD AUTOPOPULATEGOODSRECEIVINGDOCUMENT BIT NOT NULL DEFAULT 0
+	EXECUTE spDB_SetFieldDescription_1_0 'INVENTORYTEMPLATE', 'AUTOPOPULATEGOODSRECEIVINGDOCUMENT', 'If true and CREATEGOODSRECEIVINGDOCUMENT is also true, then the goods receiving document will be auto populated with the lines from the purchase order';
+END
+GO

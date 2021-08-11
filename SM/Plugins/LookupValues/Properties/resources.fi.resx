@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExchangeRate" xml:space="preserve">
+    <value>Vaihtokurssi</value>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Valuutat</value>
+  </data>
+  <data name="EditCurrencies" xml:space="preserve">
+    <value>Valuutat</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Maksut</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Maksutyyppi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Yleiset asetukset</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Asiakkaat</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="Bill" xml:space="preserve">
+    <value>Lasku</value>
+  </data>
+  <data name="CannotDeleteCardType" xml:space="preserve">
+    <value>Korttityyppiä ei voi poistaa, koska se on käytössä</value>
+  </data>
+  <data name="CannotDeleteCurrency" xml:space="preserve">
+    <value>Yrityksen oletusvaluuttaa ei voi poistaa</value>
+  </data>
+  <data name="CannotDeletePaymentMethod" xml:space="preserve">
+    <value>Tämä maksutapa on käytössä, eikä sitä voi poistaa</value>
+  </data>
+  <data name="CannotDeleteUnit" xml:space="preserve">
+    <value>Yksikköä ei voi poistaa koska se on käytössä</value>
+  </data>
+  <data name="CannotRevertLimitations" xml:space="preserve">
+    <value>Huomaa, että kortin numeroa koskevia rajoituksia ei voida palauttaa</value>
+  </data>
+  <data name="CannotRevertSeries" xml:space="preserve">
+    <value>Huomaa, että kortinumerosarjoja ei voida palauttaa</value>
+  </data>
+  <data name="CardNumberSeries" xml:space="preserve">
+    <value>Kortinumerosarja</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Korttityyppi</value>
+  </data>
+  <data name="CardTypeDescriptionExists" xml:space="preserve">
+    <value>Korttityypin kuvaus on jo olemassa</value>
+  </data>
+  <data name="CardTypes" xml:space="preserve">
+    <value>Korttityypit</value>
+  </data>
+  <data name="CardTypesDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa nähdäksesi tai muokataksesi korttityyppejä</value>
+  </data>
+  <data name="CardTypesTooltipDescription" xml:space="preserve">
+    <value>Hallitse korttityyppejä ja niiden numerosarjoja niin, että kassa voi havaita, mikä korttityyppi on luettu</value>
+  </data>
+  <data name="CashDeclarationExists" xml:space="preserve">
+    <value>Valitulle valuutalle on jo olemassa kysesillä ominaisuuksilla oleva käteisen laskenta</value>
+  </data>
+  <data name="Coin" xml:space="preserve">
+    <value>Kolikko</value>
+  </data>
+  <data name="CompanyCurrencyMissing" xml:space="preserve">
+    <value>Yrityksen valuutta puuttuu</value>
+  </data>
+  <data name="CompanyCurrencyMissingInfo" xml:space="preserve">
+    <value>Yrityksen valuuttatieto puuttuu. Haluatko muokata yrityksen valuuttatietoa ?</value>
+  </data>
+  <data name="Conversions" xml:space="preserve">
+    <value>Muunnokset</value>
+  </data>
+  <data name="CopyID" xml:space="preserve">
+    <value>Kopioi tunnus</value>
+  </data>
+  <data name="CopyLimitations" xml:space="preserve">
+    <value>Kopioi rajoitukset</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Yhteyden muodostaminen Site Service -palveluun ei onnistunut</value>
+  </data>
+  <data name="CurrencyExists" xml:space="preserve">
+    <value>Tämä valuutta on jo olemassa tietokannassa</value>
+  </data>
+  <data name="CurrencyUnits" xml:space="preserve">
+    <value>Valuuttayksiköt</value>
+  </data>
+  <data name="CustomerCard" xml:space="preserve">
+    <value>Asiakaskortti</value>
+  </data>
+  <data name="CustomerCards" xml:space="preserve">
+    <value>Asiakaskortit</value>
+  </data>
+  <data name="CustomerCardsDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa yhdistämään asiakastilejä kortin numeroihin</value>
+  </data>
+  <data name="CustomerCardsTooltipDescription" xml:space="preserve">
+    <value>Hallitse asiakaskortteja ja liitä asiakastilejä asiakkaan kortin numeroihin</value>
+  </data>
+  <data name="DeleteCardNumberSerie" xml:space="preserve">
+    <value>Poista kortin numerosarja</value>
+  </data>
+  <data name="DeleteCardNumberSerieQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kortin numerosarjan?</value>
+  </data>
+  <data name="DeleteCardType" xml:space="preserve">
+    <value>Poista kortin tyyppi</value>
+  </data>
+  <data name="DeleteCardTypeQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun korttityypin?</value>
+  </data>
+  <data name="DeleteCashDeclaration" xml:space="preserve">
+    <value>Poista käteisen laskenta</value>
+  </data>
+  <data name="DeleteCashDeclarationQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun käteisen laskennan?</value>
+  </data>
+  <data name="DeleteCurrency" xml:space="preserve">
+    <value>Poista valuutta</value>
+  </data>
+  <data name="DeleteCurrencyQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun valuutan?</value>
+  </data>
+  <data name="DeleteCustomerCard" xml:space="preserve">
+    <value>Poista asiakaskortti</value>
+  </data>
+  <data name="DeleteCustomerCardQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun asiakaskortin?</value>
+  </data>
+  <data name="DeleteEFTMapping" xml:space="preserve">
+    <value>Poista EFT kohdistus</value>
+  </data>
+  <data name="DeleteEFTMappingQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut EFT kohdistukset?</value>
+  </data>
+  <data name="DeleteExchangeRate" xml:space="preserve">
+    <value>Poista valuuttakurssi</value>
+  </data>
+  <data name="DeleteExchangeRateQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun valuuttakurssin?</value>
+  </data>
+  <data name="DeleteImageQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kuvan?</value>
+  </data>
+  <data name="DeletePaymentLimitation" xml:space="preserve">
+    <value>Poista maksurajoitukset</value>
+  </data>
+  <data name="DeletePaymentLimitationQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut maksurajoitukset?</value>
+  </data>
+  <data name="DeletePaymentMethod" xml:space="preserve">
+    <value>Poista maksutapa</value>
+  </data>
+  <data name="DeletePaymentMethodQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun maksutavan?</value>
+  </data>
+  <data name="DeletePOSUserCard" xml:space="preserve">
+    <value>Poista kassakäyttäjän kortti</value>
+  </data>
+  <data name="DeletePOSUserCardQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kassakäyttäjän kortin?</value>
+  </data>
+  <data name="DeleteRemoteHost" xml:space="preserve">
+    <value>Poista isäntäkone</value>
+  </data>
+  <data name="DeleteRemoteHostQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun isäntäkoneen?</value>
+  </data>
+  <data name="DeleteUnit" xml:space="preserve">
+    <value>Poista yksikkö</value>
+  </data>
+  <data name="DeleteUnitConversionRule" xml:space="preserve">
+    <value>Poista yksikön muuntamissääntö</value>
+  </data>
+  <data name="DeleteUnitConversionRuleQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun yksikön muuntamissäännön?</value>
+  </data>
+  <data name="DeleteUnitQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kohteen?</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="EditCurrenciesDescription" xml:space="preserve">
+    <value>Tämän valinnan avulla voit tarkastella tai muokata valuuttoja</value>
+  </data>
+  <data name="EditCurrenciesTooltipDescription" xml:space="preserve">
+    <value>Hallitse kaikkia valuuttoja, jotka hyväksytään maksuna kaupoissa ja niiden valuuttakursseja</value>
+  </data>
+  <data name="EditEFTMappingsDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella tai muokata EFT kohdistuksia</value>
+  </data>
+  <data name="EditEFTMappingsTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi EFT kohdistuksia yhdistääksesi korttityyppejä maksutapoihin</value>
+  </data>
+  <data name="EditImageHeader" xml:space="preserve">
+    <value>Muokkaa kuvaa</value>
+  </data>
+  <data name="EditIncomeExpenseAccount" xml:space="preserve">
+    <value>Tulo- ja kulutilit</value>
+  </data>
+  <data name="EFTMapping" xml:space="preserve">
+    <value>EFT kohdistus</value>
+  </data>
+  <data name="EFTMappings" xml:space="preserve">
+    <value>EFT kohdistukset</value>
+  </data>
+  <data name="ErrorCardNumberLength" xml:space="preserve">
+    <value>Kortin numero voi olla enintään 30 numeroa</value>
+  </data>
+  <data name="ErrorDeletingUnit" xml:space="preserve">
+    <value>Virhe poistettaessa yksikkö</value>
+  </data>
+  <data name="ExchangeRateExists" xml:space="preserve">
+    <value>Vaihtokurssi valituilla valuutoilla ja aloituspäivä on jo olemassa</value>
+  </data>
+  <data name="GlobalRule" xml:space="preserve">
+    <value>Globaali sääntö</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Ryhmät:</value>
+  </data>
+  <data name="HardwareProfileNotSet" xml:space="preserve">
+    <value>Asiakaskortin lukemiseksi Site Managerin laitteistoprofiili on asetettava</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>Tunnus puuttuu</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>Tunnus puuttuu. Haluatko luoda tunnuksen automaattisesti?</value>
+  </data>
+  <data name="ImageBank" xml:space="preserve">
+    <value>Kuvapankki</value>
+  </data>
+  <data name="ImageBankTooltipDescription" xml:space="preserve">
+    <value>Ylläpitää kuvia, joita käytetään LS One -järjestelmässä</value>
+  </data>
+  <data name="ImageDescription" xml:space="preserve">
+    <value>Kuvaus</value>
+  </data>
+  <data name="ImageDescriptionExists" xml:space="preserve">
+    <value>Samalla kuvauksella oleva kuva on jo olemassa!</value>
+  </data>
+  <data name="ImageType" xml:space="preserve">
+    <value>Tyyppi:</value>
+  </data>
+  <data name="ImageTypeAll" xml:space="preserve">
+    <value>Kaikki</value>
+  </data>
+  <data name="ImageTypeButton" xml:space="preserve">
+    <value>Painike</value>
+  </data>
+  <data name="ImageTypeLogo" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="ImageTypeOther" xml:space="preserve">
+    <value>Muu</value>
+  </data>
+  <data name="ImageTypeReceiptLogo" xml:space="preserve">
+    <value>Kuitin logo</value>
+  </data>
+  <data name="IncomeExpenseAccountDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa tulo- ja kulutilien tarkastelemiseen tai muokkaamiseen</value>
+  </data>
+  <data name="ItemNumber" xml:space="preserve">
+    <value>Tuotenumero</value>
+  </data>
+  <data name="LimitationCodeAlreadyExists" xml:space="preserve">
+    <value>Rajoituskoodi {0} on jo olemassa</value>
+  </data>
+  <data name="LimitationCodeNeedsToBeEntered" xml:space="preserve">
+    <value>Rajoituskoodi on valittava</value>
+  </data>
+  <data name="Limitations" xml:space="preserve">
+    <value>Rajoitukset</value>
+  </data>
+  <data name="limitType_Everything" xml:space="preserve">
+    <value>Kaikki</value>
+  </data>
+  <data name="limitType_Item" xml:space="preserve">
+    <value>Tuote</value>
+  </data>
+  <data name="limitType_RetailDepartment" xml:space="preserve">
+    <value>Osasto</value>
+  </data>
+  <data name="limitType_RetailGroup" xml:space="preserve">
+    <value>Tuoterymä</value>
+  </data>
+  <data name="limitType_SpecialGroup" xml:space="preserve">
+    <value>Erikoisryhmä</value>
+  </data>
+  <data name="LookupValueManagement" xml:space="preserve">
+    <value>Hakuarvojen hallinta</value>
+  </data>
+  <data name="ManagePaymentMethod" xml:space="preserve">
+    <value>Hallitse</value>
+  </data>
+  <data name="ManyPaymentTypes" xml:space="preserve">
+    <value>#1 maksutavan tyypit on konfiguroitu</value>
+  </data>
+  <data name="MinCannotBeHigherThanMax" xml:space="preserve">
+    <value>Desimaalien minimiarvo ei voi olla suurempi kuin maksimiarvo</value>
+  </data>
+  <data name="NewImageHeader" xml:space="preserve">
+    <value>Uusi Kuva</value>
+  </data>
+  <data name="NewPaymentMethod" xml:space="preserve">
+    <value>Uusi</value>
+  </data>
+  <data name="NoPaymentTypes" xml:space="preserve">
+    <value>Maksutapoja ei ole määritetty</value>
+  </data>
+  <data name="NotBothPreAndSuffixAllowed" xml:space="preserve">
+    <value>Et voi määrittää sekä etu- että jälkiliitettä</value>
+  </data>
+  <data name="OnePaymentType" xml:space="preserve">
+    <value>Yksi maksutavan tyyppi on konfiguroitu</value>
+  </data>
+  <data name="OnlyCharAndNumbers" xml:space="preserve">
+    <value>Yksikön tunnus voi sisältää vain numeroita ja kirjaimia</value>
+  </data>
+  <data name="PaymentLimitationExists" xml:space="preserve">
+    <value>Samalla rajoituskoodilla ja rajoituksilla on jo olemassa tietue</value>
+  </data>
+  <data name="PaymentLimitations" xml:space="preserve">
+    <value>Maksun rajoitukset</value>
+  </data>
+  <data name="PaymentTypes" xml:space="preserve">
+    <value>Maksutavan tyypit</value>
+  </data>
+  <data name="PaymentTypesDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa nähdäksesi tai muokatakseksi maksutavan tyyppejä</value>
+  </data>
+  <data name="PaymentTypesTooltipDescription" xml:space="preserve">
+    <value>Hallitse maksutyyppejä ja niiden rajoituksia. Maksutyypit lisätään sitten myymälöille.</value>
+  </data>
+  <data name="POSExchangeRate" xml:space="preserve">
+    <value>POS-valuuttakurssi</value>
+  </data>
+  <data name="POSUserCard" xml:space="preserve">
+    <value>Kassan käyttäjä kortti</value>
+  </data>
+  <data name="POSUserCards" xml:space="preserve">
+    <value>Kassan käyttäjä kortit</value>
+  </data>
+  <data name="POSUserCardsDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa yhdistääksesi kassan käyttäjätili korttinumeroihin</value>
+  </data>
+  <data name="PreOrSuffixNeeded" xml:space="preserve">
+    <value>Etuliite tai jälkiliite on annettava</value>
+  </data>
+  <data name="RemoteHosts" xml:space="preserve">
+    <value>Isäntäkone</value>
+  </data>
+  <data name="RemoteHostsDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa nähdäksesi tai muokataksesi isäntäkoneita</value>
+  </data>
+  <data name="SameUnit" xml:space="preserve">
+    <value>Et voi muuntaa yhdestä yksiköstä samaan yksikköön</value>
+  </data>
+  <data name="SerieExist" xml:space="preserve">
+    <value>Nämä rajaukset sisältävä sarja on jo olemassa</value>
+  </data>
+  <data name="SeriesNumberEquallyLong" xml:space="preserve">
+    <value>Sarjanumeron on oltava yhtä pitkä</value>
+  </data>
+  <data name="SeriesNumberToNotSmallerThanFrom" xml:space="preserve">
+    <value>"Sarjanumero päättyy" arvo ei voi olla pienempi kuin "Sarjanumero alkaa" -arvo</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="TheLimitationCannotBeDeletedAsItIsInUseOnAtLeastOneStore" xml:space="preserve">
+    <value>Käytettävässä rajoituskoodissa on oltava vähintään yksi rivi. Tämä rajoituskoodi on käytössä myymälässä {0}</value>
+  </data>
+  <data name="UnitConversionDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit hallita yksikkömuutoksia</value>
+  </data>
+  <data name="UnitConversionExists" xml:space="preserve">
+    <value>Yksikkömuunnossääntö on jo olemassa tuotteelle ja yksikölle</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>Yksikön muuntamissääntöä ei ole olemassa, jotta voitaisiin muuntaa valitusta yksiköstä valitun kohteen varastointiyksikköön. Haluatko luodan säännön?</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Yksikön muuntamissääntö puuttuu</value>
+  </data>
+  <data name="UnitConversions" xml:space="preserve">
+    <value>Yksikkömuunnokset</value>
+  </data>
+  <data name="UnitConversionTooltipDescription" xml:space="preserve">
+    <value>Luo globaali tai tuotekohtainen yksikkömuunnossääntö</value>
+  </data>
+  <data name="UnitDescExists" xml:space="preserve">
+    <value>Yksikkö, jolla on tämä kuvaus, on jo luotu</value>
+  </data>
+  <data name="UnitIDExists" xml:space="preserve">
+    <value>Yksikkö, jolla on tämä tunniste, on jo luotu</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Yksiköt</value>
+  </data>
+  <data name="UnitsDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit hallita yksiköitä</value>
+  </data>
+  <data name="UnitsTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi yksiköitä</value>
+  </data>
+  <data name="VariantHasToBeSelected" xml:space="preserve">
+    <value>Variantti on valittava</value>
+  </data>
+</root>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-conditions="UpdateInfo.2013_1,UpdateInfo.Work in progress" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Field help|Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Database Design View</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/FieldStyles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#FieldHelp/Scheduler/DatabaseDesignView.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Database Design View</h1>
+        <p class="SystemPath">General setup &gt; Replication &gt; Database design </p>
+        <h2>What is the view used for?</h2>
+        <ul>
+            <li value="1">To manage database designs and link tables. </li>
+        </ul>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />List of database designs - to the left</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>A tree view showing all database designs</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 73px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Show only where linked tables exist</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">When this is check marked, only table designs having linked tables will be shown.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Show disabled databases</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">
+                                <p class="table">When this option is check marked, the tree view will include database designs that have been marked disabled.</p>
+                                <p class="table">Disabled designs have a gray icon while the others have green. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Database design - to the right</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>If a database design is highlighted in the list on the left then database design pane is displayed on the right </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 73px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Description</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the description of the database design</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Code page</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">An optional code page used in the database design, for example 861</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Enabled</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Uncheck this if you don’t want to be able to set assign this database design to a location.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-GroupBox" data-mc-pattern="9">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-GroupBox">Locations where used</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-GroupBox">A list of all the distribution locations using this database design</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Name</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the description of the distribution location.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">External code</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Displays the ID&#160;of the distribution location. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Table design - to the right</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>If a table is highlighted in the list on the left then table design pane is displayed on the right </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 73px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Table name</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the name of the database table. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Enabled</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Unselect this if you don’t want to be able to create a subjob for this table.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-GroupBox" data-mc-pattern="9">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-GroupBox">Fields</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-GroupBox">A list of all fields in the selected table</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Name</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the name of the database field.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Data type</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the data type of the database field.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Length</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the length of the database field.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Enabled</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">Displays if the database field is enabled.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Action</h2>
+                <p><b>Read fields</b> - The details of the table view cannot be edited. However, you can read (or re-read) the field design of a table by clicking the Read fields in the database design menu. </p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Linked table- to the right</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>If a linked database table is highlighted in the list on the left then linked table pane is displayed on the right </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/FieldStyles.css');" class="TableStyle-FieldStyles" cellspacing="0">
+                    <col class="TableStyle-FieldStyles-Column-Column1" style="width: 73px;" />
+                    <col class="TableStyle-FieldStyles-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-FieldStyles-Head-Header1">
+                            <th class="TableStyle-FieldStyles-HeadE-Column1-Header1">Fields &amp; buttons</th>
+                            <th class="TableStyle-FieldStyles-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Link to table design </td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the name of the linked table. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">From field</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the name of the field in the linked table. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">Link type</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">This setting is not available in this version.</td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyH-Column1-Body1">To field</td>
+                            <td class="TableStyle-FieldStyles-BodyG-Column2-Body1">Displays the name of the field in the original table. </td>
+                        </tr>
+                        <tr class="TableStyle-FieldStyles-Body-Body1" data-mc-pattern="1">
+                            <td class="TableStyle-FieldStyles-BodyB-Column1-Body1">Filter</td>
+                            <td class="TableStyle-FieldStyles-BodyA-Column2-Body1">This setting is not available in this version. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="DatabaseMapListView.htm">Database maps view</a>
+            </li>
+            <li value="2"><a href="DatabaseMapView.htm">Database map view</a>
+            </li>
+            <li value="3"><a href="#">Field map dialog</a>
+            </li>
+            <li value="4"><a href="NewLinkedTableDialog.htm">New linked table dialog</a>
+            </li>
+        </ul>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">12<span class="sup">th</span> May 2013</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2013.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

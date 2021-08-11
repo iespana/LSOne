@@ -1,0 +1,62 @@
+﻿/*
+	Incident No.	: ONE-10062 Print informational slip from POS
+	Responsible		: Andrei Sonka
+	Sprint			: Vega
+	Date created	: 18.06.2019
+
+	Description		: Added a type for the fiscal slip form and removed prefix for etax serienr
+*/
+
+USE LSPOSNET
+
+
+-- add POSFORMTYPE for Print info slip form
+IF NOT EXISTS (SELECT * FROM POSFORMTYPE WHERE DESCRIPTION = 'Fiscal info')
+BEGIN
+    INSERT INTO dbo.POSFORMTYPE(    ID,    DESCRIPTION,    SYSTEMTYPE,    DATAAREAID)
+	VALUES  (
+		'0D9866C4-99A2-46D0-A667-4A54D282866B', -- ID - uniqueidentifier
+		N'Fiscal info', -- DESCRIPTION - nvarchar
+		40, -- SYSTEMTYPE - int		
+		'LSR' -- DATAAREAID - nvarchar
+	)
+END
+ELSE
+BEGIN
+	PRINT '[POSFORMTYPE.Fiscal info] was already inserted'
+END
+GO
+
+-- update [POSISFORMLAYOUT].'Fiscal info slip' form to have a new type 'Fiscal info'
+IF EXISTS (SELECT * FROM POSISFORMLAYOUT WHERE DESCRIPTION = 'Fiscal info slip')
+BEGIN
+	UPDATE [dbo].[POSISFORMLAYOUT]
+	SET [FORMTYPEID] = '0D9866C4-99A2-46D0-A667-4A54D282866B'
+	WHERE [dbo].[POSISFORMLAYOUT].DESCRIPTION = 'Fiscal info slip'
+END
+ELSE
+BEGIN
+	PRINT '[POSISFORMLAYOUT.Fiscal info slip] was not found'
+END
+GO
+
+-- add POSFORMPROFILELINES for Fiscal info slip form
+IF (0 <> (SELECT COUNT(*) FROM [dbo].[POSFORMPROFILELINES] WHERE [PROFILEID] = '0C7D790C-096C-4ED5-94B5-6B9814C87A46'))
+
+	IF NOT EXISTS (SELECT 1 FROM POSFORMPROFILELINES WHERE PROFILEID = '0C7D790C-096C-4ED5-94B5-6B9814C87A46' AND FORMLAYOUTID = 'SYS100031' AND FORMTYPEID = '0D9866C4-99A2-46D0-A667-4A54D282866B')
+	BEGIN
+
+		INSERT INTO [dbo].[POSFORMPROFILELINES]           
+		([PROFILEID]           ,[FORMTYPEID]           ,[FORMLAYOUTID]           ,[DATAAREAID]           ,[DESCRIPTION]           ,[ISSYSTEMPROFILELINE])
+		VALUES ('0C7D790C-096C-4ED5-94B5-6B9814C87A46', -- [DEFAULT - PROFILEID]
+			   '0D9866C4-99A2-46D0-A667-4A54D282866B', -- [Fiscal info - FORMTYPEID]
+			   'SYS100031', -- [FORMLAYOUTID]
+			   'LSR', -- DATAAREAID - nvarchar
+			   'Fiscal info', -- [DESCRIPTION]
+			   1) -- [ISSYSTEMPROFILELINE]
+	END
+	ELSE
+	BEGIN
+		PRINT '[POSFORMPROFILELINES.Fiscal info] was already inserted'
+	END
+GO

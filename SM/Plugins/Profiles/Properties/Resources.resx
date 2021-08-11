@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Barcode reader</value>
+    <comment>[Term:3000]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BrowseWebImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BrowseWebImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Card reader</value>
+    <comment>[Term:2998]</comment>
+  </data>
+  <data name="CashChanger" xml:space="preserve">
+    <value>Cash changer</value>
+    <comment>[Term:3044]</comment>
+  </data>
+  <data name="CreditCardService" xml:space="preserve">
+    <value>Credit card service</value>
+    <comment>[Term:3003]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <data name="DeleteFuncProfile" xml:space="preserve">
+    <value>Delete functionality profile</value>
+    <comment>[Term:2896]</comment>
+  </data>
+  <data name="DeleteFuncProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected functionality profile?</value>
+    <comment>[Term:2895]</comment>
+  </data>
+  <data name="DeleteHardwareProfile" xml:space="preserve">
+    <value>Delete hardware profile</value>
+    <comment>[Term:3010]</comment>
+  </data>
+  <data name="DeleteHardwareProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected hardware profile?</value>
+    <comment>[Term:3009]</comment>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Delete visual profile</value>
+    <comment>[Term:2579]</comment>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected visual profile?</value>
+    <comment>[Term:2578]</comment>
+  </data>
+  <data name="DeleteStyleProfile" xml:space="preserve">
+    <value>Delete style profile</value>
+    <comment>[Term:16768]</comment>
+  </data>
+  <data name="DeleteStyleProfileLine" xml:space="preserve">
+    <value>Delete style profile line</value>
+    <comment>[Term:16769]</comment>
+  </data>
+  <data name="DeleteStyleProfileLineQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected style profile line?</value>
+    <comment>[Term:16762]</comment>
+  </data>
+  <data name="DeleteStyleProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected style profile?</value>
+    <comment>[Term:16763]</comment>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Drawer</value>
+    <comment>[Term:2997]</comment>
+  </data>
+  <data name="DualDisplay" xml:space="preserve">
+    <value>Dual display</value>
+    <comment>[Term:3045]</comment>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="FiscalPrinter" xml:space="preserve">
+    <value>Fiscal printer</value>
+    <comment>[Term:14672]</comment>
+  </data>
+  <data name="FolderImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderImage.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ForecourtManager" xml:space="preserve">
+    <value>Forcourt manager</value>
+    <comment>[Term:14673]</comment>
+  </data>
+  <data name="FunctionalityProfile" xml:space="preserve">
+    <value>Functionality profile</value>
+    <comment>[Term:2893]</comment>
+  </data>
+  <data name="FunctionalityProfiles" xml:space="preserve">
+    <value>Functionality profiles</value>
+    <comment>[Term:2891]</comment>
+  </data>
+  <data name="FunctionalityProfilesDescription" xml:space="preserve">
+    <value>Use this option to view or edit functionality profiles</value>
+    <comment>[Term:2892]</comment>
+  </data>
+  <data name="FunctionalityProfilesRibbon" xml:space="preserve">
+    <value>Functionality</value>
+    <comment>[Term:3320] - Profiles -&gt; Functionality</comment>
+  </data>
+  <data name="HardwareProfile" xml:space="preserve">
+    <value>Hardware profile</value>
+    <comment>[Term:2623]</comment>
+  </data>
+  <data name="HardwareProfiles" xml:space="preserve">
+    <value>Hardware profiles</value>
+    <comment>[Term:3007]</comment>
+  </data>
+  <data name="HardwareProfilesDescription" xml:space="preserve">
+    <value>Use this option to view or edit hardware profiles</value>
+    <comment>[Term:3008]</comment>
+  </data>
+  <data name="HardwareProfilesRibbon" xml:space="preserve">
+    <value>Hardware</value>
+    <comment>[Term:3321] - Profiles -&gt; Hardware</comment>
+  </data>
+  <data name="ImageDirectory" xml:space="preserve">
+    <value>Select a directory that contains the images</value>
+    <comment>[Term:3046]</comment>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+    <comment>[Term:3002]</comment>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Line display</value>
+    <comment>[Term:3041]</comment>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+    <comment>[Term:2441]</comment>
+  </data>
+  <data name="ProfileManagement" xml:space="preserve">
+    <value>Profile management</value>
+    <comment>[Term:2867]</comment>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiles</value>
+    <comment>[Term:2713]</comment>
+  </data>
+  <data name="PumpConnection" xml:space="preserve">
+    <value>Pump connection</value>
+    <comment>[Term:3005]</comment>
+  </data>
+  <data name="FormProfileDescription" xml:space="preserve">
+    <value>Use this option to view or edit form profiles</value>
+    <comment>[Term:20614]</comment>
+  </data>
+  <data name="RFIDReader" xml:space="preserve">
+    <value>RFID reader</value>
+    <comment>[Term:3006]</comment>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+    <comment>[Term:3001]</comment>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Staff</value>
+    <comment>[Term:3987]</comment>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Store setup</value>
+    <comment>[Term:14627]</comment>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Style profile</value>
+    <comment>[Term:16775]</comment>
+  </data>
+  <data name="StyleProfileDescription" xml:space="preserve">
+    <value>Use this option to view or edit style profiles</value>
+    <comment>[Term:16784]</comment>
+  </data>
+  <data name="SurveillanceCamera" xml:space="preserve">
+    <value>Surveillance camera</value>
+    <comment>[Term:3004]</comment>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+    <comment>[Term:3315]</comment>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Visual profile</value>
+    <comment>[Term:2577]</comment>
+  </data>
+  <data name="VisualProfileRibbon" xml:space="preserve">
+    <value>Visual</value>
+    <comment>[Term:3322] - Profiles -&gt; Visual</comment>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Visual profiles</value>
+    <comment>[Term:2576]</comment>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Use this option to view or edit visual profiles</value>
+    <comment>[Term:2714]</comment>
+  </data>
+  <data name="DeleteFormProfileLine" xml:space="preserve">
+    <value>Delete form profile line</value>
+    <comment>[Term:20611]</comment>
+  </data>
+  <data name="DeleteFormProfileLineQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected form profile line?</value>
+    <comment>[Term:20608]</comment>
+  </data>
+  <data name="DeleteFormProfile" xml:space="preserve">
+    <value>Delete form profile</value>
+    <comment>[Term:20610]</comment>
+  </data>
+  <data name="DeleteFormProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected form profile?</value>
+    <comment>[Term:20609]</comment>
+  </data>
+  <data name="OneTypePerProfile" xml:space="preserve">
+    <value>There can only be one instance of each type per profile</value>
+    <comment>[Term:16779]</comment>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Style profiles</value>
+    <comment>[Term:16776]</comment>
+  </data>
+  <data name="EditContext" xml:space="preserve">
+    <value>Edit context</value>
+    <comment>[Term:16770] - Profiles -&gt; Style profile -&gt; Style profile line. Dlg header text</comment>
+  </data>
+  <data name="NewStyleProfileLine" xml:space="preserve">
+    <value>New profile line</value>
+    <comment>[Term:16869] - Profiles -&gt; Style profile -&gt; Style profile line. Dlg header text</comment>
+  </data>
+  <data name="IsSystemStyle" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514] - Profiles -&gt; Style profile</comment>
+  </data>
+  <data name="StyleProfileLineAlreadyExists" xml:space="preserve">
+    <value>This style profile line combination already exists and cannot be saved.</value>
+    <comment>[Term:21082] - Profiles -&gt; Style profile</comment>
+  </data>
+  <data name="Context" xml:space="preserve">
+    <value>Context</value>
+    <comment>[Term:2121] - Audit name</comment>
+  </data>
+  <data name="StyleProfileLines" xml:space="preserve">
+    <value>Style profile lines</value>
+    <comment>[Term:16865] - Audit name</comment>
+  </data>
+  <data name="EditStyleProfileLine" xml:space="preserve">
+    <value>Edit profile line</value>
+    <comment>[Term:16868] - Profiles -&gt; Style profile -&gt; Style profile line. Dlg header text</comment>
+  </data>
+  <data name="NewContext" xml:space="preserve">
+    <value>New context</value>
+    <comment>[Term:16773] - Profiles -&gt; Style profile -&gt; Style profile line. Dlg header text</comment>
+  </data>
+  <data name="Contexts" xml:space="preserve">
+    <value>Contexts</value>
+    <comment>[Term:16863] - Profiles -&gt; Contexts view</comment>
+  </data>
+  <data name="ContextsDescription" xml:space="preserve">
+    <value>Use this option to view or edit contexts used in Style profile</value>
+    <comment>[Term:16866] - Profile -&gt; Context</comment>
+  </data>
+  <data name="DeleteContextQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected context?</value>
+    <comment>[Term:16862]</comment>
+  </data>
+  <data name="ContextUsedInProfileCannotBeDeleted" xml:space="preserve">
+    <value>Some or all of the contexts selected are used in a style profile and cannot be deleted</value>
+    <comment>[Term:16864]</comment>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Look and feel</value>
+    <comment>[Term:18641]</comment>
+  </data>
+  <data name="Palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Styles</value>
+    <comment>[Term:3178]</comment>
+  </data>
+  <data name="VisualProfileDefaultScreenResolution" xml:space="preserve">
+    <value>Default screen resolution</value>
+    <comment>[Term:2656]</comment>
+  </data>
+  <data name="VisualProfileUserResizable" xml:space="preserve">
+    <value>User can resize</value>
+    <comment>[Term:19579]</comment>
+  </data>
+  <data name="DallasKey" xml:space="preserve">
+    <value>Dallas key</value>
+    <comment>[Term:19792]</comment>
+  </data>
+  <data name="NoBarCodeReaderSelected" xml:space="preserve">
+    <value>No bar code reader has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21074]</comment>
+  </data>
+  <data name="NoCardReaderSelected" xml:space="preserve">
+    <value>No card reader has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21077]</comment>
+  </data>
+  <data name="NoDrawerSelected" xml:space="preserve">
+    <value>No drawer has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21075]</comment>
+  </data>
+  <data name="NoKeySelected" xml:space="preserve">
+    <value>No key has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21078]</comment>
+  </data>
+  <data name="NoLineDisplaySelected" xml:space="preserve">
+    <value>No line display has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21079]</comment>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>No printer has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21080]</comment>
+  </data>
+  <data name="NoScaleSelected" xml:space="preserve">
+    <value>No scale has been selected it might be impossible to start LS One POS using these settings.</value>
+    <comment>[Term:21081]</comment>
+  </data>
+  <data name="Profiles16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profiles16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+    <comment>[Term:3798]</comment>
+  </data>
+  <data name="AlwaysPrint" xml:space="preserve">
+    <value>Always print</value>
+    <comment>[Term:3057]</comment>
+  </data>
+  <data name="NeverPrint" xml:space="preserve">
+    <value>Never print</value>
+    <comment>[Term:20582]</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>[Term:454]</comment>
+  </data>
+  <data name="PromptUser" xml:space="preserve">
+    <value>Prompt user</value>
+    <comment>[Term:20588]</comment>
+  </data>
+  <data name="ShowPreview" xml:space="preserve">
+    <value>Show preview</value>
+    <comment>[Term:20591]</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514]</comment>
+  </data>
+  <data name="FormProfiles" xml:space="preserve">
+    <value>Form profiles</value>
+    <comment>[Term:20613]</comment>
+  </data>
+  <data name="FormLayouts" xml:space="preserve">
+    <value>Form layouts</value>
+    <comment>[Term:20663]</comment>
+  </data>
+  <data name="FormLayoutsDescription" xml:space="preserve">
+    <value>Use this option to view or edit form layouts</value>
+    <comment>[Term:20637]</comment>
+  </data>
+  <data name="StartOfDay" xml:space="preserve">
+    <value>Start of day</value>
+    <comment>[Term:22151] - Tab description</comment>
+  </data>
+  <data name="InsertDefaultData" xml:space="preserve">
+    <value>"Insert default data"</value>
+    <comment>[Term:22458]</comment>
+  </data>
+  <data name="ReceiptData" xml:space="preserve">
+    <value>"Receipts data"</value>
+    <comment>[Term:22459]</comment>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Sites</value>
+    <comment>[Term:23203] - Ribbon tab</comment>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Forms</value>
+    <comment>[Term:3066] - Ribbon category</comment>
+  </data>
+  <data name="CSVImportProfiles" xml:space="preserve">
+    <value>CSV Import profiles</value>
+    <comment>[Term:23195]</comment>
+  </data>
+  <data name="CSVImportProfilesDescription" xml:space="preserve">
+    <value>Use this option to view or edit import profiles for csv file imports</value>
+    <comment>[Term:23204]</comment>
+  </data>
+  <data name="CSVImportProfile" xml:space="preserve">
+    <value>CSV import profile</value>
+    <comment>[Term:23195]</comment>
+  </data>
+  <data name="DeleteCSVImportProfile" xml:space="preserve">
+    <value>Delete CSV import profile</value>
+    <comment>[Term:23198]</comment>
+  </data>
+  <data name="DeleteCSVImportProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected CSV Import profile?</value>
+    <comment>[Term:23193]</comment>
+  </data>
+  <data name="CSVFieldBarcode" xml:space="preserve">
+    <value>Barcode</value>
+    <comment>[Term:4207]</comment>
+  </data>
+  <data name="CSVFieldCounted" xml:space="preserve">
+    <value>Counted</value>
+    <comment>[Term:14940]</comment>
+  </data>
+  <data name="CSVFieldDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:2403]</comment>
+  </data>
+  <data name="CSVFieldItemId" xml:space="preserve">
+    <value>Item ID</value>
+    <comment>[Term:14974]</comment>
+  </data>
+  <data name="CSVFieldTypeDecimal" xml:space="preserve">
+    <value>decimal</value>
+    <comment>[Term:13715]</comment>
+  </data>
+  <data name="CSVFieldTypeString" xml:space="preserve">
+    <value>string</value>
+    <comment>[Term:23192]</comment>
+  </data>
+  <data name="CSVFieldUnitId" xml:space="preserve">
+    <value>Unit ID</value>
+    <comment>[Term:14943]</comment>
+  </data>
+  <data name="CSVImportTypeStockCounting" xml:space="preserve">
+    <value>Stock counting</value>
+    <comment>[Term:11087]</comment>
+  </data>
+  <data name="DeleteCSVImportProfileLine" xml:space="preserve">
+    <value>Delete CSV import profile line</value>
+    <comment>[Term:23199]</comment>
+  </data>
+  <data name="DeleteCSVImportProfileLineQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected CSV Import profile line?</value>
+    <comment>[Term:23193]</comment>
+  </data>
+  <data name="SetDefaultCSVImportProfile" xml:space="preserve">
+    <value>Set as default</value>
+    <comment>[Term:14871]</comment>
+  </data>
+  <data name="SetDefaultCSVImportProfileQuestion" xml:space="preserve">
+    <value>Are you sure you want to set the selected import profile as default?</value>
+    <comment>[Term:23194]</comment>
+  </data>
+  <data name="NoLinesForDefaultProfile" xml:space="preserve">
+    <value>The CSV profile can not be set as the default profile because it has no mapping lines. Please add mapping to the profile.</value>
+    <comment>[Term:23235]</comment>
+  </data>
+  <data name="CSVMappingNotSet" xml:space="preserve">
+    <value>The CSV profile can not be set as the default profile because it has no mapping lines.</value>
+    <comment>[Term:23205]</comment>
+  </data>
+  <data name="AddMappingToProfile" xml:space="preserve">
+    <value>Please add mapping to the profile.</value>
+    <comment>[Term:23181]</comment>
+  </data>
+  <data name="CSVFieldSerialNumber" xml:space="preserve">
+    <value>Serial number</value>
+    <comment>[Term:3619]</comment>
+  </data>
+  <data name="CSVFieldSerialType" xml:space="preserve">
+    <value>Type</value>
+    <comment>[Term:23271]</comment>
+  </data>
+  <data name="CSVFieldTypeInteger" xml:space="preserve">
+    <value>integer</value>
+    <comment>[Term:13714]</comment>
+  </data>
+  <data name="Related_CSVProfiles" xml:space="preserve">
+    <value>CSV profiles</value>
+    <comment>[Term:23255]</comment>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Stock</value>
+    <comment>[Term:15809]</comment>
+  </data>
+  <data name="Replication" xml:space="preserve">
+    <value>Replication</value>
+    <comment>[Term:15528]</comment>
+  </data>
+  <data name="NoFolderLocationSelected" xml:space="preserve">
+    <value>No folder location selected for windows printer</value>
+    <comment>[Term:23368]</comment>
+  </data>
+  <data name="SelectFolderLocation" xml:space="preserve">
+    <value>Select folder location</value>
+    <comment>[Term:23371]</comment>
+  </data>
+  <data name="TheFolderSelectedDoesNotExist" xml:space="preserve">
+    <value>Folder {0} does not exist. Please select a folder that already exists.</value>
+    <comment>[Term:23365]</comment>
+  </data>
+  <data name="CSVImportProfilesTooltipDescription" xml:space="preserve">
+    <value>Manage CSV import profiles to define how stock counting journals and serial numbers are imported from CSV files</value>
+    <comment>[Term:23478]</comment>
+  </data>
+  <data name="FormProfilesTooltipDescription" xml:space="preserve">
+    <value>Organize form layouts into profiles to be able to use different printouts at different stores</value>
+    <comment>[Term:23482]</comment>
+  </data>
+  <data name="FunctionalityProfilesTooltipDescription" xml:space="preserve">
+    <value>Manage functionality profiles which include various settings for the terminals</value>
+    <comment>[Term:23479]</comment>
+  </data>
+  <data name="HardwareProfilesTooltipDescription" xml:space="preserve">
+    <value>Manage hardware profiles to connect the terminals to different peripherals such as receipt printers and cash drawers</value>
+    <comment>[Term:23480]</comment>
+  </data>
+  <data name="VisualProfilesTooltipDescription" xml:space="preserve">
+    <value>Manage visual profiles which define screen setup for the terminals</value>
+    <comment>[Term:23481]</comment>
+  </data>
+  <data name="Related_ResetDefaultProfile" xml:space="preserve">
+    <value>Reset default profile</value>
+    <comment>[Term:23824]</comment>
+  </data>
+  <data name="ResetDefaultProfileHeader" xml:space="preserve">
+    <value>Reset form profile</value>
+    <comment>[Term:23825]</comment>
+  </data>
+  <data name="ResetDefaultProfileQuestion" xml:space="preserve">
+    <value>This will overwrite any changes made to form layouts in the default form layout. Are you sure you want to continue?</value>
+    <comment>[Term:23822]</comment>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>No device list found at host {0}, check if the printing station service is running at the host and has printers installed</value>
+    <comment>[Term:20192]</comment>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>User profile</value>
+    <comment>[Term:24052]</comment>
+  </data>
+  <data name="UserProfiles" xml:space="preserve">
+    <value>User profiles</value>
+    <comment>[Term:24070]</comment>
+  </data>
+  <data name="StoreDefault" xml:space="preserve">
+    <value>Store default</value>
+    <comment>[Term:16065]</comment>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>No selection</value>
+    <comment>[Term:2772]</comment>
+  </data>
+  <data name="UserProfilesTooltipDescription" xml:space="preserve">
+    <value>View and manage user profiles</value>
+    <comment>[Term:24071]</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:24053]</comment>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Language code</value>
+    <comment>[Term:2641]</comment>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+    <comment>[Term:8577]</comment>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Store</value>
+    <comment>[Term:23074]</comment>
+  </data>
+  <data name="DeleteUserProfile" xml:space="preserve">
+    <value>Are you sure you want to delete the selected user profile?</value>
+    <comment>[Term:24056]</comment>
+  </data>
+  <data name="DeleteUserProfileCaption" xml:space="preserve">
+    <value>Delete user profile(s)</value>
+    <comment>[Term:24059]</comment>
+  </data>
+  <data name="DeleteUserProfiles" xml:space="preserve">
+    <value>Are you sure you want to delete the selected user profiles?</value>
+    <comment>[Term:24057]</comment>
+  </data>
+  <data name="DeleteUserProfilesInUse" xml:space="preserve">
+    <value>Some of the selected user profiles are in use and cannot be deleted. Do you want to continue?</value>
+    <comment>[Term:24069]</comment>
+  </data>
+  <data name="UserProfilesInUse" xml:space="preserve">
+    <value>All selected profiles are in use and cannot be deleted.</value>
+    <comment>[Term:24055]</comment>
+  </data>
+  <data name="SelectLayoutHeaderText" xml:space="preserve">
+    <value>Select a layout for the user profile</value>
+    <comment>[Term:24064]</comment>
+  </data>
+  <data name="SelectLayoutLabel" xml:space="preserve">
+    <value>Layout:</value>
+    <comment>[Term:8577]</comment>
+  </data>
+  <data name="SelectStoreHeaderText" xml:space="preserve">
+    <value>Select a store for the user profile</value>
+    <comment>[Term:24065]</comment>
+  </data>
+  <data name="SelectStoreLabel" xml:space="preserve">
+    <value>Store:</value>
+    <comment>[Term:23074]</comment>
+  </data>
+  <data name="SelectVisualProfileHeaderText" xml:space="preserve">
+    <value>Select a visual profile for the user profile</value>
+    <comment>[Term:24067]</comment>
+  </data>
+  <data name="SelectVisualProfileLabel" xml:space="preserve">
+    <value>Visual profile:</value>
+    <comment>[Term:2577]</comment>
+  </data>
+  <data name="EditLayout" xml:space="preserve">
+    <value>Edit layout</value>
+    <comment>[Term:24060]</comment>
+  </data>
+  <data name="EditStore" xml:space="preserve">
+    <value>Edit store</value>
+    <comment>[Term:2588]</comment>
+  </data>
+  <data name="EditVisualProfile" xml:space="preserve">
+    <value>Edit visual profile</value>
+    <comment>[Term:3376]</comment>
+  </data>
+  <data name="DiscountSettings" xml:space="preserve">
+    <value>Discount settings</value>
+    <comment>[Term:20851]</comment>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+    <comment>[Term:23134]</comment>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+    <comment>[Term:511]</comment>
+  </data>
+  <data name="RemoveUserFromUserProfile" xml:space="preserve">
+    <value>Are you sure you want to remove the selected user(s) from this profile?</value>
+    <comment>[Term:24058]</comment>
+  </data>
+  <data name="DoNotCopyUserProfile" xml:space="preserve">
+    <value>Do not copy existing user profile</value>
+    <comment>[Term:24099]</comment>
+  </data>
+  <data name="CSV_import_profiles_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CSV_import_profiles_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CSV_import_profiles_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CSV_import_profiles_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>[Term:2166]</comment>
+  </data>
+  <data name="DeleteWindowsPrinterConfiguration" xml:space="preserve">
+    <value>Delete windows printer configuration</value>
+  </data>
+  <data name="DeleteWindowsPrinterConfigurationQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected windows printer configuration?</value>
+  </data>
+  <data name="WindowsPrinterConfigurations" xml:space="preserve">
+    <value>Windows printer configurations</value>
+  </data>
+  <data name="WindowsPrinters" xml:space="preserve">
+    <value>Windows printers</value>
+  </data>
+  <data name="ColorPalette" xml:space="preserve">
+    <value>Color palette</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ReceiptSettings" xml:space="preserve">
+    <value>Receipt settings</value>
+  </data>
+</root>

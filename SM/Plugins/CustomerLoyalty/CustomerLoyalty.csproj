@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA9DA280-43E9-4760-A9A5-6E73C8AFF448}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.CustomerLoyalty</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.CustomerLoyalty</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.CustomerLoyalty.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltyCardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltyCardDialog.Designer.cs">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltySchemeRuleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltySchemeRuleDialog.Designer.cs">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltySchemeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LoyaltySchemeDialog.Designer.cs">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectLoyaltyCardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectLoyaltyCardDialog.Designer.cs">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CustomerLoyaltyTransPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CustomerLoyaltyTransPage.Designer.cs">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CustomerLoyaltyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CustomerLoyaltyPage.Designer.cs">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoyaltyCardsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoyaltyCardsView.Designer.cs">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoyaltySchemesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoyaltySchemesView.Designer.cs">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoyaltyTransView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoyaltyTransView.Designer.cs">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.bg.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.cs.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.da.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.de.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.el.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.en-ZA.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.es-MX.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.es.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.fi.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.fr.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.hi.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.is.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.it.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.ja.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.ko.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.nb-NO.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.nl.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.pl.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.pt-BR.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.ru.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.sv.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.zh-CHS.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.zh-CHT.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.bg.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.cs.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.da.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.de.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.el.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.en-ZA.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.es-MX.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.es.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.fi.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.fr.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.hi.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.is.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.it.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.ja.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.ko.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.nb-NO.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.nl.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.pl.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.pt-BR.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.ru.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.sv.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.zh-CHS.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.zh-CHT.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.bg.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.cs.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.da.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.de.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.el.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.en-ZA.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.es-MX.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.es.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.fi.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.fr.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.hi.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.is.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.it.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.ja.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.ko.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.nb-NO.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.nl.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.pl.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.pt-BR.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.ru.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.sv.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.zh-CHS.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.zh-CHT.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.bg.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.cs.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.da.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.de.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.el.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.en-ZA.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.es-MX.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.es.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.fi.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.fr.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.hi.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.is.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.it.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.ja.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.ko.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.nb-NO.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.nl.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.pl.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.pt-BR.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.ru.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.sv.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.zh-CHS.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.zh-CHT.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.bg.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.cs.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.da.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.de.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.el.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.en-ZA.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.es-MX.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.es.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.fi.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.fr.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.hi.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.is.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.it.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.ja.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.ko.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.nb-NO.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.nl.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.pl.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.pt-BR.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.ru.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.sv.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.zh-CHS.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.zh-CHT.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.bg.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.cs.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.da.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.de.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.el.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.en-ZA.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.es-MX.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.es.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.fi.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.fr.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.hi.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.is.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.it.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.ja.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.ko.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.nb-NO.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.nl.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.pl.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.pt-BR.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.ru.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.sv.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.zh-CHS.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.zh-CHT.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.bg.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.cs.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.da.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.de.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.el.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.en-ZA.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.es-MX.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.es.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.fi.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.fr.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.hi.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.is.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.it.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.ja.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.ko.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.nb-NO.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.nl.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.pl.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.pt-BR.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.ru.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.sv.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.zh-CHS.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.zh-CHT.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.bg.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.cs.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.da.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.de.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.el.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.en-ZA.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.es-MX.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.es.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.fi.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.fr.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.hi.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.is.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.it.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.ja.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.ko.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.nb-NO.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.nl.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.pl.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.pt-BR.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.ru.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.sv.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.zh-CHS.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.zh-CHT.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.bg.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.cs.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.da.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.de.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.el.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.en-ZA.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.es-MX.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.es.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.fi.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.fr.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.hi.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.is.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.it.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.ja.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.ko.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.nb-NO.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.nl.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.pl.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.pt-BR.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.ru.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.sv.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.zh-CHS.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.zh-CHT.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profiles16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataLayer\DataEntities\" />
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loyalty16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.it-IT.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.it-IT.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.it-IT.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.it-IT.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.it-IT.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.it-IT.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.it-IT.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.it-IT.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.it-IT.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.nl-BE.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.nl-BE.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.nl-BE.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.nl-BE.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.nl-BE.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.nl-BE.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.nl-BE.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.nl-BE.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.nl-BE.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyaltyV1_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyaltyV1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyalty_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyalty_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyaltyV2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loyaltyV2_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\LoyaltyCardDialog.vi-VN.resx">
+      <DependentUpon>LoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeDialog.vi-VN.resx">
+      <DependentUpon>LoyaltySchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LoyaltySchemeRuleDialog.vi-VN.resx">
+      <DependentUpon>LoyaltySchemeRuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLoyaltyCardDialog.vi-VN.resx">
+      <DependentUpon>SelectLoyaltyCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyPage.vi-VN.resx">
+      <DependentUpon>CustomerLoyaltyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerLoyaltyTransPage.vi-VN.resx">
+      <DependentUpon>CustomerLoyaltyTransPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyCardsView.vi-VN.resx">
+      <DependentUpon>LoyaltyCardsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltySchemesView.vi-VN.resx">
+      <DependentUpon>LoyaltySchemesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoyaltyTransView.vi-VN.resx">
+      <DependentUpon>LoyaltyTransView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

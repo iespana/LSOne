@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9071037-55F3-4A5D-B227-CAF704E47904}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.SalesTax</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.SalesTax</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.SalesTax.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\SalesTaxCodeInGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SalesTaxCodeInGroupDialog.designer.cs">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ItemSalesTaxCodeInGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ItemSalesTaxCodeInGroupDialog.designer.cs">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ItemSalesTaxGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ItemSalesTaxGroupDialog.designer.cs">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditTaxCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditTaxCodeDialog.designer.cs">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTaxCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTaxCodeDialog.designer.cs">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SalesTaxGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SalesTaxGroupDialog.designer.cs">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ValueInTaxCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ValueInTaxCodeDialog.designer.cs">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemSalesTaxGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ItemSalesTaxGroupView.Designer.cs">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesTaxCodesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SalesTaxCodesView.Designer.cs">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesTaxGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SalesTaxGroupView.designer.cs">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.cs.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.pl.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.cs.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.da.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.de.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.el.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.es.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.fi.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.fr.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.is.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.it.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.ja.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.ko.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.nb-NO.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.nl.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.pl.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.pt-BR.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.ru.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.sv.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.zh-CHS.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.zh-CHT.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxgroupdialog.cs.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxgroupdialog.pl.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.cs.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.pl.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.cs.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.da.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.de.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.el.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.es.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.fi.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.fr.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.is.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.it.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.ja.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.ko.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.nb-NO.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.nl.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.pl.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.pt-BR.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SalesTaxCodeInGroupDialog.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxCodeInGroupDialog.resx">
+      <DependentUpon>ItemSalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.da.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.de.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.el.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.es.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.fi.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.fr.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.is.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.it.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.ja.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.ko.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.nb-NO.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.nl.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.pt-BR.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.ru.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.sv.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.zh-CHS.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.zh-CHT.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.da.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.de.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.el.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.es.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.fi.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.fr.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.is.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.it.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.ja.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.ko.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.nb-NO.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.nl.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.pt-BR.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTaxCodeDialog.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.ru.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.sv.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.zh-CHS.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.zh-CHT.resx">
+      <DependentUpon>EditTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.da.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.de.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.el.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.es.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.fi.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.fr.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.is.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.it.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.ja.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.ko.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.nb-NO.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.nl.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.pt-BR.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTaxCodeDialog.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.ru.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.sv.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.zh-CHS.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.zh-CHT.resx">
+      <DependentUpon>NewTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.ru.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.sv.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.zh-CHS.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.zh-CHT.resx">
+      <DependentUpon>SalesTaxCodeInGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.cs.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.da.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.de.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.el.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.es.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.fi.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.fr.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.is.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.it.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.ja.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.ko.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.nb-NO.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.nl.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.pl.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.pt-BR.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SalesTaxGroupDialog.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.ru.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.sv.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.zh-CHS.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.zh-CHT.resx">
+      <DependentUpon>SalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.cs.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.da.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.de.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.el.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.es.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.fi.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.fr.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.is.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.it.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.ja.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.ko.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.nb-NO.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.nl.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.pl.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.pt-BR.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValueInTaxCodeDialog.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.ru.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.sv.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.zh-CHS.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.zh-CHT.resx">
+      <DependentUpon>ValueInTaxCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.cs.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.da.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.de.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.el.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.es.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.fi.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.fr.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemSalesTaxGroupView.is.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.it.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.ja.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.ko.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.nb-NO.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.nl.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.pl.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.pt-BR.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemSalesTaxGroupView.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.ru.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.sv.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.zh-CHS.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.zh-CHT.resx">
+      <DependentUpon>ItemSalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.cs.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.da.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.de.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.el.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.es.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.fi.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.fr.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesTaxCodesView.is.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.it.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.ja.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.ko.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.nb-NO.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.nl.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.pl.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.pt-BR.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesTaxCodesView.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.ru.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.sv.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.zh-CHS.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.zh-CHT.resx">
+      <DependentUpon>SalesTaxCodesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.cs.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.da.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.de.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.el.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.es.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.fi.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.fr.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.is.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.it.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.ja.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.ko.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.nb-NO.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.nl.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.pl.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.pt-BR.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesTaxGroupView.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.ru.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.sv.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.zh-CHS.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.zh-CHT.resx">
+      <DependentUpon>SalesTaxGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tax16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Diagrams\DataModel.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.bg.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.en-ZA.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.es-MX.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.hi.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.it-IT.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.bg.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.en-ZA.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.es-MX.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.hi.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.it-IT.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.bg.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.en-ZA.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.es-MX.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.hi.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.it-IT.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.bg.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.en-ZA.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.es-MX.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.hi.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.it-IT.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.bg.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.en-ZA.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.es-MX.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.hi.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.it-IT.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.bg.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.en-ZA.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.es-MX.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.hi.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.it-IT.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.bg.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.en-ZA.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.es-MX.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.hi.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.it-IT.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.bg.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.en-ZA.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.es-MX.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.hi.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.it-IT.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.bg.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.en-ZA.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.es-MX.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.hi.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.it-IT.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.bg.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.en-ZA.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.es-MX.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.hi.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.it-IT.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.nl-BE.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.nl-BE.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.nl-BE.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.nl-BE.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.nl-BE.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.nl-BE.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.nl-BE.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.nl-BE.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.nl-BE.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.nl-BE.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.ja-JP.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.ja-JP.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.ja-JP.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.ja-JP.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.ja-JP.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.ja-JP.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.ja-JP.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.ja-JP.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.ja-JP.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.ja-JP.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general setup green_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general setup_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general setup green_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\edittaxcodedialog.vi-VN.resx">
+      <DependentUpon>edittaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsalestaxcodeingroupdialog.vi-VN.resx">
+      <DependentUpon>itemsalestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSalesTaxGroupDialog.vi-VN.resx">
+      <DependentUpon>ItemSalesTaxGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtaxcodedialog.vi-VN.resx">
+      <DependentUpon>newtaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxcodeingroupdialog.vi-VN.resx">
+      <DependentUpon>salestaxcodeingroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\salestaxgroupdialog.vi-VN.resx">
+      <DependentUpon>salestaxgroupdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\valueintaxcodedialog.vi-VN.resx">
+      <DependentUpon>valueintaxcodedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsalestaxgroupview.vi-VN.resx">
+      <DependentUpon>itemsalestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxcodesview.vi-VN.resx">
+      <DependentUpon>salestaxcodesview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\salestaxgroupview.vi-VN.resx">
+      <DependentUpon>salestaxgroupview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

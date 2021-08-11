@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Inventory|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Stock Counting Menu</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../Default.htm#HelpTopics/Inventory/MobileInventory/InvAppStockCounting.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Stock Counting Menu</h1>
+        <p><a name="kanchor192"></a>Stock counting can be preformed using a mobile device like an mobile phone running iOS&#160;or Android. This enables the user to walk around the store or warehouse with their device and enter their count of each item. </p>
+        <h2>Preparation:</h2>
+        <p>To be able to do stock counting in the LS&#160;Omni Mobile Inventory app you first need to do the following:</p>
+        <ol>
+            <li value="1"><a href="../StockCountingTemplate.htm">Create a stock counting template for your store in the Site Manager.</a>
+                <ul class="nested">
+                    <li value="1">The stock counting template has some settings that affect how the stock counting mechanism in the inventory app works. </li>
+                </ul>
+            </li>
+        </ol>
+        <p>  <![CDATA[ ]]></p>
+        <div class="Tips">
+            <img src="../../../Resources/Images/Boxes/Tip_24.png" class="Note" />
+            <p class="note">In the <b>Omni data.xml</b> default data pack there exists one stock counting template with four areas. <a href="../../DataManagement/InsertDefaultDataPackages.htm">See here how to import default data packs</a>.</p>
+        </div>
+        <p>&#160;</p>
+        <h2>How to do stock counting in the app:</h2>
+        <div class="Note1">
+            <img src="../../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">In the layout provided in the Omni data pack you find the Stock counting operation on the startup menu. If you have created your own button setup you need to <a href="InventoryAppMenus.htm">add a button with the Stock counting operation assigned to it</a>. </p>
+        </div>
+        <p>&#160;</p>
+        <ol>
+            <li value="1">When you press the Stock counting button in the inventory app you see a list of all stock counting templates. </li>
+            <li value="2">Select a stock counting template. </li>
+            <li value="3">If the stock counting template has areas then select an area to count for. </li>
+            <li value="4">When this is done you have come to the stock counting journal where you can scan item barcodes or search for them by ID or description.</li>
+            <li value="5">The item is added to your stock counting journal and depending on the quantity method in your stock counting template the app either sets a default quantity or requests you to insert your count.
+                <ul class="nested"><li value="1">Stock counting template setting: Quantity method;<ul class="nested"><li value="1">Ask - The app requests the user to insert the counted quantity.</li><li value="2">Quick scan - The item line is added to the journal with the default quantity also set in the <a href="../../../FieldHelp/Replenishment/InventoryTemplateView.htm">stock counting template</a>.</li></ul></li></ul></li>
+            <li value="6">If you have more than one area that should be counted in this worksheet you can go back one step and count for another area. </li>
+            <li value="7">When all items have been counted the stock counting journal is sent to the LS&#160;One Site Manager where the journal can be posted to update the inventory. </li>
+            <li value="8">The send option can be found on top of an open stock counting journal or in the list of stock counting template you have a button with action options for each template. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Inserted:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">September 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2017.2</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

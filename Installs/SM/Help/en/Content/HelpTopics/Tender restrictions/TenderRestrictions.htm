@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup|Stores">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Tender Restrictions</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Tender restrictions/TenderRestrictions.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Tender Restrictions</h1>
+        <p class="heading">Tender types can be restricted in LS One POS. </p>
+        <p>How to setup a tender restriction in Site manager:</p>
+        <p>The payment limitations are configured in the <a href="../../FieldHelp/LookupValues/PaymentmethodsView.htm">Payment types configuration</a>. Any limitation that are attached to the payment type are displayed in the list when opening up the payment type.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/LookupValues/PaymentMethodView.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/LookupValues/PaymentMethodView_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The limitations can be included or excluded. In the above example all items are included.</p>
+        <ul>
+            <li value="1">Everything - Payment allowed = True</li>
+            <li value="2">Retail group Dairy - Payment allowed = False</li>
+            <li value="3">Item Milk 2 liters - Payment allowed = True</li>
+        </ul>
+        <p class="note">This means all items can be paid for except the items in the retail group Dairy, except Milk 2 liters which can be paid for.</p>
+        <div class="Note1" style="font-size: 10pt;">The order is: Items, retail group, retail department, everything i.e. the POS first checks the item, then the retail group and etc.</div>
+        <p>The <a href="../../FieldHelp/LookupValues/CopyLimitationsDialog.htm">Copy limitations button</a> will copy a list of all limitations from another payment type. The limitations are only copied/updated if the limitation doesn't already exists or if it has been updated f.ex. the include flag has been changed.</p>
+        <p>If limitations are deleted on Cash f.ex. that were previously copied to Check then they would have to be deleted also on the Check payment type</p>
+        <p>To activate this limitation on a payment method in a store it needs to be activated on <a href="../../FieldHelp/Store/StoreTenderView.htm">Allowed payments</a> on the store card. The listbox will display all limitation codes that exist for the underlying payment type i.e. Cash, Check and etc.</p>
+        <p>The user then needs to check in which <a href="../../FieldHelp/Store/StoreTenderView.htm">limitation codes</a> are to be active for this particular payment method.</p>
+        <p>When the items are then sold the POS will figure out which items can be sold and which can't. Once a payment operation is selected and there are items that are excluded a dialog with a list of the items that cannot be paid for  are displayed.</p>
+        <p>If the user selects Continue then the payment operation continues with the total amount of the items that are allowed to be paid for.</p>
+        <p>If the user selects Cancel the payment operation is canceled</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/POS/ItemsExcludedFromPayment.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="648" data-mc-height="705" src="../../Resources/Images/POS/ItemsExcludedFromPayment_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>If the user clicks Continue and then cancels the payment operation itself the payment limitations is cleared from the transaction.</p>
+        <p>If the user clicks Continue and then pays what can be paid using the limitations the next payment operation  only displays the remaining amount.</p>
+        <p><b>How to setup a tender restriction for Gift card:</b>
+        </p>
+        <ol>
+            <li value="1">Select to edit payment type Gift card in the <a href="../SiteManager/StoreSetup/Payment Types.htm">Payment types view</a></li>
+            <li value="2">Select the Add button to add limitations to the payment type</li>
+            <li value="3"><a href="../../FieldHelp/LookupValues/PaymentLimitationDialog.htm">Payment limitation dialog</a> is displayed. Select the Add button to <a href="../../FieldHelp/LookupValues/NewLimitationsDialog.htm">create a limitation code</a> and name it e.g. <i>No payment allowed.</i>Select to use this limitation code. Type of limitation should be in this case <i>Retail group</i>, relation should be <i> Pharmacy - Painkiller</i> and check mark should <b>not</b>t be set in the <i>Include in payment</i> tick box.</li>
+        </ol>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"><a href="SetupTender restrictions.htm">How to setup tender restrictions</a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">7<span class="sup">th</span> February 2017</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2017</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

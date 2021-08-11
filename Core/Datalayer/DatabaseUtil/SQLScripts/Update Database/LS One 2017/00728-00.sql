@@ -1,0 +1,22 @@
+﻿/*
+
+	Incident No.	: ONE-5952
+	Responsible		: Hörður Kristjánsson
+	Sprint			: Chilli
+	Date created	: 30.01.2017
+
+	Description		: Adding omni printing station to functionality profile
+	
+	
+	Tables affected	: POSFUNCTIONALITYPROFILE
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSFUNCTIONALITYPROFILE' AND COLUMN_NAME = 'OMNIPRINTINGSTATIONID')
+BEGIN
+	ALTER TABLE dbo.POSFUNCTIONALITYPROFILE ADD OMNIPRINTINGSTATIONID nvarchar(20) NULL
+END
+GO

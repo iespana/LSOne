@@ -1,0 +1,80 @@
+﻿// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 96bf9ca0-2ae7-11e5-a2cb-0800200c9a72
+
+// Name of the report as it will appear in the system menus.
+Name: Inventory below reorderpoint
+
+// Extra description for the report as it will appear in some of the system menus
+Description:  This report shows a list of items that have inventory below the set replenishment reorderpoint.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: da
+
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_ReorderPointbyVendor]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_ReorderPointbyVendor]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_ReorderPointbyVendor]
+(
+	@StoreID nvarchar(max),
+	@VendorsID nvarchar(max),
+	@DataareaID nvarchar(10)
+	
+)
+AS
+
+set nocount on
+declare @docid int
+
+exec sp_xml_preparedocument @docid output, @VendorsID
+
+select VENDOR, VENDORITEMID, ITEMID, (ITEMNAME+VARIANTNAME) as ITEMNAME, ISNULL(REORDERPOINTS, REORDERPOINT) as REORDERPOINT, QUANTITY, STOREIDS as STOREID
+from
+(select 
+ISNULL(vt.NAME,'') as VENDOR, ISNULL(vi.VENDORITEMID,'') as VENDORITEMID, r.ITEMID, r.REORDERPOINT, s.ITEMNAME,
+case when s.VARIANTNAME <> '' THEN (' - ' + s.VARIANTNAME) ELSE ISNULL(s.VARIANTNAME, '') END as VARIANTNAME,
+ ISNULL(v.QUANTITY,0) AS QUANTITY, ISNULL(r.STOREID, v.STOREID) as STOREID
+from ITEMREPLENISHMENTSETTING r
+left outer join VINVENTSUM v on r.ITEMID = v.ITEMID AND v.STOREID = @StoreID 
+left outer join RETAILITEM s on r.ITEMID = s.ITEMID
+left outer join VENDORITEMS vi on vi.RETAILITEMID = s.ITEMID AND vi.DATAAREAID = r.DATAAREAID 
+left outer join VENDTABLE vt on vt.ACCOUNTNUM = vi.VENDORID AND vi.DATAAREAID = r.DATAAREAID
+join (select [text] as VENDORSID from openxml(@docid, '/p', 1) where not [text] is null) uu on vi.VENDORID = CAST(uu.VENDORSID as nvarchar(20))  
+where  (ISNULL(v.QUANTITY,0) - r.REORDERPOINT) < 0 and (v.STOREID IS NULL or v.STOREID = @StoreID) and r.STOREID = '' and r.DATAAREAID = @DataareaID
+and s.ITEMTYPE <> 2
+group by r.ITEMID, s.ITEMNAME, s.VARIANTNAME, r.REORDERPOINT, v.QUANTITY, v.STOREID, VENDORITEMID, VENDORID, vt.NAME, r.STOREID) rt
+left outer join
+(select	
+ISNULL(vt.NAME,'') as VENDORS, ISNULL(vi.VENDORITEMID,'') as VENDORITEMIDS, r.ITEMID as ITEMIDS, r.REORDERPOINT as REORDERPOINTS, ISNULL(r.STOREID, v.STOREID) as STOREIDS 
+from ITEMREPLENISHMENTSETTING r 
+left outer join VINVENTSUM v on r.ITEMID = v.ITEMID AND v.STOREID = @StoreID
+left outer join RETAILITEM s on r.ITEMID = s.ITEMID 
+left outer join VENDORITEMS vi on vi.RETAILITEMID = s.ITEMID AND vi.DATAAREAID = r.DATAAREAID 
+left outer join VENDTABLE vt on vt.ACCOUNTNUM = vi.VENDORID AND vi.DATAAREAID = r.DATAAREAID
+join (select [text] as VENDORSID from openxml(@docid, '/p', 1) where not [text] is null) uu on vi.VENDORID = CAST(uu.VENDORSID as nvarchar(20))  
+where (ISNULL(v.QUANTITY,0) - r.REORDERPOINT) < 0 and (v.STOREID IS NULL or v.STOREID = @StoreID) and r.STOREID = @StoreID and r.DATAAREAID = @DataareaID
+and s.ITEMTYPE <> 2
+group by r.ITEMID, s.ITEMNAME, r.REORDERPOINT, v.QUANTITY, v.STOREID, VENDORITEMID, VENDORID, vt.NAME, r.STOREID) st
+on rt.ITEMID = st.ITEMIDS and rt.VENDOR = st.VENDORS
+order by VENDOR
+
+exec sp_xml_removedocument @docid
+
+GO

@@ -1,0 +1,4113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="INVENTORYAREA">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MASTERID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="DESCRIPTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TYPE" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="INVENTORYAREALINES">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MASTERID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="AREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESCRIPTION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="INVENTORYTEMPLATE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CHANGEVENDORINLINE" type="xs:boolean" />
+                  <xs:element name="CHANGEUOMINLINE" type="xs:boolean" />
+                  <xs:element name="CALCULATESUGGESTEDQUANTITY" type="xs:boolean" />
+                  <xs:element name="SETQUANTITYTOSUGGESTEDQUANTITY" type="xs:boolean" />
+                  <xs:element name="DISPLAYREORDERPOINT" type="xs:boolean" />
+                  <xs:element name="DISPLAYMAXIMUMINVENTORY" type="xs:boolean" />
+                  <xs:element name="DISPLAYBARCODE" type="xs:boolean" />
+                  <xs:element name="ALLSTORES" type="xs:boolean" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ADDLINESWITHZEROSUGGESTEDQTY" type="xs:boolean" />
+                  <xs:element name="TEMPLATEENTRYTYPE" type="xs:int" />
+                  <xs:element name="UNITSELECTION" type="xs:int" />
+                  <xs:element name="ENTERINGTYPE" type="xs:int" />
+                  <xs:element name="QUANTITYMETHOD" type="xs:int" />
+                  <xs:element name="DEFAULTQUANTITY" type="xs:decimal" />
+                  <xs:element name="AREAID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                  <xs:element name="BATCHSIZE" type="xs:int" />
+                  <xs:element name="DEFAULTSTORE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AUTOPOPULATEITEMS" type="xs:int" minOccurs="0" />
+                  <xs:element name="USEBARCODEUOM" type="xs:boolean" />
+                  <xs:element name="ALLOWADDNEWLINE" type="xs:boolean" />
+                  <xs:element name="ALLOWIMAGEIMPORT" type="xs:boolean" />
+                  <xs:element name="DEFAULTVENDOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CREATEGOODSRECEIVINGDOCUMENT" type="xs:boolean" />
+                  <xs:element name="AUTOPOPULATEGOODSRECEIVINGDOCUMENT" type="xs:boolean" />
+                  <xs:element name="AUTOPOPULATETRANSFERORDERRECEIVINGQUANTITY" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSFUNCTIONALITYPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NOTAXUSED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ADDTAXONPRICES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SKIPTAXONRECEIPT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MULTIBLEITEMSYMBOL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CURRENCYSYMBOL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AMOUNTROUNDINGTO" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="PRICEROUNDINGTO" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="AMOUNTDECIMALPLACES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRICEDECIMALPLACES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVEADJUSTMENT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDISPRESSED" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDPAYMENT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REFUNDSALE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MARKDOWN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MARKUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OVERRIDEPRICE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTOFTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISCOUNTATTOTAL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TENDERDECLARATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENDOFTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SERIALNUMBER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SALESPERSON" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ITEMNOTONFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVESALESLINE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MUSTKEYINPRICEIFZERO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SALESPERSONMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYSECONDARYTOTALCURRENCY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SECONDARYTOTALCURRENCY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MINIMUMPASSWORDLENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="BLOCKEDCLOSEDACCOUNT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTXREPORTONTERMINAL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STAFFBARCODELOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STAFFCARDLOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MAXIMUMSTORETRANSLOG" type="xs:int" minOccurs="0" />
+                  <xs:element name="MAXIMUMPRICE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="MAXIMUMQTY" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="BACKUPTRAININGTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DAYSTRANSACTIONSEXISTS" type="xs:int" minOccurs="0" />
+                  <xs:element name="TRANSACTIONDELETEREMINDER" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXREGISTRATIONNUMBERONRECEIPT" type="xs:int" minOccurs="0" />
+                  <xs:element name="SENDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDPOSTEDTRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SUSPENDRETRIEVETRANSACTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STAFFVALIDATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAENTRIES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FLOATINGCASHIER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMER2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INVENTORYLOOKUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CENTRALTABLESERVER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TSSENDTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSENDVOIDTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSUSPENDRETRIEVETRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSSTAFF" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSCUSTOMER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSDATAENTRIES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSFLOATINGCASHIER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSINVENTORYLOOKUP" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSCENTRALTABLESERVER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSUPDATEREPLICATIONCOUNTER" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TSTRANSACTIONRESENDLIMIT" type="xs:int" minOccurs="0" />
+                  <xs:element name="TSRESENDDELAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="AGGREGATEITEMS" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LOGLEVEL" type="xs:int" minOccurs="0" />
+                  <xs:element name="CENTRALTABLESERVERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AGGREGATEPAYMENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="AGGREGATEITEMSFORPRINTING" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALLOWSALESIFDRAWERISOPEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHOWSTAFFLISTATLOGON" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="LIMITSTAFFLISTTOSTORE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALWAYSASKFORPASSWORD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SYNCTRANSACTIONS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ISHOSPITALITYPROFILE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMPADENTRYSTARTSINDECIMALS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMPADAMOUNTOFDECIMALS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SAFEDROPUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SAFEDROPREVUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BANKDROPUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BANKDROPREVUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TENDERDECLUSESDENOMINATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="POLLINGINTERVAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="SKIPHOSPITALITYTABLEVIEW" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYVOIDEDITEMS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ALLOWCHANGESAFTERSPLITBILL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DEFAULTITEMIMAGE" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="ALLOWIMAGEVIEWINITEMLOOKUP" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="REMEMBERLISTIMAGESELECTION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CLEARUSERBETWEENLOGINS" type="xs:short" minOccurs="0" />
+                  <xs:element name="CLEARSETTING" type="xs:int" minOccurs="0" />
+                  <xs:element name="CLEARGRACEPERIOD" type="xs:int" minOccurs="0" />
+                  <xs:element name="ALLOWSALEANDRETURNINSAMETX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="POSTTRANSACTIONDDJOB" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="127" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DDSCHEDULERLOCATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="127" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="USESTARTOFDAY" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="FORCESTARTOFDAYONLOGON" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="ZRPTINCLUDEFLOATINCASH" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTCOMBINESALESRETURNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTINCLUDETENDERDECLARATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="STARTOFTRANSACTIONINFOCODETYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYRETURNINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYSUSPENDED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYOTHERINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTGRANDTOTALAMTDISPLAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTSALESRPTAMTDISPLAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTCOMBINESALESREPORTSALESRETURNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDISPLAYDEPOSITINFO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ZRPTDEPOSITORDERBY" type="xs:int" minOccurs="0" />
+                  <xs:element name="ZRPTREPORTWIDTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="OMNISUSPENSIONTYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OMNIPRINTINGSTATIONID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMERREQUIREDONRETURN" type="xs:boolean" />
+                  <xs:element name="OMNIITEMIMAGELOOKUPGROUP" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                  <xs:element name="OPENDRAWER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OMNIMAINMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SHOWPRICESBYDEFAULT" type="xs:boolean" />
+                  <xs:element name="ZRPTDISPLAYOVERSHORTAMOUNT" type="xs:boolean" />
+                  <xs:element name="ZRPTPRINTGRANDTOTALS" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="DISPLAYVOIDEDPAYMENTS" type="xs:boolean" />
+                  <xs:element name="SALESPERSONPROMPT" type="xs:int" />
+                  <xs:element name="OMNIENTERINGTYPE" type="xs:int" />
+                  <xs:element name="OMNIQUANTITYMETHOD" type="xs:int" />
+                  <xs:element name="OMNIDEFAULTQUANTITY" type="xs:decimal" />
+                  <xs:element name="LIMITATIONDISPLAYTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYLIMITATIONSTOTALSINPOS" type="xs:unsignedByte" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSHARDWAREPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMXPOS" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORMYPOS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCREENKEYBOARD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DRAWERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DRAWERSTATUS" type="xs:int" minOccurs="0" />
+                  <xs:element name="DRAWER" type="xs:int" minOccurs="0" />
+                  <xs:element name="DRAWERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DRAWEROPENTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DRAWERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBINCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYDEVICE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYTOTALTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBALANCETEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCLOSEDLINE1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCLOSEDLINE2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYCHARACTERSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="DELAYFORLINKEDITEMS" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHOWPICTURE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSR" type="xs:int" minOccurs="0" />
+                  <xs:element name="MSRDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MSRDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MSRAUTODISABLE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSRDISABLEEVENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MSRREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ENTERREPEATSLASTITEM" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="LOGOALIGNMENT" type="xs:int" minOccurs="0" />
+                  <xs:element name="LOGOBITMAP" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="LOGO" type="xs:int" minOccurs="0" />
+                  <xs:element name="STARTTRACK1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEPARATOR1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENDTRACK1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTTRACK2AFTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="ENDTRACK2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMBEROFLINESONINVOICE" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTDISCOUNTDETAIL" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTERNORMAL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERBOLD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERWIDE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERHIGH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERWIDEHIGH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERCHARACTERSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTERNETWORKHOST" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTERITALIC" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DECIMALSINENTRY" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTERSHARING" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MAXINVOICELINES" type="xs:int" minOccurs="0" />
+                  <xs:element name="PRINTBINARYCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HARDTOTAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="HARDTOTALDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HARDTOTALDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HARDTOTALSREMOTE" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARD" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARDDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYBOARDDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYBOARDREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TONEINDICATOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONEDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TONEDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TONEREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TONE1PITCH" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE1VOLUME" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE1DURATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2PITCH" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2VOLUME" type="xs:int" minOccurs="0" />
+                  <xs:element name="TONE2DURATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="INTERTONEWAIT" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCANNER" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCANNERDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCANNERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCANNERDISABLEEVENT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCANNERAUTODISABLE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCANNERREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCALE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SCALEDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCALEDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SCALEREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TIMEOUTINSEC" type="xs:int" minOccurs="0" />
+                  <xs:element name="MANUALINPUTALLOWED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="KEYLOCK" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYLOCKDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYLOCKDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYLOCKREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="KEYLOCKDISABLEEVENTS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NUMBEROFLFATRECEIPTEND" type="xs:int" minOccurs="0" />
+                  <xs:element name="NUMBEROFLFATINVOICETOP" type="xs:int" minOccurs="0" />
+                  <xs:element name="DOCINSERTREMOVALTIMEOUT" type="xs:int" minOccurs="0" />
+                  <xs:element name="LEFTMARGINONRECEIPT" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFT" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFTDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTSERVERNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTSERVERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCOMPANYID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTUSERID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTPASSWORD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CAPTUREEXTRADATA" type="xs:int" minOccurs="0" />
+                  <xs:element name="MICR" type="xs:int" minOccurs="0" />
+                  <xs:element name="MICRDRIVERNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MICRDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MICRREMOTE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURT" type="xs:int" minOccurs="0" />
+                  <xs:element name="HOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PUMPCONTROLLERTYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SLEEPPERIODWHENIDLE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SLEEPPERIODWHENACTIVE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CCTV" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CCTVPORT" type="xs:int" minOccurs="0" />
+                  <xs:element name="CCTVHOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CCTVCAMERA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTAMOUNTDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTPRICEDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTVOLUMETDECPOINTPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONEACTIVE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTONEFREQUENCY" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONELENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTONEREPEATS" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTSYNCTIMEWITHPOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PHARMACY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PHARMACYHOST" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHARMACYPORT" type="xs:int" minOccurs="0" />
+                  <xs:element name="KEYBOARDMAPPINGID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTBATCHINCREMENTATEOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RFIDSCANNERTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="RFIDDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RFIDDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYDEVICENAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYRECEIPTPERCENTAGE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYIMAGEPATH" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="260" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DUALDISPLAYIMAGEINTERVAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYBROWSERURL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CASHCHANGER" type="xs:int" minOccurs="0" />
+                  <xs:element name="CASHCHANGERPORTSETTINGS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CASHCHANGERINITSETTINGS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGER" type="xs:unsignedByte" />
+                  <xs:element name="FORECOURTMANAGERHOSTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERPOSPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERScreenHeightPercentage" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERControllerHostName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERLogLevel" type="xs:int" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERImplFileName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERImplFileType" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERScreenExtHeightPercentage" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERVolumeUnit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTMANAGERCallingSound" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERCallingBlink" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOURTMANAGERFuellingPointColumns" type="xs:int" minOccurs="0" />
+                  <xs:element name="FISCALPRINTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="FISCALPRINTERCONNECTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FISCALPRINTERDESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORECOURTSUSPENDALLOWED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USEKITCHENDISPLAY" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DUALDISPLAYSCREENNUMBER" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASKEYCONNECTED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DALLASMESSAGEPREFIX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASKEYREMOVEDMESSAGE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASCOMPORT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DALLASBAUDRATE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASPARITY" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASSTOPBITS" type="xs:int" minOccurs="0" />
+                  <xs:element name="DALLASDATABITS" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFTMERCHANTACCOUNT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTMERCHANTKEY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCUSTOMFIELD1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCUSTOMFIELD2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISPLAYBINARYCONVERSION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTEREXTRALINES" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_LEFTMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_RIGHTMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_PRINTDESIGNBOXES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="WINPRINT_FOLDERLOCATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WINPRINT_TOPMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="WINPRINT_BOTTOMMARGIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="STATIONPRINTINGHOSTID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WINDOWSPRINTERCONFIGURATIONID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ETAX" type="xs:int" minOccurs="0" />
+                  <xs:element name="ETAXPORTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSISSUSPENSIONTYPE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ALLOWEOD" type="xs:int" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSMENUHEADER">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MENUID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COLUMNS" type="xs:int" minOccurs="0" />
+                  <xs:element name="ROWS" type="xs:int" minOccurs="0" />
+                  <xs:element name="MENUCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTBOLD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTITALIC" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTCHARSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="USENAVOPERATION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="APPLIESTO" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GRADIENTMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHAPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="MENUTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="STYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEFAULTOPERATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="GUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                  <xs:element name="IMPORTDATETIME" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DEVICETYPE" type="xs:int" />
+                  <xs:element name="MAINMENU" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSMENULINE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MENUID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEQUENCE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYNO" type="xs:int" />
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OPERATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="PARAMETER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PARAMETERTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTBOLD" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="FONTITALIC" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTCHARSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISABLED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PICTURE" type="xs:base64Binary" minOccurs="0" />
+                  <xs:element name="PICTUREFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDEDESCRONPICTURE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTSTRIKETHROUGH" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="FONTUNDERLINE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="COLUMNSPAN" type="xs:int" minOccurs="0" />
+                  <xs:element name="ROWSPAN" type="xs:int" minOccurs="0" />
+                  <xs:element name="NAVOPERATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDDEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHADEWHENDISABLED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="BACKGROUNDHIDDEN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TRANSPARENT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="GLYPH" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH3" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH4" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXTFONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT2FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT3FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXT4FONT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GLYPHTEXTFONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT2FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT3FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT4FONTSIZE" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXTFORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT2FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT3FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHTEXT4FORECOLOR" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPHOFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH2OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH3OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="GLYPH4OFFSET" type="xs:int" minOccurs="0" />
+                  <xs:element name="BACKCOLOR2" type="xs:int" minOccurs="0" />
+                  <xs:element name="GRADIENTMODE" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHAPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="USEHEADERFONT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USEHEADERATTRIBUTES" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="IMAGEPOSITION" type="xs:int" minOccurs="0" />
+                  <xs:element name="STYLEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KEYMAPPING" type="xs:int" minOccurs="0" />
+                  <xs:element name="PICTUREID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="POSVISUALPROFILE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROFILEID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STARTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SALESMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PAYMENTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TENDEROPERATIONMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NEGATIVEADJUSTMENTMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHYSICALINVENTORYMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NORMALCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VOIDEDCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MULTIBUYCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MIXANDMATCHCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TOTALDISCOUNTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INCOMEEXPENSECOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COUPONLINECOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LINESELECTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FREETEXTCOLOR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDETITLEBAR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDEMENU" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDECURSOR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDENUMBERCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="HIDEDISCPCTCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DIALOGBOXONERROR" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SHOWTOPMENU" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TABLEMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIDEGUESTCOLUMN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TOPLINEMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JOURNALMENU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RESOLUTION" type="xs:int" minOccurs="0" />
+                  <xs:element name="TERMINALTYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESIGNALLOWEDONPOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="OPAQUEBACKGROUNDFORM" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="OPACITY" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="USEFORMBACKGROUNDIMAGE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SCREENINDEX" type="xs:int" minOccurs="0" />
+                  <xs:element name="SHOWCURRENCYSYMBOLONCOLUMNS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RECEIPTPAYMENTLINESSIZE" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="RBOTERMINALTABLE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TERMINALID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STOREID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LOCATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STATEMENTMETHOD" type="xs:int" minOccurs="0" />
+                  <xs:element name="TERMINALSTATEMENT" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="NOTACTIVE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="CLOSINGSTATUS" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISPLAYTERMINALCLOSED" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DISPLAYLINKEDITEM" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="MANAGERKEYONRETURN" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="SLIPIFRETURN" type="xs:int" minOccurs="0" />
+                  <xs:element name="OPENDRAWERATLILO" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ONLYTOTALINSUSPENDEDTRANS20015" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="EXITAFTEREACHTRANSACTION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="AUTOLOGOFFTIMEOUT" type="xs:int" minOccurs="0" />
+                  <xs:element name="RETURNINTRANSACTION" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="ITEMIDONRECEIPT" type="xs:int" minOccurs="0" />
+                  <xs:element name="EFTSTOREID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTTERMINALID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MAXRECEIPTTEXTLENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="NUMBEROFTOPBOTTOMLINES" type="xs:int" minOccurs="0" />
+                  <xs:element name="RECEIPTSETUPLOCATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="MAXDISPLAYTEXTLENGTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="CUSTOMERDISPLAYTEXT1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CUSTOMERDISPLAYTEXT2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HARDWAREPROFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VISUALPROFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRINTVATREFUNDCHECKS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RECEIPTPRINTINGDEFAULTOFF" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RECEIPTBARCODE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="LASTZREPORTID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LAYOUTID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UPDATESERVICEPORT" type="xs:int" minOccurs="0" />
+                  <xs:element name="IPADDRESS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MODIFIEDTIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="MODIFIEDBY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FUNCTIONALITYPROFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RECEIPTIDNUMBERSEQUENCE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="61" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STANDALONE" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TRANSACTIONIDNUMBERSEQUENCE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TRANSACTIONSERVICEPROFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DatabaseName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DatabaseServer" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DatabaseUserName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DatabasePassword" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SALESTYPEFILTER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AUTOLOCKTERMINALTIMEOUT" type="xs:int" minOccurs="0" />
+                  <xs:element name="SUSPENDALLOWEOD" type="xs:int" />
+                  <xs:element name="HOSPTRANSSTORESERVERPROFILE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="KITCHENMANAGERPROFILEID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                  <xs:element name="EFTCUSTOMFIELD1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EFTCUSTOMFIELD2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMINFOFIELD1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMINFOFIELD2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMINFOFIELD3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FORMINFOFIELD4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SWITCHUSERWHENENTERINGPOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="StatementPosting" type="xs:int" minOccurs="0" />
+                  <xs:element name="INCLUDEINSTATEMENT" type="xs:boolean" />
+                  <xs:element name="ACTIVATED" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="LASTACTIVATEDDATE" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SPECIALGROUP">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GROUPID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DELETED" type="xs:boolean" />
+                  <xs:element name="MASTERID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//INVENTORYAREA" />
+          <xs:field xpath="MASTERID" />
+        </xs:unique>
+        <xs:unique name="INVENTORYAREALINES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//INVENTORYAREALINES" />
+          <xs:field xpath="MASTERID" />
+          <xs:field xpath="AREAID" />
+        </xs:unique>
+        <xs:unique name="INVENTORYTEMPLATE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//INVENTORYTEMPLATE" />
+          <xs:field xpath="ID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSFUNCTIONALITYPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSFUNCTIONALITYPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSHARDWAREPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSHARDWAREPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSISSUSPENSIONTYPE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSISSUSPENSIONTYPE" />
+          <xs:field xpath="ID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSMENUHEADER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSMENUHEADER" />
+          <xs:field xpath="MENUID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSMENULINE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSMENULINE" />
+          <xs:field xpath="MENUID" />
+          <xs:field xpath="SEQUENCE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="POSVISUALPROFILE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//POSVISUALPROFILE" />
+          <xs:field xpath="PROFILEID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="RBOTERMINALTABLE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//RBOTERMINALTABLE" />
+          <xs:field xpath="TERMINALID" />
+          <xs:field xpath="STOREID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="SPECIALGROUP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SPECIALGROUP" />
+          <xs:field xpath="MASTERID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <INVENTORYAREA>
+      <MASTERID>da53e1ca-83e2-4b0a-ab73-ea31db5c3bb3</MASTERID>
+      <DESCRIPTION>Mobile stock counting - Area</DESCRIPTION>
+      <TYPE>0</TYPE>
+    </INVENTORYAREA>
+    <INVENTORYAREALINES>
+      <MASTERID>f4ddc34f-bc3a-437f-9e19-0d44c782f869</MASTERID>
+      <AREAID>DA53E1CA-83E2-4B0A-AB73-EA31DB5C3BB3</AREAID>
+      <DESCRIPTION>North</DESCRIPTION>
+    </INVENTORYAREALINES>
+    <INVENTORYAREALINES>
+      <MASTERID>15e4ea78-a5bd-49ba-8d06-504b35344074</MASTERID>
+      <AREAID>DA53E1CA-83E2-4B0A-AB73-EA31DB5C3BB3</AREAID>
+      <DESCRIPTION>West</DESCRIPTION>
+    </INVENTORYAREALINES>
+    <INVENTORYAREALINES>
+      <MASTERID>3254fc69-21a2-4f87-add2-dce46103abe9</MASTERID>
+      <AREAID>DA53E1CA-83E2-4B0A-AB73-EA31DB5C3BB3</AREAID>
+      <DESCRIPTION>East</DESCRIPTION>
+    </INVENTORYAREALINES>
+    <INVENTORYAREALINES>
+      <MASTERID>f30a950b-a498-457f-b96f-dde1de001039</MASTERID>
+      <AREAID>DA53E1CA-83E2-4B0A-AB73-EA31DB5C3BB3</AREAID>
+      <DESCRIPTION>South</DESCRIPTION>
+    </INVENTORYAREALINES>
+    <INVENTORYTEMPLATE>
+      <ID>MOBILE0001</ID>
+      <NAME>Mobile stock counting template</NAME>
+      <CHANGEVENDORINLINE>true</CHANGEVENDORINLINE>
+      <CHANGEUOMINLINE>true</CHANGEUOMINLINE>
+      <CALCULATESUGGESTEDQUANTITY>true</CALCULATESUGGESTEDQUANTITY>
+      <SETQUANTITYTOSUGGESTEDQUANTITY>true</SETQUANTITYTOSUGGESTEDQUANTITY>
+      <DISPLAYREORDERPOINT>true</DISPLAYREORDERPOINT>
+      <DISPLAYMAXIMUMINVENTORY>true</DISPLAYMAXIMUMINVENTORY>
+      <DISPLAYBARCODE>false</DISPLAYBARCODE>
+      <ALLSTORES>true</ALLSTORES>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ADDLINESWITHZEROSUGGESTEDQTY>false</ADDLINESWITHZEROSUGGESTEDQTY>
+      <TEMPLATEENTRYTYPE>5</TEMPLATEENTRYTYPE>
+      <UNITSELECTION>0</UNITSELECTION>
+      <ENTERINGTYPE>0</ENTERINGTYPE>
+      <QUANTITYMETHOD>0</QUANTITYMETHOD>
+      <DEFAULTQUANTITY>0.000000000000</DEFAULTQUANTITY>
+      <AREAID>da53e1ca-83e2-4b0a-ab73-ea31db5c3bb3</AREAID>
+      <BATCHSIZE>0</BATCHSIZE>
+      <USEBARCODEUOM>true</USEBARCODEUOM>
+      <ALLOWADDNEWLINE>true</ALLOWADDNEWLINE>
+      <ALLOWIMAGEIMPORT>false</ALLOWIMAGEIMPORT>
+      <CREATEGOODSRECEIVINGDOCUMENT>false</CREATEGOODSRECEIVINGDOCUMENT>
+      <AUTOPOPULATEGOODSRECEIVINGDOCUMENT>false</AUTOPOPULATEGOODSRECEIVINGDOCUMENT>
+      <AUTOPOPULATETRANSFERORDERRECEIVINGQUANTITY>false</AUTOPOPULATETRANSFERORDERRECEIVINGQUANTITY>
+    </INVENTORYTEMPLATE>
+    <POSFUNCTIONALITYPROFILE>
+      <PROFILEID>MOBILE1</PROFILEID>
+      <NAME>Mobile</NAME>
+      <NOTAXUSED>0</NOTAXUSED>
+      <ADDTAXONPRICES>0</ADDTAXONPRICES>
+      <SKIPTAXONRECEIPT>0</SKIPTAXONRECEIPT>
+      <MULTIBLEITEMSYMBOL></MULTIBLEITEMSYMBOL>
+      <CURRENCYSYMBOL></CURRENCYSYMBOL>
+      <AMOUNTROUNDINGTO>0.000000000000</AMOUNTROUNDINGTO>
+      <PRICEROUNDINGTO>0.000000000000</PRICEROUNDINGTO>
+      <AMOUNTDECIMALPLACES></AMOUNTDECIMALPLACES>
+      <PRICEDECIMALPLACES></PRICEDECIMALPLACES>
+      <NEGATIVEADJUSTMENT></NEGATIVEADJUSTMENT>
+      <VOIDISPRESSED></VOIDISPRESSED>
+      <VOIDTRANSACTION></VOIDTRANSACTION>
+      <VOIDPAYMENT></VOIDPAYMENT>
+      <REFUNDSALE></REFUNDSALE>
+      <MARKDOWN></MARKDOWN>
+      <MARKUP></MARKUP>
+      <OVERRIDEPRICE></OVERRIDEPRICE>
+      <STARTOFTRANSACTION></STARTOFTRANSACTION>
+      <DISCOUNTATTOTAL></DISCOUNTATTOTAL>
+      <TENDERDECLARATION></TENDERDECLARATION>
+      <ENDOFTRANSACTION></ENDOFTRANSACTION>
+      <SERIALNUMBER></SERIALNUMBER>
+      <SALESPERSON></SALESPERSON>
+      <ITEMNOTONFILE></ITEMNOTONFILE>
+      <NEGATIVESALESLINE></NEGATIVESALESLINE>
+      <MUSTKEYINPRICEIFZERO>0</MUSTKEYINPRICEIFZERO>
+      <SALESPERSONMODE>0</SALESPERSONMODE>
+      <DISPLAYSECONDARYTOTALCURRENCY>0</DISPLAYSECONDARYTOTALCURRENCY>
+      <SECONDARYTOTALCURRENCY></SECONDARYTOTALCURRENCY>
+      <MINIMUMPASSWORDLENGTH>0</MINIMUMPASSWORDLENGTH>
+      <BLOCKEDCLOSEDACCOUNT>0</BLOCKEDCLOSEDACCOUNT>
+      <PRINTXREPORTONTERMINAL>0</PRINTXREPORTONTERMINAL>
+      <STAFFBARCODELOGON>0</STAFFBARCODELOGON>
+      <STAFFCARDLOGON>0</STAFFCARDLOGON>
+      <MAXIMUMSTORETRANSLOG>0</MAXIMUMSTORETRANSLOG>
+      <MAXIMUMPRICE>0.000000000000</MAXIMUMPRICE>
+      <MAXIMUMQTY>0.000000000000</MAXIMUMQTY>
+      <BACKUPTRAININGTRANSACTIONS>0</BACKUPTRAININGTRANSACTIONS>
+      <DAYSTRANSACTIONSEXISTS>0</DAYSTRANSACTIONSEXISTS>
+      <TRANSACTIONDELETEREMINDER>0</TRANSACTIONDELETEREMINDER>
+      <TAXREGISTRATIONNUMBERONRECEIPT>0</TAXREGISTRATIONNUMBERONRECEIPT>
+      <SENDTRANSACTION></SENDTRANSACTION>
+      <VOIDPOSTEDTRANSACTION></VOIDPOSTEDTRANSACTION>
+      <SUSPENDRETRIEVETRANSACTION></SUSPENDRETRIEVETRANSACTION>
+      <STAFFVALIDATION></STAFFVALIDATION>
+      <CUSTOMER></CUSTOMER>
+      <DATAENTRIES></DATAENTRIES>
+      <FLOATINGCASHIER></FLOATINGCASHIER>
+      <CUSTOMER2></CUSTOMER2>
+      <INVENTORYLOOKUP></INVENTORYLOOKUP>
+      <CENTRALTABLESERVER></CENTRALTABLESERVER>
+      <TSSENDTRANSACTIONS>0</TSSENDTRANSACTIONS>
+      <TSSENDVOIDTRANSACTIONS>0</TSSENDVOIDTRANSACTIONS>
+      <TSSUSPENDRETRIEVETRANSACTIONS>0</TSSUSPENDRETRIEVETRANSACTIONS>
+      <TSSTAFF>0</TSSTAFF>
+      <TSCUSTOMER>0</TSCUSTOMER>
+      <TSDATAENTRIES>0</TSDATAENTRIES>
+      <TSFLOATINGCASHIER>0</TSFLOATINGCASHIER>
+      <TSINVENTORYLOOKUP>0</TSINVENTORYLOOKUP>
+      <TSCENTRALTABLESERVER>0</TSCENTRALTABLESERVER>
+      <TSUPDATEREPLICATIONCOUNTER>0</TSUPDATEREPLICATIONCOUNTER>
+      <TSTRANSACTIONRESENDLIMIT>0</TSTRANSACTIONRESENDLIMIT>
+      <TSRESENDDELAY>0</TSRESENDDELAY>
+      <AGGREGATEITEMS>0</AGGREGATEITEMS>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <LOGLEVEL>3</LOGLEVEL>
+      <AGGREGATEPAYMENTS>0</AGGREGATEPAYMENTS>
+      <AGGREGATEITEMSFORPRINTING>0</AGGREGATEITEMSFORPRINTING>
+      <ALLOWSALESIFDRAWERISOPEN>0</ALLOWSALESIFDRAWERISOPEN>
+      <SHOWSTAFFLISTATLOGON>0</SHOWSTAFFLISTATLOGON>
+      <LIMITSTAFFLISTTOSTORE>0</LIMITSTAFFLISTTOSTORE>
+      <ALWAYSASKFORPASSWORD>0</ALWAYSASKFORPASSWORD>
+      <SYNCTRANSACTIONS>0</SYNCTRANSACTIONS>
+      <ISHOSPITALITYPROFILE>0</ISHOSPITALITYPROFILE>
+      <NUMPADENTRYSTARTSINDECIMALS>0</NUMPADENTRYSTARTSINDECIMALS>
+      <NUMPADAMOUNTOFDECIMALS>3</NUMPADAMOUNTOFDECIMALS>
+      <SAFEDROPUSESDENOMINATION>1</SAFEDROPUSESDENOMINATION>
+      <SAFEDROPREVUSESDENOMINATION>1</SAFEDROPREVUSESDENOMINATION>
+      <BANKDROPUSESDENOMINATION>1</BANKDROPUSESDENOMINATION>
+      <BANKDROPREVUSESDENOMINATION>1</BANKDROPREVUSESDENOMINATION>
+      <TENDERDECLUSESDENOMINATION>1</TENDERDECLUSESDENOMINATION>
+      <POLLINGINTERVAL>0</POLLINGINTERVAL>
+      <SKIPHOSPITALITYTABLEVIEW>0</SKIPHOSPITALITYTABLEVIEW>
+      <DISPLAYVOIDEDITEMS>1</DISPLAYVOIDEDITEMS>
+      <ALLOWCHANGESAFTERSPLITBILL>0</ALLOWCHANGESAFTERSPLITBILL>
+      <ALLOWIMAGEVIEWINITEMLOOKUP>0</ALLOWIMAGEVIEWINITEMLOOKUP>
+      <REMEMBERLISTIMAGESELECTION>0</REMEMBERLISTIMAGESELECTION>
+      <CLEARUSERBETWEENLOGINS>0</CLEARUSERBETWEENLOGINS>
+      <CLEARSETTING>0</CLEARSETTING>
+      <CLEARGRACEPERIOD>0</CLEARGRACEPERIOD>
+      <ALLOWSALEANDRETURNINSAMETX>0</ALLOWSALEANDRETURNINSAMETX>
+      <POSTTRANSACTIONDDJOB></POSTTRANSACTIONDDJOB>
+      <DDSCHEDULERLOCATION></DDSCHEDULERLOCATION>
+      <USESTARTOFDAY>false</USESTARTOFDAY>
+      <ZRPTINCLUDEFLOATINCASH>1</ZRPTINCLUDEFLOATINCASH>
+      <ZRPTCOMBINESALESRETURNS>1</ZRPTCOMBINESALESRETURNS>
+      <ZRPTINCLUDETENDERDECLARATION>0</ZRPTINCLUDETENDERDECLARATION>
+      <STARTOFTRANSACTIONINFOCODETYPE>0</STARTOFTRANSACTIONINFOCODETYPE>
+      <ZRPTDISPLAYRETURNINFO>1</ZRPTDISPLAYRETURNINFO>
+      <ZRPTDISPLAYSUSPENDED>1</ZRPTDISPLAYSUSPENDED>
+      <ZRPTDISPLAYOTHERINFO>1</ZRPTDISPLAYOTHERINFO>
+      <ZRPTGRANDTOTALAMTDISPLAY>0</ZRPTGRANDTOTALAMTDISPLAY>
+      <ZRPTSALESRPTAMTDISPLAY>0</ZRPTSALESRPTAMTDISPLAY>
+      <ZRPTCOMBINESALESREPORTSALESRETURNS>1</ZRPTCOMBINESALESREPORTSALESRETURNS>
+      <ZRPTDISPLAYDEPOSITINFO>1</ZRPTDISPLAYDEPOSITINFO>
+      <ZRPTDEPOSITORDERBY>0</ZRPTDEPOSITORDERBY>
+      <ZRPTREPORTWIDTH>55</ZRPTREPORTWIDTH>
+      <OMNISUSPENSIONTYPE>2ab00f9f-2644-4633-ab31-5ed105b9d528</OMNISUSPENSIONTYPE>
+      <OMNIPRINTINGSTATIONID></OMNIPRINTINGSTATIONID>
+      <CUSTOMERREQUIREDONRETURN>false</CUSTOMERREQUIREDONRETURN>
+      <OMNIITEMIMAGELOOKUPGROUP>488d1889-b22a-4d40-b8d8-82b9a082d02a</OMNIITEMIMAGELOOKUPGROUP>
+      <OPENDRAWER></OPENDRAWER>
+      <OMNIMAINMENU>MOBILE001</OMNIMAINMENU>
+      <SHOWPRICESBYDEFAULT>false</SHOWPRICESBYDEFAULT>
+      <ZRPTDISPLAYOVERSHORTAMOUNT>false</ZRPTDISPLAYOVERSHORTAMOUNT>
+      <ZRPTPRINTGRANDTOTALS>true</ZRPTPRINTGRANDTOTALS>
+      <DISPLAYVOIDEDPAYMENTS>true</DISPLAYVOIDEDPAYMENTS>
+      <SALESPERSONPROMPT>0</SALESPERSONPROMPT>
+      <OMNIENTERINGTYPE>0</OMNIENTERINGTYPE>
+      <OMNIQUANTITYMETHOD>0</OMNIQUANTITYMETHOD>
+      <OMNIDEFAULTQUANTITY>1</OMNIDEFAULTQUANTITY>
+      <LIMITATIONDISPLAYTYPE>0</LIMITATIONDISPLAYTYPE>
+      <DISPLAYLIMITATIONSTOTALSINPOS>0</DISPLAYLIMITATIONSTOTALSINPOS>
+    </POSFUNCTIONALITYPROFILE>
+    <POSHARDWAREPROFILE>
+      <PROFILEID>MOBILE1</PROFILEID>
+      <NAME>Mobile</NAME>
+      <FORMXPOS>0</FORMXPOS>
+      <FORMYPOS>0</FORMYPOS>
+      <SCREENKEYBOARD>0</SCREENKEYBOARD>
+      <DRAWERREMOTE>0</DRAWERREMOTE>
+      <DRAWERSTATUS>0</DRAWERSTATUS>
+      <DRAWER>0</DRAWER>
+      <DRAWERDEVICENAME></DRAWERDEVICENAME>
+      <DRAWEROPENTEXT></DRAWEROPENTEXT>
+      <DRAWERDESCRIPTION></DRAWERDESCRIPTION>
+      <DISPLAYBINCONVERSION>0</DISPLAYBINCONVERSION>
+      <DISPLAYDEVICE>0</DISPLAYDEVICE>
+      <DISPLAYDEVICENAME></DISPLAYDEVICENAME>
+      <DISPLAYDESCRIPTION></DISPLAYDESCRIPTION>
+      <DISPLAYREMOTE>0</DISPLAYREMOTE>
+      <DISPLAYTOTALTEXT></DISPLAYTOTALTEXT>
+      <DISPLAYBALANCETEXT></DISPLAYBALANCETEXT>
+      <DISPLAYCLOSEDLINE1></DISPLAYCLOSEDLINE1>
+      <DISPLAYCLOSEDLINE2></DISPLAYCLOSEDLINE2>
+      <DISPLAYCHARACTERSET>850</DISPLAYCHARACTERSET>
+      <DELAYFORLINKEDITEMS>0</DELAYFORLINKEDITEMS>
+      <SHOWPICTURE>0</SHOWPICTURE>
+      <MSR>0</MSR>
+      <MSRDEVICENAME></MSRDEVICENAME>
+      <MSRDESCRIPTION></MSRDESCRIPTION>
+      <MSRAUTODISABLE>0</MSRAUTODISABLE>
+      <MSRDISABLEEVENTS>0</MSRDISABLEEVENTS>
+      <MSRREMOTE>0</MSRREMOTE>
+      <ENTERREPEATSLASTITEM>0</ENTERREPEATSLASTITEM>
+      <LOGOALIGNMENT>0</LOGOALIGNMENT>
+      <LOGO>0</LOGO>
+      <STARTTRACK1></STARTTRACK1>
+      <SEPARATOR1></SEPARATOR1>
+      <ENDTRACK1></ENDTRACK1>
+      <STARTTRACK2AFTER>0</STARTTRACK2AFTER>
+      <ENDTRACK2></ENDTRACK2>
+      <NUMBEROFLINESONINVOICE>0</NUMBEROFLINESONINVOICE>
+      <PRINTDISCOUNTDETAIL>0</PRINTDISCOUNTDETAIL>
+      <PRINTERNORMAL></PRINTERNORMAL>
+      <PRINTER>0</PRINTER>
+      <PRINTERDEVICENAME></PRINTERDEVICENAME>
+      <PRINTERBOLD></PRINTERBOLD>
+      <PRINTERWIDE></PRINTERWIDE>
+      <PRINTERHIGH></PRINTERHIGH>
+      <PRINTERWIDEHIGH></PRINTERWIDEHIGH>
+      <PRINTERCHARACTERSET>850</PRINTERCHARACTERSET>
+      <PRINTERDESCRIPTION></PRINTERDESCRIPTION>
+      <PRINTERREMOTE>0</PRINTERREMOTE>
+      <PRINTERNETWORKHOST></PRINTERNETWORKHOST>
+      <PRINTERITALIC></PRINTERITALIC>
+      <DECIMALSINENTRY>0</DECIMALSINENTRY>
+      <PRINTERSHARING>0</PRINTERSHARING>
+      <MAXINVOICELINES>0</MAXINVOICELINES>
+      <PRINTBINARYCONVERSION>0</PRINTBINARYCONVERSION>
+      <HARDTOTAL>0</HARDTOTAL>
+      <HARDTOTALDEVICENAME></HARDTOTALDEVICENAME>
+      <HARDTOTALDESCRIPTION></HARDTOTALDESCRIPTION>
+      <HARDTOTALSREMOTE>0</HARDTOTALSREMOTE>
+      <KEYBOARD>0</KEYBOARD>
+      <KEYBOARDDEVICENAME></KEYBOARDDEVICENAME>
+      <KEYBOARDDESCRIPTION></KEYBOARDDESCRIPTION>
+      <KEYBOARDREMOTE>0</KEYBOARDREMOTE>
+      <TONEINDICATOR>0</TONEINDICATOR>
+      <TONEDEVICENAME></TONEDEVICENAME>
+      <TONEDESCRIPTION></TONEDESCRIPTION>
+      <TONEREMOTE>0</TONEREMOTE>
+      <TONE1PITCH>0</TONE1PITCH>
+      <TONE1VOLUME>0</TONE1VOLUME>
+      <TONE1DURATION>0</TONE1DURATION>
+      <TONE2PITCH>0</TONE2PITCH>
+      <TONE2VOLUME>0</TONE2VOLUME>
+      <TONE2DURATION>0</TONE2DURATION>
+      <INTERTONEWAIT>0</INTERTONEWAIT>
+      <SCANNER>0</SCANNER>
+      <SCANNERDEVICENAME></SCANNERDEVICENAME>
+      <SCANNERDESCRIPTION></SCANNERDESCRIPTION>
+      <SCANNERDISABLEEVENT>0</SCANNERDISABLEEVENT>
+      <SCANNERAUTODISABLE>0</SCANNERAUTODISABLE>
+      <SCANNERREMOTE>0</SCANNERREMOTE>
+      <SCALE>0</SCALE>
+      <SCALEDEVICENAME></SCALEDEVICENAME>
+      <SCALEDESCRIPTION></SCALEDESCRIPTION>
+      <SCALEREMOTE>0</SCALEREMOTE>
+      <TIMEOUTINSEC>0</TIMEOUTINSEC>
+      <MANUALINPUTALLOWED>0</MANUALINPUTALLOWED>
+      <KEYLOCK>0</KEYLOCK>
+      <KEYLOCKDEVICENAME></KEYLOCKDEVICENAME>
+      <KEYLOCKDESCRIPTION></KEYLOCKDESCRIPTION>
+      <KEYLOCKREMOTE>0</KEYLOCKREMOTE>
+      <KEYLOCKDISABLEEVENTS>0</KEYLOCKDISABLEEVENTS>
+      <NUMBEROFLFATRECEIPTEND>0</NUMBEROFLFATRECEIPTEND>
+      <NUMBEROFLFATINVOICETOP>0</NUMBEROFLFATINVOICETOP>
+      <DOCINSERTREMOVALTIMEOUT>0</DOCINSERTREMOVALTIMEOUT>
+      <LEFTMARGINONRECEIPT>0</LEFTMARGINONRECEIPT>
+      <EFT>0</EFT>
+      <EFTDESCRIPTION></EFTDESCRIPTION>
+      <EFTSERVERNAME></EFTSERVERNAME>
+      <EFTSERVERPORT>0</EFTSERVERPORT>
+      <EFTCOMPANYID></EFTCOMPANYID>
+      <EFTUSERID></EFTUSERID>
+      <EFTPASSWORD></EFTPASSWORD>
+      <CAPTUREEXTRADATA>0</CAPTUREEXTRADATA>
+      <MICR>0</MICR>
+      <MICRDRIVERNAME></MICRDRIVERNAME>
+      <MICRDESCRIPTION></MICRDESCRIPTION>
+      <MICRREMOTE>0</MICRREMOTE>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <FORECOURT>0</FORECOURT>
+      <HOSTNAME></HOSTNAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <CCTV>0</CCTV>
+      <CCTVPORT>0</CCTVPORT>
+      <CCTVHOSTNAME></CCTVHOSTNAME>
+      <CCTVCAMERA></CCTVCAMERA>
+      <FORECOURTAMOUNTDECPOINTPOSITION>0</FORECOURTAMOUNTDECPOINTPOSITION>
+      <FORECOURTPRICEDECPOINTPOSITION>0</FORECOURTPRICEDECPOINTPOSITION>
+      <FORECOURTVOLUMETDECPOINTPOSITION>0</FORECOURTVOLUMETDECPOINTPOSITION>
+      <FORECOURTONEACTIVE>0</FORECOURTONEACTIVE>
+      <FORECOURTONEFREQUENCY>0</FORECOURTONEFREQUENCY>
+      <FORECOURTONELENGTH>0</FORECOURTONELENGTH>
+      <FORECOURTONEREPEATS>0</FORECOURTONEREPEATS>
+      <PHARMACY>0</PHARMACY>
+      <PHARMACYHOST>0</PHARMACYHOST>
+      <EFTBATCHINCREMENTATEOS>0</EFTBATCHINCREMENTATEOS>
+      <RFIDSCANNERTYPE>0</RFIDSCANNERTYPE>
+      <RFIDDEVICENAME></RFIDDEVICENAME>
+      <RFIDDESCRIPTION></RFIDDESCRIPTION>
+      <DUALDISPLAY>0</DUALDISPLAY>
+      <DUALDISPLAYDEVICENAME>127.0.0.1</DUALDISPLAYDEVICENAME>
+      <DUALDISPLAYDESCRIPTION></DUALDISPLAYDESCRIPTION>
+      <DUALDISPLAYTYPE>0</DUALDISPLAYTYPE>
+      <DUALDISPLAYPORT>1250</DUALDISPLAYPORT>
+      <DUALDISPLAYRECEIPTPERCENTAGE>50.000000000000</DUALDISPLAYRECEIPTPERCENTAGE>
+      <DUALDISPLAYIMAGEPATH></DUALDISPLAYIMAGEPATH>
+      <DUALDISPLAYIMAGEINTERVAL>1</DUALDISPLAYIMAGEINTERVAL>
+      <DUALDISPLAYBROWSERURL></DUALDISPLAYBROWSERURL>
+      <CASHCHANGER>0</CASHCHANGER>
+      <CASHCHANGERPORTSETTINGS></CASHCHANGERPORTSETTINGS>
+      <CASHCHANGERINITSETTINGS></CASHCHANGERINITSETTINGS>
+      <FORECOURTMANAGER>0</FORECOURTMANAGER>
+      <FORECOURTMANAGERHOSTNAME></FORECOURTMANAGERHOSTNAME>
+      <FORECOURTMANAGERPORT></FORECOURTMANAGERPORT>
+      <FORECOURTMANAGERPOSPORT></FORECOURTMANAGERPOSPORT>
+      <FORECOURTMANAGERScreenHeightPercentage>0.000000000000</FORECOURTMANAGERScreenHeightPercentage>
+      <FORECOURTMANAGERControllerHostName></FORECOURTMANAGERControllerHostName>
+      <FORECOURTMANAGERLogLevel>0</FORECOURTMANAGERLogLevel>
+      <FORECOURTMANAGERImplFileName></FORECOURTMANAGERImplFileName>
+      <FORECOURTMANAGERImplFileType></FORECOURTMANAGERImplFileType>
+      <FORECOURTMANAGERScreenExtHeightPercentage>0.000000000000</FORECOURTMANAGERScreenExtHeightPercentage>
+      <FORECOURTMANAGERVolumeUnit></FORECOURTMANAGERVolumeUnit>
+      <FORECOURTMANAGERCallingSound>0</FORECOURTMANAGERCallingSound>
+      <FORECOURTMANAGERCallingBlink>0</FORECOURTMANAGERCallingBlink>
+      <FORECOURTMANAGERFuellingPointColumns>0</FORECOURTMANAGERFuellingPointColumns>
+      <FISCALPRINTER>0</FISCALPRINTER>
+      <FISCALPRINTERCONNECTION></FISCALPRINTERCONNECTION>
+      <FISCALPRINTERDESCRIPTION></FISCALPRINTERDESCRIPTION>
+      <USEKITCHENDISPLAY>0</USEKITCHENDISPLAY>
+      <DUALDISPLAYSCREENNUMBER>0</DUALDISPLAYSCREENNUMBER>
+      <DALLASKEYCONNECTED>0</DALLASKEYCONNECTED>
+      <DALLASMESSAGEPREFIX></DALLASMESSAGEPREFIX>
+      <DALLASKEYREMOVEDMESSAGE></DALLASKEYREMOVEDMESSAGE>
+      <DALLASCOMPORT></DALLASCOMPORT>
+      <DALLASBAUDRATE>9600</DALLASBAUDRATE>
+      <DALLASPARITY>0</DALLASPARITY>
+      <DALLASSTOPBITS>1</DALLASSTOPBITS>
+      <DALLASDATABITS>8</DALLASDATABITS>
+      <EFTMERCHANTACCOUNT></EFTMERCHANTACCOUNT>
+      <EFTMERCHANTKEY></EFTMERCHANTKEY>
+      <EFTCUSTOMFIELD1></EFTCUSTOMFIELD1>
+      <EFTCUSTOMFIELD2></EFTCUSTOMFIELD2>
+      <DISPLAYBINARYCONVERSION>0</DISPLAYBINARYCONVERSION>
+      <PRINTEREXTRALINES>0</PRINTEREXTRALINES>
+      <WINPRINT_LEFTMARGIN>45</WINPRINT_LEFTMARGIN>
+      <WINPRINT_RIGHTMARGIN>5</WINPRINT_RIGHTMARGIN>
+      <WINPRINT_FONTSIZE>3</WINPRINT_FONTSIZE>
+      <WINPRINT_PRINTDESIGNBOXES>0</WINPRINT_PRINTDESIGNBOXES>
+      <WINPRINT_FOLDERLOCATION>C:\ProgramData\LS Retail\LS One POS\</WINPRINT_FOLDERLOCATION>
+      <WINPRINT_TOPMARGIN>5</WINPRINT_TOPMARGIN>
+      <WINPRINT_BOTTOMMARGIN>60</WINPRINT_BOTTOMMARGIN>
+      <STATIONPRINTINGHOSTID></STATIONPRINTINGHOSTID>
+    </POSHARDWAREPROFILE>
+    <POSISSUSPENSIONTYPE>
+      <ID>2ab00f9f-2644-4633-ab31-5ed105b9d528</ID>
+      <DESCRIPTION>Mobile</DESCRIPTION>
+      <ALLOWEOD>0</ALLOWEOD>
+      <DATAAREAID>LSR</DATAAREAID>
+    </POSISSUSPENSIONTYPE>
+    <POSMENUHEADER>
+      <MENUID>MOBILE001</MENUID>
+      <DESCRIPTION>Inventory menu</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>7</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>30f51c6b-418b-4c04-ba8c-1afbeba3c6c6</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>true</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE002</MENUID>
+      <DESCRIPTION>Utilities</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>5</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>f0a67776-a5de-4b96-b6de-5a3a8e4fdf99</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE003</MENUID>
+      <DESCRIPTION>Lookups</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>3</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>c8084700-c1ca-4b7c-9af4-c44673309eff</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE004</MENUID>
+      <DESCRIPTION>Goods receiving</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>2</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>be0f5342-31ea-4a66-94be-5496f707ea60</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE005</MENUID>
+      <DESCRIPTION>Purchasing</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>2</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>0</DEFAULTOPERATION>
+      <GUID>9c262868-10cf-4c52-bdd5-6f66f68d1944</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE006</MENUID>
+      <DESCRIPTION>Store transfers</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>3</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>1500</DEFAULTOPERATION>
+      <GUID>e778ffaf-7971-4080-be76-94479773674d</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENUHEADER>
+      <MENUID>MOBILE007</MENUID>
+      <DESCRIPTION>Unsent changes</DESCRIPTION>
+      <COLUMNS>1</COLUMNS>
+      <ROWS>2</ROWS>
+      <MENUCOLOR>0</MENUCOLOR>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <USENAVOPERATION>0</USENAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <APPLIESTO>0</APPLIESTO>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <MENUTYPE>1</MENUTYPE>
+      <STYLEID></STYLEID>
+      <DEFAULTOPERATION>1500</DEFAULTOPERATION>
+      <GUID>3a3d180b-375b-498d-9b93-9cb9df0f3ca8</GUID>
+      <DEVICETYPE>1</DEVICETYPE>
+      <MAINMENU>false</MAINMENU>
+    </POSMENUHEADER>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000001</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Utilities</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE002</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-16744448</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>0</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>0</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>0</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>0</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>0</GLYPHOFFSET>
+      <GLYPH2OFFSET>0</GLYPH2OFFSET>
+      <GLYPH3OFFSET>0</GLYPH3OFFSET>
+      <GLYPH4OFFSET>0</GLYPH4OFFSET>
+      <BACKCOLOR2>-16711872</BACKCOLOR2>
+      <GRADIENTMODE>2</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000002</SEQUENCE>
+      <KEYNO>6</KEYNO>
+      <DESCRIPTION>Store transfers</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE006</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000008</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Stock counting</DESCRIPTION>
+      <OPERATION>2107</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-13154481</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000032</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Lookups</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE003</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000035</SEQUENCE>
+      <KEYNO>7</KEYNO>
+      <DESCRIPTION>Unsent changes</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE007</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000036</SEQUENCE>
+      <KEYNO>5</KEYNO>
+      <DESCRIPTION>Goods receiving</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE004</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE001</MENUID>
+      <SEQUENCE>0000038</SEQUENCE>
+      <KEYNO>4</KEYNO>
+      <DESCRIPTION>Purchasing</DESCRIPTION>
+      <OPERATION>1500</OPERATION>
+      <PARAMETER>MOBILE005</PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE002</MENUID>
+      <SEQUENCE>0000003</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Change store</DESCRIPTION>
+      <OPERATION>2100</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-16744320</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-16711872</BACKCOLOR2>
+      <GRADIENTMODE>2</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE002</MENUID>
+      <SEQUENCE>0000052</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Update master data</DESCRIPTION>
+      <OPERATION>2101</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE002</MENUID>
+      <SEQUENCE>0000055</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Full master data update</DESCRIPTION>
+      <OPERATION>2102</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE002</MENUID>
+      <SEQUENCE>0000100</SEQUENCE>
+      <KEYNO>4</KEYNO>
+      <DESCRIPTION>Customer / vendor full update</DESCRIPTION>
+      <OPERATION>2103</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE002</MENUID>
+      <SEQUENCE>0000145</SEQUENCE>
+      <KEYNO>5</KEYNO>
+      <DESCRIPTION>Who am I</DESCRIPTION>
+      <OPERATION>2117</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE003</MENUID>
+      <SEQUENCE>0000059</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Item lookup</DESCRIPTION>
+      <OPERATION>2104</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>8</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-65536</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <PICTUREFILE></PICTUREFILE>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-128</BACKCOLOR2>
+      <GRADIENTMODE>4</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE003</MENUID>
+      <SEQUENCE>0000105</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Customer lookup</DESCRIPTION>
+      <OPERATION>2105</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE003</MENUID>
+      <SEQUENCE>0000124</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Vendor lookup</DESCRIPTION>
+      <OPERATION>2106</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME></FONTNAME>
+      <FONTSIZE>0</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE004</MENUID>
+      <SEQUENCE>0000125</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Receive goods</DESCRIPTION>
+      <OPERATION>2108</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE004</MENUID>
+      <SEQUENCE>0000137</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Post goods receiving</DESCRIPTION>
+      <OPERATION>2109</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE005</MENUID>
+      <SEQUENCE>0000051</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Post purchase worksheet</DESCRIPTION>
+      <OPERATION>2112</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE005</MENUID>
+      <SEQUENCE>0000138</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Purchase worksheet</DESCRIPTION>
+      <OPERATION>2110</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE006</MENUID>
+      <SEQUENCE>0000005</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Send orders</DESCRIPTION>
+      <OPERATION>2116</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE006</MENUID>
+      <SEQUENCE>0000006</SEQUENCE>
+      <KEYNO>3</KEYNO>
+      <DESCRIPTION>Receive orders</DESCRIPTION>
+      <OPERATION>2115</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Tahoma</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE006</MENUID>
+      <SEQUENCE>0000009</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Create transfer order</DESCRIPTION>
+      <OPERATION>2119</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE007</MENUID>
+      <SEQUENCE>0000004</SEQUENCE>
+      <KEYNO>1</KEYNO>
+      <DESCRIPTION>Documents</DESCRIPTION>
+      <OPERATION>2114</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSMENULINE>
+      <MENUID>MOBILE007</MENUID>
+      <SEQUENCE>0000007</SEQUENCE>
+      <KEYNO>2</KEYNO>
+      <DESCRIPTION>Templates</DESCRIPTION>
+      <OPERATION>2113</OPERATION>
+      <PARAMETER></PARAMETER>
+      <PARAMETERTYPE>0</PARAMETERTYPE>
+      <FONTNAME>Calibri</FONTNAME>
+      <FONTSIZE>14</FONTSIZE>
+      <FONTBOLD>0</FONTBOLD>
+      <FORECOLOR>-16777216</FORECOLOR>
+      <BACKCOLOR>-1</BACKCOLOR>
+      <FONTITALIC>0</FONTITALIC>
+      <FONTCHARSET>0</FONTCHARSET>
+      <DISABLED>0</DISABLED>
+      <HIDEDESCRONPICTURE>0</HIDEDESCRONPICTURE>
+      <FONTSTRIKETHROUGH>0</FONTSTRIKETHROUGH>
+      <FONTUNDERLINE>0</FONTUNDERLINE>
+      <COLUMNSPAN>1</COLUMNSPAN>
+      <ROWSPAN>1</ROWSPAN>
+      <NAVOPERATION></NAVOPERATION>
+      <DATAAREAID>LSR</DATAAREAID>
+      <HIDDEN>0</HIDDEN>
+      <SHADEWHENDISABLED>0</SHADEWHENDISABLED>
+      <BACKGROUNDHIDDEN>0</BACKGROUNDHIDDEN>
+      <TRANSPARENT>0</TRANSPARENT>
+      <GLYPH>0</GLYPH>
+      <GLYPH2>0</GLYPH2>
+      <GLYPH3>0</GLYPH3>
+      <GLYPH4>0</GLYPH4>
+      <GLYPHTEXT></GLYPHTEXT>
+      <GLYPHTEXT2></GLYPHTEXT2>
+      <GLYPHTEXT3></GLYPHTEXT3>
+      <GLYPHTEXT4></GLYPHTEXT4>
+      <GLYPHTEXTFONT></GLYPHTEXTFONT>
+      <GLYPHTEXT2FONT></GLYPHTEXT2FONT>
+      <GLYPHTEXT3FONT></GLYPHTEXT3FONT>
+      <GLYPHTEXT4FONT></GLYPHTEXT4FONT>
+      <GLYPHTEXTFONTSIZE>5</GLYPHTEXTFONTSIZE>
+      <GLYPHTEXT2FONTSIZE>5</GLYPHTEXT2FONTSIZE>
+      <GLYPHTEXT3FONTSIZE>5</GLYPHTEXT3FONTSIZE>
+      <GLYPHTEXT4FONTSIZE>5</GLYPHTEXT4FONTSIZE>
+      <GLYPHTEXTFORECOLOR>-16777216</GLYPHTEXTFORECOLOR>
+      <GLYPHTEXT2FORECOLOR>-16777216</GLYPHTEXT2FORECOLOR>
+      <GLYPHTEXT3FORECOLOR>-16777216</GLYPHTEXT3FORECOLOR>
+      <GLYPHTEXT4FORECOLOR>-16777216</GLYPHTEXT4FORECOLOR>
+      <GLYPHOFFSET>1</GLYPHOFFSET>
+      <GLYPH2OFFSET>1</GLYPH2OFFSET>
+      <GLYPH3OFFSET>1</GLYPH3OFFSET>
+      <GLYPH4OFFSET>1</GLYPH4OFFSET>
+      <BACKCOLOR2>-1</BACKCOLOR2>
+      <GRADIENTMODE>0</GRADIENTMODE>
+      <SHAPE>0</SHAPE>
+      <USEHEADERFONT>1</USEHEADERFONT>
+      <USEHEADERATTRIBUTES>1</USEHEADERATTRIBUTES>
+      <IMAGEPOSITION>0</IMAGEPOSITION>
+      <STYLEID></STYLEID>
+      <KEYMAPPING>0</KEYMAPPING>
+      <PICTUREID></PICTUREID>
+    </POSMENULINE>
+    <POSVISUALPROFILE>
+      <PROFILEID>MOBILE1</PROFILEID>
+      <NAME>Mobile</NAME>
+      <STARTMENU></STARTMENU>
+      <SALESMENU></SALESMENU>
+      <PAYMENTMENU></PAYMENTMENU>
+      <TENDEROPERATIONMENU></TENDEROPERATIONMENU>
+      <NEGATIVEADJUSTMENTMENU></NEGATIVEADJUSTMENTMENU>
+      <PHYSICALINVENTORYMENU></PHYSICALINVENTORYMENU>
+      <NORMALCOLOR></NORMALCOLOR>
+      <VOIDEDCOLOR></VOIDEDCOLOR>
+      <MULTIBUYCOLOR></MULTIBUYCOLOR>
+      <MIXANDMATCHCOLOR></MIXANDMATCHCOLOR>
+      <TOTALDISCOUNTCOLOR></TOTALDISCOUNTCOLOR>
+      <INCOMEEXPENSECOLOR></INCOMEEXPENSECOLOR>
+      <COUPONLINECOLOR></COUPONLINECOLOR>
+      <LINESELECTCOLOR></LINESELECTCOLOR>
+      <FREETEXTCOLOR></FREETEXTCOLOR>
+      <HIDETITLEBAR>0</HIDETITLEBAR>
+      <HIDEMENU>0</HIDEMENU>
+      <HIDECURSOR>0</HIDECURSOR>
+      <HIDENUMBERCOLUMN>0</HIDENUMBERCOLUMN>
+      <HIDEDISCPCTCOLUMN>0</HIDEDISCPCTCOLUMN>
+      <DIALOGBOXONERROR>0</DIALOGBOXONERROR>
+      <SHOWTOPMENU>0</SHOWTOPMENU>
+      <TABLEMENU></TABLEMENU>
+      <HIDEGUESTCOLUMN>0</HIDEGUESTCOLUMN>
+      <TOPLINEMENU></TOPLINEMENU>
+      <JOURNALMENU></JOURNALMENU>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <RESOLUTION>0</RESOLUTION>
+      <TERMINALTYPE>0</TERMINALTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <DESIGNALLOWEDONPOS>0</DESIGNALLOWEDONPOS>
+      <OPAQUEBACKGROUNDFORM>0</OPAQUEBACKGROUNDFORM>
+      <OPACITY>0.000000000000</OPACITY>
+      <USEFORMBACKGROUNDIMAGE>0</USEFORMBACKGROUNDIMAGE>
+      <SCREENINDEX>0</SCREENINDEX>
+      <SHOWCURRENCYSYMBOLONCOLUMNS>0</SHOWCURRENCYSYMBOLONCOLUMNS>
+      <RECEIPTPAYMENTLINESSIZE>30</RECEIPTPAYMENTLINESSIZE>
+    </POSVISUALPROFILE>
+    <RBOTERMINALTABLE>
+      <TERMINALID>MOBILE1</TERMINALID>
+      <NAME>Mobile</NAME>
+      <STOREID>S0001</STOREID>
+      <LOCATION></LOCATION>
+      <STATEMENTMETHOD>0</STATEMENTMETHOD>
+      <TERMINALSTATEMENT>0</TERMINALSTATEMENT>
+      <NOTACTIVE>0</NOTACTIVE>
+      <CLOSINGSTATUS>0</CLOSINGSTATUS>
+      <DISPLAYTERMINALCLOSED>0</DISPLAYTERMINALCLOSED>
+      <DISPLAYLINKEDITEM>0</DISPLAYLINKEDITEM>
+      <MANAGERKEYONRETURN>0</MANAGERKEYONRETURN>
+      <SLIPIFRETURN>0</SLIPIFRETURN>
+      <OPENDRAWERATLILO>0</OPENDRAWERATLILO>
+      <ONLYTOTALINSUSPENDEDTRANS20015>0</ONLYTOTALINSUSPENDEDTRANS20015>
+      <EXITAFTEREACHTRANSACTION>0</EXITAFTEREACHTRANSACTION>
+      <AUTOLOGOFFTIMEOUT>0</AUTOLOGOFFTIMEOUT>
+      <RETURNINTRANSACTION>0</RETURNINTRANSACTION>
+      <ITEMIDONRECEIPT>0</ITEMIDONRECEIPT>
+      <EFTSTOREID></EFTSTOREID>
+      <EFTTERMINALID></EFTTERMINALID>
+      <MAXRECEIPTTEXTLENGTH>0</MAXRECEIPTTEXTLENGTH>
+      <NUMBEROFTOPBOTTOMLINES>0</NUMBEROFTOPBOTTOMLINES>
+      <RECEIPTSETUPLOCATION>0</RECEIPTSETUPLOCATION>
+      <MAXDISPLAYTEXTLENGTH>0</MAXDISPLAYTEXTLENGTH>
+      <CUSTOMERDISPLAYTEXT1></CUSTOMERDISPLAYTEXT1>
+      <CUSTOMERDISPLAYTEXT2></CUSTOMERDISPLAYTEXT2>
+      <HARDWAREPROFILE>MOBILE1</HARDWAREPROFILE>
+      <VISUALPROFILE>MOBILE1</VISUALPROFILE>
+      <PRINTVATREFUNDCHECKS>0</PRINTVATREFUNDCHECKS>
+      <RECEIPTPRINTINGDEFAULTOFF>0</RECEIPTPRINTINGDEFAULTOFF>
+      <RECEIPTBARCODE>0</RECEIPTBARCODE>
+      <LASTZREPORTID></LASTZREPORTID>
+      <LAYOUTID></LAYOUTID>
+      <UPDATESERVICEPORT>0</UPDATESERVICEPORT>
+      <IPADDRESS></IPADDRESS>
+      <MODIFIEDDATE>1900-01-01T00:00:00+00:00</MODIFIEDDATE>
+      <MODIFIEDTIME>0</MODIFIEDTIME>
+      <MODIFIEDBY>?</MODIFIEDBY>
+      <DATAAREAID>LSR</DATAAREAID>
+      <FUNCTIONALITYPROFILE>00000002</FUNCTIONALITYPROFILE>
+      <RECEIPTIDNUMBERSEQUENCE></RECEIPTIDNUMBERSEQUENCE>
+      <STANDALONE>0</STANDALONE>
+      <TRANSACTIONIDNUMBERSEQUENCE></TRANSACTIONIDNUMBERSEQUENCE>
+      <TRANSACTIONSERVICEPROFILE></TRANSACTIONSERVICEPROFILE>
+      <DatabaseName></DatabaseName>
+      <DatabaseServer></DatabaseServer>
+      <DatabaseUserName></DatabaseUserName>
+      <DatabasePassword></DatabasePassword>
+      <SALESTYPEFILTER></SALESTYPEFILTER>
+      <AUTOLOCKTERMINALTIMEOUT>0</AUTOLOCKTERMINALTIMEOUT>
+      <SUSPENDALLOWEOD>0</SUSPENDALLOWEOD>
+      <HOSPTRANSSTORESERVERPROFILE></HOSPTRANSSTORESERVERPROFILE>
+      <KITCHENMANAGERPROFILEID>00000000-0000-0000-0000-000000000000</KITCHENMANAGERPROFILEID>
+      <EFTCUSTOMFIELD1></EFTCUSTOMFIELD1>
+      <EFTCUSTOMFIELD2></EFTCUSTOMFIELD2>
+      <FORMINFOFIELD1></FORMINFOFIELD1>
+      <FORMINFOFIELD2></FORMINFOFIELD2>
+      <FORMINFOFIELD3></FORMINFOFIELD3>
+      <FORMINFOFIELD4></FORMINFOFIELD4>
+      <SWITCHUSERWHENENTERINGPOS>0</SWITCHUSERWHENENTERINGPOS>
+      <StatementPosting>0</StatementPosting>
+      <INCLUDEINSTATEMENT>false</INCLUDEINSTATEMENT>
+      <ACTIVATED>false</ACTIVATED>
+      <LASTACTIVATEDDATE>1900-01-01T00:00:00+00:00</LASTACTIVATEDDATE>
+    </RBOTERMINALTABLE>
+    <SPECIALGROUP>
+      <GROUPID>MOBILE1</GROUPID>
+      <NAME>Mobile Image Lookup</NAME>
+      <DELETED>false</DELETED>
+      <MASTERID>488d1889-b22a-4d40-b8d8-82b9a082d02a</MASTERID>
+    </SPECIALGROUP>
+  </NewDataSet>
+</root>

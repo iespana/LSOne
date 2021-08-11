@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2015.1|Release Notes 2015.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>LS One POS Improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2015_1/2015_1POS.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>LS One POS Improvements</h1>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />​Customer</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1">​If a customer has an "Invoice customer" the blocked properties from the invoice customer are now used when paying with customer account in the POS. I.e. if the invoice customer is blocked you can not use the first customer account as tender.​</li>
+                    <li value="2">Error when adding blocked customer to transaction has been fixed. Customers that have been blocked can not be added to transaction.</li>
+                    <li value="3">When scanning in a customer barcode into the POS if parsing the barcode mask does not find the customer the customer card information is also searched. This means that a full barcode string can be attached to a customer through the Customer card option in Site Manager.​</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Gift card</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1">User was able to sell the same gift card twice in the same transaction. This has now been prevented and a message is displayed that tells the user that the gift card in question has already been added to the transaction.</li>
+                    <li value="2">If gift card is used as change with the gift card option: ID an ID must always be entered at the POS when a new gift card is issued. If the ID entered when new gift card is created as change a new gift card is created with the ID and the amount to be payed to the customer. Before an error was displayed if gift card was used as change with the ID option.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Hospitality</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1"><a name="kanchor285"></a>We fixed a tax group mix up which happened when same item is sold on two different hospitality types with different tax groups in subsequent order.</li>
+                    <li value="2">​Background color of locked table on hospitality table view has changed from white to blue.</li>
+                    <li value="3">When LS One POS is run in hospitality mode it has the option to set a Site service profile for Store and Head office. When two Site service profiles are set; only the table management uses the Store Site service, which should be run locally on the Store, but all other centralized functions selected in the Head office profile go through the Head office site service. This functionality was not working perfectly and has been fixed.</li>
+                    <li value="4">When POS was started in hospitality mode with table layout and then the user logged out without entering the POS an error was displayed. This has now been fixed.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />License activation</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1">More information is now collected when license is activated for LS One In-a-Box. User is asked to enter information such as Company, contact and business type. The user is also asked to read and agree to the LS Retail software license terms.</li>
+                    <li value="2">If the windows user does not have write access to the Program Data folder on the POS machine being used, the POS now displays an error message before trying to activate license. Write access is needed to finalize activation of license on the machine and needs to be fixed before continuing.​</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Receipt printing</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>A new operation has been added to LS One POS. The operation is called 'Reprint receipt' and it can be configured to print four different types for receipts. Gift receipt, receipt copy, tax free receipt and a custom receipt implemented by partner. This operation prints receipts of the selected type for the last transaction.</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Return payment</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p>POS will now accept multiple payments and tenders when items and transactions are being returned. Payment types can be excluded from being used in returns by setting a configuration in "Allowed payment types".</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Other Bugfixes</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1">Offline_EFT_Dropdown.dll for offline card handling is no longer hardcoded to use payment type with ID = 3. But uses the payment type associated with the 'Pay card' operation in POS.​​</li>
+                    <li value="2">Fixed bug that caused the OPOS scanner to stop working after a price check had been performed on the POS.​</li>
+                </ul>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

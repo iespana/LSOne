@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2017">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Development changes and improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017/DevelopmentNotes2017.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Development changes and improvements</h1>
+        <h2>Printing service</h2>
+        <p>The Printing service has been reviewed and cleaned up. All Print functions now call a DoPrinting function that takes as a parameter 3 printing functions; Windows printing, Slip printing and Receipt printing. This means that all receipts can now be printed in all three ways. Previously the majority of the printing functions had all three types of printing but not all of them. </p>
+        <p>All hardcoded printouts i.e. printouts that do not have a form type and cannot be designed in the receipt designer have been moved to a separate code unit called PrintingService.CodedReceipts.cs </p>
+        <p>Barcode handling for barcodes that should be printed on the receipt has also been updated. Now a list of barcodes can be send into the printing functions and all of them will be printed. See BarcodePrintInfo business object.</p>
+        <p>All constants for the Printing service have also been moved to a separate code unit;&#160;PrintingService.Constants.cs. </p>
+        <h2>Windows printing</h2>
+        <p>The Virtual printer has been retired and now the only options for printing are Windows printing or OPOS. To test receipts during development, the hardware profile can be set to Windows printer and any image editor that can be used as a printer can be used such as Snagit.</p>
+        <p>A component called WinPrinter that LS&#160;Retail NAV has been using is now used for the Windows printing and to create the attachments for <a href="ReceiptImprovements.htm">emailing the receipts</a>. PrintingService.CreateWinPrintReceipt.cs code unit takes care of creating that receipt.</p>
+        <h2><a name="kanchor320"></a>Item hierarchy changes</h2>
+        <p>All references to upper hierarchy has now been removed from the item table . Now the RetailItem table only has a reference to the Retail group. The previous way the item hierarchy was saved to the item table in it's entirety made maintenance of the hierarchy very difficult and also make importing item and hierarchy information from a 3rd party system more difficult.</p>
+        <div class="Warning">
+            <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note">Please note that as these fields were only added in the last release, these fields have now been removed from the RetailItem table to minimize the confusion for ERP&#160;integrations.</p>
+        </div>
+        <h2>Translations</h2>
+        <p>The .bsl files have been updated and all namespaces should not be correct if a partner decides to do their own translations and/or build language dll's.</p>
+        <p>All translations that LS&#160;Retail maintains for <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> have been updated. Any texts that were added after those translations were updated will in some cases be in English but those texts will be translated in the next release.</p>
+        <h2>Other improvements</h2>
+        <p>In very limited scenarios the replication actions were being created using the "readable ID" instead of the actual primary key ID&#160;within the table. This issue has now been fixed. This issue only affected tables that have both a MasterID (a guid)&#160;and a readable ID (nvarchar(20))</p>
+        <p>NA is no longer the default item type when an item is created and now it is not possible to create items of that type.</p>
+        <p>Fields in table RboTransactionEFTInfo adjusted to conform with other transaction table. F.ex. terminal ID&#160;and store ID&#160;fields allowed less number of characters than the other transaction tables</p>
+        <p>Operations Customer transactions, Customer transactions report and Customer balance report has been set as non-user operations and cannot be selected on a button. These operations will be updated to use the <span class="MyVariablesSite Service">Site Service</span> to retrieve the information in a future release.</p>
+        <p>Field POSMENULINE.PARAMETER has been changed to be nvarchar(500) from being nvarchar(50)</p>
+        <p>A differential report from the last development pack will be available under Documents in the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> 2017 development pack. A differential report between versions 2016 and 2016.1 development packs was added to the 2016.1 development pack after its release.</p>
+        <p>If the POS&#160;detects that an unconcluded transaction was in the POS&#160;when it was last stopped, and an error comes up when trying to recreate the transaction the transaction is not recreated and no errors are displayed.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

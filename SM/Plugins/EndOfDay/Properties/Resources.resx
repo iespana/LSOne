@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EOD" xml:space="preserve">
+    <value>End of day</value>
+    <comment>[Term:14599]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Symbol_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Symbol Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>[Term:3792]</comment>
+  </data>
+  <data name="Amounts" xml:space="preserve">
+    <value>Amounts</value>
+    <comment>[Term:8931]</comment>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+    <comment>[Term:2649]</comment>
+  </data>
+  <data name="CurrencyAmount" xml:space="preserve">
+    <value>Currency amount</value>
+    <comment>[Term:14624]</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:2403]</comment>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+    <comment>[Term:2922]</comment>
+  </data>
+  <data name="FinancialReport" xml:space="preserve">
+    <value>Financial report</value>
+    <comment>[Term:14610]</comment>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+    <comment>[Term:419]</comment>
+  </data>
+  <data name="LineDiscount" xml:space="preserve">
+    <value>Line discount</value>
+    <comment>[Term:2923]</comment>
+  </data>
+  <data name="NegativeTransactions" xml:space="preserve">
+    <value>Negative transactions</value>
+    <comment>[Term:14613]</comment>
+  </data>
+  <data name="NosaleActions" xml:space="preserve">
+    <value>No sale actions</value>
+    <comment>[Term:14612]</comment>
+  </data>
+  <data name="NumberOfCustomers" xml:space="preserve">
+    <value>Number of customers</value>
+    <comment>[Term:11608]</comment>
+  </data>
+  <data name="NumberOfItems" xml:space="preserve">
+    <value>Number of items</value>
+    <comment>[Term:9328]</comment>
+  </data>
+  <data name="NumberOfUnits" xml:space="preserve">
+    <value>Number of units</value>
+    <comment>[Term:14598]</comment>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+    <comment>[Term:2425]</comment>
+  </data>
+  <data name="PaymentTotals" xml:space="preserve">
+    <value>Payment totals</value>
+    <comment>[Term:14611]</comment>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+    <comment>[Term:2947]</comment>
+  </data>
+  <data name="Ratio" xml:space="preserve">
+    <value>Ratio</value>
+    <comment>[Term:3219]</comment>
+  </data>
+  <data name="ScannedItems" xml:space="preserve">
+    <value>Scanned items</value>
+    <comment>[Term:14620]</comment>
+  </data>
+  <data name="ScannerUsage" xml:space="preserve">
+    <value>Scanner usage</value>
+    <comment>[Term:14621]</comment>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+    <comment>[Term:2560]</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+    <comment>[Term:2930]</comment>
+  </data>
+  <data name="TotalAmountEntered" xml:space="preserve">
+    <value>Total amount entered</value>
+    <comment>[Term:14618]</comment>
+  </data>
+  <data name="TotalDiscount" xml:space="preserve">
+    <value>Total discount</value>
+    <comment>[Term:2924]</comment>
+  </data>
+  <data name="Totals" xml:space="preserve">
+    <value>Totals</value>
+    <comment>[Term:11519]</comment>
+  </data>
+  <data name="TurnoverDuringTheDay" xml:space="preserve">
+    <value>Turnover during the day</value>
+    <comment>[Term:14606]</comment>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>VAT</value>
+    <comment>[Term:7285]</comment>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Retail</value>
+    <comment>[Term:3311]</comment>
+  </data>
+  <data name="StatementSettings" xml:space="preserve">
+    <value>Statement settings</value>
+    <comment>[Term:14841]</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="DeleteStatement" xml:space="preserve">
+    <value>Delete statement</value>
+    <comment>[Term:14840]</comment>
+  </data>
+  <data name="DeleteStatementQuestion" xml:space="preserve">
+    <value>Are you sure you would like to delete the selected statement ? Note that all statement lines attached to it will be deleted.</value>
+    <comment>[Term:14836]</comment>
+  </data>
+  <data name="Statements" xml:space="preserve">
+    <value>Statements</value>
+    <comment>[Term:11065]</comment>
+  </data>
+  <data name="StatementLines" xml:space="preserve">
+    <value>Statement lines</value>
+    <comment>[Term:9319]</comment>
+  </data>
+  <data name="PostedStatements" xml:space="preserve">
+    <value>Posted statements</value>
+    <comment>[Term:14926]</comment>
+  </data>
+  <data name="PostedStatementsDescription" xml:space="preserve">
+    <value>Use this option to manage posted statements</value>
+    <comment>[Term:14937]</comment>
+  </data>
+  <data name="UnpostedStatements" xml:space="preserve">
+    <value>Unposted statements</value>
+    <comment>[Term:14856]</comment>
+  </data>
+  <data name="UnpostedStatementsDescription" xml:space="preserve">
+    <value>Use this option to manage unposted statements</value>
+    <comment>[Term:14938]</comment>
+  </data>
+  <data name="StatementCountingDifferenceQuestion" xml:space="preserve">
+    <value>The counted difference of this statement is higher than the limit set by the store. Do you still want to post the statement ?</value>
+    <comment>[Term:14933]</comment>
+  </data>
+  <data name="EnterCountingFor" xml:space="preserve">
+    <value>Enter counting results for</value>
+    <comment>[Term:14920]</comment>
+  </data>
+  <data name="NothingCountedYet" xml:space="preserve">
+    <value>Nothing has been counted yet</value>
+    <comment>[Term:14924]</comment>
+  </data>
+  <data name="RemoveConfirm" xml:space="preserve">
+    <value>Are you sure you want to remove #1 #2 ?</value>
+    <comment>[Term:14910]</comment>
+  </data>
+  <data name="RemoveCount" xml:space="preserve">
+    <value>Remove count</value>
+    <comment>[Term:14928]</comment>
+  </data>
+  <data name="SelectRemoveCount" xml:space="preserve">
+    <value>Please select a count to remove</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Total amount</value>
+    <comment>[Term:9124]</comment>
+  </data>
+  <data name="TotalForLocalCurr" xml:space="preserve">
+    <value>Total amount for local currency</value>
+    <comment>[Term:14934]</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>[Term:2696]</comment>
+  </data>
+  <data name="ItemSalesReport" xml:space="preserve">
+    <value>Item sales report</value>
+    <comment>[Term:14921]</comment>
+  </data>
+  <data name="TenderDeclaration" xml:space="preserve">
+    <value>Tender declaration</value>
+    <comment>[Term:9565]</comment>
+  </data>
+  <data name="TenderDeclarationsDescription" xml:space="preserve">
+    <value>Use this option to do tender declarations</value>
+    <comment>[Term:14935]</comment>
+  </data>
+  <data name="RecalculateStatement" xml:space="preserve">
+    <value>Recalculate statement</value>
+    <comment>[Term:14927]</comment>
+  </data>
+  <data name="DataErrorTender" xml:space="preserve">
+    <value>There is inconsistency in your data. It is probably caused by a tender being used in a sale that is not defined in your system</value>
+    <comment>[Term:15660]</comment>
+  </data>
+  <data name="NoTenderDeclarationSelected" xml:space="preserve">
+    <value>No tender declaration selected</value>
+    <comment>[Term:15658]</comment>
+  </data>
+  <data name="StatementWillBeRecalculated" xml:space="preserve">
+    <value>Statement will now be recalculated</value>
+    <comment>[Term:15659]</comment>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Not found</value>
+    <comment>[Term:2109]</comment>
+  </data>
+  <data name="DeleteDeclarationQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete this declaration?</value>
+    <comment>[Term:15736]</comment>
+  </data>
+  <data name="DeleteDeclaration" xml:space="preserve">
+    <value>Delete declaration</value>
+    <comment>[Term:15735]</comment>
+  </data>
+  <data name="NotSpecified" xml:space="preserve">
+    <value>Not specified</value>
+    <comment>[Term:3120]</comment>
+  </data>
+  <data name="NoCountingRequired" xml:space="preserve">
+    <value>No counting required, payment types have been set up for this store</value>
+    <comment>[Term:15737]</comment>
+  </data>
+  <data name="StartingTimeCannotBeBigger" xml:space="preserve">
+    <value>Starting time cannot be bigger than ending time</value>
+    <comment>[Term:15791]</comment>
+  </data>
+  <data name="CurrentTurnover" xml:space="preserve">
+    <value>Current turnover</value>
+    <comment>[Term:15794]</comment>
+  </data>
+  <data name="EOD_ID" xml:space="preserve">
+    <value>EOD ID</value>
+    <comment>[Term:18376]</comment>
+  </data>
+  <data name="NoPaymentInformation" xml:space="preserve">
+    <value>No payment information</value>
+    <comment>[Term:15793]</comment>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+    <comment>[Term:3829]</comment>
+  </data>
+  <data name="SaleIncludingVAT" xml:space="preserve">
+    <value>Sale including #1% tax</value>
+    <comment>[Term:18377]</comment>
+  </data>
+  <data name="UndefinedPeriod" xml:space="preserve">
+    <value>Undefined period</value>
+    <comment>[Term:15790]</comment>
+  </data>
+  <data name="VoidedTransactions" xml:space="preserve">
+    <value>Voided transactions</value>
+    <comment>[Term:14601]</comment>
+  </data>
+  <data name="SuspendedTransactions" xml:space="preserve">
+    <value>Suspended transactions</value>
+    <comment>[Term:16114]</comment>
+  </data>
+  <data name="SuspendedTransactionsQuestion" xml:space="preserve">
+    <value>There are suspended transactions within the statement time period. Do you want to continue posting the statement ?</value>
+    <comment>[Term:20813]</comment>
+  </data>
+  <data name="EOS" xml:space="preserve">
+    <value>End of shift</value>
+    <comment>[Term:18303]</comment>
+  </data>
+  <data name="LastStatementEnd" xml:space="preserve">
+    <value>Last statement end</value>
+    <comment>[Term:19587]</comment>
+  </data>
+  <data name="NoStatementFound" xml:space="preserve">
+    <value>No statement found</value>
+    <comment>[Term:19588]</comment>
+  </data>
+  <data name="ReceiptID" xml:space="preserve">
+    <value>Receipt ID</value>
+    <comment>[Term:16710]</comment>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>Terminal ID</value>
+    <comment>[Term:17060]</comment>
+  </data>
+  <data name="ExchangeRate" xml:space="preserve">
+    <value>Exchange rate</value>
+    <comment>[Term:5730]</comment>
+  </data>
+  <data name="EndOfDay" xml:space="preserve">
+    <value>End of day</value>
+    <comment>[Term:14599]</comment>
+  </data>
+  <data name="TerminalHasSuspendedTransactions" xml:space="preserve">
+    <value>Terminal has suspended transactions</value>
+    <comment>[Term:20811]</comment>
+  </data>
+  <data name="EndOfDayTransactionMissingForTerminal" xml:space="preserve">
+    <value>End of day transaction missing for terminal</value>
+    <comment>[Term:20808]</comment>
+  </data>
+  <data name="StatementCountingDifference" xml:space="preserve">
+    <value>Statement counting difference</value>
+    <comment>[Term:20807]</comment>
+  </data>
+  <data name="EndOfDayTransactionMissingForTerminalQuestion" xml:space="preserve">
+    <value>Error posting statement. 'End of day' transactions missing from one of the terminals. Statement will not be posted</value>
+    <comment>[Term:20809]</comment>
+  </data>
+  <data name="EODSettings" xml:space="preserve">
+    <value>End of day</value>
+    <comment>[Term:14599]</comment>
+  </data>
+  <data name="XZReport" xml:space="preserve">
+    <value>X/Z Report</value>
+    <comment>[Term:21072]</comment>
+  </data>
+  <data name="TransactionType" xml:space="preserve">
+    <value>Transaction Type</value>
+    <comment>[Term:5644]</comment>
+  </data>
+  <data name="NoTransactionFound" xml:space="preserve">
+    <value>No transaction found</value>
+    <comment>[Term:22322]</comment>
+  </data>
+  <data name="TodaysStatements" xml:space="preserve">
+    <value>Todays statements</value>
+    <comment>[Term:22358]</comment>
+  </data>
+  <data name="NoStatementsDoneToday" xml:space="preserve">
+    <value>No statements done today.</value>
+    <comment>[Term:22355]</comment>
+  </data>
+  <data name="StatementsDoneForAllStores" xml:space="preserve">
+    <value>Statements done for all stores</value>
+    <comment>[Term:22357]</comment>
+  </data>
+  <data name="StatementsDoneForXStores" xml:space="preserve">
+    <value>Statements done for #1 of #2 stores</value>
+    <comment>[Term:22356]</comment>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+    <comment>[Term:22354] - Todays statements -&gt; Manage</comment>
+  </data>
+  <data name="SystemReportNotFound" xml:space="preserve">
+    <value>System report #1 cannot be found. Please import the system report data package.</value>
+    <comment>[Term:22427]</comment>
+  </data>
+  <data name="FinancialReportByStatement" xml:space="preserve">
+    <value>Financial report by statement</value>
+    <comment>[Term:22468]</comment>
+  </data>
+  <data name="Financial" xml:space="preserve">
+    <value>Financial</value>
+    <comment>[Term:23215] - Financial reports</comment>
+  </data>
+  <data name="FinReport32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinReport32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SalesReport32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SalesReport32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+    <comment>[Term:3349]</comment>
+  </data>
+  <data name="financial_reports_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financial reports_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="financial_reports_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financial reports_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reports_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reports_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sales</value>
+    <comment>[Term:3672]</comment>
+  </data>
+  <data name="FinancialReportByEmployee" xml:space="preserve">
+    <value>Financial report by employee</value>
+    <comment>[Term:23034]</comment>
+  </data>
+  <data name="IssuedCreditMemos" xml:space="preserve">
+    <value>Issued credit memos</value>
+    <comment>[Term:23052]</comment>
+  </data>
+  <data name="ItemSales" xml:space="preserve">
+    <value>Item sales</value>
+    <comment>[Term:9960]</comment>
+  </data>
+  <data name="SalesPerEmployee" xml:space="preserve">
+    <value>Sales per employee</value>
+    <comment>[Term:15653]</comment>
+  </data>
+  <data name="SalesPerTerminal" xml:space="preserve">
+    <value>Sales per terminal</value>
+    <comment>[Term:15654]</comment>
+  </data>
+  <data name="SalesReports" xml:space="preserve">
+    <value>Sales reports</value>
+    <comment>[Term:23217]</comment>
+  </data>
+  <data name="CalculateStatement" xml:space="preserve">
+    <value>Calculate</value>
+    <comment>[Term:14854]</comment>
+  </data>
+  <data name="PostStatement" xml:space="preserve">
+    <value>Post</value>
+    <comment>[Term:5417]</comment>
+  </data>
+  <data name="ShowReport" xml:space="preserve">
+    <value>Show report</value>
+    <comment>[Term:14930]</comment>
+  </data>
+  <data name="PostedStatementsTooltipDescription" xml:space="preserve">
+    <value>View posted statements for stores</value>
+    <comment>[Term:23437]</comment>
+  </data>
+  <data name="TenderDeclarationsTooltipDescription" xml:space="preserve">
+    <value>Do a tender declaration for a specific terminal if it has not been done through LS One POS</value>
+    <comment>[Term:23434]</comment>
+  </data>
+  <data name="UnpostedStatementsTooltipDescription" xml:space="preserve">
+    <value>Create and post statements for stores</value>
+    <comment>[Term:23433]</comment>
+  </data>
+</root>

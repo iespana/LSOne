@@ -1,0 +1,70 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 971286f0-ab98-11e4-bcd8-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Sales by hour by group
+
+// Extra description for the report as it will appear in some of the system menus
+Description: This report shows total sales for selected retail groups over a selected period grouped by hour of the day.
+
+/ LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: en
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report,Store
+Contexts: Report, Button, Store, Terminal
+
+//Enum: Type; Display; Gross sales = 1, Quantity = 2
+//, Average amount per transaction = 3
+//Number of items = 2
+//Average number of items per transaction = 4
+
+/ Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_SumByHourByGroup]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_SumByHourByGroup]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_SumByHourByGroup]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@RetailGroupsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set Nocount on
+declare @docid3 int
+
+exec sp_xml_preparedocument @docid3 output, @RetailGroupsID
+
+select 
+THEDATE, D, M, Y, H, TRANSACTIONID as TRANSACTIONS, GROUPID, GROUPNAME, sum(GROSSAMOUNT) as GROSSAMOUNT, sum(QTY) as QTY, sum(DISCOUNT) as DISCOUNT, STORE, STORENAME
+from
+(
+	select 	
+	Cast(r.TRANSDATE as smalldatetime) as THEDATE, DatePart(HH, tt.TRANSDATE) as H, Day(tt.TRANSDATE) as D, Month(tt.TRANSDATE) as M, Year(tt.TRANSDATE) as Y,
+	tt.TRANSACTIONID, r.QTY*-1 as QTY, r.NETAMOUNTINCLTAX*-1 as GROSSAMOUNT, r.WHOLEDISCAMOUNTWITHTAX as DISCOUNT,
+	r.ITEMGROUPID as GROUPID, w.NAME as GROUPNAME, r.STORE, st.NAME as STORENAME
+	from RBOTRANSACTIONSALESTRANS r
+	join (select [text] as RETAILGROUPSID from openxml(@docid3, '/p', 1) where not [text] is null) us on r.ITEMGROUPID = cast(us.RETAILGROUPSID as nvarchar(20))
+	left outer join RBOTRANSACTIONTABLE tt on r.TRANSACTIONID = tt.TRANSACTIONID and tt.TERMINAL = r.TERMINALID and tt.STORE = r.STORE
+	left outer join RBOINVENTITEMRETAILGROUP w on r.ITEMGROUPID = w.GROUPID and r.DATAAREAID = w.DATAAREAID
+	left outer join RBOSTORETABLE st on tt.STORE = st.STOREID and tt.DATAAREAID = st.DATAAREAID
+	left outer join RBOTERMINALTABLE v on tt.TERMINAL = v.TERMINALID and tt.STORE = v.STOREID and tt.DATAAREAID = v.DATAAREAID
+	where r.TRANSACTIONSTATUS = 0 and tt.ENTRYSTATUS = 0 and tt.DATAAREAID = @DataareaID and tt.TRANSDATE >= @StartDate and tt.TRANSDATE <= @EndDate
+	)temp
+group by THEDATE, Y, M, D, H, TRANSACTIONID, GROUPID, GROUPNAME, STORE, STORENAME
+order by Y, M, D, H
+
+exec sp_xml_removedocument @docid3
+Go

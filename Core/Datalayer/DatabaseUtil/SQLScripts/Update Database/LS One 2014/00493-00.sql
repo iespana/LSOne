@@ -1,0 +1,26 @@
+﻿/*
+	Incident No.	: N/A
+	Responsible		: Hodur Sigurdor Heidarsson
+	Sprint			: LS One 2014 - Nimbo
+	Date created	: 17.01.2014
+
+	Description		: Adding columns needed for limit on discounted purchases
+	
+						
+*/
+USE LSPOSNET
+GO
+
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CUSTGROUP' AND COLUMN_NAME = 'DISCOUNTLIMIT')
+BEGIN
+	Alter Table CUSTGROUP drop column DISCOUNTLIMIT
+END
+GO
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'CUSTGROUP' AND COLUMN_NAME = 'PURCHASEAMOUNT')
+BEGIN
+	Alter Table CUSTGROUP ADD [PURCHASEAMOUNT] [numeric] (28,12) NULL;
+	Alter Table CUSTGROUP ADD [USEPURCHASELIMIT] [tinyint] NULL;
+	Alter Table CUSTGROUP ADD [PURCHASEPERIOD] [tinyint] NULL;
+END
+GO

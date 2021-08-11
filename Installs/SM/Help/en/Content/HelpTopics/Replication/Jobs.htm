@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Data Management|Replication|Using the Scheduler">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Jobs</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Replication/Jobs.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Jobs</h1>
+        <p>A job is a unit of replication. It has source locations that specify where to replicate from and a destination location that specifies where to replicate to. Jobs have list of subjobs. Each subjob represents a database table that should be replicated or a stored procedure that is executed to replicate data. To perform replication through a job, the job must be run. Jobs can be run manually or scheduled to run at a specific time or at specific time intervals.</p>
+        <p>To view a list of all the jobs in the system go to <span class="trace">General setup &gt; Replication &gt; View jobs</span>. The Jobs view appears.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/JobListView.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/JobListView_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>If you have inserted the default replication data (see section <a href="Insert Default Replication Data.htm#_Ref294688071" class="ParaTextOnly MCXref xref xrefParaTextOnly">Insert Default Replication Data</a>) that ships with the Site Manager, you will see a list similar to the one in the image above. </p>
+        <p>To create a new job, click the add <img src="../../Resources/Images/SiteManager/addB.png" class="NoMargin" /> button.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/NewJobDialog.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="470" data-mc-height="261" src="../../Resources/Images/SiteManager/Scheduler/NewJobDialog_thumb_0_150.png" tabindex="" /></a>
+        </p>
+        <p>Enter a description for the new job. Click OK and the Job view appears.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs_empty.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs_empty_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2><span style="margin-right: 0pt;">4.3.1 </span>The Subjobs Tab</h2>
+        <p>The subjobs tab shows all subjobs used by this job. For a new job, this list will be empty. Below the subjob list are buttons to work with the subjobs:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        <img src="../../Resources/Images/editB_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" />
+                    </p>
+                </td>
+                <td>
+                    <p>Edit the selected subjob</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <img src="../../Resources/Images/addB_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" />
+                    </p>
+                </td>
+                <td>
+                    <p>Add a new subjob</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <img src="../../Resources/Images/deleteB_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" />
+                    </p>
+                </td>
+                <td>
+                    <p>Remove all selected subjobs</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <img src="../../Resources/Images/ArrowUp_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" />
+                    </p>
+                </td>
+                <td>
+                    <p>Move a subjob up in the list*</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <img src="../../Resources/Images/ArrowDown_15x15.png" style="visibility: visible;mso-wrap-style: square;width: 15;height: 15;" />
+                    </p>
+                </td>
+                <td>
+                    <p>Move a subjob down in the list*</p>
+                </td>
+            </tr>
+        </table>
+        <p>* In most cases, the order of the subjobs in the list does not matter. However, if the subjobs are working with database tables that have foreign key constraints, the correct order of the subjobs in the list is critical for the successful run of the job.</p>
+        <p>When you click the add button to add a new subjob the Add Subjob dialog box appears:</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/addSubjobsToJob.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="509" data-mc-height="640" src="../../Resources/Images/SiteManager/Scheduler/addSubjobsToJob_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The list of available subjobs is partially dependent upon which source location you have set for your job because normal and action type subjobs are always bound to a specific database version. In the Add Subjob dialog box you can set the source location explicitly and once you have, the list of available subjobs will be refreshed.</p>
+        <p>&#160;</p>
+        <p>You can select as many subjobs as you need. Click OK to have the selected subjobs added to your job. You can also click the add <img src="../../Resources/Images/addB.png" class="NoMargin" /> button to create a new subjob from scratch.</p>
+        <p>By default, a job has its own list of subjobs. In some cases, however, you might want to use the subjob list of another job. The Use subjobs from job field can be set to use a subjob list from another job. By default, this field is set to Current job. If you change this to some other job, the subjob list of the selected job will be used instead. </p>
+        <p>Note, however, that you can only use the Add, Remove, Move up and Move down buttons when the Current job is selected.</p>
+        <p>For more information on how to set up a subjob see section <a href="Subjobs.htm#_Ref294700953" class="ParaTextOnly MCXref xref xrefParaTextOnly">Subjobs</a>.</p>
+        <p>The subjobs listed in the subjob tab have a checkbox in front of their names.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>Uncheck a subjob in the subjob list to disable that subjob from being used when the job is run.</p>
+        <h2>The Triggers Tab</h2>
+        <p>Under the Triggers tab you specify when the job will be run.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/JobView_Triggers.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/JobView_Triggers_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>Three triggering options are available:</p>
+        <p><b>Run manually</b> - The job will only be run if a user explicitly runs it from the Jobs list view or the Job edit view.</p>
+        <p><b>Run once</b> - The job will be run only once at a specific date and time.</p>
+        <p><b>Run multiple times</b> - The job will be run repeatedly at the interval specified in the Recurrence pattern box. The Range box allows you to specify the earliest start time of the job through the Start fields, and optionally when the job should no longer be run through the End by fields.</p>
+        <h2>The Log tab</h2>
+        <p>Under the Log tab you are able to view the log for all jobs</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">29<span class="sup">th</span> November 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

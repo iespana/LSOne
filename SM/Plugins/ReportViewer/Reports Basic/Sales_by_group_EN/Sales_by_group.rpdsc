@@ -1,0 +1,69 @@
+// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 780efe24-371b-12e3-aa6e-0800200c7a66
+
+// Name of the report as it will appear in the system menus.
+Name: Sales by retail group
+
+// Extra description for the report as it will appear in some of the system menus
+Description: This report shows total sales for selected retail groups over a selected period.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: en
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report, Store
+Contexts: Report, Button
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_ItemsalesByGroup]') and OBJECTPROPERTY(id, 
+N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_ItemsalesByGroup]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_ItemsalesByGroup]
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@RetailGroupsID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+set nocount on
+
+declare @docid5 int
+
+exec sp_xml_preparedocument @docid5 output, @RetailGroupsID
+
+select 
+	THEDATE, sum(QTY) as QTY,  sum(NETAMOUNTINCLTAX) as NETAMOUNTINCLTAX, sum(WHOLEDISCAMOUNTWITHTAX) as WHOLEDISCAMOUNTWITHTAX, ITEMID, ITEMNAME,
+	ITEMGROUPID, ITEMDEPARTMENT , ITEMDEPARTMENTNAME, ITEMGROUPNAME, STORE, STAFFID, TERMINALID
+from
+(
+	select 
+	Cast(r.TRANSDATE as smalldatetime) as THEDATE, r.QTY*-1 as QTY, r.NETAMOUNTINCLTAX*-1 as NETAMOUNTINCLTAX, r.WHOLEDISCAMOUNTWITHTAX, r.ITEMID, s.ITEMNAME, u.ITEMGROUP as ITEMGROUPID, u.ITEMDEPARTMENT, v.NAME as ITEMDEPARTMENTNAME, w.NAME as ITEMGROUPNAME, r.STORE, r.STAFFID, r.TERMINALID
+	from RBOTRANSACTIONSALESTRANS r
+	left outer join RBOTRANSACTIONTABLE tt on r.TRANSACTIONID = tt.TRANSACTIONID and tt.TERMINAL = r.TERMINALID and tt.STORE = r.STORE
+	left outer join INVENTTABLE s on r.ITEMID = s.ITEMID and r.DATAAREAID = s.DATAAREAID
+	left outer join RBOINVENTTABLE u on r.ITEMID = u.ITEMID and r.DATAAREAID = u.DATAAREAID
+	left outer join RBOINVENTITEMRETAILGROUP w on u.ITEMGROUP = w.GROUPID and u.DATAAREAID = w.DATAAREAID
+	left outer join RBOINVENTITEMDEPARTMENT v on u.ITEMDEPARTMENT = v.DEPARTMENTID and v.DATAAREAID = u.DATAAREAID
+	join (select [text] as RETAILGROUPSID from openxml(@docid5, '/p', 1) where not [text] is null) uw on u.ITEMGROUP = CAST(uw.RETAILGROUPSID as nvarchar(20))
+	where r.TRANSACTIONSTATUS = 0 and tt.ENTRYSTATUS = 0 and tt.DATAAREAID = @DataareaID and tt.TRANSDATE >= @StartDate and tt.TRANSDATE <= @EndDate
+) temp
+group by THEDATE, NETAMOUNTINCLTAX, WHOLEDISCAMOUNTWITHTAX, ITEMID, ITEMNAME,
+ITEMGROUPID, ITEMDEPARTMENT , ITEMDEPARTMENTNAME, ITEMGROUPNAME, STORE, STAFFID, TERMINALID
+order by QTY desc
+
+exec sp_xml_removedocument @docid5
+
+GO

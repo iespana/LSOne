@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VisualStudioProjectFilename=".\Peripherals.csproj" AssemblyName="Peripherals" AssemblyType="Dll" RootNamespace="LSRetailPosis.Peripherals" AutoDoNotTranslate="true" InvariantLocale="en" AllowEditingInvariant="false">
+  <items>
+    <it rn="Properties\Resources.resx" nm="BarcodeReaderEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Barcode scanner: Name is empty." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Strikamerkjalesari: Nafn ekki skráð." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CardReaderEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Card Reader: Name is empty." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Kortalesari: Nafn ekki skráð." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CashDrawerIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The cash drawer is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Peningaskúffan er ekki virk." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La caja registradora está cerrada." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CashDrawerIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The cash drawer is illegally closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Peningaskúffan er ekki virk." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La caja registradora está cerrada ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CashDrawerTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The cash drawer timed out." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við peningaskúffu innan setts tíma (timeout)." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera de la caja registradora." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CheckForPaperJam" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Failure. Check for paper jam." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentara villa. Athugaðu hvort pappírinn sé flæktur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Error: compruebe si se ha atascado el papel." ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadCashDrawer" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load cash drawer: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast peningaskúffu: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la caja registradora: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadDallasKey" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load Dallas key: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast Dallas lykli: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadDualDisplay" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load dual display: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast auka skjá: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la pantalla doble: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadForecourtManager" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load forecourt manager: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast eldsneytisstjóra: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar el administrador del mostrador: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadKeylock" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load keylock: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast keylock: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la llave de seguridad: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadLineDisplay" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load line display: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast kúnna skjá: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la visualización de la línea: #1" ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadMSR" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load msr: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast MSR: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar el msr: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadPrinter" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load printer: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast auka prentara: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la impresora: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadRFIDScanner" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load RFID scanner: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast RFID skanna: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar el escáner RFID: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadScale" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load scale: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast vikt: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar la balanza: #1" ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="CouldNotLoadScanner" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Could not load scanner: #1" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki tókst að tengjast skanna: #1" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha podido cargar el escáner: #1" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="DisplayIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The Display is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Kúnna skjárinn er ekki virkur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La pantalla está cerrada." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="DisplayIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The Display is illegally closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Kúnna skjárinn er ekki virkur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La pantalla está cerrada ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="DisplayTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The Display timed out." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við kúnna skjá innan setts tíma (timeout)." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera de la pantalla." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="DrawerEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Drawer: Name is empty" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Skúffa: Nafn ekki skráð" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="EnterWeight" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Enter weight" ts="Translated" qs="ToReview" />
+        <li lc="en-ZA" tx="Enter weight" ts="Translated" qs="ToReview" />
+        <li lc="es-MX" tx="Introduzca peso" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Þyngd" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Ange vikt" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Introducir peso" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Gewicht eingeben" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="FixProblemAndRetry" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Do you want try to fix the problem and retry?" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Viltu reyna að laga vandamálið og tengjast aftur?" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="¿Desea solucionar el problema y volver a intentarlo?" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="HardwareProfileErrorString" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The following device(s) have invalid settings: {0}Please run the site manager and resolve all issues before restarting the POS" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Eftirtalin/Eftirtalið tæki er/eru rangt stillt: {0}Vinsamlega lagfærði stillingar í Site Manager áður en LS One POS er ræstur aftur" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="InsertSlipIntoPrinter" ns="14001" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Insert slip into the printer" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Setjið nótu í prentarann" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Sätt i kvitto i skrivare" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Insertar trabajo en la impresora" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="KeylockEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Key Lock: Name is empty" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Lyklalás: Nafn ekki skráð" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="KeylockIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The keylock is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Keylock er ekki virkt." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La llave de seguridad está cerrada." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="KeylockIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The keylock is illegally closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Keylock er ekki virkt." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La llave de seguridad está cerrada ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="KeylockTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The keylock timed out." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við keylock innan setts tíma (timeout)." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera de la llave de seguridad." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="LineDisplayEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Line Display: Name is empty" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Línuskjár: Nafn ekki skráð" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="MSRIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The MSR is illegally closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="MSR er ekki virkt." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="El MSR está cerrado ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="MSRIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The MSR is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="MSR er ekki virkt." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="El MSR está cerrado." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="MSRTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The MSR timed out" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við MSR innan setts tíma (timeout)" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera del MSR." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="NoInputdetected" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="No input was detected.Please check the scale and restart the POS" ts="Changed" qs="ToReview" />
+        <li lc="is" tx="Ekkert inntak kom á vogina. Vinsamlegast athugaðu hvort vogin sé í lagi og endurræstu posann" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="NoPrinterFound" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="No printer found" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Enginn prentari fannst" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="No se ha encontrado ninguna impresora" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="NoScaleDetected" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="No scale detected" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Engin vog fannst" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterCompletedOutput" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer has completed it's output!" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La impresora ha completado su salida." ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Druckauftrag abgeschlossen!" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentarinn hefur lokið útprentun!" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterCoverIsOK" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer cover is OK" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Lokið á prentaranum er í lagi" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La cubierta de la impresora está en buenas condiciones" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterCoverIsOpen" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer cover is open" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Lokið á prentaranum er opið" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La cubierta de la impresora está abierta" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printer: Name is empty" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentari: Nafn ekki skráð" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterFiredOffAnEvent" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer fired off an error event!" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha producido un error en la impresora." ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Der Drucker meldet einen Ereignisfehler!" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentarinn sendi villuskilaboð!" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentarinn er ekki virkur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La impresora está cerrada." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The printer is illegally closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentarinn er ekki virkur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La impresora está cerrada ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterIsOpen" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printer is open" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentari er opinn" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La impresora está abierta" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterIsOutOfPaper" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printer is out of paper or printer was disconnected" ts="Changed" qs="ToReview" />
+        <li lc="is" tx="Pappírinn kláraðist eða prentarinn missti tenginguna" ts="Changed" qs="ToReview" />
+        <li lc="es" tx="La impresora no tiene papel" ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterNotAccessible" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printer #1 is not accessible. The printing has been cancelled." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki næst í prentara #1. Hætt hefur verið við prentun ." ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Drucker #1 ist nicht erreichbar. Der Druck wurde abgebrochen." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrinterTimeout" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Timeout encountered, this may be caused by other programs or processes having previously claimed the printer" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Tími rann út. Þetta kann að vera vegna þess að önnur forrit hafi þegar fest sér prentarann" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="Printing" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printing" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentun" ts="Translated" qs="ToReview" />
+        <li lc="ko" tx="인쇄 중" ts="Translated" qs="ToReview" />
+        <li lc="de" tx="Drucken" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Utskrift" ts="Translated" qs="ToReview" />
+        <li lc="fr" tx="Impression" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Imprimiendo" ts="Translated" qs="ToReview" />
+        <li lc="ja" tx="印刷中" ts="Translated" qs="ToReview" />
+        <li lc="da" tx="Udskriver" ts="Translated" qs="ToReview" />
+        <li lc="nb-NO" tx="Utskrift" ts="Translated" qs="ToReview" />
+        <li lc="fi" tx="Tulostus" ts="Translated" qs="ToReview" />
+        <li lc="hi" tx="मुद्रण जारी" ts="Translated" qs="ToReview" />
+        <li lc="es-MX" tx="Imprimiendo" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrintingDeviceIsDisabled" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printing device is disabled" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentarinn er ekki virkur" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="El dispositivo de impresión está deshabilitado" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="PrintingInProgress" ns="14002" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Printing in progress..." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Prentun er í gangi..." ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Utskrift pågår..." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Impresión en curso..." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="RemoveSlipFromPrinter" ns="14003" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Remove slip from printer" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Fjarlægið nótu úr prentara" ts="Translated" qs="ToReview" />
+        <li lc="sv" tx="Tag kvitto från skrivare" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Quitar trabajo en la impresora" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleEmpty" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Scale: Name is empty" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Vog: Nafn ekki skráð" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleIsClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scale is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Viktin er ekki virk." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La escala está cerrada." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleIsDiabledReconnect" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="Please reconnect the scale and restart the POS" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Vinsamlegast endurtengdu vogina og endurræstu posann" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleIsDisabled" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scale is disabled, Please reconnect the scale and restart the POS" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Vigtin er óvirk, Vinsamlegast endurtengdu vigtina og endurræstu posann" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleIsDisabledEnterWeight" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scale is disabled, Do you want to manually enter weight?" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Vigtin er óvirk, Viltu slá inn þyngd?" ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scale is illegally closed" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Viktin er ekki virk" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="La escala está cerrada ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScaleTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scale timed out" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við viktina innan setts tíma (timeout)" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera de la escala." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScannedTimedOut" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scanned timed out" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Ekki náðist samband við barkóðaskanna innan setts tíma (timeout)" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="Se ha agotado el tiempo de espera del escáner." ts="Changed" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScannerIsClosesd" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scanner is closed." ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Barkóða skanninn er ekki virkur." ts="Translated" qs="ToReview" />
+        <li lc="es" tx="El escáner está cerrado." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+    <it rn="Properties\Resources.resx" nm="ScannerIsIllegallyClosed" rc="" dnt="false" nms="LSRetailPosis.Peripherals.Properties" cln="Resources" bac="EmbeddedResource" hgt="0" wdt="0">
+      <lis>
+        <li lc="nn-nn" tx="The scanner is illegally closed" ts="Translated" qs="ToReview" />
+        <li lc="is" tx="Barkóðaskanninn er ekki virkur" ts="Translated" qs="ToReview" />
+        <li lc="es" tx="El escáner está cerrado ilícitamente." ts="Translated" qs="ToReview" />
+      </lis>
+    </it>
+  </items>
+  <locales>
+    <locale />
+    <locale>is</locale>
+    <locale>es</locale>
+    <locale>sv</locale>
+    <locale>ko</locale>
+    <locale>de</locale>
+    <locale>fr</locale>
+    <locale>ja</locale>
+    <locale>da</locale>
+    <locale>nb-NO</locale>
+    <locale>fi</locale>
+    <locale>hi</locale>
+    <locale>en-ZA</locale>
+    <locale>es-MX</locale>
+  </locales>
+  <Name>Peripherals</Name>
+</Project>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.1">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>POS Improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.1/POSImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1><span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> improvements</h1>
+        <p>In this section general improvements that mostly or only affect the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> are explained. Some changes may affect both the <span class="MyVariablesSite Manager">Site Manager</span> and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>. For smaller improvements and bug fixes please see the <a href="OtherImprovements.htm">other improvements</a> section of the release notes.</p>
+        <p>&#160;</p>
+        <h2>OPOS&#160;Layer updates</h2>
+        <p>We have updated our OPOS interop library to version 1.14. </p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note">Note!!!  You will need to run the new installer provided with the 2017.1 LS One POS installation (Installs folder) for all terminals when updating an existing customer</p>
+        </div>
+        <h2>Exit, Restart, Shutdown and Activate training</h2>
+        <p>New permissions have been added for the operations that are only accessible from the Logon dialog of the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>;Exit, Reboot, Shutdown and Activate training. To run these operations the user needs to enter user name and password and the permission for each operation will be checked before allowing the operation to continue.</p>
+        <p>In the case of the training mode only the activation of the training mode has a specific permission, any user can deactivate the training mode.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/POS/ExitApplicationCredentials.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="548" data-mc-height="304" src="../../Resources/Images/POS/ExitApplicationCredentials_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h2>Customer information on POS</h2>
+        <p>A new operation Edit customer has been added to the POS where customer information can be viewed as well as edited. A new POS&#160;operation permission was created for the user to be allowed to run this operation as well as another permission to allow editing the "Blocking" value on the customer the POS. </p>
+        <h3><b style="font-weight: normal; text-decoration: none;">New customer</b>
+        </h3>
+        <p>More properties have been added to the New customer dialog in the POS and a third page that has only the address has been added. Some of the properties have been moved around so that both the new and edit operations have the same properties on the same pages. To be able to create a new customer the user needs to go through all three pages in the wizard and a milestone view has been added to the dialog.</p>
+        <p>The New customer dialog can be accessed in the same ways as before from a button on the POS&#160;layout; "Customer add" operation and from the Customer search dialog.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/New customer - dialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="936" data-mc-height="766" src="Resources/New customer - dialog_thumb_0_300.png" style="width: 480px;height: 391px;" tabindex="" /></a>
+        </p>
+        <h3><b style="font-weight: normal; text-decoration: none;">Edit customer</b>
+        </h3>
+        <p>Two tabs are available now on the Edit customer dialog to edit the customer information; Details and Other. These panels correspond to the same panels in the New customer dialog.</p>
+        <p>The Edit customer dialog can be accessed from a button on the POS&#160;layout; "Edit customer" operation and from the Customer search dialog  </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Edit customer - dialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1100" data-mc-height="767" src="Resources/Edit customer - dialog_thumb_0_300.png" style="width: 492px;height: 342px;" tabindex="" /></a>
+        </p>
+        <h3><b style="font-weight: normal; text-decoration: none;">Ledger </b>
+        </h3>
+        <p>The ledger button displays the customer ledger with the same information as is available in the <span class="MyVariablesSite Manager">Site Manager</span>. The first 100 transactions are loaded for the customer but older transactions can be viewed by filtering the list using the search feature.</p>
+        <p>In this view the current credit limit, balance and total sales for the customer can be viewed. Any sales and payments can also be viewed in receipt form. Payments done into the customer account through the <span class="MyVariablesSite Manager">Site Manager</span> are displayed in the list but cannot be viewed in the receipt control.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Edit customer - ledger.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1100" data-mc-height="768" src="Resources/Edit customer - ledger_thumb_0_300.png" style="width: 488px;height: 339px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Edit customer - ledger - search.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="935" data-mc-height="623" src="Resources/Edit customer - ledger - search_thumb_0_300.png" style="width: 367px;height: 244px;" tabindex="" /></a>
+        </p>
+        <h3><b style="font-weight: normal; text-decoration: none;">Loyalty</b>
+        </h3>
+        <p>The loyalty button displays the loyalty card information for the customer with the same information as is available in the <span class="MyVariablesSite Manager">Site Manager</span>. </p>
+        <p>In this view a summary of all loyalty cards on the customer can be viewed as well as a list of all loyalty cards. A loyalty card can be assigned to the customer through this dialog (Add card button) or a card selected from the list to be used on the current transaction (Use card button)</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Edit customer - loyalty.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1022" data-mc-height="768" src="Resources/Edit customer - loyalty_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p><span style="font-weight: bold; text-decoration: underline;" class="MyVariablesSite Service">Site Service</span><b> connection</b>
+        </p>
+        <p>If the <a href="../../FieldHelp/Profiles/TransactionServiceProfileView.htm">site service profile</a> on the store is configured to have centralized customers but the <span class="MyVariablesSite Service">Site Service</span> is not running for any reason the POS&#160;will save the changes to the local database and mark the customer information to be transferred to head office at a later date. While there is customer information waiting to be transferred a text is now visible in the status bar of the POS&#160;to indicate this. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/status bar - customers.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1018" data-mc-height="74" src="Resources/status bar - customers_thumb_0_300.png" style="width: 868px;height: 63px;" tabindex="" /></a>
+        </p>
+        <p>To transfer the customer information when the <span class="MyVariablesSite Service">Site Service</span> connection has been reestablished go to the Customer search dialog and click on the Transfer customer button (indicated in the red box in the image)</p>
+        <p>This functionality previously existed in <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> but now works for both new and edited customers.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Transfer customer to HO.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1015" data-mc-height="556" src="Resources/Transfer customer to HO_thumb_0_300.png" style="width: 517px;height: 282px;" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p><b style="text-decoration: underline;">Mandatory fields and configurations</b>
+        </p>
+        <p>Configurations to control how the new and edit customer dialogs behaved have been added to the <span class="MyVariablesSite Service">Site Service</span> profile. To see detailed information about each of these new configurations see the <a href="../../FieldHelp/Profiles/TransactionServiceProfileView.htm">field help for the Site service profile</a>.</p>
+        <p>The most significant change is that now the new and edit customer dialogs do not decide for the customer which fields should be mandatory when creating a new customer. Each customer can define these fields themselves in the site service profile. </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Site Service profile - customer.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="740" data-mc-height="413" src="Resources/Site Service profile - customer_thumb_0_300.png" style="width: 508px;height: 283px;" tabindex="" /></a>
+        </p>
+        <p>When a property has not been set in the POS but has been selected as mandatory a banner is displayed in both dialogs telling the user that something is missing.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Edit customer - mandatory fields.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="939" data-mc-height="55" src="Resources/Edit customer - mandatory fields_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h2>Printing station for receipts</h2>
+        <p>The hardware profile can now be configured to make the POS use the printing station as a receipt printer. This means that the POS, Kitchen printing and Mobile POS&#160;receipt printing can now all be configured to use the same OPOS&#160;receipt printer or the same printing station where all printers are configured.</p>
+        <p>Some changes were done to the Printing station so a new version of the Printing station needs to be installed if it is to be used with the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span></p>
+        <h2>Customer orders and Quotes</h2>
+        <p>A new parameter has been added to the customer order operation which presets the "Reserve stock" value on the customer order. The value can be changed when creating a new customer order. This parameter sets the default value for the customer order created when that operation is selected. The default value for existing Customer order operations will be that Reserve stock option is selected (as it was before this change).</p>
+        <p>Additional payments can now be added to a customer order through the Customer order dialog. When an additional payment has been added no changes can be done to the customer order until it has been paid. The additional payments are displayed and calculated as if they are deposits</p>
+        <p>A functionality to create quotes has been added to both the <span class="MyVariablesSite Manager">Site Manager</span> and the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span>. Two new operations have been added Quotes and Recall quotes. The functionality is the same as Customer orders except there is no option to accept deposits. A quote can be converted to a customer order (by selecting Customer order operation in the POS) but a customer order cannot be converted to a quote.</p>
+        <p>When recalling a quote the user can either recall it as a normal sale or as a quote that then can be updated or changed to be a customer order</p>
+        <p>The quotes can be viewed, updated and deleted in the <span class="MyVariablesSite Manager">Site Manager</span>.</p>
+        <p>The expiry date on both the customer orders and quotes is only for information purposes.&#160;There is no functionality to automatically remove quotes or customer orders once they expire.</p>
+        <p>Customer order functionality (in the POS) was not translated in previous releases and has now been translated in all languages</p>
+        <p><a name="kanchor60"></a>An issue has been fixed in customer orders where item comments were not being displayed in the receipt controls once an item has been added to a customer order.</p>
+        <p>A bug has been fixed in POS where partial pickup customer order was not finalized when the remainder had more than two decimals</p>
+        <h2>Customer account deposit improvements</h2>
+        <p>Customer account deposit operation has been updated. When the user now clicks the operation a dialog is displayed where information about the existing customer on the transaction is displayed or the user can search for and add a customer to the transaction.</p>
+        <p>The amount to be paid can either be entered manually or it can be selected using denomination buttons as in other payment dialogs.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/Customer account deposit dialog.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="936" data-mc-height="691" src="Resources/Customer account deposit dialog_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>When doing a customer account deposit and the payment is a gift card, the POS&#160;will now generate a credit memo if the value of the gift card is bigger than the amount to pay and the store 's change back option is set to credit memo</p>
+        <h2>Customer required on returns</h2>
+        <p>A new option has been added to the functionality profile. This option specifies if a customer is required when making payments in the POS when there are returned items in the transaction. The customer cannot be the default store customer.</p>
+        <h2>System styles for POS&#160;layout receipt and totals box</h2>
+        <p><a href="../../HelpTopics/POSSetup/Layout/Styles.htm">System styles</a> for negative values have been added to the system. Those styles are used in the POS for totals balance, receipt sale total and dual display sale total labels. The style of the labels will be updated when the amount changes to positive or negative. Each label or value label now has it's own style for positive and negative values.</p>
+        <p>Previously there were various styles that affected the total box itself, receipt and dual display. Now new styles have been created and all styles affecting these three components set both the font and the font color&#160;(previously it was not so in all cases). See more information in the <a href="../../HelpTopics/POSSetup/Layout/Styles.htm">help topic covering the system styles</a>.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/System styles - Dual display.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="965" data-mc-height="312" src="Resources/System styles - Dual display_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Resources/System styles - POS receipt and totals.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="940" data-mc-height="357" src="Resources/System styles - POS receipt and totals_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

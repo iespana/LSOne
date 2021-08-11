@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LSOne.DataLayer.SqlConnector</name>
+    </assembly>
+    <members>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerCacheProvider.GetStates(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,LSOne.Utilities.DataTypes.RecordIdentifier)">
+            <summary>
+            Returns the states/provinces of the given country.
+            </summary>
+            <param name="entry">Database connection</param>
+            <param name="countryID">Country ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProvider.Count(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String,System.Boolean)">
+            <summary>
+            Runs a Select count(*) SQL statement on the table         
+            </summary>        
+            <param name="entry">The database connection</param>
+            <param name="tableName">The table to select the rows from</param>        
+            <param name="hasDataAreaID">If true then the SQL statement will limit the results to a DataAreaID</param>
+            <returns>The count of rows</returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProvider.Count(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String,System.String,LSOne.Utilities.DataTypes.RecordIdentifier,System.Boolean)">
+            <summary>
+            Runs a Select count(*) SQL statement on the table using the fieldName and id values to select the records to count.
+            Example: SELECT COUNT(*) FROM tableName WHERE fieldName = id
+            </summary>        
+            <param name="entry">The database connection</param>
+            <param name="tableName">The table to select the rows from</param>
+            <param name="fieldName">The field name that should be within the WHERE statement</param>
+            <param name="id">The value of the WHERE statement</param>
+            <param name="hasDataAreaID">If true then the SQL statement will limit the results to a DataAreaID</param>
+            <returns>The count of rows</returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProvider.ValidateSecurity(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String[])">
+            <summary>
+            Checks if the user has any of the permissions in the permissionCodes. If he has none, an exception is thrown
+            </summary>
+            <param name="entry">Entry into the database</param>
+            <param name="permissionCodes">Array of permission codes</param>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProvider.AsByte(System.Object)">
+            <summary>
+            Converts the given object to <see cref="T:System.Byte"/>. If object is null it will return 0.
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProvider.AsByte(System.Object,System.Byte)">
+            <summary>
+            Converts the given object to <see cref="T:System.Byte"/>. If object is null it will return the <paramref name="defaultValue"/>
+            </summary>
+            <param name="result"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProviderBase.GetMasterID(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,LSOne.Utilities.DataTypes.RecordIdentifier,System.String,System.String)">
+            <summary>
+            Gets the master ID of a record with the given readable ID. If the master ID is not found, then return Guid.Empty.
+            </summary>
+            <param name="entry">The entry into the database</param>
+            <param name="ID">The value of the readable ID</param>
+            <param name="table">The table to get the master ID from</param>
+            <param name="field">The name of the readable ID field</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProviderBase.GetListCondition(System.Collections.Generic.List{System.String},System.String,System.Data.IDbCommand,System.String)">
+            <summary>
+            Generates an "IN" filter like this: "TABLEALIAS.COLUMN IN (@PARAM1, @PARAM2)"
+            </summary>
+            <param name="listOfIDs">The IDs to filter by</param>
+            <param name="filterColumn">The column to use in filter</param>
+            <param name="cmd">The cmd the condition is added to</param>
+            <param name="tableAlias">The table alias</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProviderBase.PreProcessSearchText(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Preprocesses search texts, making brackets [] valid in search and ', making % valid in search and making * work as wild card character.
+            </summary>
+            <param name="searchText">The text to pre-process</param>
+            <param name="applyScope">If set to true then % markers will be added to make begins with and ends with searches</param>
+            <param name="applyBeginsWith">Makes scoped search be in begins mode rather than contains mode</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.SqlServerDataProviderBase.GetExistingRecords(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns a list of existing record identifiers between a starting number plus a maximum number of records
+            
+            EXAMPLE:
+            
+            Number sequence Format: XY######
+            Starting record = 10
+            Number of records = 10 (meaning that we look between 10 and 20 because we want to generate 10 IDs starting after 10)
+            Existing data in the specified column is: XY00007, XY00008, XY00009, XY00010, XY00011
+            
+            Data returned: XY00010, XY00011 because it respects the correct number sequence format and falls between the 10-20 range
+            </summary>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.UserData.ChangePasswordHashForOtherUser(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,LSOne.Utilities.DataTypes.RecordIdentifier,System.String,System.Boolean,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            Changes the password for the given user by directly inserting the password hash
+            </summary>
+            <remarks>This function does not check for user security since it is not intended to be run in a user security context. I.e this should be run byt the site service
+            or by code that does not need user permission to function</remarks>
+            <param name="entry">The entry into the database</param>
+            <param name="userID">ID of the user</param>
+            <param name="passwordHash">The hash of the new password</param>
+            <param name="needPasswordChange">Set flag on the user that indecates if he needs to change his password</param>
+            <param name="expiresDate">Sets the expire date</param>
+            <param name="lastChangeTime">Sets the last change time</param>
+            <param name="generateActions">Indicates wether replication actions are generated</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.DataProviders.UserData.GetActiveUserInfo(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,LSOne.Utilities.DataTypes.RecordIdentifier,System.String@,System.String@,System.Boolean@)">
+            <summary>
+            Returns the login, hashed password and if the user is an Active Directory user for an active (non-deleted) user.
+            </summary>
+            <param name="entry"></param>
+            <param name="userID"></param>
+            <param name="login">The user login or an empty string if the user does not exist or was deleted</param>
+            <param name="passwordHash">The hashed user password or an empty string if the user does not exist or was deleted</param>
+            <param name="isDomainUser"></param>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.ConnectionPoolManager.GetConnection(System.String,System.Boolean,System.String,System.Security.SecureString,System.String,System.String,System.Security.SecureString,LSOne.DataLayer.GenericConnector.Enums.ConnectionType,LSOne.DataLayer.GenericConnector.Enums.ConnectionUsageType,System.String,System.String,System.Boolean)">
+            <summary>
+            Gets a connection from the pool
+            </summary>
+            <param name="server">The database server to connect to</param>
+            <param name="windowsAuthentication">If true then windows authentication is used on the sql connection</param>
+            <param name="serverLogin">The ID of the sql server user. If <paramref name="windowsAuthentication"/> is true then this is ignored</param>
+            <param name="serverPassword">The password for the sql server user. If <paramref name="windowsAuthentication"/> is true then this is ignored</param>
+            <param name="databaseName">The name of the database to connect to</param>
+            <param name="login">The LS One user name</param>
+            <param name="password">The password for the LS One user</param>
+            <param name="connectionType">The type of sql server connection to use</param>
+            <param name="connectionUsage"></param>
+            <param name="dataAreaID"></param>
+            <param name="externalReference">If set, this will be used as the identifier for the instance of the connection in the pool</param>
+            <param name="useAdminConnection">By default the connection is created based on the results of calling <see cref="M:LSOne.DataLayer.SqlConnector.ConnectionPoolManager.AdminAuthenticate(System.Byte[])"/>. Set this to false if you want a normal user connection where all profiles are loaded. This is typically used if the user's profile is not provided from another source</param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.PagingQueryWithGroup(System.String,System.String,System.String,System.Int32,System.Boolean)">
+             <summary>
+             select TOP
+                -- External columns
+                {0}
+            from(
+                Select
+                    -- Internal Columns
+                    {1}
+                FROM TABLE ALIAS
+                -- Joins
+                {2}
+                -- Conditions
+                {3}
+                -- Internal Group by
+                {4}
+            ) ss
+            -- Paging
+            {5}
+            -- Sort
+            {6}
+             </summary>
+             <param name="table"></param>
+             <param name="alias"></param>
+            <param name="externalAlias"></param>
+            <param name="top"></param>
+            <param name="distinct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.PagingQuery(System.String,System.String,System.String,System.Int32,System.Boolean)">
+             <summary>
+             select TOP
+                -- External columns
+                {0}
+            from(
+                Select
+                    -- Internal Columns
+                    {1}
+                FROM TABLE ALIAS
+                -- Joins
+                {2}
+                -- Conditions
+                {3}
+            ) ss
+            -- Paging
+            {4}
+            -- Sort
+            {5}
+             </summary>
+             <param name="table"></param>
+             <param name="alias"></param>
+            <param name="externalAlias"></param>
+            <param name="top"></param>
+            <param name="distinct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.PagingQueryWithSepparateRowColumn(System.String,System.String,System.String,System.Int32,System.Boolean)">
+             <summary>
+             select TOP
+                -- External columns
+                {0}
+            from(
+                Select
+                    -- Internal Columns
+                    {1},
+                    {2}
+                FROM TABLE ALIAS
+                -- Joins
+                {3}
+                -- Conditions
+                {4}
+            ) ss
+            -- Paging
+            {5}
+            -- Sort
+            {6}
+             </summary>
+             <param name="table"></param>
+             <param name="alias"></param>
+            <param name="externalAlias"></param>
+            <param name="top"></param>
+            <param name="distinct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.InternalQuery(System.String,System.String,System.String,System.Int32,System.Boolean)">
+              <summary>
+              select TOP
+                 -- External columns
+                 {0}
+             from(
+                 Select
+                     -- Internal Columns
+                     {1}
+                 FROM TABLE ALIAS
+                 -- Joins
+                 {2}
+                 -- Conditions
+                 {3}
+                 -- Internal Group
+                 {4}
+             ) ss
+             -- Joins
+                {5}
+            -- Paging
+            {6}
+            -- Sort/Group
+            {7}
+              </summary>
+              <param name="table"></param>
+              <param name="alias"></param>
+             <param name="externalAlias"></param>
+             <param name="top"></param>
+             <param name="distinct"></param>
+             <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.BaseQuery(System.String,System.String,System.Int32,System.Boolean)">
+             <summary>
+             Select DISTINCT TOP
+            -- Columns
+            {0}
+            FROM TABLE ALIAS
+            -- Joins
+            {1}
+             -- Conditions
+            {2}
+            -- Sort
+            {3}
+             </summary>
+             <param name="table"></param>
+             <param name="alias"></param>
+            <param name="top"></param>
+            <param name="distinct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.QueryHelpers.QueryTemplates.UnionQuery(System.String,System.Int32)">
+             <summary>
+             select TOP
+            -- External columns
+                    {0}
+            from(
+                { 1}
+                    UNION
+                {2}
+                ) EXTERNALALIAS
+            -- Paging
+            {3}
+            -- Sort
+            {4}
+             </summary>
+             <param name="externalAlias"></param>
+             <param name="top"></param>
+             <returns></returns>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.SqlServerConnection.ExecuteNonQuery(System.Data.IDbCommand,System.Boolean)">
+            <summary>
+            Executes a stored procedure
+            </summary>
+            <param name="cmd"></param>
+            <param name="readingOnly">Set to true if you swear that your only using it to read from output parameters then the operation will be excluded from replication</param>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.SqlServerConnectionManager.GetActiveUserInfo(LSOne.Utilities.DataTypes.RecordIdentifier,System.String@,System.String@,System.Boolean@)">
+            <summary>
+            Returns the login, hashed password and if the user is an Active Directory user for an active (non-deleted) user.
+            </summary>
+        </member>
+        <member name="M:LSOne.DataLayer.SqlConnector.SqlServerTransaction.GetUserPasswordInfo(LSOne.Utilities.DataTypes.RecordIdentifier,System.String@,System.DateTime@,System.DateTime@)">
+            <summary>
+            Returns the login, hashed password and if the user is an Active Directory user for an active (non-deleted) user.
+            </summary>
+        </member>
+    </members>
+</doc>

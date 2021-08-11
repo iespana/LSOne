@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS One 2015|Release Notes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Inventory</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2015/Inventory.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Inventory</h1>
+        <h2>On-hand inventory</h2>
+        <p>Site service now uses a view (instead of a query) to display the current on-hand inventory. This view takes the inventory status as it was at last posted statement and then adds/detracts the returned/sold items since that statement was posted.</p>
+        <p>The POS operation „On-hand inventory“ and Site Manager both use the same functionality to get this information.</p>
+        <h2>Stock counting</h2>
+        <ul>
+            <li value="1">Inventory on hand is not recalculated after the line has been created in stock counting ledger</li>
+            <li value="2">Import button is disabled when Site Manager is configured to be at Head office</li>
+            <li value="3">Stock counting excel template had now item description.</li>
+            <li value="4">Counting zero for an item is now allowed</li>
+            <li value="5">When doing stock counting on items with variants the variant information was being mixed up between columns i.e. color displayed in size column.</li>
+            <li value="6">When doing stock counting on items with variants only one variant could be selected. Now any and all variants can be selected.</li>
+            <li value="7">Stock counting excel import with variants was not working properly.</li>
+        </ul>
+        <p>Stock counting card user interface changes:</p>
+        <ul>
+            <li value="1">Header displays status of stock counting</li>
+            <li value="2">Item ID column added to stock counting</li>
+            <li value="3">Created date and posted date columns added</li>
+            <li value="4">Column header text changed from „Posted“ to „Status“</li>
+        </ul>
+        <p>Stock counting view user interface changes:</p>
+        <ul>
+            <li value="1">Text in „Show“ combo box changed from „Unposted“ to „Not posted“</li>
+            <li value="2">A column displaying the Posted date added</li>
+            <li value="3">Column header text changed from „Posted“ to „Status“</li>
+            <li value="4">Stock counting is now locked for editing when status has been changed to „Posted“</li>
+        </ul>
+        <h2>Purchase order</h2>
+        <ul>
+            <li value="1">Selecting a header of any column did not sort the solumns when all stores have been selected</li>
+            <li value="2">Print preview has been added to the Purchase order report</li>
+            <li value="3">When creating a new purchase order the user can use an older purchase order as a template (Copy from combo box in dialog)</li>
+            <li value="4">Purchase order report will display the item id if no vendor item id is available for the item.</li>
+            <li value="5">All texts in Purchase order report now have font Arial.</li>
+            <li value="6">Selecing Closed and Open on a purchase order multiple times caused a crash</li>
+            <li value="7">When clicking on the last (empty) column header in the Purchase order view an error was displayed</li>
+            <li value="8">When creating a purchase order now it is mandatory to select a store.</li>
+        </ul>
+        <h2>Goods receiving</h2>
+        <ul>
+            <li value="1">Manage purchase order permission is not required anymore for a user to add lines to a Goods receiving document</li>
+            <li value="2">Inventory adjustment</li>
+            <li value="3">When creating a new reason through the inventory adjustment dialog the new reason code is selected for the user</li>
+            <li value="4">If only one unit is available for the item selected it is selected automatically for the user</li>
+        </ul>
+        <h2>Other improvements:</h2>
+        <ul>
+            <li value="1">Fields in Retail items view, Purchase works sheets, Stock counting that represent on-hand inventory had various different labels (effective inventory, available inventory and etc). All these fields have now been changed to be „Inventory on hand“</li>
+            <li value="2">When adding an item to a vendor and the item has only one unit that unit is selected by default.</li>
+            <li value="3">When adding an item to a vendor the items displayed in the list to be added only displays items that have not already been added to the vendor</li>
+            <li value="4">When clicking on the last (empty) column header in the Transfer orders view an error was displayed</li>
+            <li value="5">Copy from functionality added to dialog where a new Store transfer is created</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

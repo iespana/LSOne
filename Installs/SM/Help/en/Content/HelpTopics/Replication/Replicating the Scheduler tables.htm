@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Data Management|Replication">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Replicating the Scheduler tables</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/Replication/Replicating the Scheduler tables.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Replicating the Scheduler tables</h1>
+        <h2>Introduction</h2>
+        <p>In a multi-store environment, it can be beneficial to replicate the scheduler tables themselves. This enables use of the same scheduler setup across multiple stores.</p>
+        <p><span class="Note">Note:</span>
+            <br />If you have loaded the default Replication data (see section <a href="Insert Default Replication Data.htm#_Ref294688071" class="ParaTextOnly MCXref xref xrefParaTextOnly" xrefformat="{paratext}">Insert Default Replication Data</a><a href="Insert Default Replication Data.htm#_Ref294688071" class="ParaTextOnly MCXref xref xrefParaTextOnly" xrefformat="{paratext}">Insert Default Replication Data</a>), the system already has the jobs and subjobs set up as described in this section.</p>
+        <h2>Setup</h2>
+        <p>To set up replication of the scheduler tables do the following:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li value="1">Create subjobs for the following tables:
+ 
+        <ul><li value="1">JscDriverTypes</li><li value="2">JscDatabaseDesigns</li><li value="3">JscTableDesigns</li><li value="4">JscFieldDesigns</li><li value="5">JscTableMap</li><li value="6">JscLinkedTables</li><li value="7">JscLinkedFilters</li><li value="8">JscFieldMap</li><li value="9">JscLocations</li><li value="10">JscLocationMembers</li><li value="11">JscHandlers</li><li value="12">JscJobTypes</li><li value="13">JscJobs</li><li value="14">JscSubJobs</li><li value="15">JscSubJobFromTableFilters</li><li value="16">JscJobSubjobs</li><li value="17">JscJobTriggers</li></ul></li>
+            <li value="2">Create a job and give it a descriptive name, for example “Replication data”</li>
+            <li value="3">Add the subjobs created in step 1 to the job.</li>
+            <li value="4"><b>Important:</b> Reorder the subjobs in the job so that they appear in exactly the same order as listed in step 1. This is required because the Scheduler table uses SQL Server foreign keys to ensure integrity of their data.</li>
+        </ol>
+        <p>Define source and destination locations for your job as required and set up scheduling as needed.</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs_ReplicationDataJob.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Scheduler/JobView_Subjobs_ReplicationDataJob_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

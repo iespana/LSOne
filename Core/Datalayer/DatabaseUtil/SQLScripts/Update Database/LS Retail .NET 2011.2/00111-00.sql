@@ -1,0 +1,32 @@
+﻿
+/*
+
+	Incident No.	: 11588
+	Responsible		: Guðbjörn Einarsson
+	Sprint			: LS Retail .NET 2012/Tyr
+	Date created	: 13.09.2011
+
+	Description		: Changes PRICEDISCTABLE table Primary Key to a new Guid key
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected	: PRICEDISCTABLE - PK changed
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF EXISTS (SELECT 'X' FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE  CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'PRICEDISCTABLE' AND CONSTRAINT_NAME = 'PK_PRICEDISCTABLE_1')
+Begin
+	Alter Table PRICEDISCTABLE
+	DROP CONSTRAINT PK_PRICEDISCTABLE_1
+End
+
+IF NOT EXISTS (SELECT 'X' FROM SYSCOLUMNS WHERE ID=OBJECT_ID('PRICEDISCTABLE') AND NAME='ID')
+Begin
+	ALTER TABLE PRICEDISCTABLE ADD ID UniqueIdentifier Default NEWID() NOT NULL 
+	ALTER TABLE PRICEDISCTABLE ADD Primary Key (ID, DATAAREAID)
+End
+
+GO

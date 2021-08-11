@@ -1,0 +1,41 @@
+﻿/*
+
+	Incident No.	: PBI #10195 / SPT #11073
+	Responsible		: Tobias Helmer
+	Sprint			: LS Retail.Net 2012 Mjolnir\DotNet Stream\Baldur 1 June 23-aug 3\Team Æsir
+	Date created	: 07.07.2011
+
+	Description		:	Adding a boolean that determines whether the entries into the numpad are supposed to be in decimals or not
+						Adding a int that determines the amount of decimals that the numpad should provide
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected	: POSFUNCTIONALITYPROFILE					  
+						
+*/
+
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('POSFUNCTIONALITYPROFILE') AND NAME='NUMPADENTRYSTARTSINDECIMALS')
+BEGIN
+	ALTER TABLE [dbo].[POSFUNCTIONALITYPROFILE] ADD NUMPADENTRYSTARTSINDECIMALS tinyint NULL;
+	ALTER TABLE [dbo].[POSFUNCTIONALITYPROFILE] ADD  CONSTRAINT [DF_POSFUNCTIONALITYPROFILE_NUMPADENTRYSTARTSINDECIMALS]  DEFAULT ((0)) FOR [NUMPADENTRYSTARTSINDECIMALS]
+END
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('POSFUNCTIONALITYPROFILE') AND NAME='NUMPADAMOUNTOFDECIMALS')
+BEGIN
+	ALTER TABLE [dbo].[POSFUNCTIONALITYPROFILE] ADD NUMPADAMOUNTOFDECIMALS int NULL;
+	ALTER TABLE [dbo].[POSFUNCTIONALITYPROFILE] ADD  CONSTRAINT [DF_POSFUNCTIONALITYPROFILE_NUMPADAMOUNTOFDECIMALS]  DEFAULT ((2)) FOR [NUMPADAMOUNTOFDECIMALS]
+END
+
+exec spDB_SetFieldDescription_1_0 'POSFUNCTIONALITYPROFILE','NUMPADENTRYSTARTSINDECIMALS','Tells whether the number that is entered into the numpad are supposed to be decimals.'
+exec spDB_SetFieldDescription_1_0 'POSFUNCTIONALITYPROFILE','NUMPADAMOUNTOFDECIMALS','Tells the amount of decimals that the numpad uses.'
+
+-- IF NOT EXISTS (SELECT * FROM POSISLANGUAGETEXT WHERE LANGUAGEID = 'en-US' and TEXTID = 1715)
+-- INSERT INTO POSISLANGUAGETEXT (LANGUAGEID, TEXTID, TEXT, ERRORTEXT, FIRSTINVERSION) VALUES ('en-US', '1715','The Id must not be empty.',0, '8.1.0.0')
+-- UPDATE POSISLANGUAGETEXT SET TEXT = 'The Id must not be empty.', DateUpdated = GetDate() where LANGUAGEID = 'en-US' AND TEXTID = 1715
+GO

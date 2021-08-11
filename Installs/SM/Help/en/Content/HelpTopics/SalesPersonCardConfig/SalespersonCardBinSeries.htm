@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Users|Sales person card">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SalespersonCardBinSeries</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/SalesPersonCardConfig/SalespersonCardBinSeries.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>How to setup sales person cards for a card reader</h1>
+        <p>User can have his/her account linked to a Sales person card which can be swiped using a keyboard scanner, when doing a  transaction in POS. </p>
+        <p class="heading"><b>Example:</b> <![CDATA[ ]]></p>
+        <p>Sales persons card numbers are e.g. 7 characters and all start with the four digits <i>7911</i>. If you would for example swipe a card number <i>7911101</i> then first of all the POS recognizes this as a card since the first four digits scanned match the  bin series of type sales person. Then it checks if there exists a user having the token <i>7911101</i>. To configure a sales person card with bin series do the following:</p>
+        <p style="text-decoration: none;">In Site manager create a new card type called <i>Sales person</i> by selecting <span class="trace">General setup &gt; Payments &gt; Card types</span></p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Operations_Payments.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1010" data-mc-height="727" src="../../Resources/Images/SiteManager/Operations_Payments_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <ol>
+            <li value="1">Select the Add button <img src="../../Resources/Images/add button.png" />. <a href="../../FieldHelp/LookupValues/NewCardTypeDialog.htm">A <i>New card type</i> dialog</a> is displayed.</li>
+            <li value="2">Enter e.g. <i>Sales person card</i> as description.</li>
+            <li value="3">Select type as <i>Sales person</i> and press OK button.</li>
+            <li value="4">Select to <a href="../../FieldHelp/LookupValues/CardTypeView.htm">edit the sales person card type.</a></li>
+            <li value="5">Select to <a href="../../FieldHelp/LookupValues/CardSerieDialog.htm">add a new card number series</a>. Enter <i>7911</i> as the series number from and <i>7911</i> as the series number to. The POS will now recognize that swiped cards having numbers that start with <i>7911</i> are of type sales person and it should look up users who's token matches the whole card number. If you for example swipe a card with a keyboard scanner that has the number <i>7911101</i> then POS will look up a sales person linked to this card number</li>
+        </ol>
+        <p>&#160;</p>
+        <h4 style="text-decoration: underline;"><u style="font-style: normal; text-decoration: none;">Link a user to a sales person card</u>
+        </h4>
+        <ol>
+            <li value="1">Select Security &gt; Users &gt; View all users.</li>
+            <li value="2"><i><a href="../../FieldHelp/User/UsersView.htm"><i>Users</i> list view</a></i> is displayed. Select to edit the user you wish to link to a sales person card .</li>
+            <li value="3"><i><a href="../../FieldHelp/User/User.htm"><i>User</i> card</a></i> is displayed. On the right hand pane  <i>Authentication</i> select <i><a href="../../FieldHelp/User/AuthenticationTokensDialog.htm">Authentication tokens</a></i>.</li>
+            <li value="4">Select to add a new token. A <a href="../../FieldHelp/User/NewAuthenticationTokenDialog.htm">new authentication dialog</a> is displayed. Enter a description for the token, select <i>card</i> as type and in scan the card (token) in the <i>Token</i> text box.</li>
+        </ol>
+        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/User/UserView_ChangePassword.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/User/UserView_ChangePassword_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <h4>Display sales person card information in POS</h4>
+        <p> You have now setup a card for a sales person and are able to scan the card with a keyboard scanner into the POS. The sales person ID and name can now be displayed in the receipt panel and on the customer receipt printout.</p>
+        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SalespersonInfoOnReceiptPanel.png"><img class="MCPopupThumbnail img imgthumbLeft" data-mc-width="599" data-mc-height="320" src="../../Resources/Images/SalespersonInfoOnReceiptPanel_thumb_0_200.png" tabindex="" /></a><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SalespersonInfoOnReceipt.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="487" data-mc-height="585" src="../../Resources/Images/SalespersonInfoOnReceipt_thumb_0_300.png" style="margin-left: 10px;margin-right: 10px;margin-top: 2px;margin-bottom: 10px;" tabindex="" /></a>
+        </p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">Hardware profile must be setup for a card reader before the user is able to scan cards.</p>
+        </div>
+        <h2>See also</h2>
+        <ul>
+            <li value="1"> <a href="../CustomerCardConfig/Customercards.htm">Edit hardware profile</a></li>
+            <li value="2"> <a href="SalespersonCards.htm">How to setup a barcode for a sales person card</a></li>
+            <li value="3"> <a href="../POSSetup/Layout/Changing the Receipt Panel.htm">Changing the receipt panel</a></li>
+            <li value="4"> <a href="../LSOnePOS/SalesPersonOperation.htm">Sales person operations</a></li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">27<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

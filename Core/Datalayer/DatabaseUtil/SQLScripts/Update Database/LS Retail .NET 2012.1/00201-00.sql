@@ -1,0 +1,29 @@
+﻿/*
+
+	Incident No.	: [TFS incident no]
+	Responsible		: Olga Rún Kristjánsdóttir
+	Sprint			: LS Retail .NET 2013\Merkúr
+	Date created	: 15.06.2012
+
+	Description		: Add PosPeriodicDiscount to RBOInventItemRetailGroup and RBOIntventTable
+	
+	
+	Tables affected	: RBOInventItemRetailGroup and RBOIntventTable
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('RBOINVENTITEMRETAILGROUP') AND NAME='POSPERIODICID')
+BEGIN
+	ALTER TABLE dbo.RBOINVENTITEMRETAILGROUP ADD POSPERIODICID varchar(20) NULL
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('RBOINVENTTABLE') AND NAME='POSPERIODICID')
+BEGIN
+	ALTER TABLE dbo.RBOINVENTTABLE ADD POSPERIODICID varchar(20) NULL
+END
+GO

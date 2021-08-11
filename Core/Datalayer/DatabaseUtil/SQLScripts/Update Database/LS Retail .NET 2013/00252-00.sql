@@ -1,0 +1,22 @@
+﻿/*
+
+	Incident No.	: 18926
+	Responsible		: Höður Sigurdór Heiðarsson
+	Sprint			: LS Retail .NET 2013\Earth
+	Date created	: 07.11.2012
+
+	Description		: Add columns for cash customer setting on Store server profile
+	
+	
+	Tables affected	: POSTRANSACTIONSERVICEPROFILE
+						
+*/
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSTRANSACTIONSERVICEPROFILE' AND COLUMN_NAME = 'CASHCUSTOMERSETTING')
+BEGIN
+	ALTER TABLE dbo.POSTRANSACTIONSERVICEPROFILE ADD CASHCUSTOMERSETTING int
+END
+GO

@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Скидка %</value>
+  </data>
+  <data name="PriceUnit" xml:space="preserve">
+    <value>Единица цены</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Цены</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Активировать</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Отключить</value>
+  </data>
+  <data name="DealPrice" xml:space="preserve">
+    <value>Цена сделки</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку предложения скидки?</value>
+  </data>
+  <data name="DeleteDiscountOfferQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку предложения скидки?</value>
+  </data>
+  <data name="DeleteDiscountPeriodQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку предложения скидки?</value>
+  </data>
+  <data name="DeletePriceGroup" xml:space="preserve">
+    <value>Удалить ценовую группу</value>
+  </data>
+  <data name="DeletePromotion" xml:space="preserve">
+    <value>Удалить продвижение</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Удалить строку продвижения</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку продвижения?</value>
+  </data>
+  <data name="DeletePromotionLines" xml:space="preserve">
+    <value>Удалить строки продвижения</value>
+  </data>
+  <data name="DeletePromotionQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку продвижения?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroup" xml:space="preserve">
+    <value>Удалить магазин из ценовой группы</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Неактивно</value>
+  </data>
+  <data name="DiscountOffer" xml:space="preserve">
+    <value>Предложение скидки</value>
+  </data>
+  <data name="DiscountOffers" xml:space="preserve">
+    <value>Предложения скидки</value>
+  </data>
+  <data name="DiscountPercentCannotBeZero" xml:space="preserve">
+    <value>Процент скидки не может быть равен 0</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Скидки:</value>
+  </data>
+  <data name="DiscountType" xml:space="preserve">
+    <value>Тип скидки:</value>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Редактировать все</value>
+  </data>
+  <data name="EditDiscount" xml:space="preserve">
+    <value>Редактировать скидку</value>
+  </data>
+  <data name="EditPriority" xml:space="preserve">
+    <value>Редактировать приоритет</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EditTypeNone" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="ErrorSomeDataHasBeenDeleted" xml:space="preserve">
+    <value>Ошибка: Некоторые данные были удалены</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Товар</value>
+  </data>
+  <data name="LineGroup" xml:space="preserve">
+    <value>Строка группы:</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Нет выбранного магазина по умолчанию</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Периодические скидки:</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Цена/Скидка</value>
+  </data>
+  <data name="PriceGroups" xml:space="preserve">
+    <value>Группы цен</value>
+  </data>
+  <data name="PricesAndDiscounts" xml:space="preserve">
+    <value>Цены и скидки</value>
+  </data>
+  <data name="PriceUnitIncludingTax" xml:space="preserve">
+    <value>Цена единицы, включая налог</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Строки продвижения</value>
+  </data>
+  <data name="PromotionOffer" xml:space="preserve">
+    <value>Предложение продвижения</value>
+  </data>
+  <data name="PromotionOffers" xml:space="preserve">
+    <value>Предложения продвижения</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Продвижения</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Розница</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Розничный отдел</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Розничная группа</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Настройка</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Специальная группа</value>
+  </data>
+  <data name="StandardPriceIsZero" xml:space="preserve">
+    <value>Нулевая стандартная цена</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Стиль</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип:</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Возвратить</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Цена единицы</value>
+  </data>
+  <data name="DeleteDiscountOfferLinesQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные строки предложения скидки?</value>
+  </data>
+  <data name="DeleteLineGroupQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбрнную строку группы?</value>
+  </data>
+  <data name="DeleteLineGroupsQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку групп?</value>
+  </data>
+  <data name="DeleteMixAndMatchQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранное предложение комбинированной скидки ?</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить строку множественной скидки?</value>
+  </data>
+  <data name="DeleteMultibuyLinesQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить строки множественной скидки?</value>
+  </data>
+  <data name="DeleteMultibuyQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить настройку множественной скидки?</value>
+  </data>
+  <data name="DeletePriceGroupQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные строки ценовой группы ?</value>
+  </data>
+  <data name="DeletePromotionLinesQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные строки продвижения?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroupQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный магазин из ценовой группы ?</value>
+  </data>
+  <data name="DiscountOffersDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования предложений по скидкам</value>
+  </data>
+  <data name="MixAndMatchDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования предложений комб. скидки</value>
+  </data>
+  <data name="MultibuyDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования настройки множественной скидки</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesDescription" xml:space="preserve">
+    <value>Используйте эту опцию для управления приоритетами периодических скидок</value>
+  </data>
+  <data name="PriceGroupDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования ценовых групп</value>
+  </data>
+  <data name="PromotionsDescription" xml:space="preserve">
+    <value>Испльзуйте эту опцию для просмотра и редактирования продвижений</value>
+  </data>
+  <data name="RemoveConfigurationQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную конфигурацию?</value>
+  </data>
+  <data name="ValidationPeriodDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования периодов действия</value>
+  </data>
+  <data name="ValidationPeriods" xml:space="preserve">
+    <value>Периоды проверки</value>
+  </data>
+  <data name="CannotSortByThisColumn" xml:space="preserve">
+    <value>Нельзя сортировать по этой колонке</value>
+  </data>
+  <data name="CouldNotDeleteLineGroup" xml:space="preserve">
+    <value>Нельзя удалить строку группы, потому что группа используется</value>
+  </data>
+  <data name="DealPriceDiscountPct" xml:space="preserve">
+    <value>Цена сделки / Процент скидки</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Для магазина по умолчанию не назначена налоговая группа</value>
+  </data>
+  <data name="DeleteDiscountOffer" xml:space="preserve">
+    <value>Удалить предложение скидки</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Удалить строку предложения скидки</value>
+  </data>
+  <data name="DeleteDiscountOfferLines" xml:space="preserve">
+    <value>Удалить строки предложения скидки</value>
+  </data>
+  <data name="DeleteDiscountPeriod" xml:space="preserve">
+    <value>Удалить период скидки</value>
+  </data>
+  <data name="DeleteLineGroup" xml:space="preserve">
+    <value>Удалить строку группы</value>
+  </data>
+  <data name="DeleteLineGroups" xml:space="preserve">
+    <value>Удалить строку групп</value>
+  </data>
+  <data name="DeleteMixAndMatch" xml:space="preserve">
+    <value>Удалить предложение комбинированной скидки</value>
+  </data>
+  <data name="DeleteMultibuy" xml:space="preserve">
+    <value>Удалить настройку множественной скидки</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Удалить строку множественной скидки</value>
+  </data>
+  <data name="DeleteMultibuyLines" xml:space="preserve">
+    <value>Удалить строки множественной скидки</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Не активно</value>
+  </data>
+  <data name="DiscountOfferLines" xml:space="preserve">
+    <value>Строки предложения скидки</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Активно</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Активно:</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Товару не назначена налоговая группа</value>
+  </data>
+  <data name="LevelMustBeAPositiveNumber" xml:space="preserve">
+    <value>Уровень должен быть положительным числом</value>
+  </data>
+  <data name="MBConfigHeaderPercent" xml:space="preserve">
+    <value>Выберите уникальное мин. кол-во и процент скидки</value>
+  </data>
+  <data name="MixAndMatch" xml:space="preserve">
+    <value>Комбинированная скидка</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Строка групп комбинированной скидки</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Строки комбинированной скидки</value>
+  </data>
+  <data name="MixMatch" xml:space="preserve">
+    <value>Комбинированная скидка</value>
+  </data>
+  <data name="Multibuy" xml:space="preserve">
+    <value>Множественная скидка</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Конфигурации множественной скидки</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Строки множественной скидки</value>
+  </data>
+  <data name="OfferLinesLoaded" xml:space="preserve">
+    <value>#1 строк загружено (из #2)</value>
+  </data>
+  <data name="PeriodicDiscountPriorities" xml:space="preserve">
+    <value>Приоритеты периодической скидки</value>
+  </data>
+  <data name="PriceGroupExists" xml:space="preserve">
+    <value>Ценовая группа с этим ID уже существует</value>
+  </data>
+  <data name="PricesDescription" xml:space="preserve">
+    <value>Отображать подменю для цен связанных операций</value>
+  </data>
+  <data name="PriorityAlreadyInUse" xml:space="preserve">
+    <value>Этот приоритет уже используется другой периодической скидкой</value>
+  </data>
+  <data name="PriorityAlreadyInUseNextIs" xml:space="preserve">
+    <value>Этот приоритет уже используется другой периодической скидкой. Следующий доступный приоритет #1</value>
+  </data>
+  <data name="RemoveConfiguration" xml:space="preserve">
+    <value>Удалить конфигурацию</value>
+  </data>
+  <data name="ShowOffer" xml:space="preserve">
+    <value>Показать предложение</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Специальный</value>
+  </data>
+  <data name="StoreAlreadyInPriceGroup" xml:space="preserve">
+    <value>Выбранный магазин уже есть в выбранной ценовой группе</value>
+  </data>
+  <data name="StoresInPriceGroups" xml:space="preserve">
+    <value>Магазины в ценовых группах</value>
+  </data>
+  <data name="ThatMinimumQuantityExists" xml:space="preserve">
+    <value>Это минимальное количество существует в базе данных</value>
+  </data>
+  <data name="TimeDoesNotEndAfterMidnight" xml:space="preserve">
+    <value>Время не закончится после полуночи</value>
+  </data>
+  <data name="TimeEndsAfterMidnight" xml:space="preserve">
+    <value>Время закончится после полуночи</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Номер варианта</value>
+  </data>
+  <data name="ViewPriorities" xml:space="preserve">
+    <value>Просмотр свойств</value>
+  </data>
+  <data name="AccountSelectionCannotBeEmpty" xml:space="preserve">
+    <value>Выбор аккаунта не может быть пустым</value>
+  </data>
+  <data name="DiscountExceedsPrice" xml:space="preserve">
+    <value>Скидка не может превышать стандартную цену</value>
+  </data>
+  <data name="ItemRelation" xml:space="preserve">
+    <value>Связь с товаром</value>
+  </data>
+  <data name="NoDiscountsAreActive" xml:space="preserve">
+    <value>Нет активных скидок</value>
+  </data>
+  <data name="NoDiscountsAreConfigured" xml:space="preserve">
+    <value>Нет сконфигурированных скидок</value>
+  </data>
+  <data name="OfferCount" xml:space="preserve">
+    <value>#1 предложений найдено</value>
+  </data>
+  <data name="OfferLinesCount" xml:space="preserve">
+    <value>#1 строк найдено</value>
+  </data>
+  <data name="OneDiscountIsExpiringThisWeek" xml:space="preserve">
+    <value>1 скидка завершится на этой неделе</value>
+  </data>
+  <data name="OneDiscountsIsActive" xml:space="preserve">
+    <value>1 скидка активна</value>
+  </data>
+  <data name="XDiscountsAreActive" xml:space="preserve">
+    <value>#1 скидок активно</value>
+  </data>
+  <data name="XDiscountsAreExpiringThisWeek" xml:space="preserve">
+    <value>#1 скидок завершатся на этой неделе</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Вариант</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Приоритет:</value>
+  </data>
+  <data name="MovePriorityDown" xml:space="preserve">
+    <value>Переместить вниз</value>
+  </data>
+  <data name="MovePriorityUp" xml:space="preserve">
+    <value>Переместить вверх</value>
+  </data>
+  <data name="AmountMayNotBeHigherThanBasePrice" xml:space="preserve">
+    <value>Сумма скидки не иожет быть выше, чем базовая цена товара</value>
+  </data>
+  <data name="BarcodeAlreadyAssignedToAnOffer" xml:space="preserve">
+    <value>Этот штрих код уже назначен предложению.</value>
+  </data>
+  <data name="DiscountOffersTooltipDescription" xml:space="preserve">
+    <value>Управление предложениями скидки для товаров, групп и департаментов</value>
+  </data>
+  <data name="DiscountsDescription" xml:space="preserve">
+    <value>Отображает подменю для скидочных операций</value>
+  </data>
+  <data name="DiscountValuesAreMissing" xml:space="preserve">
+    <value>Прпопущено значение скидки</value>
+  </data>
+  <data name="MixAndMatchTooltipDescription" xml:space="preserve">
+    <value>Настройка mix and match предложений для скидки любой комбинации товаров</value>
+  </data>
+  <data name="MultibuyTooltipDescription" xml:space="preserve">
+    <value>Настройка предложений количественной скидки</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesTooltipDescription" xml:space="preserve">
+    <value>Управление приоритетами для всех предложения периодической скидки. Приоритет используется при множественных скидках, включая тот же самы товар .</value>
+  </data>
+  <data name="PeriodicDiscountsManage" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="PriceValuesAreMissing" xml:space="preserve">
+    <value>Пропущено значение цены</value>
+  </data>
+  <data name="PromotionsTooltipDescription" xml:space="preserve">
+    <value>Управление продвижениями для товаров, групп и департаментов</value>
+  </data>
+  <data name="RelationExists" xml:space="preserve">
+    <value>Строка предложения с этой связью уже существует</value>
+  </data>
+  <data name="RetailItemNotExistsError" xml:space="preserve">
+    <value>Розничный товар, на который ссылается эта записиь, был удален. Пожалуйста, удалите эту запись для разрешения проблемы.</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Выбрать операцию</value>
+  </data>
+  <data name="ValidationPeriodTooltipDescription" xml:space="preserve">
+    <value>Управление активными периодами для предложений и продвижений </value>
+  </data>
+  <data name="VariantNeedsToBeSelected" xml:space="preserve">
+    <value>Вариант необходимо выбирать для товаров, имеющих варианты</value>
+  </data>
+  <data name="VariationNotExistsError" xml:space="preserve">
+    <value>Вариация, на которую ссылается данная запись, была удалена. Пожалуйста, удалите данную запись для разрешения проблемы</value>
+  </data>
+  <data name="ViewConflictingPriorities" xml:space="preserve">
+    <value>Этот приоритет используется другой периодической скидкой. Кликните здась для просмотра всех приоритетов</value>
+  </data>
+</root>

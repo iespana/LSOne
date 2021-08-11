@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1D36401-6D71-429C-9640-C36C7AB7353B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.Terminals</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.Terminals</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSPay.Client">
+      <HintPath>..\..\Build\bin\LSPay.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSPay.Domain">
+      <HintPath>..\..\Build\bin\LSPay.Domain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Connections.Abstractions">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.Connections.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Client">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.Http.Connections.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Common">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.Http.Connections.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Common">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.SignalR.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Protocols.Json">
+      <HintPath>..\..\Build\bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>..\..\Build\bin\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <Private>False</Private>
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <Private>False</Private>
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+      <Private>False</Private>
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives">
+      <HintPath>..\..\Build\bin\Microsoft.Extensions.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\Build\bin\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\..\Build\bin\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines">
+      <HintPath>..\..\Build\bin\System.IO.Pipelines.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\Build\bin\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\Build\bin\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>..\..\Build\bin\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\Build\bin\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\Build\bin\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\..\Build\bin\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\..\Build\bin\System.Text.Encodings.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\Build\bin\System.Text.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+      <HintPath>..\..\Build\bin\System.Threading.Channels.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\Build\bin\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\Build\bin\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\NewGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewGroup.Designer.cs">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTerminalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTerminalDialog.Designer.cs">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTerminalGroupConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTerminalGroupConnection.Designer.cs">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TerminalSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerminalSearchPanel.designer.cs">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerminalSearchPanelFactory.cs" />
+    <Compile Include="ViewPages\TerminalEftPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalEftPage.Designer.cs">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\TerminalLsPayPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalLsPayPage.Designer.cs">
+      <DependentUpon>TerminalLsPayPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewPages\TerminalLsPayPage.resx">
+      <DependentUpon>TerminalLsPayPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="ViewPages\StoreTerminalsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTerminalsPage.Designer.cs">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\TerminalCustomerDisplayPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalCustomerDisplayPage.Designer.cs">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSettingsPage.Designer.cs">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsAuditView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsAuditView.Designer.cs">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TerminalsGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TerminalsGroupView.Designer.cs">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TerminalsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TerminalsView.Designer.cs">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TerminalView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TerminalView.designer.cs">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewGroup.bg.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.cs.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.da.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.de.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.el.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.en-ZA.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.es-MX.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.es.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.fi.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.fr.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.hi.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.is.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.it.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.ja.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.ko.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.nb-NO.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.nl.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.pl.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.pt-BR.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.ru.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.sv.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.zh-CHS.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.zh-CHT.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.bg.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.cs.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.da.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.de.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.el.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.en-ZA.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.es-MX.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.es.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.fi.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.fr.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.hi.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.is.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.it.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.ja.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.ko.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.nb-NO.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.nl.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.pl.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.pt-BR.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.ru.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.sv.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.zh-CHS.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newterminaldialog.zh-CHT.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.bg.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.cs.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.da.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.de.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.el.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.en-ZA.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.es-MX.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.es.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.fi.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.fr.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.hi.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.is.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.it.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.ja.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.ko.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.nb-NO.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.nl.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.pl.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.pt-BR.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.ru.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.sv.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.zh-CHS.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.zh-CHT.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="terminalsearchpanel.bg.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.cs.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.da.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.de.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.el.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.en-ZA.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.es-MX.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.es.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.fi.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.fr.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.hi.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.is.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.it.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.ja.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.ko.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.nb-NO.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.nl.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.pl.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.pt-BR.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminalSearchPanel.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.ru.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.sv.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.zh-CHS.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.zh-CHT.resx">
+      <DependentUpon>TerminalSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.bg.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.cs.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.da.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.de.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.el.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.en-ZA.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.es-MX.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.es.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.fi.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.fr.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.hi.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.is.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.it.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.ja.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.ko.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.nb-NO.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.nl.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.pl.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.pt-BR.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.bg.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.cs.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.da.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.de.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.el.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.en-ZA.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.es-MX.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.es.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.fi.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.fr.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.hi.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.is.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.it.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.ja.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.ko.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.nb-NO.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.nl.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.pl.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.pt-BR.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTerminalsPage.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.ru.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.sv.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.zh-CHS.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.zh-CHT.resx">
+      <DependentUpon>StoreTerminalsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.bg.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.cs.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.da.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.de.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.el.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.en-ZA.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.es-MX.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.es.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.fi.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.fr.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.hi.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalCustomerDisplayPage.is.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.it.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.ja.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.ko.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.nb-NO.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.nl.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.pl.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.pt-BR.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalCustomerDisplayPage.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.ru.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.sv.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.zh-CHS.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.zh-CHT.resx">
+      <DependentUpon>TerminalCustomerDisplayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.ru.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.sv.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.zh-CHS.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.zh-CHT.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.bg.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.cs.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.da.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.de.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.el.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.en-ZA.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.es-MX.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.es.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.fi.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.fr.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.hi.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.is.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.it.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.ja.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.ko.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.nb-NO.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.nl.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.pl.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.pt-BR.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.ru.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.sv.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.zh-CHS.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalsettingspage.zh-CHT.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.zh-CHS.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.zh-CHT.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.bg.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.cs.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.da.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.de.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.el.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.en-ZA.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.es-MX.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.es.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.fi.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.fr.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.hi.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.is.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.it.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.ja.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.ko.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.nb-NO.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.nl.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.pl.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.pt-BR.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.ru.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.sv.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.zh-CHS.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.zh-CHT.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.bg.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.cs.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.da.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.de.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.el.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.en-ZA.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.es-MX.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.es.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.fi.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.fr.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.hi.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.is.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.it.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.ja.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.ko.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.nb-NO.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.nl.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.pl.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.pt-BR.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.ru.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.sv.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.zh-CHS.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.zh-CHT.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.bg.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.cs.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.da.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.de.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.el.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.en-ZA.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.es-MX.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.es.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.fi.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.fr.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.hi.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.is.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.it.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.ja.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.ko.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.nb-NO.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.nl.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\terminalview.pl.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.pt-BR.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.ru.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.sv.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.zh-CHS.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.zh-CHT.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Profiles16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewTerminalImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terminal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViewAuditLogImage16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="terminalsearchpanel.nl-BE.resx">
+      <DependentUpon>terminalsearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="terminalsearchpanel.zh-CN.resx">
+      <DependentUpon>terminalsearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.nl-BE.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.zh-CN.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.nl-BE.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.zh-CN.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.nl-BE.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.zh-CN.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.nl-BE.resx">
+      <DependentUpon>storeterminalspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.zh-CN.resx">
+      <DependentUpon>storeterminalspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.nl-BE.resx">
+      <DependentUpon>terminalcustomerdisplaypage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.zh-CN.resx">
+      <DependentUpon>terminalcustomerdisplaypage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.nl-BE.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.zh-CN.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.nl-BE.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.zh-CN.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.bg.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.cs.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.da.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.de.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.el.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.en-ZA.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.es-MX.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.es.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.fi.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.fr.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.hi.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.is.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.it.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.ja.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.ko.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.nb-NO.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.nl-BE.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.nl.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.pl.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.pt-BR.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.ru.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.sv.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.zh-CN.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.nl-BE.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.zh-CN.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.nl-BE.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.zh-CN.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.nl-BE.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.zh-CN.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new terminal_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new terminal_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="terminalsearchpanel.vi-VN.resx">
+      <DependentUpon>terminalsearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewGroup.vi-VN.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalDialog.vi-VN.resx">
+      <DependentUpon>NewTerminalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTerminalGroupConnection.vi-VN.resx">
+      <DependentUpon>NewTerminalGroupConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storeterminalspage.vi-VN.resx">
+      <DependentUpon>storeterminalspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\terminalcustomerdisplaypage.vi-VN.resx">
+      <DependentUpon>terminalcustomerdisplaypage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalEftPage.vi-VN.resx">
+      <DependentUpon>TerminalEftPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSettingsPage.vi-VN.resx">
+      <DependentUpon>TerminalSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsAuditView.vi-VN.resx">
+      <DependentUpon>OperationsAuditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsGroupView.vi-VN.resx">
+      <DependentUpon>TerminalsGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalsView.vi-VN.resx">
+      <DependentUpon>TerminalsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TerminalView.vi-VN.resx">
+      <DependentUpon>TerminalView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

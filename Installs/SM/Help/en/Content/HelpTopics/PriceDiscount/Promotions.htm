@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Prices and Discounts|Discounts|Periodic Discounts and Promotions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Promotions</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/PriceDiscount/Promotions.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Promotions</h1>
+        <p>Promotions are set up so that the LS POS is able to sell items on a promotional price in a given period and with no manual intervention. The promotion can be a discount of the retail price or a fixed price for the item. </p>
+        <p>When the LS POS sells an item that triggers a promotion, the item price changes to the promotion price automatically. When items are sold in the LS POS with the promotion price, the receipt prints the item and the promotion price. No discount information and no information about the item’s regular price are printed on the receipt. The promotion rule is created and configured in the Site Manager.</p>
+        <p>The system can have an unlimited number of promotional offers where each promotions offer is set up separately. Each promotions offer has a validation period and set of offer lines which can be of several types, for example Item and Retail groups.</p>
+        <p>To open promotions select <b>Retail &gt; Price/discount &gt; Promotions</b></p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/PeriodicDiscounts/PromotionsView.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/PeriodicDiscounts/PromotionsView_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>Promotion offer card:</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/PeriodicDiscounts/PromotionDialog.png"><img class="MCPopupThumbnail img imgthumbCenter" data-mc-width="492" data-mc-height="451" src="../../Resources/Images/SiteManager/PeriodicDiscounts/PromotionDialog_thumb_0_150.png" tabindex="" /></a>
+        </p>
+        <p>The standard price and standard price with tax are displayed in the first two fields.</p>
+        <p>This part includes two selections, Discount value and Price value. New lines are by default set as discount value. The user can overwrite the values on each promotion line of the promotion group.</p>
+        <p>One example of a promotion group could be a number of shoe items discounted for 5%. Then the promotion group is set up for a 5% discount. One of these shoes should, however, have an extra discount of 10%. The user edits this promotion line and has the discount percentage for this line set at 10. If another item is sold for a fixed price of 12 then that promotion line will have Price value selected and the promotion price tax will be 12.</p>
+        <div class="MCDropDown MCDropDown_Open dropDown"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHead dropDownHeadtab MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />LS POS Example: Promotion Offers</a>
+            <div class="MCDropDownBody dropDownBody">
+                <p>This chapter explains how a Promotion offer works on the LS POS.</p>
+                <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+                    <li value="1">Before beginning this example, make sure that the promotional offer Soft drink promotion has the status Disabled.</li>
+                    <li value="2">Sell item Soda Lime 33 cl in the LS POS and use Item Search to find the item or enter Item ID 30040. </li>
+                    <li value="3">The receipt panel:<br /><img src="../../Resources/Images/LS One Training Guide_2013/030000C6_244x41.png" style="visibility: visible;width: 244;height: 41;" /><br /><ul class="nested"><li style="list-style-type: disc;" value="1">No discount is given to the item since the offer has not been activated.</li></ul></li>
+                </ol>
+                <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+                    <li value="4">Finish the sale.</li>
+                    <li value="5">Go into the Site Manager and activate the promotion offer: Soft drink promotion.</li>
+                    <li value="6">Go into the LS POS and sell item Soda Lime 33 cl., use Item Search to find the item or enter Item ID 30040.<br /><img src="../../Resources/Images/LS One Training Guide_2013/030000C7_244x40.png" style="visibility: visible;width: 244;height: 40;" /></li>
+                    <li value="7">Finish the sale.</li>
+                </ol>
+                <p><span class="Note">Note:</span> When the item is sold with the promotion offer, the receipt item line is almost identical to the item line sold with no offer; the only difference is in the line’s total. This is how a promotional offer behaves, no extra information is printed, the item’s price and line’s total is changed.</p>
+                <div class="Note1">
+                    <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+                    <p class="note">When the item is sold with the promotion offer, the receipt item line is almost identical to the item line sold with no offer; the only difference is in the line’s total. This is how a promotional offer behaves, no extra information is printed, the item’s price and line’s total is changed.</p>
+                </div>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">24<span class="sup">th</span> October 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

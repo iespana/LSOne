@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Cộng thêm</value>
+  </data>
+  <data name="Bill" xml:space="preserve">
+    <value>Hóa đơn</value>
+  </data>
+  <data name="CannotDeleteCardType" xml:space="preserve">
+    <value>Không thể xóa loại thẻ vì nó đang được sử dụng</value>
+  </data>
+  <data name="CannotDeleteCurrency" xml:space="preserve">
+    <value>Tiền tệ mặc định của công ty không thể bị xóa</value>
+  </data>
+  <data name="CannotDeletePaymentMethod" xml:space="preserve">
+    <value>Phương thức thanh toán này đang được sử dụng và không thể xóa</value>
+  </data>
+  <data name="CannotDeleteUnit" xml:space="preserve">
+    <value>Không thể xóa đơn vị. Đơn vị đang được sử dụng bởi hệ thống</value>
+  </data>
+  <data name="CannotRevertLimitations" xml:space="preserve">
+    <value>Xin lưu ý rằng hạn mức số thẻ không thể được hoàn nguyên</value>
+  </data>
+  <data name="CannotRevertSeries" xml:space="preserve">
+    <value>Xin lưu ý rằng chuỗi số thẻ không thể được hoàn nguyên</value>
+  </data>
+  <data name="CardNumberSeries" xml:space="preserve">
+    <value>Sê-ri số thẻ</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Loại thẻ</value>
+  </data>
+  <data name="CardTypeDescriptionExists" xml:space="preserve">
+    <value>Mô tả loại thẻ đã tồn tại</value>
+  </data>
+  <data name="CardTypes" xml:space="preserve">
+    <value>Các loại thẻ</value>
+  </data>
+  <data name="CardTypesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa các loại thẻ</value>
+  </data>
+  <data name="CardTypesTooltipDescription" xml:space="preserve">
+    <value>Quản lý các loại thẻ và số sê-ri của chúng để POS có thể phát hiện loại thẻ nào đang được quẹt</value>
+  </data>
+  <data name="CashDeclarationExists" xml:space="preserve">
+    <value>Một khai báo tiền mặt với các thuộc tính được chọn đã tồn tại cho loại tiền được chọn</value>
+  </data>
+  <data name="Coin" xml:space="preserve">
+    <value>Đồng xu</value>
+  </data>
+  <data name="CompanyCurrencyMissing" xml:space="preserve">
+    <value>Tiền tệ công ty bị thiếu</value>
+  </data>
+  <data name="CompanyCurrencyMissingInfo" xml:space="preserve">
+    <value>Thông tin tiền tệ của công ty bị thiếu. Bạn có muốn chỉnh sửa tiền tệ của công ty?</value>
+  </data>
+  <data name="Conversions" xml:space="preserve">
+    <value>Chuyển đổi</value>
+  </data>
+  <data name="CopyID" xml:space="preserve">
+    <value>Sao chép ID</value>
+  </data>
+  <data name="CopyLimitations" xml:space="preserve">
+    <value>Sao chép hạn mức</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Không thể kết nối với dịch vụ Trang web</value>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Tiền tệ</value>
+  </data>
+  <data name="CurrencyExists" xml:space="preserve">
+    <value>Loại tiền này đã tồn tại trong cơ sở dữ liệu</value>
+  </data>
+  <data name="CurrencyUnits" xml:space="preserve">
+    <value>Đơn vị tiền tệ</value>
+  </data>
+  <data name="CustomerCard" xml:space="preserve">
+    <value>Thẻ khách Hàng</value>
+  </data>
+  <data name="CustomerCards" xml:space="preserve">
+    <value>Thẻ khách hàng</value>
+  </data>
+  <data name="CustomerCardsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để liên kết tài khoản khách hàng với số thẻ</value>
+  </data>
+  <data name="CustomerCardsTooltipDescription" xml:space="preserve">
+    <value>Quản lý thẻ khách hàng và liên kết tài khoản khách hàng với số thẻ khách hàng</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DeleteCardNumberSerie" xml:space="preserve">
+    <value>Xóa sê-ri số thẻ </value>
+  </data>
+  <data name="DeleteCardNumberSerieQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa sê-ri số thẻ đã chọn?</value>
+  </data>
+  <data name="DeleteCardType" xml:space="preserve">
+    <value>Xóa loại thẻ</value>
+  </data>
+  <data name="DeleteCardTypeQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa loại thẻ đã chọn?</value>
+  </data>
+  <data name="DeleteCashDeclaration" xml:space="preserve">
+    <value>Xóa khai báo tiền mặt</value>
+  </data>
+  <data name="DeleteCashDeclarationQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa  khai báo tiền mặt đã chọn?</value>
+  </data>
+  <data name="DeleteCurrency" xml:space="preserve">
+    <value>Xóa tiền tệ</value>
+  </data>
+  <data name="DeleteCurrencyQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa loại tiền đã chọn?</value>
+  </data>
+  <data name="DeleteCustomerCard" xml:space="preserve">
+    <value>Xóa thẻ khách hàng</value>
+  </data>
+  <data name="DeleteCustomerCardQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa thẻ khách hàng đã chọn?</value>
+  </data>
+  <data name="DeleteEFTMapping" xml:space="preserve">
+    <value>Xóa tham chiếu EFT</value>
+  </data>
+  <data name="DeleteEFTMappingQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa tham chiếu EFT đã chọn không?</value>
+  </data>
+  <data name="DeleteExchangeRate" xml:space="preserve">
+    <value>Xóa tỷ giá hối đoái</value>
+  </data>
+  <data name="DeleteExchangeRateQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa tỷ giá hối đoái đã chọn?</value>
+  </data>
+  <data name="DeleteImageQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hình ảnh đã chọn?</value>
+  </data>
+  <data name="DeletePaymentLimitation" xml:space="preserve">
+    <value>Xóa hạn mức thanh toán</value>
+  </data>
+  <data name="DeletePaymentLimitationQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa (các) hạn mức thanh toán đã chọn không?</value>
+  </data>
+  <data name="DeletePaymentMethod" xml:space="preserve">
+    <value>Xóa phương thức thanh toán</value>
+  </data>
+  <data name="DeletePaymentMethodQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa phương thức thanh toán đã chọn?</value>
+  </data>
+  <data name="DeletePOSUserCard" xml:space="preserve">
+    <value>Xóa thẻ người dùng POS</value>
+  </data>
+  <data name="DeletePOSUserCardQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa thẻ người dùng POS đã chọn không?</value>
+  </data>
+  <data name="DeleteRemoteHost" xml:space="preserve">
+    <value>Xóa máy chủ từ xa</value>
+  </data>
+  <data name="DeleteRemoteHostQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa máy chủ từ xa đã chọn?</value>
+  </data>
+  <data name="DeleteUnit" xml:space="preserve">
+    <value>Xóa đơn vị</value>
+  </data>
+  <data name="DeleteUnitConversionRule" xml:space="preserve">
+    <value>Xóa quy tắc chuyển đổi đơn vị</value>
+  </data>
+  <data name="DeleteUnitConversionRuleQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa quy tắc chuyển đổi đơn vị đã chọn không?</value>
+  </data>
+  <data name="DeleteUnitQuestion" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa mặt hàng đã chọn?</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="EditCurrencies" xml:space="preserve">
+    <value>Tiền tệ</value>
+  </data>
+  <data name="EditCurrenciesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa tiền tệ</value>
+  </data>
+  <data name="EditCurrenciesTooltipDescription" xml:space="preserve">
+    <value>Quản lý tất cả các loại tiền được chấp nhận thanh toán trong các cửa hàng và tỷ giá hối đoái của chúng</value>
+  </data>
+  <data name="EditEFTMappingsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa tham chiếu EFT</value>
+  </data>
+  <data name="EditEFTMappingsTooltipDescription" xml:space="preserve">
+    <value>Quản lý tham chiếu EFT để tham chiếu các loại thẻ tới các loại thanh toán</value>
+  </data>
+  <data name="EditImageHeader" xml:space="preserve">
+    <value>Sửa hình ảnh.</value>
+  </data>
+  <data name="EditIncomeExpenseAccount" xml:space="preserve">
+    <value>Tài khoản thu nhập và tài khoản chi phí</value>
+  </data>
+  <data name="EFTMapping" xml:space="preserve">
+    <value>Tham chiếu EFT</value>
+  </data>
+  <data name="EFTMappings" xml:space="preserve">
+    <value>Các tham chiếu EFT</value>
+  </data>
+  <data name="ErrorCardNumberLength" xml:space="preserve">
+    <value>Số thẻ không được quá 30 chữ số</value>
+  </data>
+  <data name="ErrorDeletingUnit" xml:space="preserve">
+    <value>Lỗi xóa đơn vị</value>
+  </data>
+  <data name="ExchangeRate" xml:space="preserve">
+    <value>Tỷ giá hối đoái</value>
+  </data>
+  <data name="ExchangeRateExists" xml:space="preserve">
+    <value>Tỷ giá hối đoái với các loại tiền tệ được chọn và ngày bắt đầu đã tồn tại</value>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>Thiết lập chung</value>
+  </data>
+  <data name="GlobalRule" xml:space="preserve">
+    <value>Quy tắc toàn cầu</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Các nhóm:</value>
+  </data>
+  <data name="HardwareProfileNotSet" xml:space="preserve">
+    <value>Để quẹt thẻ khách hàng, cấu hình phần cứng Trình quản lý Site phải được cài đặt.</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>ID bị thiếu</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>ID bị thiếu. Bạn có muốn tự động tạo ID không?</value>
+  </data>
+  <data name="ImageBank" xml:space="preserve">
+    <value>Ngân hàng hình ảnh</value>
+  </data>
+  <data name="ImageBankTooltipDescription" xml:space="preserve">
+    <value>Duy trì hình ảnh được sử dụng trong LS One</value>
+  </data>
+  <data name="ImageDescription" xml:space="preserve">
+    <value>Miêu tả</value>
+  </data>
+  <data name="ImageDescriptionExists" xml:space="preserve">
+    <value>Một hình ảnh với mô tả tương tự đã tồn tại!</value>
+  </data>
+  <data name="ImageType" xml:space="preserve">
+    <value>Loại:</value>
+  </data>
+  <data name="ImageTypeAll" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="ImageTypeButton" xml:space="preserve">
+    <value>Nút</value>
+  </data>
+  <data name="ImageTypeLogo" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="ImageTypeOther" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="ImageTypeReceiptLogo" xml:space="preserve">
+    <value>Logo biên lai</value>
+  </data>
+  <data name="IncomeExpenseAccountDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa tài khoản thu nhập và tài khoản chi phí</value>
+  </data>
+  <data name="ItemNumber" xml:space="preserve">
+    <value>Mã mặt hàng:</value>
+  </data>
+  <data name="LimitationCodeAlreadyExists" xml:space="preserve">
+    <value>Mã hạn mức {0} đã tồn tại</value>
+  </data>
+  <data name="LimitationCodeNeedsToBeEntered" xml:space="preserve">
+    <value>Mã hạn mức cần được chọn</value>
+  </data>
+  <data name="Limitations" xml:space="preserve">
+    <value>Hạn mức</value>
+  </data>
+  <data name="limitType_Everything" xml:space="preserve">
+    <value>Mọi thứ</value>
+  </data>
+  <data name="limitType_Item" xml:space="preserve">
+    <value>Mặt hàng</value>
+  </data>
+  <data name="limitType_RetailDepartment" xml:space="preserve">
+    <value>Bộ phận bán lẻ</value>
+  </data>
+  <data name="limitType_RetailGroup" xml:space="preserve">
+    <value>Nhóm bán lẻ</value>
+  </data>
+  <data name="limitType_SpecialGroup" xml:space="preserve">
+    <value>Nhóm đặc biệt</value>
+  </data>
+  <data name="LookupValueManagement" xml:space="preserve">
+    <value>Tra cứu quản lý giá trị</value>
+  </data>
+  <data name="ManagePaymentMethod" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="ManyPaymentTypes" xml:space="preserve">
+    <value>#1 các loại thanh toán đã được định cấu hình</value>
+  </data>
+  <data name="MinCannotBeHigherThanMax" xml:space="preserve">
+    <value>Số thập phân tối thiểu không thể lớn hơn số thập phân tối đa</value>
+  </data>
+  <data name="NewImageHeader" xml:space="preserve">
+    <value>Hình ảnh mới</value>
+  </data>
+  <data name="NewPaymentMethod" xml:space="preserve">
+    <value>Mới</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="NoPaymentTypes" xml:space="preserve">
+    <value>Không có loại thanh toán nào được định cấu hình</value>
+  </data>
+  <data name="NotBothPreAndSuffixAllowed" xml:space="preserve">
+    <value>Không được phép chỉ định cả tiền tố và hậu tố</value>
+  </data>
+  <data name="OnePaymentType" xml:space="preserve">
+    <value>1 loại thanh toán đã được định cấu hình</value>
+  </data>
+  <data name="OnlyCharAndNumbers" xml:space="preserve">
+    <value>ID đơn vị chỉ có thể chứa các chữ cái và chữ số</value>
+  </data>
+  <data name="PaymentLimitationExists" xml:space="preserve">
+    <value>Một bản ghi có cùng mã hạn mức và cùng hạn mức tồn tại</value>
+  </data>
+  <data name="PaymentLimitations" xml:space="preserve">
+    <value>Hạn mức thanh toán</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Thanh toán</value>
+  </data>
+  <data name="PaymentType" xml:space="preserve">
+    <value>Loại thanh toán</value>
+  </data>
+  <data name="PaymentTypes" xml:space="preserve">
+    <value>Các loại thanh toán</value>
+  </data>
+  <data name="PaymentTypesDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa các loại thanh toán</value>
+  </data>
+  <data name="PaymentTypesTooltipDescription" xml:space="preserve">
+    <value>Quản lý các loại thanh toán và hạn mức của chúng. Các loại thanh toán sau đó được thêm vào các cửa hàng</value>
+  </data>
+  <data name="POSExchangeRate" xml:space="preserve">
+    <value>Tỷ giá ngoại tệ POS</value>
+  </data>
+  <data name="POSUserCard" xml:space="preserve">
+    <value>Thẻ người dùng POS</value>
+  </data>
+  <data name="POSUserCards" xml:space="preserve">
+    <value>Các thẻ người dùng POS</value>
+  </data>
+  <data name="POSUserCardsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để liên kết tài khoản người dùng POS với số thẻ</value>
+  </data>
+  <data name="PreOrSuffixNeeded" xml:space="preserve">
+    <value>Tiền tố hoặc hậu tố cần phải được điền</value>
+  </data>
+  <data name="RemoteHosts" xml:space="preserve">
+    <value>Máy chủ từ xa</value>
+  </data>
+  <data name="RemoteHostsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để xem hoặc chỉnh sửa máy chủ từ xa</value>
+  </data>
+  <data name="SameUnit" xml:space="preserve">
+    <value>Bạn không thể chuyển đổi từ một đơn vị sang cùng một đơn vị</value>
+  </data>
+  <data name="SerieExist" xml:space="preserve">
+    <value>Một serie với phạm vi bắt đầu và kết thúc đã tồn tại</value>
+  </data>
+  <data name="SeriesNumberEquallyLong" xml:space="preserve">
+    <value>Số Serie bắt đầu và kết thúc phải dài bằng nhau</value>
+  </data>
+  <data name="SeriesNumberToNotSmallerThanFrom" xml:space="preserve">
+    <value>Số Serie kết thúc không thể thấp hơn số sê-ri bắt đầu</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="TheLimitationCannotBeDeletedAsItIsInUseOnAtLeastOneStore" xml:space="preserve">
+    <value>Mã hạn mức đang sử dụng phải có ít nhất một dòng. Mã hạn mức này đang được sử dụng trên cửa hàng {0}</value>
+  </data>
+  <data name="UnitConversionDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để quản lý chuyển đổi đơn vị</value>
+  </data>
+  <data name="UnitConversionExists" xml:space="preserve">
+    <value>Quy tắc chuyển đổi đơn vị đã tồn tại cho (các) mặt hàng và đơn vị của bạn</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>Không tồn tại quy tắc chuyển đổi đơn vị để chuyển đổi từ đơn vị đã chọn sang đơn vị khoảng không quảng cáo cho mục đã chọn. Bạn có muốn tạo quy tắc?</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Quy tắc chuyển đổi đơn vị bị thiếu</value>
+  </data>
+  <data name="UnitConversions" xml:space="preserve">
+    <value>Chuyển đổi Đơn vị </value>
+  </data>
+  <data name="UnitConversionTooltipDescription" xml:space="preserve">
+    <value>Tạo quy tắc chuyển đổi đơn vị cụ thể hoặc toàn cầu</value>
+  </data>
+  <data name="UnitDescExists" xml:space="preserve">
+    <value>Một đơn vị với mô tả này đã được tạo</value>
+  </data>
+  <data name="UnitIDExists" xml:space="preserve">
+    <value>Một đơn vị có ID này đã được tạo</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Các đơn vị</value>
+  </data>
+  <data name="UnitsDescription" xml:space="preserve">
+    <value>Sử dụng tùy chọn này để quản lý các đơn vị</value>
+  </data>
+  <data name="UnitsTooltipDescription" xml:space="preserve">
+    <value>Quản lý Các đơn vị</value>
+  </data>
+  <data name="VariantHasToBeSelected" xml:space="preserve">
+    <value>Một biến thể phải được chọn</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Có</value>
+  </data>
+</root>

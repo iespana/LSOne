@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element msdata:IsDataSet="true" name="root">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+                <xsd:element minOccurs="0" msdata:Ordinal="2" name="comment" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute msdata:Ordinal="1" name="name" type="xsd:string" use="required" />
+              <xsd:attribute msdata:Ordinal="3" name="type" type="xsd:string" />
+              <xsd:attribute msdata:Ordinal="4" name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" msdata:Ordinal="1" name="value" type="xsd:string" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CannotLoadHospitality" xml:space="preserve">
+    <value>No se puede cargar la hospitalidad</value>
+  </data>
+  <data name="MustBeHospitalityType" xml:space="preserve">
+    <value>Debe haber al menos un tipo de hospitalidad disponible.</value>
+  </data>
+  <data name="NoHospitalityTypesFound" xml:space="preserve">
+    <value>No se encontraron tipos de hospitalidad.</value>
+  </data>
+  <data name="SplitBillOnlyInHospitality" xml:space="preserve">
+    <value>La opción Dividir factura solo puede usarse en el modo de hospitalidad.</value>
+  </data>
+  <data name="TableLayoutNotUpdated" xml:space="preserve">
+    <value>No se ha actualizado el diseño de la tabla.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="NoMenuTypes" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>No se han seleccionado artículos</value>
+  </data>
+  <data name="NoItemsToPrint" xml:space="preserve">
+    <value>No hay artículos para imprimir.</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Número de pedido</value>
+  </data>
+  <data name="OnlyAllowedInHospitalityMode" xml:space="preserve">
+    <value>Esta operación solo se permite en el modo de hospitalidad.</value>
+  </data>
+  <data name="ErrorConnectingToSiteService" xml:space="preserve">
+    <value>Error al establecer la conexión con el servidor de la tienda. La aplicación no puede mostrar el diseño de la tabla Hospitalidad y se cerrará.</value>
+  </data>
+  <data name="MenuTypes" xml:space="preserve">
+    <value>Tipos de menú</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Operador</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Número de pedido</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Artículos</value>
+  </data>
+  <data name="AvailableMenuTypes" xml:space="preserve">
+    <value>Tipos de menú disponibles</value>
+  </data>
+  <data name="CombineExistingSplitPartQuestion" xml:space="preserve">
+    <value>¿Desea combinar %1 con la parte de la división actual del huésped %2?</value>
+  </data>
+  <data name="CombineLinesQuestion" xml:space="preserve">
+    <value>¿Desea combinar estas líneas con las partes de división existentes del huésped %1?</value>
+  </data>
+  <data name="GuestsSeated" xml:space="preserve">
+    <value>Huéspedes sentados</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="NotServed" xml:space="preserve">
+    <value>No servido</value>
+  </data>
+  <data name="OrderConfirmed" xml:space="preserve">
+    <value>Pedido confirmado</value>
+  </data>
+  <data name="OrderFinished" xml:space="preserve">
+    <value>Pedido finalizado</value>
+  </data>
+  <data name="OrderNotPrinted" xml:space="preserve">
+    <value>Pedido no impreso</value>
+  </data>
+  <data name="OrderPrinted" xml:space="preserve">
+    <value>Pedido impreso</value>
+  </data>
+  <data name="OrderStarted" xml:space="preserve">
+    <value>Pedido iniciado</value>
+  </data>
+  <data name="PrintAll" xml:space="preserve">
+    <value>Imprimir todo</value>
+  </data>
+  <data name="SameFromAndToTable" xml:space="preserve">
+    <value>No se puede seleccionar la misma mesa que la mesa desde y hasta</value>
+  </data>
+  <data name="SeatingGuestsNotPossibleNow" xml:space="preserve">
+    <value>No es posible sentar huéspedes en esta mesa en este momento.</value>
+  </data>
+  <data name="SelectedTable" xml:space="preserve">
+    <value>Mesa seleccionada</value>
+  </data>
+  <data name="SelectMenuTypeForPrinting" xml:space="preserve">
+    <value>Seleccione un tipo de menú para imprimir</value>
+  </data>
+  <data name="SelectTableToTransferTo" xml:space="preserve">
+    <value>Seleccione una mesa para la transferencia...</value>
+  </data>
+  <data name="SplitBy" xml:space="preserve">
+    <value>¿Dividir por importe?</value>
+  </data>
+  <data name="SplitByAmount" xml:space="preserve">
+    <value>¿Dividir por importe?</value>
+  </data>
+  <data name="TableWithDescription" xml:space="preserve">
+    <value>Mesa: %1</value>
+  </data>
+  <data name="ToTableAmt" xml:space="preserve">
+    <value>A la mesa %1 - Importe %2</value>
+  </data>
+  <data name="TotalAmountForTable" xml:space="preserve">
+    <value>Importe total para la mesa: %1</value>
+  </data>
+  <data name="TransferFromTable" xml:space="preserve">
+    <value>TRANSFERIR: de la mesa %1 - Importe %2</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>No disponible</value>
+  </data>
+  <data name="UnknownState" xml:space="preserve">
+    <value>Estado desconocido</value>
+  </data>
+  <data name="AmountSelectedIsLargerThenTotal" xml:space="preserve">
+    <value>El importe seleccionado es mayor al importe total de artículos. No se pueden dividir los artículos.</value>
+  </data>
+  <data name="ErrorTransferingBetweenTables" xml:space="preserve">
+    <value>Error al transferir entre mesas.</value>
+  </data>
+  <data name="NoItemsOnThisTableToTransfer" xml:space="preserve">
+    <value>No hay artículos para transferir en esta mesa</value>
+  </data>
+  <data name="NoTransactionAailableOnTable" xml:space="preserve">
+    <value>No hay una transacción disponible en esta mesa.</value>
+  </data>
+  <data name="OperationCannotApplyToGuestGrid" xml:space="preserve">
+    <value>No se puede aplicar la operación a la matriz de huéspedes</value>
+  </data>
+  <data name="OperationNotImplemented" xml:space="preserve">
+    <value>No se ha implementado la operación</value>
+  </data>
+  <data name="OverrideTheStaffMemberOnThisTransaction" xml:space="preserve">
+    <value>¿Desea sobrescribir el miembro del personal en esta transacción?</value>
+  </data>
+  <data name="ParameterNotImplemented" xml:space="preserve">
+    <value>Parámetro no implementado</value>
+  </data>
+  <data name="PleaseSelectTableBeforeRunningTheOperation" xml:space="preserve">
+    <value>Seleccione una mesa antes de ejecutar la operación.</value>
+  </data>
+  <data name="SelectedTableBelongsToCurrentStaff" xml:space="preserve">
+    <value>La mesa seleccionada ya pertenece al miembro del personal actual.</value>
+  </data>
+  <data name="SplitOperationIsNotValid" xml:space="preserve">
+    <value>Operación de división no válida</value>
+  </data>
+  <data name="TableLockedByAnotherTerminal" xml:space="preserve">
+    <value>La mesa seleccionada está bloqueada por otra terminal</value>
+  </data>
+  <data name="ThereAreNoItemsToSplit" xml:space="preserve">
+    <value>No hay artículos para dividir.</value>
+  </data>
+  <data name="TheSelectedTableIsLockedToAnotherStaffMember" xml:space="preserve">
+    <value>La mesa seleccionada está bloqueada para otro miembro del personal.</value>
+  </data>
+  <data name="TheSelectedTableIsUnavalible" xml:space="preserve">
+    <value>La mesa seleccionada no está disponible.</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Excepción imprevista. No se ha podido llevar a cabo la operación solicitada.</value>
+  </data>
+  <data name="UnsplitAllLinesQuestion" xml:space="preserve">
+    <value>¿Está seguro de que desea deshacer la división de todas las líneas y moverlas al huésped 1?</value>
+  </data>
+  <data name="OperationOnlyValidForRetailTransaction" xml:space="preserve">
+    <value>Esta operación es solo válida para una transacción de venta al por mayor</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Disponible</value>
+  </data>
+  <data name="Bumped" xml:space="preserve">
+    <value>Rechazada</value>
+  </data>
+  <data name="ChangedItem" xml:space="preserve">
+    <value>CAMBIADA</value>
+  </data>
+  <data name="ConfirmChangingUserOnTable" xml:space="preserve">
+    <value>¿Desea cambiar al camarero de esta mesa de #1 a #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableSplitBill" xml:space="preserve">
+    <value>¿Desea cambiar al camarero en los pagos divididos de #1 a #2?</value>
+  </data>
+  <data name="ConfirmChangingUserOnTableTransferTable" xml:space="preserve">
+    <value>¿Desea cambiar al camarero de la mesa transferida de #1 a #2?</value>
+  </data>
+  <data name="FromTable" xml:space="preserve">
+    <value>De la mesa</value>
+  </data>
+  <data name="KitchenPrinterSlip" xml:space="preserve">
+    <value>Comprobante de la impresora de cocina</value>
+  </data>
+  <data name="MaximumNoOfGuestsExceeded" xml:space="preserve">
+    <value>Como máximo pueden seleccionarse #1 huéspedes</value>
+  </data>
+  <data name="NoOfGuests" xml:space="preserve">
+    <value>Número de huéspedes</value>
+  </data>
+  <data name="NoSiteServiceProfileForHospitality" xml:space="preserve">
+    <value>No ha definido ningún perfil de servidor de la tienda para hospitalidad. La aplicación no puede mostrar el diseño de las tablas de hospitalidad y se cerrará.</value>
+  </data>
+  <data name="NoSplitsAllowed" xml:space="preserve">
+    <value>No pueden realizarse divisiones.</value>
+  </data>
+  <data name="OrderSent" xml:space="preserve">
+    <value>Pedido enviado</value>
+  </data>
+  <data name="PrintError" xml:space="preserve">
+    <value>Error de la impresora. Compruebe que la impresora esté en línea y lista.</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Cant.</value>
+  </data>
+  <data name="SelectedOperationNotAllowedInTableView" xml:space="preserve">
+    <value>No se puede ejecutar la operación seleccionada en la vista de mesas</value>
+  </data>
+  <data name="SendingToKitchenPrinter" xml:space="preserve">
+    <value>Enviando a la impresora de cocina...</value>
+  </data>
+  <data name="SplitBillNotConfigured" xml:space="preserve">
+    <value>No se ha configurado por completo la función de división de facturas. Revise la configuración #1.</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Iniciado</value>
+  </data>
+  <data name="TableID" xml:space="preserve">
+    <value>Mesa</value>
+  </data>
+  <data name="TableOpenInAnotherTerminal" xml:space="preserve">
+    <value>Esta mesa está abierta en otro terminal. Es posible que pierda todos los artículos añadidos a la mesa. El artículo que ha seleccionado no se añadirá a la mesa. Se le redirigirá a la vista de mesas.</value>
+  </data>
+  <data name="TooManySplits" xml:space="preserve">
+    <value>El/los artículo(s) no se puede(n) dividir en #1 partes. El número máximo de divisiones es #2.</value>
+  </data>
+  <data name="ToTable" xml:space="preserve">
+    <value>A la mesa</value>
+  </data>
+  <data name="TransferNotConfigured" xml:space="preserve">
+    <value>No se ha definido por completo la configuración de transferencia de mesas. Revise la configuración #1.</value>
+  </data>
+  <data name="TransferTableSlip" xml:space="preserve">
+    <value>Comprobante de transferencia de mesas</value>
+  </data>
+  <data name="UnableToConnectToKDSTryingToReconnect" xml:space="preserve">
+    <value>No se puede establecer conexión con las impresoras de cocina. Intentando reconectar...</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>ANULADO</value>
+  </data>
+</root>

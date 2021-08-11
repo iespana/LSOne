@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Slet</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Generelt</value>
+  </data>
+  <data name="Convertible" xml:space="preserve">
+    <value>Konverterbare</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Billede</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Billedfiler</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>Yderligere oplysninger</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Rabatter</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Priser</value>
+  </data>
+  <data name="TradeAgreements" xml:space="preserve">
+    <value>Handelsaftaler</value>
+  </data>
+  <data name="ViewItem" xml:space="preserve">
+    <value>Vis vare</value>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Stregkode</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="RemoveFromGroup" xml:space="preserve">
+    <value>Fjern fra gruppe</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Handlinger</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Tilføj</value>
+  </data>
+  <data name="BMPfiles" xml:space="preserve">
+    <value>BMP-filer</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Rediger ...</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Billeder</value>
+  </data>
+  <data name="ImportImagesAbort" xml:space="preserve">
+    <value>Afbryd</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Lagerbeholdning</value>
+  </data>
+  <data name="InventoryTypePurchase" xml:space="preserve">
+    <value>Indkøb</value>
+  </data>
+  <data name="InventoryTypeSale" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Vare</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Varer</value>
+  </data>
+  <data name="JPEGfiles" xml:space="preserve">
+    <value>JPEG-filer</value>
+  </data>
+  <data name="MultiBuy" xml:space="preserve">
+    <value>Flerkøb</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="PNGfiles" xml:space="preserve">
+    <value>PNG-filer</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Behandler</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Indkøb</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Vareafdeling</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Varegruppe</value>
+  </data>
+  <data name="RetailGroups" xml:space="preserve">
+    <value>Varegrupper</value>
+  </data>
+  <data name="RetailItem" xml:space="preserve">
+    <value>Salgsvare</value>
+  </data>
+  <data name="RetailItems" xml:space="preserve">
+    <value>Salgsvarer</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="SalesTransaction" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Specialgruppe</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Butik</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>Momsgruppe</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Leverandør</value>
+  </data>
+  <data name="Voided" xml:space="preserve">
+    <value>Annulleret</value>
+  </data>
+  <data name="VoidedLine" xml:space="preserve">
+    <value>Annulleret linje</value>
+  </data>
+  <data name="CouldNotConnectToStoreServer" xml:space="preserve">
+    <value>Kunne ikke oprette forbindelse til Site Service</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Søg</value>
+  </data>
+  <data name="NoChange" xml:space="preserve">
+    <value>--- Ingen ændring ---</value>
+  </data>
+  <data name="Undelete" xml:space="preserve">
+    <value>Genopret</value>
+  </data>
+  <data name="NewItemTypeServiceQuestion" xml:space="preserve">
+    <value>Ønsker du at fortsætte?</value>
+  </data>
+  <data name="NewItemTypeServiceTitle" xml:space="preserve">
+    <value>Bekræft</value>
+  </data>
+  <data name="StockCount" xml:space="preserve">
+    <value>Lageroptælling</value>
+  </data>
+  <data name="VariantHeader" xml:space="preserve">
+    <value>Variant overskrift</value>
+  </data>
+  <data name="ServiceItem" xml:space="preserve">
+    <value>Servicevare</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="DoYouWantToContinue" xml:space="preserve">
+    <value>Ønsker du at fortsætte?</value>
+  </data>
+  <data name="Adjustment" xml:space="preserve">
+    <value>Justering</value>
+  </data>
+  <data name="InventoryTypeAdjustment" xml:space="preserve">
+    <value>Justering</value>
+  </data>
+  <data name="ParkedInventory" xml:space="preserve">
+    <value>Suspenderet lagerbeholdning</value>
+  </data>
+  <data name="StockReservation" xml:space="preserve">
+    <value>Lagerreservation</value>
+  </data>
+  <data name="ActionsImportImages" xml:space="preserve">
+    <value>Importer billeder</value>
+  </data>
+  <data name="AddToGroup" xml:space="preserve">
+    <value>Tilføj til gruppe</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="AllGroups" xml:space="preserve">
+    <value>Alle grupper</value>
+  </data>
+  <data name="AllItems" xml:space="preserve">
+    <value>Alle varer:</value>
+  </data>
+  <data name="AllTypes" xml:space="preserve">
+    <value>Alle typer</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Attribut</value>
+  </data>
+  <data name="BarcodeFieldsNotfilledIn" xml:space="preserve">
+    <value>Enten skal begge stregkodefelter udfyldes eller ingen af dem.</value>
+  </data>
+  <data name="BarCodeMaxLengthError" xml:space="preserve">
+    <value>En stregkode, der bruger denne stregkodeopsætning, skal højst være # 1 bogstaver i længden</value>
+  </data>
+  <data name="BarCodeMinLengthError" xml:space="preserve">
+    <value>En stregkode, der bruger denne stregkodeopsætning, skal have mindst #1 tegn i længden</value>
+  </data>
+  <data name="BaseSalesPrice" xml:space="preserve">
+    <value>Grundlæggende salgspris</value>
+  </data>
+  <data name="BOM" xml:space="preserve">
+    <value>BOM</value>
+  </data>
+  <data name="ChangeTaxGroup" xml:space="preserve">
+    <value>Skift momsgruppe</value>
+  </data>
+  <data name="ChangeTaxGroupDetail" xml:space="preserve">
+    <value>Skift af momsgruppe vel genberegne priser og kampagner der er relateret til varen</value>
+  </data>
+  <data name="ChangeTaxGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil skifte momsgruppen?</value>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>Minimer</value>
+  </data>
+  <data name="ColorGroup" xml:space="preserve">
+    <value>Farvegruppe</value>
+  </data>
+  <data name="CopyID" xml:space="preserve">
+    <value>Kopier ID</value>
+  </data>
+  <data name="CostPriceDisabled" xml:space="preserve">
+    <value>Kostprisen er deaktiveret, fordi margenen er indstillet til 100%</value>
+  </data>
+  <data name="CreateVariationCombinations" xml:space="preserve">
+    <value>Opret variationskombinationer</value>
+  </data>
+  <data name="CreatingItemsMessage" xml:space="preserve">
+    <value>Oprettelse af varer</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Standardbutik har ingen momsgruppe knyttet til den</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Slet rabattilbudslinje</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte rabat-tilbudslinje?</value>
+  </data>
+  <data name="DeleteItemTranslation" xml:space="preserve">
+    <value>Slet vareoversættelse</value>
+  </data>
+  <data name="DeleteItemTranslationQuestion" xml:space="preserve">
+    <value>Er du sikker på at du gerne vil slette den valgte vareoversøttelse?</value>
+  </data>
+  <data name="DeleteLinkedItems" xml:space="preserve">
+    <value>Slet linkede varer</value>
+  </data>
+  <data name="DeleteLinkedItemsQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte linkede varer?</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Slet flerkøbslinje</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil slette den valgte flerkøbslinje?</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Slet promoveringslinje</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte promoveringslinje?</value>
+  </data>
+  <data name="DeleteRetailDepartment" xml:space="preserve">
+    <value>Slet vareafdeling</value>
+  </data>
+  <data name="DeleteRetailDepartmentQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte vareafdeling?</value>
+  </data>
+  <data name="DeleteRetailDivision" xml:space="preserve">
+    <value>Slet varedivision</value>
+  </data>
+  <data name="DeleteRetailDivisionQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte varedivision?</value>
+  </data>
+  <data name="DeleteRetailGroup" xml:space="preserve">
+    <value>Slet varegruppe</value>
+  </data>
+  <data name="DeleteRetailGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte varegruppe?</value>
+  </data>
+  <data name="DeleteRetailItem" xml:space="preserve">
+    <value>Slet salgsvare</value>
+  </data>
+  <data name="DeleteRetailItemQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte salgsvare?</value>
+  </data>
+  <data name="DeleteRetailItems" xml:space="preserve">
+    <value>Slet salgsvarer</value>
+  </data>
+  <data name="DeleteRetailItemsQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte salgsvarer?</value>
+  </data>
+  <data name="DeleteSpecialGroup" xml:space="preserve">
+    <value>Slet specialgruppe</value>
+  </data>
+  <data name="DeleteSpecialGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte specialgruppe?</value>
+  </data>
+  <data name="DeleteTradeAgreement" xml:space="preserve">
+    <value>Slet handelsaftale</value>
+  </data>
+  <data name="DeleteTradeAgreementQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte handelsaftale?</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Afdelinger</value>
+  </data>
+  <data name="DigitsTruncated" xml:space="preserve">
+    <value>Cifre, der ikke blev vist, er afkortet</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Slået fra</value>
+  </data>
+  <data name="DiscardImage" xml:space="preserve">
+    <value>Er du sikker på, at du vil kassere det valgte billede?</value>
+  </data>
+  <data name="Divisions" xml:space="preserve">
+    <value>Divisioner</value>
+  </data>
+  <data name="EditDescriptionForTheSelectedSpecialGroup" xml:space="preserve">
+    <value>Rediger beskrivelse for den valgte specialgruppe</value>
+  </data>
+  <data name="EditMultipleItems" xml:space="preserve">
+    <value>Rediger flere varer</value>
+  </data>
+  <data name="EditRetailDepartment" xml:space="preserve">
+    <value>Rediger vareafdelingen</value>
+  </data>
+  <data name="EditRetailDivision" xml:space="preserve">
+    <value>Rediger varedivision</value>
+  </data>
+  <data name="EditRetailItem" xml:space="preserve">
+    <value>Rediger salgsvare</value>
+  </data>
+  <data name="EditSpecialGroup" xml:space="preserve">
+    <value>Rediger specialgruppe</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Aktiveret</value>
+  </data>
+  <data name="Expand" xml:space="preserve">
+    <value>Udvid</value>
+  </data>
+  <data name="FewMinutesMessage" xml:space="preserve">
+    <value>Dette kan tage et par minutter</value>
+  </data>
+  <data name="FieldRequiresInput" xml:space="preserve">
+    <value>På fanen '{0}' kræver feltet '{1}' input</value>
+  </data>
+  <data name="FuelSettings" xml:space="preserve">
+    <value>Brændstofindstillinger</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Grupper</value>
+  </data>
+  <data name="Groups_Retail" xml:space="preserve">
+    <value>Grupper</value>
+  </data>
+  <data name="Hierarchy" xml:space="preserve">
+    <value>Hierarki</value>
+  </data>
+  <data name="IDMissing" xml:space="preserve">
+    <value>ID mangler</value>
+  </data>
+  <data name="IDMissingQuestion" xml:space="preserve">
+    <value>ID mangler. Vil du automatisk generere ID'et?</value>
+  </data>
+  <data name="ImageImportDeleteExisting" xml:space="preserve">
+    <value>Du har valgt at slette eksisterende billeder. 
+
+
+Dette betyder, at for hver salgsvare, denne proces importerer et billede til, vil alle tidligere eksisterende billeder til den vare blive slettet. Vil du fortsætte?</value>
+  </data>
+  <data name="ImportImagesDataFileFormatError" xml:space="preserve">
+    <value>Formatet på datafilen er ikke korrekt.</value>
+  </data>
+  <data name="ImportImagesItemNotFound" xml:space="preserve">
+    <value>Salgsvare '{0}' blev ikke fundet</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventory" xml:space="preserve">
+    <value>Lagerbeholdningsjusteringer vil blive oprettet for at nulstille den salgsbare varebeholdning.</value>
+  </data>
+  <data name="InventoryAdjustmentsToZeroOutInventoryWithReplenishment" xml:space="preserve">
+    <value>Beholdningsjusteringer oprettes for at nulstille lagerbeholdningen, og genopfyldning af varer blokeres.</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Varen har ingen momsgruppe knyttet til den</value>
+  </data>
+  <data name="ItemIDExists" xml:space="preserve">
+    <value>Dette varenummer findes i databasen</value>
+  </data>
+  <data name="ItemLedger" xml:space="preserve">
+    <value>Vareposter</value>
+  </data>
+  <data name="ItemLedgerViewScrollDisplay" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="ItemMaster" xml:space="preserve">
+    <value>Vare master</value>
+  </data>
+  <data name="ItemsTooltipDescription" xml:space="preserve">
+    <value>Åbn vareliste for at se og administrere varer</value>
+  </data>
+  <data name="ItemsUpdated" xml:space="preserve">
+    <value>Varer er opdateret</value>
+  </data>
+  <data name="ItemTranslation" xml:space="preserve">
+    <value>Vareoversættelse</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Varetype</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Linje</value>
+  </data>
+  <data name="LinkedItemAlreadyExists" xml:space="preserve">
+    <value>Denne vare med denne enhed er allerede knyttet til varen</value>
+  </data>
+  <data name="LinkedItems" xml:space="preserve">
+    <value>Linkede varer</value>
+  </data>
+  <data name="LinkedItemSameAsOriginalItem" xml:space="preserve">
+    <value>Den tilknyttede vare kan ikke være den samme som den originale vare</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Administrer</value>
+  </data>
+  <data name="ManageRetailGroups" xml:space="preserve">
+    <value>Brug denne indstilling til at administrere forskellige varegrupper</value>
+  </data>
+  <data name="ManyItems" xml:space="preserve">
+    <value>#1 varer findes</value>
+  </data>
+  <data name="Miscellaneous" xml:space="preserve">
+    <value>Diverse</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Mix and match linjegrupper</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Mix and match-linjer</value>
+  </data>
+  <data name="MoreDigitsThanShown" xml:space="preserve">
+    <value>Der er flere cifre i salgsprisen, end der er vist.</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Flerkøbskonfigurationer</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Flerkøbslinjer</value>
+  </data>
+  <data name="MultiEditServiceItemsText" xml:space="preserve">
+    <value>Du har valgt mindst et serviceelement. Det er ikke muligt at redigere flere elementer</value>
+  </data>
+  <data name="Multiline" xml:space="preserve">
+    <value>Flerlinje</value>
+  </data>
+  <data name="MultiSaveQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil gemme ændringerne på alle de valgte poster?</value>
+  </data>
+  <data name="New_RetailItem" xml:space="preserve">
+    <value>Ny</value>
+  </data>
+  <data name="NewItemTooltipDescription" xml:space="preserve">
+    <value>Opret en ny vare</value>
+  </data>
+  <data name="NewItemTypeRetailText1" xml:space="preserve">
+    <value>Genopfyldning af varer er i øjeblikket blokeret.</value>
+  </data>
+  <data name="NewItemTypeRetailText2" xml:space="preserve">
+    <value>Ethvert salg, der allerede er en del af en opgørelse, opretter ikke nye varebeholdningslinjer (varebeholdningsbevægelser).</value>
+  </data>
+  <data name="NewItemTypeRetailText3" xml:space="preserve">
+    <value>For at sikre, at den salgsbare lagerbeholdning er korrekt, anbefales det at foretage en lagertælling for varen.</value>
+  </data>
+  <data name="NewItemTypeRetailTitle" xml:space="preserve">
+    <value>Bemærk:</value>
+  </data>
+  <data name="NewRetailItem" xml:space="preserve">
+    <value>Ny salgsvare</value>
+  </data>
+  <data name="NewRetailItemDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at oprette en ny salgsvare</value>
+  </data>
+  <data name="NewSpecialGroup" xml:space="preserve">
+    <value>Ny specialgruppe</value>
+  </data>
+  <data name="NoConnectionToSiteServiceHeader" xml:space="preserve">
+    <value>Der er ingen forbindelse til Site Service.</value>
+  </data>
+  <data name="NoConnectionToSiteServiceText" xml:space="preserve">
+    <value>Den aktuelle salgsbare lagerbeholdning kan ikke bekræftes, så varetypen kan ikke ændres.</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Ingen standard butik valgt</value>
+  </data>
+  <data name="NoItemsHaveBeenCreated" xml:space="preserve">
+    <value>Der findes ingen varer</value>
+  </data>
+  <data name="NoPermissionForItemType" xml:space="preserve">
+    <value>Den aktuelle bruger har ikke tilladelse til at ændre varetype</value>
+  </data>
+  <data name="OneItem" xml:space="preserve">
+    <value>1# vare findes</value>
+  </data>
+  <data name="OnlyCharAndNumbers" xml:space="preserve">
+    <value>Varenummer kan kun indeholde alfanumeriske bogstaver</value>
+  </data>
+  <data name="OverwriteDimensionCombinations" xml:space="preserve">
+    <value>Dimensionsgruppe ændret</value>
+  </data>
+  <data name="OverwriteDimensionCombinationsQuestion" xml:space="preserve">
+    <value>Vil du slette de eksisterende dimensionskombinationer?</value>
+  </data>
+  <data name="OverwriteValues" xml:space="preserve">
+    <value>Overskriv værdier</value>
+  </data>
+  <data name="OverwriteValuesQuestion" xml:space="preserve">
+    <value>Vil du overskrive vareværdier med værdier fra den valgte varegruppe?</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Periodiske rabatter</value>
+  </data>
+  <data name="POSSettings" xml:space="preserve">
+    <value>POS-indstillinger</value>
+  </data>
+  <data name="PostedStatement" xml:space="preserve">
+    <value>Bogført opgørelse</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Pris/rabat</value>
+  </data>
+  <data name="ProfitMarginTooHigh" xml:space="preserve">
+    <value>Dækningsbidrag kan ikke overstige 100%</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Kampagnelinjer</value>
+  </data>
+  <data name="PromotionLinesUpdated" xml:space="preserve">
+    <value>Kampagnelinjer opdateret</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartment" xml:space="preserve">
+    <value>Fjern varegruppe fra vareafdelingen</value>
+  </data>
+  <data name="RemoveRetailGroupFromRetailDepartmentQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil fjerne den valgte varegruppe fra den valgte vareafdeling</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="RetailDepartmentAssignedToDivision" xml:space="preserve">
+    <value>En eller flere vareafdelinger er allerede tildelt en division.</value>
+  </data>
+  <data name="RetailDepartments" xml:space="preserve">
+    <value>Vareafdelinger</value>
+  </data>
+  <data name="RetailDepartmentsTooltipDescription" xml:space="preserve">
+    <value>Administrer vareafdelinger</value>
+  </data>
+  <data name="RetailDivision" xml:space="preserve">
+    <value>Varedivision</value>
+  </data>
+  <data name="RetailDivisions" xml:space="preserve">
+    <value>Varedivisioner</value>
+  </data>
+  <data name="RetailDivisionsTooltipDescription" xml:space="preserve">
+    <value>Administrer varedivisioner, der er øverst i varehierarkiet</value>
+  </data>
+  <data name="RetailGroupAlreadyAssignedToADepartment" xml:space="preserve">
+    <value>En eller flere varegrupper er allerede tildelt en afdeling.</value>
+  </data>
+  <data name="RetailGroupsTooltipDescription" xml:space="preserve">
+    <value>Administrer varegrupper, deres indstillinger og inkludering af varer</value>
+  </data>
+  <data name="RetailItemNew" xml:space="preserve">
+    <value>Ny vare</value>
+  </data>
+  <data name="SalesPrice" xml:space="preserve">
+    <value>Salgspris</value>
+  </data>
+  <data name="SavingItems" xml:space="preserve">
+    <value>Gemmer varer</value>
+  </data>
+  <data name="SavingItemsCount" xml:space="preserve">
+    <value>Gemmer {0} af {1}</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="ServiceItemError" xml:space="preserve">
+    <value>Kunne ikke oprette forbindelse til Site Service. Elementer af typen servicevare kan ikke gemmes.</value>
+  </data>
+  <data name="ShowPostedStatements" xml:space="preserve">
+    <value>Vis bogførte opgørelser</value>
+  </data>
+  <data name="ShowVoided" xml:space="preserve">
+    <value>Vis annullerede</value>
+  </data>
+  <data name="SizeGroup" xml:space="preserve">
+    <value>Størrelsesgruppe</value>
+  </data>
+  <data name="SpecialGroups" xml:space="preserve">
+    <value>Specialgrupper</value>
+  </data>
+  <data name="SpecialGroupsTooltipDescription" xml:space="preserve">
+    <value>Administrer specialgrupper for at gruppere ikke-relaterede varer og tilføje rabatter og kampagner</value>
+  </data>
+  <data name="StyleGroup" xml:space="preserve">
+    <value>Stil gruppe</value>
+  </data>
+  <data name="TabRequiresInput" xml:space="preserve">
+    <value>Fanen {0} har felter, der kræver indtastning</value>
+  </data>
+  <data name="TradeAgreementsUpdated" xml:space="preserve">
+    <value>Handelsaftaler opdateret</value>
+  </data>
+  <data name="TransferIn" xml:space="preserve">
+    <value>Overfør ind</value>
+  </data>
+  <data name="TransferOut" xml:space="preserve">
+    <value>Overfør ud</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Vareoversættelser</value>
+  </data>
+  <data name="Types" xml:space="preserve">
+    <value>Typer</value>
+  </data>
+  <data name="UndeleteRetailItem" xml:space="preserve">
+    <value>Annuller sletning af salgsvare</value>
+  </data>
+  <data name="UndeleteRetailItemQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil annullere sletning af denne vare?</value>
+  </data>
+  <data name="UndeleteRetailItemsQuestion" xml:space="preserve">
+    <value>Er du sikke på at du vil annullere sletning af disse varer?</value>
+  </data>
+  <data name="UnitConversionQuestion" xml:space="preserve">
+    <value>Der findes ingen enhedskonverteringsregel for at konvertere fra lagerenheden til salgsenheden. Vil du oprette reglen?</value>
+  </data>
+  <data name="UnitConversionRuleMissing" xml:space="preserve">
+    <value>Enhedskonverteringsregel mangler</value>
+  </data>
+  <data name="UnitConversionRuleMissingAlert" xml:space="preserve">
+    <value>Der findes ingen enhedskonverteringsregel for at konvertere fra lagerenheden til salgsenheden.</value>
+  </data>
+  <data name="ValidationPeriod" xml:space="preserve">
+    <value>Valideringsperiode</value>
+  </data>
+  <data name="VariantGroup" xml:space="preserve">
+    <value>Variantgruppe</value>
+  </data>
+  <data name="VariantItem" xml:space="preserve">
+    <value>Variantvare</value>
+  </data>
+  <data name="ViewCustomer" xml:space="preserve">
+    <value>Vis kunde</value>
+  </data>
+  <data name="ViewCustomerGroup" xml:space="preserve">
+    <value>Se kundegruppe</value>
+  </data>
+  <data name="ViewGroup" xml:space="preserve">
+    <value>Vis gruppe</value>
+  </data>
+  <data name="ViewHeaderItem" xml:space="preserve">
+    <value>Vis overskriftvare</value>
+  </data>
+  <data name="ViewItemGroup" xml:space="preserve">
+    <value>Vis varegruppe</value>
+  </data>
+  <data name="ViewItems" xml:space="preserve">
+    <value>Vis varer</value>
+  </data>
+  <data name="ViewItemsDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at finde og se salgsvarer</value>
+  </data>
+  <data name="ViewRetailDepartments" xml:space="preserve">
+    <value>Vis vareafdelinger</value>
+  </data>
+  <data name="ViewRetailDepartmentsDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at se og redigere vareafdelinger</value>
+  </data>
+  <data name="ViewRetailDivisionDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere varedivisioner</value>
+  </data>
+  <data name="ViewRetailDivisions" xml:space="preserve">
+    <value>Vis varedivisioner</value>
+  </data>
+  <data name="ViewRetailGroup" xml:space="preserve">
+    <value>Vis varegruppe</value>
+  </data>
+  <data name="ViewRetailGroups" xml:space="preserve">
+    <value>Vis varegrupper </value>
+  </data>
+  <data name="ViewRetailGroupsDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere varegrupper</value>
+  </data>
+  <data name="ViewSpecialGroups" xml:space="preserve">
+    <value>Vis specialgrupper</value>
+  </data>
+  <data name="ViewSpecialGroupsDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere specialgrupper</value>
+  </data>
+  <data name="ViewVariantHeader" xml:space="preserve">
+    <value>Vis varianthoved</value>
+  </data>
+  <data name="VoidedSale" xml:space="preserve">
+    <value>Annulleret salg</value>
+  </data>
+</root>

@@ -1,0 +1,23 @@
+﻿/*
+
+	Incident No.	: 21801
+	Responsible		: Sigfús Jóhannesson
+	Sprint			: LS Retail .NET 2013\Neptune
+	Date created	: 19.02.2013
+
+	Description		: Added column for refilling option on gift cards.
+	
+	
+	Tables affected	: POSTRANSACTIONSERVICEPROFILE
+						
+*/
+USE LSPOSNET
+
+GO
+
+ IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSTRANSACTIONSERVICEPROFILE' AND COLUMN_NAME = 'GIFTCARDREFILLSETTING')
+  BEGIN
+		ALTER TABLE POSTRANSACTIONSERVICEPROFILE ADD GIFTCARDREFILLSETTING INT NULL
+  END
+
+GO

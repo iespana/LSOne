@@ -1,0 +1,16 @@
+﻿/*
+	Incident No.	: ONE-10078: Tax exemption per item
+	Responsible		: Hörður Kristjánsson
+	Sprint			: Canopus
+	Date created	: 09.09.2019
+
+	Description		: Add tax exempt column to PAYMENTLIMITATIONS
+*/
+
+USE LSPOSNET_Audit
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'PAYMENTLIMITATIONSLog' AND COLUMN_NAME = 'TAXEXEMPT')
+BEGIN
+	ALTER TABLE PAYMENTLIMITATIONSLog ADD TAXEXEMPT BIT NULL	
+END
+GO

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="POS |POS Setup|Profiles">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Hardware Profiles</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#HelpTopics/SiteManager/Hardware Profiles.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Hardware Profiles</h1>
+        <p>The hardware profile has information about how the LS POS manages the hardware connected to the POS terminal. It contains the setup of each of the peripheral devices. </p>
+        <p>The accessible devices in the hardware profile are:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;" value="1">Drawer</li>
+            <li style="list-style-type: disc;" value="2">Line display</li>
+            <li style="list-style-type: disc;" value="3">Dual display</li>
+            <li style="list-style-type: disc;" value="4">Card reader</li>
+            <li style="list-style-type: disc;" value="5">Printer</li>
+            <li style="list-style-type: disc;" value="6">Barcode reader</li>
+            <li style="list-style-type: disc;" value="7">Scale</li>
+            <li style="list-style-type: disc;" value="8">Key</li>
+            <li style="list-style-type: disc;" value="9">Dallas key</li>
+            <li style="list-style-type: disc;" value="10">Credit card service</li>
+            <li style="list-style-type: disc;" value="11">Surveillance camera</li>
+            <li style="list-style-type: disc;" value="12">Pump connection</li>
+            <li style="list-style-type: disc;" value="13">RFID reader</li>
+            <li style="list-style-type: disc;" value="14">Cash changer</li>
+            <li style="list-style-type: disc;" value="15">Forcourt manager</li>
+            <li style="list-style-type: disc;" value="16">Fiscal printer</li>
+        </ul>
+        <p>Every hardware profile does not need to set up every device. For example, scales are only configured in setups that sell items to be weighed when sold.</p>
+        <p>It is often necessary to set up many hardware profiles for the same company/store. An example of this could be a Hypermarket that has one store with terminals, that have these possibilities:</p>
+        <ol style="list-style-type: upper-alpha;margin-left: 36pt;" start="1">
+            <li value="1">Terminal with a scale, bar code reader, receipt printer and a line display;</li>
+            <li value="2">Terminal with bar code reader, receipt printer and a line display;</li>
+            <li value="3">Terminal with a windows printer and a line display.</li>
+        </ol>
+        <p>For this, three hardware profiles are set up and they are then linked to the terminals as required. </p>
+        <div class="Note1">
+            <img src="../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note">One hardware profile can be linked to many terminals in different stores. </p>
+        </div>
+        <p>To open Hardware profiles select <span class="trace">Store setup &gt; Profiles &gt; Hardware profiles</span></p>
+        <p>Hardware profile card:</p>
+        <p style="text-align: center;"><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SiteManager/Profiles/HardwareProfileView_Printer.png"><img class="MCPopupThumbnail img imgthumbCenterBig" data-mc-width="1024" data-mc-height="734" src="../../Resources/Images/SiteManager/Profiles/HardwareProfileView_Printer_thumb_0_300.png" tabindex="" /></a>
+        </p>
+        <p>The hardware profile card has settings for the different devices. Each device has its own tab which opens the card where it is configured. For each device there is a setting that defines whether the device is connected or not. And there are different fields for the options that need to be configured for each device.</p>
+        <p>See the field help for the hardware profile view here: <a href="../../FieldHelp/Profiles/HardwareProfileView.htm" class="MCXref xref">Hardware Profile ID&#160;View</a></p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Last updated:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1">2<span class="sup">nd</span> November 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS&#160;One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{762A31FE-CD69-4B1D-A5D0-F1031EDC8EB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.PeriodicDiscounts</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.PeriodicDiscounts</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.HelloWorld.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="CachedOperation.cs" />
+    <Compile Include="Dialogs\MixAndMatchLineMultiEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineMultiEditDialog.Designer.cs">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferLineMultiEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferLineMultiEditDialog.Designer.cs">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditPriorityDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditPriorityDialog.Designer.cs">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromotionLineMultiEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromotionLineMultiEditDialog.Designer.cs">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ValidationPeriodDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ValidationPeriodDialog.designer.cs">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferDialog.designer.cs">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferLineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DiscountOfferLineDialog.designer.cs">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchDialog.designer.cs">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineDialog.designer.cs">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineGroupDialog.designer.cs">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineGroupsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MixAndMatchLineGroupsDialog.designer.cs">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyConfigurationDialog.designer.cs">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyDialog.designer.cs">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyLineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MultibuyLineDialog.designer.cs">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromotionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromotionDialog.designer.cs">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PromotionLineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PromotionLineDialog.designer.cs">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineGroupLines.cs" />
+    <Compile Include="MultiEditEnums.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPromotionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPromotionsPage.Designer.cs">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PriceDiscountGroupPromotionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PriceDiscountGroupPromotionsPage.Designer.cs">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPeriodicDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPeriodicDiscountsPage.Designer.cs">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.Designer.cs">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemPeriodicDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemPeriodicDiscountsPage.Designer.cs">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemPromotionOffersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemPromotionOffersPage.Designer.cs">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailDepartmentDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailDepartmentDiscountsPage.Designer.cs">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupDiscountsPage.Designer.cs">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\SpecialGroupDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\SpecialGroupDiscountsPage.Designer.cs">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeriodicDiscountPrioritiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PeriodicDiscountPrioritiesView.designer.cs">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountPeriodView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountPeriodView.designer.cs">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiscountOffersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiscountOffersView.designer.cs">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MixAndMatchView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MixAndMatchView.designer.cs">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MultiBuyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MultiBuyView.designer.cs">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PromotionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PromotionsView.designer.cs">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.bg.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.cs.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.da.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.de.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.el.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.en-ZA.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.es-MX.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.es.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.fi.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.fr.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.hi.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.is.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.it.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.ja.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.ko.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.nb-NO.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.nl.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.pl.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.pt-BR.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.ru.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.sv.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.zh-CHS.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.zh-CHT.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.bg.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.cs.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.da.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.de.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.el.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.en-ZA.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.es-MX.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.es.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.fi.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.fr.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.hi.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.is.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.it.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.ja.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.ko.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.nb-NO.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.nl.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.pl.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.pt-BR.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.bg.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.cs.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.en-ZA.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.es-MX.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.hi.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.pl.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.bg.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.cs.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.en-ZA.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.es-MX.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.hi.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.pl.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.bg.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.cs.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.da.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.de.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.el.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.en-ZA.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.es-MX.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.es.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.fi.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.fr.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.hi.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.is.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.it.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.ja.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.ko.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.nb-NO.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.nl.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.pl.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.pt-BR.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.ru.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.sv.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.zh-CHS.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.zh-CHT.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.ru.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.sv.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.zh-CHS.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.zh-CHT.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.bg.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.cs.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.da.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.de.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.el.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.en-ZA.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.es-MX.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.es.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.fi.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.fr.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.hi.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.is.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.it.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.ja.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.ko.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.nb-NO.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.nl.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.pl.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.pt-BR.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.en-ZA.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.es-MX.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.en-ZA.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.es-MX.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.en-ZA.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.es-MX.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.en-ZA.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.es-MX.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.en-ZA.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.es-MX.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.en-ZA.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.es-MX.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.en-ZA.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.es-MX.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.bg.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.cs.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.da.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.de.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.el.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.en-ZA.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.es-MX.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.es.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.fi.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.fr.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.hi.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.is.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.it.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.ja.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.ko.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.nb-NO.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.nl.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.pl.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.pt-BR.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.ru.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.sv.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.zh-CHS.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.zh-CHT.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.en-ZA.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.es-MX.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.ru.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.sv.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.zh-CHS.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.zh-CHT.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.bg.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.cs.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.en-ZA.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.es-MX.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.hi.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.pl.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.bg.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.cs.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.da.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.de.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.el.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.es.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.fi.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.fr.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.hi.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.is.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.it.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.ja.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.ko.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.nb-NO.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.nl.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.pl.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.pt-BR.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.ru.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.sv.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.zh-CHS.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.zh-CHT.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.bg.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.cs.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.da.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.de.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.el.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.es.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.fi.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.fr.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.hi.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.is.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.it.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.ja.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.ko.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.nb-NO.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.nl.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.pl.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.pt-BR.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.ru.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.sv.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.zh-CHS.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.zh-CHT.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.bg.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.cs.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.da.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.de.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.el.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.es.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.fi.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.fr.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.hi.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.is.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.it.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.ja.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.ko.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.nb-NO.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.nl.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.pl.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.pt-BR.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.ru.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.sv.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.zh-CHS.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.zh-CHT.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.bg.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.cs.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.da.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.de.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.el.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.es.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.fi.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.fr.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.hi.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.is.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.it.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.ja.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.ko.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.nb-NO.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.nl.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.pl.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.pt-BR.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.ru.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.sv.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.zh-CHS.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.zh-CHT.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.bg.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.cs.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.hi.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.pl.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.bg.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.cs.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.hi.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.pl.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.bg.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.cs.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.hi.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.pl.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.bg.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.cs.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.hi.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.pl.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.da.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.de.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.el.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.es.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.fi.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.fr.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.is.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.it.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.ja.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.ko.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.nb-NO.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.nl.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.pt-BR.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.da.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.de.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.el.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.es.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.fi.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.fr.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.is.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.it.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.ja.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.ko.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.nb-NO.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.nl.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.pt-BR.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferDialog.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.ru.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.sv.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.zh-CHS.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.zh-CHT.resx">
+      <DependentUpon>DiscountOfferDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.da.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.de.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.el.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.es.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.fi.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.fr.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.is.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.it.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.ja.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.ko.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.nb-NO.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.nl.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.pt-BR.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineDialog.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.ru.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.sv.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.zh-CHS.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.zh-CHT.resx">
+      <DependentUpon>DiscountOfferLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.ru.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.sv.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.zh-CHS.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.zh-CHT.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.da.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.de.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.el.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.es.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.fi.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.fr.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.is.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.it.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.ja.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.ko.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.nb-NO.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.nl.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.pt-BR.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyConfigurationDialog.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.ru.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.sv.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.zh-CHS.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.zh-CHT.resx">
+      <DependentUpon>MultibuyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.da.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.de.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.el.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.es.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.fi.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.fr.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.is.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.it.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.ja.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.ko.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.nb-NO.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.nl.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.pt-BR.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyDialog.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.ru.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.sv.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.zh-CHS.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.zh-CHT.resx">
+      <DependentUpon>MultibuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.da.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.de.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.el.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.es.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.fi.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.fr.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.is.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.it.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.ja.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.ko.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.nb-NO.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.nl.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.pt-BR.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.ru.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.sv.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.zh-CHS.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.zh-CHT.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionDialog.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.da.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.de.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.el.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.es.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.fi.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.fr.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.is.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.it.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.ja.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.ko.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.nb-NO.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.nl.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.pt-BR.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineDialog.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.ru.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.sv.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.zh-CHS.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.zh-CHT.resx">
+      <DependentUpon>PromotionLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.is.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.bg.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.cs.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.da.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.de.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.el.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.en-ZA.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.es-MX.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.es.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.fi.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.fr.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.hi.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.is.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.it-IT.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.it.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.ja-JP.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.ja.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.ko.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.nb-NO.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.nl-BE.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.nl.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.pl.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.pt-BR.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.ru.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.sv.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.zh-CHS.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.zh-CHT.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.bg.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.cs.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.da.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.de.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.el.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.en-ZA.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.es-MX.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.es.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.fi.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.fr.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.hi.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.is.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.it.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.ja.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.ko.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.nb-NO.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.nl.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.pl.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.pt-BR.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.bg.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.cs.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.da.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.de.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.el.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.en-ZA.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.es-MX.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.es.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.fi.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.fr.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.hi.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.is.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.it.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.ja.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.ko.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.nb-NO.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.nl.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.pl.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.pt-BR.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.ru.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.sv.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.zh-CHS.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.zh-CHT.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.bg.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.cs.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.da.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.de.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.el.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.en-ZA.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.es-MX.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.es.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.fi.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.fr.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.hi.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.is.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.it.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.ja.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.ko.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.nb-NO.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.nl.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.pl.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.pt-BR.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.ru.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.sv.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.zh-CHS.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.zh-CHT.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.bg.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.cs.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.da.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.de.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.el.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.en-ZA.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.es-MX.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.es.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.fi.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.fr.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.hi.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.is.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.it.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.ja.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.ko.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.nb-NO.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.nl.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.pl.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.pt-BR.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.ru.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.sv.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.zh-CHS.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.zh-CHT.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.bg.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.cs.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.da.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.de.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.el.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.en-ZA.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.es-MX.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.es.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.fi.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.fr.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.hi.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.is.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.it.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.ja.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.ko.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.nb-NO.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.nl.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.pl.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.pt-BR.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.ru.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.sv.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.zh-CHS.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.zh-CHT.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.ru.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.sv.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.zh-CHS.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.zh-CHT.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.bg.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.cs.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.da.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.de.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.el.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.en-ZA.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.es-MX.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.es.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.fi.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.fr.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.hi.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.is.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.it.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.ja.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.ko.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.nb-NO.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.nl.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.pl.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.pt-BR.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.ru.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.sv.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.zh-CHS.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.zh-CHT.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.bg.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.cs.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.da.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.de.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.el.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.en-ZA.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.es-MX.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.es.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.fi.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.fr.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.hi.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.is.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.it.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.ja.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.ko.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.nb-NO.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.nl.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.pl.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.pt-BR.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.ru.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.sv.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.zh-CHS.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.zh-CHT.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.bg.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.cs.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.da.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.de.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.el.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.en-ZA.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.es-MX.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.es.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.fi.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.fr.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.hi.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.is.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.it.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.ja.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.ko.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.nb-NO.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.nl.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.pl.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.pt-BR.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.ru.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.sv.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.zh-CHS.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.zh-CHT.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.en-ZA.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.es-MX.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.en-ZA.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.es-MX.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.en-ZA.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.es-MX.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.en-ZA.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.es-MX.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.bg.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.cs.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.da.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.de.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.el.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.en-ZA.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.es-MX.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.es.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.fi.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.fr.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.hi.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.is.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.it.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.ja.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.ko.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.nb-NO.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.nl.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.pl.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.pt-BR.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.bg.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.cs.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.hi.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.pl.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.bg.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.cs.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.hi.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.pl.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.bg.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.cs.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.da.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.de.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.el.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.es.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.fi.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.fr.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.hi.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.is.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.it.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.ja.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.ko.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.nb-NO.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.nl.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.pl.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.pt-BR.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.ru.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.sv.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.zh-CHS.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.zh-CHT.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.bg.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.cs.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.hi.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.pl.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.da.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.de.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.el.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.es.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.fi.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.fr.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.is.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.it.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.ja.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.ko.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.nb-NO.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.nl.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.pt-BR.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiscountPeriodView.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.da.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.de.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.el.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.es.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.fi.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.fr.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.is.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.it.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.ja.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.ko.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.nb-NO.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.nl.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.pt-BR.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiscountOffersView.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.ru.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.sv.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.zh-CHS.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.zh-CHT.resx">
+      <DependentUpon>DiscountOffersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.ru.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.sv.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.zh-CHS.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.zh-CHT.resx">
+      <DependentUpon>DiscountPeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.da.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.de.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.el.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.es.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.fi.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.fr.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.is.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.it.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.ja.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.ko.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.nb-NO.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.nl.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.pt-BR.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MultiBuyView.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.ru.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.sv.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.zh-CHS.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.zh-CHT.resx">
+      <DependentUpon>MultiBuyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.ru.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.sv.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.zh-CHS.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.zh-CHT.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.bg.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.cs.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.da.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.de.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.el.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.en-ZA.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.es-MX.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.es.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.fi.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.fr.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.hi.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.is.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.it.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.ja.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.ko.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.nb-NO.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.nl.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.pl.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.pt-BR.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PromotionsView.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.ru.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.sv.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.zh-CHS.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.zh-CHT.resx">
+      <DependentUpon>PromotionsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PriceTag16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promotions32.png" />
+    <None Include="Resources\priority_16.png" />
+    <None Include="Resources\priority_32.png" />
+    <None Include="Resources\promotions_16.png" />
+    <None Include="Resources\promotions_32.png" />
+    <Content Include="Resources\RevertSmallImage.png" />
+    <None Include="Resources\validation periods_16.png" />
+    <None Include="Resources\validation periods_32.png" />
+    <None Include="Resources\revert_16.png" />
+    <Content Include="Resources\Warning16.ico" />
+    <Content Include="Resources\Warning16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.ja-JP.resx">
+      <DependentUpon>discountofferdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.ja-JP.resx">
+      <DependentUpon>discountofferlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.ja-JP.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.ja-JP.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.ja-JP.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.ja-JP.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.ja-JP.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.ja-JP.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.ja-JP.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.ja-JP.resx">
+      <DependentUpon>multibuyconfigurationdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.ja-JP.resx">
+      <DependentUpon>multibuydialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.ja-JP.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.ja-JP.resx">
+      <DependentUpon>promotiondialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.ja-JP.resx">
+      <DependentUpon>promotionlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.ja-JP.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.ja-JP.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.ja-JP.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.ja-JP.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.ja-JP.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.ja-JP.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.ja-JP.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.ja-JP.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.ja-JP.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.ja-JP.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.ja-JP.resx">
+      <DependentUpon>discountoffersview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.ja-JP.resx">
+      <DependentUpon>discountperiodview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.ja-JP.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.ja-JP.resx">
+      <DependentUpon>multibuyview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.ja-JP.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.ja-JP.resx">
+      <DependentUpon>promotionsview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.nl-BE.resx">
+      <DependentUpon>discountofferdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.nl-BE.resx">
+      <DependentUpon>discountofferlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.nl-BE.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.nl-BE.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.nl-BE.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.nl-BE.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.nl-BE.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.nl-BE.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.nl-BE.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.nl-BE.resx">
+      <DependentUpon>multibuyconfigurationdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.nl-BE.resx">
+      <DependentUpon>multibuydialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.nl-BE.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.nl-BE.resx">
+      <DependentUpon>promotiondialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.nl-BE.resx">
+      <DependentUpon>promotionlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.nl-BE.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.nl-BE.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.nl-BE.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.nl-BE.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.nl-BE.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.nl-BE.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.nl-BE.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.nl-BE.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.nl-BE.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.nl-BE.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.nl-BE.resx">
+      <DependentUpon>discountoffersview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.nl-BE.resx">
+      <DependentUpon>discountperiodview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.nl-BE.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.nl-BE.resx">
+      <DependentUpon>multibuyview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.nl-BE.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.nl-BE.resx">
+      <DependentUpon>promotionsview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.it-IT.resx">
+      <DependentUpon>discountofferdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.it-IT.resx">
+      <DependentUpon>discountofferlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.it-IT.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.it-IT.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.it-IT.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.it-IT.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.it-IT.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.it-IT.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.it-IT.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.it-IT.resx">
+      <DependentUpon>multibuyconfigurationdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.it-IT.resx">
+      <DependentUpon>multibuydialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.it-IT.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.it-IT.resx">
+      <DependentUpon>promotiondialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.it-IT.resx">
+      <DependentUpon>promotionlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.it-IT.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.it-IT.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.it-IT.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.it-IT.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.it-IT.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.it-IT.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.it-IT.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.it-IT.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.it-IT.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.it-IT.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.it-IT.resx">
+      <DependentUpon>discountoffersview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.it-IT.resx">
+      <DependentUpon>discountperiodview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.it-IT.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.it-IT.resx">
+      <DependentUpon>multibuyview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.it-IT.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.it-IT.resx">
+      <DependentUpon>promotionsview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\discountofferdialog.vi-VN.resx">
+      <DependentUpon>discountofferdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\discountofferlinedialog.vi-VN.resx">
+      <DependentUpon>discountofferlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DiscountOfferLineMultiEditDialog.vi-VN.resx">
+      <DependentUpon>DiscountOfferLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditPriorityDialog.vi-VN.resx">
+      <DependentUpon>EditPriorityDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchDialog.vi-VN.resx">
+      <DependentUpon>MixAndMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineDialog.vi-VN.resx">
+      <DependentUpon>MixAndMatchLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupDialog.vi-VN.resx">
+      <DependentUpon>MixAndMatchLineGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineGroupsDialog.vi-VN.resx">
+      <DependentUpon>MixAndMatchLineGroupsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MixAndMatchLineMultiEditDialog.vi-VN.resx">
+      <DependentUpon>MixAndMatchLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuyconfigurationdialog.vi-VN.resx">
+      <DependentUpon>multibuyconfigurationdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\multibuydialog.vi-VN.resx">
+      <DependentUpon>multibuydialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultibuyLineDialog.vi-VN.resx">
+      <DependentUpon>MultibuyLineDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotiondialog.vi-VN.resx">
+      <DependentUpon>promotiondialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\promotionlinedialog.vi-VN.resx">
+      <DependentUpon>promotionlinedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PromotionLineMultiEditDialog.vi-VN.resx">
+      <DependentUpon>PromotionLineMultiEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ValidationPeriodDialog.vi-VN.resx">
+      <DependentUpon>ValidationPeriodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPeriodicDiscountsPage.vi-VN.resx">
+      <DependentUpon>CustomerPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPromotionsPage.vi-VN.resx">
+      <DependentUpon>CustomerPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPeriodicDiscountsPage.vi-VN.resx">
+      <DependentUpon>ItemPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPromotionOffersPage.vi-VN.resx">
+      <DependentUpon>ItemPromotionOffersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPeriodicDiscountsPage.vi-VN.resx">
+      <DependentUpon>PriceDiscountGroupPeriodicDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PriceDiscountGroupPromotionsPage.vi-VN.resx">
+      <DependentUpon>PriceDiscountGroupPromotionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentDiscountsPage.vi-VN.resx">
+      <DependentUpon>RetailDepartmentDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupDiscountsPage.vi-VN.resx">
+      <DependentUpon>RetailGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupDiscountsPage.vi-VN.resx">
+      <DependentUpon>SpecialGroupDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountoffersview.vi-VN.resx">
+      <DependentUpon>discountoffersview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\discountperiodview.vi-VN.resx">
+      <DependentUpon>discountperiodview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MixAndMatchView.vi-VN.resx">
+      <DependentUpon>MixAndMatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multibuyview.vi-VN.resx">
+      <DependentUpon>multibuyview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeriodicDiscountPrioritiesView.vi-VN.resx">
+      <DependentUpon>PeriodicDiscountPrioritiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsview.vi-VN.resx">
+      <DependentUpon>promotionsview.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

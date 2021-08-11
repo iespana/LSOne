@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="CardReader" xml:space="preserve">
+    <value>Устройство чтения карт</value>
+  </data>
+  <data name="HardwareProfile" xml:space="preserve">
+    <value>Профиль оборудования</value>
+  </data>
+  <data name="IsSystemStyle" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Context" xml:space="preserve">
+    <value>Контекст:</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Профили</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="StartOfDay" xml:space="preserve">
+    <value>Начало дня</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AlwaysPrint" xml:space="preserve">
+    <value>Всегда печатать</value>
+  </data>
+  <data name="BarcodeReader" xml:space="preserve">
+    <value>Считыватель штрих кодов</value>
+  </data>
+  <data name="ContextsDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования содержимого, используемого в профайле стиля</value>
+  </data>
+  <data name="CreditCardService" xml:space="preserve">
+    <value>Обслуживание кредитной карты</value>
+  </data>
+  <data name="DallasKey" xml:space="preserve">
+    <value>Dallas ключ</value>
+  </data>
+  <data name="DeleteContextQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный конекст?</value>
+  </data>
+  <data name="DeleteFormProfile" xml:space="preserve">
+    <value>Удалить профайл формы</value>
+  </data>
+  <data name="DeleteFormProfileLine" xml:space="preserve">
+    <value>Удалить строку профайла формы</value>
+  </data>
+  <data name="DeleteFormProfileLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную форму строки профайла?</value>
+  </data>
+  <data name="DeleteFormProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную форму профайла?</value>
+  </data>
+  <data name="DeleteFuncProfile" xml:space="preserve">
+    <value>Удалить функциональный профайл</value>
+  </data>
+  <data name="DeleteFuncProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный функциональный профайл?</value>
+  </data>
+  <data name="DeleteHardwareProfile" xml:space="preserve">
+    <value>Удалить профайл оборудования</value>
+  </data>
+  <data name="DeleteHardwareProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный профайл оборудования?</value>
+  </data>
+  <data name="DeleteProfile" xml:space="preserve">
+    <value>Удалить визуальный профиль</value>
+  </data>
+  <data name="DeleteProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный визуальный профайл?</value>
+  </data>
+  <data name="DeleteStyleProfile" xml:space="preserve">
+    <value>Удалить профайл стиля</value>
+  </data>
+  <data name="DeleteStyleProfileLine" xml:space="preserve">
+    <value>Удалить строку профайла стиля</value>
+  </data>
+  <data name="DeleteStyleProfileLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку профайла стиля?</value>
+  </data>
+  <data name="DeleteStyleProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранный профайл стиля?</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Денежный ящик</value>
+  </data>
+  <data name="DualDisplay" xml:space="preserve">
+    <value>Двустрочный дисплей</value>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EditContext" xml:space="preserve">
+    <value>Редактировать содержимое</value>
+  </data>
+  <data name="EditStyleProfileLine" xml:space="preserve">
+    <value>Редактировать строку профайла</value>
+  </data>
+  <data name="FiscalPrinter" xml:space="preserve">
+    <value>Фискальный принтер</value>
+  </data>
+  <data name="ForecourtManager" xml:space="preserve">
+    <value>Менеджер АЗС</value>
+  </data>
+  <data name="FormLayouts" xml:space="preserve">
+    <value>Макеты форм</value>
+  </data>
+  <data name="FormLayoutsDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования макетов формы</value>
+  </data>
+  <data name="FormProfileDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования профайлов форм</value>
+  </data>
+  <data name="FormProfiles" xml:space="preserve">
+    <value>Профили форм</value>
+  </data>
+  <data name="FunctionalityProfile" xml:space="preserve">
+    <value>Функциональный профиль</value>
+  </data>
+  <data name="FunctionalityProfiles" xml:space="preserve">
+    <value>Профайлы функциональности</value>
+  </data>
+  <data name="FunctionalityProfilesDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования функциональных профайлов</value>
+  </data>
+  <data name="FunctionalityProfilesRibbon" xml:space="preserve">
+    <value>Функциональность</value>
+  </data>
+  <data name="HardwareProfiles" xml:space="preserve">
+    <value>Профили оборудования</value>
+  </data>
+  <data name="HardwareProfilesDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования профайлов оборудования</value>
+  </data>
+  <data name="HardwareProfilesRibbon" xml:space="preserve">
+    <value>Оборудование</value>
+  </data>
+  <data name="ImageDirectory" xml:space="preserve">
+    <value>Выберите директорию, в которой содержатся изображения</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Товары</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Ключ</value>
+  </data>
+  <data name="LineDisplay" xml:space="preserve">
+    <value>Строка отображения</value>
+  </data>
+  <data name="NeverPrint" xml:space="preserve">
+    <value>Никогда не печатать</value>
+  </data>
+  <data name="NewContext" xml:space="preserve">
+    <value>Новое содержимое</value>
+  </data>
+  <data name="NewStyleProfileLine" xml:space="preserve">
+    <value>Новая строка профиля</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Принтер</value>
+  </data>
+  <data name="PromptUser" xml:space="preserve">
+    <value>Пригласить пользователя</value>
+  </data>
+  <data name="RFIDReader" xml:space="preserve">
+    <value>RFID считыватель</value>
+  </data>
+  <data name="ShowPreview" xml:space="preserve">
+    <value>Показать предпросмотр</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Персонал</value>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Настройка магазина</value>
+  </data>
+  <data name="StyleProfile" xml:space="preserve">
+    <value>Профиль стиля</value>
+  </data>
+  <data name="StyleProfileDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра и редактирования профайлов стиля</value>
+  </data>
+  <data name="StyleProfileLines" xml:space="preserve">
+    <value>Строки стиля профиля</value>
+  </data>
+  <data name="StyleProfiles" xml:space="preserve">
+    <value>Профили стиля</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Стили</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Терминал:</value>
+  </data>
+  <data name="VisualProfile" xml:space="preserve">
+    <value>Профиль визуализации</value>
+  </data>
+  <data name="VisualProfileDefaultScreenResolution" xml:space="preserve">
+    <value>Разрешение экрана по умолчанию</value>
+  </data>
+  <data name="VisualProfileRibbon" xml:space="preserve">
+    <value>Визуальный</value>
+  </data>
+  <data name="VisualProfiles" xml:space="preserve">
+    <value>Профили визуализации</value>
+  </data>
+  <data name="VisualProfilesDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования визуальных профайлов</value>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Оформление</value>
+  </data>
+  <data name="NoCardReaderSelected" xml:space="preserve">
+    <value>Не выбран считыватель карт. Это может послужить причиной невозможности запуска LS One POS с этими настройками.</value>
+  </data>
+  <data name="NoLineDisplaySelected" xml:space="preserve">
+    <value>Не выбран дисплей. Это может послужить причиной невозможности запуска LS One POS, использующей эти настройки.</value>
+  </data>
+  <data name="NoPrinterSelected" xml:space="preserve">
+    <value>Не выбран принтер. Это может послужить причиной невозможности запуска LS One POS, использующей эти настройки.</value>
+  </data>
+  <data name="CSVFieldBarcode" xml:space="preserve">
+    <value>Штрих код</value>
+  </data>
+  <data name="CSVFieldCounted" xml:space="preserve">
+    <value>Количество:</value>
+  </data>
+  <data name="CSVFieldDescription" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="CSVFieldItemId" xml:space="preserve">
+    <value>ID товара</value>
+  </data>
+  <data name="CSVImportTypeStockCounting" xml:space="preserve">
+    <value>Пересчет склада</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Формы</value>
+  </data>
+  <data name="SetDefaultCSVImportProfile" xml:space="preserve">
+    <value>Установить по умолчанию</value>
+  </data>
+  <data name="CSVFieldSerialNumber" xml:space="preserve">
+    <value>Серийный номер:</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Склад</value>
+  </data>
+  <data name="Replication" xml:space="preserve">
+    <value>Репликация</value>
+  </data>
+  <data name="AddMappingToProfile" xml:space="preserve">
+    <value>Пожалуйста, добавьте мэппинг в профиль.</value>
+  </data>
+  <data name="CashChanger" xml:space="preserve">
+    <value>Сдача кассы</value>
+  </data>
+  <data name="Contexts" xml:space="preserve">
+    <value>Содержимое</value>
+  </data>
+  <data name="ContextUsedInProfileCannotBeDeleted" xml:space="preserve">
+    <value>Некоторые или все содержимого этого выбранного контекста используется в профиле стиля и не может быть удалено </value>
+  </data>
+  <data name="CSVFieldTypeDecimal" xml:space="preserve">
+    <value>десятичное</value>
+  </data>
+  <data name="CSVFieldTypeInteger" xml:space="preserve">
+    <value>Целое</value>
+  </data>
+  <data name="CSVFieldTypeString" xml:space="preserve">
+    <value>Строка</value>
+  </data>
+  <data name="CSVFieldUnitId" xml:space="preserve">
+    <value>ID Единицы</value>
+  </data>
+  <data name="CSVImportProfile" xml:space="preserve">
+    <value>Профили импорта CSV</value>
+  </data>
+  <data name="CSVImportProfiles" xml:space="preserve">
+    <value>Профили импорта CSV</value>
+  </data>
+  <data name="CSVImportProfilesDescription" xml:space="preserve">
+    <value>Используйте эту опцию для просмотра или редактирования профилей для csv файлов</value>
+  </data>
+  <data name="CSVImportProfilesTooltipDescription" xml:space="preserve">
+    <value>Управление профилями импорта CSV для определения, как журналы подсчета склада и серийные номера импортируются из CSV файлов</value>
+  </data>
+  <data name="CSVMappingNotSet" xml:space="preserve">
+    <value>CSV профиль не может быть установлен как профиль по умолчанию, потому что для него нет строк мэппинга.</value>
+  </data>
+  <data name="DeleteCSVImportProfile" xml:space="preserve">
+    <value>Удаление профиля импорта CSV
+</value>
+  </data>
+  <data name="DeleteCSVImportProfileLine" xml:space="preserve">
+    <value>Удаление строки профиля импорта CSV</value>
+  </data>
+  <data name="DeleteCSVImportProfileLineQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку профиля импорта CSV файла? ?</value>
+  </data>
+  <data name="DeleteCSVImportProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранную строку профиля импорта CSV файла? ?</value>
+  </data>
+  <data name="FormProfilesTooltipDescription" xml:space="preserve">
+    <value>Организация макетов форм в профилях, чтобы иметь возможность использовать различные распечатки в различных магазинах</value>
+  </data>
+  <data name="FunctionalityProfilesTooltipDescription" xml:space="preserve">
+    <value>Управлениями функциональными профилями, которые включают различные настройки для терминалов </value>
+  </data>
+  <data name="HardwareProfilesTooltipDescription" xml:space="preserve">
+    <value>Управлениями профилями оборудования для связи с терминалами к разной периферии, такой как принтеры чеков и денежные ящики</value>
+  </data>
+  <data name="InsertDefaultData" xml:space="preserve">
+    <value>"Вставка данных по умолчанию"</value>
+  </data>
+  <data name="NoBarCodeReaderSelected" xml:space="preserve">
+    <value>Не обнаружен считыватель штрих кода. Это может послужить причиной невозвожности запуска LS One POS, использующей эти настройки.</value>
+  </data>
+  <data name="NoDrawerSelected" xml:space="preserve">
+    <value>Не был выбран денежный ящик. Это может быть причиной невозможности запуска LS One POS, используя эти настройки.</value>
+  </data>
+  <data name="NoFolderLocationSelected" xml:space="preserve">
+    <value>Не выбрана папка для Windows принтера</value>
+  </data>
+  <data name="NoKeySelected" xml:space="preserve">
+    <value>Не был выбран ключ. Это может быть причиной невозможности запуска LS One POS испольщующее данные настройки.</value>
+  </data>
+  <data name="NoLinesForDefaultProfile" xml:space="preserve">
+    <value>CSV профиль не может быть установлен как профиль по умоляанию, потому что для него нет строк мэппинга. Пожалуйста, добавьте мжппинг в этот профиль.</value>
+  </data>
+  <data name="NoScaleSelected" xml:space="preserve">
+    <value>Весы не обнаружены. Это может быть причиной невозможности запуска LS One POS. использующий эти настройки.</value>
+  </data>
+  <data name="OneTypePerProfile" xml:space="preserve">
+    <value>Для профиля может быть только один экземпляр каждого типа</value>
+  </data>
+  <data name="ProfileManagement" xml:space="preserve">
+    <value>Управление профилями</value>
+  </data>
+  <data name="PumpConnection" xml:space="preserve">
+    <value>Подключение насоса</value>
+  </data>
+  <data name="ReceiptData" xml:space="preserve">
+    <value>"Получение данных"</value>
+  </data>
+  <data name="Related_CSVProfiles" xml:space="preserve">
+    <value>Профили CSV</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Весы</value>
+  </data>
+  <data name="SelectFolderLocation" xml:space="preserve">
+    <value>Выбор местоположения паки</value>
+  </data>
+  <data name="SetDefaultCSVImportProfileQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите сделать выбранный профиль импорта файла, как профиль по умолчанию?</value>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Сайты
+</value>
+  </data>
+  <data name="StyleProfileLineAlreadyExists" xml:space="preserve">
+    <value>Кобинация строк стиля профиля уже существует и не может быть сохранена.</value>
+  </data>
+  <data name="SurveillanceCamera" xml:space="preserve">
+    <value>Камера видеонаблюдения</value>
+  </data>
+  <data name="TheFolderSelectedDoesNotExist" xml:space="preserve">
+    <value>Папка {0} не существует. Пожалуйста, выберите папку, которая уже существует.</value>
+  </data>
+  <data name="VisualProfilesTooltipDescription" xml:space="preserve">
+    <value>Управление профилями визуализации, который определяет экран, настроенный для терминалов</value>
+  </data>
+  <data name="VisualProfileUserResizable" xml:space="preserve">
+    <value>Пользователь может изменить размер</value>
+  </data>
+  <data name="ErrorCannotLoadDeviceList" xml:space="preserve">
+    <value>На хосте {0} не обнаружен список устройств. Проверьте запушена ли служба станции печати и установлен ли принтер</value>
+  </data>
+  <data name="CSVFieldSerialType" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Related_ResetDefaultProfile" xml:space="preserve">
+    <value>Сбросить профиль по умолчанию</value>
+  </data>
+  <data name="ResetDefaultProfileHeader" xml:space="preserve">
+    <value>Сбросить форму профиля</value>
+  </data>
+  <data name="ResetDefaultProfileQuestion" xml:space="preserve">
+    <value>Это перезапишет любые изменения сделанные для форм макета в формах макета по умолчанию. Продолжить?</value>
+  </data>
+  <data name="DiscountSettings" xml:space="preserve">
+    <value>Настройки скидки</value>
+  </data>
+  <data name="EditStore" xml:space="preserve">
+    <value>Редактировать магазин</value>
+  </data>
+  <data name="EditVisualProfile" xml:space="preserve">
+    <value>Редактирование визуальных профилей</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Код языка:</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Макет:</value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>Нет выбора</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+  <data name="SelectLayoutLabel" xml:space="preserve">
+    <value>Макет:</value>
+  </data>
+  <data name="SelectStoreLabel" xml:space="preserve">
+    <value>Магазин:</value>
+  </data>
+  <data name="SelectVisualProfileLabel" xml:space="preserve">
+    <value>Профиль визуализации</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Магазин</value>
+  </data>
+  <data name="StoreDefault" xml:space="preserve">
+    <value>Магазин по умолчанию</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+</root>

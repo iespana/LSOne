@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Kyllä</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Väri</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kuvaus:</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Alennus %</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Koko</value>
+  </data>
+  <data name="ItemRelation" xml:space="preserve">
+    <value>Tuotteen suhteet</value>
+  </data>
+  <data name="PriceUnit" xml:space="preserve">
+    <value>Hintayksikkö</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Alennukset:</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Hinnat</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Asiakas</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Ryhmä</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Aktivoi</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Yksikköhinta</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Poista käytöstä</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Ota käyttöön</value>
+  </data>
+  <data name="PriceGroups" xml:space="preserve">
+    <value>Hintaryhmät</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Variantti</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Hinta</value>
+  </data>
+  <data name="MovePriorityDown" xml:space="preserve">
+    <value>Siirrä alas</value>
+  </data>
+  <data name="MovePriorityUp" xml:space="preserve">
+    <value>Siirrä ylös</value>
+  </data>
+  <data name="AccountSelectionCannotBeEmpty" xml:space="preserve">
+    <value>Tilien valinta ei voi olla tyhjä</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Kaikki</value>
+  </data>
+  <data name="AmountMayNotBeHigherThanBasePrice" xml:space="preserve">
+    <value>Alennusmäärä ei saa ylittää tuotteen perushintaa</value>
+  </data>
+  <data name="BarcodeAlreadyAssignedToAnOffer" xml:space="preserve">
+    <value>Tämä viivakoodi on jo määritetty tarjoukseen</value>
+  </data>
+  <data name="CannotSortByThisColumn" xml:space="preserve">
+    <value>Ei voi järjestää tämän sarakkeen mukaan</value>
+  </data>
+  <data name="CouldNotDeleteLineGroup" xml:space="preserve">
+    <value>Riviryhmää ei voitu poistaa koska ryhmä on käytössä</value>
+  </data>
+  <data name="DealPrice" xml:space="preserve">
+    <value>Sopimushinta</value>
+  </data>
+  <data name="DealPriceDiscountPct" xml:space="preserve">
+    <value>Kauppahinta / alennusprosentti</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Oletusmyymälältä puuttuu veroryhmä</value>
+  </data>
+  <data name="DeleteDiscountOffer" xml:space="preserve">
+    <value>Poista alennustarjous</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Poista alennustarjouksen rivi</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun alennustarjouksen rivin?</value>
+  </data>
+  <data name="DeleteDiscountOfferLines" xml:space="preserve">
+    <value>Poista alennustarjouksen rivit</value>
+  </data>
+  <data name="DeleteDiscountOfferLinesQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut alennustarjouksen rivit?</value>
+  </data>
+  <data name="DeleteDiscountOfferQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun alennustarjouksen rivin?</value>
+  </data>
+  <data name="DeleteDiscountPeriod" xml:space="preserve">
+    <value>Poista alennusjakso</value>
+  </data>
+  <data name="DeleteDiscountPeriodQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun alennustarjouksen rivin?</value>
+  </data>
+  <data name="DeleteLineGroup" xml:space="preserve">
+    <value>Poista riviryhmä</value>
+  </data>
+  <data name="DeleteLineGroupQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun riviryhmän?</value>
+  </data>
+  <data name="DeleteLineGroups" xml:space="preserve">
+    <value>Poista riviryhmät</value>
+  </data>
+  <data name="DeleteLineGroupsQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut riviryhmät?</value>
+  </data>
+  <data name="DeleteMixAndMatch" xml:space="preserve">
+    <value>Poista Mix&amp;Match tarjous</value>
+  </data>
+  <data name="DeleteMixAndMatchQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun Mix&amp;Match tarjouksen?</value>
+  </data>
+  <data name="DeleteMultibuy" xml:space="preserve">
+    <value>Poista monioston asetus</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Poista monioston rivi</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun monioston rivin?</value>
+  </data>
+  <data name="DeleteMultibuyLines" xml:space="preserve">
+    <value>Poista monioston rivit</value>
+  </data>
+  <data name="DeleteMultibuyLinesQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut monioston rivit?</value>
+  </data>
+  <data name="DeleteMultibuyQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun monioston asetuksen?</value>
+  </data>
+  <data name="DeletePriceGroup" xml:space="preserve">
+    <value>Poista hintaryhmä</value>
+  </data>
+  <data name="DeletePriceGroupQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun hintaryhmän?</value>
+  </data>
+  <data name="DeletePromotion" xml:space="preserve">
+    <value>Poista kampanja</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Poista kampanjan rivi</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kampanjan rivin?</value>
+  </data>
+  <data name="DeletePromotionLines" xml:space="preserve">
+    <value>Poista kampanjan rivit</value>
+  </data>
+  <data name="DeletePromotionLinesQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut kampanjan rivit?</value>
+  </data>
+  <data name="DeletePromotionQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun kampanjan rivin?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroup" xml:space="preserve">
+    <value>Poista myymälä hintaryhmästä</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroupQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun myymälän hintaryhmästä?</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Poista käytöstä</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Poistettu käytöstä</value>
+  </data>
+  <data name="DiscountExceedsPrice" xml:space="preserve">
+    <value>Alennus ei saa ylittää perushintaa</value>
+  </data>
+  <data name="DiscountOffer" xml:space="preserve">
+    <value>Alennustarjous</value>
+  </data>
+  <data name="DiscountOfferLines" xml:space="preserve">
+    <value>Alennustarjous rivit</value>
+  </data>
+  <data name="DiscountOffers" xml:space="preserve">
+    <value>Alennustarjoukset</value>
+  </data>
+  <data name="DiscountOffersDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata alennustarjouksia</value>
+  </data>
+  <data name="DiscountOffersTooltipDescription" xml:space="preserve">
+    <value>Hallitse alennustarjouksia tuotteille, ryhmille ja osastoille</value>
+  </data>
+  <data name="DiscountPercentCannotBeZero" xml:space="preserve">
+    <value>Alennusprosentti ei voi olla nolla</value>
+  </data>
+  <data name="DiscountsDescription" xml:space="preserve">
+    <value>Näyttää alivalikon alennukseen liittyviin toimintoihin</value>
+  </data>
+  <data name="DiscountType" xml:space="preserve">
+    <value>Alennuksen tyyppi:</value>
+  </data>
+  <data name="DiscountValuesAreMissing" xml:space="preserve">
+    <value>Alennusarvot puuttuvat</value>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Muokkaa kaikkia</value>
+  </data>
+  <data name="EditDiscount" xml:space="preserve">
+    <value>Muokkaa alennusta</value>
+  </data>
+  <data name="EditPriority" xml:space="preserve">
+    <value>Muokkaa prioriteettia</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
+  <data name="EditTypeNone" xml:space="preserve">
+    <value>Ei yhtään</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Käytössä:</value>
+  </data>
+  <data name="ErrorSomeDataHasBeenDeleted" xml:space="preserve">
+    <value>Virhe: Joitain tietoja on poistettu</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Tunnus</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Tuote</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Tälle tuotteelle ei ole liitetty veroluokkaa</value>
+  </data>
+  <data name="LevelMustBeAPositiveNumber" xml:space="preserve">
+    <value>Tason on oltava positiivinen luku</value>
+  </data>
+  <data name="LineGroup" xml:space="preserve">
+    <value>Rivi-ryhmä: </value>
+  </data>
+  <data name="MBConfigHeaderPercent" xml:space="preserve">
+    <value>Valitse yksilöllinen vähimmäismäärä ja alennusprosentti</value>
+  </data>
+  <data name="MixAndMatch" xml:space="preserve">
+    <value>Mix &amp; Match</value>
+  </data>
+  <data name="MixAndMatchDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata Mix&amp;Match tarjouksia</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Mix&amp;Match riviryhmä</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Mix&amp;Match rivit</value>
+  </data>
+  <data name="MixAndMatchTooltipDescription" xml:space="preserve">
+    <value>Aseta Mix&amp;Match tarjous alennukselle mille vain tuotteiden yhdistelmälle</value>
+  </data>
+  <data name="MixMatch" xml:space="preserve">
+    <value>Mix &amp; Match</value>
+  </data>
+  <data name="Multibuy" xml:space="preserve">
+    <value>Moniosto</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Monioston konfiguraatiot</value>
+  </data>
+  <data name="MultibuyDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata moniostojen asetuksia</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Monioston rivit</value>
+  </data>
+  <data name="MultibuyTooltipDescription" xml:space="preserve">
+    <value>Aseta monioston alennustarjous myytyyn määrään nähden</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Oletusmyymälää ei ole valittu</value>
+  </data>
+  <data name="NoDiscountsAreActive" xml:space="preserve">
+    <value>Alennukset eivät ole aktiivisia</value>
+  </data>
+  <data name="NoDiscountsAreConfigured" xml:space="preserve">
+    <value>Mitään alennuksia ei ole määritetty</value>
+  </data>
+  <data name="OfferCount" xml:space="preserve">
+    <value>#1 tarjousta löydetty</value>
+  </data>
+  <data name="OfferLinesCount" xml:space="preserve">
+    <value>#1 riviä löydetty</value>
+  </data>
+  <data name="OfferLinesLoaded" xml:space="preserve">
+    <value>#1 riviä ladattu (#2:sta)</value>
+  </data>
+  <data name="OneDiscountIsExpiringThisWeek" xml:space="preserve">
+    <value>1 alennus on päättymässä tällä viikolla</value>
+  </data>
+  <data name="OneDiscountsIsActive" xml:space="preserve">
+    <value>1 alennus on aktiivinen</value>
+  </data>
+  <data name="PeriodicDiscountPriorities" xml:space="preserve">
+    <value>Määräaikaisten alennuksien prioriteetti</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa valitaksesi prioriteetin määräaikaiselle alennukselle</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi kaikkien määräaikaisten alennustarjouksien prioriteettejä. Prioriteettiä käytetään silloin kun useammat tarjoukset sisältävät samoja tuotteita.</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Määräaikaiset alennukset:</value>
+  </data>
+  <data name="PeriodicDiscountsManage" xml:space="preserve">
+    <value>Hallitse</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Hinta/alennus</value>
+  </data>
+  <data name="PriceGroupDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa tarkastellaksesi ja muokataksesi alennusryhmiä</value>
+  </data>
+  <data name="PriceGroupExists" xml:space="preserve">
+    <value>Hintaryhmä, jolla on tämä tunnus, on jo olemassa</value>
+  </data>
+  <data name="PricesAndDiscounts" xml:space="preserve">
+    <value>Hinnat ja alennukset</value>
+  </data>
+  <data name="PricesDescription" xml:space="preserve">
+    <value>Näyttää alivalikon hintaan liittyviin toimintoihin</value>
+  </data>
+  <data name="PriceUnitIncludingTax" xml:space="preserve">
+    <value>Verollinen hintayksikkö</value>
+  </data>
+  <data name="PriceValuesAreMissing" xml:space="preserve">
+    <value>Hinnat puuttuvat</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Prioriteetti:</value>
+  </data>
+  <data name="PriorityAlreadyInUse" xml:space="preserve">
+    <value>Tämä prioriteetti on jo käytössä toisella määräaikaisella alennuksella</value>
+  </data>
+  <data name="PriorityAlreadyInUseNextIs" xml:space="preserve">
+    <value>Tämä prioriteetti on jo käytössä toisella määräaikaisella alennuksella. Seuraava vapaa prioriteeti on #1</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Kampanjan rivit</value>
+  </data>
+  <data name="PromotionOffer" xml:space="preserve">
+    <value>Kampanjatarjous</value>
+  </data>
+  <data name="PromotionOffers" xml:space="preserve">
+    <value>Kampanjan tarjoukset</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Kampanjat</value>
+  </data>
+  <data name="PromotionsDescription" xml:space="preserve">
+    <value>Tämän vaihtoehdon avulla voit tarkastella ja muokata kampanjoita</value>
+  </data>
+  <data name="PromotionsTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi kampanjoita tuotteilla, ryhmillä ja osastoilla</value>
+  </data>
+  <data name="RelationExists" xml:space="preserve">
+    <value>Tarjouksen rivi tällä relaatiolla on jo olemassa</value>
+  </data>
+  <data name="RemoveConfiguration" xml:space="preserve">
+    <value>Poista konfiguraatiot</value>
+  </data>
+  <data name="RemoveConfigurationQuestion" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitun konfiguraation?</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Vähittäiskauppa</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Osasto</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Tuoterymä</value>
+  </data>
+  <data name="RetailItemNotExistsError" xml:space="preserve">
+    <value>Tuote, johon tämä rivi viittaa, on poistettu. Ole hyvä ja poista tämä rivi korjataksesi ongelman.</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Valitse toiminto</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Asetukset</value>
+  </data>
+  <data name="ShowOffer" xml:space="preserve">
+    <value>Näytä tarjous</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Erityinen</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Erikoisryhmä</value>
+  </data>
+  <data name="StandardPriceIsZero" xml:space="preserve">
+    <value>Perushinta on nolla</value>
+  </data>
+  <data name="StoreAlreadyInPriceGroup" xml:space="preserve">
+    <value>Valittu myymälä on jo valitussa hintaryhmässä</value>
+  </data>
+  <data name="StoresInPriceGroups" xml:space="preserve">
+    <value>Hintaryhmässä olevat myymälät</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Tyyli</value>
+  </data>
+  <data name="ThatMinimumQuantityExists" xml:space="preserve">
+    <value>Tämä vähimmäismäärä on olemassa tietokannassa</value>
+  </data>
+  <data name="TimeDoesNotEndAfterMidnight" xml:space="preserve">
+    <value>Aika ei pääty keskiyön jälkeen</value>
+  </data>
+  <data name="TimeEndsAfterMidnight" xml:space="preserve">
+    <value>Aika päättyy keskiyön jälkeen</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tyyppi:</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Kumoa</value>
+  </data>
+  <data name="ValidationPeriodDescription" xml:space="preserve">
+    <value>Käytä tätä vaihtoehtoa voimassaoloaikojen tarkastelemiseen sekä muokkaamiseen</value>
+  </data>
+  <data name="ValidationPeriods" xml:space="preserve">
+    <value>Voimassaoloajat</value>
+  </data>
+  <data name="ValidationPeriodTooltipDescription" xml:space="preserve">
+    <value>Hallinnoi voimassaoloaikoja alennustarjouksille ja kampanjoille</value>
+  </data>
+  <data name="VariantNeedsToBeSelected" xml:space="preserve">
+    <value>Variantti on valittava tuotteelle, jolla on variantteja</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Varianttinumero</value>
+  </data>
+  <data name="VariationNotExistsError" xml:space="preserve">
+    <value>Variantti, johon tämä tietue viittaa, on poistettu. Poista tämä tietua korjataksesi ongelman.</value>
+  </data>
+  <data name="ViewConflictingPriorities" xml:space="preserve">
+    <value>Tämä prioriteetti on jo käytössä toisella määräaikaisella alennuksella. Paina tästä nähdeksesi kaikki prioriteetit</value>
+  </data>
+  <data name="ViewPriorities" xml:space="preserve">
+    <value>Näytä prioriteetit</value>
+  </data>
+  <data name="XDiscountsAreActive" xml:space="preserve">
+    <value>#1 alennukset ovat aktiivisia</value>
+  </data>
+  <data name="XDiscountsAreExpiringThisWeek" xml:space="preserve">
+    <value>#1 alennukset, jotka päättyvät tällä viikolla</value>
+  </data>
+</root>

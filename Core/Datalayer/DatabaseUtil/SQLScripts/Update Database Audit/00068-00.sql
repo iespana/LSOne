@@ -1,0 +1,104 @@
+﻿USE LSPOSNET_Audit
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTORYTRANSFERORDERLog]') AND TYPE IN ('U'))
+BEGIN
+CREATE TABLE [dbo].[INVENTORYTRANSFERORDERLog](
+    AuditID int NOT NULL IDENTITY (1, 1),
+    AuditUserGUID uniqueidentifier NOT NULL,
+    AuditUserLogin nvarchar(32) NOT NULL,
+    AuditDate datetime NOT NULL,
+    [ID] [nvarchar](20) NOT NULL,
+	[INVENTORYTRANSFERREQUESTID] [nvarchar](20) NULL,
+	[SENDINGSTOREID] [nvarchar](20) NOT NULL,
+	[RECEIVINGSTOREID] [nvarchar](20) NOT NULL,
+	[CREATIONDATE] [datetime] NOT NULL,
+	[RECEIVINGDATE] [datetime] NULL,
+	[SENTDATE] [datetime] NULL,
+	[RECEIVED] [bit] NOT NULL,
+	[SENT] [bit] NOT NULL,
+	[FETCHEDBYRECEIVINGSTORE] [bit] NOT NULL,
+	[DATAAREAID] [nvarchar](4) NOT NULL,
+    Deleted bit NULL)
+
+    alter table dbo.INVENTORYTRANSFERORDERLog add constraint PK_INVENTORYTRANSFERORDERLog
+    primary key clustered (AuditID) on [PRIMARY]
+
+    create nonclustered index IX_INVENTORYTRANSFERORDERLog_AuditUserGUID ON dbo.INVENTORYTRANSFERORDERLog (AuditUserGUID) ON [PRIMARY]
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTORYTRANSFERORDERLINELog]') AND TYPE IN ('U'))
+BEGIN
+CREATE TABLE [dbo].INVENTORYTRANSFERORDERLINELog(
+    AuditID int NOT NULL IDENTITY (1, 1),
+    AuditUserGUID uniqueidentifier NOT NULL,
+    AuditUserLogin nvarchar(32) NOT NULL,
+    AuditDate datetime NOT NULL,
+    [ID] [uniqueidentifier] NOT NULL,
+	[INVENTORYTRANSFERORDERID] [nvarchar](20) NOT NULL,
+	[ITEMID] [nvarchar](20) NOT NULL,
+	[VARIANTID] [nvarchar](20) NULL,
+	[UNITID] [nvarchar](20) NOT NULL,
+	[QUANTITYSENT] [numeric](24, 6) NULL,
+	[QUANTITYRECEIVED] [numeric](24, 6) NULL,
+	[SENT] [bit] NOT NULL,
+	[DATAAREAID] [nvarchar](4) NOT NULL,
+    Deleted bit NULL)
+
+    alter table dbo.INVENTORYTRANSFERORDERLINELog add constraint PK_INVENTORYTRANSFERORDERLINELog
+    primary key clustered (AuditID) on [PRIMARY]
+
+    create nonclustered index IX_INVENTORYTRANSFERORDERLINELog_AuditUserGUID ON dbo.INVENTORYTRANSFERORDERLINELog (AuditUserGUID) ON [PRIMARY]
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTORYTRANSFERREQUESTLog]') AND TYPE IN ('U'))
+BEGIN
+CREATE TABLE [dbo].INVENTORYTRANSFERREQUESTLog(
+    AuditID int NOT NULL IDENTITY (1, 1),
+    AuditUserGUID uniqueidentifier NOT NULL,
+    AuditUserLogin nvarchar(32) NOT NULL,
+    AuditDate datetime NOT NULL,
+    [ID] [nvarchar](20) NOT NULL,
+	[SENDINGSTOREID] [nvarchar](20) NOT NULL,
+	[RECEIVINGSTOREID] [nvarchar](20) NOT NULL,
+	[CREATIONDATE] [datetime] NOT NULL,
+	[SENTDATE] [datetime] NULL,
+	[SENT] [bit] NOT NULL,
+	[FETCHEDBYRECEIVINGSTORE] [bit] NOT NULL,
+	[INVENTORYTRANSFERCREATED] [bit] NOT NULL,
+	[DATAAREAID] [nvarchar](4) NOT NULL,
+    Deleted bit NULL)
+
+    alter table dbo.INVENTORYTRANSFERREQUESTLog add constraint PK_INVENTORYTRANSFERREQUESTLog
+    primary key clustered (AuditID) on [PRIMARY]
+
+    create nonclustered index IX_INVENTORYTRANSFERREQUESTLog_AuditUserGUID ON dbo.INVENTORYTRANSFERREQUESTLog (AuditUserGUID) ON [PRIMARY]
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTORYTRANSFERREQUESTLINELog]') AND TYPE IN ('U'))
+BEGIN
+CREATE TABLE [dbo].INVENTORYTRANSFERREQUESTLINELog(
+    AuditID int NOT NULL IDENTITY (1, 1),
+    AuditUserGUID uniqueidentifier NOT NULL,
+    AuditUserLogin nvarchar(32) NOT NULL,
+    AuditDate datetime NOT NULL,
+    [ID] [uniqueidentifier] NOT NULL,
+	[INVENTORYTRANSFERREQUESTID] [nvarchar](20) NOT NULL,
+	[ITEMID] [nvarchar](20) NOT NULL,
+	[VARIANTID] [nvarchar](20) NULL,
+	[UNITID] [nvarchar](20) NOT NULL,
+	[QUANTITYREQUESTED] [numeric](24, 6) NOT NULL,
+	[SENT] [bit] NOT NULL,
+	[DATAAREAID] [nvarchar](4) NOT NULL,
+    Deleted bit NULL)
+
+    alter table dbo.INVENTORYTRANSFERREQUESTLINELog add constraint PK_INVENTORYTRANSFERREQUESTLINELog
+    primary key clustered (AuditID) on [PRIMARY]
+
+    create nonclustered index IX_INVENTORYTRANSFERREQUESTLINELog_AuditUserGUID ON dbo.INVENTORYTRANSFERREQUESTLINELog (AuditUserGUID) ON [PRIMARY]
+END
+GO
+

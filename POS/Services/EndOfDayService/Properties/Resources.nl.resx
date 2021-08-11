@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount" xml:space="preserve">
+    <value>Bedrag</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="LineDiscount" xml:space="preserve">
+    <value>Regelkorting</value>
+  </data>
+  <data name="TotalDiscounts" xml:space="preserve">
+    <value>Eindkorting</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschrijving</value>
+  </data>
+  <data name="TenderAmount" xml:space="preserve">
+    <value>Bedrag</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Regelkorting</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Totaalbedrag</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Valuta</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tijd</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Mijn account</value>
+  </data>
+  <data name="AmtInclTax" xml:space="preserve">
+    <value>Amt incl BTW</value>
+  </data>
+  <data name="BankDrop" xml:space="preserve">
+    <value>Bank storting</value>
+  </data>
+  <data name="BankDropReversal" xml:space="preserve">
+    <value>Bank storting herneming</value>
+  </data>
+  <data name="BusinessDay" xml:space="preserve">
+    <value>Bedrijfs data</value>
+  </data>
+  <data name="ChangeBackReport" xml:space="preserve">
+    <value>Rapport terugbetaling</value>
+  </data>
+  <data name="CombinedReturns" xml:space="preserve">
+    <value>Retouren</value>
+  </data>
+  <data name="ConfirmZReportPrinting" xml:space="preserve">
+    <value>Weet u zeker dat u wilt afdrukken van de Z-verslag?</value>
+  </data>
+  <data name="CurrencyReport" xml:space="preserve">
+    <value>Verslag van de munt</value>
+  </data>
+  <data name="CustomerDeposits" xml:space="preserve">
+    <value>Klantendeposito’s</value>
+  </data>
+  <data name="CustomerOrderDeposits" xml:space="preserve">
+    <value>Volgorde cliëntentegoeden</value>
+  </data>
+  <data name="EndOfDayOperationQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt uitvoeren van een bewerking van het einde van de dag?</value>
+  </data>
+  <data name="EndOfShiftQuestion" xml:space="preserve">
+    <value>Weet u zeker dat u wilt een einde-van-Shift bewerking uitvoeren?</value>
+  </data>
+  <data name="EnterGrossAmt" xml:space="preserve">
+    <value>Bruto bedrag</value>
+  </data>
+  <data name="EnterNetAmt" xml:space="preserve">
+    <value>Netto bedrag</value>
+  </data>
+  <data name="EnterNewZ" xml:space="preserve">
+    <value>Voer nieuwe Z-ID</value>
+  </data>
+  <data name="EnterNewZID" xml:space="preserve">
+    <value>Voer de nieuwe Z-lijst-ID</value>
+  </data>
+  <data name="ExclTax" xml:space="preserve">
+    <value>excl. btw</value>
+  </data>
+  <data name="FloatEntry" xml:space="preserve">
+    <value>Geld ingaven</value>
+  </data>
+  <data name="GrandTotal" xml:space="preserve">
+    <value>Groot totaal.</value>
+  </data>
+  <data name="GrossAmtLowerThanNetAmt" xml:space="preserve">
+    <value>Bruto bedrag mag niet lager zijn dan het nettobedrag</value>
+  </data>
+  <data name="GrossReturns" xml:space="preserve">
+    <value>Bruto rendement</value>
+  </data>
+  <data name="GrossSales" xml:space="preserve">
+    <value>Bruto-omzet</value>
+  </data>
+  <data name="InclTax" xml:space="preserve">
+    <value>Amt incl BTW</value>
+  </data>
+  <data name="IncomeExpenseDescr" xml:space="preserve">
+    <value>Inkomsten / kosten van rekeningen</value>
+  </data>
+  <data name="InOut" xml:space="preserve">
+    <value>In/uit</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="ItemSalesReport" xml:space="preserve">
+    <value>Verkooprapport</value>
+  </data>
+  <data name="NetAmt" xml:space="preserve">
+    <value>Netto amt</value>
+  </data>
+  <data name="NetReturns" xml:space="preserve">
+    <value>Totale netto rendement</value>
+  </data>
+  <data name="NetSales" xml:space="preserve">
+    <value>Totaal netto omzet</value>
+  </data>
+  <data name="NoOfCustomerTransactions" xml:space="preserve">
+    <value>Aantal klant transacties</value>
+  </data>
+  <data name="NoOfDepositTransactions" xml:space="preserve">
+    <value>Aantal storting transacties</value>
+  </data>
+  <data name="NoOfDrawerOpenings" xml:space="preserve">
+    <value>Aantal lade openingen</value>
+  </data>
+  <data name="NoOfItems" xml:space="preserve">
+    <value>Aantal sales artikelen</value>
+  </data>
+  <data name="NoOfItemsReturned" xml:space="preserve">
+    <value>Aantal geretourneerde items</value>
+  </data>
+  <data name="NoOfLogins" xml:space="preserve">
+    <value>Aantal aanmeldingen</value>
+  </data>
+  <data name="NoOfReturnedTransactions" xml:space="preserve">
+    <value>Aantal geretourneerde transacties</value>
+  </data>
+  <data name="NoOfSalesTransactions" xml:space="preserve">
+    <value>Aantal verkooptransacties</value>
+  </data>
+  <data name="NoOfSuspendedTransactions" xml:space="preserve">
+    <value>Aantal zwevende transacties</value>
+  </data>
+  <data name="NoOfVoidedTransactions" xml:space="preserve">
+    <value>Aantal nietigverklaarde transacties</value>
+  </data>
+  <data name="NoPrinterConfiguredNoXRpt" xml:space="preserve">
+    <value>Geen printer is geconfigureerd. X verslag bewerking wordt geannuleerd</value>
+  </data>
+  <data name="NoPrinterConfiguredNoZRpt" xml:space="preserve">
+    <value>Geen printer is geconfigureerd. Z verslag bewerking wordt geannuleerd</value>
+  </data>
+  <data name="NoSaleReport" xml:space="preserve">
+    <value>Aantal verkoop-verslag</value>
+  </data>
+  <data name="NoZReportID" xml:space="preserve">
+    <value>Geen Z lijst-ID gemaakt. De bewerking kan niet worden voortgezet</value>
+  </data>
+  <data name="OldXReport" xml:space="preserve">
+    <value>Oud X-verslag</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operanten</value>
+  </data>
+  <data name="OperatorID" xml:space="preserve">
+    <value>Operatoridentificator</value>
+  </data>
+  <data name="OtherInformation" xml:space="preserve">
+    <value>Overige informatie</value>
+  </data>
+  <data name="PreviousZAmtNotValid" xml:space="preserve">
+    <value>Bedragen in eerdere Z verslagen zijn ongeldig. De bewerking is niet toegestaan</value>
+  </data>
+  <data name="PreviousZNotValid" xml:space="preserve">
+    <value>Vorige Z verslagen zijn ongeldig. De bewerking is niet toegestaan</value>
+  </data>
+  <data name="PreviousZReportsMissing" xml:space="preserve">
+    <value>Vorige Z verslagen ontbreken. De bewerking is niet toegestaan</value>
+  </data>
+  <data name="PrintedOn" xml:space="preserve">
+    <value>Afdrukdatum</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Hoeveelheid</value>
+  </data>
+  <data name="ReceiptCopies" xml:space="preserve">
+    <value>Ontvangst kopieën</value>
+  </data>
+  <data name="RedeemedDeposits" xml:space="preserve">
+    <value>Ingewisselde storting</value>
+  </data>
+  <data name="ReturnReport" xml:space="preserve">
+    <value>Terugkeer omzetrapport #1</value>
+  </data>
+  <data name="Returns" xml:space="preserve">
+    <value>retouren</value>
+  </data>
+  <data name="RoundingDifference" xml:space="preserve">
+    <value>Afrondingsverschil</value>
+  </data>
+  <data name="RoundingReport" xml:space="preserve">
+    <value>Afronding van verslag</value>
+  </data>
+  <data name="SafeDrop" xml:space="preserve">
+    <value>KLuis storting</value>
+  </data>
+  <data name="SafeDropReversal" xml:space="preserve">
+    <value>Kluis storting herneming</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>verkoop</value>
+  </data>
+  <data name="SalesInvoice" xml:space="preserve">
+    <value>Verkoopfactuur</value>
+  </data>
+  <data name="SalesOrder" xml:space="preserve">
+    <value>Verkooporder</value>
+  </data>
+  <data name="SalesReport" xml:space="preserve">
+    <value>Verkooprapport</value>
+  </data>
+  <data name="StaffID" xml:space="preserve">
+    <value>Werknemers</value>
+  </data>
+  <data name="StatisticDescription" xml:space="preserve">
+    <value>Statistieken</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Winkel</value>
+  </data>
+  <data name="StoreID" xml:space="preserve">
+    <value>Winkel ID</value>
+  </data>
+  <data name="SumOfReturnedTransactions" xml:space="preserve">
+    <value>Som van de retouren</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>BTW</value>
+  </data>
+  <data name="TaxGroup" xml:space="preserve">
+    <value>Fiscale groep</value>
+  </data>
+  <data name="TaxNumber" xml:space="preserve">
+    <value>BTW-nummer:</value>
+  </data>
+  <data name="TaxReport" xml:space="preserve">
+    <value>Fiscale verslag #1</value>
+  </data>
+  <data name="TenderDeclarationReport" xml:space="preserve">
+    <value>Tender declaratie rapport</value>
+  </data>
+  <data name="TenderName" xml:space="preserve">
+    <value>OFFERTE</value>
+  </data>
+  <data name="TenderRemoval" xml:space="preserve">
+    <value>Tender verwideren</value>
+  </data>
+  <data name="TenderReport" xml:space="preserve">
+    <value>Tender verslag</value>
+  </data>
+  <data name="Terminal" xml:space="preserve">
+    <value>Terminal-ID</value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>Terminal-ID</value>
+  </data>
+  <data name="TotalAmountAbbreviated" xml:space="preserve">
+    <value>Totaal bedrag:</value>
+  </data>
+  <data name="TotalNetAmount" xml:space="preserve">
+    <value>Totaal bedrag:</value>
+  </data>
+  <data name="TotalNetAmountInclTax" xml:space="preserve">
+    <value>Totaal incl. BTW</value>
+  </data>
+  <data name="TotalNetSales" xml:space="preserve">
+    <value>Totaal netto omzet</value>
+  </data>
+  <data name="TotalNoOfTransactions" xml:space="preserve">
+    <value>Totale aantal voor transacties</value>
+  </data>
+  <data name="TotalPOSSalesAmt" xml:space="preserve">
+    <value>Totale omzet van de POS:</value>
+  </data>
+  <data name="TotalPOSSalesAmtChanges" xml:space="preserve">
+    <value>Totale POS verkoopbedrag wijzigingen:</value>
+  </data>
+  <data name="TotalReturnAmount" xml:space="preserve">
+    <value>Totale opbrengst</value>
+  </data>
+  <data name="TotalReturnNetAmount" xml:space="preserve">
+    <value>Totale opbrengst</value>
+  </data>
+  <data name="TotalReturnNetAmountInclTax" xml:space="preserve">
+    <value>Totale terugkeer amt incl. belasting:</value>
+  </data>
+  <data name="TotalReturns" xml:space="preserve">
+    <value>Totaal retouren</value>
+  </data>
+  <data name="TotalSales" xml:space="preserve">
+    <value>Totale omzet:</value>
+  </data>
+  <data name="TotalSalesAmt" xml:space="preserve">
+    <value>Totale verkopen</value>
+  </data>
+  <data name="TrainingTransactions" xml:space="preserve">
+    <value>Opleiding transacties</value>
+  </data>
+  <data name="WithoutTaxAbbreviated" xml:space="preserve">
+    <value>WO/belasting</value>
+  </data>
+  <data name="WithTaxAbbreviation" xml:space="preserve">
+    <value>W/belasting</value>
+  </data>
+  <data name="WTax" xml:space="preserve">
+    <value>W/belasting</value>
+  </data>
+  <data name="XReport" xml:space="preserve">
+    <value>X-verslag</value>
+  </data>
+  <data name="ZReport" xml:space="preserve">
+    <value>Z-verslag</value>
+  </data>
+  <data name="ZReportID" xml:space="preserve">
+    <value>Z-verslag</value>
+  </data>
+  <data name="ZReportIDAlreadyExists" xml:space="preserve">
+    <value>De verwachte Z lijst-ID bestaat al. De bewerking wordt geannuleerd</value>
+  </data>
+</root>

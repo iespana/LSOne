@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="UNIT">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UNITID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TXT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UNITDECIMALS" type="xs:int" minOccurs="0" />
+                  <xs:element name="UNITSYSTEM" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MINUNITDECIMALS" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="UNITCONVERT">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FROMUNIT">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TOUNIT">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FACTOR" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ROUNDOFF" type="xs:int" minOccurs="0" />
+                  <xs:element name="ITEMID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MARKUP" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//UNIT" />
+          <xs:field xpath="UNITID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="UNITCONVERT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//UNITCONVERT" />
+          <xs:field xpath="FROMUNIT" />
+          <xs:field xpath="TOUNIT" />
+          <xs:field xpath="ITEMID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <UNIT>
+      <UNITID>%</UNITID>
+      <TXT>%</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>12 IN HALF</UNITID>
+      <TXT>12" Half</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>12 INCH</UNITID>
+      <TXT>12 inch</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>16 IN HALF</UNITID>
+      <TXT>16" Half</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>16 INCH</UNITID>
+      <TXT>16"</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>9 IN HALF</UNITID>
+      <TXT>9" Half</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>9 INCH</UNITID>
+      <TXT>9 inch</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>ACRE</UNITID>
+      <TXT>Acre</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>BOTTLE</UNITID>
+      <TXT>Bottle</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>BOX</UNITID>
+      <TXT>Box</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CAN</UNITID>
+      <TXT>Can</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CARO</UNITID>
+      <TXT>Cable roll</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CARTON</UNITID>
+      <TXT>Carton</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CCF</UNITID>
+      <TXT>Centum cubic foot</TXT>
+      <UNITDECIMALS>3</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>CL</UNITID>
+      <TXT>Centiliters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CM</UNITID>
+      <TXT>Centimeters</TXT>
+      <UNITDECIMALS>1</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>CM2</UNITID>
+      <TXT>Square Centimeters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CM3</UNITID>
+      <TXT>Cubic Centimeters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>COLLECTION</UNITID>
+      <TXT>Collection</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>CUP</UNITID>
+      <TXT>Cup</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>DAY</UNITID>
+      <TXT>DAY</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>DL</UNITID>
+      <TXT>Deciliters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>EA</UNITID>
+      <TXT>Each</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>FT</UNITID>
+      <TXT>Feet</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>GAL</UNITID>
+      <TXT>Gallons</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>GR</UNITID>
+      <TXT>Grams</TXT>
+      <UNITDECIMALS>1</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>HOUR</UNITID>
+      <TXT>Hour</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>HR</UNITID>
+      <TXT>Hours</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>IN</UNITID>
+      <TXT>Inches</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>KG</UNITID>
+      <TXT>Kilos</TXT>
+      <UNITDECIMALS>3</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>KM</UNITID>
+      <TXT>Kilometers</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>KWH</UNITID>
+      <TXT>kWh</TXT>
+      <UNITDECIMALS>6</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>L</UNITID>
+      <TXT>Liter</TXT>
+      <UNITDECIMALS>3</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>LAR CUP</UNITID>
+      <TXT>Large Cup</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>LBS</UNITID>
+      <TXT>Pounds</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>LTR</UNITID>
+      <TXT>Liters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>M2</UNITID>
+      <TXT>Square Meters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>M3</UNITID>
+      <TXT>Cubic Meters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MED CUP</UNITID>
+      <TXT>Med. Cup</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MG</UNITID>
+      <TXT>Milligram</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MILES</UNITID>
+      <TXT>Miles</TXT>
+      <UNITDECIMALS>3</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>MJ</UNITID>
+      <TXT>Megajoule</TXT>
+      <UNITDECIMALS>4</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>ML</UNITID>
+      <TXT>Milliliters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MM</UNITID>
+      <TXT>Millimeters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MM2</UNITID>
+      <TXT>Square Millimeters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MM3</UNITID>
+      <TXT>Cubic Millimeters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>MTR</UNITID>
+      <TXT>Meters</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>OPTION</UNITID>
+      <TXT>Option</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>OZ</UNITID>
+      <TXT>Ounces</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>PACK</UNITID>
+      <TXT>Pack</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>PALLET</UNITID>
+      <TXT>Pallet</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>PCS</UNITID>
+      <TXT>Pieces</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>PORTION</UNITID>
+      <TXT>Portion</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>PT</UNITID>
+      <TXT>Pint</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>QT</UNITID>
+      <TXT>Quart</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>SLICE</UNITID>
+      <TXT>Slice</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>SQFT</UNITID>
+      <TXT>Square Foot</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>SQYRD</UNITID>
+      <TXT>Square Yard</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>T</UNITID>
+      <TXT>Tons</TXT>
+      <UNITDECIMALS>3</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>TROLLEY</UNITID>
+      <TXT>Trolley</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNIT>
+      <UNITID>U00001</UNITID>
+      <TXT>75 ML</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>U00002</UNITID>
+      <TXT>Small Glass</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>U00003</UNITID>
+      <TXT>Large Glass</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>U00004</UNITID>
+      <TXT>16 inch</TXT>
+      <UNITDECIMALS>0</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+      <MINUNITDECIMALS>0</MINUNITDECIMALS>
+    </UNIT>
+    <UNIT>
+      <UNITID>YRD</UNITID>
+      <TXT>Yards</TXT>
+      <UNITDECIMALS>2</UNITDECIMALS>
+      <UNITSYSTEM>0</UNITSYSTEM>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNIT>
+    <UNITCONVERT>
+      <FROMUNIT>9 INCH</FROMUNIT>
+      <TOUNIT>12 INCH</TOUNIT>
+      <FACTOR>1.500000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>CAN</FROMUNIT>
+      <TOUNIT>BOX</TOUNIT>
+      <FACTOR>24.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>CARTON</FROMUNIT>
+      <TOUNIT>BOX</TOUNIT>
+      <FACTOR>12.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>GR</FROMUNIT>
+      <TOUNIT>KG</TOUNIT>
+      <FACTOR>1000.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>HOUR</FROMUNIT>
+      <TOUNIT>DAY</TOUNIT>
+      <FACTOR>24.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>M2</FROMUNIT>
+      <TOUNIT>ACRE</TOUNIT>
+      <FACTOR>4046.900000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>MTR</FROMUNIT>
+      <TOUNIT>KM</TOUNIT>
+      <FACTOR>1000.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>PACK</FROMUNIT>
+      <TOUNIT>PALLET</TOUNIT>
+      <FACTOR>12.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+    <UNITCONVERT>
+      <FROMUNIT>PCS</FROMUNIT>
+      <TOUNIT>PACK</TOUNIT>
+      <FACTOR>4.000000000000</FACTOR>
+      <ROUNDOFF>0</ROUNDOFF>
+      <ITEMID></ITEMID>
+      <DATAAREAID>LSR</DATAAREAID>
+    </UNITCONVERT>
+  </NewDataSet>
+</root>

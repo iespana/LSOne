@@ -1,0 +1,60 @@
+﻿// ReportID is a field that identifies the report, this should be a UUID, please use 
+// web page like http://www.famkruithof.net/uuid/uuidgen to generate unique UUID for the report.
+ReportID: 4fda8200-42a7-11e5-b970-0800200c9a66
+
+// Name of the report as it will appear in the system menus.
+Name: Sales comparison by month - for item
+
+// Extra description for the report as it will appear in some of the system menus
+Description: This report compares sales by months between years for a specific item.
+
+// LanguageID has .NET style ISO language code, this is so that a report can for example exist in English 
+// and Swedish. Same fallback rules as in .NET localization apply, for example then de-AU falls back to 
+// de and de falls back to en if not found.
+LanguageID: en
+
+// Contexts tell where in the system the report should appear, a report can have one or more contexts.
+// Supported Contexts are: Report, Button, Store, Customer, Vendor, Terminal, Item. This field should be comma separated.
+// Example use: Report,Store
+Contexts: Report, Button, Store, Terminal
+
+//Enum: GroupByPeriodEnum; Group By ; Year = 1, Quarter = 2, Month = 3, Day = 0
+
+// Stored procedures store the SQL code for the stored procedures the report uses. Please make sure
+// that the procedures check for existance and delete the existing ones if they exist before adding.
+// Also try to make the procedures names unique for each report by for example prefixing them with
+// name of the report.
+Stored procedures:
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spDB_Sales_comp_item]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].[spDB_Sales_comp_item]
+
+GO
+
+CREATE PROCEDURE [dbo].[spDB_Sales_comp_item] 
+(
+	@StartDate datetime,
+	@EndDate datetime,
+	@RetailItemID nvarchar(max),
+	@DataareaID nvarchar(10)
+)
+AS
+
+set nocount on
+
+select 
+MONTH, YEAR, STORENAME, sum(NETAMOUNTINCLTAX) as NETAMOUNTINCLTAX
+from
+(
+	select 
+	datepart(month,t.TRANSDATE) as MONTH, datepart(year,t.TRANSDATE) as YEAR,  r.NETAMOUNTINCLTAX*-1 as NETAMOUNTINCLTAX, s.NAME AS STORENAME
+	from RBOTRANSACTIONSALESTRANS r 
+	left outer join RBOTRANSACTIONTABLE t on r.TRANSACTIONID = t.TRANSACTIONID and t.TERMINAL = r.TERMINALID and t.STORE = r.STORE
+	left outer join RBOSTORETABLE s on t.STORE = s.STOREID and t.DATAAREAID = s.DATAAREAID
+	where @RetailItemID = r.ITEMID and TYPE = 2 and t.ENTRYSTATUS = 0 and r.TRANSACTIONSTATUS = 0 and t.DATAAREAID = @DataareaID and t.TRANSDATE >= @StartDate and t.TRANSDATE <= @EndDate
+) temp
+group by
+MONTH, YEAR, STORENAME
+
+GO
+

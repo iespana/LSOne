@@ -1,0 +1,2005 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75F90284-80DF-4640-B951-552C233F6752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.SiteService</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.SiteService</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.HelloWorld.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\AccessTokenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AccessTokenDialog.Designer.cs">
+      <DependentUpon>AccessTokenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AuthorizationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AuthorizationDialog.Designer.cs">
+      <DependentUpon>AuthorizationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\GetCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\GetCredentialsDialog.Designer.cs">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\IntegrationFrameworkConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IntegrationFrameworkConfigDialog.Designer.cs">
+      <DependentUpon>IntegrationFrameworkConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTransactionServiceProfileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTransactionServiceProfileDialog.Designer.cs">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShorthandDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShorthandDialog.Designer.cs">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SiteManagerConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SiteManagerConfigDialog.designer.cs">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SMTPSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SMTPSettingsDialog.designer.cs">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\AdministrationStoreServerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\AdministrationStoreServerPage.Designer.cs">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\EmailReceiptsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\EmailReceiptsPage.designer.cs">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\GiftCardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\GiftCardPage.designer.cs">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CreditMemoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CreditMemoPage.designer.cs">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CentralSuspensionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CentralSuspensionPage.designer.cs">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\IntegrationFrameworkSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\IntegrationFrameworkSettingsPage.Designer.cs">
+      <DependentUpon>IntegrationFrameworkSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\InventoryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\InventoryPage.designer.cs">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CustomerPage.designer.cs">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSspSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSspSettingPage.Designer.cs">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreSspSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreSspSettingPage.Designer.cs">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CentralReturnsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CentralReturnsPage.Designer.cs">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ConnectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ConnectionPage.designer.cs">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\SettingsPage.designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccessTokensView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AccessTokensView.designer.cs">
+      <DependentUpon>AccessTokensView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SiteServiceProfilesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SiteServiceProfilesView.designer.cs">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SiteServiceProfileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SiteServiceProfileView.designer.cs">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AccessTokenDialog.resx">
+      <DependentUpon>AccessTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthorizationDialog.resx">
+      <DependentUpon>AuthorizationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.bg.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.cs.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.da.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.de.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.el.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.en-ZA.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.es-MX.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.es.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.fi.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.fr.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.hi.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.is.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.it-IT.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.it.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.ja-JP.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.ja.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.ko.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.nb-NO.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.nl-BE.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.nl.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.pl.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.pt-BR.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.ru.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.sv.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.zh-CHS.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.zh-CHT.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IntegrationFrameworkConfigDialog.resx">
+      <DependentUpon>IntegrationFrameworkConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.bg.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.cs.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.da.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.de.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.el.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.en-ZA.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.es-MX.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.es.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.fi.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.fr.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.hi.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.is.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.it-IT.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.it.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.ja-JP.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.ja.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.ko.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.nb-NO.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.nl-BE.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.nl.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.pl.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.pt-BR.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTransactionServiceProfileDialog.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.ru.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.sv.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.zh-CHS.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.zh-CHT.resx">
+      <DependentUpon>NewTransactionServiceProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.bg.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.cs.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.da.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.de.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.el.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.en-ZA.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.es-MX.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.es.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.fi.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.fr.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.hi.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.is.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.it-IT.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.it.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.ja-JP.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.ja.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.ko.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.nb-NO.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.nl-BE.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.nl.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.pl.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.pt-BR.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.ru.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.sv.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.zh-CHS.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.zh-CHT.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.bg.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.cs.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.da.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.de.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.el.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.en-ZA.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.es-MX.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.es.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.fi.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.fr.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.hi.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.is.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.it-IT.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.it.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.ja-JP.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.ja.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.ko.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.nb-NO.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.nl-BE.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.nl.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.pl.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.pt-BR.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.ru.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.sv.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.zh-CHS.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.zh-CHT.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.bg.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.cs.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.da.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.de.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.el.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.en-ZA.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.es-MX.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.es.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.fi.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.fr.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.hi.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.is.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.it-IT.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.it.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.ja.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.ko.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.nb-NO.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.nl-BE.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.nl.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.pl.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.pt-BR.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.ru.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.sv.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.zh-CHS.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.zh-CHT.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.zh-CHS.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.zh-CHT.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.zh-CHS.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.zh-CHT.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.zh-CHS.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.zh-CHT.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.zh-CHS.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.zh-CHT.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IntegrationFrameworkSettingsPage.resx">
+      <DependentUpon>IntegrationFrameworkSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.zh-CHS.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.zh-CHT.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.zh-CHS.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.zh-CHT.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.bg.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.cs.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.da.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.de.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.el.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.en-ZA.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.es-MX.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.es.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.fi.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.fr.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.hi.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.is.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.it-IT.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.it.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.ja-JP.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.ja.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.ko.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.nb-NO.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.nl-BE.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.nl.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.pl.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.pt-BR.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.ru.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.sv.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.zh-CHS.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.zh-CHT.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.bg.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.cs.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.da.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.de.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.el.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.en-ZA.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.es-MX.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.es.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.fi.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.fr.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.hi.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.is.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.it-IT.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.it.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.ja-JP.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.ja.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.ko.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.nb-NO.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.nl-BE.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.nl.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.pl.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.pt-BR.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.ru.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.sv.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.zh-CHS.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.zh-CHT.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.bg.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.cs.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.da.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.de.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.el.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.en-ZA.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.es-MX.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.es.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.fi.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.fr.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.hi.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.is.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.it-IT.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.it.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.ja-JP.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.ja.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.ko.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.nb-NO.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.nl-BE.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.nl.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.pl.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.pt-BR.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.ru.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.sv.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.zh-CHS.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.zh-CHT.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.zh-CHS.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.zh-CHT.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccessTokensView.resx">
+      <DependentUpon>AccessTokensView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.bg.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.cs.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.da.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.de.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.el.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.en-ZA.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.es-MX.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.es.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.fi.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.fr.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.hi.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.is.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.it-IT.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.it.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.ja-JP.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.ja.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.ko.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.nb-NO.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.nl-BE.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.nl.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.pl.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.pt-BR.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.ru.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.sv.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.zh-CHS.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.zh-CHT.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.bg.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.cs.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.da.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.de.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.el.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.en-ZA.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.es-MX.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.es.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.fi.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.fr.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.hi.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.is.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.it-IT.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.it.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.ja-JP.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.ja.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.ko.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.nb-NO.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.nl-BE.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.nl.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.pl.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.pt-BR.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.ru.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.sv.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.zh-CHS.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.zh-CHT.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\LockedSmallImage.png" />
+    <Content Include="Resources\Profiles16.png" />
+    <None Include="Resources\site service_16.png" />
+    <None Include="Resources\site service_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.ja-JP.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.bg.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.cs.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.da.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.de.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.el.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.en-ZA.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.es-MX.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.es.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.fi.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.fr.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.hi.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.is.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.it-IT.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.it.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.ja-JP.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.ja.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.ko.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.nb-NO.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.nl-BE.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.nl.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.pl.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.pt-BR.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.ru.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.sv.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.bg.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.cs.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.da.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.de.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.el.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.en-ZA.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.es-MX.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.es.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.fi.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.fr.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.hi.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.is.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.it-IT.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.it.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.ja-JP.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.ja.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.ko.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.nb-NO.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.nl-BE.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.nl.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.pl.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.pt-BR.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.ru.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.sv.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.bg.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.cs.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.da.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.de.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.el.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.en-ZA.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.es-MX.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.es.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.fi.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.fr.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.hi.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.is.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.it-IT.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.it.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.ja-JP.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.ja.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.ko.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.nb-NO.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.nl-BE.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.nl.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.pl.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.pt-BR.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.ru.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.sv.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.bg.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.cs.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.da.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.de.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.el.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.en-ZA.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.es-MX.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.es.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.fi.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.fr.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.hi.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.is.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.it-IT.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.it.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.ja-JP.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.ja.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.ko.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.nb-NO.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.nl-BE.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.nl.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.pl.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.pt-BR.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.ru.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.sv.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.bg.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.cs.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.da.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.de.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.el.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.en-ZA.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.es-MX.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.es.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.fi.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.fr.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.hi.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.is.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.it-IT.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.it.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.ja-JP.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.ja.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.ko.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.nb-NO.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.nl-BE.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.nl.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.pl.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.pt-BR.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.ru.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.sv.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.bg.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.cs.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.da.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.de.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.el.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.en-ZA.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.es-MX.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.es.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.fi.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.fr.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.hi.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.is.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.it-IT.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.it.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.ja-JP.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.ja.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.ko.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.nb-NO.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.nl-BE.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.nl.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.pl.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.pt-BR.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.ru.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.sv.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.bg.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.cs.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.da.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.de.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.el.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.en-ZA.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.es-MX.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.es.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.fi.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.fr.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.hi.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.is.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.it-IT.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.it.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.ja-JP.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.ja.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.ko.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.nb-NO.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.nl-BE.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.nl.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.pl.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.pt-BR.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.ru.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.sv.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.bg.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.cs.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.da.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.de.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.el.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.en-ZA.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.es-MX.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.es.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.fi.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.fr.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.hi.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.is.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.it.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.ja.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.ko.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.nb-NO.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.nl-BE.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.nl.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.pl.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.pt-BR.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.ru.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.sv.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.bg.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.cs.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.da.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.de.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.el.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.en-ZA.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.es-MX.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.es.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.fi.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.fr.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.hi.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.is.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.it.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.ja.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.ko.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.nb-NO.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.nl-BE.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.nl.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.pl.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.pt-BR.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.ru.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.sv.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\GetCredentialsDialog.vi-VN.resx">
+      <DependentUpon>GetCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtransactionserviceprofiledialog.vi-VN.resx">
+      <DependentUpon>newtransactionserviceprofiledialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShorthandDialog.vi-VN.resx">
+      <DependentUpon>ShorthandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SiteManagerConfigDialog.vi-VN.resx">
+      <DependentUpon>SiteManagerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SMTPSettingsDialog.vi-VN.resx">
+      <DependentUpon>SMTPSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\AdministrationStoreServerPage.vi-VN.resx">
+      <DependentUpon>AdministrationStoreServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralReturnsPage.vi-VN.resx">
+      <DependentUpon>CentralReturnsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CentralSuspensionPage.vi-VN.resx">
+      <DependentUpon>CentralSuspensionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ConnectionPage.vi-VN.resx">
+      <DependentUpon>ConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CreditMemoPage.vi-VN.resx">
+      <DependentUpon>CreditMemoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CustomerPage.vi-VN.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\EmailReceiptsPage.vi-VN.resx">
+      <DependentUpon>EmailReceiptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\GiftCardPage.vi-VN.resx">
+      <DependentUpon>GiftCardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\InventoryPage.vi-VN.resx">
+      <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SettingsPage.vi-VN.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSspSettingPage.vi-VN.resx">
+      <DependentUpon>StoreSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSspSettingPage.vi-VN.resx">
+      <DependentUpon>TerminalSspSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfilesView.vi-VN.resx">
+      <DependentUpon>SiteServiceProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SiteServiceProfileView.vi-VN.resx">
+      <DependentUpon>SiteServiceProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

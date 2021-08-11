@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LSOne.Services.Application</name>
+    </assembly>
+    <members>
+        <member name="T:LSOne.Services.ApplicationService">
+            <summary>
+            Class that implements the ApplicationService interface
+            </summary>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.ErrorLog">
+            <summary>
+            Access to the error log functionality
+            </summary>
+        </member>
+        <member name="M:LSOne.Services.ApplicationService.Init(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager)">
+            <summary>
+            Sets the database connection for the service
+            </summary>
+            <param name="entry">The entry to the database</param>
+        </member>
+        <member name="M:LSOne.Services.ApplicationService.GenerateReceiptID(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,LSOne.Services.Interfaces.SupportInterfaces.ISettings,LSOne.Services.Interfaces.SupportInterfaces.IPosTransaction)">
+            <summary>
+            If there is no receipt ID on the transaction or if the receipt ID that is already on the transaction already exists
+            a new receipt ID is generated and set on the transaction
+            </summary>
+            <param name="entry">The entry into the database</param>
+            <param name="settings">The current settings</param>
+            <param name="transaction">The transaction to check and update</param>
+        </member>
+        <member name="M:LSOne.Services.ApplicationService.GetNextReceiptId(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String)">
+            <summary>
+            Returns the next receipt ID for the given receipt id number sequence. If no number sequence is given or if the number sequence given does not exist in the NUMBERSEQUENCETABLE
+            the default sequence RECEIPTID is used.
+            </summary>
+            <param name="entry">The entry into the database</param>
+            <param name="receiptIdNumberSequence">The Number sequence id being used to create the receipt ids</param>
+            <returns></returns>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.ApplicationWindowCaption">
+            <summary>
+            Returns the text to be displayed on the task bar icon if it returns an empty string a default LSPOS string is displayed
+            </summary>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.ApplicationWindowIcon">
+            <summary>
+            Returns the icon to be displayed in the task bar if null is returned then the default LS Pos icon is displayed
+            </summary>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.LoginWindowImage">
+            <summary>
+            Returns the image to be displayed on the logon dialog in the top left corner if null is returned then the default LS Pos image is displayed.
+            </summary>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.PartnerObject">
+            <summary>
+            Returns the partner object that has been created and can be attached to a transaction. The POS calls this property when 
+            it needs a new instance of the partner object
+            </summary>
+        </member>
+        <member name="M:LSOne.Services.ApplicationService.ReceiptIDExists(LSOne.DataLayer.GenericConnector.Interfaces.IConnectionManager,System.String)">
+            <summary>
+            Returns true if the given receiptID exists in RBOTRANSACTIONTABLE
+            </summary>
+            <param name="entry">The entry into the database</param>
+            <param name="receiptID">The value of the receiptID</param>
+            <returns></returns>
+        </member>
+        <member name="P:LSOne.Services.ApplicationService.ReceiptSequenceProvider">
+            <summary>
+            Returns the sequence provider for the receipt ID
+            </summary>
+        </member>
+    </members>
+</doc>

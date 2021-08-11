@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="TAXDATA">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXCODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXVALUE" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TAXLIMITMIN" type="xs:decimal" />
+                  <xs:element name="TAXLIMITMAX" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="VATEXEMPTPCT" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TAXFROMDATE" type="xs:dateTime" />
+                  <xs:element name="TAXTODATE" type="xs:dateTime" />
+                  <xs:element name="INVESTMENTTAXPCT" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="POSTAXCODEID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TAXGROUPDATA">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXGROUP">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXCODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EXEMPTTAX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="USETAX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TAXGROUPHEADING">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXGROUP">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXGROUPNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEARCHFIELD1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEARCHFIELD2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXREVERSEONCASHDISC" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXDIRECTION" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXGROUPROUNDING" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXGROUPSETUP" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXPRINTDETAIL" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TAXITEMGROUPHEADING">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXITEMGROUP">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RECEIPTDISPLAY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TAXONITEM">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXITEMGROUP">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXCODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TAXTABLE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TAXCODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXNAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXROUNDOFF" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TAXROUNDOFFTYPE" type="xs:int" />
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXBASE" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXCALCMETHOD" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXCURRENCYCODE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXLIMITBASE" type="xs:int" minOccurs="0" />
+                  <xs:element name="TAXONTAX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXUNIT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXPERIOD" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXACCOUNTGROUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAXINCLUDEINTAX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="TAXPACKAGINGTAX" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="PRINTCODE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXDATA" />
+          <xs:field xpath="DATAAREAID" />
+          <xs:field xpath="ID" />
+        </xs:unique>
+        <xs:unique name="TAXGROUPDATA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXGROUPDATA" />
+          <xs:field xpath="TAXGROUP" />
+          <xs:field xpath="TAXCODE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="TAXGROUPHEADING_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXGROUPHEADING" />
+          <xs:field xpath="TAXGROUP" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="TAXITEMGROUPHEADING_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXITEMGROUPHEADING" />
+          <xs:field xpath="TAXITEMGROUP" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="TAXONITEM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXONITEM" />
+          <xs:field xpath="TAXITEMGROUP" />
+          <xs:field xpath="TAXCODE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="TAXTABLE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//TAXTABLE" />
+          <xs:field xpath="TAXCODE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <TAXDATA>
+      <TAXCODE>SC00008</TAXCODE>
+      <TAXVALUE>0.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>cf9db80a-6e35-42ce-b7f1-083db40c9220</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00011</TAXCODE>
+      <TAXVALUE>2.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>6db7209e-8d30-4060-bb95-53b5c4625b06</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00005</TAXCODE>
+      <TAXVALUE>20.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>df44d728-523d-4328-8c14-632abaddbd60</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00010</TAXCODE>
+      <TAXVALUE>3.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>e7f8c173-96de-454e-b09a-672445cb882e</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00007</TAXCODE>
+      <TAXVALUE>0.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>d97e8ed2-2d88-42a8-bd88-751ab724e3ea</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00009</TAXCODE>
+      <TAXVALUE>4.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>e6b61c14-ae9c-4479-93e6-8d81da66ee26</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00006</TAXCODE>
+      <TAXVALUE>5.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>b51c88bd-bb52-4d57-a314-f0cfc9945bbf</ID>
+    </TAXDATA>
+    <TAXDATA>
+      <TAXCODE>SC00012</TAXCODE>
+      <TAXVALUE>1.000000000000</TAXVALUE>
+      <TAXLIMITMIN>0.000000000000</TAXLIMITMIN>
+      <TAXFROMDATE>2012-01-01T00:00:00+00:00</TAXFROMDATE>
+      <TAXTODATE>1900-01-01T00:00:00+00:00</TAXTODATE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <ID>d79c313b-e04d-40d8-8a76-f938919c121a</ID>
+    </TAXDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0010</TAXGROUP>
+      <TAXCODE>SC00005</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0010</TAXGROUP>
+      <TAXCODE>SC00006</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0010</TAXGROUP>
+      <TAXCODE>SC00007</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0011</TAXGROUP>
+      <TAXCODE>SC00008</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0012</TAXGROUP>
+      <TAXCODE>SC00009</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0012</TAXGROUP>
+      <TAXCODE>SC00010</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0012</TAXGROUP>
+      <TAXCODE>SC00012</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0013</TAXGROUP>
+      <TAXCODE>SC00009</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0013</TAXGROUP>
+      <TAXCODE>SC00010</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPDATA>
+      <TAXGROUP>TG0013</TAXGROUP>
+      <TAXCODE>SC00011</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPDATA>
+    <TAXGROUPHEADING>
+      <TAXGROUP>TG0010</TAXGROUP>
+      <TAXGROUPNAME>Standard customer</TAXGROUPNAME>
+      <SEARCHFIELD1></SEARCHFIELD1>
+      <SEARCHFIELD2></SEARCHFIELD2>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPHEADING>
+    <TAXGROUPHEADING>
+      <TAXGROUP>TG0011</TAXGROUP>
+      <TAXGROUPNAME>Without Tax</TAXGROUPNAME>
+      <SEARCHFIELD1></SEARCHFIELD1>
+      <SEARCHFIELD2></SEARCHFIELD2>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPHEADING>
+    <TAXGROUPHEADING>
+      <TAXGROUP>TG0012</TAXGROUP>
+      <TAXGROUPNAME>American supplies</TAXGROUPNAME>
+      <SEARCHFIELD1></SEARCHFIELD1>
+      <SEARCHFIELD2></SEARCHFIELD2>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPHEADING>
+    <TAXGROUPHEADING>
+      <TAXGROUP>TG0013</TAXGROUP>
+      <TAXGROUPNAME>American furniture</TAXGROUPNAME>
+      <SEARCHFIELD1></SEARCHFIELD1>
+      <SEARCHFIELD2></SEARCHFIELD2>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXGROUPHEADING>
+    <TAXITEMGROUPHEADING>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <NAME>Standard</NAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <RECEIPTDISPLAY>A</RECEIPTDISPLAY>
+    </TAXITEMGROUPHEADING>
+    <TAXITEMGROUPHEADING>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <NAME>Food</NAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <RECEIPTDISPLAY>B</RECEIPTDISPLAY>
+    </TAXITEMGROUPHEADING>
+    <TAXITEMGROUPHEADING>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <NAME>Zero Tax</NAME>
+      <DATAAREAID>LSR</DATAAREAID>
+      <RECEIPTDISPLAY>C</RECEIPTDISPLAY>
+    </TAXITEMGROUPHEADING>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00005</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00008</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00009</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00010</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00011</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0004</TAXITEMGROUP>
+      <TAXCODE>SC00012</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00006</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00008</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00009</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00010</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00011</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0005</TAXITEMGROUP>
+      <TAXCODE>SC00012</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00007</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00008</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00009</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00010</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00011</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXONITEM>
+      <TAXITEMGROUP>TG0006</TAXITEMGROUP>
+      <TAXCODE>SC00012</TAXCODE>
+      <DATAAREAID>LSR</DATAAREAID>
+    </TAXONITEM>
+    <TAXTABLE>
+      <TAXCODE>SC00005</TAXCODE>
+      <TAXNAME>20% Sales Tax</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>S1</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00006</TAXCODE>
+      <TAXNAME>5% Sales Tax</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>S2</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00007</TAXCODE>
+      <TAXNAME>0% Tax</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>S3</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00008</TAXCODE>
+      <TAXNAME>Without Tax</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>S4</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00009</TAXCODE>
+      <TAXNAME>American 4%</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>X1</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00010</TAXCODE>
+      <TAXNAME>American 3%</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>X2</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00011</TAXCODE>
+      <TAXNAME>American 2%</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>X3</PRINTCODE>
+    </TAXTABLE>
+    <TAXTABLE>
+      <TAXCODE>SC00012</TAXCODE>
+      <TAXNAME>American 1%</TAXNAME>
+      <TAXROUNDOFF>0.010000000000</TAXROUNDOFF>
+      <TAXROUNDOFFTYPE>0</TAXROUNDOFFTYPE>
+      <DATAAREAID>LSR</DATAAREAID>
+      <TAXINCLUDEINTAX>0</TAXINCLUDEINTAX>
+      <TAXPACKAGINGTAX>0</TAXPACKAGINGTAX>
+      <PRINTCODE>X4</PRINTCODE>
+    </TAXTABLE>
+  </NewDataSet>
+</root>

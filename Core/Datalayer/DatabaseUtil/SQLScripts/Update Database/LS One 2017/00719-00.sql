@@ -1,0 +1,24 @@
+/*
+
+	Incident No.	: ONE-4639
+	Responsible		: Marý Björk Steingrímsdóttir
+	Sprint			: Turmeric 1.12 - 15.12
+	Date created	: 14.12.2016
+
+	Description		: Adding a new operation
+	
+	
+	Tables affected	: POSISOPERATIONS
+						
+*/
+
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM POSISOPERATIONS WHERE OPERATIONID = 1901)
+BEGIN
+  INSERT INTO POSISOPERATIONS ( OPERATIONID, OPERATIONNAME, PERMISSIONID, PERMISSIONID2, CHECKUSERACCESS, USEROPERATION,DATAAREAID,LOOKUPTYPE)
+  VALUES (1901, 'Send an email receipt', NULL, NULL, 1, 1,'LSR', 21)
+END
+GO

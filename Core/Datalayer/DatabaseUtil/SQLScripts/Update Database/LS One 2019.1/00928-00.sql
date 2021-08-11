@@ -1,0 +1,24 @@
+﻿/*
+	Incident No.	: ONE-10266 Inventory template - OMNI General tab
+	Responsible		: Adrian Chiorean
+	Sprint			: Vega
+	Date created	: 20.06.2019
+
+	Description		: Added columns to INVENTORYTEMPLATE 
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVENTORYTEMPLATE' AND COLUMN_NAME = 'USEBARCODEUOM')
+BEGIN
+	ALTER TABLE INVENTORYTEMPLATE ADD USEBARCODEUOM BIT NOT NULL DEFAULT 1
+	EXECUTE spDB_SetFieldDescription_1_0 'INVENTORYTEMPLATE', 'USEBARCODEUOM', 'If true, adding a new line in the inventory app will try to use the barcode unit of measure. Only used in OMNI.';
+END
+GO
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'INVENTORYTEMPLATE' AND COLUMN_NAME = 'ALLOWADDNEWLINE')
+BEGIN
+	ALTER TABLE INVENTORYTEMPLATE ADD ALLOWADDNEWLINE BIT NOT NULL DEFAULT 1
+	EXECUTE spDB_SetFieldDescription_1_0 'INVENTORYTEMPLATE', 'ALLOWADDNEWLINE', 'If true, adding a new line in the inventory app is allowed. Only used in OMNI.';
+END
+GO

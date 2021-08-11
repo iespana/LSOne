@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <NewDataSet>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="RBOBARCODEMASKCHARACTER">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CHARACTERTYPE" type="xs:int" />
+                  <xs:element name="CHARACTER" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="COMMENT_" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="RBOBARCODEMASKSEGMENT">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SEGMENTNUM" type="xs:int" />
+                  <xs:element name="LENGTH" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="TYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="DECIMALS" type="xs:int" minOccurs="0" />
+                  <xs:element name="CHAR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MASKID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEQUENCE" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="RBOBARCODEMASKTABLE">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MASK" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="22" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PREFIX" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="22" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SYMBOLOGY" type="xs:int" minOccurs="0" />
+                  <xs:element name="TYPE" type="xs:int" minOccurs="0" />
+                  <xs:element name="MASKID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DATAAREAID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEQUENCE" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//RBOBARCODEMASKCHARACTER" />
+          <xs:field xpath="CHARACTERTYPE" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+        <xs:unique name="RBOBARCODEMASKSEGMENT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//RBOBARCODEMASKSEGMENT" />
+          <xs:field xpath="MASKID" />
+          <xs:field xpath="DATAAREAID" />
+          <xs:field xpath="SEQUENCE" />
+        </xs:unique>
+        <xs:unique name="RBOBARCODEMASKTABLE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//RBOBARCODEMASKTABLE" />
+          <xs:field xpath="MASKID" />
+          <xs:field xpath="DATAAREAID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>0</CHARACTERTYPE>
+      <CHARACTER>I</CHARACTER>
+      <COMMENT_>Input for I - same/less no. of digits</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>1</CHARACTERTYPE>
+      <CHARACTER>X</CHARACTER>
+      <COMMENT_>Barc. input must be complete</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>2</CHARACTERTYPE>
+      <CHARACTER>M</CHARACTER>
+      <COMMENT_>System generated or checked</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>5</CHARACTERTYPE>
+      <CHARACTER>R</CHARACTER>
+      <COMMENT_>Coupon reference</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>6</CHARACTERTYPE>
+      <CHARACTER>L</CHARACTER>
+      <COMMENT_>EAN License No.</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>7</CHARACTERTYPE>
+      <CHARACTER>P</CHARACTER>
+      <COMMENT_>Price part Barcode</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>8</CHARACTERTYPE>
+      <CHARACTER>Q</CHARACTER>
+      <COMMENT_>Quantity part of barcode</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>9</CHARACTERTYPE>
+      <CHARACTER>E</CHARACTER>
+      <COMMENT_>Employee Number</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>10</CHARACTERTYPE>
+      <CHARACTER>D</CHARACTER>
+      <COMMENT_>Customer Number</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>11</CHARACTERTYPE>
+      <CHARACTER>A</CHARACTER>
+      <COMMENT_>Data Entry Number</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>12</CHARACTERTYPE>
+      <CHARACTER>N</CHARACTER>
+      <COMMENT_>Number Series</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>13</CHARACTERTYPE>
+      <CHARACTER>T</CHARACTER>
+      <COMMENT_>Lot No.</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKCHARACTER>
+      <CHARACTERTYPE>14</CHARACTERTYPE>
+      <CHARACTER>V</CHARACTER>
+      <COMMENT_>Serial No.</COMMENT_>
+      <DATAAREAID>LSR</DATAAREAID>
+    </RBOBARCODEMASKCHARACTER>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>1</SEGMENTNUM>
+      <LENGTH>13.000000000000</LENGTH>
+      <TYPE>1</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR>X</CHAR>
+      <MASKID>00000001</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>1</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>1</SEGMENTNUM>
+      <LENGTH>3.000000000000</LENGTH>
+      <TYPE>6</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>3</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>2</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>2</SEGMENTNUM>
+      <LENGTH>2.000000000000</LENGTH>
+      <TYPE>0</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>3</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>3</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>3</SEGMENTNUM>
+      <LENGTH>5.000000000000</LENGTH>
+      <TYPE>7</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>3</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>4</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>4</SEGMENTNUM>
+      <LENGTH>1.000000000000</LENGTH>
+      <TYPE>2</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>3</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>5</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>1</SEGMENTNUM>
+      <LENGTH>5.000000000000</LENGTH>
+      <TYPE>0</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>5</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>6</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>2</SEGMENTNUM>
+      <LENGTH>5.000000000000</LENGTH>
+      <TYPE>7</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>5</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>7</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>3</SEGMENTNUM>
+      <LENGTH>1.000000000000</LENGTH>
+      <TYPE>2</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR></CHAR>
+      <MASKID>5</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>8</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>1</SEGMENTNUM>
+      <LENGTH>5.000000000000</LENGTH>
+      <TYPE>0</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR>I</CHAR>
+      <MASKID>6</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>9</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>2</SEGMENTNUM>
+      <LENGTH>5.000000000000</LENGTH>
+      <TYPE>8</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR>Q</CHAR>
+      <MASKID>6</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>10</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKSEGMENT>
+      <SEGMENTNUM>3</SEGMENTNUM>
+      <LENGTH>1.000000000000</LENGTH>
+      <TYPE>1</TYPE>
+      <DECIMALS>0</DECIMALS>
+      <CHAR>X</CHAR>
+      <MASKID>6</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>11</SEQUENCE>
+    </RBOBARCODEMASKSEGMENT>
+    <RBOBARCODEMASKTABLE>
+      <DESCRIPTION>Normal EAN13</DESCRIPTION>
+      <MASK>XXXXXXXXXXXXX</MASK>
+      <PREFIX></PREFIX>
+      <SYMBOLOGY>7</SYMBOLOGY>
+      <TYPE>1</TYPE>
+      <MASKID>00000001</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>1</SEQUENCE>
+    </RBOBARCODEMASKTABLE>
+    <RBOBARCODEMASKTABLE>
+      <DESCRIPTION>Price in Barcode</DESCRIPTION>
+      <MASK>25IIIIIPPPPPM</MASK>
+      <PREFIX>25</PREFIX>
+      <SYMBOLOGY>0</SYMBOLOGY>
+      <TYPE>1</TYPE>
+      <MASKID>5</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>2</SEQUENCE>
+    </RBOBARCODEMASKTABLE>
+    <RBOBARCODEMASKTABLE>
+      <DESCRIPTION>Quantity in Barcode</DESCRIPTION>
+      <MASK>26IIIIIQQQQQX</MASK>
+      <PREFIX>26</PREFIX>
+      <SYMBOLOGY>0</SYMBOLOGY>
+      <TYPE>1</TYPE>
+      <MASKID>6</MASKID>
+      <DATAAREAID>LSR</DATAAREAID>
+      <SEQUENCE>3</SEQUENCE>
+    </RBOBARCODEMASKTABLE>
+  </NewDataSet>
+</root>

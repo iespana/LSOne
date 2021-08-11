@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="About LS One|LS&#160;One 2017.2">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Other improvements</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#AboutInfo/2017.2/OtherImprovements.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1>Other improvements</h1>
+        <p>In this section smaller improvements and bugfixes for both the <span class="MyVariablesSite Manager">Site Manager</span> and <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> are listed.</p>
+        <div class="Warning">
+            <img src="../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note">Warning!!! The gift card receipt has to be updated when upgrading a customer to version 2017.2. The receipt was using incorrect variables which also let to coding errors. To get the updated receipt go to the <a href="../../FieldHelp/Profiles/FormProfilesView.htm">Form profiles view</a> and reset the <a href="../../HelpTopics/POSSetup/DefaultProfileAndReceiptData.htm">default form profile</a>. </p>
+            <p class="note">&#160;</p>
+            <p class="note">If this is not done then when a gift card receipt is being printed on the POS&#160;an error will be thrown.</p>
+        </div>
+        <h2>Name component</h2>
+        <p>When entering a name into either the Site Manager or the <span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> the name component has a selection box where a title can be selected i.e. Dr., Mr., Mrs and etc. These titles can now be translated. If the translation is left as an empty string then that title is removed from the selection box. </p>
+        <h2><span class="MyVariablesSite Manager">Site Manager</span> improvements</h2>
+        <p>Some older translations have been updated and new strings have all been translated into the languages that LS&#160;Retail supports out of the box</p>
+        <h3>Inventory</h3>
+        <p>Various smaller improvements were done in the <span class="MyVariablesSite Manager">Site Manager</span> related to the inventory functionality. A description of all those changes <a href="InventoryImprovements.htm">can be found here</a>.</p>
+        <p>&#160;</p>
+        <h3><a href="../../FieldHelp/Profiles/FunctionalityProfileView.htm">Functionality profile</a>
+        </h3>
+        <p>Start of day configuration has been simplified. Now there is only one check mark on the functionality profile to set that will tell the POS&#160;to use this functionality. </p>
+        <p><a name="kanchor54"></a>Added a new setting to the functionality profile that shows item prices by default when searching for items in the POS.</p>
+        <p>New infocode option has been added to the functionality profile where an infocode can be triggered on operation Open drawer in the POS.</p>
+        <p>Return infocode  is now activated both for return item and return transaction operations but is not activated when selling an item with property "Quantity becomes negative"</p>
+        <p>A new option to select the "Main menu" for the Mobile inventory app has been functionality Profile, OMNI&#160;tab.</p>
+        <p>&#160;</p>
+        <h3>Miscellaneous</h3>
+        <p><a name="kanchor55"></a>When creating a new retail item, if the user created a new inventory unit and selected it on the new item, it was possible to create an items without a sales unit.</p>
+        <p>Invoice customer can now be set when creating or editing customers on the POS.</p>
+        <p>Fixed an issues causing a crash when editing <a href="../../HelpTopics/Items/Bar codes/Bar code Mask Setup.htm">barcode mask segments</a></p>
+        <p>Fixed issues when modifying <a href="../../HelpTopics/Items/Bar codes/Bar code Mask Setup.htm">barcode mask segments</a> in the Site Manager would not affect the underlying data.</p>
+        <p>When the user has the <span class="MyVariablesSite Manager">Site Manager</span> in "Floating view" and closed the floating view by clicking the X in the upper right corner, the Site Manager didn't allow you to close the Site Manager application itself. This has now been fixed</p>
+        <p>A bug has been fixed where online help did not come up when pressing the help icon in the Edit configuration dialog.</p>
+        <p>Only tax groups with tax code are shown when choosing a tax group for customer, store, sales type and retail item. A tax group that is in use must contain at least one tax code.</p>
+        <p>In the Scheduler plugin all texts in the Job view (under the Log tab) have been changed to be normal casing</p>
+        <p>Images of type bmp can now be added to the image bank</p>
+        <p>Fixed an issue causing the application to crash when deleting a price discount group containing items.</p>
+        <p>An issue causing the transaction ID to be shown instead of the receipt ID in the receipt view header has been fixed</p>
+        <p>The credit limit field on the customer is now limited to 16 digits.</p>
+        <p>Fixed an issue where attributes for variant items were incorrectly displayed under header item 'Variant items' tab</p>
+        <p>POS&#160;layouts from versions 2017 and earlier can now be imported into the <span class="MyVariablesSite Manager">Site Manager</span>. This issue was reported on the 2017.1 release.</p>
+        <p>&#160;</p>
+        <h2><span class="MyVariablesLS&#160;One POS">LS&#160;One POS</span> improvements</h2>
+        <p>&#160;</p>
+        <p>Some older translations have been updated and new strings have all been translated into the languages that LS&#160;Retail supports out of the box</p>
+        <p>Fixed an issue where the numeric text box had inverted input in the save drop, bank drop and tender declaration functionality when "use numpad" was selected in <a href="../../FieldHelp/Profiles/FunctionalityProfileView.htm">functionality profile</a></p>
+        <p>Return infocode (set in <a href="../../FieldHelp/Profiles/FunctionalityProfileView.htm">functionality profile</a>) is now activated both for return item and return transaction operations.</p>
+        <p>Added a new setting to the <a href="../../FieldHelp/Profiles/FunctionalityProfileView.htm">functionality profile</a> that shows item prices by default when searching for items in the POS.</p>
+        <p>An infocode can be configured to be trigged on operation "Open Drawer" on the POS. This can be configured on the infocodes tab on the <a href="../../FieldHelp/Profiles/FunctionalityProfileView.htm">functionality profile</a></p>
+        <p>Print Z operation is no longer allowed in training mode</p>
+        <p>Price override was not allowed for items that have a serial number. This has now been fixed</p>
+        <p>The inventory lookup dialog in the POS can now be filtered by <a href="../../FieldHelp/Store/RegionsView.htm">region</a>, the region that the current store is in is the default region that is displayed in the inventory lookup (called My region)</p>
+        <p>There was an incorrect message displayed when returning an item with mandatory serial number. This has now been fixed.</p>
+        <p>A bug has been fixed where selecting infocodes that had trigger function set to None threw an error.</p>
+        <p>Fixed an issue causing the POS to crash when modifying the layout that contains a logo panel and trying to save while the logo panel does not have any image.</p>
+        <p>Set quantity permission is now honored when numpad is used to enter quantity.</p>
+        <p>Fixed an issue allowing customer orders to be created without a customer, which resulted in a crash when recalling such customer orders.</p>
+        <p>Error that was thrown when buttons on the POS&#160;layout were changed from any operation to a payment operation has been fixed. </p>
+        <p>Fixed a bug where price calculations would return the wrong amount when tax exempting a prices that had been changed using the operation Price override.</p>
+        <p>Item line text and message panel information has been changed to accurately reflect the changes done when the price override operation is being run in the POS</p>
+        <p>In the Lock terminal dialog, if the user clicked the "Log off" button and that user did not have permission to run that operation the POS would still perform the operation. This has now been fixed</p>
+        <p>When items have been deleted and old receipts were being looked at in the POS included those items the descriptions of those items are now displayed in the POS. Previously "Item not found" text was being displayed.</p>
+        <p>Fixed an issues causing credit memos to not be issued correctly when change back on the payment tender was set to credit memo.</p>
+        <p>Fixed an issue where the return item infocode was popping up when selling an item with negative quantity.</p>
+        <p>Fixed a bug where price override amounts were not correctly calculated when a customer was set to the transaction with a different tax group than the store tax group.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+
+/*
+
+	Incident No.	: 5703
+	Responsible		: Hörður Kristjánsson
+	Sprint			: DotNetPM\LS POS 2010.1\Dot Net Stream\Sprint 01\Dot Net Team
+	Date created	: 06.10.2010
+
+	Description		: This is the "Permission Script.sql" file from the Store Controller
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected	: n/a
+						
+*/
+
+Use LSPOSNET 
+
+GO
+
+declare @dataAreaID nvarchar(10)
+
+-- Parameters are as follows
+-- @dataareaID nvarchar(10),
+-- @GUID uniqueidentifier, => Localization GUID (new generated for each permission)
+-- @Description nvarchar(100),
+-- @PermissionGroupGUID uniqueidentifier, => Group GUID, the group the permission should belong to in the permissions list in Site Manager
+-- @SortCode nvarchar(8),
+-- @PermissionCode varchar(80), => GUID used in the code to determine if the user has the permission (new generated for each permission)
+-- @CodeIsEncrypted bit
+
+set @dataAreaID = 'LSR'
+
+-- User and security management
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E694E380-CF89-11DE-8A39-0800200C9A66','Edit action permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC032','f0f5bfc0-cf89-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E13C05D0-CF89-11DE-8A39-0800200C9A66','View action permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC032','ec8c7230-cf89-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'1D608220-FA2C-11DA-974D-0800200C9A66','Create new users','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC050','290af560-fa2c-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D32F5960-554D-11DB-B0DE-0800200C9A66','Edit user','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC060','e5971c50-554d-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'BA589886-68D0-420B-B495-BE0426514EBA','View users','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC065','A1D66FBE-0CF6-4075-92D0-967772E50E48',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9B82F9B0-FACE-11DA-974D-0800200C9A66','Delete users','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC070','95d51e30-face-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E1CF2610-6049-11DB-B0DE-0800200C9A66','Enable/Disable users','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC080','ed7b4700-6049-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A0AE94A0-FA04-11DA-974D-0800200C9A66','Reset password for other users','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC100','2defc640-fa05-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'4D3F3F70-5D02-11DB-B0DE-0800200C9A66','Create user groups','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC120','a56c7d70-5d02-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'FDAB47A0-5D02-11DB-B0DE-0800200C9A66','Edit user groups','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC130','032cbbf0-5d03-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'762DF510-5D03-11DB-B0DE-0800200C9A66','Delete user groups','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC140','17d4aae0-5d03-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'1906ECC0-FAC0-11DA-974D-0800200C9A66','Assign users to groups','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC200','30bbcd90-fac0-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'39F09B00-FAC2-11DA-974D-0800200C9A66','Grant/Deny/Inherit permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC210','3eb1f3a0-fac2-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'ECA62890-FAC3-11DA-974D-0800200C9A66','Grant higher user permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC220','f4c88680-fac3-11da-974d-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8C7C3250-5EB6-11DB-B0DE-0800200C9A66','Manage user permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC225','6dfbc670-5eb5-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'628E9C80-5D03-11DB-B0DE-0800200C9A66','Manage group permissions','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC230','6d5650e0-5d03-11db-b0de-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'7D1EF450-6EDB-11E2-BCFD-0800200C9A66','Manage authentication tokens','0ca8e620-e997-11da-8ad9-0800200c9a66','SEC235','92d1c390-6edb-11e2-bcfd-0800200c9a66',0
+
+-- System Administration
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'48078C50-6D7F-11DB-9FE1-0800200C9A66','View audit logs','808ed9f0-e997-11da-8ad9-0800200c9a66','SEC300','571093e0-6d7f-11db-9fe1-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F20F86F0-AC18-11DE-8A39-0800200C9A66','Manage audit logs','808ed9f0-e997-11da-8ad9-0800200c9a66','SEC305','11dd5a60-ac1a-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A6164DC0-A229-11DB-8AB9-0800200C9A66','Maintain administrative settings','808ED9F0-E997-11DA-8AD9-0800200C9A66','SYS220','d3bed760-a229-11db-8ab9-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'FB0D8940-FB74-11DE-8A39-0800200C9A66','View update service schedule','808ed9f0-e997-11da-8ad9-0800200c9a66','USS100','f36452f0-fb74-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'13D44F40-FB75-11DE-8A39-0800200C9A66','Manage update service schedule','808ed9f0-e997-11da-8ad9-0800200c9a66','USS101','1e68e5b0-fb75-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'4991EC80-C72D-11DF-BD3B-0800200C9A66','Manage number sequences','808ed9f0-e997-11da-8ad9-0800200c9a66','NSEQ100','59fddf70-c72d-11df-bd3b-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'53956C90-27CF-11E0-91FA-0800200C9A66','Manage remote hosts','808ed9f0-e997-11da-8ad9-0800200c9a66','RHE100','74c27750-27cf-11e0-91fa-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D8CD437D-D27C-4CB9-A4B9-AF0A6CFD3549','View terminal operations audit','808ed9f0-e997-11da-8ad9-0800200c9a66','TOAE100','5c8f1749-a107-43b3-9d02-3fa7d910da72',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9EE4A4C7-F1A2-42CB-845B-89C9CC26F06A','Import data packages','808ed9f0-e997-11da-8ad9-0800200c9a66','SYS230','0843b114-359f-4f56-8f62-b7c310c0615f',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B336E292-46A0-4B33-980B-6E67774B57DE','Reset journal processing status','808ed9f0-e997-11da-8ad9-0800200c9a66','SYS240','9cf869ac-84d7-4532-87a9-33c22f18ae33',0
+
+-- Profiles
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9A413920-DB3C-11DE-8A39-0800200C9A66','View functionality profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF010','a8d6e570-db3c-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A1372500-DB3C-11DE-8A39-0800200C9A66','Edit functionality profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF011','b1190060-db3c-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'31DFE220-B35D-11DE-8A39-0800200C9A66','View visual profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF100','51d29820-b35d-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'60876530-B35D-11DE-8A39-0800200C9A66','Edit visual profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF101','691974e0-b35d-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'1CE28D90-E3EC-11DE-8A39-0800200C9A66','View hardware profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF120','acca1c80-e3eb-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'24414D60-E3EC-11DE-8A39-0800200C9A66','Edit hardware profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF121','b556adf0-e3eb-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'4929CCA0-D44D-11DE-8A39-0800200C9A66','Manage touch button layouts','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF201','5569a210-d44d-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'40A5F690-DFFA-11DE-8A39-0800200C9A66','View Site service profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF300','4d101050-dffa-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'47556390-DFFA-11DE-8A39-0800200C9A66','Edit Site service profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF301','5ddbaf70-dffa-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F5215570-BBB6-11E1-AFA7-0800200C9A66','Edit Style profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF400','a0953d60-bb92-11e1-afa7-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'3134F8F0-BBB7-11E1-AFA7-0800200C9A66','View Style profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF400','91395ae0-bb92-11e1-afa7-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'76078220-D1A8-11E1-9B23-0800200C9A66','View Form profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF500','aa918970-d1a1-11e1-9b23-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'12F12FA0-D1A9-11E1-9B23-0800200C9A66','Edit Form profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF500','b5e4dc00-d1a1-11e1-9b23-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'26542533-9583-4648-8B2D-847EB5BDDAD1','Manage import profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','PRF600','ae391482-815c-4187-9b2b-4bb3ba454063',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E8C7C5C0-FA5D-4BDE-8516-E616D0B86B87','Manage styles setup','df4afbd0-b35c-11de-8a39-0800200c9a66','USC100','0339DB04-6381-4F08-96B6-F8D36BE33908',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'59270E24-FF01-4C88-9AEA-11BDED40A953','View contexts','df4afbd0-b35c-11de-8a39-0800200c9a66','USC200','0A456F9A-342C-4B21-8EBC-C19FDDB699B3',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'3F1D120B-207A-4A0A-A56D-2EAD1B2814EE','Edit contexts','df4afbd0-b35c-11de-8a39-0800200c9a66','USC200','4C2AF7AC-5D98-497C-9323-9A749908334E',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'47EC274D-B7F0-4F24-80C6-2E1FF42F144F','Manage image bank','df4afbd0-b35c-11de-8a39-0800200c9a66','USC300','59ABC187-00A0-450A-B3A0-674BBCC779DA',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'882DF07B-4F3C-4202-A7F4-932616A6D41B','Manage user profiles','df4afbd0-b35c-11de-8a39-0800200c9a66','USC400','5F770172-1438-4C09-853C-9775D1560AC6',0
+
+-- General
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'004A89B0-C53F-11DE-8A39-0800200C9A66','View card types','1ddeef60-d9ae-11de-8a39-0800200c9a66','CRD100','118f9e90-c53f-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'08427C40-C53F-11DE-8A39-0800200C9A66','Edit card types','1ddeef60-d9ae-11de-8a39-0800200c9a66','CRD101','1b777a40-c53f-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'992A90F0-89AF-11DF-A4EE-0800200C9A66','View currencies','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUR100','a330ca10-89af-11df-a4ee-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'ECEE9350-89AD-11DF-A4EE-0800200C9A66','Edit currencies','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUR101','1dd55800-89ae-11df-a4ee-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'36F689F0-D9AD-11DE-8A39-0800200C9A66','View customers','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUS100','ad69d4d0-d9ac-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9E542310-D9AC-11DE-8A39-0800200C9A66','Edit customers','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUS101','b545daf0-d9ac-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'90886DF0-89AA-11DF-A4EE-0800200C9A66','Run End of day','1ddeef60-d9ae-11de-8a39-0800200c9a66','EOD100','b4284d70-89aa-11df-a4ee-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'88E35E80-A23A-11E0-8264-0800200C9A66','Manage gift cards','1ddeef60-d9ae-11de-8a39-0800200c9a66','GC100','ba50d4d0-a239-11e0-8264-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'23329470-D232-11E0-9572-0800200C9A66','Manage credit memos','1ddeef60-d9ae-11de-8a39-0800200c9a66','GC105','1d4e8dc0-d232-11e0-9572-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'15DE9180-E078-11E0-9572-0800200C9A66','Manage central suspensions','1ddeef60-d9ae-11de-8a39-0800200c9a66','GC110','20a29c60-e078-11e0-9572-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'3FF1A240-C0B8-11DF-851A-0800200C9A66','View price groups','1ddeef60-d9ae-11de-8a39-0800200c9a66','PG100','4c66df90-c0b8-11df-851a-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'FF5CECCE-80E9-402B-8720-F65AF31DA820','Edit price groups','1ddeef60-d9ae-11de-8a39-0800200c9a66','PG110','F4F59C82-14AE-44DA-B307-63563581D1F2',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D4E6DB50-C941-11DE-8A39-0800200C9A66','View payment types','1ddeef60-d9ae-11de-8a39-0800200c9a66','PM100','e3dbbea0-c941-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'DC259000-C941-11DE-8A39-0800200C9A66','Edit payment types','1ddeef60-d9ae-11de-8a39-0800200c9a66','PM101','e8aa0f90-c941-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'24FAEB80-DF2D-11DE-8A39-0800200C9A66','View receipts','1ddeef60-d9ae-11de-8a39-0800200c9a66','RCT100','2cb2c7d0-df2d-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F7B3FCB0-E95A-11DE-8A39-0800200C9A66','View forms','1ddeef60-d9ae-11de-8a39-0800200c9a66','RCT210','0a709660-e95b-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'FF6DADC0-E95A-11DE-8A39-0800200C9A66','Edit forms','1ddeef60-d9ae-11de-8a39-0800200c9a66','RCT111','103de0c0-e95b-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'651897B0-B72F-11DE-8A39-0800200C9A66','View stores','1ddeef60-d9ae-11de-8a39-0800200c9a66','STO100','59188a60-b72f-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'6B7DB540-B72F-11DE-8A39-0800200C9A66','Edit stores','1ddeef60-d9ae-11de-8a39-0800200c9a66','STO101','60f70180-b72f-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E35842F0-BA3C-11DE-8A39-0800200C9A66','View terminals','1ddeef60-d9ae-11de-8a39-0800200c9a66','STO110','edf40550-ba3c-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E8A33DF0-BA3C-11DE-8A39-0800200C9A66','Edit terminals','1ddeef60-d9ae-11de-8a39-0800200c9a66','STO111','f33e8b20-ba3c-11de-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AC55D1A0-85E3-11DF-A4EE-0800200C9A66','Manage POS licenses','1ddeef60-d9ae-11de-8a39-0800200c9a66','LSL100','d09c0340-85e3-11df-a4ee-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'6B2D3670-643E-11E0-AE3E-0800200C9A66','Tender declarations','1ddeef60-d9ae-11de-8a39-0800200c9a66','TEN100','975f9ad0-643e-11e0-ae3e-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'2007E06D-60C6-45CB-9053-3C47A34BC33A','View Income and Expense Types','1ddeef60-d9ae-11de-8a39-0800200c9a66','USC100','71d5edaa-3743-43b3-9c8c-d3cb8d8fd708',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B737BF90-0C3C-11E0-81E0-0800200C9A66','Edit POS menus','1ddeef60-d9ae-11de-8a39-0800200c9a66','PEN100','19f52730-0c3d-11e0-81e0-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0DA1AD40-0C3E-11E0-81E0-0800200C9A66','View POS menus','1ddeef60-d9ae-11de-8a39-0800200c9a66','PEN101','1265ec10-0c3e-11e0-81e0-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'CA74D61C-7894-4364-BD91-55A3F98E6A0F','View EFT mapping setup','1ddeef60-d9ae-11de-8a39-0800200c9a66','EFT100','6c41bac6-871e-4b1f-80cc-5349902d5181',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'04AD0711-49C3-464C-9440-06B05F8B59C6','Edit EFT mapping setup','1ddeef60-d9ae-11de-8a39-0800200c9a66','EFT110','ca74d61c-7894-4364-bd91-55a3f98e6a0f',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'799DD5EB-6906-4955-BFD4-AC4304DE4EA3','View configuration wizard templates','1ddeef60-d9ae-11de-8a39-0800200c9a66','CWZ100','2D06DC46-AA16-42E4-BA46-1730B1D060D6',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'500329C3-054C-43AF-9281-B312909BFADA','Edit configuration wizard templates','1ddeef60-d9ae-11de-8a39-0800200c9a66','CWZ110','FFE6DA02-0098-4481-AA64-F4C7F6EBD676',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'BE2722F4-242B-474C-918B-73B2413F4CE1','View categories','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUS102','4DD9F547-BD6C-44B6-9947-31F91A017DD1',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'BC8A8926-CD9E-4562-92F7-8711ED378910','Edit categories','1ddeef60-d9ae-11de-8a39-0800200c9a66','CUS103','6A4C3850-4779-46BA-9F05-C77FDD1A2267',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'5245D6BA-3F89-439F-A792-00613D5FE15A','View tax free ranges','1ddeef60-d9ae-11de-8a39-0800200c9a66','TFR100','EF573EF1-6543-40B5-A61D-C813FDD4F64D',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C1D8415A-8425-4CF1-9CC1-D81D33D669FC','Manage price settings','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','USC100','E02B5156-4232-40CA-B44B-36BB974E1119',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AB7B8DFC-A18A-4303-88E5-2C11EC575FCF','Manage suspension settings','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','USC100','0d25e7df-949a-4155-8161-90b959242412',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'1A4FE3AB-35F7-41FC-A166-C562651DF175','Manage fuel settings','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','USC100','466A97BB-87B9-46A9-8E22-B173D948E4D6',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'5B9150B2-30D6-4267-83F4-8EE83AC9CDEC','Manage allowed payment settings','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','USC100','91A1596A-2BE4-4558-8481-D0D9EDB8A02C',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'EBE2BF19-17C0-4B1E-88F5-FFD46883C15D','Manage customer groups','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','USC100','5C458EB3-2B84-4566-868E-492AD0F0B612',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'2AB29789-C680-48D3-B639-F2FEE20E3916','Manage fiscalization settings','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','VFC100','40F486EA-D891-4ECD-AB72-E69BAE0B4653',0
+
+-- Item Master
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F16AA510-0BF7-11DF-8A39-0800200C9A66','Manage retail item bar codes','78535d50-04e7-11df-8a39-0800200c9a66','BCO100','f9ff4cd0-0bf7-11df-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0438A1A0-118F-11DF-8A39-0800200C9A66','Manage bar code masks','78535d50-04e7-11df-8a39-0800200c9a66','BCO120','0fa596b0-118f-11df-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'6C12501A-0229-4067-A3E3-C0A175E48789','Manage bar code setup','78535d50-04e7-11df-8a39-0800200c9a66','BCO130','162480B4-0D65-4127-A798-A047B7319A56',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A0E9A5A0-09BD-11DF-8A39-0800200C9A66','View retail items','78535d50-04e7-11df-8a39-0800200c9a66','ITM100','8f623090-09bd-11df-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A6C71CA0-09BD-11DF-8A39-0800200C9A66','Edit retail items','78535d50-04e7-11df-8a39-0800200c9a66','ITM110','9c29d3a0-09bd-11df-8a39-0800200c9a66',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'365B452C-0520-40CA-9D73-1C97D8E366E2','Multi edit items','78535d50-04e7-11df-8a39-0800200c9a66','ITM120','E1839574-3AD1-4D57-BEC1-BB30E5D78ACA',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'248B5B82-43C0-48DC-8F7A-BAF69DE9AABE','Manage item types','78535D50-04E7-11DF-8A39-0800200C9A66','ITM121','2a84f88d-85da-4828-a9e0-9d97db6eba69',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'2C9E0A99-331F-4EC7-BA1E-F8670C828816','Manage item cost price','78535D50-04E7-11DF-8A39-0800200C9A66','ITM122','f6962a7c-38ef-463b-87a8-1dbf172033cd',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C40E5050-9A39-11DF-981C-0800200C9A66','Manage retail departments','78535d50-04e7-11df-8a39-0800200c9a66','ITM125','cf194f40-9a39-11df-981c-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'176C1B40-0BF8-11DF-8A39-0800200C9A66','Manage retail item dimensions','78535d50-04e7-11df-8a39-0800200c9a66','ITM130','1bc710f0-0bf8-11df-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'87EA40F0-6CB9-11DF-BE2B-0800200C9A66','View customer discount groups','78535d50-04e7-11df-8a39-0800200c9a66','PDG100','94780f50-6cb9-11df-be2b-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8EDD6DB0-6CB9-11DF-BE2B-0800200C9A66','Edit customer discount groups','78535d50-04e7-11df-8a39-0800200c9a66','PDG101','98daf440-6cb9-11df-be2b-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'82E990F0-7241-11DF-93F2-0800200C9A66','View item discount groups','78535d50-04e7-11df-8a39-0800200c9a66','PDG102','c7070150-7241-11df-93f2-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B8CE1B00-7241-11DF-93F2-0800200C9A66','Edit item discount groups','78535d50-04e7-11df-8a39-0800200c9a66','PDG103','cef38230-7241-11df-93f2-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'78056F10-7890-11DF-93F2-0800200C9A66','View sales tax setup','78535d50-04e7-11df-8a39-0800200c9a66','STA100','82cb0090-7890-11df-93f2-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'7C841960-7890-11DF-93F2-0800200C9A66','Edit sales tax setup','78535d50-04e7-11df-8a39-0800200c9a66','STA101','880d9720-7890-11df-93f2-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AB59B550-2080-11DF-8A39-0800200C9A66','Manage trade agreement prices','78535d50-04e7-11df-8a39-0800200c9a66','TRP100','b37bc520-2080-11df-8a39-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B5D318D0-9643-11DF-981C-0800200C9A66','Manage discounts','78535d50-04e7-11df-8a39-0800200c9a66','TRP105','c2417850-9643-11df-981c-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'828E4BB0-9A69-4D30-A2C4-BB34DEA25DDA','Manage retail divisions','78535d50-04e7-11df-8a39-0800200c9a66','TRP107','c18bea2d-7b24-41a2-8db5-025aa3178424',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'15C8B5B0-A6DE-11DF-981C-0800200C9A66','Manage retail groups','78535d50-04e7-11df-8a39-0800200c9a66','TRP110','22e640f0-a6de-11df-981c-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'62ABDC60-AE93-11DF-94E2-0800200C9A66','Manage special groups','78535d50-04e7-11df-8a39-0800200c9a66','TRP120','79c2f690-ae93-11df-94e2-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8E1C4E00-B4EE-11DF-8D81-0800200C9A66','View infocode setup','78535d50-04e7-11df-8a39-0800200c9a66','INF100','fe0375e0-b4ee-11df-8d81-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'CFBE2320-B506-11DF-8D81-0800200C9A66','Edit infocode setup','78535d50-04e7-11df-8a39-0800200c9a66','INF110','dd56aac0-b506-11df-8d81-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'21294200-BC03-11DF-851A-0800200C9A66','Manage item units','78535d50-04e7-11df-8a39-0800200c9a66','UNI100','4c385c10-bc03-11df-851a-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'81CAA200-A232-11E0-8264-0800200C9A66','Manage linked items','78535d50-04e7-11df-8a39-0800200c9a66','ITM200','88d35290-a232-11e0-8264-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AAB3BC37-DCA6-4407-9941-E1692C7CCF80','View item ledger','78535d50-04e7-11df-8a39-0800200c9a66','ITM120','54da9e65-e48d-4cfc-9807-248699d9e82a',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C2882498-E950-423E-8A81-2DD331EF7659','Manage serial numbers','78535d50-04e7-11df-8a39-0800200c9a66','SN100','cc6ed4ca-19ae-4f1b-9021-8b0a54ff2bbe',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'495712EC-0340-4C02-AF5B-0F8E7BA2F35F','Manage vendors on items','78535d50-04e7-11df-8a39-0800200c9a66','ITM135','50bd6e9e-716f-4264-b8bc-cf790221e1d8',0
+
+-- Hospitality
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B93AE980-A3B8-11DF-981C-0800200C9A66','Manage hospitality setup','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS100','c8a068f0-a3b8-11df-981c-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'1EEC0BD0-DAC6-11DF-937B-0800200C9A66','Manage sales types','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS110','dcd1c900-dac6-11df-937b-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'329F05F0-E8C8-11DF-9492-0800200C9A66','Manage hospitality types','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS120','070c7f80-e8d2-11df-9492-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'55B825C0-F3EB-11DF-98CF-0800200C9A66','Manage dining table layouts','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS130','5c024140-f3eb-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B13A3ED0-02B7-11E0-A976-0800200C9A66','Manage restaurant menu types','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS140','bf5dc860-02b7-11e0-a976-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C07B5430-03A5-11E0-A976-0800200C9A66','Manage station printing','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS150','c8039500-03a5-11e0-a976-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'66323910-19B4-11E0-AC64-0800200C9A66','Manage menu groups','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS180','7cf60320-19b4-11e0-ac64-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F7BC3A76-0911-4A2B-9632-55EFC7B18682','Manage Kitchen Manager profiles','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS190','B02E9A4C-F932-4528-97B3-0703ED352471',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9D520883-3C20-4F56-903A-6233897BA26B','Manage Kitchen Display Stations','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS200','1EBF0956-B3A6-4AFA-8149-E257E1EE7BE3',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'19C10A2A-B228-47FF-8F47-558CD1E8DFCE','Manage Kitchen Display profiles','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS210','2E353342-0FF3-4342-8386-CF35154E95B3',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D541DED2-A8A4-4E26-934A-FA87C21036AE','Manage Kitchen printers','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS220','211a5a6e-3654-4490-bb5c-63b89e26f102',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'46526323-AC83-453C-B681-DB0B65105521','Hospitality unlock table','a54c7dc0-a922-11df-94e2-0800200c9a66','HOS230','19CF937E-5570-41FD-8ABE-BDFF5A9C68D5',0
+
+
+-- Inventory
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'EA1C5150-F0B7-11DF-98CF-0800200C9A66','Manage Calculate Statement','32246200-f0bb-11df-98cf-0800200c9a66','IV100','c1fc2460-f0b8-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'FB1CE320-F0B7-11DF-98CF-0800200C9A66','Manage Post Statement','32246200-f0bb-11df-98cf-0800200c9a66','IV110','d1408740-f0b8-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0B79C730-F624-11DF-98CF-0800200C9A66','View vendors','32246200-f0bb-11df-98cf-0800200c9a66','VE100','2802ec60-f624-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'6BCA4D80-F624-11DF-98CF-0800200C9A66','Edit vendors','32246200-f0bb-11df-98cf-0800200c9a66','VE110','76fb7210-f624-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'34BD0C00-F3E1-11DF-98CF-0800200C9A66','Manage purchase orders','32246200-f0bb-11df-98cf-0800200c9a66','IV120','3fbc4b20-f3e1-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C73861F0-0D0A-11E0-81E0-0800200C9A66','Manage goods receiving documents','32246200-f0bb-11df-98cf-0800200c9a66','IV125','ea89d350-0d0a-11e0-81e0-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'36D84296-316B-4A06-8E9B-DA6D5BA3D2B5','Manage inventory adjustments for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV127','85851D77-483F-435E-92D3-DAD722A8512F',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AD735180-F6DF-11DF-98CF-0800200C9A66','View inventory adjustments','32246200-f0bb-11df-98cf-0800200c9a66','IV130','db2cf220-f6df-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'4F4EB240-F6E7-11DF-98CF-0800200C9A66','Edit inventory adjustments','32246200-f0bb-11df-98cf-0800200c9a66','IV140','69bf30a0-f6e7-11df-98cf-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'6ED29390-09F0-11E0-81E0-0800200C9A66','View and edit stock counting','32246200-f0bb-11df-98cf-0800200c9a66','IV150','c59f3020-09f0-11e0-81e0-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'F61938B8-DB15-4714-94F9-1AD16DDDF5FB','Post and receive purchase order','32246200-f0bb-11df-98cf-0800200c9a66','IV170','63FCEB22-13D6-4AC2-BF96-E1C3BEA1B83F',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8E677D9F-EE02-4A52-9768-0DF78F985126','Auto populate goods receiving document lines','32246200-f0bb-11df-98cf-0800200c9a66','IV180','48F6E912-B38F-4CA5-83BF-B78DED9B4066',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8649312D-14F8-4255-BA94-C02712B903D0','View inventory transfer requests','32246200-f0bb-11df-98cf-0800200c9a66','IV200','FF61FC67-7A75-4A5F-AE31-06655E7C628F',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'EB9693BB-B825-4010-AFDE-B56CF2DD3183','Edit inventory transfer requests','32246200-f0bb-11df-98cf-0800200c9a66','IV210','63A12986-450F-4583-B886-38BEFBA64019',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E329EB84-B449-4239-AED8-C6AEC374AD67','View inventory transfer orders','32246200-f0bb-11df-98cf-0800200c9a66','IV220','73747D3D-4AB7-4B5C-B77C-C01E5B9CDDA4',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D404EDDE-1303-46FD-9FF2-5A9D4247DFE8','Edit inventory transfer orders','32246200-f0bb-11df-98cf-0800200c9a66','IV230','99ADF603-3981-46AD-899F-343A3C2F201E',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'75991D8F-8A93-4BEE-9620-400E1312D9E8','Auto set quantity on transfer order','32246200-f0bb-11df-98cf-0800200c9a66','IV240','C8B4DA03-399C-41C2-BE32-CFFB8968D71E',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'4342D98A-CDEB-409D-80F2-FCA069DA2782','Manage replenishment','32246200-f0bb-11df-98cf-0800200c9a66','IV300','4B538D9F-E793-4463-84D6-FCC1405E560C',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B1F9E246-5EAB-4FC5-BDB4-E1F769787447','Manage parked inventory','32246200-f0bb-11df-98cf-0800200c9a66','IV310','8F61C556-EBF2-47EA-9A58-F9174070515A',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C3109275-6E3F-491A-A37C-CA32BD3014F1','Manage inventory adjustments','32246200-f0bb-11df-98cf-0800200c9a66','IV128','9F77B529-30EA-4244-9C7C-D501FBA36F8C',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'AA1822B1-0953-4B90-9DAC-307E5B88DB3F','Manage stock reservations','32246200-f0bb-11df-98cf-0800200c9a66','IV320','5E54791E-05FF-45C8-BE61-B150B2484FC6',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'411B0B74-BBD7-4F01-94CB-D8294376E0F9','Manage stock reservations for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV321','6159A8F8-EE17-464F-9CB9-42D915B985EB',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B50FFD7C-5A65-4871-8DDC-DB3039F6029E','Manage parked inventory for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV311','4C09DBFD-D5E9-45C3-A7EF-0C4E32D87D64',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'76C929DB-5D0E-4905-8AFD-F6A7F0B7FB62','Manage inventory templates','32246200-f0bb-11df-98cf-0800200c9a66','IV360','6593B5D3-1464-4B86-9559-E131947C7859',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0D77BB0E-4AC1-4DBC-9F3A-0B32CC8CE3C2','View inventory for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV330','7AB1D100-589F-49E1-8851-7444670AFF36',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0D77BB0E-4AC1-4DBC-9F3A-0B32CC8CE3C3','Manage Purchase orders for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV330','7AB1D100-589F-49E1-8851-7444670AFF37',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0D77BB0E-4AC1-4DBC-9F3A-0B32CC8CE3C4','Manage Goods receiving for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV340','7AB1D100-589F-49E1-8851-7444670AFF38',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0D77BB0E-4AC1-4DBC-9F3A-0B32CC8CE3C5','Create store transfers for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV350','7AB1D100-589F-49E1-8851-7444670AFF39',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'0D77BB0E-4AC1-4DBC-9F3A-0B32CC8CE3C6','Manage transfers for all stores','32246200-f0bb-11df-98cf-0800200c9a66','IV360','7AB1D100-589F-49E1-8851-7444670AFF40',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D280E6AF-4EA8-486E-99ED-EEAA0250240F','View inventory on hand','32246200-f0bb-11df-98cf-0800200c9a66','IV370','8D3CD897-E735-471E-A49D-E0D814834F44',0
+
+-- Employee and Customer cards
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C26AA590-F65F-11E0-BE50-0800200C9A66','Manage msr card links','2c562010-f660-11e0-be50-0800200c9a66','MC100','03bdf970-f660-11e0-be50-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'80921901-B919-452F-9C97-6029ACABC053','View loyalty schemes','2c562010-f660-11e0-be50-0800200c9a66','LOY100','a1a62675-b17f-4283-89dc-7c2f84689983',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'80921902-B919-452F-9C97-6029ACABC053','Edit loyalty schemes','2c562010-f660-11e0-be50-0800200c9a66','LOY110','92df57e5-a6ab-4b3e-ad44-022911465763',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'80921903-B919-452F-9C97-6029ACABC053','View loyalty cards','2c562010-f660-11e0-be50-0800200c9a66','LOY120','b58125d3-7eb1-4de4-9cd0-06346603ee12',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'80921904-B919-452F-9C97-6029ACABC053','Edit loyalty cards','2c562010-f660-11e0-be50-0800200c9a66','LOY130','87034c77-0ada-4c76-9102-d3e818f0e64f',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D0E05BAE-4AD7-4E3E-A35C-D9B63D8F4039','View loyalty transactions','2c562010-f660-11e0-be50-0800200c9a66','LOY140','31862587-7C64-433A-8E76-E3E022A3BA51',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'8DECDF32-753D-4ECF-A64D-E93722D3C3CF','View customer ledger entries','1ddeef60-d9ae-11de-8a39-0800200c9a66','LDG100','B4B7457A-09F3-41EF-B469-8B96F2A36C19',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'10C08A81-CB1F-4FC9-8C9C-86B715F1F83C','Edit customer ledger entries','1ddeef60-d9ae-11de-8a39-0800200c9a66','LDG101','9FF97831-DFA2-4792-A0EE-FAC964A64C90',0
+
+-- Label templates
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'735C60D3-CBCF-443E-81FD-19904F9232C5','View label templates','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','LTP101','B623624E-C77D-4649-83C7-57206423FAA1',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'49940BC5-A609-40D1-A3FB-729E8BA4284B','Edit label templates','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','LTP102','DD995493-97DF-4203-8A73-5E852409220F',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'DBFBB019-E273-40E3-896C-F217C88FDD2B','Print labels','1DDEEF60-D9AE-11DE-8A39-0800200C9A66','LTP103','499B4FFB-9415-4514-816C-AB3D46C8997C',0
+
+-- Pos permissions
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A0-A9A8-11E1-AFA6-0800200C9A66', 'Item sale','7d750220-a99f-11e1-afa6-0800200c9a66','PP100','cb2af180-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A1-A9A8-11E1-AFA6-0800200C9A66', 'Price check','7d750220-a99f-11e1-afa6-0800200c9a66','PP104','cb2af181-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A2-A9A8-11E1-AFA6-0800200C9A66', 'Void item','7d750220-a99f-11e1-afa6-0800200c9a66','PP108','cb2af182-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A3-A9A8-11E1-AFA6-0800200C9A66', 'Item comment','7d750220-a99f-11e1-afa6-0800200c9a66','PP112','cb2af183-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A4-A9A8-11E1-AFA6-0800200C9A66', 'Price override','7d750220-a99f-11e1-afa6-0800200c9a66','PP116','cb2af184-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '9C60EF55-60A1-4930-8D58-E1D2411250E5', 'Clear price override','7d750220-a99f-11e1-afa6-0800200c9a66','PP117','88A26FAB-AF3D-4F81-AE37-74ECD0518A1D',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A5-A9A8-11E1-AFA6-0800200C9A66', 'Set quantity','7d750220-a99f-11e1-afa6-0800200c9a66','PP120','cb2af185-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A6-A9A8-11E1-AFA6-0800200C9A66', 'Clear quantity','7d750220-a99f-11e1-afa6-0800200c9a66','PP124','cb2af186-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A7-A9A8-11E1-AFA6-0800200C9A66', 'Item search','7d750220-a99f-11e1-afa6-0800200c9a66','PP128','cb2af187-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A8-A9A8-11E1-AFA6-0800200C9A66', 'Return item','7d750220-a99f-11e1-afa6-0800200c9a66','PP132','cb2af188-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9A9-A9A8-11E1-AFA6-0800200C9A66', 'Return transaction','7d750220-a99f-11e1-afa6-0800200c9a66','PP136','cb2af189-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9AA-A9A8-11E1-AFA6-0800200C9A66', 'Show journal','7d750220-a99f-11e1-afa6-0800200c9a66','PP140','cb2af18a-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9AB-A9A8-11E1-AFA6-0800200C9A66', 'Loyalty request','7d750220-a99f-11e1-afa6-0800200c9a66','PP144','cb2af18b-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'F42F5BB2-E92D-46A6-87EE-1DBF9784A648', 'Loyalty points discount','7d750220-a99f-11e1-afa6-0800200c9a66','PP144','89161D7F-43A2-4D9B-9758-B26072BD65D5',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9AC-A9A8-11E1-AFA6-0800200C9A66', 'Clear salesperson','7d750220-a99f-11e1-afa6-0800200c9a66','PP148','cb2af18c-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9AD-A9A8-11E1-AFA6-0800200C9A66', 'Invoice comment','7d750220-a99f-11e1-afa6-0800200c9a66','PP152','cb2af18d-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9AE-A9A8-11E1-AFA6-0800200C9A66', 'Change unit of measure','7d750220-a99f-11e1-afa6-0800200c9a66','PP156','cb2af18e-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B1-A9A8-11E1-AFA6-0800200C9A66', 'Infocode on request','7d750220-a99f-11e1-afa6-0800200c9a66','PP168','cb2af191-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B3-A9A8-11E1-AFA6-0800200C9A66', 'Change item comments','7d750220-a99f-11e1-afa6-0800200c9a66','PP176','cb2af193-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B4-A9A8-11E1-AFA6-0800200C9A66', 'Pay cash','7d750220-a99f-11e1-afa6-0800200c9a66','PP200','cb2af194-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B5-A9A8-11E1-AFA6-0800200C9A66', 'Pay card','7d750220-a99f-11e1-afa6-0800200c9a66','PP205','cb2af195-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B6-A9A8-11E1-AFA6-0800200C9A66', 'Pay customer account','7d750220-a99f-11e1-afa6-0800200c9a66','PP210','cb2af196-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B7-A9A8-11E1-AFA6-0800200C9A66', 'Pay currency','7d750220-a99f-11e1-afa6-0800200c9a66','PP215','cb2af197-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B8-A9A8-11E1-AFA6-0800200C9A66', 'Pay check','7d750220-a99f-11e1-afa6-0800200c9a66','PP220','cb2af198-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9B9-A9A8-11E1-AFA6-0800200C9A66', 'Pay cash quick','7d750220-a99f-11e1-afa6-0800200c9a66','PP225','cb2af199-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9BA-A9A8-11E1-AFA6-0800200C9A66', 'Pay corporate card','7d750220-a99f-11e1-afa6-0800200c9a66','PP230','cb2af19a-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9BB-A9A8-11E1-AFA6-0800200C9A66', 'Void payment','7d750220-a99f-11e1-afa6-0800200c9a66','PP235','cb2af19b-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9BC-A9A8-11E1-AFA6-0800200C9A66', 'Pay credit memo','7d750220-a99f-11e1-afa6-0800200c9a66','PP240','cb2af19c-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9BD-A9A8-11E1-AFA6-0800200C9A66', 'Pay gift card','7d750220-a99f-11e1-afa6-0800200c9a66','PP245','cb2af19d-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528C9BE-A9A8-11E1-AFA6-0800200C9A66', 'Line discount amount','7d750220-a99f-11e1-afa6-0800200c9a66','PP300','cb2af19e-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B0-A9A8-11E1-AFA6-0800200C9A66', 'Line discount percent','7d750220-a99f-11e1-afa6-0800200c9a66','PP305','cb2af19f-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B1-A9A8-11E1-AFA6-0800200C9A66', 'Total discount amount','7d750220-a99f-11e1-afa6-0800200c9a66','PP315','cb2af1a0-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B2-A9A8-11E1-AFA6-0800200C9A66', 'Total discount percent','7d750220-a99f-11e1-afa6-0800200c9a66','PP320','cb2af1a1-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '61572931-A0B4-4CDB-AB72-A78A2C27B328', 'Clear discounts','7d750220-a99f-11e1-afa6-0800200c9a66','PP321','A263AC10-7D96-49FD-A761-94F35407C187',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '8BFE0874-54B3-4AAE-9ACB-09926BC3A31B', 'Manually trigger periodic discount','7d750220-a99f-11e1-afa6-0800200c9a66','PP325','7CC8499D-0AA8-497E-99BA-A8A208EF87EB',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B5-A9A8-11E1-AFA6-0800200C9A66', 'Void transaction','7d750220-a99f-11e1-afa6-0800200c9a66','PP500','cb2b1892-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B6-A9A8-11E1-AFA6-0800200C9A66', 'Transaction comment','7d750220-a99f-11e1-afa6-0800200c9a66','PP505','cb2b1893-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B7-A9A8-11E1-AFA6-0800200C9A66', 'Sales person','7d750220-a99f-11e1-afa6-0800200c9a66','PP510','cb2b1894-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B8-A9A8-11E1-AFA6-0800200C9A66', 'Suspend transaction','7d750220-a99f-11e1-afa6-0800200c9a66','PP515','cb2b1895-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0B9-A9A8-11E1-AFA6-0800200C9A66', 'Recall transaction','7d750220-a99f-11e1-afa6-0800200c9a66','PP520','cb2b1896-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BA-A9A8-11E1-AFA6-0800200C9A66', 'Pharmacy prescription cancel','7d750220-a99f-11e1-afa6-0800200c9a66','PP525','cb2b1897-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BB-A9A8-11E1-AFA6-0800200C9A66', 'Pharmacy prescriptions','7d750220-a99f-11e1-afa6-0800200c9a66','PP530','cb2b1898-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BC-A9A8-11E1-AFA6-0800200C9A66', 'Issue credit memo','7d750220-a99f-11e1-afa6-0800200c9a66','PP535','cb2b1899-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BD-A9A8-11E1-AFA6-0800200C9A66', 'Issue gift card','7d750220-a99f-11e1-afa6-0800200c9a66','PP540','cb2b189a-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '3957A752-254D-4705-8857-3418E4F15C69', 'Get gift card balance','7d750220-a99f-11e1-afa6-0800200c9a66', 'PP542','54142856-C298-4DB0-A9DF-F02995EA24AC',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BE-A9A8-11E1-AFA6-0800200C9A66', 'Display total','7d750220-a99f-11e1-afa6-0800200c9a66','PP545','cb2b189b-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0BF-A9A8-11E1-AFA6-0800200C9A66', 'Sales order','7d750220-a99f-11e1-afa6-0800200c9a66','PP550','cb2b189c-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0C0-A9A8-11E1-AFA6-0800200C9A66', 'Sales invoice','7d750220-a99f-11e1-afa6-0800200c9a66','PP555','cb2b189d-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0C1-A9A8-11E1-AFA6-0800200C9A66', 'Income account','7d750220-a99f-11e1-afa6-0800200c9a66','PP560','cb2b189e-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0C2-A9A8-11E1-AFA6-0800200C9A66', 'Expense account','7d750220-a99f-11e1-afa6-0800200c9a66','PP565','cb2b189f-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0C3-A9A8-11E1-AFA6-0800200C9A66', 'Return income accounts','7d750220-a99f-11e1-afa6-0800200c9a66','PP570','cb2b18a0-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1528F0C4-A9A8-11E1-AFA6-0800200C9A66', 'Return expense accounts','7d750220-a99f-11e1-afa6-0800200c9a66','PP575','cb2b18a1-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '39EDAFE0-A9A2-11E1-AFA6-0800200C9A66', 'Customer search','7d750220-a99f-11e1-afa6-0800200c9a66','PP602','fbccb030-a9a1-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '80E83310-A9A3-11E1-AFA6-0800200C9A66', 'Customer clear','7d750220-a99f-11e1-afa6-0800200c9a66','PP605','3fc739d0-a9a3-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '5C1B01B0-A9A4-11E1-AFA6-0800200C9A66', 'Customer transactions','7d750220-a99f-11e1-afa6-0800200c9a66','PP609','aec82af0-a9a4-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'EE006700-A9A4-11E1-AFA6-0800200C9A66', 'Customer transactions report','7d750220-a99f-11e1-afa6-0800200c9a66','PP610','145d6ab0-a9a5-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '432B8890-A9A5-11E1-AFA6-0800200C9A66', 'Log off','7d750220-a99f-11e1-afa6-0800200c9a66','PP701','801eb6a0-a9a5-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'CC68E530-A9A5-11E1-AFA6-0800200C9A66', 'Lock terminal','7d750220-a99f-11e1-afa6-0800200c9a66','PP703','04d68b20-a9a6-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '563D2AA0-A9A6-11E1-AFA6-0800200C9A66', 'Log off force','7d750220-a99f-11e1-afa6-0800200c9a66','PP704','88632610-a9a6-11e1-afa6-0800200c9a66',0  
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'C24BD340-A9A6-11E1-AFA6-0800200C9A66', 'Inventory lookup','7d750220-a99f-11e1-afa6-0800200c9a66','PP801','eb1da780-a9a6-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '32216EF0-A9A7-11E1-AFA6-0800200C9A66', 'Initialize Z report','7d750220-a99f-11e1-afa6-0800200c9a66','PP902','5a022c70-a9a7-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '808BBE60-A9A7-11E1-AFA6-0800200C9A66', 'Print X','7d750220-a99f-11e1-afa6-0800200c9a66','PP904','a896e740-a9a7-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'CEE37030-A9A7-11E1-AFA6-0800200C9A66', 'Print Z','7d750220-a99f-11e1-afa6-0800200c9a66','PP905','ecfcf960-a9a7-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1B4B77E2-A287-4219-B068-C4463C1DD32D', 'Print item sales report','7d750220-a99f-11e1-afa6-0800200c9a66','PP906','1BA39C5E-BFFB-41BF-AA25-5848F2685F23',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '4CC27DC0-A9A8-11E1-AFA6-0800200C9A66', 'Edit POS layout','7d750220-a99f-11e1-afa6-0800200c9a66','PP912','7c504220-a9a8-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'B3FF6280-AA36-11E1-AFA6-0800200C9A66', 'Minimize POS window','7d750220-a99f-11e1-afa6-0800200c9a66','PP916','dd590460-aa36-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1396AAF0-AA37-11E1-AFA6-0800200C9A66', 'Blank operation','7d750220-a99f-11e1-afa6-0800200c9a66','PP920','31601850-aa37-11e1-afa6-0800200c9a66',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '018BC3EB-19F6-441A-9295-64A0468C108e', 'Run external command','7d750220-a99f-11e1-afa6-0800200c9a66','PP921','6bf47f9e-9d35-4aa0-91a8-d190d4236838',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '0E7B1B16-B4A8-4FAB-B8CD-71B51696D431', 'Execute POS plugin','7d750220-a99f-11e1-afa6-0800200c9a66','PP922','a58bdec5-86b1-495f-af96-8da24012b126',0 
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '67F1D250-AA37-11E1-AFA6-0800200C9A66', 'Open drawer','7d750220-a99f-11e1-afa6-0800200c9a66','P1001','92ab7960-aa37-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'C61CB980-AA37-11E1-AFA6-0800200C9A66', 'End of day','7d750220-a99f-11e1-afa6-0800200c9a66','P1050','f8c72730-aa37-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '30685560-AA38-11E1-AFA6-0800200C9A66', 'End of shift','7d750220-a99f-11e1-afa6-0800200c9a66','P1051','4e3f3040-aa38-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '7A5DBE80-AA38-11E1-AFA6-0800200C9A66', 'Tender declaration','7d750220-a99f-11e1-afa6-0800200c9a66','P1052','9e65aea0-aa38-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'D0120D40-AA38-11E1-AFA6-0800200C9A66', 'Customer account deposit','7d750220-a99f-11e1-afa6-0800200c9a66','P1100','f4572d70-aa38-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '1E2EB1E0-AA39-11E1-AFA6-0800200C9A66', 'Declare start amount','7d750220-a99f-11e1-afa6-0800200c9a66','P1200','4402af70-aa39-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '6CC36CB0-AA39-11E1-AFA6-0800200C9A66', 'Float entry','7d750220-a99f-11e1-afa6-0800200c9a66','P1200','8ba268c0-aa39-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'C9154E20-AA39-11E1-AFA6-0800200C9A66', 'Tender removal','7d750220-a99f-11e1-afa6-0800200c9a66','P1210','eba34870-aa39-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '0D3CD0A0-AA3A-11E1-AFA6-0800200C9A66', 'Safe drop','7d750220-a99f-11e1-afa6-0800200c9a66','P1211','58de1500-aa3a-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '891E8790-AA3A-11E1-AFA6-0800200C9A66', 'Bank drop','7d750220-a99f-11e1-afa6-0800200c9a66','P1212','a3fdcd50-aa3a-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '2D7C78B0-AA3B-11E1-AFA6-0800200C9A66', 'Safe drop reversal','7d750220-a99f-11e1-afa6-0800200c9a66','P1213','78bd4d90-aa3b-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '97105D50-AA3B-11E1-AFA6-0800200C9A66', 'Bank drop reversal','7d750220-a99f-11e1-afa6-0800200c9a66','P1214','cfd7bc00-aa3b-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'ED067000-AA3B-11E1-AFA6-0800200C9A66', 'Split bill','7d750220-a99f-11e1-afa6-0800200c9a66','P1300','0e6475d0-aa3c-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '48857110-AA3C-11E1-AFA6-0800200C9A66', 'Exit hospitality POS','7d750220-a99f-11e1-afa6-0800200c9a66','P1301','7f68f490-aa3c-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'AD42EE70-AA3C-11E1-AFA6-0800200C9A66', 'Print hospitality menu type','7d750220-a99f-11e1-afa6-0800200c9a66','P1302','e45dd5a0-aa3c-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '0B1136B0-AA3D-11E1-AFA6-0800200C9A66', 'Set hospitality menu type','7d750220-a99f-11e1-afa6-0800200c9a66','P1303','25f13fc0-aa3d-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '3F89FBC0-AA3D-11E1-AFA6-0800200C9A66', 'Change hospitality menu type','7d750220-a99f-11e1-afa6-0800200c9a66','P1304','5cc33710-aa3d-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '7906EED0-AA3D-11E1-AFA6-0800200C9A66', 'Tax exempt transaction','7d750220-a99f-11e1-afa6-0800200c9a66','P1400','9ba84a10-aa3d-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'B7D1C310-AA3D-11E1-AFA6-0800200C9A66', 'Clear transaction tax exemption','7d750220-a99f-11e1-afa6-0800200c9a66','P1401','de11a1d0-aa3d-11e1-afa6-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'FC8BC190-AA3D-11E1-AFA6-0800200C9A66', 'Infocode tax group change','7d750220-a99f-11e1-afa6-0800200c9a66','P1405','08d5f740-aa3e-11e1-afa6-0800200c9a66',0																							
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'B15D8168-F2E8-4093-95EB-582E068AD9EC', 'Customer add','7d750220-a99f-11e1-afa6-0800200c9a66','P1505','4692F4C7-8491-4943-A092-335904F96D60',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '38402373-1A92-483F-B77B-E18C986BB586', 'Bump order','7d750220-a99f-11e1-afa6-0800200c9a66','P1510','33A883D8-1557-4D22-939D-4B92A9B43BBB',0				
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '20E06A62-BAE4-4EEC-BB04-A4A708956904', 'Pay loyalty','7d750220-a99f-11e1-afa6-0800200c9a66','P1600','7911D1D2-3567-4E15-A35C-B7917067D4DE',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '214B99CE-0C26-4D16-B65B-EA555708B4F0', 'Add customer to loyalty card','7d750220-a99f-11e1-afa6-0800200c9a66','P1605','851FDAD8-281C-4B30-B3FD-EFE30B3E2FAB',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '17B02E4B-ABCB-46A0-BE29-B8FACAB2F434', 'View integration mapping','7d750220-a99f-11e1-afa6-0800200c9a66','P1610','ecc57e15-3ea1-48e1-854e-b45379222b19',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'DACEDF0B-0709-4B3B-9A27-0FC7DB1FD6BD', 'Edit integration mapping','7d750220-a99f-11e1-afa6-0800200c9a66','P1610','9790919b-e1be-4e88-97db-bcac2c5b2343',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '9E435E02-17C8-4BA4-9365-B1A1EA3C8D30', 'View integration log','7d750220-a99f-11e1-afa6-0800200c9a66','P1610','1B27F8A0-EAE3-4211-AA10-D930F62671BC',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'B2FE62A8-ECA5-4EB7-8C05-36A0E2E290AD', 'Start of day','7d750220-a99f-11e1-afa6-0800200c9a66','P1026','88562A82-AD6D-4934-B189-CE6D0CA3EA4C',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '235EE80D-2B89-4CA3-BA0C-5527BFF93ACC', 'Manage hardware profile on POS','7d750220-a99f-11e1-afa6-0800200c9a66','P1027','AABAD5CD-2726-4084-8759-DF9C5E6C71E2',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '41E5E014-9DAA-481E-95F3-0BD3E3896556', 'Customer orders','7d750220-a99f-11e1-afa6-0800200c9a66','P1028','5CBB9D93-64B0-4842-B300-39BB17B0EBFB',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '2504F28E-2210-4E65-BA6A-3D611F63197E', 'Quotes','7d750220-a99f-11e1-afa6-0800200c9a66','P1029','5ECA0247-BD40-46BB-AB07-950851B5CB93',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'C35A6965-FAE3-45DB-AACF-F0606F6C4838', 'Customer order management','7d750220-a99f-11e1-afa6-0800200c9a66','P1030','6C4AB8C9-CEC0-42EE-A320-4097710FCAFF',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'DD054719-5FF9-4F41-81F2-B282921F1924', 'Override minimum deposit','7d750220-a99f-11e1-afa6-0800200c9a66','P1031','CDA8A454-DADB-4B94-BB4C-097CB21241CD',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'DF5E32BF-C726-4A24-B2A6-2104F06D590D', 'Set reason code','7d750220-a99f-11e1-afa6-0800200c9a66','P1032','35287470-9B5F-4C09-95D9-1CC64104CFFD',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'C3A5300F-593E-488C-B080-04025A3BC253', 'Manage POS customer blocking','7d750220-a99f-11e1-afa6-0800200c9a66','P1033','6F39CFF7-EC68-4BBD-826E-3020E23376C9',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'EFA71CD1-0DC3-47E7-B7CF-0F78D89A81D4', 'Print fiscal info slip','7d750220-a99f-11e1-afa6-0800200c9a66','PP925','68F21087-4A8B-4494-97B3-B7305CDDA9C7',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'BF61E0E6-AEF1-4AF3-B95F-B6C68DC91D64', 'Exit POS application','7d750220-a99f-11e1-afa6-0800200c9a66','P1700','5B124A59-1EC8-4D5A-BB97-B2F47EA0C668',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '2279A999-A5CB-44B8-805F-8684E6E9FCD7', 'Restart computer','7d750220-a99f-11e1-afa6-0800200c9a66','P1710','C9E23EF2-9FF0-4232-96B6-657302870EFD',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, '5C3CCB66-2EEB-4252-9E91-30C2C603EBBC', 'Shutdown computer','7d750220-a99f-11e1-afa6-0800200c9a66','P1720','2EE61F04-C62B-4B30-8680-6636D655800D',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'B7464BC4-47B2-48BA-B82A-306E658ECD96', 'Activate training mode','7d750220-a99f-11e1-afa6-0800200c9a66','P1800','0C5E5E9D-E0AD-41B8-86D1-24B439E4CE63',0
+
+-- User and security management Scheduler (anyNEWGUID, DESCRIPTION, PERMISSIONGROUPGUID, sortCode, PermissionCodeGUID, CodeIsEncrypted)
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'58428E18-BFAC-4DAC-9054-1F159AC9CCEA','Access replication','7ccab506-b497-403e-99e3-7141655e5bfc','JSC100','5c63fcd9-b275-4892-a42f-44f86c5af4dd',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C92401C4-7717-4F6F-806C-9130666A896C','View distribution locations','7ccab506-b497-403e-99e3-7141655e5bfc','JSC101','6e9a0085-f24d-4424-a502-166d8fd1b9f1',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E9BD9613-0AB0-4502-951D-6A4701EDFD6F','Edit distribution locations','7ccab506-b497-403e-99e3-7141655e5bfc','JSC102','253c0a11-a174-417e-9753-a85a32299b2f',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'493ED36B-EFDA-4604-BA7D-3DDC7D7381CF','View jobs and subjobs','7ccab506-b497-403e-99e3-7141655e5bfc','JSC103','09027802-60fb-4a73-978b-2b00aa1a6287',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'C47B6771-F61A-4EDE-9062-5244CCCD06D2','Edit jobs and subjobs','7ccab506-b497-403e-99e3-7141655e5bfc','JSC104','1cdab0cc-e99a-450c-a7c6-7d037716a83b',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'660C23AD-3D5D-4758-B80D-E8E539B56E73','Manually run a job','7ccab506-b497-403e-99e3-7141655e5bfc','JSC105','2c1752c6-db50-4d62-980b-e8ccb109a6b7',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'A7D518EE-1AD7-49FC-B30B-2D266D0D4D67','Create multiple subjobs','7ccab506-b497-403e-99e3-7141655e5bfc','JSC106','948c46fc-8278-49a7-821b-eece64e1f6d6',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'5E00968F-DEF1-461C-995C-034DFAAF2619','View database map','7ccab506-b497-403e-99e3-7141655e5bfc','JSC107','b40c3f2a-469d-4c15-84ea-e12001a2dbdd',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'B8169851-A8B9-44CB-AF45-88CD6AE321A2','Edit database map','7ccab506-b497-403e-99e3-7141655e5bfc','JSC108','756a6596-d1d1-4911-8d2d-f9ef343562cf',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'19A1CF87-8394-4456-B034-5018665A1AD8','View database design','7ccab506-b497-403e-99e3-7141655e5bfc','JSC109','8935b8df-49fa-4c91-ab8c-887f023dbae2',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'50E152C0-907B-44D8-ACCB-9B900785FD85','Edit database design','7ccab506-b497-403e-99e3-7141655e5bfc','JSC110','07ce24cc-9e5d-412a-a55a-aa032449b618',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'818ACA49-4542-48BD-813F-A6A8E3450F31','View settings','7ccab506-b497-403e-99e3-7141655e5bfc','JSC111','61eade9f-795b-46a2-85ca-72fc92565b7b',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'D02A5A6C-0C02-414E-9B42-2E2C1DE658D5','Edit settings','7ccab506-b497-403e-99e3-7141655e5bfc','JSC112','7e06cf81-9bbf-4ed8-bc5d-0f8b10a8e243',0
+
+-- Reports
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'DC287D10-9842-11E1-A8B0-0800200C9A66','Manage reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','AAA100','f3791dd0-9842-11e1-a8b0-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9202E377-C014-4B04-A234-2BD3664D5A6F','View reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','AAA200','41dc8eb3-ab1c-4f09-802a-48b45ca1c02c',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'3A6ED366-3D24-4263-B8D4-6E2A74629D94','View financial reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','FIN100','478302f2-bb44-491f-b28d-f9149e6e62b8',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'2CABA2ED-D9E0-4C2E-B715-21F798869FDA','View sales reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','SAL100','6c7c97b7-28a7-4777-944c-c42e3f69c322',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'29A9F4B0-7FE4-11E0-B278-0800200C9A66','View inventory reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','INV100','39be03a0-7fe4-11e0-b278-0800200c9a66',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'56BAF216-203D-4A27-9DB2-9FE17D62884F','View item reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','ITM100','e2fa3f6e-eac2-4ae0-9f1e-cdfa5b92a1c5',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'06CE13B5-5286-4DBC-BBBA-384CA1247B86','View customer reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','CUS100','c13a8edf-89db-4c48-be83-22b5e14d6093',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'E10AA29D-38BA-407E-B3BA-41FE29BD10A1','View user reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','USR100','24acec23-06b6-4a58-9fcb-75d99ce11693',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'675B26D6-9F69-427A-B451-5CE5F89B9E6A','View hospitality reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','HOS100','7e3f23f4-26a3-48e5-846a-034421c13c77',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'9CFD981F-01CA-48D7-8192-2B58DFE7B69C','View setup reports','CEAC1AD0-E997-11DA-8AD9-0800200C9A66','SET100','a8396bcc-3db3-466b-ac7f-618ed4828572',0
+
+--Backup
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'21EA337E-31BC-4709-B018-D468FD77F492','Backup database','808ED9F0-E997-11DA-8AD9-0800200C9A66','Bak100','D5917F72-A9DB-450B-AE6B-771F8985A361',0
+
+--Reprint
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'7B11B93C-D7EB-4EC5-BC0E-CBC66BB61E2B','Reprint receipt','7D750220-A99F-11E1-AFA6-0800200C9A66','Bak100','040ABAC9-7E46-4B74-BD57-1F7BEFEF12E3',0
+
+-- Customer orders
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'2559EBBC-0175-4E57-9F1A-8DA7A0C621E5','Manage customer order settings','9D0F831D-7B2B-4A0E-B9E6-349B50A235BE','CO010','AB8469A3-B82B-412D-9095-4087CF2C66F3',0
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'70729423-230E-46BC-844C-BEE84A3E2358','Manage customer orders','9D0F831D-7B2B-4A0E-B9E6-349B50A235BE','CO020','C679394A-A0E8-4469-B422-484BB8055A29',0
+
+exec spSECURITY_AddPermission_1_0 @dataAreaID,'936C0C0B-B9A0-43AA-AAA2-B9285FCA2976','Keep Time','D3D73443-C38C-4E83-A897-320E87D11056','KT020','8F046DDF-842A-4A48-A2A1-388F72983122',0
+
+-- Omni
+exec spSECURITY_AddPermission_1_0 @dataAreaID, 'DB41B844-07CD-4F94-8FDA-865041D98A49', 'Manage mobile POS', '815CD310-EDF2-43E4-A5BC-CD28F8199F97', 'UC010', 'BF462D83-B316-460C-9215-F5115F3D5141', 0
+
+--                                                Localization GUID                      Description      GROUP GUID                             Sort     Guid that you need in code
+-- exec spSECURITY_AddPermission_1_0 @dataAreaID,'322180d0-cdfd-11de-8a39-0800200c9a66','New permission','1ddeef60-d9ae-11de-8a39-0800200c9a66','SEC020','CAA3E23D-C7B6-4E3C-A607-3175862EFC64',0

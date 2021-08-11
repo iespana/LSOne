@@ -1,0 +1,20 @@
+﻿/*
+
+	Incident No.	: 
+	Responsible		: Björn Eiríksson
+	Sprint			: 
+	Date created	: 16.10.2013
+
+	Description		: Added column to UISTYLES
+*/
+
+USE LSPOSNET
+
+GO
+
+ IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'UISTYLES' AND COLUMN_NAME = 'DELETED')
+ BEGIN
+	ALTER TABLE dbo.UISTYLES ADD DELETED bit NOT NULL CONSTRAINT DF_UISTYLES_DELETED DEFAULT 0
+ END
+
+ GO

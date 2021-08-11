@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Store Setup">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Store setup checklist</title>
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-55543545-1', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/MadCapKB.css" rel="stylesheet" />
+        <link href="../../../Resources/TableStyles/LastUpdated.css" rel="stylesheet" />
+        <link href="../../../Resources/TableStyles/Checklist.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../../Default.htm#HelpTopics/SiteManager/StoreSetup/StoreSetupChecklistForRMSUsers.htm">Open topic with navigation</a>
+        </p>
+        <div class="nocontent">
+            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+            </div>
+        </div>
+        <h1 style="font-size: 12pt;">Store setup checklist for RMS&#160;migration customers</h1>
+        <div class="Warning">
+            <p class="note" style="font-size: 12pt;font-weight: bold;">Consider carefully the following information before importing data from RMS</p>
+        </div>
+        <ul>
+            <li value="1">All <a href="../../../FieldHelp/User/UsersView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">users</a> that are imported will have their passwords reset to 1234 including users that already exist in the LS One database and have the same login as the RMS users. This includes the "admin" user</li>
+            <li value="2"><a href="../../../FieldHelp/User/User.htm" class="MCTopicPopup MCTopicPopupHotSpot a">User permissions</a> will need to be configured specifically on each user after the import as well as other settings that need to be set on each user</li>
+            <li value="3"><a href="../../../FieldHelp/LookupValues/CashDenominatorDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Currency denominations</a> need to be created by customer or partner</li>
+            <li value="4">All <a href="../../../FieldHelp/RetailItems/ItemsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">retail items</a> are imported as standard retail items</li>
+            <li value="5">Imported <a href="../../../FieldHelp/Inventory/VendorView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">vendors</a> all have default tax calculations method set as NO&#160;TAX</li>
+            <li value="6">Information regarding <a href="../../../FieldHelp/Customer/CustomerView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">customers'</a> credit limit and their current balance is not imported</li>
+            <li value="7"><a href="../../../FieldHelp/Terminals/TerminalsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Terminals</a> need to be configured for each store by customer or partner</li>
+            <li value="8"><a href="../../PriceDiscount/Discounts.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Discounts</a> and <a href="../../../FieldHelp/CreditVouchers/CreditVouchersView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">vouchers</a> are NOT imported</li>
+            <li value="9">Prices are imported either with or without tax depending on the tax configurations in RMS. To calculate the other value you need to configure the <a href="../SalesTax/Store and Company Default Sales Tax Values.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Default tax store</a> to have price settings as either Price or Price with tax. When <a href="../../../FieldHelp/Administration/AdministrationView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Recalculate prices</a> is clicked the other value is calculated i.e. Default tax store is configured to be Price with tax then the Price (without tax) is calculated from that value using the tax group on the store using the tax group that is set on the <a href="../SalesTax/Store and Company Default Sales Tax Values.htm" class="MCTopicPopup MCTopicPopupHotSpot a">default tax store</a></li>
+        </ul>
+        <div class="Warning">
+            <img src="../../../Resources/Images/Boxes/Warning_24.png" class="Note" />
+            <p class="note" style="font-size: 10pt;">After importing it is crucial to verify that all tax group configurations are correct, and that sales tax codes are set on appropriate tax groups</p>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks" style="font-size: 11pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" style="font-style: normal; color: #000000;"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />It is important to note that the information that is imported from RMS to LS One does not satisfy requirements made by tax authorities for storing sales and tax information</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <ul>
+                    <li value="1">Please note that when transactions are imported, the RMS migration tool is importing as much of the transactions as is possible. The difference in information between the two systems is substantial and the RMS migration tool is importing as much as it can of the information available</li>
+                    <li value="2">Any sales information that are migrated between the systems should only be used for reporting purposes, comparing sales information between years, forecasting and etc.</li>
+                    <li value="3">The LS One system will not be able to use these transactions for returns or to printout copies of previous receipts for example. To view these transactions any reports will have to display sales transactions with EntryStatus = 2 (as well as 0 which is a normal sale transaction)</li>
+                </ul>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <div class="Note1">
+            <img src="../../../Resources/Images/Boxes/Note_24.png" class="Note" />
+            <p class="note" style="font-size: 11pt;">   This chapter includes a list of tasks that need to be performed in Site manager, before and after migration of data from RMS to LS One</p>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks" style="font-size: 12pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Before migration of data</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <table style="border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;mc-table-style: url('../../../Resources/TableStyles/Checklist.css');" class="TableStyle-Checklist" cellspacing="0">
+                    <col class="TableStyle-Checklist-Column-Column1" />
+                    <col class="TableStyle-Checklist-Column-Column2" />
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" style="font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>Setup</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;color: #000000;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;"> 1. <a href="../../../FieldHelp/LookupValues/CurrencyView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create and select company currency</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">All the currencies that are going to be used by the currency payment type are set up here. Create an exchange rate for the new currency. All prices set  in the Site Manager will be in this currency unless otherwise stated.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox_18x18.png" style="width: 18;height: 18;" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;color: #000000;">2. <a href="../../../FieldHelp/Store/CompanyInfoView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Insert company information</a></td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1"> Company description, address, contact information and logo.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td class="TableStyle-Checklist-BodyE-Column1-Body1" style="text-align: center;">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">3. <a href="../../PriceDiscount/Price Discount Groups.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a price group</a></td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Enter a description for a price group and determine whether the price includes tax.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>Tax</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">4. <a href="../../../FieldHelp/Sales Tax/NewTaxCodeDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a sales tax code</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Sales tax codes include tax percentage for the sales tax calculation. The sales tax codes are then used in the setup of item sales tax group and the customer and store sales tax group.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">5. <a href="../../../FieldHelp/Sales Tax/SalesTaxGroupView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a customer and sales tax group</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create a customer and sales tax group and add sales tax codes to the group.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;color: #b22222;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox_18x18.png" style="width: 18;height: 18;" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="color: #b22222;">
+                            <div style="font-size: 10pt;color: #000000;">6. <a href="../../../FieldHelp/Sales Tax/SalesTaxGroupDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create an item sales tax group</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create item sales tax group and add  sales tax codes to the group.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">7. <a href="../../../FieldHelp/Administration/AdministrationView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Select default tax calculation store</a></td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Set default store for Site manager in order to get all of the default data for currency.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>Bar codes</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">8. <a href="../../../FieldHelp/BarCodes/BarCodeSetupView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create bar codes</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Setup bar codes.  Each retail item can have anything from no bar codes up to many bar codes.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>Profiles</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">9. <a href="../../../FieldHelp/Profiles/VisualProfileView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a visual profile</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Settings regarding screen resolution, type of terminal, whether cursor should be hidden or not, whether currency symbol should be shown in columns or not and identifying screens.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">10. <a href="../../../FieldHelp/Profiles/FunctionalityProfileView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a functionality profile</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Various settings regarding terminals, retail items, staff, start of day, hospitality, X/Z Report and when selected infocodes should be triggered.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">11. <a href="../../../FieldHelp/Profiles/HardwareProfileView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a hardware profile</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Hardware profiles are set on terminals to connect to hardware such as Line display and Printers.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">12. <a href="../../SiteService/Site Service1.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create Site service profile</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Setup and test connections.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>Touch Buttons</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">13. <a href="../../../FieldHelp/Touch buttons/NewButtonDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create POS button grid menus</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create different menus with this operation. Menus are either attached to button grids used in touch button layouts or to menu buttons that are part of the menus.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">14. <a href="../../LSOnePOS/Touch Button Layouts and POS&#160;Button Grid Menus.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a touch-button layout</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">Customize the POS layout. It is possible to have a different layout for each store, terminal or user. To make the setup  easier it's possible to insert the <a href="../../../FieldHelp/Administration/InsertDefaultDataDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">default demo touch button layout</a> and then customize it as needed.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td colspan="2" class="TableStyle-Checklist-BodyD-Column1-Body1"><b>New Store</b>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1" style="height: -4mm;">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">15. <a href="New Store.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create new store</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1"> Create a new store in the system. Add terminals and allowed payment types to the store after importing.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">16. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Settings</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Store configurations and default values. Select a sales tax group for the store.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">17. <a href="../../../FieldHelp/Store/SelectPriceGroupDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Price groups</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Select a price group to link to a store.</td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                            <img src="../../../Resources/Images/checkbox.png" />
+                        </td>
+                        <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                            <div style="font-size: 10pt;">18. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Price/tax calculations</a></div>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Checklist-Body-Body1">
+                        <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                        <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Configure price and tax calculation for a store.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadOTTasks" style="font-size: 12pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />After migration is finished</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="tab">Some of the tasks may not be needed in every setup and are optional for the system; an example of this is the setup of hospitality types</p>
+                <div class="Note1" style="text-align: left;margin-left: 0;">
+                    <img src="../../../Resources/Images/Boxes/Note_24.png" class="Note" />
+                    <p class="note"><i style="font-weight: bold;">Italics highlighted</i>: Specific to your store settings, not necessary for general setup.</p>
+                </div>
+                <p><span class="Note">Note:</span> This list is designed to aid you in your general setup, and does not necessarily include&#160; all requirements specific to your setup</p>
+                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab" style="font-size: 11pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Store configuration</a></span>
+                    <div class="MCDropDownBody dropDownBody">
+                        <table style="border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;mc-table-style: url('../../../Resources/TableStyles/Checklist.css');" class="TableStyle-Checklist" cellspacing="0">
+                            <col class="TableStyle-Checklist-Column-Column1" style="width: 27px;" />
+                            <col class="TableStyle-Checklist-Column-Column2" />
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">1. <a href="../../../FieldHelp/Store/NewStorePaymentMethodDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Allowed payment types</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Add payment types to a store. Each store should have at least one payment type set up and it is quite normal to have few of them. Payment types are set up separately for each store.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">2. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Statement settings</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Configure the handling of statements which are then operated in the Site Manager for transactions created in the POS.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">3. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Price/tax calculations</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Configure price and tax calculation for a store.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">4. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Select Site service profile for the store</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Choose the site service profile for the store</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">5. <a href="../../../FieldHelp/Terminals/TerminalView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Configure settings on terminals</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Decide for example if terminal should be included in End of day statements.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">6. <a href="../../../FieldHelp/Store/IncomeExpenseDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Income/Expense accounts</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Income and expense accounts for a store are set up here.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">7. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Hospitality types</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Configure which hospitality types should be available in a restaurant and add them here. Hospitality types are areas in the restaurant such as “bar” or “patio.” They can have different sales type settings (tax group and price group), table layouts, and so on.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">8. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Menu types</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">For the hospitality system. Menu types are related to printing or sending orders to the kitchen.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">9. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="text-decoration: underline;font-style: italic;">Tender declaration</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">View a list of the tender declarations that have been made in a store. A tender declaration can be made on the LS&#160;One POS&#160;terminal.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">10. <a href="../../../FieldHelp/Store/StoreView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Suspended transaction</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Field which determines if a suspended transaction can exist when end of day operations are processed.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab" style="font-size: 11pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Forms, units, users, infocodes, currency and retail group/department setup</a></span>
+                    <div class="MCDropDownBody dropDownBody">
+                        <table style="border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;mc-table-style: url('../../../Resources/TableStyles/Checklist.css');" class="TableStyle-Checklist" cellspacing="0">
+                            <col class="TableStyle-Checklist-Column-Column1" style="width: 27px;" />
+                            <col class="TableStyle-Checklist-Column-Column2" />
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">1. <a href="../../../FieldHelp/Forms/FormsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a receipt layout and other forms that you need</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Create i.e. a customer receipt layout, gift receipt, invoice and other forms needed. Form types come with the installation of the Site manager. <a href="../../../FieldHelp/Administration/InsertDefaultDataDialog.htm">Demo receipt layouts</a> can be inserted and updated to your needs.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">2. <a href="../../../FieldHelp/LookupValues/UnitsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create units</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create  scale units for Gram, Kilo gram, Ounce and Pound. Unit descriptions and  number of minimum/maximum decimals allowed for the item in sale.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">3. <a href="../../../FieldHelp/LookupValues/UnitConversionView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: normal;">Create unit conversions</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;" class="TableStyle-Checklist-BodyD-Column2-Body1">Unit conversions can be set up globally or for specific items.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">4. <a href="../../../FieldHelp/RetailItems/RetailGroupsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create retail groups</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create a retail group.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">5. <a href="../../../FieldHelp/User/NewUserWizard.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: normal;">Configure  users permissions</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Each user's permissions is needed to be configured specifically since all imported users are enabled and have same permissions.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">6. <a href="../../POSSetup/Layout/Button Properties.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Add button properties to the touch button layout</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Configure a button in a menu. There are over 100 operations in the system. You can set up the POS layouts differently, changing the menus and operations in them.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">7. <a href="../../../FieldHelp/LookupValues/PaymentMethodView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Review and update if necessary default functions for payment types</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Set default functions and limitation on payment types.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">8. <a href="../../../FieldHelp/Customer/CustomersView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Review and update customer's settings</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Manage customer's settings such as address, discounts, credit limit and blocking status.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">9. <a href="../../../FieldHelp/LookupValues/CardTypesView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Setup card types</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create card types that can be used as payments</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">10. <a href="../../../FieldHelp/RetailItems/RetailDepartmentsView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Create a retail department</a> <![CDATA[ ]]></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create a retail department. Every retail item belongs to one retail group and each retail group can belong to a retail department.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="font-size: 10pt;">11. <a href="../../../FieldHelp/Terminals/TerminalView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Configure terminals</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Configure terminals to  have them included in a End of day statement and allow posting. </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;font-style: italic;">12. <a href="../../../FieldHelp/RetailItems/SpecialGroupDialog.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Create a special group</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Create a special group. An item can belong to many <a href="../../Items/Item Hierarchy/Special Groups.htm" class="MCTopicPopup MCTopicPopupHotSpot MCXref xref" style="font-style: normal;">Special Groups</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">13. <a href="../../../FieldHelp/Infocodes/InfocodesView.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Create infocodes</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1">Infocodes are used to register additional information about transactions made in the POS. Infocodes are set up in the Site Manager and then assigned to different actions. The setup of infocodes is quite flexible. </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadtab" style="font-size: 11pt;"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Administration options setup</a></span>
+                    <div class="MCDropDownBody dropDownBody">
+                        <table style="border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;mc-table-style: url('../../../Resources/TableStyles/Checklist.css');" class="TableStyle-Checklist" cellspacing="0">
+                            <col class="TableStyle-Checklist-Column-Column1" />
+                            <col class="TableStyle-Checklist-Column-Column2" />
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;">
+                                    <div style="font-size: 10pt;">1. <a href="../SystemSetup/Administrative options.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Choose Administrative options</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Different things for the company and stores are set up and configured. The setup in Administrative options should be one of the first tasks before the data for the company is inserted.&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;">2. <a href="../SystemSetup/Localization.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: normal;">Localization </a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Decide in which order names are displayed/printed and what type of address fields should be used.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;">3. <a href="../SystemSetup/Security.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Security</a><![CDATA[  ]]></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">How to control login for users, name of active directory (domain), enable or disable write auditing.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;">4. <a href="../../PriceDiscount/Active Price Discount.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Active price/discount</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Decide which type of price calculation and discount calculation combination rules can be used in the LS POS.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;">5. <a href="../SystemSetup/Discount settings.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Discount settings</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Set calculation settings for an item and a customer.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;">6. <a href="../SystemSetup/Scale units.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Scale units</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">To fulfill the Scale Certification requirements,  four scale units have to be selected from the units list for the scale to work properly. </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;">7. <a href="../SystemSetup/Number Sequences.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Number sequences</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">View, add or edit a number sequence. Number that sequences come with the system are viewable here. </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td class="TableStyle-Checklist-BodyD-Column2-Body1" style="padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;">
+                                    <div style="font-size: 10pt;">8. <a href="../SystemSetup/Store Management.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Store management</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="font-weight: bold;text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Select the store which decides the default tax calculation. All prices in the system will be shown with this store’s tax settings. <b>NOTE</b>: Prices need to be recalculated and updated after the import so that prices will be calculated with tax rather than without. Click the Recalculate button to recalculate the prices. Decide where the user is allowed to enter ID's manually i.e. Item ID, Customer ID etc.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">9. <a href="../SystemSetup/Inventory Settings.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Inventory settings</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1"> Manage the number of items that are allowed to be higher than the ordered quantity when receiving items.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">10. <a href="../../SiteService/Site Service1.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Site service</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Setup and test connections.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">11. <a href="../SystemSetup/Decimal Formats.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Decimal formats</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">With this configuration it is possible to set up minimum and maximum numbers of decimals for numbers in the system. </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">12. <a href="../../../FieldHelp/LookupValues/CurrencyView.htm" class="MCTopicPopup MCTopicPopupHotSpot a">Cash denomination</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Cash denomination need to be setup for currency. Select amount that is accepted by the store in each currency.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">
+                                    <div style="font-size: 10pt;">13. <a href="../SystemSetup/Customer ledger.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Customer ledger</a></div>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1">Deletes all customer ledger entries and recreates them.</td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">
+                                    <img src="../../../Resources/Images/checkbox.png" />
+                                </td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;font-size: 10pt;" class="TableStyle-Checklist-BodyD-Column2-Body1">14. <a href="../../LSOnePOS/Blank Operations.htm" class="MCTopicPopup MCTopicPopupHotSpot a" style="font-style: italic;">Blank operations</a></td>
+                            </tr>
+                            <tr class="TableStyle-Checklist-Body-Body1">
+                                <td style="text-align: center;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyE-Column1-Body1">&#160;</td>
+                                <td style="text-indent: 0;padding-left: 3px;padding-right: 3px;padding-top: 3px;padding-bottom: 3px;" class="TableStyle-Checklist-BodyD-Column2-Body1"> Partners can use blank operations to add functionality and operations that are missing from the LS POS.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/LastUpdated.css');" summary="Last updated and author information" class="TableStyle-LastUpdated" cellspacing="0">
+            <col style="width: 92px;" class="TableStyle-LastUpdated-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-LastUpdated-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyE-Column1-Body1">
+                        Inserted:
+                    </td>
+                    <td class="TableStyle-LastUpdated-BodyD-Column2-Body1"><span class="sup">24th</span> November 2016</td>
+                </tr>
+                <tr class="TableStyle-LastUpdated-Body-Body1">
+                    <td class="TableStyle-LastUpdated-BodyB-Column1-Body1">Version:</td>
+                    <td class="TableStyle-LastUpdated-BodyA-Column2-Body1">LS One 2016.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="FooterContainer">
+            <div class="helpInfo">
+                <img src="../../../Resources/Images/footer/Why_24.png" class="FooterImage" />
+                <p class="FooterText"><a href="../../../AboutInfo/AboutHelp.htm" class="Footer">Why do I see help for features that are not visible to me?</a>
+                </p>
+            </div>
+            <div class="DocFeedback">
+                <img src="../../../Resources/Images/footer/Tell us_24.png" class="FooterImage" />
+                <p class="FooterText">
+                    <script type="text/javascript">/*<![CDATA[*/var email=('documentation.feedback@ls-one.com');
+var subject = "Feedback from Topic: " + document.title;
+document.write('<a href="mailto:' + email +
+'?subject=' +subject+ '" class="Footer">' + 'Tell us what you think' + '<'+'/a>');/*]]>*/</script>
+                </p>
+            </div>
+            <div class="CopyrightDiv">
+                <p>Copyright © <span class="MyVariablesYear">2017</span> LS&#160;Retail ehf. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

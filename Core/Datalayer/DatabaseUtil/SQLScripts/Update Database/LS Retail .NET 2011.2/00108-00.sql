@@ -1,0 +1,26 @@
+﻿
+/*
+
+	Incident No.	: 11751
+	Responsible		: Hörður Kristjánsson
+	Sprint			: LS Retail .NET 2012/Tyr
+	Date created	: 07.09.2011
+
+	Description		: Add fields to transaction service profile for gift cards
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected	: PosTransactionServiceProfile - Fields added
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('POSTRANSACTIONSERVICEPROFILE') AND NAME='ISSUEGIFTCARDOPTION')
+ALTER TABLE dbo.POSTRANSACTIONSERVICEPROFILE ADD ISSUEGIFTCARDOPTION INT NULL
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('POSTRANSACTIONSERVICEPROFILE') AND NAME='USEGIFTCARDS')
+ALTER TABLE dbo.POSTRANSACTIONSERVICEPROFILE ADD USEGIFTCARDS TINYINT NULL
+
+GO

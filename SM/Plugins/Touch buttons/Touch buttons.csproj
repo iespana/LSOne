@@ -1,0 +1,2152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F28D37C1-B601-4395-A3B3-F387E52DB906}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.TouchButtons</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.TouchButtons</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>
+    </NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.TouchButtons.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ButtonGrid">
+      <HintPath>..\..\Build\LSOne.Controls.ButtonGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.MenuButton">
+      <HintPath>..\..\Build\LSOne.Controls.MenuButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.POS">
+      <HintPath>..\..\Build\LSOne.Controls.POS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="LSOne.Controls.TillLayoutDesigner">
+      <HintPath>..\..\Build\LSOne.Controls.TillLayoutDesigner.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\ButtonPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonPropertiesControl.Designer.cs">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditTouchLayoutButtonGridsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditTouchLayoutButtonGridsDialog.Designer.cs">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ItemSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ItemSearchDialog.Designer.cs">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewStyle.Designer.cs">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewStyleFromHeaderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewStyleFromHeaderDialog.Designer.cs">
+      <DependentUpon>NewStyleFromHeaderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTouchButtonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTouchButtonDialog.Designer.cs">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PosButtonGridMenuPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PosButtonGridMenuPreviewDialog.Designer.cs">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="POSDialogHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewButtonMenuDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewButtonMenuDialog.Designer.cs">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewButtonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewButtonDialog.Designer.cs">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionHandler.cs" />
+    <Compile Include="ViewPages\ButtonMenuButtonsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ButtonMenuButtonsPage.Designer.cs">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ButtonMenuLookAndFeelPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ButtonMenuLookAndFeelPage.Designer.cs">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineAttributesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineAttributesPage.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineFontPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineFontPage.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineGeneralPage.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineImagePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\PosButtonGridMenuLineImagePage.Designer.cs">
+      <DependentUpon>PosButtonGridMenuLineImagePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ButtonMenuView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ButtonMenuView.Designer.cs">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ButtonView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ButtonView.Designer.cs">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ButtonMenusView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ButtonMenusView.Designer.cs">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchButtonListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TouchButtonListView.designer.cs">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchButtonView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TouchButtonView.Designer.cs">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.bg.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.cs.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.da.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.de.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.el.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.en-ZA.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.es-MX.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.es.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.fi.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.fr.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.hi.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.is.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.it.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.ja-JP.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.ja.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.ko.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.nb-NO.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.nl.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.pl.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.pt-BR.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.ru.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.sv.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.vi-VN.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.zh-CHS.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.zh-CHT.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.bg.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.cs.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.da.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.de.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.el.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.en-ZA.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.es-MX.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.es.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.fi.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.fr.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.hi.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.is.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.it.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.ja-JP.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.ja.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.ko.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.nb-NO.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.nl.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.pl.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.pt-BR.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.ru.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.sv.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.vi-VN.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.zh-CHS.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.zh-CHT.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.bg.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.cs.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.da.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.de.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.el.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.en-ZA.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.es-MX.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.es.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.fi.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.fr.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.hi.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.is.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.it.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.ja-JP.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.ja.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.ko.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.nb-NO.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.nl.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.pl.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.pt-BR.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemSearchDialog.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.ru.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.sv.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.vi-VN.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.zh-CHS.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.zh-CHT.resx">
+      <DependentUpon>ItemSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.bg.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.cs.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.da.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.de.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.el.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.en-ZA.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.es-MX.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.es.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.fi.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.fr.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.hi.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.is.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.it.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.ja-JP.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.ja.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.ko.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.nb-NO.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.nl.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.pl.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.pt-BR.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.ru.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.sv.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.zh-CHS.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.zh-CHT.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.vi-VN.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.bg.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.cs.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.da.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.de.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.el.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.en-ZA.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.es-MX.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.es.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.fi.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.fr.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.hi.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.is.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.it.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.ja-JP.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.ja.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.ko.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.nb-NO.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.nl.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.pl.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.pt-BR.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.ru.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.sv.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.vi-VN.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.zh-CHS.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.zh-CHT.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleFromHeaderDialog.resx">
+      <DependentUpon>NewStyleFromHeaderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.bg.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.cs.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.da.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.de.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.el.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.en-ZA.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.es-MX.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.es.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.fi.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.fr.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.hi.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.is.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.it.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.ja-JP.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.ja.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.ko.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.nb-NO.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.nl.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.pl.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.pt-BR.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTouchButtonDialog.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.ru.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.sv.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.vi-VN.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.zh-CHS.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.zh-CHT.resx">
+      <DependentUpon>NewTouchButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.bg.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.cs.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.da.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.de.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.el.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.en-ZA.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.es-MX.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.es.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.fi.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.fr.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.hi.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.is.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.it.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.ja-JP.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.ja.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.ko.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.nb-NO.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.nl.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.pl.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.pt-BR.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.ru.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.sv.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.zh-CHS.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.zh-CHT.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.bg.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.cs.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.da.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.de.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.el.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.es.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.fi.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.fr.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.hi.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.is.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.it.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.ja.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.ko.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.nl.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.pl.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.ru.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.sv.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.vi-VN.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.vi-VN.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.da.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.de.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.el.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.en-ZA.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.es-MX.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.es.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.is.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.it.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.vi-VN.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.da.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.de.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.el.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.es.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.is.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.it.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.da.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.de.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.el.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.es.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.is.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.it.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.da.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.de.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.el.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.es.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.is.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.it.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.da.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.de.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.el.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.es.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.is.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.it.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.da.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.de.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.el.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.es.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.is.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.it.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.bg.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.cs.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.da.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.de.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.el.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.es.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.fi.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.fr.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.hi.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.is.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.it.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.ja-JP.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.ja.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.ko.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.nb-NO.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.nl.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.pl.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.pt-BR.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.ru.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.sv.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.zh-CHS.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.zh-CHT.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineImagePage.resx">
+      <DependentUpon>PosButtonGridMenuLineImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.vi-VN.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.vi-VN.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.bg.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.cs.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.da.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.de.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.el.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.en-ZA.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.es-MX.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.es.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.fi.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.fr.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.hi.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.is.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.it.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.ja-JP.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.ja.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.ko.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.nb-NO.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.nl.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.pl.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.pt-BR.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.ru.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.sv.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.vi-VN.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.zh-CHS.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.zh-CHT.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.bg.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.cs.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.da.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.de.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.el.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.en-ZA.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.es-MX.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.es.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.fi.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.fr.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.hi.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.is.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.it.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.ja-JP.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.ja.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.ko.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.nb-NO.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.nl.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.pl.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.pt-BR.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.ru.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.sv.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.zh-CHS.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.zh-CHT.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.bg.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.cs.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.da.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.de.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.el.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.en-ZA.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.es-MX.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.es.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.fi.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.fr.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.hi.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.is.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.it.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.ja-JP.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.ja.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.ko.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.nb-NO.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.nl.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.pl.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.pt-BR.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.ru.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.sv.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.vi-VN.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.zh-CHS.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.zh-CHT.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.bg.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.cs.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.da.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.de.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.el.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.en-ZA.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.es-MX.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.es.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.fi.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.fr.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.hi.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.is.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.it.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.ja-JP.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.ja.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.ko.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.nb-NO.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.nl.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\touchbuttonview.pl.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.pt-BR.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.ru.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.sv.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.vi-VN.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.zh-CHS.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.zh-CHT.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="_Diagrams\User Interface.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\palette.png" />
+    <None Include="Resources\touch button layouts_32.png" />
+    <None Include="Resources\touch button layouts_16.png" />
+    <None Include="Resources\styles_32.png" />
+    <None Include="Resources\styles_16.png" />
+    <None Include="Resources\POS button grid menu_16.png" />
+    <None Include="Resources\POS button grid menu_32.png" />
+    <Content Include="Resources\Profiles16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DDBusinessObjects\DDBusinessObjects.csproj">
+      <Project>{4D61CB6B-C9E1-4716-B0DA-8C705A890417}</Project>
+      <Name>DDBusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DDDataProviders\DDDataProviders.csproj">
+      <Project>{37E21514-1171-4F36-B47E-17A2270552B2}</Project>
+      <Name>DDDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDDDataProviders\SqlDDDataProviders.csproj">
+      <Project>{312EE2F4-5032-49D9-B75D-D5B2068B918A}</Project>
+      <Name>SqlDDDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ButtonPropertiesControl.nl-BE.resx">
+      <DependentUpon>ButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditTouchLayoutButtonGridsDialog.nl-BE.resx">
+      <DependentUpon>EditTouchLayoutButtonGridsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\itemsearchdialog.nl-BE.resx">
+      <DependentUpon>itemsearchdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonDialog.nl-BE.resx">
+      <DependentUpon>NewButtonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyle.nl-BE.resx">
+      <DependentUpon>NewStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newtouchbuttondialog.nl-BE.resx">
+      <DependentUpon>newtouchbuttondialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewButtonMenuDialog.nl-BE.resx">
+      <DependentUpon>NewButtonMenuDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PosButtonGridMenuPreviewDialog.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineAttributesPage.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineAttributesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineFontPage.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineFontPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGeneralPage.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomLeft.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsBottomRight.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsBottomRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopLeft.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\PosButtonGridMenuLineGlyphsTopRight.nl-BE.resx">
+      <DependentUpon>PosButtonGridMenuLineGlyphsTopRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.nl-BE.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenusView.nl-BE.resx">
+      <DependentUpon>ButtonMenusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonListView.nl-BE.resx">
+      <DependentUpon>TouchButtonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TouchButtonView.nl-BE.resx">
+      <DependentUpon>TouchButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.da.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.de.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.en-ZA.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.es-MX.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.es.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.fi.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.fr.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.is.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.nb-NO.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.nl-BE.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.ru.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.sv.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.da.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.de.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.es.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.fr.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.hi.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.is.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.ja.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.nl-BE.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.ru.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.sv.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.bg.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.cs.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.da.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.de.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.el.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.en-ZA.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.es-MX.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.es.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.fi.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.fr.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.hi.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.is.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.it.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.ja.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.ko.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.nb-NO.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.nl-BE.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.nl.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.pl.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.pt-BR.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.ru.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonMenuView.sv.resx">
+      <DependentUpon>ButtonMenuView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.nl.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.nl.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.fi.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\ButtonMenuButtonsPage.bg.resx">
+      <DependentUpon>ButtonMenuButtonsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ButtonMenuLookAndFeelPage.bg.resx">
+      <DependentUpon>ButtonMenuLookAndFeelPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

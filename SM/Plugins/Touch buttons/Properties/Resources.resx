@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>[Term:2290]</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>[Term:382]</comment>
+  </data>
+  <data name="DeleteTouchLayoutQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected touch button layout?</value>
+    <comment>[Term:2849]</comment>
+  </data>
+  <data name="DoNotCopy" xml:space="preserve">
+    <value>Do not copy</value>
+    <comment>[Term:2685]</comment>
+  </data>
+  <data name="EditCmd" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Profiles</value>
+    <comment>[Term:2713]</comment>
+  </data>
+  <data name="StoreSetup" xml:space="preserve">
+    <value>Store setup</value>
+    <comment>[Term:14627]</comment>
+  </data>
+  <data name="TouchButtonLayout" xml:space="preserve">
+    <value>Touch button layout</value>
+    <comment>[Term:2624]</comment>
+  </data>
+  <data name="TouchButtonLayouts" xml:space="preserve">
+    <value>Touch button layouts</value>
+    <comment>[Term:2846]</comment>
+  </data>
+  <data name="TouchButtonLayoutsDescription" xml:space="preserve">
+    <value>Use this option to view touch button layouts</value>
+    <comment>[Term:2847]</comment>
+  </data>
+  <data name="TouchbuttonSetup" xml:space="preserve">
+    <value>Touch button setup</value>
+    <comment>[Term:2868]</comment>
+  </data>
+  <data name="POSButtonGridMenus" xml:space="preserve">
+    <value>POS button menus</value>
+    <comment>[Term:16460]</comment>
+  </data>
+  <data name="POSButtonGridMenusDescription" xml:space="preserve">
+    <value>Use this option to view POS button menus</value>
+    <comment>[Term:16462]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenu" xml:space="preserve">
+    <value>Delete POS button grid menu</value>
+    <comment>[Term:16455]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenuLine" xml:space="preserve">
+    <value>Delete POS button grid menu line</value>
+    <comment>[Term:16456]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenuLineQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected POS button grid menu line ?</value>
+    <comment>[Term:16446]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenuQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected POS button grid menu and all POS menu lines belonging to this menu ?</value>
+    <comment>[Term:16564]</comment>
+  </data>
+  <data name="POSButtonGridMenuButtons" xml:space="preserve">
+    <value>POS button grid menu buttons</value>
+    <comment>[Term:16459]</comment>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attributes</value>
+    <comment>[Term:2299]</comment>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+    <comment>[Term:2752]</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>[Term:2403]</comment>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Edit</value>
+    <comment>[Term:392]</comment>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+    <comment>[Term:2535]</comment>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+    <comment>[Term:2084]</comment>
+  </data>
+  <data name="Glyphs" xml:space="preserve">
+    <value>Glyphs</value>
+    <comment>[Term:15263]</comment>
+  </data>
+  <data name="OperationID" xml:space="preserve">
+    <value>Operation ID</value>
+    <comment>[Term:15382]</comment>
+  </data>
+  <data name="PosMenuButton" xml:space="preserve">
+    <value>Button</value>
+    <comment>[Term:15750]</comment>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+    <comment>[Term:3439]</comment>
+  </data>
+  <data name="ViewPosButtonGridMenus" xml:space="preserve">
+    <value>View POS button grid menus</value>
+    <comment>[Term:16463]</comment>
+  </data>
+  <data name="BlankOperationLabelText" xml:space="preserve">
+    <value>Blank operation:</value>
+    <comment>[Term:16433]</comment>
+  </data>
+  <data name="ButtonGridLabelText" xml:space="preserve">
+    <value>Button grid:</value>
+    <comment>[Term:16282]</comment>
+  </data>
+  <data name="ParameterLabelText" xml:space="preserve">
+    <value>Parameter:</value>
+    <comment>[Term:11015]</comment>
+  </data>
+  <data name="PosMenuLabelText" xml:space="preserve">
+    <value>POS menu:</value>
+    <comment>[Term:10632]</comment>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>No operation</value>
+    <comment>[Term:16442]</comment>
+  </data>
+  <data name="EditButtonGridMenus" xml:space="preserve">
+    <value>Edit button grid menus</value>
+    <comment>[Term:16457]</comment>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>Image file</value>
+    <comment>[Term:2958]</comment>
+  </data>
+  <data name="ButtonGridMenus" xml:space="preserve">
+    <value>Button grid menus</value>
+    <comment>[Term:16453]</comment>
+  </data>
+  <data name="AmountLabelText" xml:space="preserve">
+    <value>Amount:</value>
+    <comment>[Term:3792]</comment>
+  </data>
+  <data name="PaymentTypeLabelText" xml:space="preserve">
+    <value>Payment type:</value>
+    <comment>[Term:4839]</comment>
+  </data>
+  <data name="DeleteTouchLayoutsQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected touch button layouts ?</value>
+    <comment>[Term:16447]</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>[Term:3792]</comment>
+  </data>
+  <data name="ParameterMustBeNumeric" xml:space="preserve">
+    <value>Parameter must have a numeric value</value>
+    <comment>[Term:16481]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected POS button grid menu lines ?</value>
+    <comment>[Term:16482]</comment>
+  </data>
+  <data name="ExpenseAccountLabelText" xml:space="preserve">
+    <value>Expense account:</value>
+    <comment>[Term:16437]</comment>
+  </data>
+  <data name="IncomeAccountLabelText" xml:space="preserve">
+    <value>Income account:</value>
+    <comment>[Term:16264]</comment>
+  </data>
+  <data name="ItemLabelText" xml:space="preserve">
+    <value>Item:</value>
+    <comment>[Term:3211]</comment>
+  </data>
+  <data name="SuspensionTypeLabelText" xml:space="preserve">
+    <value>Suspension type:</value>
+    <comment>[Term:16140]</comment>
+  </data>
+  <data name="TaxGroupInfocodeLabelText" xml:space="preserve">
+    <value>Infocode:</value>
+    <comment>[Term:9535]</comment>
+  </data>
+  <data name="BarCode" xml:space="preserve">
+    <value>Bar code</value>
+    <comment>[Term:3195]</comment>
+  </data>
+  <data name="BarCodeLabelText" xml:space="preserve">
+    <value>Bar code:</value>
+    <comment>[Term:3195]</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+    <comment>[Term:2175]</comment>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+    <comment>[Term:2947]</comment>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+    <comment>[Term:2317]</comment>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
+    <comment>[Term:2336]</comment>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+    <comment>[Term:3538]</comment>
+  </data>
+  <data name="AddPosButtonGridMenuLinesQuestion" xml:space="preserve">
+    <value>You have increased the total size of this POS button grid menu and there is room for #1 new POS button grid menu lines. Do you want to generate new lines to fill the empty space ?</value>
+    <comment>[Term:18495]</comment>
+  </data>
+  <data name="ParameterCannotBeEmpty" xml:space="preserve">
+    <value>Parameter cannot be empty</value>
+    <comment>[Term:16575]</comment>
+  </data>
+  <data name="UseButtonProperties" xml:space="preserve">
+    <value>Use button properties</value>
+    <comment>[Term:16829]</comment>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Styles</value>
+    <comment>[Term:3178] - Styles view header</comment>
+  </data>
+  <data name="StylesDescription" xml:space="preserve">
+    <value>Use this option to create new styles and view existing ones</value>
+    <comment>[Term:16831] - Operation description</comment>
+  </data>
+  <data name="FontPreview" xml:space="preserve">
+    <value>Font preview</value>
+    <comment>[Term:16828] - Style view</comment>
+  </data>
+  <data name="DeleteStyle" xml:space="preserve">
+    <value>Are you sure you want to delete the selected style(s)?</value>
+    <comment>[Term:18499]</comment>
+  </data>
+  <data name="GlyphsTopLeft" xml:space="preserve">
+    <value>Top left glyphs</value>
+    <comment>[Term:19541]</comment>
+  </data>
+  <data name="Alt" xml:space="preserve">
+    <value>Alt</value>
+    <comment>[Term:16787]</comment>
+  </data>
+  <data name="Control" xml:space="preserve">
+    <value>Control</value>
+    <comment>[Term:10859]</comment>
+  </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Shift</value>
+    <comment>[Term:10722]</comment>
+  </data>
+  <data name="StylesSetup" xml:space="preserve">
+    <value>Styles setup</value>
+    <comment>[Term:19543] - Operation name</comment>
+  </data>
+  <data name="GlyphsBottomLeft" xml:space="preserve">
+    <value>Bottom left glyphs</value>
+    <comment>[Term:19539]</comment>
+  </data>
+  <data name="GlyphsBottomRight" xml:space="preserve">
+    <value>Bottom right glyphs</value>
+    <comment>[Term:19540]</comment>
+  </data>
+  <data name="GlyphsTopRight" xml:space="preserve">
+    <value>Top right glyphs</value>
+    <comment>[Term:19542]</comment>
+  </data>
+  <data name="FontNotApplicable" xml:space="preserve">
+    <value>Font selected cannot be used. Default font will be used instead</value>
+    <comment>[Term:19536]</comment>
+  </data>
+  <data name="LookAndFeel" xml:space="preserve">
+    <value>Look and feel</value>
+    <comment>[Term:18641]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CreateNewStyle" xml:space="preserve">
+    <value>Create style from header</value>
+    <comment>[Term:19535]</comment>
+  </data>
+  <data name="StyleInUseOnButton" xml:space="preserve">
+    <value>The style #1 is being used on button #2 on menu #3. The style cannot be deleted.</value>
+    <comment>[Term:19547]</comment>
+  </data>
+  <data name="StyleInUseOnButtonWithNoDescription" xml:space="preserve">
+    <value>The style #1 is being used on a button which is in menu #2. The style cannot be deleted.</value>
+    <comment>[Term:19546]</comment>
+  </data>
+  <data name="StyleInUseOnHeader" xml:space="preserve">
+    <value>The style #1 is being used on menu #2. The style cannot be deleted.</value>
+    <comment>[Term:19548]</comment>
+  </data>
+  <data name="CopyCurrentStyle" xml:space="preserve">
+    <value>Do you want to copy the current style to the button properties?</value>
+    <comment>[Term:19550]</comment>
+  </data>
+  <data name="CopyCurrentStyleHeader" xml:space="preserve">
+    <value>Copy current style?</value>
+    <comment>[Term:19549]</comment>
+  </data>
+  <data name="Profiles16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profiles16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImportConflicts" xml:space="preserve">
+    <value>Import conflicts</value>
+    <comment>[Term:20605]</comment>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+    <comment>[Term:2345]</comment>
+  </data>
+  <data name="SearchMode" xml:space="preserve">
+    <value>Search mode</value>
+    <comment>[Term:20667]</comment>
+  </data>
+  <data name="SearchModeDefault" xml:space="preserve">
+    <value>Default</value>
+    <comment>[Term:2100]</comment>
+  </data>
+  <data name="SearchModeImages" xml:space="preserve">
+    <value>Images</value>
+    <comment>[Term:2146]</comment>
+  </data>
+  <data name="SearchModeImagesWithPrices" xml:space="preserve">
+    <value>Images with prices</value>
+    <comment>[Term:20665]</comment>
+  </data>
+  <data name="SearchModeList" xml:space="preserve">
+    <value>List</value>
+    <comment>[Term:8224]</comment>
+  </data>
+  <data name="SearchModeListWithPrices" xml:space="preserve">
+    <value>List with prices</value>
+    <comment>[Term:20666]</comment>
+  </data>
+  <data name="RetailGroupLabelText" xml:space="preserve">
+    <value>Retail group:</value>
+    <comment>[Term:3295]</comment>
+  </data>
+  <data name="EditStyle" xml:space="preserve">
+    <value>Edit style configuration</value>
+    <comment>[Term:20689]</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>[Term:454]</comment>
+  </data>
+  <data name="ResetToDefault" xml:space="preserve">
+    <value>This will reset this system style to its default values.
+
+Continue?</value>
+    <comment>[Term:20721]</comment>
+  </data>
+  <data name="SystemStyleCannotBeDeleted" xml:space="preserve">
+    <value>A system style cannot be deleted</value>
+    <comment>[Term:20594]</comment>
+  </data>
+  <data name="UnableToDelete" xml:space="preserve">
+    <value>Unable to delete style</value>
+    <comment>[Term:20688]</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514]</comment>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>[Term:20597]</comment>
+  </data>
+  <data name="LayoutsAndMenusConflict" xml:space="preserve">
+    <value>Touch button layouts and POS button grid menus being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20601]</comment>
+  </data>
+  <data name="LayoutsAndStylesConflict" xml:space="preserve">
+    <value>Touch button layouts and styles being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20603]</comment>
+  </data>
+  <data name="LayoutsConflict" xml:space="preserve">
+    <value>Touch button layouts being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20602]</comment>
+  </data>
+  <data name="LayoutsMenusAndStylesConflict" xml:space="preserve">
+    <value>Touch button layouts, POS button grid menus and styles being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20604]</comment>
+  </data>
+  <data name="MenusAndStylesConflict" xml:space="preserve">
+    <value>POS button grid menus and styles being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20600]</comment>
+  </data>
+  <data name="MenusConflict" xml:space="preserve">
+    <value>POS button grid menus being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20599]</comment>
+  </data>
+  <data name="StylesConflict" xml:space="preserve">
+    <value>Styles being imported have already been imported. Do you want to overwrite or add copies?</value>
+    <comment>[Term:20598]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenus" xml:space="preserve">
+    <value>Delete POS button grid menus</value>
+    <comment>[Term:20593]</comment>
+  </data>
+  <data name="DeletePosButtonGridMenusQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete the selected POS button grid menus and all POS menu lines belonging to these menus ?</value>
+    <comment>[Term:20596]</comment>
+  </data>
+  <data name="DescriptionInvalid" xml:space="preserve">
+    <value>Description cannot start with "{0}" nor end with ")"</value>
+    <comment>[Term:20592]</comment>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importing</value>
+    <comment>[Term:15812]</comment>
+  </data>
+  <data name="PeriodicDiscountLabelText" xml:space="preserve">
+    <value>Periodic discount:</value>
+    <comment>[Term:12687]</comment>
+  </data>
+  <data name="Hereafter" xml:space="preserve">
+    <value>Hereafter</value>
+    <comment>[Term:20762] - Parameter description for Sales person operation</comment>
+  </data>
+  <data name="NoHereafter" xml:space="preserve">
+    <value>No</value>
+    <comment>[Term:454] - Parameter for Sales person operation</comment>
+  </data>
+  <data name="SalesPerson" xml:space="preserve">
+    <value>Sales person</value>
+    <comment>[Term:3220] - Parameter description for Sales person operation</comment>
+  </data>
+  <data name="YesHereafter" xml:space="preserve">
+    <value>Yes</value>
+    <comment>[Term:514] - Parameter for Sales person operation</comment>
+  </data>
+  <data name="SalesPersonNotFound" xml:space="preserve">
+    <value>Not found</value>
+    <comment>[Term:2109] - Parameter for sales person not found</comment>
+  </data>
+  <data name="RunEndOfDayLabelText" xml:space="preserve">
+    <value>Run end of day:</value>
+    <comment>[Term:22324]</comment>
+  </data>
+  <data name="CopyLastReceipt" xml:space="preserve">
+    <value>Copy last receipt</value>
+    <comment>[Term:22587]</comment>
+  </data>
+  <data name="CustomReceipt" xml:space="preserve">
+    <value>Custom receipt</value>
+    <comment>[Term:22588]</comment>
+  </data>
+  <data name="CustomText" xml:space="preserve">
+    <value>Custom text</value>
+    <comment>[Term:22589]</comment>
+  </data>
+  <data name="GiftReceipt" xml:space="preserve">
+    <value>Gift receipt</value>
+    <comment>[Term:22581]</comment>
+  </data>
+  <data name="PrintType" xml:space="preserve">
+    <value>Print type</value>
+    <comment>[Term:13529]</comment>
+  </data>
+  <data name="RunJob" xml:space="preserve">
+    <value>Run Job</value>
+    <comment>[Term:15534]</comment>
+  </data>
+  <data name="TaxFreeReceipt" xml:space="preserve">
+    <value>Tax free receipt</value>
+    <comment>[Term:22590]</comment>
+  </data>
+  <data name="Sites" xml:space="preserve">
+    <value>Sites</value>
+    <comment>[Term:23203] - Ribbon tab</comment>
+  </data>
+  <data name="POS_button_grid_menu_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS button grid menu_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POS_button_grid_menu_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS button grid menu_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="styles_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\styles_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="styles_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\styles_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="touch_button_layouts_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\touch button layouts_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="touch_button_layouts_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\touch button layouts_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LastReceipt" xml:space="preserve">
+    <value>Last receipt</value>
+    <comment>[Term:10703]</comment>
+  </data>
+  <data name="SelectAReceiptID" xml:space="preserve">
+    <value>Search for a receipt</value>
+    <comment>[Term:23311]</comment>
+  </data>
+  <data name="ParameterTooLong" xml:space="preserve">
+    <value>Parameter is too long</value>
+    <comment>[Term:22594]</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>[Term:2103]</comment>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>[Term:2166]</comment>
+  </data>
+  <data name="MoveLineUp" xml:space="preserve">
+    <value>Move up</value>
+    <comment>[Term:3242]</comment>
+  </data>
+  <data name="MoveLineDown" xml:space="preserve">
+    <value>Move down</value>
+    <comment>[Term:3241]</comment>
+  </data>
+  <data name="POSButtonGridMenusTooltipDescription" xml:space="preserve">
+    <value>Organize POS operations onto buttons and style the button menus to be used in the touch button layouts</value>
+    <comment>[Term:23432]</comment>
+  </data>
+  <data name="TouchButtonLayoutsTooltipDescription" xml:space="preserve">
+    <value>Design the layouts for the terminals</value>
+    <comment>[Term:23431]</comment>
+  </data>
+  <data name="ImageBank" xml:space="preserve">
+    <value>Image bank</value>
+    <comment>[Term:23821]</comment>
+  </data>
+  <data name="ReserveStock" xml:space="preserve">
+    <value>Reserve stock</value>
+    <comment>[Term:23761]</comment>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+    <comment>[Term:2100]</comment>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+    <comment>[Term:8224]</comment>
+  </data>
+  <data name="Specific" xml:space="preserve">
+    <value>Specific</value>
+    <comment>[Term:23934]</comment>
+  </data>
+  <data name="ReasonCode" xml:space="preserve">
+    <value>Reason code:</value>
+    <comment>[Term:4493]</comment>
+  </data>
+  <data name="SelectionType" xml:space="preserve">
+    <value>Selection type:</value>
+    <comment>[Term:23935]</comment>
+  </data>
+  <data name="Infocode" xml:space="preserve">
+    <value>Infocode</value>
+    <comment>[Term:16265]</comment>
+  </data>
+  <data name="InfocodeOnRequest_Item" xml:space="preserve">
+    <value>Item</value>
+    <comment>[Term:24002]</comment>
+  </data>
+  <data name="InfocodeOnRequest_Sale" xml:space="preserve">
+    <value>Sale</value>
+    <comment>[Term:24003]</comment>
+  </data>
+  <data name="TriggerFor" xml:space="preserve">
+    <value>Trigger for</value>
+    <comment>[Term:24001]</comment>
+  </data>
+  <data name="PosMenuHeader" xml:space="preserve">
+    <value>POS button menu</value>
+    <comment>[Term:24169]</comment>
+  </data>
+  <data name="MenuButtons" xml:space="preserve">
+    <value>Menu buttons</value>
+    <comment>[Term:15276]</comment>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Main menu</value>
+    <comment>[Term:2960]</comment>
+  </data>
+  <data name="DoNotCopyMenuHeader" xml:space="preserve">
+    <value>Do not copy existing menu header</value>
+    <comment>[Term:24163]</comment>
+  </data>
+  <data name="MobileInvMenuButton" xml:space="preserve">
+    <value>Mobile Inventory menu button</value>
+  </data>
+  <data name="MobileInvMenuHeader" xml:space="preserve">
+    <value>Button menus</value>
+  </data>
+  <data name="MobileInvMenuLabelText" xml:space="preserve">
+    <value>Mobile Inventory menu:</value>
+  </data>
+  <data name="MobileInvNewMenuHeaderText" xml:space="preserve">
+    <value>Enter description and configure the Mobile Inventory menu header</value>
+  </data>
+  <data name="ViewOmniInvButtonGridMenus" xml:space="preserve">
+    <value>View Omni inventory button grid menus</value>
+    <comment>[Term:24170]</comment>
+  </data>
+  <data name="ButtonMenus" xml:space="preserve">
+    <value>Button menus</value>
+    <comment>[Term:24159]</comment>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ShowInventoryStatus" xml:space="preserve">
+    <value>Show inventory status:</value>
+  </data>
+  <data name="ShowPrice" xml:space="preserve">
+    <value>Show price:</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>Incoming</value>
+  </data>
+  <data name="Outgoing" xml:space="preserve">
+    <value>Outgoing</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="MobileInvButtonGridMenus" xml:space="preserve">
+    <value>Button menus</value>
+  </data>
+</root>

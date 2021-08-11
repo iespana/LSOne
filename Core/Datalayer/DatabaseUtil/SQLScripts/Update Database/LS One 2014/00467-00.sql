@@ -1,0 +1,24 @@
+﻿
+/*
+
+	Incident No.	: N/A
+	Responsible		: Björn Eiríksson
+	Sprint			: N/A
+	Date created	: 9.12.2013
+
+	Description		: New column to COMPANYINFO
+
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'COMPANYINFO' AND COLUMN_NAME = 'LANGUAGECODE')
+BEGIN
+	ALTER TABLE COMPANYINFO ADD LANGUAGECODE nvarchar(20)
+END
+
+

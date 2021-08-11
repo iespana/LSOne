@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC96D62B-3D64-4AB9-BF4E-2F61BD75A081}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.UserInterfaceStyles</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.UserInterfaceStyles</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListViewExtensions">
+      <HintPath>..\..\Build\LSOne.Controls.ListViewExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.MenuButton">
+      <HintPath>..\..\Build\LSOne.Controls.MenuButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="CellExtensions\FontCell.cs" />
+    <Compile Include="CellExtensions\FontStyleCell.cs" />
+    <Compile Include="CellExtensions\PictureCell.cs" />
+    <Compile Include="CellExtensions\TokenCell.cs" />
+    <Compile Include="Controls\ContextStyleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContextStyleControl.Designer.cs">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StyleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StyleControl.Designer.cs">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FontStyleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FontStyleDialog.Designer.cs">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LineTokenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LineTokenDialog.Designer.cs">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewStyleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewStyleDialog.Designer.cs">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\StyleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\StyleDialog.Designer.cs">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStripTokenItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\StylesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StylesView.Designer.cs">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ContextStyleControl.bg.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.cs.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.da.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.de.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.el.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.en-ZA.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.es-MX.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.es.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.fi.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.fr.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.hi.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.is.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.it.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.ja.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.ko.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.nb-NO.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.nl.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.pl.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.pt-BR.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.ru.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.sv.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.zh-CHS.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.zh-CHT.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.bg.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.cs.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.da.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.de.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.el.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.en-ZA.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.es-MX.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.es.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.fi.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.fr.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.hi.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.is.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.it.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.ja.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.ko.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.nb-NO.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.nl.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.pl.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.pt-BR.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.ru.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.sv.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.zh-CHS.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.zh-CHT.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.bg.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.cs.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.da.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.de.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.el.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.en-ZA.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.es-MX.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.es.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.fi.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.fr.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.hi.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.is.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.it.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.ja.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.ko.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.nb-NO.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.nl.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.pl.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.pt-BR.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.ru.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.sv.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.zh-CHS.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.zh-CHT.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.bg.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.cs.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.da.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.de.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.el.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.en-ZA.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.es-MX.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.es.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.fi.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.fr.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.hi.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.is.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.it.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.ja.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.ko.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.nb-NO.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.nl.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.pl.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.pt-BR.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.ru.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.sv.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.zh-CHS.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.zh-CHT.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.bg.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.cs.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.da.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.de.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.el.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.en-ZA.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.es-MX.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.es.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.fi.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.fr.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.hi.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.is.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.it.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.ja.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.ko.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.nb-NO.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.nl.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.pl.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.pt-BR.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.ru.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.sv.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.zh-CHS.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.zh-CHT.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.bg.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.cs.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.da.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.de.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.el.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.en-ZA.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.es-MX.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.es.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.fi.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.fr.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.hi.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.is.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.it.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.ja.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.ko.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.nb-NO.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.nl.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.pl.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.pt-BR.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.ru.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.sv.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.zh-CHS.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.zh-CHT.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="Views\StylesView.bg.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.cs.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.da.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.de.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.el.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.en-ZA.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.es-MX.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.es.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.fi.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.fr.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.hi.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.is.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.it.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.ja.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.ko.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.nb-NO.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.nl.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.pl.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.pt-BR.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.ru.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.sv.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.zh-CHS.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.zh-CHT.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Palette16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Error16.png" />
+    <None Include="Resources\style_32.png" />
+    <None Include="Resources\style_16.png" />
+    <None Include="Resources\styles_32.png" />
+    <None Include="Resources\styles_16.png" />
+    <EmbeddedResource Include="TableScripts\UISTYLES.sql" />
+    <None Include="Resources\InLineEdit16.png" />
+    <Content Include="Resources\LockDarkGray16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ContextStyleControl.nl-BE.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContextStyleControl.zh-CN.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.nl-BE.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.zh-CN.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.nl-BE.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.zh-CN.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.nl-BE.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.zh-CN.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.nl-BE.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.zh-CN.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.nl-BE.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.zh-CN.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.nl-BE.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StylesView.zh-CN.resx">
+      <DependentUpon>StylesView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ContextStyleControl.vi-VN.resx">
+      <DependentUpon>ContextStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyleControl.vi-VN.resx">
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FontStyleDialog.vi-VN.resx">
+      <DependentUpon>FontStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LineTokenDialog.vi-VN.resx">
+      <DependentUpon>LineTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStyleDialog.vi-VN.resx">
+      <DependentUpon>NewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StyleDialog.vi-VN.resx">
+      <DependentUpon>StyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DatabaseUtil\DatabaseUtil.csproj">
+      <Project>{F6DEDE96-E635-4798-84E6-C4449D1813AC}</Project>
+      <Name>DatabaseUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

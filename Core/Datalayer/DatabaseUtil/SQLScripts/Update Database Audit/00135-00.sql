@@ -1,0 +1,28 @@
+﻿/*
+	Incident No.	: ONE-10168
+	Responsible		: Adrian Chiorean
+	Sprint			: Saiph
+	Date created	: 30.05.2019
+
+	Description		: Add field description to REGNUM and COREGNUM in company info
+*/
+
+USE LSPOSNET_Audit
+
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'COMPANYINFOLog' AND COLUMN_NAME = 'REGNUM')
+BEGIN
+	IF(COL_LENGTH('COMPANYINFOLog', 'REGNUM') < 60) -- We want to update the column to be NVARCHAR(30) which has an equivalent length in bytes of 60
+	BEGIN 
+		ALTER TABLE COMPANYINFOLog ALTER COLUMN REGNUM NVARCHAR(30) NOT NULL
+	END
+END
+GO
+
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'COMPANYINFOLog' AND COLUMN_NAME = 'COREGNUM')
+BEGIN
+	IF(COL_LENGTH('COMPANYINFOLog', 'COREGNUM') < 60) -- We want to update the column to be NVARCHAR(30) which has an equivalent length in bytes of 60
+	BEGIN 
+		ALTER TABLE COMPANYINFOLog ALTER COLUMN COREGNUM NVARCHAR(30) NOT NULL
+	END
+END
+GO

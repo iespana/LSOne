@@ -1,0 +1,51 @@
+﻿Pre:
+	Variant = enabled false
+	Unit = enabled false
+	Count = enabled false
+	SetGUI
+
+ITEM	
+	DropDown:
+		Generate serach items
+	Select:
+		VariantList = (xx)
+		UnitList = (xx)
+		Unit = Empty;
+		If UnitList > 0 then
+			Unit = topUnitListItem
+		Count = 0;
+		SetGUI
+
+VARIANT		
+	Request:
+		VariantList = (xx)
+	Select:
+		Count = 0;
+		SetGUI
+
+UNIT		
+	Request:
+		UnitList = (xx)
+	Select:
+		SetGUI
+
+COUNT		
+
+
+BUTTON
+	Click:
+		if Variant = enabled && Variant = null
+			Error (Must select variant)
+		if count = 0
+			Error (Must enter quantity)
+
+
+SetGUI
+	If (item != null)
+		If VariantList > 0 then 
+			Variant = enabled true
+		Count = enabled true
+	Button.Enabled = (Variantlist > 0 && Variant.Selected.ID != "")
+			&& (UnitList > 0 && UnitList.Selected.ID != "")	
+			&& Count.Value > 0
+					

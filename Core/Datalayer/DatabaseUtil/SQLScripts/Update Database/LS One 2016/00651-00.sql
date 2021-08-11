@@ -1,0 +1,40 @@
+﻿
+/*
+
+	Incident No.	: ONE-1808
+	Responsible		: Indriði
+	Sprint			: Copenhagen
+
+	Description		: A table to handle info on backups
+	
+						
+*/
+
+/*
+	
+	NB!!
+
+	**** When a script is added to any folder the "Build Action" on the script needs to be set to "Embedded resource" in properties (F4) ****
+
+	If this is not done the DatabaseUtility will not find the script and will therefore not run it
+
+*/
+
+USE LSPOSNET
+GO
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSFORMTYPE')
+BEGIN
+	IF NOT EXISTS (SELECT * FROM POSFORMTYPE WHERE ID = '4F5DB772-1337-4104-A294-13590928BB1D')
+	BEGIN 
+		INSERT INTO POSFORMTYPE(ID,	DESCRIPTION,	SYSTEMTYPE,	DATAAREAID) VALUES ('4F5DB772-1337-4104-A294-13590928BB1D',	'Gift receipt',	30,	'LSR')
+	END
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'POSISOPERATIONS')
+BEGIN
+	IF NOT EXISTS (SELECT * FROM POSISOPERATIONS WHERE OPERATIONID = 1900)
+	BEGIN 
+		INSERT INTO POSISOPERATIONS(OPERATIONID,OPERATIONNAME,PERMISSIONID,PERMISSIONID2,CHECKUSERACCESS,USEROPERATION,DATAAREAID,LOOKUPTYPE,AUDIT) VALUES (1900,	'Reprint receipt',	NULL,	NULL,	'True',	'True',	'LSR',	20,	NULL)
+	END
+END

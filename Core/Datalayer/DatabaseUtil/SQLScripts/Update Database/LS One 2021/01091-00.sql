@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-11309
+	Responsible		: Adrian Chiorean
+	Sprint			: Renminbi
+	Date created	: 08.12.2020
+
+	Description		: Add COSTPRICE column to INVENTORYTRANSFERORDERLINE
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME = 'COSTPRICE' AND TABLE_NAME = 'INVENTORYTRANSFERORDERLINE')
+    BEGIN
+        ALTER TABLE INVENTORYTRANSFERORDERLINE ADD COSTPRICE DECIMAL(24,12) NULL
+        EXECUTE spDB_SetFieldDescription_1_0 'INVENTORYTRANSFERORDERLINE', 'COSTPRICE', 'Last calculated cost price of the item from the sending store'
+    END
+GO

@@ -1,0 +1,27 @@
+﻿/*
+	Incident No.	: ONE-13591
+	Responsible		: Sigurður Bjarni Sigurðsson
+	Sprint			: Etna
+	Date created	: 03.05.2021
+
+	Description		: Create table for unlocked dining transactions
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'POSTEDUNLOCKEDTRANSACTIONS')
+BEGIN
+	CREATE TABLE [dbo].[POSTEDUNLOCKEDTRANSACTIONS](
+		[ID] UNIQUEIDENTIFIER NOT NULL
+	 CONSTRAINT [PK_POSTEDUNLOCKEDTRANSACTIONS] PRIMARY KEY CLUSTERED
+	(
+		[ID] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+	
+	EXEC spDB_SetTableDescription_1_0 'POSTEDUNLOCKEDTRANSACTIONS','Contains the transaction IDs of hospitality transactions that have been unlocked';
+
+	EXECUTE spDB_SetFieldDescription_1_0 'POSTEDUNLOCKEDTRANSACTIONS', 'ID', 'Unique ID of the transaction';
+END
+
+GO

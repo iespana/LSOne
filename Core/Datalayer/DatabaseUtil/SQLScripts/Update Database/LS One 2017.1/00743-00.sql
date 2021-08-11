@@ -1,0 +1,17 @@
+﻿/*
+	Incident No.	: ONE-6497
+	Responsible		: Adrian Chiorean
+	Sprint			: Lack
+	Date created	: 19.04.2017
+
+	Description		: Add JOURNALID to RBOTRANSACTIONTABLE
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME = 'JOURNALID' AND TABLE_NAME = 'RBOTRANSACTIONTABLE')
+BEGIN
+	ALTER TABLE RBOTRANSACTIONTABLE ADD [JOURNALID] NVARCHAR(20) NULL
+	EXECUTE spDB_SetFieldDescription_1_0 'RBOTRANSACTIONTABLE', 'JOURNALID', 'ID of the journal created for items returned with parked inventory action'
+END
+GO

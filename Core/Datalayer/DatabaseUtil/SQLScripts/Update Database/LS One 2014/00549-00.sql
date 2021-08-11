@@ -1,0 +1,24 @@
+﻿
+/*
+
+	Incident No.	: ONE-681
+	Responsible		: Marý B. Steingrímsdóttir
+	Sprint			: Gina
+	Date created	: 10.9.2014
+
+	Description		: Add new field to HospitalityType table
+	
+						
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'HOSPITALITYTYPE' AND COLUMN_NAME = 'SENDORDERNOTOSTATION')
+BEGIN
+	ALTER TABLE HOSPITALITYTYPE ADD SENDORDERNOTOSTATION TINYINT
+END
+GO
+
+
+
+

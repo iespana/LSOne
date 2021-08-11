@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AB8CC80-CCF1-4FB6-A25B-ADD5B30E1D67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.SiteService.Plugins.SiteManager</RootNamespace>
+    <AssemblyName>LSOne.SiteService.Plugins.SiteManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\Build\bin\Common.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\Build\bin\Quartz.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="LSOne.SiteService.Utilities">
+      <HintPath>..\..\Build\LSOne.SiteService.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Jobs\ClearLogsJob.cs" />
+    <Compile Include="DataLayer\DataEntities\DBField.cs" />
+    <Compile Include="DataLayer\DBFieldData.cs" />
+    <Compile Include="DataLayer\IDBFieldData.cs" />
+    <Compile Include="Jobs\OmniJournalJob.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteManagerPlugin.ImageBank.cs" />
+    <Compile Include="SiteManagerPlugin.Cache.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.Omni.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.ReasonCodes.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.Replenishment.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.StockCounting.Internal.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.TransferRequests.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.Worksheet.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.Templates.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.GoodsReceiving.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.StockCounting.cs" />
+    <Compile Include="SiteManagerPlugin.JobScheduler.cs" />
+    <Compile Include="SiteManagerPlugin.Omni.cs" />
+    <Compile Include="SiteManagerPlugin.OmniJournalScheduler.cs" />
+    <Compile Include="SiteManagerPlugin.Reports.cs" />
+    <Compile Include="SiteManagerPlugin.RetailItem.cs" />
+    <Compile Include="SiteManagerPlugin.CustomerOrders.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.PurchaseOrder.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.Vendors.cs" />
+    <Compile Include="SiteManagerPlugin.SalesInvoices.cs" />
+    <Compile Include="SiteManagerPlugin.SerialNumbers.cs" />
+    <Compile Include="SiteManagerPlugin.Terminal.cs" />
+    <Compile Include="SiteManagerPlugin.Settings.cs" />
+    <Compile Include="SiteManagerPlugin.Staff.cs" />
+    <Compile Include="SiteManagerPlugin.HBO.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.InventoryAdjustments.cs" />
+    <Compile Include="SiteManagerPlugin.TaxRefund.cs" />
+    <Compile Include="SiteManagerPlugin.CentralReturns.cs" />
+    <Compile Include="SiteManagerPlugin.EmailScheduler.cs" />
+    <Compile Include="SiteManagerPlugin.Configuration.cs" />
+    <Compile Include="SiteManagerPlugin.Customer.cs" />
+    <Compile Include="SiteManagerPlugin.Inventory.TransferOrders.cs" />
+    <Compile Include="SiteManagerPlugin.CentralSuspension.cs" />
+    <Compile Include="SiteManagerPlugin.CreditVouchers.cs" />
+    <Compile Include="SiteManagerPlugin.GiftCards.cs" />
+    <Compile Include="SiteManagerPlugin.SalesOrders.cs" />
+    <Compile Include="SiteManagerPlugin.Ledger.cs" />
+    <Compile Include="SiteManagerPlugin.Loyalty.cs" />
+    <Compile Include="SiteManagerPlugin.Hospitality.cs" />
+    <Compile Include="Jobs\EMailJob.cs" />
+    <Compile Include="SiteManagerPlugin.EMail.cs" />
+    <Compile Include="SiteManagerPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteManagerPlugin.TimeKeeper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DatabaseUtil\DatabaseUtil.csproj">
+      <Project>{F6DEDE96-E635-4798-84E6-C4449D1813AC}</Project>
+      <Name>DatabaseUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlDataProviders\SqlDataProviders.csproj">
+      <Project>{3EFB5EB2-7A0B-49C8-8DC2-F707E0A35054}</Project>
+      <Name>SqlDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionObjects\TransactionObjects.csproj">
+      <Project>{583BE690-D026-4908-8606-D4934B40D604}</Project>
+      <Name>TransactionObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\SiteService\SiteServiceInterface\SiteServiceInterface.csproj">
+      <Project>{FBD4317B-3D61-49C1-B2BE-559507458CCB}</Project>
+      <Name>SiteServiceInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SiteManagerPlugin.LogsScheduler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

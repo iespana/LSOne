@@ -1,0 +1,132 @@
+
+/*
+
+	Incident No.	: N/A
+	Responsible		: Guðbjörn Einarsson
+	Sprint			: DotNetPM\LS POS 2010.1\Dot Net Stream\Sprint 03\Dot Net Team
+	Date created	: 16.11.2010
+	
+	Description		: Editing the INVENTTRANS table
+
+	Logic scripts   : No stored procedures added or changed
+	
+	Tables affected:  INVENTTRANS
+
+
+	Table was recreated in 00013
+						
+*/
+  
+--Use LSPOSNET
+
+--GO
+
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='DATE')
+--	BEGIN
+--	EXEC sp_rename 'DBO.INVENTTRANS.DATE' , 'POSTINGDATE', 'COLUMN'
+--	END
+--END
+
+--GO
+
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='COSTPRICE')
+--	BEGIN
+--	EXEC sp_rename 'DBO.INVENTTRANS.COSTPRICE' , 'COSTPRICEPERITEM', 'COLUMN'
+--	END
+--END
+
+--GO
+	
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='SALESPRICE')
+--	BEGIN
+--	EXEC sp_rename 'DBO.INVENTTRANS.SALESPRICE' , 'SALESPRICEWITHOUTTAXPERITEM', 'COLUMN'
+--	END
+--END
+
+--GO
+
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='SALESWITHTAX')
+--	BEGIN
+--		EXEC sp_rename 'DBO.INVENTTRANS.SALESWITHTAX' , 'SALESPRICEWITHTAXPERITEM', 'COLUMN'
+--	END
+--END
+
+--GO
+
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='DISCOUNTAMOUNTPERITEM')
+--	BEGIN
+--		Alter Table [DBO].[INVENTTRANS] Add DISCOUNTAMOUNTPERITEM numeric(28,12)
+--	End
+--End
+
+--GO
+	
+	
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='OFFERDISCOUNTAMOUNTPERITEM')
+--	BEGIN
+--		Alter Table [DBO].[INVENTTRANS] Add OFFERDISCOUNTAMOUNTPERITEM numeric(28,12)
+--	End
+--End
+
+--GO
+
+--IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID = OBJECT_ID('[DBO].[INVENTTRANS]') AND TYPE IN ('U'))
+--BEGIN
+--	IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('[DBO].[INVENTTRANS]') AND NAME='GUID')
+--	BEGIN
+--		Alter Table [DBO].[INVENTTRANS] Add [GUID] uniqueidentifier Null
+--	End
+--End
+
+--GO
+
+--IF EXISTS (SELECT 'x' FROM [DBO].[INVENTTRANS] WHERE [GUID] is NULL)
+--BEGIN
+--	declare @postingDate datetime
+--	declare @itemID nvarchar(20)
+--	declare @variantID nvarchar(10)
+--	declare @storeID nvarchar(10)
+--	declare @dataAreaID nvarchar(4)
+
+--	declare transCursor Cursor For
+--    select POSTINGDATE,ITEMID,VARIANTID,STOREID,DATAAREAID from [DBO].[INVENTTRANS] WHERE [GUID] is NULL
+
+--    open transCursor
+--    fetch transCursor Into @postingDate,@itemID,@variantID,@storeID,@dataAreaID
+
+--    while @@FETCH_STATUS = 0
+--      begin
+--          update [DBO].[INVENTTRANS] set [GUID] = NEWID()
+--          where POSTINGDATE = @postingDate and ITEMID = @itemID and VARIANTID = @variantID and STOREID = @storeID and DATAAREAID = @dataAreaID
+
+--          fetch transCursor Into @postingDate,@itemID,@variantID,@storeID,@dataAreaID
+--      end
+        
+--    close transCursor
+--    deallocate transCursor
+--END
+
+--GO
+
+--if Exists(Select Column_Name,Constraint_Name from INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'INVENTTRANS' and Column_Name = 'POSTINGDATE' and Constraint_Name = 'PK_INVENTTRANS')
+--begin
+--	ALTER TABLE INVENTTRANS
+--	DROP CONSTRAINT PK_INVENTTRANS
+	
+--	ALTER TABLE INVENTTRANS
+--	ALTER COLUMN [GUID] uniqueidentifier NOT NULL
+	
+--	ALTER TABLE INVENTTRANS ADD PRIMARY KEY ([GUID]);
+--e

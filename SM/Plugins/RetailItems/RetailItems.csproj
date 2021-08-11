@@ -1,0 +1,3624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB9B159F-19F3-4FBC-85F7-86B97DE32172}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.RetailItems</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.RetailItems</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.RetailItems.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DialogPages\NewRetailItemGeneralPage.Designer.cs">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DepartmentNotInDivisionSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DepartmentNotInDivisionSearchDialog.Designer.cs">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditItemCostsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditItemCostsDialog.Designer.cs">
+      <DependentUpon>EditItemCostsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewRetailItemDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewRetailItemDialog.designer.cs">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RetailDivisionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RetailDivisionDialog.designer.cs">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportImagesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportImagesDialog.Designer.cs">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewTranslationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewTranslationDialog.designer.cs">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.Designer.cs">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LinkedItemsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LinkedItemsDialog.designer.cs">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ItemTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ItemTypeDialog.designer.cs">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SpecialGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SpecialGroupDialog.designer.cs">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RetailDepartmentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RetailDepartmentDialog.designer.cs">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewRetailGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewRetailGroupDialog.designer.cs">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ItemNotInGroupSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ItemNotInGroupSearchDialog.Designer.cs">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\SpecialGroupItemMultiEdit.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailItemSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RetailItemSearchPanel.designer.cs">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailItemSearchPanelFactory.cs" />
+    <Compile Include="ViewPages\ItemBaseSalePriceHeaderItemPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemBaseSalePriceHeaderItemPage.Designer.cs">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemCostPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemCostPage.Designer.cs">
+      <DependentUpon>ItemCostPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemFuelSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemFuelSettings.designer.cs">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\LogicHandlers\ItemBaseSalesPriceLogic.cs" />
+    <Compile Include="ViewPages\RetailDivisionDepartmentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailDivisionDepartmentPage.Designer.cs">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemLedgerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemLedgerPage.Designer.cs">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemPricesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemPricesPage.Designer.cs">
+      <DependentUpon>ItemPricesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemBaseSalesPricePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemBaseSalesPricePage.Designer.cs">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemDiscountsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemDiscountsPage.Designer.cs">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemAdditionalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemAdditionalInfo.Designer.cs">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemLinkedItemsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemLinkedItemsPage.Designer.cs">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemImagePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemImagePage.Designer.cs">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailDepartmentRetailGroupsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailDepartmentRetailGroupsPage.Designer.cs">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupGeneralPage.Designer.cs">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemPOSSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemPOSSettingsPage.designer.cs">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemViewGeneralPage.Designer.cs">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\ItemSpecialGroupsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\ItemSpecialGroupsPage.Designer.cs">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupItemsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\RetailGroupItemsPage.Designer.cs">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\SpecialGroupItemsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\SpecialGroupItemsPage.Designer.cs">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RetailDivisionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RetailDivisionsView.designer.cs">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialGroupsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialGroupsView.designer.cs">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RetailDepartmentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RetailDepartmentsView.designer.cs">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RetailGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RetailGroupView.Designer.cs">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RetailGroupsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RetailGroupsView.designer.cs">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ItemsView.designer.cs">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ItemView.Designer.cs">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.bg.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.cs.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.da.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.de.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.el.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.en-ZA.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.es-MX.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.es.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.fi.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.fr.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.hi.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.is.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.it.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.ja.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.ko.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.nb-NO.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.nl.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.pl.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.pt-BR.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.ru.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.sv.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.zh-CHS.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.zh-CHT.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditItemCostsDialog.resx">
+      <DependentUpon>EditItemCostsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.it-IT.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.bg.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.cs.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.da.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.de.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.el.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.en-ZA.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.es-MX.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.es.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.fi.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.fr.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.hi.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.is.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.it.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.ja.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.ko.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.nb-NO.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.nl.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.pl.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.pt-BR.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.bg.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.cs.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.da.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.de.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.el.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.en-ZA.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.es-MX.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.es.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.fi.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.fr.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.hi.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.is.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.it.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.ja.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.ko.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.nb-NO.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.nl.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.pl.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.pt-BR.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.ru.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.sv.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.zh-CHS.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.zh-CHT.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.en-ZA.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.es-MX.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.en-ZA.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.es-MX.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.ru.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.sv.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.zh-CHS.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.zh-CHT.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.en-ZA.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.es-MX.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.bg.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.cs.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.da.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.de.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.el.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.en-ZA.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.es-MX.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.es.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.fi.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.fr.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.hi.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.is.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.it.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.ja.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.ko.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.nb-NO.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.nl.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.pl.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.pt-BR.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.ru.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.sv.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.zh-CHS.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.zh-CHT.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.bg.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.cs.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.da.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.de.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.el.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.es.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.fi.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.fr.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.hi.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.is.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.it.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.ja.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.ko.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.nb-NO.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.nl.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.pl.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.pt-BR.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.ru.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.sv.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.zh-CHS.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.zh-CHT.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.en-ZA.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.es-MX.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.bg.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.cs.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.da.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.de.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.el.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.en-ZA.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.es-MX.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.es.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.fi.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.fr.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.hi.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.is.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.it.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.ja.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.ko.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.nb-NO.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.nl.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.pl.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.pt-BR.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.bg.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.cs.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.da.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.de.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.el.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.es.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.fi.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.fr.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.hi.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.is.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.it.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.ja.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.ko.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.nb-NO.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.nl.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.pl.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.pt-BR.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.ru.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.sv.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.zh-CHS.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.zh-CHT.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.bg.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.cs.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.da.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.de.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.el.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.es.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.fi.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.fr.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.hi.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.is.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.it.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.ja.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.ko.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.nb-NO.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.nl.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.pl.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.pt-BR.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.ru.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.sv.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.zh-CHS.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.zh-CHT.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.bg.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.cs.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.da.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.de.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.el.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.es.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.fi.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.fr.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.hi.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.is.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.it.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.ja.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.ko.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.nb-NO.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.nl.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.pl.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.pt-BR.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.ru.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.sv.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.zh-CHS.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.zh-CHT.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.ru.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.sv.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.zh-CHS.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.zh-CHT.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.bg.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.cs.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.da.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.de.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.el.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.en-ZA.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.es-MX.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.es.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.fi.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.fr.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.hi.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.is.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.it.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.ja.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.ko.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.nb-NO.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.nl.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.pl.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.pt-BR.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.ru.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.sv.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.zh-CHS.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.zh-CHT.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.da.resx" />
+    <EmbeddedResource Include="Properties\resources.de.resx" />
+    <EmbeddedResource Include="Properties\resources.el.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.fr.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.it.resx" />
+    <EmbeddedResource Include="Properties\resources.ja.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.ru.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="RetailItemSearchPanel.bg.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.cs.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.da.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.de.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.el.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.en-ZA.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.es-MX.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.es.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.fi.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.fr.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.hi.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.is.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.it.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.ja.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.ko.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.nb-NO.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.nl.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.pl.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.pt-BR.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.ru.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.sv.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.zh-CHS.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailItemSearchPanel.zh-CHT.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.is.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemCostPage.resx">
+      <DependentUpon>ItemCostPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.bg.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.cs.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.da.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.de.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.el.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.en-ZA.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.es-MX.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.es.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.fi.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.fr.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.hi.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.is.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.it-IT.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.it.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.ja.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.ko.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.nb-NO.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.nl-BE.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.nl.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.pl.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.pt-BR.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.ru.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.sv.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.zh-CHS.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.zh-CHT.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.bg.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.cs.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.da.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.de.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.el.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.en-ZA.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.es-MX.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.es.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.fi.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.fr.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.hi.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.is.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.it.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.ja.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.ko.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.nb-NO.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.nl.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.pl.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.pt-BR.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.en-ZA.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.es-MX.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.bg.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.cs.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.da.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.de.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.el.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.en-ZA.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.es-MX.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.es.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.fi.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.fr.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.hi.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.is.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.it.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.ja.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.ko.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.nb-NO.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.nl.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.pl.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.pt-BR.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.ru.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.sv.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.zh-CHS.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.zh-CHT.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.bg.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.cs.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.da.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.de.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.el.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.en-ZA.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.es-MX.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.es.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.fi.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.fr.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.hi.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.is.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.it.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.ja.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.ko.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.nb-NO.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.nl.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.pl.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.pt-BR.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.ru.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.sv.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.zh-CHS.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.zh-CHT.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.bg.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.cs.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.da.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.de.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.el.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.en-ZA.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.es-MX.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.es.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.fi.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.fr.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.hi.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.is.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.it.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.ja.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.ko.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.nb-NO.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.nl.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.pl.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.pt-BR.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.ru.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.sv.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.zh-CHS.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.zh-CHT.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.bg.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.cs.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.da.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.de.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.el.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.en-ZA.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.es-MX.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.es.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.fi.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.fr.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.hi.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.is.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.it.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.ja.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.ko.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.nb-NO.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.nl.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.pl.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.pt-BR.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.ru.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.sv.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.zh-CHS.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.zh-CHT.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.en-ZA.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.es-MX.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.en-ZA.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.es-MX.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPricesPage.resx">
+      <DependentUpon>ItemPricesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.en-ZA.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.es-MX.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.bg.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.cs.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.da.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.de.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.el.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.es.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.fi.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.fr.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.hi.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.it.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.ja.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.ko.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.nb-NO.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.nl.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.pl.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.pt-BR.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.ru.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.sv.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.zh-CHS.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.zh-CHT.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.bg.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.cs.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.da.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.de.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.el.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.es.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.fi.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.fr.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.hi.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.is.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.it.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.ja.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.ko.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.nb-NO.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.nl.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.pl.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.pt-BR.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.ru.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.sv.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.zh-CHS.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.zh-CHT.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.bg.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.hi.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.bg.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.cs.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.da.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.de.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.el.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.es.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.fi.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.fr.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.hi.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.is.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.it.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.ja.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.ko.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.nb-NO.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.nl.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.pl.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.pt-BR.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.ru.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.sv.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.zh-CHS.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.zh-CHT.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.bg.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.en-ZA.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.es-MX.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.hi.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.ru.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.sv.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.zh-CHS.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.zh-CHT.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.bg.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.cs.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.da.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.de.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.el.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.en-ZA.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.es-MX.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.es.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.fi.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.fr.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.hi.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.is.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.it.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.ja.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.ko.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.nb-NO.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.nl.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.pl.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.pt-BR.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.ru.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.sv.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.zh-CHS.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.zh-CHT.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.cs.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.da.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.de.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.el.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.es.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.fi.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.fr.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.is.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.it.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.ja.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.ko.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.nb-NO.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.nl.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.pl.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.pt-BR.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.ru.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.sv.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.zh-CHS.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.zh-CHT.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewgeneralpage.cs.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.da.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.de.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.el.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.es.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewgeneralpage.fi.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.fr.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.is.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.it.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.ja.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.ko.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewgeneralpage.nb-NO.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.nl.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\itemviewgeneralpage.pl.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.pt-BR.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.ru.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.sv.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.zh-CHS.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.zh-CHT.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.bg.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.cs.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.da.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.de.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.el.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.en-ZA.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.es-MX.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.es.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.fi.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.fr.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.hi.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.is.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.it.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.ja.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.ko.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.nb-NO.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.nl.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.pl.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.pt-BR.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.ru.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.sv.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.zh-CHS.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.zh-CHT.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.bg.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.cs.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.da.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.de.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.el.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.en-ZA.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.es-MX.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.es.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.fi.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.fr.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.hi.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.is.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.it-IT.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.it.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.ja.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.ko.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.nb-NO.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.nl.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.pl.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.pt-BR.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.ru.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.sv.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.zh-CHS.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.zh-CHT.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.bg.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.cs.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.da.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.de.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.el.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.en-ZA.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.es-MX.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.es.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.fi.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.fr.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.hi.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.it.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.ja.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.ko.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.nb-NO.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.nl.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.pl.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.pt-BR.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.ru.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.sv.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.zh-CHS.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.zh-CHT.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.is.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.bg.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.cs.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.en-ZA.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.es-MX.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.hi.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.pl.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.bg.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.cs.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.en-ZA.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.es-MX.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.hi.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.pl.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.bg.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.cs.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.da.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.de.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.el.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.en-ZA.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.es-MX.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.es.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.fi.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.fr.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.hi.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.is.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.it.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.ja.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.ko.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.nb-NO.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.nl.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.pl.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.pt-BR.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.ru.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.sv.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.zh-CHS.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.zh-CHT.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.bg.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.cs.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.da.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.de.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.el.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.en-ZA.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.es-MX.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.es.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.fi.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.fr.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.hi.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.is.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.it.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.ja.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.ko.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.nb-NO.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.nl.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.pl.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.pt-BR.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.ru.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.sv.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.zh-CHS.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.zh-CHT.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.bg.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.cs.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.da.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.de.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.el.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.en-ZA.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.es-MX.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.es.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.fi.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.fr.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.hi.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.is.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.it.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.ja.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.ko.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.nb-NO.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.nl.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.pl.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.pt-BR.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.ru.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.sv.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.zh-CHS.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.zh-CHT.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.bg.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.cs.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.da.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.de.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.el.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.en-ZA.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.es-MX.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.es.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.fi.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.fr.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.hi.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.is.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.it.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.ja.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.ko.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.nb-NO.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.nl.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.pl.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.pt-BR.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.fi.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemsview.nb-NO.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.da.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.de.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.el.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.es.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.fi.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.fr.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.is.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.it.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.ja.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.ko.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\itemview.nb-NO.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.nl.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.pt-BR.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.ru.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.sv.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.zh-CHS.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.zh-CHT.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.da.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.de.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.el.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.es.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.fr.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.is.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.it.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.ja.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.ko.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.nl.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.pt-BR.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.ru.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.sv.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.zh-CHS.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.zh-CHT.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.ru.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.sv.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.zh-CHS.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.zh-CHT.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RetailItemImage16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RetailItemNewImage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Datalayer\DataEntities\" />
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageImport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VariantItem16.png" />
+    <None Include="Resources\DimensionsImage.png" />
+    <None Include="Resources\MasterItem16.png" />
+    <None Include="Resources\new retail item_16.png" />
+    <None Include="Resources\new retail item_32.png" />
+    <None Include="Resources\itemVariant_16.png" />
+    <None Include="Resources\itemVariant_32.png" />
+    <None Include="Resources\SignIn.png" />
+    <None Include="Resources\item.png" />
+    <None Include="Resources\item-variant.png" />
+    <None Include="Resources\header-item.png" />
+    <None Include="Resources\export_16.png" />
+    <None Include="Resources\export_32.png" />
+    <None Include="Resources\import_16.png" />
+    <None Include="Resources\import_32.png" />
+    <None Include="Resources\item_16.png" />
+    <None Include="Resources\item_32.png" />
+    <None Include="Resources\itemVariant_16.png" />
+    <None Include="Resources\itemVariant_32.png" />
+    <None Include="Resources\new retail item_16.png" />
+    <None Include="Resources\new retail item_32.png" />
+    <None Include="Resources\special groups_16.png" />
+    <None Include="Resources\special groups_32.png" />
+    <None Include="Resources\groups_16.png" />
+    <None Include="Resources\groups_32.png" />
+    <None Include="Resources\header item_16.png" />
+    <None Include="Resources\header item_32.png" />
+    <None Include="Resources\retail green_16.png" />
+    <None Include="Resources\departments_16.png" />
+    <None Include="Resources\departments_32.png" />
+    <None Include="Resources\divisions_16.png" />
+    <None Include="Resources\divisions_32.png" />
+    <None Include="Resources\itemassembly_16px.png" />
+    <None Include="Resources\itemassembly_32px.png" />
+    <Content Include="Resources\TableExport16.png" />
+    <None Include="Resources\TableImport16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RetailItemSearchPanel.it-IT.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.it-IT.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.it-IT.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.it-IT.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.it-IT.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.it-IT.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.it-IT.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.it-IT.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.it-IT.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.it-IT.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.it-IT.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.it-IT.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.it-IT.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.it-IT.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.it-IT.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.it-IT.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.it-IT.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.it-IT.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.it-IT.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.it-IT.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.it-IT.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.it-IT.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.it-IT.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.it-IT.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.it-IT.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.it-IT.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.it-IT.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.it-IT.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.it-IT.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RetailItemSearchPanel.nl-BE.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.nl-BE.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.nl-BE.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.nl-BE.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.nl-BE.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.nl-BE.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.nl-BE.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.nl-BE.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.nl-BE.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.nl-BE.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.nl-BE.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.nl-BE.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.nl-BE.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.nl-BE.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.nl-BE.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.nl-BE.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.nl-BE.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.nl-BE.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.nl-BE.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.nl-BE.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.nl-BE.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.nl-BE.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.nl-BE.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.nl-BE.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.nl-BE.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.nl-BE.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.nl-BE.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.nl-BE.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.nl-BE.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.nl-BE.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.nl-BE.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RetailItemSearchPanel.ja-JP.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.ja-JP.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.ja-JP.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.ja-JP.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.ja-JP.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.ja-JP.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.ja-JP.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.ja-JP.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.ja-JP.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.ja-JP.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.ja-JP.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.ja-JP.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.ja-JP.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.ja-JP.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.ja-JP.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.ja-JP.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.ja-JP.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.ja-JP.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.ja-JP.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.ja-JP.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.ja-JP.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.ja-JP.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.ja-JP.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.ja-JP.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.ja-JP.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.ja-JP.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.ja-JP.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.ja-JP.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.ja-JP.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.ja-JP.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.ja-JP.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.ja-JP.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.bg.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.cs.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.da.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.de.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.el.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.en-ZA.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.es-MX.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.es.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.fi.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.fr.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.hi.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.is.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.it.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.ja.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.ko.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.nb-NO.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.nl-BE.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.nl.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.pl.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.pt-BR.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.ru.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.sv.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.it-IT.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.ja-JP.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.bg.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.cs.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.da.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.de.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.el.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.en-ZA.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.es-MX.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.es.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.fi.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.fr.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.hi.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.is.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.it-IT.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.it.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.ja-JP.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.ja.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.ko.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.nb-NO.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.nl-BE.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.nl.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.pl.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.pt-BR.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.ru.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.sv.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.bg.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.cs.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.da.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.de.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.el.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.en-ZA.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.es-MX.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.es.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.fi.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.fr.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.hi.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.is.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.it-IT.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.it.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.ja-JP.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.ja.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.ko.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.nb-NO.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.nl-BE.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.nl.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.pl.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.pt-BR.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.ru.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.sv.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.bg.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.cs.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.da.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.de.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.el.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.en-ZA.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.es-MX.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.es.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.fi.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.fr.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.hi.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.is.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.it.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.ja.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.ko.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.nb-NO.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.nl-BE.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.nl.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.pl.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.pt-BR.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.ru.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.sv.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.da.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.de.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.es.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.fr.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.is.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.ja.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.nl-BE.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.nl.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.ru.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.sv.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.fi.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.bg.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RetailItemSearchPanel.vi-VN.resx">
+      <DependentUpon>RetailItemSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPages\NewRetailItemGeneralPage.vi-VN.resx">
+      <DependentUpon>NewRetailItemGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DepartmentNotInDivisionSearchDialog.vi-VN.resx">
+      <DependentUpon>DepartmentNotInDivisionSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportImagesDialog.vi-VN.resx">
+      <DependentUpon>ImportImagesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemNotInGroupSearchDialog.vi-VN.resx">
+      <DependentUpon>ItemNotInGroupSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ItemTypeDialog.vi-VN.resx">
+      <DependentUpon>ItemTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LinkedItemsDialog.vi-VN.resx">
+      <DependentUpon>LinkedItemsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailGroupDialog.vi-VN.resx">
+      <DependentUpon>NewRetailGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewRetailItemDialog.vi-VN.resx">
+      <DependentUpon>NewRetailItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewTranslationDialog.vi-VN.resx">
+      <DependentUpon>NewTranslationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDepartmentDialog.vi-VN.resx">
+      <DependentUpon>RetailDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailDivisionDialog.vi-VN.resx">
+      <DependentUpon>RetailDivisionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RetailGroupNotInRetailDepartmentSearchDialog.vi-VN.resx">
+      <DependentUpon>RetailGroupNotInRetailDepartmentSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SpecialGroupDialog.vi-VN.resx">
+      <DependentUpon>SpecialGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemAdditionalInfo.vi-VN.resx">
+      <DependentUpon>ItemAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalePriceHeaderItemPage.vi-VN.resx">
+      <DependentUpon>ItemBaseSalePriceHeaderItemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemBaseSalesPricePage.vi-VN.resx">
+      <DependentUpon>ItemBaseSalesPricePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemDiscountsPage.vi-VN.resx">
+      <DependentUpon>ItemDiscountsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemFuelSettings.vi-VN.resx">
+      <DependentUpon>ItemFuelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemImagePage.vi-VN.resx">
+      <DependentUpon>ItemImagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLedgerPage.vi-VN.resx">
+      <DependentUpon>ItemLedgerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemLinkedItemsPage.vi-VN.resx">
+      <DependentUpon>ItemLinkedItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemPOSSettingsPage.vi-VN.resx">
+      <DependentUpon>ItemPOSSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemSpecialGroupsPage.vi-VN.resx">
+      <DependentUpon>ItemSpecialGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\ItemViewGeneralPage.vi-VN.resx">
+      <DependentUpon>ItemViewGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDepartmentRetailGroupsPage.vi-VN.resx">
+      <DependentUpon>RetailDepartmentRetailGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailDivisionDepartmentPage.vi-VN.resx">
+      <DependentUpon>RetailDivisionDepartmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupGeneralPage.vi-VN.resx">
+      <DependentUpon>RetailGroupGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\RetailGroupItemsPage.vi-VN.resx">
+      <DependentUpon>RetailGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\SpecialGroupItemsPage.vi-VN.resx">
+      <DependentUpon>SpecialGroupItemsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemsView.vi-VN.resx">
+      <DependentUpon>ItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemView.vi-VN.resx">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDepartmentsView.vi-VN.resx">
+      <DependentUpon>RetailDepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailDivisionsView.vi-VN.resx">
+      <DependentUpon>RetailDivisionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupsView.vi-VN.resx">
+      <DependentUpon>RetailGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RetailGroupView.vi-VN.resx">
+      <DependentUpon>RetailGroupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialGroupsView.vi-VN.resx">
+      <DependentUpon>SpecialGroupsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\SqlConnector\SqlConnector.csproj">
+      <Project>{E0DFB0FB-31B7-44AC-BCB8-93D6EC4ECAA4}</Project>
+      <Name>SqlConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

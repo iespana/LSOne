@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CSVFile" xml:space="preserve">
+    <value>CSV file</value>
+    <comment>[Term:2950]</comment>
+  </data>
+  <data name="ExcelFile" xml:space="preserve">
+    <value>Excel file</value>
+    <comment>[Term:2953]</comment>
+  </data>
+  <data name="ExcelOrCSVFile" xml:space="preserve">
+    <value>Excel file</value>
+    <comment>[Term:2953]</comment>
+  </data>
+  <data name="ImportFromExcelOrCSV" xml:space="preserve">
+    <value>Import from Excel document</value>
+    <comment>[Term:15819]</comment>
+  </data>
+  <data name="ImportFromExcelOrCSVDescription" xml:space="preserve">
+    <value>Imports retail data from Excel document</value>
+    <comment>[Term:15826]</comment>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>System</value>
+    <comment>[Term:3124]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SystemImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SystemImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SystemImage24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SystemImage24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SalesUnitNotFound" xml:space="preserve">
+    <value>Sales unit not found</value>
+    <comment>[Term:15817]</comment>
+  </data>
+  <data name="InventoryUnitNotFound" xml:space="preserve">
+    <value>Inventory unit not found</value>
+    <comment>[Term:15814]</comment>
+  </data>
+  <data name="TaxGroupDoesNotExist" xml:space="preserve">
+    <value>Tax group does not exist, please set it up and then try importing again</value>
+    <comment>[Term:15828]</comment>
+  </data>
+  <data name="UnitConversionRuleFromInventoryToSalesDoesNotExist" xml:space="preserve">
+    <value>Unit conversion rule from inventory unit to sales unit does not exist</value>
+    <comment>[Term:15838]</comment>
+  </data>
+  <data name="BarCodeSetupDoesNotExist" xml:space="preserve">
+    <value>Bar code setup does not exist, please create correct bar code setup and try importing again</value>
+    <comment>[Term:15823]</comment>
+  </data>
+  <data name="BarCodeIsLongerThanAllowedByBarCodeSetup" xml:space="preserve">
+    <value>Bar code is longer than allowed by the selected bar code setup. Please correct the problem and then try importing again</value>
+    <comment>[Term:15821]</comment>
+  </data>
+  <data name="BarCodeIsShorterThanAllowedByBarCodeSetup" xml:space="preserve">
+    <value>Bar code is shorter than allowed by the selected bar code setup. Please correct the problem and then try importing again</value>
+    <comment>[Term:15822]</comment>
+  </data>
+  <data name="UnitConversionRuleFromBarCodeToInventoryUnitDoesNotExist" xml:space="preserve">
+    <value>Unit conversion rule from inventory unit to bar code unit does not exist</value>
+    <comment>[Term:15837]</comment>
+  </data>
+  <data name="TheRequestedFileWasNotFound" xml:space="preserve">
+    <value>The requested file was not found</value>
+    <comment>[Term:15827]</comment>
+  </data>
+  <data name="CouldNotImportRetailItemsSinceMandatory" xml:space="preserve">
+    <value>Could not import retail items since mandatory column named #1 was missing</value>
+    <comment>[Term:15834]</comment>
+  </data>
+  <data name="CouldNotImportCustomersSinceMandatory" xml:space="preserve">
+    <value>Could not import customers since mandatory column named #1 was missing</value>
+    <comment>[Term:15831]</comment>
+  </data>
+  <data name="CouldNotImportRetailGroupsSinceMandatory" xml:space="preserve">
+    <value>Could not import retail groups since mandatory column named #1 was missing</value>
+    <comment>[Term:15833]</comment>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Unknown error occurred. Error details:</value>
+    <comment>[Term:21962]</comment>
+  </data>
+  <data name="CreateNewExcelTemplate" xml:space="preserve">
+    <value>Create new Excel import template</value>
+    <comment>[Term:15835]</comment>
+  </data>
+  <data name="CreateNewExcelTemplateDescription" xml:space="preserve">
+    <value>Creates new Excel import template and saves it at location of your choice</value>
+    <comment>[Term:15836]</comment>
+  </data>
+  <data name="CouldNotFindBaseTemplateFile" xml:space="preserve">
+    <value>Could not find base templated file</value>
+    <comment>[Term:15830]</comment>
+  </data>
+  <data name="CouldNotWriteFileAtTheChoosenLocation" xml:space="preserve">
+    <value>Error: Could not write the template file at the choosen location</value>
+    <comment>[Term:15839]</comment>
+  </data>
+  <data name="ExcelFilesPlugin" xml:space="preserve">
+    <value>Excel files</value>
+    <comment>[Term:19952]</comment>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Customers</value>
+    <comment>[Term:2871]</comment>
+  </data>
+  <data name="RetailItems" xml:space="preserve">
+    <value>Retail items</value>
+    <comment>[Term:3297]</comment>
+  </data>
+  <data name="RetailGroups" xml:space="preserve">
+    <value>Retail groups</value>
+    <comment>[Term:14506]</comment>
+  </data>
+  <data name="SuccessfullyInserted" xml:space="preserve">
+    <value>Successfully inserted #1 record(s)</value>
+    <comment>[Term:15847]</comment>
+  </data>
+  <data name="SuccessfullyUpdated" xml:space="preserve">
+    <value>Successfully updated #1 record(s)</value>
+    <comment>[Term:15846]</comment>
+  </data>
+  <data name="Record1" xml:space="preserve">
+    <value>Record: #1</value>
+    <comment>[Term:15850]</comment>
+  </data>
+  <data name="ExcelImport16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExcelImport16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoRecordsInserted" xml:space="preserve">
+    <value>No records inserted</value>
+    <comment>[Term:15841]</comment>
+  </data>
+  <data name="NoRecordsUpdated" xml:space="preserve">
+    <value>No records updated</value>
+    <comment>[Term:15840]</comment>
+  </data>
+  <data name="ImportResults" xml:space="preserve">
+    <value>Import results</value>
+    <comment>[Term:15851]</comment>
+  </data>
+  <data name="Skipped" xml:space="preserve">
+    <value>Skipped</value>
+    <comment>[Term:15848]</comment>
+  </data>
+  <data name="TaxGroupNotFound" xml:space="preserve">
+    <value>Tax group not found</value>
+    <comment>[Term:15843]</comment>
+  </data>
+  <data name="MandatoryColumnmissing" xml:space="preserve">
+    <value>Mandatory column missing:</value>
+    <comment>[Term:15845]</comment>
+  </data>
+  <data name="MandatoryFieldMissing" xml:space="preserve">
+    <value>Mandatory field #1 missing</value>
+    <comment>[Term:15844]</comment>
+  </data>
+  <data name="CouldNotImportVendorsSinceMandatory" xml:space="preserve">
+    <value>Could not import vendors since mandatory column named #1 was missing</value>
+    <comment>[Term:15849]</comment>
+  </data>
+  <data name="Vendors" xml:space="preserve">
+    <value>Vendors</value>
+    <comment>[Term:14867]</comment>
+  </data>
+  <data name="VendorDoesNotExits" xml:space="preserve">
+    <value>Vendor does not exist. Please correct the problem and try importing again</value>
+    <comment>[Term:15842]</comment>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Tools</value>
+    <comment>[Term:352]</comment>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>[Term:2166]</comment>
+  </data>
+  <data name="ExcelDocument" xml:space="preserve">
+    <value>Excel document</value>
+    <comment>[Term:15852]</comment>
+  </data>
+  <data name="NewExcelTemplate" xml:space="preserve">
+    <value>New Excel template</value>
+    <comment>[Term:15853]</comment>
+  </data>
+  <data name="ExcelNewTemplate16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExcelNewTemplate16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewExcelDocumentCaption" xml:space="preserve">
+    <value>Excel document</value>
+    <comment>[Term:15852]</comment>
+  </data>
+  <data name="NewExcelDocumentQuestion" xml:space="preserve">
+    <value>Do you want to display the excel template file</value>
+    <comment>[Term:16016]</comment>
+  </data>
+  <data name="CouldNotImportDepartmentsSinceMandatory" xml:space="preserve">
+    <value>Could not import retail departments since mandatory column named #1 was missing</value>
+    <comment>[Term:16011]</comment>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Retail department</value>
+    <comment>[Term:3294]</comment>
+  </data>
+  <data name="SelectedRetailGroupDoesNotExist" xml:space="preserve">
+    <value>Selected retail group is not in the selected retail department</value>
+    <comment>[Term:16015]</comment>
+  </data>
+  <data name="ExportListToExcel" xml:space="preserve">
+    <value>List to Excel template...</value>
+    <comment>[Term:20156]</comment>
+  </data>
+  <data name="CouldNotFindOneOfTheFollowingWorksheets" xml:space="preserve">
+    <value>Could not find one of the following worksheets: #1</value>
+    <comment>[Term:20152]</comment>
+  </data>
+  <data name="CouldNotOpenWorkbook" xml:space="preserve">
+    <value>Could not open workbook</value>
+    <comment>[Term:20162]</comment>
+  </data>
+  <data name="ExportedFileQuestion" xml:space="preserve">
+    <value>Do you want to display the exported file?</value>
+    <comment>[Term:20166]</comment>
+  </data>
+  <data name="ExportSelectionToExcel" xml:space="preserve">
+    <value>Selected items to Excel template...</value>
+    <comment>[Term:20155]</comment>
+  </data>
+  <data name="ExportListToReplenishmentExcelTemplate" xml:space="preserve">
+    <value>List to Excel replenishment template...</value>
+    <comment>[Term:20157]</comment>
+  </data>
+  <data name="ExportSelectionToReplenishmentExcelTemplate" xml:space="preserve">
+    <value>Selected items to Excel replenishment template...</value>
+    <comment>[Term:20158]</comment>
+  </data>
+  <data name="CouldNotImportReplenishmentDataSinceMandatory" xml:space="preserve">
+    <value>Could not import replenishment data since mandatory column named #1 was missing</value>
+    <comment>[Term:20163]</comment>
+  </data>
+  <data name="RetailItemDoesNotExist" xml:space="preserve">
+    <value>Retail item does not exist</value>
+    <comment>[Term:20159]</comment>
+  </data>
+  <data name="InvalidValueInColumn" xml:space="preserve">
+    <value>Invalid value in column #1</value>
+    <comment>[Term:20164]</comment>
+  </data>
+  <data name="ItemReplenishment" xml:space="preserve">
+    <value>Item replenishment</value>
+    <comment>[Term:20160]</comment>
+  </data>
+  <data name="StoreDoesNotExist" xml:space="preserve">
+    <value>Store does not exist</value>
+    <comment>[Term:20154]</comment>
+  </data>
+  <data name="FromExcelDocument" xml:space="preserve">
+    <value>From Excel document...</value>
+    <comment>[Term:20161] - As in Import from Excel document</comment>
+  </data>
+  <data name="WhenBlockedIsActiveThenBlockingDateMustBeSet" xml:space="preserve">
+    <value>When blocking is active then blocking date must be set</value>
+    <comment>[Term:20195]</comment>
+  </data>
+  <data name="ExportListToStockCountingExcelTemplate" xml:space="preserve">
+    <value>List to Excel stock counting template...</value>
+    <comment>[Term:22284]</comment>
+  </data>
+  <data name="StockCountingHeader" xml:space="preserve">
+    <value>Stock counting header</value>
+    <comment>[Term:21964]</comment>
+  </data>
+  <data name="StockCountingLine" xml:space="preserve">
+    <value>Stock counting line</value>
+    <comment>[Term:21965]</comment>
+  </data>
+  <data name="StockCountNotExist" xml:space="preserve">
+    <value>Stock count does not exist</value>
+    <comment>[Term:21963]</comment>
+  </data>
+  <data name="BarCodeSetupMissing" xml:space="preserve">
+    <value>Bar code setup missing</value>
+    <comment>[Term:21961]</comment>
+  </data>
+  <data name="GeneralSetup" xml:space="preserve">
+    <value>General setup</value>
+    <comment>[Term:14659]</comment>
+  </data>
+  <data name="DashboardImportButton" xml:space="preserve">
+    <value>Import</value>
+    <comment>[Term:2166]</comment>
+  </data>
+  <data name="DashboardConfigureButton" xml:space="preserve">
+    <value>Configure</value>
+    <comment>[Term:21906]</comment>
+  </data>
+  <data name="DashboardItemConfigureWorkingFolder" xml:space="preserve">
+    <value>Configure a working folder to continue</value>
+    <comment>[Term:22561]</comment>
+  </data>
+  <data name="DashboardItemConfigureWorkingFolderError" xml:space="preserve">
+    <value>Working folder does not exist,  Configure a working folder to continue</value>
+    <comment>[Term:22567]</comment>
+  </data>
+  <data name="DashboardItemInfo" xml:space="preserve">
+    <value>Import Excel Files</value>
+    <comment>[Term:22564]</comment>
+  </data>
+  <data name="ExcelImport" xml:space="preserve">
+    <value>Excel import</value>
+    <comment>[Term:22562]</comment>
+  </data>
+  <data name="WorkingFolderNotDefined" xml:space="preserve">
+    <value>Working folder not defined.</value>
+    <comment>[Term:22601]</comment>
+  </data>
+  <data name="WorkingFolder" xml:space="preserve">
+    <value>Working folder</value>
+    <comment>[Term:22566]</comment>
+  </data>
+  <data name="ExportListExcelSimple" xml:space="preserve">
+    <value>List to Excel simple template...</value>
+    <comment>[Term:22570]</comment>
+  </data>
+  <data name="ExportSelectionExcelSimple" xml:space="preserve">
+    <value>Selection to Excel simple template...</value>
+    <comment>[Term:22571]</comment>
+  </data>
+  <data name="DefineWorkingFolderBeforeContinuing" xml:space="preserve">
+    <value>Define working folder before continuing.</value>
+    <comment>[Term:22602]</comment>
+  </data>
+  <data name="TableImport16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TableImport16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImportFromExcelDocument" xml:space="preserve">
+    <value>Import from excel document</value>
+    <comment>[Term:15819]</comment>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+    <comment>[Term:10027]</comment>
+  </data>
+  <data name="NoStockForHeaderItems" xml:space="preserve">
+    <value>Stock does not exist for header items</value>
+    <comment>[Term:23083]</comment>
+  </data>
+  <data name="NoRecordsSkipped" xml:space="preserve">
+    <value>No records skipped</value>
+    <comment>[Term:23226]</comment>
+  </data>
+  <data name="RecordsSkippedNotificationMessage" xml:space="preserve">
+    <value>Skipped #1 record(s)</value>
+    <comment>[Term:23227]</comment>
+  </data>
+  <data name="CouldNotImportStockCountingHeaderSinceMandatory" xml:space="preserve">
+    <value>Could not import stock counting header data since mandatory column named #1 was missing</value>
+    <comment>[Term:23223]</comment>
+  </data>
+  <data name="CouldNotImportStockCountingLinesSinceMandatory" xml:space="preserve">
+    <value>Could not import stock counting lines since mandatory column named #1 was missing</value>
+    <comment>[Term:23224]</comment>
+  </data>
+  <data name="export_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="export_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="import_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="import_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="excel_template_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel template_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="excel_template_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel template_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SerialNumberTemplate" xml:space="preserve">
+    <value>Serial number template</value>
+    <comment>[Term:23268]</comment>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>False</value>
+    <comment>DO NOT TRANSLATE</comment>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>True</value>
+    <comment>DO NOT TRANSLATE</comment>
+  </data>
+  <data name="CouldNotImportSerialNumberDataSinceMandatory" xml:space="preserve">
+    <value>Could not import serial number data since mandatory column named #1 was missing</value>
+    <comment>[Term:23289]</comment>
+  </data>
+  <data name="SerialNumbersListViewHeader" xml:space="preserve">
+    <value>Serial numbers</value>
+    <comment>[Term:23266]</comment>
+  </data>
+  <data name="CouldNotFindItem" xml:space="preserve">
+    <value>Could not find item with Item ID #1</value>
+    <comment>[Term:23288]</comment>
+  </data>
+  <data name="EmptySerialNumber" xml:space="preserve">
+    <value>Serial number is empty</value>
+    <comment>[Term:23293]</comment>
+  </data>
+  <data name="ItemDeleted" xml:space="preserve">
+    <value>Item #1 is deleted</value>
+    <comment>[Term:23292]</comment>
+  </data>
+  <data name="ErrorSavingSerialNumber" xml:space="preserve">
+    <value>Error saving serial number</value>
+    <comment>[Term:23291]</comment>
+  </data>
+  <data name="CreateImportTemplate" xml:space="preserve">
+    <value>Create import template</value>
+    <comment>[Term:23290]</comment>
+  </data>
+  <data name="ImportFromExcel" xml:space="preserve">
+    <value>Import from Excel</value>
+    <comment>[Term:15819]</comment>
+  </data>
+  <data name="StockCountingLineItemDeleted" xml:space="preserve">
+    <value>Cannot import deleted items.</value>
+    <comment>[Term:23361]</comment>
+  </data>
+  <data name="StockCountingLineServiceItem" xml:space="preserve">
+    <value>Cannot import service items.</value>
+    <comment>[Term:23362]</comment>
+  </data>
+  <data name="CreateNewExcelTemplateTooltipDescription" xml:space="preserve">
+    <value>Create a new Excel import template and select a location to save it</value>
+    <comment>[Term:23438]</comment>
+  </data>
+  <data name="ImportFromExcelOrCSVTooltipDescription" xml:space="preserve">
+    <value>Import items, groups, departments, customer and/or vendors from an Excel document</value>
+    <comment>[Term:23439]</comment>
+  </data>
+  <data name="ImportPreviousItemDeleted" xml:space="preserve">
+    <value>Previously deleted items can not be imported </value>
+    <comment>[Term:23862]</comment>
+  </data>
+  <data name="DeletedVendorCannotBeImported" xml:space="preserve">
+    <value>Previously deleted vendor cannot be imported.</value>
+    <comment>[Term:24227]</comment>
+  </data>
+  <data name="RetrievingDataFromFile" xml:space="preserve">
+    <value>Retrieving data from file...</value>
+  </data>
+  <data name="CouldNotGenerateIDFromHeadQuarters" xml:space="preserve">
+    <value>Could not generate adjustment ID because the connection to Site Service could not be established. The ID must be entered manually before importing the file.</value>
+  </data>
+  <data name="AttributeCombinationAlreadyExists" xml:space="preserve">
+    <value>A variant item with the attribute combination already exists</value>
+  </data>
+  <data name="AttributeCountMismatch" xml:space="preserve">
+    <value>Attribute count does not match dimensions count</value>
+  </data>
+  <data name="DimensionsAlreadyDefined" xml:space="preserve">
+    <value>Dimensions already defined for header item</value>
+  </data>
+  <data name="DimensionsAndAttributesWhenUpdating" xml:space="preserve">
+    <value>Dimensions or attributes cannot be defined when updating items</value>
+  </data>
+  <data name="HeaderItemNotFound" xml:space="preserve">
+    <value>Header item for variant was not found</value>
+  </data>
+  <data name="SeparatorCannotBeEmpty" xml:space="preserve">
+    <value>Separator cannot be empty</value>
+  </data>
+  <data name="DimensionsAndAttributesMustBeDefinedForVariants" xml:space="preserve">
+    <value>Dimensions and attributes can only be defined to header or variant items</value>
+  </data>
+  <data name="AttributesCannotBeEmpty" xml:space="preserve">
+    <value>Attributes for variant items cannot be empty</value>
+  </data>
+</root>

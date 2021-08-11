@@ -1,0 +1,28 @@
+﻿
+/*
+
+	Incident No.	: TFS incident no 17589
+	Responsible		: Indriði Ingi Stefánsson	
+	Sprint			: Nimbo
+	Date created	: 16.12.2013
+
+	Description		: Adding Configuration Columns to allow manually entered ids for Stores and Terminals
+	
+						
+*/
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOPARAMETERS' AND COLUMN_NAME = 'MANUALLYENTERSTOREID')
+BEGIN
+	ALTER TABLE [dbo].[RBOPARAMETERS] ADD [MANUALLYENTERSTOREID] [tinyint] NULL	
+END
+
+
+IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'RBOPARAMETERS' AND COLUMN_NAME = 'MANUALLYENTERTERMINALID')
+BEGIN
+	ALTER TABLE [dbo].[RBOPARAMETERS] ADD [MANUALLYENTERTERMINALID] [tinyint] NULL
+END
+
+
+
+
+

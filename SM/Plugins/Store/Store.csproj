@@ -1,0 +1,2865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EA42010-C350-473F-B5A1-5BDFF3DB51F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.Store</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.Store</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.Store.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.WizardOptionButton">
+      <HintPath>..\..\Build\LSOne.Controls.WizardOptionButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\AddStoresToRegionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddStoresToRegionDialog.Designer.cs">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CardTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CardTypeDialog.Designer.cs">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateStoreWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateStoreWizard.designer.cs">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\IncomeExpenseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IncomeExpenseDialog.Designer.cs">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewStorePaymentMethodDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewStorePaymentMethodDialog.Designer.cs">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewStoreDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewStoreDialog.Designer.cs">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RegionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RegionDialog.Designer.cs">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectLocationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectLocationDialog.designer.cs">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectPriceGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectPriceGroupDialog.designer.cs">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\CreateStoreFirstPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\CreateStoreFirstPage.designer.cs">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\StoreDescriptionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\StoreDescriptionPage.designer.cs">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CardTypeGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CardTypeGeneralPage.Designer.cs">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CompanyInfoLogoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CompanyInfoLogoPage.designer.cs">
+      <DependentUpon>CompanyInfoLogoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreFormSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreFormSettingsPage.Designer.cs">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\IncomeExpenseAccountPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\IncomeExpenseAccountPage.Designer.cs">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreLocationPriceGroupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreLocationPriceGroupPage.designer.cs">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreManagementAdminPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreManagementAdminPage.designer.cs">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StorePaymentMethodPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StorePaymentMethodPage.Designer.cs">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreSettingsPage.Designer.cs">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderCardTypesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderCardTypesPage.Designer.cs">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderUsagePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderUsagePage.Designer.cs">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderGeneralPage.Designer.cs">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderOverUndertenderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreTenderOverUndertenderPage.Designer.cs">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\CompanyInfoGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\CompanyInfoGeneralPage.designer.cs">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegionsView.Designer.cs">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoresView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StoresView.Designer.cs">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreTenderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StoreTenderView.designer.cs">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StoreView.designer.cs">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreSearchPanelFactory.cs" />
+    <Compile Include="StoreSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StoreSearchPanel.designer.cs">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CompanyInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CompanyInfoView.designer.cs">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.bg.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.cs.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.da.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.de.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.el.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.en-ZA.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.es-MX.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.es.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.fi.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.fr.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.hi.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.is.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.it.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.ja.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.ko.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.nb-NO.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.nl.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.pl.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.pt-BR.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CardTypeDialog.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.ru.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.sv.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.zh-CHS.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.zh-CHT.resx">
+      <DependentUpon>CardTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.bg.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.cs.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.da.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.de.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.el.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.en-ZA.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.es-MX.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.es.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.fi.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.fr.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.hi.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.is.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.it.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.ja.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.ko.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.nb-NO.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.nl.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.pl.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.pt-BR.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.ru.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.sv.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.zh-CHS.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.zh-CHT.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.bg.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.cs.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.da.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.de.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.el.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.en-ZA.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.es-MX.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.es.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.fi.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.fr.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.hi.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.is.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.it.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.ja.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.ko.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.nb-NO.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.nl.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.pl.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.pt-BR.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.ru.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.sv.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.zh-CHS.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.zh-CHT.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.bg.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.cs.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.da.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.de.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.el.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.en-ZA.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.es-MX.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.es.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.fi.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.fr.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.hi.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.is.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.it.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.ja.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.ko.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.nb-NO.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.nl.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.pl.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.pt-BR.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.ru.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.sv.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.zh-CHS.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.zh-CHT.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.bg.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.cs.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.da.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.de.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.el.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.en-ZA.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.es-MX.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.es.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.fi.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.fr.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.hi.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.is.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.it.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.ja.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.ko.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.nb-NO.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.nl.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.pl.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.pt-BR.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.ru.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.sv.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.zh-CHS.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newstoredialog.zh-CHT.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.bg.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.cs.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.da.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.de.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.el.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.en-ZA.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.es-MX.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.es.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.fi.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.fr.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.hi.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.is.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.it.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.ja.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.ko.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.nb-NO.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.nl.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.pl.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.pt-BR.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.ru.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.sv.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.zh-CHS.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.zh-CHT.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.bg.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.cs.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.da.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.de.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.el.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.en-ZA.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.es-MX.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.es.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.fi.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.fr.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.hi.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.is.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.it.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.ja.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.ko.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.nb-NO.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.nl.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.pl.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.pt-BR.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.ru.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.sv.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.zh-CHS.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.zh-CHT.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.bg.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.cs.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.da.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.de.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.el.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.en-ZA.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.es-MX.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.es.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.fi.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.fr.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.hi.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.is.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.it.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.ja.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.ko.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.nb-NO.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.nl.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.pl.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.pt-BR.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.ru.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.sv.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.zh-CHS.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.zh-CHT.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.bg.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.cs.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.da.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.de.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.el.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.en-ZA.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.es-MX.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.es.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.fi.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.fr.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.hi.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.is.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.it.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.ja.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.ko.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.nb-NO.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.nl.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.pl.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.pt-BR.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.ru.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.sv.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.zh-CHS.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.zh-CHT.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.bg.resx" />
+    <EmbeddedResource Include="Properties\resources.cs.resx" />
+    <EmbeddedResource Include="Properties\resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\resources.pl.resx" />
+    <EmbeddedResource Include="Properties\resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="storesearchpanel.bg.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.cs.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.en-ZA.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.es-MX.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.fi.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.hi.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.nb-NO.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.pl.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.bg.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.cs.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.da.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.de.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.el.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.en-ZA.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.es-MX.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.es.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.fi.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.fr.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.hi.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.is.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.it.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.ja.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.ko.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.nb-NO.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.nl.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.pl.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.pt-BR.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.ru.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.sv.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.zh-CHS.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.zh-CHT.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.bg.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.cs.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.da.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.de.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.el.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.en-ZA.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.es-MX.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.es.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.fi.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.fr.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.hi.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.is.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.it.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.ja.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.ko.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.nb-NO.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.nl.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.pl.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.pt-BR.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.ru.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.sv.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.zh-CHS.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.zh-CHT.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoLogoPage.resx">
+      <DependentUpon>CompanyInfoLogoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.bg.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.cs.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.da.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.de.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.el.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.en-ZA.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.es-MX.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.es.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.fi.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.fr.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.hi.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.is.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.it-IT.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.it.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.ja.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.ko.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.nb-NO.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.nl.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.pl.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.pt-BR.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.bg.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.cs.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.da.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.de.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.el.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.en-ZA.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.es-MX.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.es.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.fi.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.fr.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.hi.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.is.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.it.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.ja.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.ko.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.nb-NO.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.nl.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.pl.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.pt-BR.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.ru.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.sv.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.zh-CHS.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.zh-CHT.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.ru.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.sv.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.zh-CHS.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.zh-CHT.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.bg.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.cs.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.da.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.de.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.el.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.en-ZA.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.es-MX.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.es.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.fi.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.fr.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.hi.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.is.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.it.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.ja.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.ko.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.nb-NO.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.nl.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.pl.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.pt-BR.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.ru.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.sv.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.zh-CHS.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.zh-CHT.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.bg.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.cs.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.da.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.de.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.el.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.en-ZA.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.es-MX.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.es.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.fi.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.fr.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.hi.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.is.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.it.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.ja.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.ko.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.nb-NO.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.nl.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.pl.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.pt-BR.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.ru.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.sv.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.zh-CHS.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.zh-CHT.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.bg.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.cs.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.da.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.de.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.el.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.en-ZA.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.es-MX.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.es.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.fi.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.fr.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.hi.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.is.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.it.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.ja.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.ko.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.nb-NO.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.nl.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.pl.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.pt-BR.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StorePaymentMethodPage.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.ru.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.sv.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.zh-CHS.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.zh-CHT.resx">
+      <DependentUpon>StorePaymentMethodPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.bg.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.cs.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.da.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.de.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.el.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.en-ZA.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.es-MX.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.es.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.fi.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.fr.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.hi.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSettingsPage.is.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.it.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.ja.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.ko.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.nb-NO.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.nl.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.pl.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.pt-BR.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSettingsPage.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.ru.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.sv.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.zh-CHS.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.zh-CHT.resx">
+      <DependentUpon>StoreSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.bg.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.cs.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.da.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.de.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.el.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.en-ZA.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.es-MX.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.es.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.fi.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.fr.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.hi.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.is.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.it.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.ja.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.ko.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.nb-NO.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.nl.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.pl.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.pt-BR.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderCardTypesPage.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.ru.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.sv.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.zh-CHS.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.zh-CHT.resx">
+      <DependentUpon>StoreTenderCardTypesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.bg.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.cs.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.da.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.de.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.el.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderGeneralPage.en-ZA.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderGeneralPage.es-MX.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.es.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.fi.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.fr.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.hi.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.is.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.it.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.ja.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.ko.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.nb-NO.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.nl.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.pl.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.pt-BR.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderGeneralPage.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.ru.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.sv.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.zh-CHS.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.zh-CHT.resx">
+      <DependentUpon>StoreTenderGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.bg.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.cs.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.da.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.de.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.el.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.en-ZA.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.es-MX.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.es.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.fi.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.fr.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.hi.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.is.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.it.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.ja.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.ko.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.nb-NO.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.nl.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.pl.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.pt-BR.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.ru.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.sv.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.zh-CHS.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetenderoverundertenderpage.zh-CHT.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.bg.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.cs.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.da.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.de.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.el.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.en-ZA.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.es-MX.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.es.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.fi.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.fr.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.hi.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.is.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.it.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.ja.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.ko.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.nb-NO.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.nl.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.pl.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.pt-BR.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.ru.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.sv.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.zh-CHS.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.zh-CHT.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.bg.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.cs.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.da.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.de.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.el.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.en-ZA.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.es-MX.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.es.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.fi.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.fr.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.hi.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.is.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.it.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.ja.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.ko.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.nb-NO.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.nl.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.pl.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.pt-BR.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.ru.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.sv.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.zh-CHS.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.zh-CHT.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.bg.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.cs.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.en-ZA.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.es-MX.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.fi.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.hi.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.nb-NO.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storetenderview.pl.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.bg.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.cs.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.da.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.de.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.el.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.en-ZA.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.es-MX.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.es.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.fi.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.fr.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.hi.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.is.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.it.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.ja.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.ko.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.nb-NO.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.nl.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.pl.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.pt-BR.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.ru.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.sv.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.zh-CHS.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.da.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.de.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.el.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.es.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.fr.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.is.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.it.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.ja.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.ko.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.nl.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.pt-BR.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.ru.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.sv.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.zh-CHS.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.zh-CHT.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\storeview.zh-CHT.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.da.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.de.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.el.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.es.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.fr.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.is.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.it.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.ja.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.ko.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.nl.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.pt-BR.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreSearchPanel.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.ru.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.sv.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.zh-CHS.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storesearchpanel.zh-CHT.resx">
+      <DependentUpon>StoreSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store setup green_16.png" />
+    <None Include="Resources\store setup green_24.png" />
+    <None Include="Resources\store setup_24.png" />
+    <None Include="Resources\view_32.png" />
+    <None Include="Resources\view_16.png" />
+    <None Include="Resources\templates_32.png" />
+    <None Include="Resources\templates_16.png" />
+    <None Include="Resources\store_32.png" />
+    <None Include="Resources\store_16.png" />
+    <None Include="Resources\new store_32.png" />
+    <None Include="Resources\new store_16.png" />
+    <None Include="Resources\terminal_32.png" />
+    <None Include="Resources\terminal_16.png" />
+    <None Include="Resources\new store steup_32.png" />
+    <None Include="Resources\new store steup_16.png" />
+    <None Include="Resources\FieldLinkImage.png" />
+    <None Include="Resources\CheckSymbol.png" />
+    <Content Include="Resources\Coins.png" />
+    <None Include="Resources\company information_16.png" />
+    <None Include="Resources\company information_32.png" />
+    <Content Include="Resources\Customer.png" />
+    <None Include="Resources\StoreAdd32.png" />
+    <None Include="Resources\NewTerminalImage.png" />
+    <None Include="Resources\NewStoreImage.png" />
+    <None Include="Resources\Store24.png" />
+    <None Include="_Diagrams\DataModel.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="storesearchpanel.it-IT.resx">
+      <DependentUpon>storesearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.it-IT.resx">
+      <DependentUpon>cardtypedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.it-IT.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.it-IT.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.it-IT.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.it-IT.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.it-IT.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.it-IT.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.it-IT.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.it-IT.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.it-IT.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.it-IT.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.it-IT.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.it-IT.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.it-IT.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.it-IT.resx">
+      <DependentUpon>storepaymentmethodpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.it-IT.resx">
+      <DependentUpon>storesettingspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.it-IT.resx">
+      <DependentUpon>storetendercardtypespage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.it-IT.resx">
+      <DependentUpon>storetendergeneralpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.it-IT.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.it-IT.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.it-IT.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.it-IT.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.it-IT.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="storesearchpanel.nl-BE.resx">
+      <DependentUpon>storesearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.nl-BE.resx">
+      <DependentUpon>cardtypedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.nl-BE.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.nl-BE.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.nl-BE.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.nl-BE.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.nl-BE.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.nl-BE.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.nl-BE.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.nl-BE.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.nl-BE.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.nl-BE.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.nl-BE.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.nl-BE.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.nl-BE.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.nl-BE.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.nl-BE.resx">
+      <DependentUpon>storepaymentmethodpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.nl-BE.resx">
+      <DependentUpon>storesettingspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.nl-BE.resx">
+      <DependentUpon>storetendercardtypespage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.nl-BE.resx">
+      <DependentUpon>storetendergeneralpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.nl-BE.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.nl-BE.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.nl-BE.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.nl-BE.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.nl-BE.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.bg.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.cs.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.da.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.de.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.el.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.en-ZA.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.es-MX.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.es.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.fi.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.fr.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.hi.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.is.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.it.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.ja.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.ko.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.nb-NO.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.nl-BE.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.nl.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.pl.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.pt-BR.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.ru.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.sv.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.it-IT.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="storesearchpanel.ja-JP.resx">
+      <DependentUpon>storesearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.ja-JP.resx">
+      <DependentUpon>cardtypedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.ja-JP.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.ja-JP.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.ja-JP.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.ja-JP.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.ja-JP.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.ja-JP.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.ja-JP.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.ja-JP.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.ja-JP.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.ja-JP.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.ja-JP.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.ja-JP.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.ja-JP.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.ja-JP.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.ja-JP.resx">
+      <DependentUpon>storepaymentmethodpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.ja-JP.resx">
+      <DependentUpon>storesettingspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.ja-JP.resx">
+      <DependentUpon>storetendercardtypespage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.ja-JP.resx">
+      <DependentUpon>storetendergeneralpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.ja-JP.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.ja-JP.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.ja-JP.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.ja-JP.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.ja-JP.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.ja-JP.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.ja-JP.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\RegionDialog.bg.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.cs.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.da.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.de.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.el.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.en-ZA.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.es-MX.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.es.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.fi.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.fr.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.hi.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.is.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.it.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.ja.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.ko.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.nb-NO.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.nl-BE.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.nl.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.pl.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.pt-BR.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.ru.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.sv.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.da.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.de.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.es-MX.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.es.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.fr.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.is.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.ja.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.nl-BE.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.nl.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.ru.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.sv.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.bg.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.cs.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.da.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.de.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.el.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.en-ZA.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.es-MX.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.es.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.fi.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.fr.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.hi.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.is.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.it.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.ja.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.ko.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.nb-NO.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.nl-BE.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.nl.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.pl.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.pt-BR.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.ru.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.sv.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RegionsView.fi.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RegionsView.bg.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="storesearchpanel.vi-VN.resx">
+      <DependentUpon>storesearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddStoresToRegionDialog.vi-VN.resx">
+      <DependentUpon>AddStoresToRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\cardtypedialog.vi-VN.resx">
+      <DependentUpon>cardtypedialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateStoreWizard.vi-VN.resx">
+      <DependentUpon>CreateStoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IncomeExpenseDialog.vi-VN.resx">
+      <DependentUpon>IncomeExpenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStoreDialog.vi-VN.resx">
+      <DependentUpon>NewStoreDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewStorePaymentMethodDialog.vi-VN.resx">
+      <DependentUpon>NewStorePaymentMethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RegionDialog.vi-VN.resx">
+      <DependentUpon>RegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectLocationDialog.vi-VN.resx">
+      <DependentUpon>SelectLocationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectPriceGroupDialog.vi-VN.resx">
+      <DependentUpon>SelectPriceGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\CreateStoreFirstPage.vi-VN.resx">
+      <DependentUpon>CreateStoreFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\StoreDescriptionPage.vi-VN.resx">
+      <DependentUpon>StoreDescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CardTypeGeneralPage.vi-VN.resx">
+      <DependentUpon>CardTypeGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\CompanyInfoGeneralPage.vi-VN.resx">
+      <DependentUpon>CompanyInfoGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\IncomeExpenseAccountPage.vi-VN.resx">
+      <DependentUpon>IncomeExpenseAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreFormSettingsPage.vi-VN.resx">
+      <DependentUpon>StoreFormSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreLocationPriceGroupPage.vi-VN.resx">
+      <DependentUpon>StoreLocationPriceGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreManagementAdminPage.vi-VN.resx">
+      <DependentUpon>StoreManagementAdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storepaymentmethodpage.vi-VN.resx">
+      <DependentUpon>storepaymentmethodpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storesettingspage.vi-VN.resx">
+      <DependentUpon>storesettingspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendercardtypespage.vi-VN.resx">
+      <DependentUpon>storetendercardtypespage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\storetendergeneralpage.vi-VN.resx">
+      <DependentUpon>storetendergeneralpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderOverUndertenderPage.vi-VN.resx">
+      <DependentUpon>StoreTenderOverUndertenderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreTenderUsagePage.vi-VN.resx">
+      <DependentUpon>StoreTenderUsagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CompanyInfoView.vi-VN.resx">
+      <DependentUpon>CompanyInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegionsView.vi-VN.resx">
+      <DependentUpon>RegionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresView.vi-VN.resx">
+      <DependentUpon>StoresView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreTenderView.vi-VN.resx">
+      <DependentUpon>StoreTenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoreView.vi-VN.resx">
+      <DependentUpon>StoreView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\TransactionDataProviders\TransactionDataProviders.csproj">
+      <Project>{BDDBA825-E291-480C-BF3B-979DB112B4BA}</Project>
+      <Name>TransactionDataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

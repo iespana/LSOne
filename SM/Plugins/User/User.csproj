@@ -1,0 +1,1696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C04459A8-51E9-4936-B0E3-A8A857E4EAD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.User</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.User</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.User.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.WizardOptionButton">
+      <HintPath>..\..\Build\LSOne.Controls.WizardOptionButton.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\AuthenticationTokensDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AuthenticationTokensDialog.Designer.cs">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MigrateUsersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MigrateUsersDialog.designer.cs">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewAuthenticationTokenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewAuthenticationTokenDialog.Designer.cs">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewUserGroupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewUserGroupDialog.Designer.cs">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewUserWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewUserWizard.designer.cs">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserADIdentityPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserADIdentityPage.designer.cs">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.Designer.cs">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserIdentityPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserIdentityPage.designer.cs">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserUserExistsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserUserExistsPage.designer.cs">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserUserTypePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardPages\NewUserUserTypePage.designer.cs">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserListViewItem.cs" />
+    <Compile Include="UserSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserSearchPanel.Designer.cs">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSearchPanelFactory.cs" />
+    <Compile Include="ViewPages\UserGroupsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\UserGroupsPage.Designer.cs">
+      <DependentUpon>UserGroupsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\UserPermissionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\UserPermissionPage.Designer.cs">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserGroup.Designer.cs">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UsersView.Designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.bg.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.cs.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.da.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.de.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.el.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.en-ZA.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.es-MX.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.es.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.fi.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.fr.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.hi.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.is.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.it.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.ja.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.ko.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.nb-NO.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.nl.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.pl.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.pt-BR.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.ru.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.sv.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.zh-CHS.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.zh-CHT.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.zh-CN.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.bg.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.cs.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.da.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.de.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.el.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.en-ZA.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.es-MX.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.es.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.fi.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.fr.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.hi.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.is.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.it.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.ja.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.ko.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.nb-NO.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.nl.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.pl.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.pt-BR.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.ru.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.sv.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.zh-CHS.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.zh-CHT.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.zh-CN.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.bg.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.cs.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.da.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.de.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.el.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.en-ZA.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.es-MX.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.es.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.fi.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.fr.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.hi.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.is.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.it.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.ja.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.ko.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.nb-NO.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.nl.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.pl.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.pt-BR.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.ru.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.sv.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.zh-CHS.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.zh-CHT.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.zh-CN.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.bg.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.cs.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.da.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.de.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.el.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.en-ZA.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.es-MX.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.es.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.fi.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.fr.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.hi.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.is.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.it.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.ja.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.ko.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.nb-NO.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.nl.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.pl.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.pt-BR.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.ru.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.sv.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.zh-CHS.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.zh-CHT.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.zh-CN.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.bg.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.cs.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.da.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.de.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.el.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.en-ZA.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.es-MX.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.es.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.fi.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.fr.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.hi.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.is.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.it.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.ja.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.ko.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.nb-NO.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.nl.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.pl.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.pt-BR.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserWizard.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.ru.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.sv.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.zh-CHS.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.zh-CHT.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.zh-CN.resx">
+      <DependentUpon>NewUserWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.bg.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.cs.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.da.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.de.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.el.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.en-ZA.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.es-MX.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.es.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.fi.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.fr.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.hi.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.is.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.it.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.ja.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.ko.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.nb-NO.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.nl.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.pl.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.pt-BR.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.ru.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.sv.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.zh-CHS.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.zh-CHT.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseradidentitypage.zh-CN.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.bg.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.cs.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.da.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.de.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.el.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.en-ZA.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.es-MX.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.es.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.fi.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.fr.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.hi.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.is.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.it.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.ja.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.ko.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.nb-NO.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.nl.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.pl.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.pt-BR.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.ru.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.sv.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.zh-CHS.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.zh-CHT.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserassigntogroupspage.zh-CN.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.bg.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.cs.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.da.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.de.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.el.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.en-ZA.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.es-MX.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.es.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.fi.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.fr.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.hi.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.is.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.it.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.ja.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.ko.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.nb-NO.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.nl.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.pl.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.pt-BR.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.ru.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.sv.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.zh-CHS.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.zh-CHT.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseridentitypage.zh-CN.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.bg.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.cs.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.da.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.de.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.el.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.en-ZA.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.es-MX.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.es.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.fi.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.fr.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.hi.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.is.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.it.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.ja.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.ko.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.nb-NO.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.nl.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.pl.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.pt-BR.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserUserExistsPage.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.ru.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.sv.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.zh-CHS.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.zh-CHT.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.zh-CN.resx">
+      <DependentUpon>NewUserUserExistsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.bg.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.cs.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.da.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.de.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.el.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.en-ZA.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.es-MX.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.es.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.fi.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.fr.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.hi.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserUserTypePage.is.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.it.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.ja.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.ko.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.nb-NO.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.nl.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.pl.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.pt-BR.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserUserTypePage.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.ru.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.sv.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.zh-CHS.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.zh-CHT.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.zh-CN.resx">
+      <DependentUpon>NewUserUserTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\resources.ko.resx" />
+    <EmbeddedResource Include="Properties\resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.da.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.el.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\resources.zh-CHT.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="usersearchpanel.bg.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.cs.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.da.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.de.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.el.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.en-ZA.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.es-MX.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.es.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.fi.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.fr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.hi.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.is.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.it.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.ja.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.ko.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.nb-NO.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.nl.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.pl.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.pt-BR.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.ru.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.sv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSearchPanel.zh-CHS.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.zh-CHT.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersearchpanel.zh-CN.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\UserGroupsPage.resx">
+      <DependentUpon>UserGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.bg.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.cs.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.da.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.de.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.el.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.en-ZA.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.es-MX.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.es.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.fi.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.fr.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.hi.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.is.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.it.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.ja.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.ko.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.nb-NO.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.nl.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.pl.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.pt-BR.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\UserPermissionPage.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.ru.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.sv.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.zh-CHS.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.zh-CHT.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.zh-CN.resx">
+      <DependentUpon>UserPermissionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.bg.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.cs.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.en-ZA.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.es-MX.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.fi.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.hi.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.nb-NO.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.pl.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.zh-CN.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.bg.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.cs.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.da.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.de.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.el.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.en-ZA.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.es-MX.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.es.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.fi.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.fr.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.hi.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.is.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.it.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.ja.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.ko.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.nb-NO.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.nl.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.pl.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.pt-BR.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.ru.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.sv.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.zh-CHS.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.zh-CHT.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.da.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.de.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.el.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.es.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.fr.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.is.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.it.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.ja.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.ko.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.nl.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.pt-BR.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.ru.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.sv.resx">
+      <DependentUpon>User.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.zh-CHS.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user.zh-CHT.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\usergroup.zh-CN.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.bg.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.cs.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.da.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.de.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.el.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.en-ZA.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.es-MX.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.es.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.fi.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.fr.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.hi.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.is.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.it.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.ja.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.ko.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.nb-NO.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.nl.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.pl.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.pt-BR.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.ru.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.sv.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.zh-CHS.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.zh-CHT.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.zh-CN.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeySmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserDisabledSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroupSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedLightSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenLightSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteUserSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisableLoginSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnableLoginSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewUserSmallImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Diagrams\Database.cd" />
+    <None Include="_Diagrams\User Interface.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroup24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserAddImage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroupAddImage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServerUser16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="usersearchpanel.nl-BE.resx">
+      <DependentUpon>usersearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.nl-BE.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.nl-BE.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.nl-BE.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.nl-BE.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.nl-BE.resx">
+      <DependentUpon>newuserwizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.nl-BE.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.nl-BE.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.nl-BE.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.nl-BE.resx">
+      <DependentUpon>newuseruserexistspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.nl-BE.resx">
+      <DependentUpon>newuserusertypepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.nl-BE.resx">
+      <DependentUpon>userpermissionpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.nl-BE.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.nl-BE.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.nl-BE.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroupAddImage16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security green_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security green_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new user group_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user group_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new user group_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user group_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SSuser_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check inverted_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification inverted_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabled user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="usersearchpanel.vi-VN.resx">
+      <DependentUpon>usersearchpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationTokensDialog.vi-VN.resx">
+      <DependentUpon>AuthenticationTokensDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MigrateUsersDialog.vi-VN.resx">
+      <DependentUpon>MigrateUsersDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAuthenticationTokenDialog.vi-VN.resx">
+      <DependentUpon>NewAuthenticationTokenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewUserGroupDialog.vi-VN.resx">
+      <DependentUpon>NewUserGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\newuserwizard.vi-VN.resx">
+      <DependentUpon>newuserwizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserADIdentityPage.vi-VN.resx">
+      <DependentUpon>NewUserADIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserAssignToGroupsPage.vi-VN.resx">
+      <DependentUpon>NewUserAssignToGroupsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\NewUserIdentityPage.vi-VN.resx">
+      <DependentUpon>NewUserIdentityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuseruserexistspage.vi-VN.resx">
+      <DependentUpon>newuseruserexistspage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardPages\newuserusertypepage.vi-VN.resx">
+      <DependentUpon>newuserusertypepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\userpermissionpage.vi-VN.resx">
+      <DependentUpon>userpermissionpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User.vi-VN.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserGroup.vi-VN.resx">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.vi-VN.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\ViewDialogs\ViewDialogs.csproj">
+      <Project>{632D48D8-FBAF-420E-8A2C-25B50466165F}</Project>
+      <Name>ViewDialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

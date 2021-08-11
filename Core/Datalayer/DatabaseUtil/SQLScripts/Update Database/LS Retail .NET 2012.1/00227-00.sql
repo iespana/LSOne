@@ -1,0 +1,24 @@
+﻿/*
+
+	Incident No.	: xxx
+	Responsible		: Guðbjörn Einarsson
+	Sprint			: LS Retail .NET 2013\Mercury
+	Date created	: 15.08.2012
+
+	Description		: Add column SCREENNUMBER to KMINTERFACEPROFILE
+	
+	
+	Tables affected	: KMINTERFACEPROFILE
+						
+*/
+
+USE LSPOSNET
+
+GO
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('KMINTERFACEPROFILE') AND NAME='SCREENNUMBER')
+BEGIN
+	ALTER TABLE dbo.KMINTERFACEPROFILE ADD SCREENNUMBER INT NULL
+
+END
+GO

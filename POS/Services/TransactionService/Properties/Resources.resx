@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NoTransactionsFoundForReceipt" xml:space="preserve">
+    <value>No sales were found with this receipt ID</value>
+    <comment>[Term:21836]</comment>
+  </data>
+  <data name="SaleCouldNotBeRetrievedOrFound" xml:space="preserve">
+    <value>The sale could not be retrieved or found</value>
+    <comment>[Term:21911]</comment>
+  </data>
+  <data name="CouldNotConnectToSiteService" xml:space="preserve">
+    <value>Could not connect to retrieve sale information. Please make sure the Site service is up and running.</value>
+    <comment>[Term:21910]</comment>
+  </data>
+  <data name="ReceiptAlreadyBeenReturned" xml:space="preserve">
+    <value>This receipt (#1) has already been returned into the current sale.</value>
+    <comment>[Term:21837]</comment>
+  </data>
+  <data name="TenderRemovalRequired" xml:space="preserve">
+    <value>Tender removal required for #1</value>
+    <comment>[Term:22392]</comment>
+  </data>
+  <data name="YouSelectedItemWithHigherThanAllowed" xml:space="preserve">
+    <value>You have selected an item which has a higher price than you're allowed to return</value>
+    <comment>[Term:18083]</comment>
+  </data>
+  <data name="NotAllowedToReturnTransaction" xml:space="preserve">
+    <value>You are not allowed to return this transaction because the amount is higher than maximum amount that your allowed to return.</value>
+    <comment>[Term:16368]</comment>
+  </data>
+  <data name="EnterAReceiptId" xml:space="preserve">
+    <value>Enter a receipt ID</value>
+    <comment>[Term:17654]</comment>
+  </data>
+  <data name="NoItemsAreSelected" xml:space="preserve">
+    <value>No items are selected.</value>
+    <comment>[Term:17487]</comment>
+  </data>
+  <data name="TransactionWithoutReturnableItems" xml:space="preserve">
+    <value>This transaction does not include any items that can be returned.</value>
+    <comment>[Term:17656]</comment>
+  </data>
+  <data name="NoGifteceiptForReturnSale" xml:space="preserve">
+    <value> A gift receipt cannot be printed for a return sale.</value>
+    <comment>[Term:22595]</comment>
+  </data>
+  <data name="GettingTransaction" xml:space="preserve">
+    <value>Getting transaction</value>
+    <comment>[Term:22784]</comment>
+  </data>
+  <data name="TaxFreeHasNotBeenConfigured" xml:space="preserve">
+    <value>Tax free has not been configured</value>
+    <comment>[Term:22584]</comment>
+  </data>
+  <data name="AttachedIsYourReceipt" xml:space="preserve">
+    <value>Attached is your receipt.</value>
+    <comment>[Term:23334]</comment>
+  </data>
+  <data name="NoEmailAddressReceiptsCannotBeSent" xml:space="preserve">
+    <value>No email address can be found. The receipt will not be sent</value>
+    <comment>[Term:23345]</comment>
+  </data>
+  <data name="ThankYouForShoppingAt" xml:space="preserve">
+    <value>Thank you for shopping at {0}</value>
+    <comment>[Term:23352]</comment>
+  </data>
+  <data name="EmailHasNotBeenConfiguredNoEmailsWillBeSent" xml:space="preserve">
+    <value>Email configuration have not been sent so no email functionality will be available.</value>
+    <comment>[Term:23338]</comment>
+  </data>
+  <data name="EmailingReceipts" xml:space="preserve">
+    <value>Emailing receipts</value>
+    <comment>[Term:23339]</comment>
+  </data>
+  <data name="EmailsCanOnlyBeSentAfterCloseAndRestart" xml:space="preserve">
+    <value>To start sending emails after configurations have to be sent the POS needs to be closed and opened again.</value>
+    <comment>[Term:23354]</comment>
+  </data>
+  <data name="FinalisingTransaction" xml:space="preserve">
+    <value>Finalising transaction</value>
+    <comment>[Term:23332]</comment>
+  </data>
+  <data name="PostingSaleInformation" xml:space="preserve">
+    <value>Posting sale information</value>
+    <comment>[Term:23333]</comment>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Printing...</value>
+    <comment>[Term:17267]</comment>
+  </data>
+  <data name="SendingFiscalInformation" xml:space="preserve">
+    <value>Posting fiscal information</value>
+    <comment>[Term:23346]</comment>
+  </data>
+  <data name="SendingToHeadOffice" xml:space="preserve">
+    <value>Sending sale to head office...</value>
+    <comment>[Term:23350]</comment>
+  </data>
+  <data name="UpdatingCreditMemoAndGiftCardInformation" xml:space="preserve">
+    <value>Updating credit memo and gift card information</value>
+    <comment>[Term:23355]</comment>
+  </data>
+  <data name="UpdatingCustomerLedger" xml:space="preserve">
+    <value>Updating customer ledger information</value>
+    <comment>[Term:23356]</comment>
+  </data>
+  <data name="UpdatingLoyaltyInformation" xml:space="preserve">
+    <value>Updating loyalty information</value>
+    <comment>[Term:23357]</comment>
+  </data>
+  <data name="UpdatingSerialNumberInformation" xml:space="preserve">
+    <value>Updating serial number information</value>
+    <comment>[Term:23358]</comment>
+  </data>
+  <data name="CreditMemoInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Credit memo information cannot be updated without a Site service connection</value>
+    <comment>[Term:23335]</comment>
+  </data>
+  <data name="CustomerOrderCannotBeProcessedWithoutASiteServiceconnection" xml:space="preserve">
+    <value>The customer order cannot be processed without a Site service connection</value>
+    <comment>[Term:23353]</comment>
+  </data>
+  <data name="CustomerPaymentInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Customer account payment information cannot be updated without a Site service connection</value>
+    <comment>[Term:23337]</comment>
+  </data>
+  <data name="GiftCardInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Gift card information cannot be updated without a Site service connection</value>
+    <comment>[Term:23340]</comment>
+  </data>
+  <data name="GiftCardPaymentInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Gift card payment information cannot be updated without a Site service connection</value>
+    <comment>[Term:23341]</comment>
+  </data>
+  <data name="LoyaltyInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Loyalty information cannot be updated without a Site service connection</value>
+    <comment>[Term:23344]</comment>
+  </data>
+  <data name="LoyaltyPaymentInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Loyalty card payment information cannot be updated without a Site service connection</value>
+    <comment>[Term:23343]</comment>
+  </data>
+  <data name="PrescriptionInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Prescription information cannot be updated without a site service connection</value>
+    <comment>[Term:23347]</comment>
+  </data>
+  <data name="SerialNumberInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Serial number information cannot be updated without a Site service connection</value>
+    <comment>[Term:23351]</comment>
+  </data>
+  <data name="ReturnInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Information on returned items cannot be updated without a Site service connection</value>
+    <comment>[Term:23342]</comment>
+  </data>
+  <data name="SalesInvoiceInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Sales invoice information cannot be updated without a Site service connection</value>
+    <comment>[Term:23348]</comment>
+  </data>
+  <data name="SalesOrderInformationCannotBeUpdatedWithoutASiteServiceConnection" xml:space="preserve">
+    <value>Sales order information cannot be updated without a Site service connection</value>
+    <comment>[Term:23349]</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DialogMessage_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DialogMessage_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CreatingParkedInventoryJournal" xml:space="preserve">
+    <value>Creating parked inventory journal</value>
+    <comment>[Term:23922]</comment>
+  </data>
+  <data name="AddedEnd" xml:space="preserve">
+    <value>added.</value>
+  </data>
+  <data name="OperationInvalidForTransaction" xml:space="preserve">
+    <value>This operation is invalid for this type of transaction</value>
+  </data>
+  <data name="SalesPerson" xml:space="preserve">
+    <value>Sales person</value>
+  </data>
+  <data name="ReceiptID" xml:space="preserve">
+    <value>Receipt ID</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ClearSelection" xml:space="preserve">
+    <value>Clear selection</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="SelectLine" xml:space="preserve">
+    <value>Select line</value>
+  </data>
+  <data name="SavingReceipt" xml:space="preserve">
+    <value>Saving receipt</value>
+  </data>
+</root>

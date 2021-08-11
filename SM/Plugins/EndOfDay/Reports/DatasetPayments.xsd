@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatasetPayments" targetNamespace="http://tempuri.org/DatasetPayments.xsd" xmlns:mstns="http://tempuri.org/DatasetPayments.xsd" xmlns="http://tempuri.org/DatasetPayments.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatasetPayments" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DatasetPayments" msprop:Generator_UserDSName="DatasetPayments">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Payments" msprop:Generator_UserTableName="Payments" msprop:Generator_RowEvArgName="PaymentsRowChangeEvent" msprop:Generator_TableVarName="tablePayments" msprop:Generator_TablePropName="Payments" msprop:Generator_RowDeletingName="PaymentsRowDeleting" msprop:Generator_RowChangingName="PaymentsRowChanging" msprop:Generator_RowDeletedName="PaymentsRowDeleted" msprop:Generator_RowEvHandlerName="PaymentsRowChangeEventHandler" msprop:Generator_TableClassName="PaymentsDataTable" msprop:Generator_RowChangedName="PaymentsRowChanged" msprop:Generator_RowClassName="PaymentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenderID" msprop:Generator_ColumnVarNameInTable="columnTenderID" msprop:Generator_ColumnPropNameInRow="TenderID" msprop:Generator_ColumnPropNameInTable="TenderIDColumn" msprop:Generator_UserColumnName="TenderID" type="xs:string" />
+              <xs:element name="TenderText" msprop:Generator_ColumnVarNameInTable="columnTenderText" msprop:Generator_ColumnPropNameInRow="TenderText" msprop:Generator_ColumnPropNameInTable="TenderTextColumn" msprop:Generator_UserColumnName="TenderText" type="xs:string" minOccurs="0" />
+              <xs:element name="TenderUnits" msprop:Generator_ColumnVarNameInTable="columnTenderUnits" msprop:Generator_ColumnPropNameInRow="TenderUnits" msprop:Generator_ColumnPropNameInTable="TenderUnitsColumn" msprop:Generator_UserColumnName="TenderUnits" type="xs:int" minOccurs="0" />
+              <xs:element name="TenderAmount" msprop:Generator_ColumnVarNameInTable="columnTenderAmount" msprop:Generator_ColumnPropNameInRow="TenderAmount" msprop:Generator_ColumnPropNameInTable="TenderAmountColumn" msprop:Generator_UserColumnName="TenderAmount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CardTypes" msprop:Generator_UserTableName="CardTypes" msprop:Generator_RowEvArgName="CardTypesRowChangeEvent" msprop:Generator_TableVarName="tableCardTypes" msprop:Generator_TablePropName="CardTypes" msprop:Generator_RowDeletingName="CardTypesRowDeleting" msprop:Generator_RowChangingName="CardTypesRowChanging" msprop:Generator_RowDeletedName="CardTypesRowDeleted" msprop:Generator_RowEvHandlerName="CardTypesRowChangeEventHandler" msprop:Generator_TableClassName="CardTypesDataTable" msprop:Generator_RowChangedName="CardTypesRowChanged" msprop:Generator_RowClassName="CardTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TenderID" msprop:Generator_ColumnVarNameInTable="columnTenderID" msprop:Generator_ColumnPropNameInRow="TenderID" msprop:Generator_ColumnPropNameInTable="TenderIDColumn" msprop:Generator_UserColumnName="TenderID" type="xs:string" />
+              <xs:element name="CardTenderID" msprop:Generator_ColumnVarNameInTable="columnCardTenderID" msprop:Generator_ColumnPropNameInRow="CardTenderID" msprop:Generator_ColumnPropNameInTable="CardTenderIDColumn" msprop:Generator_UserColumnName="CardTenderID" type="xs:string" />
+              <xs:element name="CardTypeName" msprop:Generator_ColumnVarNameInTable="columnCardTypeName" msprop:Generator_ColumnPropNameInRow="CardTypeName" msprop:Generator_ColumnPropNameInTable="CardTypeNameColumn" msprop:Generator_UserColumnName="CardTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="CardTypeAmount" msprop:Generator_ColumnVarNameInTable="columnCardTypeAmount" msprop:Generator_ColumnPropNameInRow="CardTypeAmount" msprop:Generator_ColumnPropNameInTable="CardTypeAmountColumn" msprop:Generator_UserColumnName="CardTypeAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="CardTypeUnits" msprop:Generator_ColumnVarNameInTable="columnCardTypeUnits" msprop:Generator_ColumnPropNameInRow="CardTypeUnits" msprop:Generator_ColumnPropNameInTable="CardTypeUnitsColumn" msprop:Generator_UserColumnName="CardTypeUnits" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Payments" />
+      <xs:field xpath="mstns:TenderID" />
+    </xs:unique>
+    <xs:unique name="CardTypes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CardTypes" />
+      <xs:field xpath="mstns:TenderID" />
+      <xs:field xpath="mstns:CardTenderID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Payments_CardTypes" msdata:parent="Payments" msdata:child="CardTypes" msdata:parentkey="TenderID" msdata:childkey="TenderID" msprop:Generator_UserChildTable="CardTypes" msprop:Generator_ChildPropName="GetCardTypesRows" msprop:Generator_UserRelationName="Payments_CardTypes" msprop:Generator_RelationVarName="relationPayments_CardTypes" msprop:Generator_UserParentTable="Payments" msprop:Generator_ParentPropName="PaymentsRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE846D9C-1385-461B-94BC-75372A469086}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSOne.ViewPlugins.CentralSuspensions</RootNamespace>
+    <AssemblyName>LSOne.ViewPlugins.CentralSuspensions</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Install|AnyCPU'">
+    <OutputPath>bin\Install\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\LSRetail.StoreController.HelloWorld.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSOne.Controls">
+      <HintPath>..\..\Build\LSOne.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ContextBar">
+      <HintPath>..\..\Build\LSOne.Controls.ContextBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DataControls">
+      <HintPath>..\..\Build\LSOne.Controls.DataControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.DropDownForm">
+      <HintPath>..\..\Build\LSOne.Controls.DropDownForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.ListView">
+      <HintPath>..\..\Build\LSOne.Controls.ListView.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.OperationPanel">
+      <HintPath>..\..\Build\LSOne.Controls.OperationPanel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.SearchBar">
+      <HintPath>..\..\Build\LSOne.Controls.SearchBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Controls.Shared">
+      <HintPath>..\..\Build\LSOne.Controls.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.Utilities">
+      <HintPath>..\..\Build\LSOne.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LSOne.ViewCore">
+      <HintPath>..\..\Build\LSOne.ViewCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dialogs\SuspensionFieldDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SuspensionFieldDialog.Designer.cs">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewSuspensionsTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewSuspensionsTypeDialog.Designer.cs">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginEntry.cs" />
+    <Compile Include="PluginOperations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSuspendTransactionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\TerminalSuspendTransactionsPage.Designer.cs">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPages\StoreSuspendTransactionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPages\StoreSuspendTransactionsPage.Designer.cs">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionsView.designer.cs">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionTypeView.designer.cs">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionsTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SuspendedTransactionsTypeView.Designer.cs">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Diagrams\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.bg.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.cs.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.da.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.de.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.el.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.es.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.fi.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.fr.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.hi.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.is.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.it.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.ja.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.ko.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.nb-NO.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.nl.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.pl.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.pt-BR.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.ru.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.sv.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.zh-CHS.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.zh-CHT.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.bg.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.cs.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.da.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.de.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.el.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.es.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.fi.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.fr.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.hi.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.is.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.it.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.ja.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.ko.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.nb-NO.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.nl.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.pl.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.pt-BR.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.ru.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.sv.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.zh-CHS.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.zh-CHT.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bg.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.da.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.el.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-ZA.resx" />
+    <EmbeddedResource Include="Properties\Resources.es-MX.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fi.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nb-NO.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-BE.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.is.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sv.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHS.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx" />
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.bg.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.cs.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.da.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.de.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.el.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.es.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.fi.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.fr.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.hi.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.is.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.it.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.ja.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.ko.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.nb-NO.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.nl.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.pl.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.pt-BR.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.ru.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.sv.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.zh-CHS.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.zh-CHT.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.bg.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.cs.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.da.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.de.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.el.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.es.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.fi.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.fr.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.hi.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.is.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.it.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.ja.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.ko.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.nb-NO.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.nl.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.pl.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.pt-BR.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.ru.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.sv.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.zh-CHS.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.zh-CHT.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.bg.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.cs.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.da.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.de.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.el.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.es.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.fi.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.fr.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.hi.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.is.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.it.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.ja.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.ko.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.nb-NO.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.nl.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.pl.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.pt-BR.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.ru.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.sv.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.zh-CHS.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.zh-CHT.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.bg.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.cs.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.da.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.de.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.el.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.es.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.fi.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.fr.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.hi.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.is.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.it.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.ja.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.ko.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.nb-NO.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.nl.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.pl.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.pt-BR.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.ru.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.sv.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.zh-CHS.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.zh-CHT.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.bg.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.cs.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.da.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.de.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.el.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.es.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.fi.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.fr.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.hi.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.is.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.it.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.ja.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.ko.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.nb-NO.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.nl.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.pl.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.pt-BR.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.ru.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.sv.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.zh-CHS.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.zh-CHT.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transaction16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.en-ZA.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.es-MX.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.it-IT.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.en-ZA.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.es-MX.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.it-IT.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.en-ZA.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.es-MX.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.it-IT.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.en-ZA.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.es-MX.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.it-IT.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.en-ZA.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.es-MX.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.it-IT.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.en-ZA.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.es-MX.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.it-IT.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.en-ZA.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.es-MX.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.it-IT.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.nl-BE.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.nl-BE.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.nl-BE.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.nl-BE.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.nl-BE.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.nl-BE.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.nl-BE.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuspTransaction32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspended_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspended_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\NewSuspensionsTypeDialog.vi-VN.resx">
+      <DependentUpon>NewSuspensionsTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SuspensionFieldDialog.vi-VN.resx">
+      <DependentUpon>SuspensionFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\StoreSuspendTransactionsPage.vi-VN.resx">
+      <DependentUpon>StoreSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPages\TerminalSuspendTransactionsPage.vi-VN.resx">
+      <DependentUpon>TerminalSuspendTransactionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsTypeView.vi-VN.resx">
+      <DependentUpon>SuspendedTransactionsTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionsView.vi-VN.resx">
+      <DependentUpon>SuspendedTransactionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SuspendedTransactionTypeView.vi-VN.resx">
+      <DependentUpon>SuspendedTransactionTypeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>start /MIN XCopy "$(TargetDir)*$(TargetName).*" "$(ProjectDir)..\..\Build\Plugins" /S /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Datalayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{EA065047-ECF6-461D-932D-B86F65BA35A2}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\DataProviders\DataProviders.csproj">
+      <Project>{A89CCB7C-4BF2-4840-9C2A-765A19EEDE1D}</Project>
+      <Name>DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Datalayer\GenericConnector\GenericConnector.csproj">
+      <Project>{FDE0C333-8073-4774-A412-ADD8CCCF805C}</Project>
+      <Name>GenericConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Service_interfaces\ServiceInterfaces\ServiceInterfaces.csproj">
+      <Project>{FEECB18D-CB75-447C-B96E-FB13C8AAC5AA}</Project>
+      <Name>ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

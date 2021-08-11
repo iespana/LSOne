@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountSelectionCannotBeEmpty" xml:space="preserve">
+    <value>Val á lykli má ekki vera tómt</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Virkja</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Bæta við</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Allt</value>
+  </data>
+  <data name="CannotSortByThisColumn" xml:space="preserve">
+    <value>Ekki var hægt að raða eftir þessum dálki</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Litur</value>
+  </data>
+  <data name="CouldNotDeleteLineGroup" xml:space="preserve">
+    <value>Ekki var hægt að eyða línuflooki þar sem hann er í notkun</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Viðskiptamaður</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Óvirkja</value>
+  </data>
+  <data name="DealPrice" xml:space="preserve">
+    <value>Tilboðsverð</value>
+  </data>
+  <data name="DealPriceDiscountPct" xml:space="preserve">
+    <value>Tilboðsverð / afsláttarprósenta</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Sjálfgefin búð hefur ekki VSK flokk á sér</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eyða</value>
+  </data>
+  <data name="DeleteDiscountOffer" xml:space="preserve">
+    <value>Eyða afsláttartilboði</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Eyða afsláttartilboðslínu</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni afsláttartilboðslínu?</value>
+  </data>
+  <data name="DeleteDiscountOfferLines" xml:space="preserve">
+    <value>Eyða afsláttartilboðslínum</value>
+  </data>
+  <data name="DeleteDiscountOfferLinesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum afsláttartilboðslínum?</value>
+  </data>
+  <data name="DeleteDiscountOfferQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni afsláttartilboðslínu?</value>
+  </data>
+  <data name="DeleteDiscountPeriod" xml:space="preserve">
+    <value>Eyða afsláttartímabili</value>
+  </data>
+  <data name="DeleteDiscountPeriodQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni afsláttartilboðslínu?</value>
+  </data>
+  <data name="DeleteLineGroup" xml:space="preserve">
+    <value>Eyða línuflokki</value>
+  </data>
+  <data name="DeleteLineGroupQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum línuflokki?</value>
+  </data>
+  <data name="DeleteLineGroups" xml:space="preserve">
+    <value>Eyða línuflokkum</value>
+  </data>
+  <data name="DeleteLineGroupsQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum línuflokkum?</value>
+  </data>
+  <data name="DeleteMixAndMatch" xml:space="preserve">
+    <value>Eyða mix og match tilboði</value>
+  </data>
+  <data name="DeleteMixAndMatchQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdu mix og match tilboði?</value>
+  </data>
+  <data name="DeleteMultibuy" xml:space="preserve">
+    <value>Eyða magnkaupsstillingu</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Eyða magnkaupslínu</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni magnkaupslínu?</value>
+  </data>
+  <data name="DeleteMultibuyLines" xml:space="preserve">
+    <value>Eyða magnkaupslínum</value>
+  </data>
+  <data name="DeleteMultibuyLinesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum magnkaupslínum?</value>
+  </data>
+  <data name="DeleteMultibuyQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljlir eyða valinni magnkaupsuppsetningu?</value>
+  </data>
+  <data name="DeletePriceGroup" xml:space="preserve">
+    <value>Eyða verðflokki</value>
+  </data>
+  <data name="DeletePriceGroupQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum verðflokki ?</value>
+  </data>
+  <data name="DeletePromotion" xml:space="preserve">
+    <value>Eyða kynningu</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Eyða kynningarlínu</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni kynningarlínu?</value>
+  </data>
+  <data name="DeletePromotionLines" xml:space="preserve">
+    <value>Eypa kynningarlínum</value>
+  </data>
+  <data name="DeletePromotionLinesQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða völdum kynningarlínum?</value>
+  </data>
+  <data name="DeletePromotionQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valinni kynningu?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroup" xml:space="preserve">
+    <value>Eyða búð úr verðflokki</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroupQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir eyða valdri búð úr verðflokknum ?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Lýsing</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Óvirkja</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Óvirkt</value>
+  </data>
+  <data name="DiscountExceedsPrice" xml:space="preserve">
+    <value>Afsláttur getur ekki verið hærri en verðið</value>
+  </data>
+  <data name="DiscountOffer" xml:space="preserve">
+    <value>Afsláttartilboð</value>
+  </data>
+  <data name="DiscountOfferLines" xml:space="preserve">
+    <value>Afsláttartilboðslínur</value>
+  </data>
+  <data name="DiscountOffers" xml:space="preserve">
+    <value>Afsláttartilboð</value>
+  </data>
+  <data name="DiscountOffersDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða og breyta afsláttar tilboðum</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Afsláttur %</value>
+  </data>
+  <data name="DiscountPercentCannotBeZero" xml:space="preserve">
+    <value>Afsláttarprósenta má ekki vera núll</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Afslættir</value>
+  </data>
+  <data name="DiscountsDescription" xml:space="preserve">
+    <value>Birtir valmynd fyrir afsláttaraðgerðir</value>
+  </data>
+  <data name="DiscountType" xml:space="preserve">
+    <value>Tegund afsláttar</value>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Breyta öllum</value>
+  </data>
+  <data name="EditDiscount" xml:space="preserve">
+    <value>Breyta afslætti</value>
+  </data>
+  <data name="EditPriority" xml:space="preserve">
+    <value>Breyta forgangi</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Breyta</value>
+  </data>
+  <data name="EditTypeNone" xml:space="preserve">
+    <value>Engin</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Virkja</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Virkt</value>
+  </data>
+  <data name="ErrorSomeDataHasBeenDeleted" xml:space="preserve">
+    <value>Villa: Einhverjum gögnum hefur verið eytt</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Hópur</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Auðkenni</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Vara</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Vara hefur ekki VSK flokk á sér</value>
+  </data>
+  <data name="ItemRelation" xml:space="preserve">
+    <value>Vöruvensl</value>
+  </data>
+  <data name="LevelMustBeAPositiveNumber" xml:space="preserve">
+    <value>Stig verður að vera jákvæð tala</value>
+  </data>
+  <data name="LineGroup" xml:space="preserve">
+    <value>Línuflokkur</value>
+  </data>
+  <data name="MBConfigHeaderPercent" xml:space="preserve">
+    <value>Settu inn einkvæmt lágmarks magn og afsláttarprósentu</value>
+  </data>
+  <data name="MixAndMatch" xml:space="preserve">
+    <value>Blönduð tilboð</value>
+  </data>
+  <data name="MixAndMatchDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða eða breyta mix og match tilboðum</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Línuflokkur blandaðra tilboða</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Línur blandaðra tilboða</value>
+  </data>
+  <data name="MixMatch" xml:space="preserve">
+    <value>Blönduð tilboð</value>
+  </data>
+  <data name="Multibuy" xml:space="preserve">
+    <value>Magnkaup</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Magnkaupsstillingar</value>
+  </data>
+  <data name="MultibuyDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða eða breyta magnkaupsstillingum</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Magnkaupslínur</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Engin sjálfgefin búð er valin</value>
+  </data>
+  <data name="NoDiscountsAreActive" xml:space="preserve">
+    <value>Engir afslættir eru virkir</value>
+  </data>
+  <data name="NoDiscountsAreConfigured" xml:space="preserve">
+    <value>Engir afslættir hafa verið stilltir</value>
+  </data>
+  <data name="OfferCount" xml:space="preserve">
+    <value>#1 tilboð fundust</value>
+  </data>
+  <data name="OfferLinesCount" xml:space="preserve">
+    <value>#1 línur fundust</value>
+  </data>
+  <data name="OfferLinesLoaded" xml:space="preserve">
+    <value>#1 línur hlaðnar (af #2)</value>
+  </data>
+  <data name="OneDiscountIsExpiringThisWeek" xml:space="preserve">
+    <value>1 afsláttur er að renna út í þessari viku</value>
+  </data>
+  <data name="OneDiscountsIsActive" xml:space="preserve">
+    <value>1 afsláttur er virkur</value>
+  </data>
+  <data name="PeriodicDiscountPriorities" xml:space="preserve">
+    <value>Forgangsröðun tímabundinna afslátta</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að forgangsraða tímabundnum afsláttum</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Tímabilsafslættir</value>
+  </data>
+  <data name="PeriodicDiscountsManage" xml:space="preserve">
+    <value>Birta</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Verð/afslættir</value>
+  </data>
+  <data name="PriceGroupDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða og breyta verðflokkum</value>
+  </data>
+  <data name="PriceGroupExists" xml:space="preserve">
+    <value>Verðflokkur með þetta auðkenni er nú þegar til</value>
+  </data>
+  <data name="PriceGroups" xml:space="preserve">
+    <value>Verðflokkar</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Verð</value>
+  </data>
+  <data name="PricesAndDiscounts" xml:space="preserve">
+    <value>Verð og afslættir</value>
+  </data>
+  <data name="PricesDescription" xml:space="preserve">
+    <value>Birtir valmynd fyrir verðatriði</value>
+  </data>
+  <data name="PriceUnit" xml:space="preserve">
+    <value>Einingaverð</value>
+  </data>
+  <data name="PriceUnitIncludingTax" xml:space="preserve">
+    <value>Einingaverð með skatti</value>
+  </data>
+  <data name="PriorityAlreadyInUse" xml:space="preserve">
+    <value>Þessi forgangur er í notkun á öðrum tímabundnum afslætti</value>
+  </data>
+  <data name="PriorityAlreadyInUseNextIs" xml:space="preserve">
+    <value>Þessi forgangur er í notkun á öðrum tímabundnum afslætti. Næsti lausi forgangur er #1</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Kynningarlínur</value>
+  </data>
+  <data name="PromotionOffer" xml:space="preserve">
+    <value>Línur kynningartilboðs</value>
+  </data>
+  <data name="PromotionOffers" xml:space="preserve">
+    <value>Kynningartilboð</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Kynningar</value>
+  </data>
+  <data name="PromotionsDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða eða breyta kynningum</value>
+  </data>
+  <data name="RelationExists" xml:space="preserve">
+    <value>Tilboðslína með þessi tengsl er nú þegar til</value>
+  </data>
+  <data name="RemoveConfiguration" xml:space="preserve">
+    <value>Fjarlæga stillingu</value>
+  </data>
+  <data name="RemoveConfigurationQuestion" xml:space="preserve">
+    <value>Ertu viss um að þú viljir fjarlæga valda stillingu?</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Verslun</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Vörudeild</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Smásöluflokkur</value>
+  </data>
+  <data name="RetailItemNotExistsError" xml:space="preserve">
+    <value>Vörunni sem er tengd við þessa færslu hefur verið eytt. Vinsamlegast eyðið þessari færslu til að laga þetta vandamál.</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Veldu aðgerð</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Uppsetning</value>
+  </data>
+  <data name="ShowOffer" xml:space="preserve">
+    <value>Sýna tilboð</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Stærð</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Sérstakur</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Sérstakur flokkur</value>
+  </data>
+  <data name="StandardPriceIsZero" xml:space="preserve">
+    <value>Staðalverð er núll</value>
+  </data>
+  <data name="StoreAlreadyInPriceGroup" xml:space="preserve">
+    <value>Valin búð er þegar í völdum verðflokk</value>
+  </data>
+  <data name="StoresInPriceGroups" xml:space="preserve">
+    <value>Búðir í verðflokkum</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Stíll</value>
+  </data>
+  <data name="ThatMinimumQuantityExists" xml:space="preserve">
+    <value>Þetta lágmark magn er nú þegar til</value>
+  </data>
+  <data name="TimeDoesNotEndAfterMidnight" xml:space="preserve">
+    <value>Tímabil líkur ekki eftir miðnætti
+</value>
+  </data>
+  <data name="TimeEndsAfterMidnight" xml:space="preserve">
+    <value>Tímabil líkur eftir miðnætti</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tegund</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Afturkalla</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Einingaverð</value>
+  </data>
+  <data name="ValidationPeriodDescription" xml:space="preserve">
+    <value>Veldu þennan kost til að skoða eða breyta gildistímabilum</value>
+  </data>
+  <data name="ValidationPeriods" xml:space="preserve">
+    <value>Gildistímar</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Afbrigðisnúmer</value>
+  </data>
+  <data name="VariationNotExistsError" xml:space="preserve">
+    <value>Breytileikanum sem þessi fæsla notar hefur verið eytt. Vinsamlegast eyðið þessari færlsu til þess að laga vandamálið.</value>
+  </data>
+  <data name="ViewConflictingPriorities" xml:space="preserve">
+    <value>Þessi forgangur er í notkun á öðrum tímabundnum afslætti. Smelltu hér til að skoða forgangsröðun</value>
+  </data>
+  <data name="ViewPriorities" xml:space="preserve">
+    <value>Skoða forgangsröðun</value>
+  </data>
+  <data name="XDiscountsAreActive" xml:space="preserve">
+    <value>#1 afslættir eru virkir</value>
+  </data>
+  <data name="XDiscountsAreExpiringThisWeek" xml:space="preserve">
+    <value>#1 aflættir eru að renna út í þessari viku</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Já</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Afbrigði</value>
+  </data>
+  <data name="DiscountValuesAreMissing" xml:space="preserve">
+    <value>Gildi fyrir afslátt vantar</value>
+  </data>
+  <data name="PriceValuesAreMissing" xml:space="preserve">
+    <value>Gildi fyrir verð vantar</value>
+  </data>
+  <data name="VariantNeedsToBeSelected" xml:space="preserve">
+    <value>Vöruafbrigði þarf að vera valið fyrir vörur sem hafa afbrigði</value>
+  </data>
+  <data name="AmountMayNotBeHigherThanBasePrice" xml:space="preserve">
+    <value>Upphæð afsláttar má ekki vera hærri en grunnverð á vörunni</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Verð</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Forgangur</value>
+  </data>
+  <data name="BarcodeAlreadyAssignedToAnOffer" xml:space="preserve">
+    <value>Þetta strikamerki tilheyrir nú þegar öðru tilboði</value>
+  </data>
+  <data name="MovePriorityDown" xml:space="preserve">
+    <value>Færa niður</value>
+  </data>
+  <data name="MovePriorityUp" xml:space="preserve">
+    <value>Færa upp</value>
+  </data>
+  <data name="DiscountOffersTooltipDescription" xml:space="preserve">
+    <value>Umsjón með afsláttartilboðum fyrir vörur, smásöluflokka og deildir</value>
+  </data>
+  <data name="MixAndMatchTooltipDescription" xml:space="preserve">
+    <value>Uppsetning blandaðra tilboða, til að gefa afslátt af hvaða samsetningu vara sem er</value>
+  </data>
+  <data name="MultibuyTooltipDescription" xml:space="preserve">
+    <value>Uppsetning magnkaupa, sem tengjast magni seldrar vöru</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesTooltipDescription" xml:space="preserve">
+    <value>Umsjón með forgangi allra afsláttartilboða. Forgangurinn er notaður þegar mörg tilboð innihalda sömu vöru.</value>
+  </data>
+  <data name="PromotionsTooltipDescription" xml:space="preserve">
+    <value>Umsjón með kynningarverðum fyrir vörur, smásöluflokka og deildir</value>
+  </data>
+  <data name="ValidationPeriodTooltipDescription" xml:space="preserve">
+    <value>Umsjón gildistíma fyrir afsláttartilboð og kynningar</value>
+  </data>
+</root>

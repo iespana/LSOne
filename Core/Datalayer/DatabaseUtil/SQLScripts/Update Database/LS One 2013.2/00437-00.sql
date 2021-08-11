@@ -1,0 +1,36 @@
+﻿/* 
+        Incident No.: N/A 
+        Responsible : Höður Sigurdór Heiðarsson
+        Sprint		: LS One 2013.1\July, August, September
+        Date created: 14.10.13 
+        Description	: Update FORMTYPEID to match system types
+*/ 
+USE LSPOSNET 
+GO 
+IF EXISTS (select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'POSISFORMLAYOUT' and COLUMN_NAME = 'FORMTYPEID')
+BEGIN
+	DECLARE @ID NVARCHAR(20)
+	
+	DECLARE CURRENTFORMS CURSOR FOR
+		SELECT ID
+		FROM POSISFORMLAYOUT
+
+	OPEN CURRENTFORMS
+
+	FETCH FROM CURRENTFORMS INTO @ID
+
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+
+		UPDATE fl
+		SET fl.[FORMTYPEID] = (select ID from [dbo].[POSFORMTYPE] where SYSTEMTYPE=@ID)
+		FROM [dbo].[POSISFORMLAYOUT] fl
+		WHERE fl.ID = @ID
+
+		FETCH NEXT FROM CURRENTFORMS INTO @ID
+	END
+
+	CLOSE CURRENTFORMS
+	DEALLOCATE CURRENTFORMS
+END
+GO

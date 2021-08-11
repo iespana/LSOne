@@ -1,0 +1,16 @@
+﻿/*
+	Incident No.	: ONE-7802
+	Responsible		: Simona Avornicesei
+	Sprint			: Alzir
+	Date created	: 11.03.2019
+
+	Description		: Add UK Address Format to predefined address format dropdown
+*/
+
+USE LSPOSNET
+
+IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'ADDRESSFORMAT') AND NOT EXISTS(SELECT FORMATTERID FROM ADDRESSFORMAT WHERE NAME = 'UK' AND ISSYTEMFORMAT = 1)
+BEGIN
+	INSERT INTO ADDRESSFORMAT([FORMATTERID], [NAME], [ISSYTEMFORMAT]) VALUES (5, 'UK', 1);
+END
+GO

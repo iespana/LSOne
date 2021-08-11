@@ -1,0 +1,22 @@
+﻿/*
+
+	Incident No.	: ONE-5481
+	Responsible		: Helgi Rúnar Gunnarsson
+	Sprint			: Kóríander 
+	Date created	: 26.01.2017
+
+	Description		: Add "Embed terminal ID" to number sequence
+	
+	
+	Tables affected	: NUMBERSEQUENCETABLE
+						
+*/
+
+USE LSPOSNET
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'NUMBERSEQUENCETABLE' AND COLUMN_NAME = 'EMBEDTERMINALID')
+BEGIN
+	ALTER TABLE dbo.NUMBERSEQUENCETABLE ADD EMBEDTERMINALID TINYINT NULL
+END
+GO

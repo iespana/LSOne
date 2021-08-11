@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Delete" xml:space="preserve">
+    <value>Slet</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farve</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Rabat %</value>
+  </data>
+  <data name="ItemRelation" xml:space="preserve">
+    <value>Varerelation</value>
+  </data>
+  <data name="PriceUnit" xml:space="preserve">
+    <value>Prisenhed</value>
+  </data>
+  <data name="Discounts" xml:space="preserve">
+    <value>Rabatter</value>
+  </data>
+  <data name="Prices" xml:space="preserve">
+    <value>Priser</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Aktiver</value>
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>Enhedspris</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Deaktiver</value>
+  </data>
+  <data name="PriceGroups" xml:space="preserve">
+    <value>Prisgrupper</value>
+  </data>
+  <data name="Variant" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Tilføj</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="DealPrice" xml:space="preserve">
+    <value>Kampagnepris</value>
+  </data>
+  <data name="DiscountOffer" xml:space="preserve">
+    <value>Rabattilbud</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Rediger ...</value>
+  </data>
+  <data name="EditTypeNone" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Vare</value>
+  </data>
+  <data name="MixAndMatch" xml:space="preserve">
+    <value>Mix and Match</value>
+  </data>
+  <data name="MixMatch" xml:space="preserve">
+    <value>Mix and Match</value>
+  </data>
+  <data name="Multibuy" xml:space="preserve">
+    <value>Flerkøb</value>
+  </data>
+  <data name="PromotionOffer" xml:space="preserve">
+    <value>Kampagnetilbud</value>
+  </data>
+  <data name="RetailDepartment" xml:space="preserve">
+    <value>Vareafdeling</value>
+  </data>
+  <data name="RetailGroup" xml:space="preserve">
+    <value>Varegruppe</value>
+  </data>
+  <data name="SpecialGroup" xml:space="preserve">
+    <value>Specialgruppe</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Pris</value>
+  </data>
+  <data name="MovePriorityDown" xml:space="preserve">
+    <value>Flyt ned</value>
+  </data>
+  <data name="MovePriorityUp" xml:space="preserve">
+    <value>Flyt op</value>
+  </data>
+  <data name="AccountSelectionCannotBeEmpty" xml:space="preserve">
+    <value>Kontovalg kan ikke være tom</value>
+  </data>
+  <data name="AmountMayNotBeHigherThanBasePrice" xml:space="preserve">
+    <value>Rabatbeløbet må ikke være over varens basispris</value>
+  </data>
+  <data name="BarcodeAlreadyAssignedToAnOffer" xml:space="preserve">
+    <value>Denne stregkode er allerede tildelt et tilbud</value>
+  </data>
+  <data name="CannotSortByThisColumn" xml:space="preserve">
+    <value>Kan ikke sortere efter denne kolonne</value>
+  </data>
+  <data name="CouldNotDeleteLineGroup" xml:space="preserve">
+    <value>Kunne ikke slette linjegruppe, fordi gruppen er i brug</value>
+  </data>
+  <data name="DealPriceDiscountPct" xml:space="preserve">
+    <value>Deal pris / rabat procent</value>
+  </data>
+  <data name="DefaultStoreHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Standardbutik har ingen momsgruppe knyttet til den</value>
+  </data>
+  <data name="DeleteDiscountOffer" xml:space="preserve">
+    <value>Slet rabattilbud</value>
+  </data>
+  <data name="DeleteDiscountOfferLine" xml:space="preserve">
+    <value>Slet rabattilbudslinje</value>
+  </data>
+  <data name="DeleteDiscountOfferLineQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte rabat-tilbudslinje?</value>
+  </data>
+  <data name="DeleteDiscountOfferLines" xml:space="preserve">
+    <value>Slet rabattilbudslinjer</value>
+  </data>
+  <data name="DeleteDiscountOfferLinesQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte rabattilbudslinjer?</value>
+  </data>
+  <data name="DeleteDiscountOfferQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte rabat-tilbudslinje?</value>
+  </data>
+  <data name="DeleteDiscountPeriod" xml:space="preserve">
+    <value>Slet rabatperiode</value>
+  </data>
+  <data name="DeleteDiscountPeriodQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte rabat-tilbudslinje?</value>
+  </data>
+  <data name="DeleteLineGroup" xml:space="preserve">
+    <value>Slet linjegruppe</value>
+  </data>
+  <data name="DeleteLineGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte linjegruppe?</value>
+  </data>
+  <data name="DeleteLineGroups" xml:space="preserve">
+    <value>Slet linjegrupper</value>
+  </data>
+  <data name="DeleteLineGroupsQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte linjegrupper?</value>
+  </data>
+  <data name="DeleteMixAndMatch" xml:space="preserve">
+    <value>Slet Mix and Match tilbud</value>
+  </data>
+  <data name="DeleteMixAndMatchQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette det valgte Mix and Match-tilbud?</value>
+  </data>
+  <data name="DeleteMultibuy" xml:space="preserve">
+    <value>Slet flerkøbsopsætning</value>
+  </data>
+  <data name="DeleteMultibuyLine" xml:space="preserve">
+    <value>Slet flerkøbslinje</value>
+  </data>
+  <data name="DeleteMultibuyLineQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil slette den valgte flerkøbslinje?</value>
+  </data>
+  <data name="DeleteMultibuyLines" xml:space="preserve">
+    <value>Slet flerkøbslinjer</value>
+  </data>
+  <data name="DeleteMultibuyLinesQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte flerkøbslinjer?</value>
+  </data>
+  <data name="DeleteMultibuyQuestion" xml:space="preserve">
+    <value>Er du sikker på at du vil slette den valgte flerkøbsopsætning?</value>
+  </data>
+  <data name="DeletePriceGroup" xml:space="preserve">
+    <value>Slet prisgruppe</value>
+  </data>
+  <data name="DeletePriceGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte prisgruppe?</value>
+  </data>
+  <data name="DeletePromotion" xml:space="preserve">
+    <value>Slet promovering</value>
+  </data>
+  <data name="DeletePromotionLine" xml:space="preserve">
+    <value>Slet promoveringslinje</value>
+  </data>
+  <data name="DeletePromotionLineQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte promoveringslinje?</value>
+  </data>
+  <data name="DeletePromotionLines" xml:space="preserve">
+    <value>Slet promoveringslinjer</value>
+  </data>
+  <data name="DeletePromotionLinesQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette de valgte promoveringslinjer?</value>
+  </data>
+  <data name="DeletePromotionQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte promoveringslinje?</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroup" xml:space="preserve">
+    <value>Slet butik fra prisgruppen</value>
+  </data>
+  <data name="DeleteStoreFromPriceGroupQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil slette den valgte butik fra prisgruppen?</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Deaktiver</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Slået fra</value>
+  </data>
+  <data name="DiscountExceedsPrice" xml:space="preserve">
+    <value>Rabatten kan ikke overstige standardprisen</value>
+  </data>
+  <data name="DiscountOfferLines" xml:space="preserve">
+    <value>Rabat tilbudslinjer</value>
+  </data>
+  <data name="DiscountOffers" xml:space="preserve">
+    <value>Rabattilbud</value>
+  </data>
+  <data name="DiscountOffersDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at se og redigere rabattilbud</value>
+  </data>
+  <data name="DiscountOffersTooltipDescription" xml:space="preserve">
+    <value>Administrer rabattilbud på varer, grupper og afdelinger</value>
+  </data>
+  <data name="DiscountPercentCannotBeZero" xml:space="preserve">
+    <value>Rabatprocent kan ikke være nul</value>
+  </data>
+  <data name="DiscountsDescription" xml:space="preserve">
+    <value>Viser en undermenu til rabatrelaterede operationer</value>
+  </data>
+  <data name="DiscountType" xml:space="preserve">
+    <value>Rabattype</value>
+  </data>
+  <data name="DiscountValuesAreMissing" xml:space="preserve">
+    <value>Rabatværdier mangler</value>
+  </data>
+  <data name="EditAll" xml:space="preserve">
+    <value>Rediger alt</value>
+  </data>
+  <data name="EditDiscount" xml:space="preserve">
+    <value>Rediger rabat</value>
+  </data>
+  <data name="EditPriority" xml:space="preserve">
+    <value>Rediger prioritet</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Aktivér</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Aktiveret</value>
+  </data>
+  <data name="ErrorSomeDataHasBeenDeleted" xml:space="preserve">
+    <value>Fejl: Nogle data er blevet slettet</value>
+  </data>
+  <data name="ItemHasNoTaxGroupAttachedToIt" xml:space="preserve">
+    <value>Varen har ingen momsgruppe knyttet til den</value>
+  </data>
+  <data name="LevelMustBeAPositiveNumber" xml:space="preserve">
+    <value>Niveau skal være et positivt tal</value>
+  </data>
+  <data name="LineGroup" xml:space="preserve">
+    <value>Linjegruppe:</value>
+  </data>
+  <data name="MBConfigHeaderPercent" xml:space="preserve">
+    <value>Vælg unik minimumsmængde og rabatprocent</value>
+  </data>
+  <data name="MixAndMatchDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at se og redigere Mix and Match-tilbud</value>
+  </data>
+  <data name="MixAndMatchLineGroups" xml:space="preserve">
+    <value>Mix and match linjegrupper</value>
+  </data>
+  <data name="MixAndMatchLines" xml:space="preserve">
+    <value>Mix and match-linjer</value>
+  </data>
+  <data name="MixAndMatchTooltipDescription" xml:space="preserve">
+    <value>Opsætning af Mix and Match-tilbud til rabat på enhver kombination af varer</value>
+  </data>
+  <data name="MultibuyConfigurations" xml:space="preserve">
+    <value>Flerkøbskonfigurationer</value>
+  </data>
+  <data name="MultibuyDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere opsætning af flerkøb</value>
+  </data>
+  <data name="MultibuyLines" xml:space="preserve">
+    <value>Flerkøbslinjer</value>
+  </data>
+  <data name="MultibuyTooltipDescription" xml:space="preserve">
+    <value>Opsæt tilbud om flerkøbsrabat relateret til solgt mængde</value>
+  </data>
+  <data name="NoDefaultStoreSelected" xml:space="preserve">
+    <value>Ingen standard butik valgt</value>
+  </data>
+  <data name="NoDiscountsAreActive" xml:space="preserve">
+    <value>Ingen rabatter er aktive</value>
+  </data>
+  <data name="NoDiscountsAreConfigured" xml:space="preserve">
+    <value>Ingen rabatter er konfigureret</value>
+  </data>
+  <data name="OfferCount" xml:space="preserve">
+    <value>#1 tilbud fundet</value>
+  </data>
+  <data name="OfferLinesCount" xml:space="preserve">
+    <value>#1 linjer fundet</value>
+  </data>
+  <data name="OfferLinesLoaded" xml:space="preserve">
+    <value>#1 linjer indlæst (af #2)</value>
+  </data>
+  <data name="OneDiscountIsExpiringThisWeek" xml:space="preserve">
+    <value>1 rabat udløber denne uge</value>
+  </data>
+  <data name="OneDiscountsIsActive" xml:space="preserve">
+    <value>1 rabat er aktiv</value>
+  </data>
+  <data name="PeriodicDiscountPriorities" xml:space="preserve">
+    <value>Periodiske rabatprioriteter</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at administrere prioriteter for periodiske rabatter</value>
+  </data>
+  <data name="PeriodicDiscountPrioritiesTooltipDescription" xml:space="preserve">
+    <value>Administrer prioritet for alle periodiske rabattilbud. Prioriteten bruges, når flere tilbud inkluderer den samme vare.</value>
+  </data>
+  <data name="PeriodicDiscounts" xml:space="preserve">
+    <value>Periodiske rabatter</value>
+  </data>
+  <data name="PeriodicDiscountsManage" xml:space="preserve">
+    <value>Administrer</value>
+  </data>
+  <data name="PriceDiscount" xml:space="preserve">
+    <value>Pris/rabat</value>
+  </data>
+  <data name="PriceGroupDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere prisgrupper</value>
+  </data>
+  <data name="PriceGroupExists" xml:space="preserve">
+    <value>Prisgruppe med det ID findes allerede</value>
+  </data>
+  <data name="PricesAndDiscounts" xml:space="preserve">
+    <value>Priser og rabatter</value>
+  </data>
+  <data name="PricesDescription" xml:space="preserve">
+    <value>Viser en undermenu til prisrelaterede operationer</value>
+  </data>
+  <data name="PriceUnitIncludingTax" xml:space="preserve">
+    <value>Prisenhed inkluderer moms</value>
+  </data>
+  <data name="PriceValuesAreMissing" xml:space="preserve">
+    <value>Prisværdier mangler</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Prioritering</value>
+  </data>
+  <data name="PriorityAlreadyInUse" xml:space="preserve">
+    <value>Denne prioritering bruges allerede af en anden periodisk rabat</value>
+  </data>
+  <data name="PriorityAlreadyInUseNextIs" xml:space="preserve">
+    <value>Denne prioritering bruges allerede af en anden periodisk rabat. Den næste tilgængelige prioritet er #1</value>
+  </data>
+  <data name="PromotionLines" xml:space="preserve">
+    <value>Kampagnelinjer</value>
+  </data>
+  <data name="PromotionOffers" xml:space="preserve">
+    <value>Kampagnetilbud</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Kampagner</value>
+  </data>
+  <data name="PromotionsDescription" xml:space="preserve">
+    <value>Brug denne mulighed til at se og redigere kampagner</value>
+  </data>
+  <data name="PromotionsTooltipDescription" xml:space="preserve">
+    <value>Administrer kampagner for varer, grupper og afdelinger</value>
+  </data>
+  <data name="RelationExists" xml:space="preserve">
+    <value>Der findes allerede en tilbudslinje med denne relation</value>
+  </data>
+  <data name="RemoveConfiguration" xml:space="preserve">
+    <value>Fjern konfiguration</value>
+  </data>
+  <data name="RemoveConfigurationQuestion" xml:space="preserve">
+    <value>Er du sikker på, at du vil fjerne den valgte konfiguration?</value>
+  </data>
+  <data name="Retail" xml:space="preserve">
+    <value>Salg</value>
+  </data>
+  <data name="RetailItemNotExistsError" xml:space="preserve">
+    <value>Salgsvaren som denne post refererer til er blevet slettet. Slet venligst denne post for at løse problemet</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Vælg operation</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="ShowOffer" xml:space="preserve">
+    <value>Vis tilbud</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="StandardPriceIsZero" xml:space="preserve">
+    <value>Standardpris er nul</value>
+  </data>
+  <data name="StoreAlreadyInPriceGroup" xml:space="preserve">
+    <value>Den valgte butik er allerede i den valgte prisgruppe</value>
+  </data>
+  <data name="StoresInPriceGroups" xml:space="preserve">
+    <value>Butikker i prisgrupper</value>
+  </data>
+  <data name="ThatMinimumQuantityExists" xml:space="preserve">
+    <value>Denne minimumsmængde findes i databasen</value>
+  </data>
+  <data name="TimeDoesNotEndAfterMidnight" xml:space="preserve">
+    <value>Tiden slutter ikke efter midnat</value>
+  </data>
+  <data name="TimeEndsAfterMidnight" xml:space="preserve">
+    <value>Tiden slutter efter midnat</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Fortryd</value>
+  </data>
+  <data name="ValidationPeriodDescription" xml:space="preserve">
+    <value>Brug denne indstilling til at se og redigere valideringsperioder</value>
+  </data>
+  <data name="ValidationPeriods" xml:space="preserve">
+    <value>Valideringsperioder</value>
+  </data>
+  <data name="ValidationPeriodTooltipDescription" xml:space="preserve">
+    <value>Administrer valideringsperioder for rabattilbud og kampagner</value>
+  </data>
+  <data name="VariantNeedsToBeSelected" xml:space="preserve">
+    <value>Variant skal vælges for elementer, der har varianter</value>
+  </data>
+  <data name="VariantNumber" xml:space="preserve">
+    <value>Variantnummer</value>
+  </data>
+  <data name="VariationNotExistsError" xml:space="preserve">
+    <value>Variationen, som denne post refererer til, er blevet slettet. Slet denne post for at løse problemet</value>
+  </data>
+  <data name="ViewConflictingPriorities" xml:space="preserve">
+    <value>Denne prioritering bruges allerede af en anden periodisk rabat. Klik her for at se alle prioriteter</value>
+  </data>
+  <data name="ViewPriorities" xml:space="preserve">
+    <value>Se prioriteter</value>
+  </data>
+  <data name="XDiscountsAreActive" xml:space="preserve">
+    <value>#1 rabat(ter) er aktive</value>
+  </data>
+  <data name="XDiscountsAreExpiringThisWeek" xml:space="preserve">
+    <value>#1 rabat(ter) udløber denne uge</value>
+  </data>
+</root>

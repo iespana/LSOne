@@ -1,0 +1,20 @@
+﻿/*
+	Incident No.	: ONE-9897
+	Responsible		: Ovidiu Caba
+	Sprint			: Aldebaran
+	Date created	: 28.03.2019
+
+	Description		: Add field ISNETAMOUNTWITHTAXROUNDED to store whether NETAMOUNTWITHTAX is rounded or not; we need this information when we post transactions in SAP
+*/
+
+USE LSPOSNET
+
+IF NOT EXISTS (SELECT * FROM SYSCOLUMNS WHERE ID=OBJECT_ID('RBOTRANSACTIONTABLE') AND NAME='ISNETAMOUNTWITHTAXROUNDED')
+BEGIN
+	ALTER TABLE RBOTRANSACTIONTABLE ADD ISNETAMOUNTWITHTAXROUNDED BIT NULL
+	EXECUTE spDB_SetFieldDescription_1_0 'RBOTRANSACTIONTABLE', 'ISNETAMOUNTWITHTAXROUNDED', 'True if the property NetAmountWithTax is rounded';
+END
+GO
+
+-- Note: If post transactions to SAP fails because ISNETAMOUNTWITHTAXROUNDED is not set, then run the following script to update it:
+-- UPDATE RBOTRANSACTIONTABLE SET ISNETAMOUNTWITHTAXROUNDED = IIF(ABS(GROSSAMOUNT) - ABS(AMOUNTTOACCOUNT) = 0, 1, 0) WHERE ISNETAMOUNTWITHTAXROUNDED IS NULL AND AMOUNTTOACCOUNT <> 0
